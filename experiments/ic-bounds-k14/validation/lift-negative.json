@@ -1,0 +1,564 @@
+{
+ "rows": [
+  {
+   "case": "unit-65537-k6-D4to5",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": false,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 1586,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 1523,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k6-D4to5",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1586,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 1586,
+    "contains_one": true,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k6-D4to5",
+   "control": "drop_shift_5",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1586,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 1586,
+    "contains_one": true,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k7-D4to5",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": false,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 3473,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 2844,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k7-D4to5",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3473,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 3473,
+    "contains_one": true,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k7-D4to5",
+   "control": "drop_shift_6",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3473,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 3473,
+    "contains_one": true,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k8-D4to5",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": false,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 6885,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 4617,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k8-D4to5",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 6885,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 6885,
+    "contains_one": true,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k8-D4to5",
+   "control": "drop_shift_7",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 6885,
+    "contains_one": true
+   },
+   "lift": {
+    "dim": 6885,
+    "contains_one": true,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k6-D3to4",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": true,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 605,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 79,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k6-D3to4",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 605,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 605,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k6-D3to4",
+   "control": "drop_shift_5",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 605,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 605,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k7-D3to4",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": true,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 829,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 106,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k7-D3to4",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 829,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 829,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k7-D3to4",
+   "control": "drop_shift_6",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 829,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 828,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k8-D3to4",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": true,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 1061,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 137,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k8-D3to4",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1061,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 1061,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "unit-65537-k8-D3to4",
+   "control": "drop_shift_7",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 1061,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 1060,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "proper-65537-X2-k6-D4to5",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": true,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 1584,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 1523,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "proper-65537-X2-k6-D4to5",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1584,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 1584,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "proper-65537-X2-k6-D4to5",
+   "control": "drop_shift_5",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1584,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 1584,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "proper-65537-X2-k7-D4to5",
+   "control": "no_fall_shifts",
+   "answer_changed": true,
+   "compare": {
+    "dim": false,
+    "profile": false,
+    "contains_one": true,
+    "low_sha": false,
+    "part_dims": false,
+    "all": false
+   },
+   "direct": {
+    "dim": 3471,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 2844,
+    "contains_one": false,
+    "status": "nofall",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "proper-65537-X2-k7-D4to5",
+   "control": "drop_shift_0",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3471,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 3471,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  },
+  {
+   "case": "proper-65537-X2-k7-D4to5",
+   "control": "drop_shift_6",
+   "answer_changed": false,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3471,
+    "contains_one": false
+   },
+   "lift": {
+    "dim": 3471,
+    "contains_one": false,
+    "status": "done",
+    "fixed_point": false
+   }
+  }
+ ],
+ "changed": 10,
+ "total": 24,
+ "contains_one_changed": 3,
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "533c92a4132b9d68002efff9335e2850e57927b753793825cf4a2905c4156042"
+ }
+}

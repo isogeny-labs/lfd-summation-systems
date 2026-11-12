@@ -1,0 +1,600 @@
+{
+ "p193-k6-data": {
+  "targets": 890,
+  "curves": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    5,
+    0
+   ],
+   [
+    22,
+    23
+   ],
+   [
+    46,
+    29
+   ],
+   [
+    61,
+    121
+   ],
+   [
+    68,
+    122
+   ],
+   [
+    111,
+    126
+   ]
+  ],
+  "deviating": 29,
+  "lfd_histogram": {
+   "4": 11,
+   "5": 879
+  },
+  "status_histogram": {
+   "exact-proper-local": 889,
+   "exact-unit": 1
+  },
+  "classes": {
+   "C1": {
+    "count": 3,
+    "deviating": 3,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 602, \"low4\": 111, \"one4\": false, \"lfd\": 5}",
+      3
+     ]
+    ]
+   },
+   "C2": {
+    "count": 8,
+    "deviating": 8,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 766, \"low4\": 271, \"one4\": false, \"lfd\": 4}",
+      3
+     ],
+     [
+      "{\"V3\": 13, \"V4\": 762, \"low4\": 267, \"one4\": false, \"lfd\": 4}",
+      2
+     ],
+     [
+      "{\"V3\": 13, \"V4\": 760, \"low4\": 265, \"one4\": false, \"lfd\": 4}",
+      1
+     ],
+     [
+      "{\"V3\": 13, \"V4\": 786, \"low4\": 291, \"one4\": false, \"lfd\": 4}",
+      1
+     ],
+     [
+      "{\"V3\": 13, \"V4\": 770, \"low4\": 275, \"one4\": false, \"lfd\": 4}",
+      1
+     ]
+    ]
+   },
+   "none": {
+    "count": 861,
+    "deviating": 0,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 605, \"low4\": 111, \"one4\": false, \"lfd\": 5}",
+      861
+     ]
+    ]
+   },
+   "order-two": {
+    "count": 10,
+    "deviating": 10,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 607, \"low4\": 113, \"one4\": false, \"lfd\": 5}",
+      10
+     ]
+    ]
+   },
+   "t0-j0": {
+    "count": 1,
+    "deviating": 1,
+    "signatures": [
+     [
+      "{\"V3\": 44, \"V4\": 773, \"low4\": 278, \"one4\": false, \"lfd\": 4}",
+      1
+     ]
+    ]
+   },
+   "t0-j1728": {
+    "count": 2,
+    "deviating": 2,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 730, \"low4\": 235, \"one4\": false, \"lfd\": 4}",
+      1
+     ],
+     [
+      "{\"V3\": 13, \"V4\": 794, \"low4\": 299, \"one4\": true, \"lfd\": 4}",
+      1
+     ]
+    ]
+   },
+   "t0-other": {
+    "count": 3,
+    "deviating": 3,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 612, \"low4\": 117, \"one4\": false, \"lfd\": 5}",
+      3
+     ]
+    ]
+   },
+   "tangent": {
+    "count": 2,
+    "deviating": 2,
+    "signatures": [
+     [
+      "{\"V3\": 34, \"V4\": 603, \"low4\": 111, \"one4\": false, \"lfd\": 5}",
+      2
+     ]
+    ]
+   }
+  },
+  "unexplained": [],
+  "false_alarms": []
+ },
+ "p193-k6-heldout": {
+  "targets": 386,
+  "curves": [
+   [
+    63,
+    189
+   ],
+   [
+    147,
+    5
+   ],
+   [
+    172,
+    33
+   ],
+   [
+    180,
+    150
+   ]
+  ],
+  "deviating": 15,
+  "lfd_histogram": {
+   "5": 385,
+   "4": 1
+  },
+  "status_histogram": {
+   "exact-proper-local": 386
+  },
+  "classes": {
+   "C1": {
+    "count": 2,
+    "deviating": 2,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 602, \"low4\": 111, \"one4\": false, \"lfd\": 5}",
+      1
+     ],
+     [
+      "{\"V3\": 13, \"V4\": 607, \"low4\": 113, \"one4\": false, \"lfd\": 5}",
+      1
+     ]
+    ]
+   },
+   "C2": {
+    "count": 1,
+    "deviating": 1,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 790, \"low4\": 295, \"one4\": false, \"lfd\": 4}",
+      1
+     ]
+    ]
+   },
+   "none": {
+    "count": 371,
+    "deviating": 0,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 605, \"low4\": 111, \"one4\": false, \"lfd\": 5}",
+      371
+     ]
+    ]
+   },
+   "order-two": {
+    "count": 6,
+    "deviating": 6,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 607, \"low4\": 113, \"one4\": false, \"lfd\": 5}",
+      6
+     ]
+    ]
+   },
+   "t0-other": {
+    "count": 2,
+    "deviating": 2,
+    "signatures": [
+     [
+      "{\"V3\": 13, \"V4\": 612, \"low4\": 117, \"one4\": false, \"lfd\": 5}",
+      2
+     ]
+    ]
+   },
+   "tangent": {
+    "count": 4,
+    "deviating": 4,
+    "signatures": [
+     [
+      "{\"V3\": 34, \"V4\": 603, \"low4\": 111, \"one4\": false, \"lfd\": 5}",
+      4
+     ]
+    ]
+   }
+  },
+  "unexplained": [],
+  "false_alarms": []
+ },
+ "p257-k7-data": {
+  "targets": 1153,
+  "curves": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    87,
+    256
+   ],
+   [
+    88,
+    32
+   ],
+   [
+    148,
+    227
+   ],
+   [
+    194,
+    158
+   ],
+   [
+    200,
+    59
+   ]
+  ],
+  "deviating": 35,
+  "lfd_histogram": {
+   "None": 1152,
+   "4": 1
+  },
+  "status_histogram": {
+   "capped": 1152,
+   "exact-unit": 1
+  },
+  "classes": {
+   "C1": {
+    "count": 5,
+    "deviating": 5,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 826, \"low4\": 115, \"one4\": false, \"lfd\": null}",
+      5
+     ]
+    ]
+   },
+   "none": {
+    "count": 1124,
+    "deviating": 6,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 829, \"low4\": 115, \"one4\": false, \"lfd\": null}",
+      1118
+     ],
+     [
+      "{\"V3\": 15, \"V4\": 857, \"low4\": 117, \"one4\": false, \"lfd\": null}",
+      6
+     ]
+    ]
+   },
+   "order-two": {
+    "count": 12,
+    "deviating": 12,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 835, \"low4\": 117, \"one4\": false, \"lfd\": null}",
+      12
+     ]
+    ]
+   },
+   "t0-j0": {
+    "count": 1,
+    "deviating": 1,
+    "signatures": [
+     [
+      "{\"V3\": 52, \"V4\": 1052, \"low4\": 150, \"one4\": false, \"lfd\": null}",
+      1
+     ]
+    ]
+   },
+   "t0-j1728": {
+    "count": 2,
+    "deviating": 2,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 1343, \"low4\": 350, \"one4\": false, \"lfd\": null}",
+      1
+     ],
+     [
+      "{\"V3\": 15, \"V4\": 1471, \"low4\": 470, \"one4\": true, \"lfd\": 4}",
+      1
+     ]
+    ]
+   },
+   "t0-other": {
+    "count": 5,
+    "deviating": 5,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 849, \"low4\": 123, \"one4\": false, \"lfd\": null}",
+      5
+     ]
+    ]
+   },
+   "tangent": {
+    "count": 4,
+    "deviating": 4,
+    "signatures": [
+     [
+      "{\"V3\": 40, \"V4\": 828, \"low4\": 117, \"one4\": false, \"lfd\": null}",
+      4
+     ]
+    ]
+   }
+  },
+  "unexplained": [
+   {
+    "a": 148,
+    "b": 227,
+    "t": 143,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   },
+   {
+    "a": 3,
+    "b": 0,
+    "t": 116,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   },
+   {
+    "a": 3,
+    "b": 0,
+    "t": 141,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   },
+   {
+    "a": 87,
+    "b": 256,
+    "t": 151,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   },
+   {
+    "a": 88,
+    "b": 32,
+    "t": 96,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   },
+   {
+    "a": 88,
+    "b": 32,
+    "t": 209,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   }
+  ],
+  "false_alarms": []
+ },
+ "p257-k7-heldout": {
+  "targets": 756,
+  "curves": [
+   [
+    72,
+    135
+   ],
+   [
+    83,
+    21
+   ],
+   [
+    84,
+    186
+   ],
+   [
+    115,
+    198
+   ],
+   [
+    204,
+    153
+   ],
+   [
+    251,
+    5
+   ]
+  ],
+  "deviating": 17,
+  "lfd_histogram": {
+   "None": 756
+  },
+  "status_histogram": {
+   "capped": 756
+  },
+  "classes": {
+   "C1": {
+    "count": 1,
+    "deviating": 1,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 826, \"low4\": 115, \"one4\": false, \"lfd\": null}",
+      1
+     ]
+    ]
+   },
+   "none": {
+    "count": 741,
+    "deviating": 2,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 829, \"low4\": 115, \"one4\": false, \"lfd\": null}",
+      739
+     ],
+     [
+      "{\"V3\": 15, \"V4\": 857, \"low4\": 117, \"one4\": false, \"lfd\": null}",
+      2
+     ]
+    ]
+   },
+   "order-two": {
+    "count": 5,
+    "deviating": 5,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 835, \"low4\": 117, \"one4\": false, \"lfd\": null}",
+      5
+     ]
+    ]
+   },
+   "t0-other": {
+    "count": 4,
+    "deviating": 4,
+    "signatures": [
+     [
+      "{\"V3\": 15, \"V4\": 849, \"low4\": 123, \"one4\": false, \"lfd\": null}",
+      4
+     ]
+    ]
+   },
+   "tangent": {
+    "count": 5,
+    "deviating": 5,
+    "signatures": [
+     [
+      "{\"V3\": 40, \"V4\": 828, \"low4\": 117, \"one4\": false, \"lfd\": null}",
+      5
+     ]
+    ]
+   }
+  },
+  "unexplained": [
+   {
+    "a": 72,
+    "b": 135,
+    "t": 228,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   },
+   {
+    "a": 84,
+    "b": 186,
+    "t": 66,
+    "V3": 15,
+    "V4": 857,
+    "low4": 117,
+    "lfd": null
+   }
+  ],
+  "false_alarms": []
+ },
+ "AB_invariance_k6": {
+  "counts": {
+   "data / t in H / agree": 307,
+   "data / t not in H / agree": 577,
+   "heldout / t in H / agree": 127,
+   "heldout / t not in H / agree": 257
+  },
+  "mismatches": []
+ },
+ "plane_p193_k6": {
+  "points": 37249,
+  "lines": 193,
+  "classes": [
+   [
+    "{\"V3\": 13, \"V4\": 605}",
+    36486
+   ],
+   [
+    "{\"V3\": 13, \"V4\": 607}",
+    193
+   ],
+   [
+    "{\"V3\": 34, \"V4\": 603}",
+    191
+   ],
+   [
+    "{\"V3\": 13, \"V4\": \">700\"}",
+    190
+   ],
+   [
+    "{\"V3\": 13, \"V4\": 602}",
+    186
+   ],
+   [
+    "{\"V3\": 216, \"V4\": 681}",
+    1
+   ],
+   [
+    "{\"V3\": 34, \"V4\": 600}",
+    1
+   ],
+   [
+    "{\"V3\": 13, \"V4\": 599}",
+    1
+   ]
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "started": "2026-11-11T20:14:10Z",
+ "steps": [
+  {
+   "name": "selftest-engine",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/out/selftest-gpu.json"
+   ],
+   "start": "2026-11-11T20:14:10Z",
+   "rc": null
+  }
+ ],
+ "readings": {},
+ "finished": false
+}

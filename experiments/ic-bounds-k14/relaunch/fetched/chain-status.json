@@ -1,0 +1,223 @@
+{
+ "started": "2026-11-11T06:16:26Z",
+ "steps": [
+  {
+   "name": "selftest-engine",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/out/selftest-gpu.json"
+   ],
+   "start": "2026-11-11T06:16:26Z",
+   "rc": 0,
+   "end": "2026-11-11T06:23:17Z"
+  },
+  {
+   "name": "selftest-lift",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_lift_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/out/lift-selftest-gpu.json"
+   ],
+   "start": "2026-11-11T06:23:17Z",
+   "rc": 0,
+   "end": "2026-11-11T06:35:08Z"
+  },
+  {
+   "name": "proper-p114689-k14-D6",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "closure",
+    "--instance",
+    "/workspace/in/proper-p114689-s22-k14.json",
+    "--D",
+    "6",
+    "--device",
+    "gpu",
+    "--dev-gb",
+    "105",
+    "--work-gb",
+    "20",
+    "--tile-mb",
+    "1024",
+    "--batch",
+    "1024",
+    "--threads",
+    "8",
+    "--ckpt",
+    "/workspace/ckpt/proper-p114689-k14-D6",
+    "--ckpt-minutes",
+    "30",
+    "--resume",
+    "--status",
+    "/workspace/out/proper-p114689-k14-D6.status.json",
+    "--out",
+    "/workspace/out/proper-p114689-k14-D6.json"
+   ],
+   "start": "2026-11-11T06:35:08Z",
+   "rc": 0,
+   "end": "2026-11-11T09:49:46Z"
+  },
+  {
+   "name": "lift-proper-p114689-k14-try1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_lift_run.py",
+    "lift",
+    "--ckpt",
+    "/workspace/ckpt/proper-p114689-k14-D6",
+    "--instance",
+    "/workspace/in/proper-p114689-s22-k14.json",
+    "--device",
+    "gpu",
+    "--basis-on",
+    "host",
+    "--dev-gb",
+    "130",
+    "--work-gb",
+    "16",
+    "--lift-ckpt",
+    "/workspace/ckpt/proper-p114689-k14-D6-lift1",
+    "--ckpt-minutes",
+    "20",
+    "--resume",
+    "--status",
+    "/workspace/out/lift-proper-p114689-k14-D6to7.status.json",
+    "--out",
+    "/workspace/out/lift-proper-p114689-k14-D6to7.json"
+   ],
+   "start": "2026-11-11T09:49:46Z",
+   "rc": 0,
+   "end": "2026-11-11T11:10:09Z"
+  },
+  {
+   "name": "certcheck-proper-p114689-k14",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_cert_check.py",
+    "--device",
+    "gpu",
+    "--shifts",
+    "all",
+    "--instance",
+    "/workspace/in/proper-p114689-s22-k14.json",
+    "--ckpt",
+    "/workspace/ckpt/proper-p114689-k14-D6",
+    "--D",
+    "6",
+    "--engine-record",
+    "/workspace/out/proper-p114689-k14-D6.json",
+    "--work-gb",
+    "45",
+    "--row-chunk",
+    "4096",
+    "--progress-seconds",
+    "30",
+    "--status",
+    "/workspace/out/certcheck-proper-p114689-k14-D6.status.json",
+    "--out",
+    "/workspace/out/certcheck-proper-p114689-k14-D6.json"
+   ],
+   "start": "2026-11-11T11:10:09Z",
+   "rc": 0,
+   "end": "2026-11-11T11:21:00Z"
+  },
+  {
+   "name": "unit-p163841-k14-D6",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "closure",
+    "--instance",
+    "/workspace/in/unit-p163841-a3-s21-k14.json",
+    "--D",
+    "6",
+    "--device",
+    "gpu",
+    "--dev-gb",
+    "105",
+    "--work-gb",
+    "20",
+    "--tile-mb",
+    "1024",
+    "--batch",
+    "1024",
+    "--threads",
+    "8",
+    "--ckpt",
+    "/workspace/ckpt/unit-p163841-k14-D6",
+    "--ckpt-minutes",
+    "30",
+    "--resume",
+    "--status",
+    "/workspace/out/unit-p163841-k14-D6.status.json",
+    "--out",
+    "/workspace/out/unit-p163841-k14-D6.json"
+   ],
+   "start": "2026-11-11T11:21:04Z",
+   "rc": null
+  }
+ ],
+ "readings": {
+  "proper-p114689-k14": {
+   "closure": {
+    "status": "done",
+    "closed": true,
+    "contains_one": false,
+    "rank": 448922,
+    "profile": [
+     0,
+     0,
+     2,
+     154,
+     4451,
+     73587,
+     448922
+    ],
+    "part_ranks": [
+     224688,
+     224234
+    ],
+    "repairs": 0,
+    "seconds": 11677.8,
+    "rc": 0
+   },
+   "lift": {
+    "rc": 0,
+    "status": "done",
+    "fixed_point": true,
+    "dim_VD1": 1680848,
+    "contains_one": false,
+    "rounds": 3,
+    "guard_hits": 0,
+    "seconds": 4678.7,
+    "ideal_bound": 1680848,
+    "within_ideal": true,
+    "equals_ideal_part": true
+   },
+   "certcheck": {
+    "rc": 0,
+    "all_true": true,
+    "certificate_valid": true,
+    "one_excluded": true
+   }
+  },
+  "unit-p163841-k14": {}
+ },
+ "finished": false
+}

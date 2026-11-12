@@ -1,0 +1,137 @@
+{
+ "prime": 12289,
+ "a": 1,
+ "b": 0,
+ "target_x": 9362,
+ "k": 10,
+ "degree": 6,
+ "v5_sha256": "d4fe133411ff396d4b607165035615cde9e796f112f4a26bf23db1ef2612ee6b",
+ "combos_per_round": 3000,
+ "seed": 20261105,
+ "round_history": [
+  {
+   "round": 1,
+   "low_rows": 18569,
+   "combos": 3000,
+   "sym_rank": 12311,
+   "sym_cols": 30318,
+   "anti_rank": 12258,
+   "anti_cols": 30142,
+   "added": [
+    3000,
+    3000
+   ],
+   "seconds": 2558
+  },
+  {
+   "round": 2,
+   "low_rows": 18569,
+   "combos": 3000,
+   "sym_rank": 15311,
+   "sym_cols": 30318,
+   "anti_rank": 15258,
+   "anti_cols": 30142,
+   "added": [
+    3000,
+    3000
+   ],
+   "seconds": 3037
+  },
+  {
+   "round": 3,
+   "low_rows": 18569,
+   "combos": 3000,
+   "sym_rank": 18311,
+   "sym_cols": 30318,
+   "anti_rank": 18258,
+   "anti_cols": 30142,
+   "added": [
+    3000,
+    3000
+   ],
+   "seconds": 2449
+  },
+  {
+   "round": 4,
+   "low_rows": 18569,
+   "combos": 3000,
+   "sym_rank": 21311,
+   "sym_cols": 30318,
+   "anti_rank": 21258,
+   "anti_cols": 30142,
+   "added": [
+    3000,
+    3000
+   ],
+   "seconds": 1758
+  },
+  {
+   "round": 5,
+   "low_rows": 18569,
+   "combos": 3000,
+   "sym_rank": 24311,
+   "sym_cols": 30318,
+   "anti_rank": 24258,
+   "anti_cols": 30142,
+   "added": [
+    3000,
+    3000
+   ],
+   "seconds": 2340
+  },
+  {
+   "round": 6,
+   "low_rows": 18569,
+   "combos": 3000,
+   "sym_rank": 27311,
+   "sym_cols": 30318,
+   "anti_rank": 27258,
+   "anti_cols": 30142,
+   "added": [
+    3000,
+    3000
+   ],
+   "seconds": 1852
+  },
+  {
+   "round": 7,
+   "low_rows": 18569,
+   "combos": 3000,
+   "sym_rank": 29776,
+   "sym_cols": 30318,
+   "anti_rank": 29595,
+   "anti_cols": 30142,
+   "added": [
+    2465,
+    2337
+   ],
+   "seconds": 1807
+  },
+  {
+   "round": 8,
+   "low_rows": 20611,
+   "combos": 1153,
+   "sym_rank": 30318,
+   "sym_cols": 30318,
+   "anti_rank": 30142,
+   "anti_cols": 30142,
+   "added": [
+    542,
+    547
+   ],
+   "seconds": 498
+  }
+ ],
+ "result": {
+  "contains_one": true,
+  "sym_rank": 30318,
+  "sym_cols": 30318,
+  "anti_rank": 30142,
+  "anti_cols": 30142,
+  "rounds": 8,
+  "status": "exact",
+  "exact_lfd": 6,
+  "note": "every row lies in V_6; the symmetric part reached full rank, so 1 is in V_6; with the verified LFD >= 6 (1 not in V_5) the exact LFD is 6"
+ },
+ "seconds": 17911
+}

@@ -1,0 +1,69 @@
+{
+  "scope": "Normalized binary two-summand inverse LFD and dimension-budget envelope",
+  "main_theorem_fully_formalized": false,
+  "independent_review": "not obtained; internal audit is not independent endorsement",
+  "kernel_components": [
+    "ICFallDegrees.BinaryInverseCoordinates.raw_inverse_at_four",
+    "ICFallDegrees.BinaryInverseCoordinates.conjugate_square_at_two",
+    "ICFallDegrees.BinaryInverseCoordinates.component_reconstruction",
+    "ICFallDegrees.BinaryInverseCoordinates.inverse_conjugate_at_two",
+    "ICFallDegrees.PresentationTransport.affine_exact_iff",
+    "ICFallDegrees.PresentationTransport.same_budget_exact_iff",
+    "ICFallDegrees.CyclicCarryWindow.rigidity_of_modEq",
+    "ICFallDegrees.CyclicProductBridge.even_alternating_bridge",
+    "ICFallDegrees.LocalReductionBound.lfd_bound_of_local",
+    "ICFallDegrees.ScalarExtensionTransport.closure_iff",
+    "ICFallDegrees.ScalarExtensionTransport.bound_iff",
+    "ICFallDegrees.ScalarExtensionTransport.exact_iff",
+    "ICFallDegrees.MooreMatrix.determinant_nonzero",
+    "ICFallDegrees.MooreMatrix.inverse_identities",
+    "ICFallDegrees.ChainQuotient.reduced_chain_ideal_trivial",
+    "ICFallDegrees.ChainQuotient.chain_lfd_bound",
+    "ICFallDegrees.ChainQuotient.prime_field_m2_lfd_bound",
+    "ICFallDegrees.CurveBounds.prime_chain_lfd_bound",
+    "ICFallDegrees.CurveBounds.binary_descent_lfd_bound",
+    "ICFallDegrees.CurveBounds.koblitz_descent_lfd_bound"
+  ],
+  "open_formal_obligations": [
+    {
+      "id": "moore-equivalence-and-input-filtration",
+      "required": "Construct the Moore polynomial algebra equivalence for a finite binary-field basis, check both inverse variable degrees and every filtered input span, and instantiate exact transport.",
+      "status": "Moore matrix invertibility and forward coordinate identities proved; construction and specialization of the polynomial algebra equivalence and filtered row replacement remain open."
+    },
+    {
+      "id": "all-length-polynomial-normalization",
+      "required": "Construct terminating nonincreasing signed-digit normalization from every ordinary monomial and connect character grouping to the full-ideal upper bound.",
+      "status": "Written proof, local kernel identities, exhaustive/sampled finite traces; no all-length Lean normalization theorem."
+    },
+    {
+      "id": "even-coefficient-lower-bound",
+      "required": "Formalize positive-word isolation, the square-chain normal form, character independence and the invariant excluding the alternating witness from the full iterated closure.",
+      "status": "Written proof and finite audits; not a universal Lean theorem."
+    },
+    {
+      "id": "arbitrary-space-selector-specialization",
+      "required": "Instantiate the kernel local-to-global theorem with the actual arbitrary-coordinate S3 fiber selectors, then connect the worst-case dimension-budget corollary.",
+      "status": "Written theorem and kernel scalar fiber lemmas; selector section remains open."
+    }
+  ],
+  "review_questions": [
+    "Does normalization terminate for every cycle length with the claimed ordinary-degree budget?",
+    "Does the lower invariant handle every newly derived lower-degree row and wraparound carry?",
+    "Do all coordinate and coefficient-field changes preserve the full input filtration?",
+    "Which exact LFD consequences extend the checked HKYY, Preparata, CG and HFE sources?"
+  ],
+  "curve_bounds_manuscript": {
+    "file": "paper/curve-lfd-bounds.tex",
+    "fully_formalized_statements": [
+      "chain subsystem reduced-ideal trivial (every m,k, 2 != 0)",
+      "LFD <= max(m*k+1, delta) for every input list containing the chains",
+      "LFD <= 2k+1 for the normalized two-summand prime presentation at every depth",
+      "binary/Koblitz descended S3 systems LFD <= r+1"
+    ],
+    "written_only": [
+      "the local-to-global rank certificate for prime chains is the same argument as the Boolean one and is instantiated in Python, not in Lean",
+      "characteristic-two validity of the chain statement (Buchberger coprime criterion) is not formalized"
+    ],
+    "independent_review": "not obtained"
+  }
+}

@@ -1,0 +1,38 @@
+{
+ "source_sha256": {
+  "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+  "csd/ic_bounds_exact10.py": "b361553ef5dcd0f52f8be35f19e0a552529783dc30a2d9667622bd34c9067da9",
+  "csd/ic_chain_block_closure.py": "de5e39705f88b6d975a05db056208b6481b220f00d5bfcb395efb7cb3a6329ca",
+  "csd/ic_chain_shift_closure.py": "2e9b0452e81ee7d16bca9b4799116eed8c03b8a3d4b252ecce5f1568152b1a60",
+  "csd/ic_curve_sweep.py": "4ddefb24900dda4d4f52dcd33b5d30ac7ddf80e3704c1c51d08df0a60fe9874c",
+  "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+  "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+  "scripts/ic_bounds_exact10_degree6.py": "8168838b3e3c7e5ab9d2601ede739720b66e11a24bceaea6449a9c9be06ec16a",
+  "scripts/ic_bounds_exact10_midscale.py": "1cd79e93aa427a158060c90fbd96fa98983d9cc781680b04eafd46cb0b00d1cf",
+  "scripts/ic_bounds_exact10_plan.py": "d59c11ea80f2bbc1e53244d684d3fcc333cf7a7ec1df4017a287a417ad9d2b64",
+  "scripts/ic_bounds_exact10_summarize.py": "d0aa3545f13b208d7e9eecad99375521ca2343309c18084b441d176dccd4220e",
+  "scripts/ic_bounds_exact10_validate.py": "980a82c9e6947ecc65ec706b33f99faaca623b78693877f1f296913099c5b9e7"
+ },
+ "data_sha256": {
+  "experiments/ic-bounds-exact10/calibration.json": "29bc85098026f93a89d7b5b7d3a8a8dc3cf006803720fe2093d8e8bfd47ec961",
+  "experiments/ic-bounds-exact10/degree6-k8-D6-p257-x190.json": "8f279a61e1488089e4e16b429fbd25711adb7e68465e8e16e7198265102dcc53",
+  "experiments/ic-bounds-exact10/midscale-k8.jsonl": "90a9822ac5894c1e0ca03efbcca8a1521ff5e1a498ec27181bf0f04999b41e52",
+  "experiments/ic-bounds-exact10/midscale-k9.jsonl": "33bbf3784b8e710eb2ce5e81b42a667e5553638271ab6ec60630cc3ebcf2de68",
+  "experiments/ic-bounds-exact10/plan.json": "394fb06e7cb04e33dddabe72629f1e8c18a38134abad7c740c099ce2e7790f35",
+  "experiments/ic-bounds-exact10/profiles-k56-v2.jsonl": "0f9f29bbed8195367b85eb895dd6249f51091f1ae19f68ee4f05564076ac1821",
+  "experiments/ic-bounds-exact10/profiles-k56.jsonl": "74708ae09aafa99c01851a0219a6f04ecf0b35701b1d2f6f4125c66e0043c121",
+  "experiments/ic-bounds-exact10/profiles-k7a.jsonl": "e820e97034aa995aabee50c745ba822f8e1bca26169c3baf6fd9623583c85d95",
+  "experiments/ic-bounds-exact10/profiles-k7b.jsonl": "41812f0f7d07dc68e40cd083c6ff3a6800dd17d015d1b549612a9f164ecfd78e",
+  "experiments/ic-bounds-exact10/profiles-k7c.jsonl": "8f2fe683446b64b84623dc9caaf5ca556da0bc50c10dffa6a39d16229423fa76",
+  "experiments/ic-bounds-exact10/profiles-k7d.jsonl": "bb6fb75376549b40a1b51f5c784fec657c8e14d788294b7b6a4852a7404950bf",
+  "experiments/ic-bounds-exact10/profiles-k7e.jsonl": "677c72d87458c3939da0387136fbbd7f7dfb6d4bf71f08ac1a7a0c1c2acb6bbd",
+  "experiments/ic-bounds-exact10/summary.json": "ba7e06d9d3f22ac2b166c08fc65d93785efab550b3728a7bbc5247899b363422",
+  "experiments/ic-bounds-exact10/validation-k56-v2.jsonl": "5831b305ab2d0cab506fc8ed5a996db4c93ee08be04d948d2bff090bce392c33",
+  "experiments/ic-bounds-exact10/validation-k56.jsonl": "efca6b284889a0688f18e2264a5007bcaf9251893dcd803a82fc29741e82f8af",
+  "experiments/ic-bounds-exact10/validation-k7a.jsonl": "64724effa5b6eaef268a0219399320d8cca44531c36a0a80a5ee3488ffb4e900",
+  "experiments/ic-bounds-exact10/validation-k7b.jsonl": "b9cb3775b2f69eb87c67471a95da7dbfc6b8c8c84617acce166bf124d156f076",
+  "experiments/ic-bounds-exact10/validation-k7c.jsonl": "bd3a2dec247f8e1d09bbea07343c3ae47a35611d8724693de533ea85c2fd6394",
+  "experiments/ic-bounds-exact10/validation-k7d.jsonl": "014c1542ad70ac12998b127ab610ba3c8b82db05c3020d8274309bde420c911a",
+  "experiments/ic-bounds-exact10/validation-k7e.jsonl": "5b202af6b283d5f15dcfbbc4f2d40058f2350bc0354b88f0a967c42a1989155b"
+ }
+}

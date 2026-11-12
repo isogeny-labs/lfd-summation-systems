@@ -1,0 +1,123 @@
+{
+ "result": {
+  "status": "deficient-closed",
+  "lfd_lower_bound": 6,
+  "rank": 25033,
+  "target": 35095,
+  "deficiency": 10062,
+  "low_dimension": 3441,
+  "contains_one": false,
+  "fall_at_D": true,
+  "note": "V_5 is exactly the degree-5 closure and has dimension below dim(I cap M_<=5), so an element of I of degree <= 5 is not in V_5: LFD >= 6; 1 is not in V_D"
+ },
+ "ranks": [
+  12546,
+  12487
+ ],
+ "part_columns": [
+  17755,
+  17688
+ ],
+ "profile": [
+  0,
+  0,
+  2,
+  142,
+  3441,
+  25033
+ ],
+ "sym_profile": [
+  0,
+  0,
+  2,
+  72,
+  1674,
+  10798
+ ],
+ "anti_profile": [
+  0,
+  0,
+  0,
+  68,
+  1625,
+  10794
+ ],
+ "low_dimension": 3441,
+ "rounds": 12,
+ "sweeps": 1,
+ "rank_history": [
+  1794,
+  3013,
+  5952,
+  8749,
+  11349,
+  14257,
+  16841,
+  18965,
+  21138,
+  23180,
+  24836,
+  25021,
+  25033
+ ],
+ "batch": 600,
+ "total_seconds": 926.8,
+ "free_storage_entries": 130297001,
+ "peak_free_entries": 156638701,
+ "work": {
+  "generators": [
+   26721225846,
+   5.745174169540405
+  ],
+  "closure": [
+   4758860354521,
+   637.3573155403137
+  ],
+  "verify": [
+   4931871784851,
+   282.52253556251526
+  ]
+ },
+ "basis_sha256": "191768811b4430565cc7beb7e4463637b136842e626f06cf5fefee7b76dce913",
+ "prime": 12289,
+ "a": 4021,
+ "b": 9917,
+ "seed": 12,
+ "target": [
+  4408,
+  4441
+ ],
+ "k": 11,
+ "degree": 5,
+ "points": 348,
+ "want_solutions": true,
+ "engine": "split",
+ "prev": {
+  "engine": "split-verified-closed",
+  "dim": 1805,
+  "contains_one": false,
+  "profile": [
+   0,
+   0,
+   2,
+   131,
+   1805
+  ],
+  "ideal_dim_lower": 8761
+ },
+ "columns": 35443,
+ "evaluation_onto_below_D": true,
+ "maxrss_mb": 862,
+ "seconds_this_run": 931.6,
+ "source_sha256": {
+  "scripts/ic_bounds_d5_probe.py": "c608f46cbddd2b7054fcaaa60f999de4a9e61c1e6537d3ff699b48ffabf116c3",
+  "csd/ic_bounds_d5.py": "e0971629a8a969daa009b665788f9bb673ce3a2bc5f5b4cd434aed9c5c4703da",
+  "csd/ic_chain_shift_closure.py": "2e9b0452e81ee7d16bca9b4799116eed8c03b8a3d4b252ecce5f1568152b1a60",
+  "csd/ic_chain_block_closure.py": "83d184483714eb35aafe1ae0932449c7a7302a9ec67f82d2618fba48989acd7a",
+  "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+  "csd/ic_curve_sweep.py": "4ddefb24900dda4d4f52dcd33b5d30ac7ddf80e3704c1c51d08df0a60fe9874c",
+  "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+  "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+  "csd/_elim.c": "1269131384fc5f110b90b70a1c8f174a60ca7fe968388f6e13f96eba56959290"
+ }
+}

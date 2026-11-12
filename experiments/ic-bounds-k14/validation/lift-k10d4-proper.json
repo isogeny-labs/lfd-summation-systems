@@ -1,0 +1,164 @@
+{
+ "set": "k10d4-proper",
+ "devices": [
+  "cpu"
+ ],
+ "modes": [
+  "plain"
+ ],
+ "all_ok": true,
+ "rows": [
+  {
+   "case": "proper-65537-X1424-k10-D4to5",
+   "p": 65537,
+   "a": 4021,
+   "b": 9917,
+   "X": 1424,
+   "k": 10,
+   "D": 4,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 14,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 18569,
+    "profile": [
+     0,
+     0,
+     2,
+     138,
+     3163,
+     18569
+    ],
+    "contains_one": false,
+    "low_sha": [
+     "ab41edaac276e205",
+     "94905423d0bc6a88"
+    ],
+    "seconds": 94.2,
+    "madds": 539936419470,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 18569,
+    "profile": [
+     0,
+     0,
+     2,
+     138,
+     3163,
+     18569
+    ],
+    "contains_one": false,
+    "low_sha": [
+     "ab41edaac276e205",
+     "94905423d0bc6a88"
+    ],
+    "dim_VD": 1549,
+    "free": [
+     2338,
+     2309
+    ],
+    "regular_top": [
+     980,
+     980
+    ],
+    "special_top": [
+     6772,
+     6772
+    ],
+    "dim_T": [
+     9110,
+     9081
+    ],
+    "dim_K": [
+     7543,
+     7517
+    ],
+    "falls": [
+     820,
+     794
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      138,
+      199
+     ],
+     [
+      143,
+      234
+     ],
+     [
+      220,
+      184
+     ],
+     [
+      236,
+      115
+     ],
+     [
+      19,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 1985716,
+    "counts": {
+     "images": 60720,
+     "eterm_rows": 1924996,
+     "madds_gemm": 746820740921,
+     "candidates": 58760,
+     "candidates_nonzero": 41272,
+     "batches": 40,
+     "follower_builds": 816,
+     "follower_evictions": 796,
+     "fall_images": 32280
+    },
+    "madds": {
+     "gemm": 746820740921,
+     "k_reduce_update_rref": 4907083068215,
+     "follower_sync": 361002950284,
+     "total": 6014906759420
+    },
+    "seconds": 458.6,
+    "vd_closure": {
+     "rank": 1549,
+     "seconds": 0.8,
+     "madds": 1931397896
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 1310,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.2999999998137355,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      7366,
+      7390
+     ]
+    }
+   }
+  }
+ ],
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "533c92a4132b9d68002efff9335e2850e57927b753793825cf4a2905c4156042"
+ }
+}

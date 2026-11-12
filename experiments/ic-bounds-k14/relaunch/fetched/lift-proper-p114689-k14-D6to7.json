@@ -1,0 +1,199 @@
+{
+ "k": 14,
+ "D": 6,
+ "D_target": 7,
+ "p": 114689,
+ "dim_VD": 448922,
+ "part_ranks_VD": [
+  224688,
+  224234
+ ],
+ "free_columns_VD": [
+  25136,
+  25120
+ ],
+ "regular_orbits_weight_D": 187842,
+ "free_type_monomials_weight_D": 1406,
+ "regular_top_orbits": [
+  586501,
+  586501
+ ],
+ "special_top_orbits": [
+  5519,
+  5519
+ ],
+ "dim_T": [
+  30655,
+  30639
+ ],
+ "dim_K": [
+  29470,
+  29454
+ ],
+ "falls": [
+  23951,
+  23935
+ ],
+ "falls_new_per_round": [
+  [
+   494,
+   494
+  ],
+  [
+   12260,
+   12260
+  ],
+  [
+   11197,
+   11181
+  ]
+ ],
+ "rounds": 3,
+ "contains_one": false,
+ "fixed_point": true,
+ "status": "done",
+ "dim_VD1": 1680848,
+ "part_dims_VD1": [
+  840659,
+  840189
+ ],
+ "profile": [
+  0,
+  0,
+  2,
+  1313,
+  21788,
+  120068,
+  496808,
+  1680848
+ ],
+ "part_profiles_low": [
+  [
+   0,
+   0,
+   2,
+   664,
+   10947,
+   60087,
+   248639
+  ],
+  [
+   0,
+   0,
+   0,
+   649,
+   10841,
+   59981,
+   248169
+  ]
+ ],
+ "low_basis_sha256": [
+  "cc7d2994f1973f204ff82cc16bbadcc571ee81eb5ac4d3e4b18e3e55d0270a9f",
+  "0b0b887bfa41ef487ac67f2b81f530fa25695d6521acfb1a4b4c83442693d946"
+ ],
+ "low_part_ranks": [
+  248639,
+  248169
+ ],
+ "bounds_only": false,
+ "regular_columns_covered": [
+  586501,
+  586501
+ ],
+ "reductions": 24922720,
+ "counts": {
+  "images": 11850188,
+  "eterm_rows": 13072532,
+  "madds_gemm": 445704151635824,
+  "candidates": 10677186,
+  "candidates_nonzero": 104849,
+  "batches": 1498,
+  "follower_builds": 102,
+  "follower_evictions": 46,
+  "fall_images": 1340808
+ },
+ "madds": {
+  "gemm": 445704151635824,
+  "k_reduce_update_rref": 328705820622659,
+  "follower_sync": 559747619848240,
+  "total": 1334157592106723
+ },
+ "k_madds_detail": [
+  {
+   "reduce": 166402877250279,
+   "reduce_dense": 0,
+   "update": 4647332173315,
+   "rref": 1619209215763
+  },
+  {
+   "reduce": 150375078524876,
+   "reduce_dense": 0,
+   "update": 4831761196933,
+   "rref": 829562261493
+  }
+ ],
+ "seconds": 4678.7,
+ "device": "gpu",
+ "maxrss_mb": 44397,
+ "resumes": 0,
+ "settings": {
+  "work_gb": 16.0,
+  "cache_gb": 111.6248091449961,
+  "batch_units": null,
+  "direct_rows": null,
+  "include_low": false,
+  "fall_every": 8,
+  "stop_on_one": false,
+  "tile_rows_K": [
+   2189,
+   2190
+  ]
+ },
+ "test_hooks": {
+  "drop_shift": null,
+  "no_fall_shifts": false
+ },
+ "vd": {
+  "source": "checkpoint",
+  "ckpt": "ck-00000006",
+  "ckpt_reason": "timer",
+  "ckpt_phase": "sweep",
+  "closure_complete": true,
+  "ckpt_engine_sha256": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "ckpt_config": {
+   "k": 14,
+   "p": 114689,
+   "D": 6,
+   "split": true,
+   "gens": "all",
+   "source_id": "bb5e7b30b620cf8cf1fd5c62b005c8234070fac3ef240d10616b20da1d37ed9e"
+  },
+  "swept_closed": "not known from the checkpoint: take it from the closure record of the same run",
+  "basis_id": "ac95f497594951b41c9dd1a53204e07704d1e15259d0fbad08868c41203c7053",
+  "basis_on": "host"
+ },
+ "guard_hits": 0,
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6f3e1109929cb5ba63923f8d501ba2f47388cec464304188b8e013de715feff2"
+ },
+ "lift_version": "ic_bounds_lift/1",
+ "engine_version": "ic_bounds_big/2",
+ "dev_used_mb": 3656,
+ "dev_total_mb": 143157,
+ "dev_peak_live_mb": null,
+ "resumed_from_checkpoint": false,
+ "instance_file": "proper-p114689-s22-k14.json",
+ "instance_sha256": "3f0013c384c72d2d6b171acfcb4d8673f204962f06348d4036e2f05f75218dcf",
+ "a": 31415,
+ "b": 92653,
+ "seed": 22,
+ "want": true,
+ "unit_nonresidue": false,
+ "instance_target": [
+  80359,
+  998
+ ],
+ "instance_points": 2370
+}

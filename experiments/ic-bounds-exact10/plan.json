@@ -1,0 +1,322 @@
+{
+ "known": {
+  "exact_lfd_by_depth": {
+   "k<=5": 4,
+   "6<=k<=9": 5,
+   "k=10": ">= 6 (three instances, verified-closed V_5)"
+  },
+  "onset_depths": {
+   "LFD 5 (V_4 deficient)": 6,
+   "LFD 6 (V_5 deficient)": 10
+  },
+  "dims": {
+   "dim V_4 for k>=6 (exact dense, fit)": "4k^2+172k-571",
+   "dim V_5 at k=10": 18569,
+   "dim(V_5 cap M_<=4) at k=10": 3163
+  },
+  "pkm_magma_dreg": {
+   "k=10": 6,
+   "k=11": 6
+  },
+  "conjecture": "k_7 lies in 12..17; the onset gaps so far are 6 -> 10; an equal gap gives 14. This is a conjecture from two data points, not a bound."
+ },
+ "time_alpha_seconds_per_col3": 1.6024430397302472e-10,
+ "rows": [
+  {
+   "k": 9,
+   "prime": 12289,
+   "word_bytes": 2,
+   "D5": {
+    "cols": 12616,
+    "low_cols": 4048,
+    "sym_cols": 6331,
+    "anti_cols": 6285,
+    "parts_gb": 0.16,
+    "peak_gb_model": 0.76,
+    "hours_est": 0.1
+   },
+   "D6": {
+    "cols": 31180,
+    "low_cols": 12616,
+    "sym_cols": 15655,
+    "anti_cols": 15525,
+    "parts_gb": 0.97,
+    "peak_gb_model": 2.52,
+    "hours_est": 1.3
+   },
+   "D7": {
+    "cols": 63004,
+    "low_cols": 31180,
+    "sym_cols": 31567,
+    "anti_cols": 31437,
+    "parts_gb": 3.97,
+    "peak_gb_model": 7.27,
+    "hours_est": 11.1
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 9 --degree 5 --prime 12289 --a 1 --b 0 --seed 10 --tag k9-p12289-unit --ckpt $CKPT/k9-p12289-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 9 --degree 6 --prime 12289 --a 1 --b 0 --seed 10 --tag k9-p12289-unit --ckpt $CKPT/k9-p12289-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 9 --degree 6 --prime 12289 --a 1 --b 0 --seed 11 --want-solutions --tag k9-p12289-proper --ckpt $CKPT/k9-p12289-D6-proper"
+   }
+  },
+  {
+   "k": 10,
+   "prime": 12289,
+   "word_bytes": 2,
+   "D5": {
+    "cols": 21700,
+    "low_cols": 6196,
+    "sym_cols": 10878,
+    "anti_cols": 10822,
+    "parts_gb": 0.47,
+    "peak_gb_model": 1.47,
+    "hours_est": 0.5
+   },
+   "D6": {
+    "cols": 60460,
+    "low_cols": 21700,
+    "sym_cols": 30318,
+    "anti_cols": 30142,
+    "parts_gb": 3.66,
+    "peak_gb_model": 6.56,
+    "hours_est": 9.8
+   },
+   "D7": {
+    "cols": 137980,
+    "low_cols": 60460,
+    "sym_cols": 69078,
+    "anti_cols": 68902,
+    "parts_gb": 19.04,
+    "peak_gb_model": 25.99,
+    "hours_est": 116.9
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 10 --degree 5 --prime 12289 --a 1 --b 0 --seed 10 --tag k10-p12289-unit --ckpt $CKPT/k10-p12289-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 10 --degree 6 --prime 12289 --a 1 --b 0 --seed 10 --tag k10-p12289-unit --ckpt $CKPT/k10-p12289-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 10 --degree 6 --prime 12289 --a 1 --b 0 --seed 11 --want-solutions --tag k10-p12289-proper --ckpt $CKPT/k10-p12289-D6-proper"
+   }
+  },
+  {
+   "k": 11,
+   "prime": 12289,
+   "word_bytes": 2,
+   "D5": {
+    "cols": 35443,
+    "low_cols": 9109,
+    "sym_cols": 17755,
+    "anti_cols": 17688,
+    "parts_gb": 1.26,
+    "peak_gb_model": 2.85,
+    "hours_est": 2.0
+   },
+   "D6": {
+    "cols": 110056,
+    "low_cols": 35443,
+    "sym_cols": 55144,
+    "anti_cols": 54912,
+    "parts_gb": 12.11,
+    "peak_gb_model": 17.25,
+    "hours_est": 59.3
+   },
+   "D7": {
+    "cols": 280600,
+    "low_cols": 110056,
+    "sym_cols": 140416,
+    "anti_cols": 140184,
+    "parts_gb": 78.74,
+    "peak_gb_model": 92.43,
+    "hours_est": 983.4
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 11 --degree 5 --prime 12289 --a 1 --b 0 --seed 10 --tag k11-p12289-unit --ckpt $CKPT/k11-p12289-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 11 --degree 6 --prime 12289 --a 1 --b 0 --seed 10 --tag k11-p12289-unit --ckpt $CKPT/k11-p12289-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 11 --degree 6 --prime 12289 --a 1 --b 0 --seed 11 --want-solutions --tag k11-p12289-proper --ckpt $CKPT/k11-p12289-D6-proper"
+   }
+  },
+  {
+   "k": 12,
+   "prime": 12289,
+   "word_bytes": 2,
+   "D5": {
+    "cols": 55455,
+    "low_cols": 12951,
+    "sym_cols": 27767,
+    "anti_cols": 27688,
+    "parts_gb": 3.08,
+    "peak_gb_model": 5.51,
+    "hours_est": 7.6
+   },
+   "D6": {
+    "cols": 190051,
+    "low_cols": 55455,
+    "sym_cols": 95175,
+    "anti_cols": 94876,
+    "parts_gb": 36.12,
+    "peak_gb_model": 44.79,
+    "hours_est": 305.6
+   },
+   "D7": {
+    "cols": 536155,
+    "low_cols": 190051,
+    "sym_cols": 268227,
+    "anti_cols": 267928,
+    "parts_gb": 287.46,
+    "peak_gb_model": 312.97,
+    "hours_est": 6860.4
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 12 --degree 5 --prime 12289 --a 1 --b 0 --seed 10 --tag k12-p12289-unit --ckpt $CKPT/k12-p12289-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 12 --degree 6 --prime 12289 --a 1 --b 0 --seed 10 --tag k12-p12289-unit --ckpt $CKPT/k12-p12289-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 12 --degree 6 --prime 12289 --a 1 --b 0 --seed 11 --want-solutions --tag k12-p12289-proper --ckpt $CKPT/k12-p12289-D6-proper"
+   }
+  },
+  {
+   "k": 13,
+   "prime": 40961,
+   "word_bytes": 2,
+   "D5": {
+    "cols": 83682,
+    "low_cols": 17902,
+    "sym_cols": 41887,
+    "anti_cols": 41795,
+    "parts_gb": 7.0,
+    "peak_gb_model": 10.62,
+    "hours_est": 26.1
+   },
+   "D6": {
+    "cols": 313912,
+    "low_cols": 83682,
+    "sym_cols": 157145,
+    "anti_cols": 156767,
+    "parts_gb": 98.54,
+    "peak_gb_model": 112.6,
+    "hours_est": 1376.9
+   },
+   "D7": {
+    "cols": 971712,
+    "low_cols": 313912,
+    "sym_cols": 486045,
+    "anti_cols": 485667,
+    "parts_gb": 944.22,
+    "peak_gb_model": 989.46,
+    "hours_est": 40840.7
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 13 --degree 5 --prime 40961 --a 1 --b 0 --seed 10 --tag k13-p40961-unit --ckpt $CKPT/k13-p40961-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 13 --degree 6 --prime 40961 --a 1 --b 0 --seed 10 --tag k13-p40961-unit --ckpt $CKPT/k13-p40961-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 13 --degree 6 --prime 40961 --a 1 --b 0 --seed 11 --want-solutions --tag k13-p40961-proper --ckpt $CKPT/k13-p40961-D6-proper"
+   }
+  },
+  {
+   "k": 14,
+   "prime": 65537,
+   "word_bytes": 4,
+   "D5": {
+    "cols": 122438,
+    "low_cols": 24158,
+    "sym_cols": 61272,
+    "anti_cols": 61166,
+    "parts_gb": 29.98,
+    "peak_gb_model": 35.2,
+    "hours_est": 81.7
+   },
+   "D6": {
+    "cols": 499178,
+    "low_cols": 122438,
+    "sym_cols": 249824,
+    "anti_cols": 249354,
+    "parts_gb": 498.36,
+    "peak_gb_model": 520.37,
+    "hours_est": 5536.6
+   },
+   "D7": {
+    "cols": 1683218,
+    "low_cols": 499178,
+    "sym_cols": 841844,
+    "anti_cols": 841374,
+    "parts_gb": 5666.45,
+    "peak_gb_model": 5743.36,
+    "hours_est": 212276.1
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 14 --degree 5 --prime 65537 --a 1 --b 0 --seed 10 --tag k14-p65537-unit --ckpt $CKPT/k14-p65537-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 14 --degree 6 --prime 65537 --a 1 --b 0 --seed 10 --tag k14-p65537-unit --ckpt $CKPT/k14-p65537-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 14 --degree 6 --prime 65537 --a 1 --b 0 --seed 11 --want-solutions --tag k14-p65537-proper --ckpt $CKPT/k14-p65537-D6-proper"
+   }
+  },
+  {
+   "k": 15,
+   "prime": 65537,
+   "word_bytes": 4,
+   "D5": {
+    "cols": 174437,
+    "low_cols": 31931,
+    "sym_cols": 87279,
+    "anti_cols": 87158,
+    "parts_gb": 60.86,
+    "peak_gb_model": 68.21,
+    "hours_est": 236.3
+   },
+   "D6": {
+    "cols": 768212,
+    "low_cols": 174437,
+    "sym_cols": 384394,
+    "anti_cols": 383818,
+    "parts_gb": 1180.3,
+    "peak_gb_model": 1213.71,
+    "hours_est": 20180.1
+   },
+   "D7": {
+    "cols": 2804012,
+    "low_cols": 768212,
+    "sym_cols": 1402294,
+    "anti_cols": 1401718,
+    "parts_gb": 15724.97,
+    "peak_gb_model": 15851.06,
+    "hours_est": 981340.5
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 15 --degree 5 --prime 65537 --a 1 --b 0 --seed 10 --tag k15-p65537-unit --ckpt $CKPT/k15-p65537-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 15 --degree 6 --prime 65537 --a 1 --b 0 --seed 10 --tag k15-p65537-unit --ckpt $CKPT/k15-p65537-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 15 --degree 6 --prime 65537 --a 1 --b 0 --seed 11 --want-solutions --tag k15-p65537-proper --ckpt $CKPT/k15-p65537-D6-proper"
+   }
+  },
+  {
+   "k": 16,
+   "prime": 65537,
+   "word_bytes": 4,
+   "D5": {
+    "cols": 242825,
+    "low_cols": 41449,
+    "sym_cols": 121481,
+    "anti_cols": 121344,
+    "parts_gb": 117.93,
+    "peak_gb_model": 128.06,
+    "hours_est": 637.3
+   },
+   "D6": {
+    "cols": 1149017,
+    "low_cols": 242825,
+    "sym_cols": 574857,
+    "anti_cols": 574160,
+    "parts_gb": 2640.48,
+    "peak_gb_model": 2689.87,
+    "hours_est": 67524.2
+   },
+   "D7": {
+    "cols": 4514873,
+    "low_cols": 1149017,
+    "sym_cols": 2257785,
+    "anti_cols": 2257088,
+    "parts_gb": 40768.16,
+    "peak_gb_model": 40968.36,
+    "hours_est": 4096535.4
+   },
+   "commands": {
+    "D5_closure_lower_bound": "python3 scripts/ic_bounds_exact10_degree6.py --k 16 --degree 5 --prime 65537 --a 1 --b 0 --seed 10 --tag k16-p65537-unit --ckpt $CKPT/k16-p65537-D5",
+    "D6_closure": "python3 scripts/ic_bounds_exact10_degree6.py --k 16 --degree 6 --prime 65537 --a 1 --b 0 --seed 10 --tag k16-p65537-unit --ckpt $CKPT/k16-p65537-D6",
+    "D6_proper": "python3 scripts/ic_bounds_exact10_degree6.py --k 16 --degree 6 --prime 65537 --a 1 --b 0 --seed 11 --want-solutions --tag k16-p65537-proper --ckpt $CKPT/k16-p65537-D6-proper"
+   }
+  }
+ ]
+}

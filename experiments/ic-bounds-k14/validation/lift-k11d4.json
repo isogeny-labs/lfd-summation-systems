@@ -1,0 +1,168 @@
+{
+ "set": "k11d4",
+ "devices": [
+  "cpu"
+ ],
+ "modes": [
+  "plain"
+ ],
+ "all_ok": true,
+ "rows": [
+  {
+   "case": "unit-65537-k11-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 11,
+   "D": 4,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "contains_one": false,
+    "low_sha": [
+     "7e993959c70aa5f8",
+     "f9befbc44e982c15"
+    ],
+    "seconds": 257.1,
+    "madds": 1887403985242,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "contains_one": false,
+    "low_sha": [
+     "7e993959c70aa5f8",
+     "f9befbc44e982c15"
+    ],
+    "dim_VD": 1805,
+    "free": [
+     3671,
+     3633
+    ],
+    "regular_top": [
+     1127,
+     1127
+    ],
+    "special_top": [
+     12040,
+     12040
+    ],
+    "dim_T": [
+     15711,
+     15673
+    ],
+    "dim_K": [
+     10502,
+     10472
+    ],
+    "falls": [
+     831,
+     805
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      146,
+      180
+     ],
+     [
+      133,
+      199
+     ],
+     [
+      200,
+      157
+     ],
+     [
+      172,
+      202
+     ],
+     [
+      115,
+      5
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "rounds": 7,
+    "reductions": 5814984,
+    "counts": {
+     "images": 72820,
+     "eterm_rows": 5742164,
+     "madds_gemm": 2483938724110,
+     "candidates": 70566,
+     "candidates_nonzero": 45815,
+     "batches": 92,
+     "follower_builds": 1562,
+     "follower_evictions": 1557,
+     "fall_images": 35992
+    },
+    "madds": {
+     "gemm": 2483938724110,
+     "k_reduce_update_rref": 19055484937577,
+     "follower_sync": 217812954945,
+     "total": 21757236616632
+    },
+    "seconds": 1827.5,
+    "vd_closure": {
+     "rank": 1805,
+     "seconds": 1.5,
+     "madds": 3473987830
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 2162,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.39999999944120646,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      4271,
+      4281
+     ]
+    }
+   }
+  }
+ ],
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "533c92a4132b9d68002efff9335e2850e57927b753793825cf4a2905c4156042"
+ }
+}

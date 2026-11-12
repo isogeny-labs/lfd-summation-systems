@@ -1,0 +1,3903 @@
+{
+ "set": "enter",
+ "devices": [
+  "cpu",
+  "fake-gpu"
+ ],
+ "modes": [
+  "plain",
+  "low"
+ ],
+ "all_ok": true,
+ "rows": [
+  {
+   "case": "unit-65537-k3-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 3,
+   "D": 3,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "seconds": 0.0,
+    "madds": 30177,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "dim_VD": 7,
+    "free": [
+     19,
+     16
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     8,
+     6
+    ],
+    "dim_T": [
+     27,
+     22
+    ],
+    "dim_K": [
+     27,
+     22
+    ],
+    "falls": [
+     19,
+     16
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      11,
+      5
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 350,
+    "counts": {
+     "images": 104,
+     "eterm_rows": 246,
+     "madds_gemm": 26817,
+     "candidates": 149,
+     "candidates_nonzero": 89,
+     "batches": 2,
+     "follower_builds": 12,
+     "follower_evictions": 0,
+     "fall_images": 114
+    },
+    "madds": {
+     "gemm": 26817,
+     "k_reduce_update_rref": 11217,
+     "follower_sync": 72937,
+     "total": 110971
+    },
+    "seconds": 0.0,
+    "vd_closure": {
+     "rank": 7,
+     "seconds": 0.0,
+     "madds": 2441
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 39,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      27,
+      22
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k3-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 3,
+   "D": 3,
+   "device": "cpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "seconds": 0.0,
+    "madds": 30177,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "dim_VD": 7,
+    "free": [
+     19,
+     16
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     8,
+     6
+    ],
+    "dim_T": [
+     27,
+     22
+    ],
+    "dim_K": [
+     27,
+     22
+    ],
+    "falls": [
+     19,
+     16
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      11,
+      5
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 362,
+    "counts": {
+     "images": 110,
+     "eterm_rows": 252,
+     "madds_gemm": 29610,
+     "candidates": 155,
+     "candidates_nonzero": 89,
+     "batches": 2,
+     "follower_builds": 12,
+     "follower_evictions": 0,
+     "fall_images": 114
+    },
+    "madds": {
+     "gemm": 29610,
+     "k_reduce_update_rref": 11217,
+     "follower_sync": 72937,
+     "total": 113764
+    },
+    "seconds": 0.0,
+    "vd_closure": {
+     "rank": 7,
+     "seconds": 0.0,
+     "madds": 2441
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 39,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      27,
+      22
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k3-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 3,
+   "D": 3,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "seconds": 0.0,
+    "madds": 30177,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "dim_VD": 7,
+    "free": [
+     19,
+     16
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     8,
+     6
+    ],
+    "dim_T": [
+     27,
+     22
+    ],
+    "dim_K": [
+     27,
+     22
+    ],
+    "falls": [
+     19,
+     16
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      11,
+      5
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 350,
+    "counts": {
+     "images": 104,
+     "eterm_rows": 246,
+     "madds_gemm": 26817,
+     "candidates": 149,
+     "candidates_nonzero": 89,
+     "batches": 2,
+     "follower_builds": 12,
+     "follower_evictions": 0,
+     "fall_images": 114
+    },
+    "madds": {
+     "gemm": 26817,
+     "k_reduce_update_rref": 11217,
+     "follower_sync": 72937,
+     "total": 110971
+    },
+    "seconds": 0.1,
+    "vd_closure": {
+     "rank": 7,
+     "seconds": 0.0,
+     "madds": 2441
+    },
+    "dev_peak_live_mb": 0,
+    "maxrss_mb": 39,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      27,
+      22
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k3-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 3,
+   "D": 3,
+   "device": "fake-gpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "seconds": 0.0,
+    "madds": 30177,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 57,
+    "profile": [
+     1,
+     7,
+     22,
+     42,
+     57
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "632d419b42ca8862",
+     "6f4a824231ea6479"
+    ],
+    "dim_VD": 7,
+    "free": [
+     19,
+     16
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     8,
+     6
+    ],
+    "dim_T": [
+     27,
+     22
+    ],
+    "dim_K": [
+     27,
+     22
+    ],
+    "falls": [
+     19,
+     16
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      11,
+      5
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 362,
+    "counts": {
+     "images": 110,
+     "eterm_rows": 252,
+     "madds_gemm": 29610,
+     "candidates": 155,
+     "candidates_nonzero": 89,
+     "batches": 2,
+     "follower_builds": 12,
+     "follower_evictions": 0,
+     "fall_images": 114
+    },
+    "madds": {
+     "gemm": 29610,
+     "k_reduce_update_rref": 11217,
+     "follower_sync": 72937,
+     "total": 113764
+    },
+    "seconds": 0.1,
+    "vd_closure": {
+     "rank": 7,
+     "seconds": 0.0,
+     "madds": 2441
+    },
+    "dev_peak_live_mb": 0,
+    "maxrss_mb": 39,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      27,
+      22
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k4-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 4,
+   "D": 3,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "seconds": 0.0,
+    "madds": 378681,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "dim_VD": 9,
+    "free": [
+     44,
+     40
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     37,
+     32
+    ],
+    "dim_T": [
+     81,
+     72
+    ],
+    "dim_K": [
+     81,
+     72
+    ],
+    "falls": [
+     44,
+     40
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      22,
+      20
+     ],
+     [
+      5,
+      0
+     ]
+    ],
+    "rounds": 5,
+    "reductions": 1088,
+    "counts": {
+     "images": 352,
+     "eterm_rows": 736,
+     "madds_gemm": 554228,
+     "candidates": 527,
+     "candidates_nonzero": 326,
+     "batches": 2,
+     "follower_builds": 16,
+     "follower_evictions": 0,
+     "fall_images": 464
+    },
+    "madds": {
+     "gemm": 554228,
+     "k_reduce_update_rref": 181068,
+     "follower_sync": 2056048,
+     "total": 2791344
+    },
+    "seconds": 0.0,
+    "vd_closure": {
+     "rank": 9,
+     "seconds": 0.0,
+     "madds": 7600
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 39,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      81,
+      72
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k4-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 4,
+   "D": 3,
+   "device": "cpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "seconds": 0.0,
+    "madds": 378681,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "dim_VD": 9,
+    "free": [
+     44,
+     40
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     37,
+     32
+    ],
+    "dim_T": [
+     81,
+     72
+    ],
+    "dim_K": [
+     81,
+     72
+    ],
+    "falls": [
+     44,
+     40
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      22,
+      20
+     ],
+     [
+      5,
+      0
+     ]
+    ],
+    "rounds": 5,
+    "reductions": 1104,
+    "counts": {
+     "images": 360,
+     "eterm_rows": 744,
+     "madds_gemm": 581156,
+     "candidates": 535,
+     "candidates_nonzero": 326,
+     "batches": 2,
+     "follower_builds": 16,
+     "follower_evictions": 0,
+     "fall_images": 464
+    },
+    "madds": {
+     "gemm": 581156,
+     "k_reduce_update_rref": 181068,
+     "follower_sync": 2056048,
+     "total": 2818272
+    },
+    "seconds": 0.0,
+    "vd_closure": {
+     "rank": 9,
+     "seconds": 0.0,
+     "madds": 7600
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 39,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      81,
+      72
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k4-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 4,
+   "D": 3,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "seconds": 0.0,
+    "madds": 378681,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "dim_VD": 9,
+    "free": [
+     44,
+     40
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     37,
+     32
+    ],
+    "dim_T": [
+     81,
+     72
+    ],
+    "dim_K": [
+     81,
+     72
+    ],
+    "falls": [
+     44,
+     40
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      22,
+      20
+     ],
+     [
+      5,
+      0
+     ]
+    ],
+    "rounds": 5,
+    "reductions": 1088,
+    "counts": {
+     "images": 352,
+     "eterm_rows": 736,
+     "madds_gemm": 554228,
+     "candidates": 527,
+     "candidates_nonzero": 326,
+     "batches": 2,
+     "follower_builds": 16,
+     "follower_evictions": 0,
+     "fall_images": 464
+    },
+    "madds": {
+     "gemm": 554228,
+     "k_reduce_update_rref": 181068,
+     "follower_sync": 2056048,
+     "total": 2791344
+    },
+    "seconds": 0.2,
+    "vd_closure": {
+     "rank": 9,
+     "seconds": 0.0,
+     "madds": 7600
+    },
+    "dev_peak_live_mb": 0,
+    "maxrss_mb": 40,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      81,
+      72
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k4-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 4,
+   "D": 3,
+   "device": "fake-gpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "seconds": 0.0,
+    "madds": 378681,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "335830dca0924d43",
+     "18ce1749c68f96db"
+    ],
+    "dim_VD": 9,
+    "free": [
+     44,
+     40
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     37,
+     32
+    ],
+    "dim_T": [
+     81,
+     72
+    ],
+    "dim_K": [
+     81,
+     72
+    ],
+    "falls": [
+     44,
+     40
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      22,
+      20
+     ],
+     [
+      5,
+      0
+     ]
+    ],
+    "rounds": 5,
+    "reductions": 1104,
+    "counts": {
+     "images": 360,
+     "eterm_rows": 744,
+     "madds_gemm": 581156,
+     "candidates": 535,
+     "candidates_nonzero": 326,
+     "batches": 2,
+     "follower_builds": 16,
+     "follower_evictions": 0,
+     "fall_images": 464
+    },
+    "madds": {
+     "gemm": 581156,
+     "k_reduce_update_rref": 181068,
+     "follower_sync": 2056048,
+     "total": 2818272
+    },
+    "seconds": 0.2,
+    "vd_closure": {
+     "rank": 9,
+     "seconds": 0.0,
+     "madds": 7600
+    },
+    "dev_peak_live_mb": 0,
+    "maxrss_mb": 40,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      81,
+      72
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k5-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 5,
+   "D": 3,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "seconds": 0.1,
+    "madds": 3051674,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "dim_VD": 11,
+    "free": [
+     85,
+     80
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     109,
+     100
+    ],
+    "dim_T": [
+     194,
+     180
+    ],
+    "dim_K": [
+     194,
+     180
+    ],
+    "falls": [
+     85,
+     80
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      13,
+      9
+     ],
+     [
+      11,
+      50
+     ],
+     [
+      43,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 2538,
+    "counts": {
+     "images": 788,
+     "eterm_rows": 1750,
+     "madds_gemm": 6289285,
+     "candidates": 1014,
+     "candidates_nonzero": 723,
+     "batches": 2,
+     "follower_builds": 20,
+     "follower_evictions": 0,
+     "fall_images": 915
+    },
+    "madds": {
+     "gemm": 6289285,
+     "k_reduce_update_rref": 1925317,
+     "follower_sync": 28333770,
+     "total": 36548372
+    },
+    "seconds": 0.1,
+    "vd_closure": {
+     "rank": 11,
+     "seconds": 0.0,
+     "madds": 19019
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 41,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      194,
+      180
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k5-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 5,
+   "D": 3,
+   "device": "cpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "seconds": 0.1,
+    "madds": 3051674,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "dim_VD": 11,
+    "free": [
+     85,
+     80
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     109,
+     100
+    ],
+    "dim_T": [
+     194,
+     180
+    ],
+    "dim_K": [
+     194,
+     180
+    ],
+    "falls": [
+     85,
+     80
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      13,
+      9
+     ],
+     [
+      11,
+      50
+     ],
+     [
+      43,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 2558,
+    "counts": {
+     "images": 798,
+     "eterm_rows": 1760,
+     "madds_gemm": 6448235,
+     "candidates": 1024,
+     "candidates_nonzero": 723,
+     "batches": 2,
+     "follower_builds": 20,
+     "follower_evictions": 0,
+     "fall_images": 915
+    },
+    "madds": {
+     "gemm": 6448235,
+     "k_reduce_update_rref": 1925317,
+     "follower_sync": 28333770,
+     "total": 36707322
+    },
+    "seconds": 0.1,
+    "vd_closure": {
+     "rank": 11,
+     "seconds": 0.0,
+     "madds": 19019
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 42,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      194,
+      180
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k5-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 5,
+   "D": 3,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "seconds": 0.1,
+    "madds": 3051674,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "dim_VD": 11,
+    "free": [
+     85,
+     80
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     109,
+     100
+    ],
+    "dim_T": [
+     194,
+     180
+    ],
+    "dim_K": [
+     194,
+     180
+    ],
+    "falls": [
+     85,
+     80
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      13,
+      9
+     ],
+     [
+      11,
+      50
+     ],
+     [
+      43,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 2538,
+    "counts": {
+     "images": 788,
+     "eterm_rows": 1750,
+     "madds_gemm": 6289285,
+     "candidates": 1014,
+     "candidates_nonzero": 723,
+     "batches": 2,
+     "follower_builds": 20,
+     "follower_evictions": 0,
+     "fall_images": 915
+    },
+    "madds": {
+     "gemm": 6289285,
+     "k_reduce_update_rref": 1925317,
+     "follower_sync": 28333770,
+     "total": 36548372
+    },
+    "seconds": 0.3,
+    "vd_closure": {
+     "rank": 11,
+     "seconds": 0.0,
+     "madds": 19019
+    },
+    "dev_peak_live_mb": 1,
+    "maxrss_mb": 42,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      194,
+      180
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k5-D3to4",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 5,
+   "D": 3,
+   "device": "fake-gpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "seconds": 0.1,
+    "madds": 3051674,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "51994086169266ae",
+     "9a7f9304eba34229"
+    ],
+    "dim_VD": 11,
+    "free": [
+     85,
+     80
+    ],
+    "regular_top": [
+     1,
+     0
+    ],
+    "special_top": [
+     109,
+     100
+    ],
+    "dim_T": [
+     194,
+     180
+    ],
+    "dim_K": [
+     194,
+     180
+    ],
+    "falls": [
+     85,
+     80
+    ],
+    "falls_new_per_round": [
+     [
+      3,
+      2
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      8,
+      11
+     ],
+     [
+      13,
+      9
+     ],
+     [
+      11,
+      50
+     ],
+     [
+      43,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 2558,
+    "counts": {
+     "images": 798,
+     "eterm_rows": 1760,
+     "madds_gemm": 6448235,
+     "candidates": 1024,
+     "candidates_nonzero": 723,
+     "batches": 2,
+     "follower_builds": 20,
+     "follower_evictions": 0,
+     "fall_images": 915
+    },
+    "madds": {
+     "gemm": 6448235,
+     "k_reduce_update_rref": 1925317,
+     "follower_sync": 28333770,
+     "total": 36707322
+    },
+    "seconds": 0.3,
+    "vd_closure": {
+     "rank": 11,
+     "seconds": 0.0,
+     "madds": 19019
+    },
+    "dev_peak_live_mb": 1,
+    "maxrss_mb": 42,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      194,
+      180
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k6-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 6,
+   "D": 4,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "seconds": 0.3,
+    "madds": 307895050,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "dim_VD": 605,
+    "free": [
+     96,
+     93
+    ],
+    "regular_top": [
+     392,
+     392
+    ],
+    "special_top": [
+     4,
+     4
+    ],
+    "dim_T": [
+     100,
+     97
+    ],
+    "dim_K": [
+     100,
+     97
+    ],
+    "falls": [
+     96,
+     93
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      32,
+      31
+     ]
+    ],
+    "rounds": 2,
+    "reductions": 14444,
+    "counts": {
+     "images": 6248,
+     "eterm_rows": 8196,
+     "madds_gemm": 55793952,
+     "candidates": 6656,
+     "candidates_nonzero": 2120,
+     "batches": 2,
+     "follower_builds": 24,
+     "follower_evictions": 0,
+     "fall_images": 1512
+    },
+    "madds": {
+     "gemm": 55793952,
+     "k_reduce_update_rref": 80094181,
+     "follower_sync": 16817220,
+     "total": 152705353
+    },
+    "seconds": 0.1,
+    "vd_closure": {
+     "rank": 605,
+     "seconds": 0.1,
+     "madds": 49428055
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 54,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      100,
+      97
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k6-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 6,
+   "D": 4,
+   "device": "cpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "seconds": 0.3,
+    "madds": 307895050,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "dim_VD": 605,
+    "free": [
+     96,
+     93
+    ],
+    "regular_top": [
+     392,
+     392
+    ],
+    "special_top": [
+     4,
+     4
+    ],
+    "dim_T": [
+     100,
+     97
+    ],
+    "dim_K": [
+     100,
+     97
+    ],
+    "falls": [
+     96,
+     93
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      32,
+      31
+     ]
+    ],
+    "rounds": 2,
+    "reductions": 17108,
+    "counts": {
+     "images": 7580,
+     "eterm_rows": 9528,
+     "madds_gemm": 68201406,
+     "candidates": 7988,
+     "candidates_nonzero": 2120,
+     "batches": 2,
+     "follower_builds": 24,
+     "follower_evictions": 0,
+     "fall_images": 1512
+    },
+    "madds": {
+     "gemm": 68201406,
+     "k_reduce_update_rref": 80094181,
+     "follower_sync": 16817220,
+     "total": 165112807
+    },
+    "seconds": 0.1,
+    "vd_closure": {
+     "rank": 605,
+     "seconds": 0.1,
+     "madds": 49428055
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 54,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      100,
+      97
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k6-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 6,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "seconds": 0.3,
+    "madds": 307895050,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "dim_VD": 605,
+    "free": [
+     96,
+     93
+    ],
+    "regular_top": [
+     392,
+     392
+    ],
+    "special_top": [
+     4,
+     4
+    ],
+    "dim_T": [
+     100,
+     97
+    ],
+    "dim_K": [
+     100,
+     97
+    ],
+    "falls": [
+     96,
+     93
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      32,
+      31
+     ]
+    ],
+    "rounds": 2,
+    "reductions": 14444,
+    "counts": {
+     "images": 6248,
+     "eterm_rows": 8196,
+     "madds_gemm": 55793952,
+     "candidates": 6656,
+     "candidates_nonzero": 2120,
+     "batches": 2,
+     "follower_builds": 24,
+     "follower_evictions": 0,
+     "fall_images": 1512
+    },
+    "madds": {
+     "gemm": 55793952,
+     "k_reduce_update_rref": 80094181,
+     "follower_sync": 16817220,
+     "total": 152705353
+    },
+    "seconds": 0.3,
+    "vd_closure": {
+     "rank": 605,
+     "seconds": 0.6,
+     "madds": 49428055
+    },
+    "dev_peak_live_mb": 12,
+    "maxrss_mb": 54,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      100,
+      97
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k6-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 6,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "seconds": 0.3,
+    "madds": 307895050,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "c13c0eb42e6d9979",
+     "3583762bc711f4a7"
+    ],
+    "dim_VD": 605,
+    "free": [
+     96,
+     93
+    ],
+    "regular_top": [
+     392,
+     392
+    ],
+    "special_top": [
+     4,
+     4
+    ],
+    "dim_T": [
+     100,
+     97
+    ],
+    "dim_K": [
+     100,
+     97
+    ],
+    "falls": [
+     96,
+     93
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      32,
+      31
+     ]
+    ],
+    "rounds": 2,
+    "reductions": 17108,
+    "counts": {
+     "images": 7580,
+     "eterm_rows": 9528,
+     "madds_gemm": 68201406,
+     "candidates": 7988,
+     "candidates_nonzero": 2120,
+     "batches": 2,
+     "follower_builds": 24,
+     "follower_evictions": 0,
+     "fall_images": 1512
+    },
+    "madds": {
+     "gemm": 68201406,
+     "k_reduce_update_rref": 80094181,
+     "follower_sync": 16817220,
+     "total": 165112807
+    },
+    "seconds": 0.2,
+    "vd_closure": {
+     "rank": 605,
+     "seconds": 0.6,
+     "madds": 49428055
+    },
+    "dev_peak_live_mb": 12,
+    "maxrss_mb": 54,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      100,
+      97
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k7-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 7,
+   "D": 4,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "seconds": 1.2,
+    "madds": 2220298007,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "dim_VD": 829,
+    "free": [
+     325,
+     317
+    ],
+    "regular_top": [
+     539,
+     539
+    ],
+    "special_top": [
+     462,
+     462
+    ],
+    "dim_T": [
+     787,
+     779
+    ],
+    "dim_K": [
+     787,
+     779
+    ],
+    "falls": [
+     325,
+     317
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      105,
+      255
+     ],
+     [
+      156,
+      0
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 32259,
+    "counts": {
+     "images": 13275,
+     "eterm_rows": 18984,
+     "madds_gemm": 2656218598,
+     "candidates": 15722,
+     "candidates_nonzero": 7365,
+     "batches": 2,
+     "follower_builds": 28,
+     "follower_evictions": 0,
+     "fall_images": 6804
+    },
+    "madds": {
+     "gemm": 2656218598,
+     "k_reduce_update_rref": 5447678531,
+     "follower_sync": 3725887499,
+     "total": 11829784628
+    },
+    "seconds": 1.4,
+    "vd_closure": {
+     "rank": 829,
+     "seconds": 0.2,
+     "madds": 177570950
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 274,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      787,
+      779
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k7-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 7,
+   "D": 4,
+   "device": "cpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "seconds": 1.2,
+    "madds": 2220298007,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "dim_VD": 829,
+    "free": [
+     325,
+     317
+    ],
+    "regular_top": [
+     539,
+     539
+    ],
+    "special_top": [
+     462,
+     462
+    ],
+    "dim_T": [
+     787,
+     779
+    ],
+    "dim_K": [
+     787,
+     779
+    ],
+    "falls": [
+     325,
+     317
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      105,
+      255
+     ],
+     [
+      156,
+      0
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 35479,
+    "counts": {
+     "images": 14885,
+     "eterm_rows": 20594,
+     "madds_gemm": 3061100068,
+     "candidates": 17332,
+     "candidates_nonzero": 7365,
+     "batches": 2,
+     "follower_builds": 28,
+     "follower_evictions": 0,
+     "fall_images": 6804
+    },
+    "madds": {
+     "gemm": 3061100068,
+     "k_reduce_update_rref": 5447678531,
+     "follower_sync": 3725887499,
+     "total": 12234666098
+    },
+    "seconds": 1.3,
+    "vd_closure": {
+     "rank": 829,
+     "seconds": 0.2,
+     "madds": 177570950
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 274,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      787,
+      779
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k7-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 7,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "seconds": 1.2,
+    "madds": 2220298007,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "dim_VD": 829,
+    "free": [
+     325,
+     317
+    ],
+    "regular_top": [
+     539,
+     539
+    ],
+    "special_top": [
+     462,
+     462
+    ],
+    "dim_T": [
+     787,
+     779
+    ],
+    "dim_K": [
+     787,
+     779
+    ],
+    "falls": [
+     325,
+     317
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      105,
+      255
+     ],
+     [
+      156,
+      0
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 32259,
+    "counts": {
+     "images": 13275,
+     "eterm_rows": 18984,
+     "madds_gemm": 2656218598,
+     "candidates": 15722,
+     "candidates_nonzero": 7365,
+     "batches": 2,
+     "follower_builds": 28,
+     "follower_evictions": 0,
+     "fall_images": 6804
+    },
+    "madds": {
+     "gemm": 2656218598,
+     "k_reduce_update_rref": 5447678531,
+     "follower_sync": 3725887499,
+     "total": 11829784628
+    },
+    "seconds": 2.4,
+    "vd_closure": {
+     "rank": 829,
+     "seconds": 0.6,
+     "madds": 177570950
+    },
+    "dev_peak_live_mb": 199,
+    "maxrss_mb": 274,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      787,
+      779
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k7-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 7,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "seconds": 1.2,
+    "madds": 2220298007,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "46eee6288dc831b9",
+     "32a2dadeed2e7d8a"
+    ],
+    "dim_VD": 829,
+    "free": [
+     325,
+     317
+    ],
+    "regular_top": [
+     539,
+     539
+    ],
+    "special_top": [
+     462,
+     462
+    ],
+    "dim_T": [
+     787,
+     779
+    ],
+    "dim_K": [
+     787,
+     779
+    ],
+    "falls": [
+     325,
+     317
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      105,
+      255
+     ],
+     [
+      156,
+      0
+     ]
+    ],
+    "rounds": 3,
+    "reductions": 35479,
+    "counts": {
+     "images": 14885,
+     "eterm_rows": 20594,
+     "madds_gemm": 3061100068,
+     "candidates": 17332,
+     "candidates_nonzero": 7365,
+     "batches": 2,
+     "follower_builds": 28,
+     "follower_evictions": 0,
+     "fall_images": 6804
+    },
+    "madds": {
+     "gemm": 3061100068,
+     "k_reduce_update_rref": 5447678531,
+     "follower_sync": 3725887499,
+     "total": 12234666098
+    },
+    "seconds": 2.3,
+    "vd_closure": {
+     "rank": 829,
+     "seconds": 0.7,
+     "madds": 177570950
+    },
+    "dev_peak_live_mb": 206,
+    "maxrss_mb": 274,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      787,
+      779
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k8-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 8,
+   "D": 4,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "seconds": 5.3,
+    "madds": 12895334361,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "dim_VD": 1061,
+    "free": [
+     735,
+     721
+    ],
+    "regular_top": [
+     686,
+     686
+    ],
+    "special_top": [
+     1498,
+     1498
+    ],
+    "dim_T": [
+     2233,
+     2219
+    ],
+    "dim_K": [
+     2233,
+     2219
+    ],
+    "falls": [
+     735,
+     721
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      116,
+      182
+     ],
+     [
+      144,
+      424
+     ],
+     [
+      411,
+      53
+     ]
+    ],
+    "rounds": 4,
+    "reductions": 63216,
+    "counts": {
+     "images": 24848,
+     "eterm_rows": 38368,
+     "madds_gemm": 25184341658,
+     "candidates": 29572,
+     "candidates_nonzero": 16601,
+     "batches": 6,
+     "follower_builds": 32,
+     "follower_evictions": 0,
+     "fall_images": 15872
+    },
+    "madds": {
+     "gemm": 25184341658,
+     "k_reduce_update_rref": 14819452365,
+     "follower_sync": 53118664053,
+     "total": 93122458076
+    },
+    "seconds": 9.1,
+    "vd_closure": {
+     "rank": 1061,
+     "seconds": 0.4,
+     "madds": 467876269
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 479,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      2233,
+      2219
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k8-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 8,
+   "D": 4,
+   "device": "cpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "seconds": 5.3,
+    "madds": 12895334361,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "dim_VD": 1061,
+    "free": [
+     735,
+     721
+    ],
+    "regular_top": [
+     686,
+     686
+    ],
+    "special_top": [
+     1498,
+     1498
+    ],
+    "dim_T": [
+     2233,
+     2219
+    ],
+    "dim_K": [
+     2233,
+     2219
+    ],
+    "falls": [
+     735,
+     721
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      116,
+      182
+     ],
+     [
+      144,
+      424
+     ],
+     [
+      411,
+      53
+     ]
+    ],
+    "rounds": 4,
+    "reductions": 67024,
+    "counts": {
+     "images": 26752,
+     "eterm_rows": 40272,
+     "madds_gemm": 28271073530,
+     "candidates": 31476,
+     "candidates_nonzero": 16601,
+     "batches": 6,
+     "follower_builds": 32,
+     "follower_evictions": 0,
+     "fall_images": 15872
+    },
+    "madds": {
+     "gemm": 28271073530,
+     "k_reduce_update_rref": 14724606978,
+     "follower_sync": 53548809769,
+     "total": 96544490277
+    },
+    "seconds": 9.8,
+    "vd_closure": {
+     "rank": 1061,
+     "seconds": 0.3,
+     "madds": 467876269
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 479,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      2233,
+      2219
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k8-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 8,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "seconds": 5.3,
+    "madds": 12895334361,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "dim_VD": 1061,
+    "free": [
+     735,
+     721
+    ],
+    "regular_top": [
+     686,
+     686
+    ],
+    "special_top": [
+     1498,
+     1498
+    ],
+    "dim_T": [
+     2233,
+     2219
+    ],
+    "dim_K": [
+     2233,
+     2219
+    ],
+    "falls": [
+     735,
+     721
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      116,
+      182
+     ],
+     [
+      144,
+      424
+     ],
+     [
+      411,
+      53
+     ]
+    ],
+    "rounds": 4,
+    "reductions": 63216,
+    "counts": {
+     "images": 24848,
+     "eterm_rows": 38368,
+     "madds_gemm": 25184341658,
+     "candidates": 29572,
+     "candidates_nonzero": 16601,
+     "batches": 6,
+     "follower_builds": 32,
+     "follower_evictions": 0,
+     "fall_images": 15872
+    },
+    "madds": {
+     "gemm": 25184341658,
+     "k_reduce_update_rref": 14819452365,
+     "follower_sync": 53118664053,
+     "total": 93122458076
+    },
+    "seconds": 12.4,
+    "vd_closure": {
+     "rank": 1061,
+     "seconds": 0.8,
+     "madds": 467876269
+    },
+    "dev_peak_live_mb": 360,
+    "maxrss_mb": 479,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      2233,
+      2219
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k8-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 8,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "seconds": 5.3,
+    "madds": 12895334361,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 6885,
+    "profile": [
+     1,
+     17,
+     137,
+     697,
+     2517,
+     6885
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "f5c360b601269958",
+     "5a1d2e32049df51b"
+    ],
+    "dim_VD": 1061,
+    "free": [
+     735,
+     721
+    ],
+    "regular_top": [
+     686,
+     686
+    ],
+    "special_top": [
+     1498,
+     1498
+    ],
+    "dim_T": [
+     2233,
+     2219
+    ],
+    "dim_K": [
+     2233,
+     2219
+    ],
+    "falls": [
+     735,
+     721
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      116,
+      182
+     ],
+     [
+      144,
+      424
+     ],
+     [
+      411,
+      53
+     ]
+    ],
+    "rounds": 4,
+    "reductions": 67024,
+    "counts": {
+     "images": 26752,
+     "eterm_rows": 40272,
+     "madds_gemm": 28271073530,
+     "candidates": 31476,
+     "candidates_nonzero": 16601,
+     "batches": 6,
+     "follower_builds": 32,
+     "follower_evictions": 0,
+     "fall_images": 15872
+    },
+    "madds": {
+     "gemm": 28271073530,
+     "k_reduce_update_rref": 14724606978,
+     "follower_sync": 53548809769,
+     "total": 96544490277
+    },
+    "seconds": 11.2,
+    "vd_closure": {
+     "rank": 1061,
+     "seconds": 0.8,
+     "madds": 467876269
+    },
+    "dev_peak_live_mb": 385,
+    "maxrss_mb": 479,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      2233,
+      2219
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k9-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 9,
+   "D": 4,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "seconds": 22.3,
+    "madds": 63930760052,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "dim_VD": 1301,
+    "free": [
+     1384,
+     1363
+    ],
+    "regular_top": [
+     833,
+     833
+    ],
+    "special_top": [
+     3451,
+     3451
+    ],
+    "dim_T": [
+     4835,
+     4814
+    ],
+    "dim_K": [
+     4835,
+     4814
+    ],
+    "falls": [
+     1384,
+     1363
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      127,
+      187
+     ],
+     [
+      143,
+      236
+     ],
+     [
+      220,
+      186
+     ],
+     [
+      616,
+      692
+     ],
+     [
+      214,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 543160,
+    "counts": {
+     "images": 50646,
+     "eterm_rows": 492514,
+     "madds_gemm": 146921987342,
+     "candidates": 65132,
+     "candidates_nonzero": 31467,
+     "batches": 16,
+     "follower_builds": 343,
+     "follower_evictions": 307,
+     "fall_images": 45594
+    },
+    "madds": {
+     "gemm": 146921987342,
+     "k_reduce_update_rref": 779404581617,
+     "follower_sync": 241814787098,
+     "total": 1168141356057
+    },
+    "seconds": 102.4,
+    "vd_closure": {
+     "rank": 1301,
+     "seconds": 0.5,
+     "madds": 992775356
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 716,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      4835,
+      4814
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k9-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 9,
+   "D": 4,
+   "device": "cpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "seconds": 22.3,
+    "madds": 63930760052,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "dim_VD": 1301,
+    "free": [
+     1384,
+     1363
+    ],
+    "regular_top": [
+     833,
+     833
+    ],
+    "special_top": [
+     3451,
+     3451
+    ],
+    "dim_T": [
+     4835,
+     4814
+    ],
+    "dim_K": [
+     4835,
+     4814
+    ],
+    "falls": [
+     1384,
+     1363
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      127,
+      193
+     ],
+     [
+      144,
+      234
+     ],
+     [
+      221,
+      184
+     ],
+     [
+      616,
+      690
+     ],
+     [
+      212,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 570831,
+    "counts": {
+     "images": 52932,
+     "eterm_rows": 517899,
+     "madds_gemm": 170362293204,
+     "candidates": 67382,
+     "candidates_nonzero": 32589,
+     "batches": 16,
+     "follower_builds": 360,
+     "follower_evictions": 324,
+     "fall_images": 45630
+    },
+    "madds": {
+     "gemm": 170362293204,
+     "k_reduce_update_rref": 716931357906,
+     "follower_sync": 219266071746,
+     "total": 1106559722856
+    },
+    "seconds": 105.9,
+    "vd_closure": {
+     "rank": 1301,
+     "seconds": 0.7,
+     "madds": 992775356
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 721,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      4835,
+      4814
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k9-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 9,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "seconds": 22.3,
+    "madds": 63930760052,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "dim_VD": 1301,
+    "free": [
+     1384,
+     1363
+    ],
+    "regular_top": [
+     833,
+     833
+    ],
+    "special_top": [
+     3451,
+     3451
+    ],
+    "dim_T": [
+     4835,
+     4814
+    ],
+    "dim_K": [
+     4835,
+     4814
+    ],
+    "falls": [
+     1384,
+     1363
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      127,
+      187
+     ],
+     [
+      143,
+      236
+     ],
+     [
+      220,
+      186
+     ],
+     [
+      616,
+      692
+     ],
+     [
+      214,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 543160,
+    "counts": {
+     "images": 50646,
+     "eterm_rows": 492514,
+     "madds_gemm": 146921987342,
+     "candidates": 65132,
+     "candidates_nonzero": 31467,
+     "batches": 16,
+     "follower_builds": 343,
+     "follower_evictions": 307,
+     "fall_images": 45594
+    },
+    "madds": {
+     "gemm": 146921987342,
+     "k_reduce_update_rref": 779404581617,
+     "follower_sync": 241814787098,
+     "total": 1168141356057
+    },
+    "seconds": 106.4,
+    "vd_closure": {
+     "rank": 1301,
+     "seconds": 1.2,
+     "madds": 992775356
+    },
+    "dev_peak_live_mb": 656,
+    "maxrss_mb": 734,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      4835,
+      4814
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k9-D4to5",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 9,
+   "D": 4,
+   "device": "fake-gpu",
+   "mode": "low",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "seconds": 22.3,
+    "madds": 63930760052,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "6baf9ebfad63d53f",
+     "4d99d14648af57c1"
+    ],
+    "dim_VD": 1301,
+    "free": [
+     1384,
+     1363
+    ],
+    "regular_top": [
+     833,
+     833
+    ],
+    "special_top": [
+     3451,
+     3451
+    ],
+    "dim_T": [
+     4835,
+     4814
+    ],
+    "dim_K": [
+     4835,
+     4814
+    ],
+    "falls": [
+     1384,
+     1363
+    ],
+    "falls_new_per_round": [
+     [
+      64,
+      62
+     ],
+     [
+      127,
+      193
+     ],
+     [
+      144,
+      234
+     ],
+     [
+      221,
+      184
+     ],
+     [
+      616,
+      690
+     ],
+     [
+      212,
+      0
+     ]
+    ],
+    "rounds": 6,
+    "reductions": 570831,
+    "counts": {
+     "images": 52932,
+     "eterm_rows": 517899,
+     "madds_gemm": 170362293204,
+     "candidates": 67382,
+     "candidates_nonzero": 32589,
+     "batches": 16,
+     "follower_builds": 360,
+     "follower_evictions": 324,
+     "fall_images": 45630
+    },
+    "madds": {
+     "gemm": 170362293204,
+     "k_reduce_update_rref": 716931357906,
+     "follower_sync": 219266071746,
+     "total": 1106559722856
+    },
+    "seconds": 107.1,
+    "vd_closure": {
+     "rank": 1301,
+     "seconds": 1.0,
+     "madds": 992775356
+    },
+    "dev_peak_live_mb": 656,
+    "maxrss_mb": 736,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": true,
+     "fall_every": 1000000000,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      4835,
+      4814
+     ]
+    }
+   }
+  }
+ ],
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "533c92a4132b9d68002efff9335e2850e57927b753793825cf4a2905c4156042"
+ }
+}

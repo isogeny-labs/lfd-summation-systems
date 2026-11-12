@@ -1,0 +1,45 @@
+{
+ "prime": 12289,
+ "a": 1,
+ "b": 0,
+ "target": [
+  9362,
+  1126
+ ],
+ "k": 10,
+ "degree": 5,
+ "points": 0,
+ "dim_V4": 1549,
+ "rounds": 17,
+ "rank_history": [
+  1351,
+  2016,
+  3492,
+  4496,
+  5948,
+  7197,
+  8711,
+  10049,
+  11527,
+  12768,
+  14316,
+  15512,
+  16610,
+  17759,
+  18467,
+  18557,
+  18569
+ ],
+ "product_cap": 6000,
+ "result": {
+  "status": "closed-without-one",
+  "lfd_lower_bound": 6,
+  "note": "V_5 is exactly the degree-5 closure; 1 not in V_5 and the ideal is the unit ideal, so LFD >= 6",
+  "rank": 18569,
+  "target": 21700,
+  "deficiency": 3131,
+  "low_dimension": 3163
+ },
+ "seconds_this_run": 7080,
+ "basis_sha256": "d4fe133411ff396d4b607165035615cde9e796f112f4a26bf23db1ef2612ee6b"
+}

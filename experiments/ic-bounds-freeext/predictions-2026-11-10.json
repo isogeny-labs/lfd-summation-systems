@@ -1,0 +1,129 @@
+{
+ "schema": "lfd-prediction/v1",
+ "frozen_on": "2026-11-10",
+ "label": "conjecture",
+ "frozen_by": "free-extension agent (experiments/ic-bounds-freeext)",
+ "setting": "two summands, generic target (not order two, t != 0, 3t^2+a != 0), prime p with 2^k | p-1; V_D(k) is the degree-D chain-quotient closure of csd/ic_bounds_d5_verify.py; I_k the ideal; M_<=D the squarefree monomials of weight <= D",
+ "conjecture": {
+  "first_fall": "V_D(k) = I_k cap M_<=D for k < 4D-10 and V_D(4D-10) != I_k cap M_<=D (D >= 3)",
+  "base_depth": "least k0 with W_{k0+1}(V_D(k0)) closed and equal to V_D(k0+1) is k0 = 4D-9 (one above the first fall)",
+  "recursion": "p_j(k+1) = p_j(k) + 2 p_{j-1}(k) + p_{j-2}(k) for every k >= 4D-10",
+  "lfd": "LFD(k) = floor((k+14)/4) for generic two-summand unit-ideal systems",
+  "evidence": "exact: D=3 (fall 2, base 3; 3 instances), D=4 (fall 6, base 7; 3 generic + order-two + tangent), D=5 (fall 10; base: see experiments/ic-bounds-freeext/README.md); the t=0 target (X=0, a=1, b=0) does not fall through k=9 at D=4"
+ },
+ "predictions": [
+  {
+   "id": "d5-14",
+   "statement": "dim V_5(14) = 47849 with profile (0,0,2,154,4323,47849) on generic instances (e.g. p=40961, a=1, b=0, seed 10)",
+   "value": 47849,
+   "profile": [
+    0,
+    0,
+    2,
+    154,
+    4323,
+    47849
+   ],
+   "how_to_test": "python3 scripts/ic_bounds_d5_verify.py closure --k 14 --D 5 --prime 40961 --a 1 --b 0 --seed 10 (about 4 h, > 6.5 GB at k=13 already: needs a bigger host)"
+  },
+  {
+   "id": "d5-closed-form",
+   "statement": "dim V_5(k) = 18569 + 2n*3163 + C(2n,2)*138 + 2*C(2n,3), n = k-10, for every k >= 10",
+   "values": {
+    "14": 47849,
+    "15": 56649,
+    "16": 66073,
+    "17": 76137,
+    "18": 86857
+   },
+   "profiles": {
+    "14": [
+     0,
+     0,
+     2,
+     154,
+     4323,
+     47849
+    ],
+    "15": [
+     0,
+     0,
+     2,
+     158,
+     4633,
+     56649
+    ],
+    "16": [
+     0,
+     0,
+     2,
+     162,
+     4951,
+     66073
+    ],
+    "17": [
+     0,
+     0,
+     2,
+     166,
+     5277,
+     76137
+    ],
+    "18": [
+     0,
+     0,
+     2,
+     170,
+     5611,
+     86857
+    ]
+   }
+  },
+  {
+   "id": "d6-full-through-13",
+   "statement": "V_6(k) = I_k cap M_<=6 for every k <= 13; on unit ideals 1 in V_6(13) (LFD(13) = 6)",
+   "dims_unit_ideal": {
+    "12": 190051,
+    "13": 313912
+   }
+  },
+  {
+   "id": "d6-falls-at-14",
+   "statement": "V_6(14) is a proper subspace of I_14 cap M_<=6: on unit ideals 1 notin V_6(14) and dim V_6(14) < 499178 = |M_<=6| at 28 variables (LFD(14) = 7)",
+   "upper_bound_strict": 499178,
+   "lower_bound_note": "V_5(14) is contained in V_6(14) cap M_<=5, so p_5(V_6(14)) >= dim V_5(14) (= 47849 if d5-14 holds)",
+   "dimension": "NOT predicted: the free-extension rule fixes the profile only from the first deficient depth on, and the deficient dimension at 4D-10 has no formula yet (codimension in M_<=D at the first fall: D=3: 10, D=4: 189, D=5: 3131)"
+  },
+  {
+   "id": "d6-base-15",
+   "statement": "W_15(V_6(14)) is NOT closed; W_16(V_6(15)) is closed and equals V_6(16); the recursion holds for V_6 from k = 14"
+  },
+  {
+   "id": "lfd-table",
+   "statement": "LFD(k) for generic unit-ideal two-summand systems",
+   "values": {
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 6,
+    "11": 6,
+    "12": 6,
+    "13": 6,
+    "14": 7,
+    "15": 7,
+    "16": 7,
+    "17": 7,
+    "18": 8,
+    "19": 8,
+    "20": 8,
+    "21": 8,
+    "22": 9
+   }
+  }
+ ]
+}

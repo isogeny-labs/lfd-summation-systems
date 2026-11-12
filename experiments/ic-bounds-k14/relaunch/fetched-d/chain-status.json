@@ -1,0 +1,92 @@
+{
+ "started": "2026-11-11T20:31:05Z",
+ "steps": [
+  {
+   "name": "selftest-engine",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/out/selftest-gpu.json"
+   ],
+   "start": "2026-11-11T20:31:05Z",
+   "rc": 0,
+   "end": "2026-11-11T20:32:46Z"
+  },
+  {
+   "name": "selftest-lift",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_lift_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/out/lift-selftest-gpu.json"
+   ],
+   "start": "2026-11-11T20:32:46Z",
+   "rc": 0,
+   "end": "2026-11-11T20:36:37Z"
+  },
+  {
+   "name": "unit-p163841-k14-D6",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "closure",
+    "--instance",
+    "/workspace/in/unit-p163841-a3-s21-k14.json",
+    "--D",
+    "6",
+    "--device",
+    "gpu",
+    "--dev-gb",
+    "105",
+    "--work-gb",
+    "20",
+    "--tile-mb",
+    "1024",
+    "--batch",
+    "1024",
+    "--threads",
+    "8",
+    "--ckpt",
+    "/workspace/ckpt/unit-p163841-k14-D6",
+    "--ckpt-minutes",
+    "30",
+    "--resume",
+    "--status",
+    "/workspace/out/unit-p163841-k14-D6.status.json",
+    "--out",
+    "/workspace/out/unit-p163841-k14-D6.json"
+   ],
+   "start": "2026-11-11T20:36:37Z",
+   "rc": 1,
+   "end": "2026-11-11T21:45:12Z"
+  }
+ ],
+ "readings": {
+  "unit-p163841-k14": {
+   "closure": {
+    "status": null,
+    "closed": null,
+    "contains_one": null,
+    "rank": null,
+    "profile": null,
+    "part_ranks": null,
+    "repairs": null,
+    "seconds": null,
+    "rc": 1
+   },
+   "lift": "skipped: no closed degree-6 closure without 1"
+  }
+ },
+ "finished": true,
+ "ended": "2026-11-11T21:45:12Z"
+}

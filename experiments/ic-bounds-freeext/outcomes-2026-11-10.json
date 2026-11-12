@@ -1,0 +1,246 @@
+{
+ "schema": "lfd-prediction-outcomes/v1",
+ "label": "exact for every record named; the predictions themselves are conjecture",
+ "date": "2026-11-10",
+ "predictions_file": {
+  "path": "experiments/ic-bounds-freeext/predictions-2026-11-10.json",
+  "sha256": "b612cbbca468ce51baf2bcc9612461621969136cb1e6a704527382dba823c4ec",
+  "frozen_on": "2026-11-10",
+  "repository_evidence": "first committed in WIP snapshot 3f2c93d2 at 2026-11-10 03:06:50 UTC; the new run records were first committed at 06:59 UTC (unit k=14 D=5), 07:21 (unit k=13 D=6), 09:51 (unit k=14 D=6) and 10:39 (proper k=13 D=6). Commit times of snapshot commits, not an external timestamp."
+ },
+ "legend": {
+  "held": "every claim of the statement was tested and agrees with an exact record",
+  "failed": "a record contradicts the statement",
+  "untested": "some claim of the statement has no record; checked_parts lists what was checked and agrees"
+ },
+ "engine": "csd/ic_bounds_big.py (sha256 ba99c529... for every row except unit k=14 D=6, which used e4f15a08...; the proper-curve rows used e4f15a08...); every record has closed=true, a complete deterministic full sweep and repairs=0",
+ "outcomes": [
+  {
+   "id": "d5-14",
+   "outcome": "held",
+   "records": [
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k14-D5.json",
+     "sha256": "7f2c524e4c7943677ea8e3dcab03b3f83adc9df70a8ef8457d9ee3baee16ec62",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=14, D=5"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p65537-k14-D5.json",
+     "sha256": "6f261ed8d94f9eb308e291298a4afda3552ca15ed3512ffaf7f61a5aa3722d58",
+     "role": "random curve y^2=x^3+4021x+9917, p=65537, seed 12, k=14, D=5"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p163841-k14-D5.json",
+     "sha256": "7f46e45796cc88edf4b02182cba1e0f9db1292f4c82aabe237b13086ccad58e5",
+     "role": "unit instance y^2=x^3+3x, p=163841, k=14, D=5"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p114689-k14-D5.json",
+     "sha256": "51b544c65eac74efbc349c6afee61a5558f84f5e49a206f96fd7c7d447e893b4",
+     "role": "random curve, p=114689, k=14, D=5"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/reference-engine-unit-p65537-k14-D5.json",
+     "sha256": "b06ee7ec8d434fa7efcb87cf5cb52b3cdc53819d755413c29105698d12b6e024",
+     "role": "REFERENCE engine, unit instance p=65537, k=14, D=5: same basis hashes as the GPU engine"
+    }
+   ],
+   "result": "dim V_5(14) = 47849 with profile (0,0,2,154,4323,47849) on both instances",
+   "limits": "Two instances over p=65537 (one with j=1728), one engine; the example instance named in the prediction (p=40961, a=1, b=0, seed 10) was not run."
+  },
+  {
+   "id": "d5-closed-form",
+   "outcome": "untested",
+   "records": [
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k14-D5.json",
+     "sha256": "7f2c524e4c7943677ea8e3dcab03b3f83adc9df70a8ef8457d9ee3baee16ec62",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=14, D=5"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p65537-k14-D5.json",
+     "sha256": "6f261ed8d94f9eb308e291298a4afda3552ca15ed3512ffaf7f61a5aa3722d58",
+     "role": "random curve y^2=x^3+4021x+9917, p=65537, seed 12, k=14, D=5"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k15-D5.json",
+     "sha256": "f279473cb4537aaa525cd52042d867f67a2c64ceb10c99e35c0bb6cd250f0db7",
+     "role": "unit instance, p=65537, k=15, D=5"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p65537-k15-D5.json",
+     "sha256": "f31f8e0499e4f8beb60c25487f9f4e9f1d76030a82a931f3b46d41d8bae1e777",
+     "role": "random curve, p=65537, k=15, D=5 (16496 solutions)"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p65537-k16-D5.json",
+     "sha256": "7293d168a48c889ca43746ef281bb68bd744cd9305420546ff7e0936dc63fad8",
+     "role": "random curve, p=65537, k=16, D=5 (65569 solutions)"
+    }
+   ],
+   "checked_parts": "k = 14, 15, 16 agree with exact records (47849, 56649, 66073 with the predicted profiles); k = 17, 18 untested",
+   "limits": "The values at k=15..18 (56649, 66073, 76137, 86857) and the profiles there are untested."
+  },
+  {
+   "id": "d6-full-through-13",
+   "outcome": "held",
+   "records": [
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k10-D6.json",
+     "sha256": "bf39ebd84d6979f1dbd5f62381a9557d425bc44044ab72dc9ef8ac5ae758a2ef",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=10, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k11-D6.json",
+     "sha256": "21989f9b724307911ef18aaa41087d07aab71e47b507d617a1a75bcd808fca7d",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=11, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k12-D6.json",
+     "sha256": "81fd5675bde9dc4945acf6fcd5c7eebc478458f57ccf3598a3f0695de7715e6b",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=12, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k13-D6.json",
+     "sha256": "ff498e168469973744cac5492347ce8094ddd738cbaf05dde8d61329244b925a",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=13, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p65537-k13-D6.json",
+     "sha256": "77b742023a773b53b7cfc718bef9906be2132fdfbbc5b532bb6b0856f10b7f2b",
+     "role": "random curve y^2=x^3+4021x+9917, p=65537, seed 12, k=13, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p163841-k13-D6.json",
+     "sha256": "8282ef596356766f8fbe54e3918441cb82c7ad33722a57d8a325efc79aafea12",
+     "role": "unit instance, p=163841, k=13, D=6: full"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p114689-k13-D6.json",
+     "sha256": "4b44bef01f4cf4158a1774b0a8326d148022585b90fcd704c0c002a2ef4f0734",
+     "role": "random curve, p=114689, k=13, D=6: equals the ideal part"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/reference-engine-unit-p65537-k11-D6.json",
+     "sha256": "7ddb91966c58cd4687f79460ca8cbe75a6b46f1d638ae408f4bcea931619eb5f",
+     "role": "REFERENCE engine, unit instance p=65537, k=11, D=6: full rank, same hashes"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/reference-engine-unit-p65537-k10-D6.json",
+     "sha256": "6140660e0f7628326092bcb6f0b8d3f8d103bba430faf1723ade0a47f10671ee",
+     "role": "REFERENCE engine, unit instance p=65537, k=10, D=6: full rank"
+    }
+   ],
+   "result": "unit instance: V_6(k) = M_<=6 and 1 in V_6(k) for k = 10..13 (dimensions 60460, 110056, 190051, 313912; the frozen values at k=12 and 13 are 190051 and 313912); random curve k=13: V_6 = ideal part (312884 = 313912 - 1028)",
+   "limits": "One unit instance (j=1728) at k=10..13 and one random curve at k=13 only; one engine."
+  },
+  {
+   "id": "d6-falls-at-14",
+   "outcome": "held",
+   "records": [
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k14-D6.json",
+     "sha256": "a04379218e676b7dc82d84959644e09d1fa557d3b8b949e03e7a082861bdc660",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=14, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p65537-k14-D6.json",
+     "sha256": "d728521ee31b64e01e128ee0d5c43015f16d2c13a13655950b6620c881b1690e",
+     "role": "random curve y^2=x^3+4021x+9917, p=65537, seed 12, k=14, D=6: dim V_6 = 448922 against 495110 for the ideal part (deficient, closed, clean full sweep)"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p163841-k14-D6.json",
+     "sha256": "aba3d125cdae766d2b67f71bed2668b465347a99e420768133b676862d676433",
+     "role": "unit instance, p=163841, k=14, D=6: dim 448922, closed, 1 not in V_6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/proper-p114689-k14-D6.json",
+     "sha256": "eed39e853061e8627fc781d409b7e0a7c7f42aa3621d93830c085bcbe40dbddc",
+     "role": "random curve, p=114689, k=14, D=6: dim 448922 against 496808 for the ideal part"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/rerun-unit-p65537-k14-D6.json",
+     "sha256": "d28ec65304f48ac465d091592387787c7f36117556137251b6f3d035fe678400",
+     "role": "second run of the unit instance over 65537 (different batch size): same basis hashes"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/certcheck-unit-p65537-k14-D6.json",
+     "sha256": "7b6dc0bb699d17167469f47aa08837bc680f54b2d1ff745e0015c844ede303fa",
+     "role": "independent certificate check (unit, 65537): g in W, W closed (28 shifts, 0 failures), 1 not in W"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/certcheck-proper-p114689-k14-D6.json",
+     "sha256": "fbf687aadd6f57a778f235b2659f41d916a476712f36138e05642a47c7e1aa6e",
+     "role": "independent certificate check (random curve, 114689): same verdict"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/rerun-unit-p163841-k14-D6.json",
+     "sha256": "7f7658366173ddf8e5fac948dff42f4219d2ccc0630a809c38b77046b4a6f7b9",
+     "role": "second run of the unit instance over 163841 (batch 1024): same basis hashes as the first"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/certcheck-unit-p163841-k14-D6.json",
+     "sha256": "1f3ba0b45ca0e56d61c2bed351302081bb615143953e29e1ca4b641a1b69bb9b",
+     "role": "independent certificate check (unit, 163841): same verdict"
+    }
+   ],
+   "result": "V_6(14) closed, dim 448922 < 499178 (codimension 50256), 1 not in V_6(14); low profile (0,0,2,154,4451,73587), so p_5 = 73587 >= 47849 as the prediction's note requires",
+   "limits": "Four instances over three primes (65537: unit and random curve; 163841: unit; 114689: random curve), one engine; a second run with equal hashes on both unit instances; independent certificate checks on three (65537 unit, 163841 unit, 114689 random curve). Bases not archived (hashes only)."
+  },
+  {
+   "id": "d6-base-15",
+   "outcome": "untested",
+   "records": [],
+   "limits": "V_6(15) and the free-extension structure of V_6 from k=14 were not computed."
+  },
+  {
+   "id": "lfd-table",
+   "outcome": "untested",
+   "records": [
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k10-D6.json",
+     "sha256": "bf39ebd84d6979f1dbd5f62381a9557d425bc44044ab72dc9ef8ac5ae758a2ef",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=10, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k11-D6.json",
+     "sha256": "21989f9b724307911ef18aaa41087d07aab71e47b507d617a1a75bcd808fca7d",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=11, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k12-D6.json",
+     "sha256": "81fd5675bde9dc4945acf6fcd5c7eebc478458f57ccf3598a3f0695de7715e6b",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=12, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k13-D6.json",
+     "sha256": "ff498e168469973744cac5492347ce8094ddd738cbaf05dde8d61329244b925a",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=13, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/unit-p65537-k14-D6.json",
+     "sha256": "a04379218e676b7dc82d84959644e09d1fa557d3b8b949e03e7a082861bdc660",
+     "role": "unit instance y^2=x^3+x, p=65537, target (4271,11720), k=14, D=6"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/lift-unit-p65537-k14-D6to7.json",
+     "sha256": "f5e5b9ce3cf40d3f68e4612ba969ff2bc88c405805e3e3fa7a0a431b7c673345",
+     "role": "degree lift 6 -> 7 at k = 14, unit instance over 65537: 1 in V_7, V_7 = M_<=7"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/lift-proper-p114689-k14-D6to7.json",
+     "sha256": "a97035f634cc160525ed1603e0b0863cfc12f0f999a39a86ab2884a0eb37adea",
+     "role": "degree lift 6 -> 7 at k = 14, random curve over 114689: dim V_7 = 1680848 = 1683218 - 2370, the ideal bound"
+    },
+    {
+     "path": "experiments/ic-bounds-k14/runs/lift-unit-p163841-k14-D6to7.json",
+     "sha256": "4b5bb99eb16fe635e82bd76b90b19f454f10147fd7a10353039ac5afa60082c7",
+     "role": "degree lift 6 -> 7 at k = 14, unit instance over 163841: 1 in V_7, V_7 = M_<=7"
+    }
+   ],
+   "checked_parts": "k = 10..13: exactly 6 (k = 13 on four instances over three primes; k = 10..12 on the unit instance over 65537, with the reference engine confirming full rank at k = 10 and 11). k = 14: exactly 7 on three instances (unit over 65537 and unit over 163841: 1 in V_7; random curve over 114689: V_7 equals the degree-7 part of the ideal), by the degree lift (new method, written proof, no independent certificate of V_7; on the random curve it lands exactly on the ideal bound). k >= 15 untested (LFD >= 7 at k = 15 on the unit instance over 65537 by depth restriction).",
+   "limits": "Every value at k >= 15 is untested; the table is a conjecture for generic two-summand systems, and exceptional systems (3t^2+a=0 at k=2; y^2=x^3+x with target (0,0) at k=6,7; one planted target at p=449, k=6) already deviate."
+  }
+ ],
+ "updated": "2026-11-12: job B (unit instance over 163841: second run, checker, lift) added"
+}

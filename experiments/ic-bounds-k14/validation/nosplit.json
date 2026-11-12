@@ -1,0 +1,122 @@
+{
+ "rows": [
+  {
+   "case": "p15361-k6-D3",
+   "ref_rank": 13,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.2
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 0.2
+    }
+   }
+  },
+  {
+   "case": "p15361-k6-D4",
+   "ref_rank": 605,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.2
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 15.9
+    }
+   }
+  },
+  {
+   "case": "p15361-k6-D5",
+   "ref_rank": 1584,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.7
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 81.6
+    }
+   }
+  },
+  {
+   "case": "p15361-k7-D4",
+   "ref_rank": 829,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.6
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 46.6
+    }
+   }
+  },
+  {
+   "case": "unit-12289-k6-D3",
+   "ref_rank": 13,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.2
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 0.3
+    }
+   }
+  },
+  {
+   "case": "unit-12289-k6-D4",
+   "ref_rank": 605,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.4
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 16.7
+    }
+   }
+  },
+  {
+   "case": "unit-12289-k6-D5",
+   "ref_rank": 1586,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.9
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 73.2
+    }
+   }
+  },
+  {
+   "case": "unit-12289-k7-D4",
+   "ref_rank": 829,
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.4
+    },
+    "tiny-fake-gpu": {
+     "match": true,
+     "seconds": 45.8
+    }
+   }
+  }
+ ],
+ "all_match": true,
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "validate": "516a5200a6561abfd8b05d32fa580e641a7c3f95b0e3e76a0c4718cee74e8f7e"
+ }
+}

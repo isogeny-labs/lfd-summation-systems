@@ -1,0 +1,107 @@
+{
+ "result": {
+  "status": "reached",
+  "lfd_upper_bound": 5,
+  "exact_lfd": 5,
+  "rank": 1586,
+  "target": 1586,
+  "contains_one": true,
+  "note": "V_5 = I cap M_<=5 (rank equals target, evaluation onto): LFD <= 5; strict fall at 5 since dim V_4 < dim(I cap M_<=4), so LFD = 5"
+ },
+ "ranks": [
+  804,
+  782
+ ],
+ "part_columns": [
+  804,
+  782
+ ],
+ "profile": [
+  1,
+  13,
+  79,
+  299,
+  794,
+  1586
+ ],
+ "sym_profile": [
+  1,
+  6,
+  36,
+  110,
+  255,
+  396
+ ],
+ "anti_profile": [
+  0,
+  6,
+  30,
+  110,
+  240,
+  396
+ ],
+ "low_dimension": 794,
+ "rounds": 5,
+ "sweeps": 0,
+ "rank_history": [
+  299,
+  568,
+  952,
+  1284,
+  1565,
+  1586
+ ],
+ "batch": 600,
+ "total_seconds": 0.5,
+ "free_storage_entries": 0,
+ "peak_free_entries": 301832,
+ "work": {
+  "generators": [
+   0,
+   0.043584585189819336
+  ],
+  "closure": [
+   791345750,
+   0.37542247772216797
+  ],
+  "verify": [
+   0,
+   0.0
+  ]
+ },
+ "basis_sha256": "79e34c836e92a25670685a2bab110906ceecc031d2d3e15ff12d5e20d3a38851",
+ "prime": 12289,
+ "a": 1,
+ "b": 0,
+ "seed": 10,
+ "target": [
+  9362,
+  1126
+ ],
+ "k": 6,
+ "degree": 5,
+ "points": 0,
+ "want_solutions": false,
+ "engine": "split",
+ "prev": {
+  "engine": "dense+exclusion-certificate",
+  "dim": 605,
+  "contains_one": false,
+  "ideal_dim_lower": 794
+ },
+ "columns": 1586,
+ "evaluation_onto_below_D": true,
+ "maxrss_mb": 87,
+ "seconds_this_run": 0.8,
+ "source_sha256": {
+  "scripts/ic_bounds_d5_probe.py": "c608f46cbddd2b7054fcaaa60f999de4a9e61c1e6537d3ff699b48ffabf116c3",
+  "csd/ic_bounds_d5.py": "e0971629a8a969daa009b665788f9bb673ce3a2bc5f5b4cd434aed9c5c4703da",
+  "csd/ic_chain_shift_closure.py": "2e9b0452e81ee7d16bca9b4799116eed8c03b8a3d4b252ecce5f1568152b1a60",
+  "csd/ic_chain_block_closure.py": "865032b874b2e88e692d913c747f8add27e5ca5d36593b9325d4231c3c748db9",
+  "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+  "csd/ic_curve_sweep.py": "4ddefb24900dda4d4f52dcd33b5d30ac7ddf80e3704c1c51d08df0a60fe9874c",
+  "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+  "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+  "csd/_elim.c": "1269131384fc5f110b90b70a1c8f174a60ca7fe968388f6e13f96eba56959290"
+ }
+}

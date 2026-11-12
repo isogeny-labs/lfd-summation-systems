@@ -1,0 +1,109 @@
+{
+ "prediction_file": "experiments/ic-bounds-locus/predictions/p257-k7-a84-b186.json",
+ "prediction_sha256": "8a73795c38d654fcae2d532d68c0079dc374a0419643b7d7b16c52268abdefc7",
+ "data_file": "experiments/ic-bounds-locus/heldout/p257-k7-a84-b186.jsonl",
+ "targets_computed": 129,
+ "targets_predicted_over": 129,
+ "rules": {
+  "t0_j0": {
+   "key": "V3",
+   "predicted": [],
+   "actual": [],
+   "misses": [],
+   "false_alarms": [],
+   "exact_match": true,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "t0_j1728": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    66,
+    207
+   ],
+   "misses": [
+    66,
+    207
+   ],
+   "false_alarms": [],
+   "exact_match": false
+  },
+  "t0_other": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    66,
+    207
+   ],
+   "misses": [
+    66,
+    207
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "tangent_3t2+a": {
+   "key": "V3",
+   "predicted": [],
+   "actual": [],
+   "misses": [],
+   "false_alarms": [],
+   "exact_match": true,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "order_two": {
+   "key": "V4",
+   "predicted": [
+    207
+   ],
+   "actual": [
+    66,
+    207
+   ],
+   "misses": [
+    66
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {
+    "207": 835
+   },
+   "values_match": true
+  },
+  "cubic_C1": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    66,
+    207
+   ],
+   "misses": [
+    66,
+    207
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "polynomial_union": {
+   "key": "any",
+   "predicted": [
+    207
+   ],
+   "actual": [
+    66,
+    207
+   ],
+   "misses": [
+    66
+   ],
+   "false_alarms": [],
+   "exact_match": false
+  }
+ }
+}

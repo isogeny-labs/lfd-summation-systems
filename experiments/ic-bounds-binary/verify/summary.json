@@ -1,0 +1,229 @@
+{
+ "m2": {
+  "cases_checked": 568,
+  "cases_stored": 568,
+  "closures_run": 532,
+  "dims_match_false": [],
+  "distinct_hashes": 532,
+  "dstar_match_false": [],
+  "extra_degree_scanned": 0,
+  "fall_after_certificate": [],
+  "falls_mismatch": [],
+  "file_sha256": "2efd8bd14dab2211432cbb218b26338d35e0a84ee573fc2d97b82426ca1abf35",
+  "hash_match_false": [],
+  "lfd_match_false": [],
+  "missing_case_ids": 0,
+  "naive_checked": 0,
+  "naive_false": [],
+  "per_k": {
+   "8": {
+    "cases": 192,
+    "dstar_minus_lfd": {
+     "0": 190,
+     "1": 2
+    },
+    "hist": {
+     "2": 3,
+     "3": 70,
+     "4": 119
+    },
+    "max_dstar": 4,
+    "max_lfd": 4,
+    "peak_rss_mb": 129.2,
+    "seconds": 22.9
+   },
+   "9": {
+    "cases": 192,
+    "dstar_minus_lfd": {
+     "0": 190,
+     "1": 2
+    },
+    "hist": {
+     "2": 16,
+     "3": 30,
+     "4": 146
+    },
+    "max_dstar": 4,
+    "max_lfd": 4,
+    "peak_rss_mb": 129.2,
+    "seconds": 118.0
+   },
+   "10": {
+    "cases": 184,
+    "dstar_minus_lfd": {
+     "0": 180,
+     "1": 4
+    },
+    "hist": {
+     "2": 17,
+     "3": 4,
+     "4": 133,
+     "5": 30
+    },
+    "max_dstar": 5,
+    "max_lfd": 5,
+    "peak_rss_mb": 137.4,
+    "seconds": 1811.8
+   }
+  },
+  "points_match_false": [],
+  "solutions_mismatch": [],
+  "unit_mismatch": []
+ },
+ "m3-direct": {
+  "cases_checked": 695,
+  "cases_stored": 695,
+  "closures_run": 634,
+  "dims_match_false": [],
+  "distinct_hashes": 634,
+  "dstar_match_false": [],
+  "extra_degree_scanned": 626,
+  "fall_after_certificate": [],
+  "falls_mismatch": [],
+  "file_sha256": "082ecfcb14f4805e1cdd8e4a466b9769792b1d4388e7fc1711e447702cbc059c",
+  "hash_match_false": [],
+  "lfd_match_false": [],
+  "missing_case_ids": 0,
+  "naive_checked": 393,
+  "naive_false": [],
+  "per_k": {
+   "2": {
+    "cases": 201,
+    "dstar_minus_lfd": {
+     "0": 197,
+     "1": 4
+    },
+    "hist": {
+     "3": 43,
+     "4": 12,
+     "5": 42,
+     "6": 104
+    },
+    "max_dstar": 6,
+    "max_lfd": 6,
+    "peak_rss_mb": 40.8,
+    "seconds": 1.4
+   },
+   "3": {
+    "cases": 231,
+    "dstar_minus_lfd": {
+     "0": 229,
+     "1": 2
+    },
+    "hist": {
+     "4": 54,
+     "5": 6,
+     "6": 30,
+     "7": 141
+    },
+    "max_dstar": 7,
+    "max_lfd": 7,
+    "peak_rss_mb": 41.5,
+    "seconds": 72.5
+   },
+   "4": {
+    "cases": 255,
+    "dstar_minus_lfd": {
+     "0": 232,
+     "1": 23
+    },
+    "hist": {
+     "4": 23,
+     "5": 41,
+     "6": 11,
+     "7": 180
+    },
+    "max_dstar": 7,
+    "max_lfd": 7,
+    "peak_rss_mb": 46.7,
+    "seconds": 290.1
+   },
+   "5": {
+    "cases": 8,
+    "dstar_minus_lfd": {
+     "0": 6,
+     "1": 2
+    },
+    "hist": {
+     "5": 2,
+     "7": 6
+    },
+    "max_dstar": 7,
+    "max_lfd": 7,
+    "peak_rss_mb": 95.4,
+    "seconds": 471.2
+   }
+  },
+  "points_match_false": [],
+  "solutions_mismatch": [],
+  "unit_mismatch": []
+ },
+ "m3-split": {
+  "cases_checked": 608,
+  "cases_stored": 608,
+  "closures_run": 560,
+  "dims_match_false": [],
+  "distinct_hashes": 560,
+  "dstar_match_false": [],
+  "extra_degree_scanned": 254,
+  "fall_after_certificate": [],
+  "falls_mismatch": [],
+  "file_sha256": "69106246862cc7f60eaecdb87061f12b173f33ccb266cd64825e9273712895ed",
+  "hash_match_false": [],
+  "lfd_match_false": [],
+  "missing_case_ids": 0,
+  "naive_checked": 0,
+  "naive_false": [],
+  "per_k": {
+   "2": {
+    "cases": 201,
+    "dstar_minus_lfd": {
+     "0": 194,
+     "1": 7
+    },
+    "hist": {
+     "3": 80,
+     "4": 121
+    },
+    "max_dstar": 5,
+    "max_lfd": 4,
+    "peak_rss_mb": 127.8,
+    "seconds": 13.2
+   },
+   "3": {
+    "cases": 231,
+    "dstar_minus_lfd": {
+     "0": 230,
+     "1": 1
+    },
+    "hist": {
+     "3": 14,
+     "4": 213,
+     "5": 4
+    },
+    "max_dstar": 5,
+    "max_lfd": 5,
+    "peak_rss_mb": 127.8,
+    "seconds": 57.3
+   },
+   "4": {
+    "cases": 176,
+    "dstar_minus_lfd": {
+     "0": 169,
+     "1": 7
+    },
+    "hist": {
+     "4": 166,
+     "5": 10
+    },
+    "max_dstar": 5,
+    "max_lfd": 5,
+    "peak_rss_mb": 127.8,
+    "seconds": 193.7
+   }
+  },
+  "points_match_false": [],
+  "solutions_mismatch": [],
+  "unit_mismatch": []
+ }
+}

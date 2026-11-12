@@ -1,0 +1,420 @@
+{
+ "p": 15361,
+ "a": 4021,
+ "b": 9917,
+ "seed": 12,
+ "want": true,
+ "D": 5,
+ "split": true,
+ "target_info": {
+  "target": [
+   7776,
+   4768
+  ],
+  "attempts": 1,
+  "drawn": true,
+  "draw_k": 10
+ },
+ "exceptional": {
+  "order_two": false,
+  "t_zero": false,
+  "tangent": false
+ },
+ "closures": {
+  "9": {
+   "rank": 12602,
+   "profile": [
+    0,
+    5,
+    158,
+    974,
+    4034,
+    12602
+   ],
+   "part_profiles": [
+    [
+     0,
+     3,
+     84,
+     492,
+     2040,
+     6324
+    ],
+    [
+     0,
+     2,
+     74,
+     482,
+     1994,
+     6278
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "5cdc23025311f4a23d21d578bcfb7ffe03ce975e3671f2684c91b4849ec71b96",
+    "fce1e00ace551a45bc84a1d9db5f33c94371c3cb7444b99e4142b0cef5209cf2"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 4034,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 65.7,
+   "generator_in_space": true,
+   "ideal_dim": 12602,
+   "points": 14,
+   "columns": 12616,
+   "deficient": false
+  },
+  "10": {
+   "rank": 18569,
+   "profile": [
+    0,
+    0,
+    2,
+    138,
+    3163,
+    18569
+   ],
+   "part_profiles": [
+    [
+     0,
+     0,
+     2,
+     72,
+     1608,
+     9311
+    ],
+    [
+     0,
+     0,
+     0,
+     66,
+     1555,
+     9258
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "23a91f75d3d523cddadd6c33bf750ca72b0aaf3096fac325e889aa7bda771810",
+    "2bf269b6d9c5dbdb88c20b52efebd0af0e9ddfd9e4d5da61a48f36265746abaf"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 3163,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 509.9,
+   "generator_in_space": true,
+   "ideal_dim": 21640,
+   "points": 60,
+   "columns": 21700,
+   "deficient": true
+  },
+  "11": {
+   "rank": 25033,
+   "profile": [
+    0,
+    0,
+    2,
+    142,
+    3441,
+    25033
+   ],
+   "part_profiles": [
+    [
+     0,
+     0,
+     2,
+     74,
+     1748,
+     12546
+    ],
+    [
+     0,
+     0,
+     0,
+     68,
+     1693,
+     12487
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "e9a928b1aae38b9c95b27e7b5f1d3ae06a4f240bdce9b6e5ab137afddc79d7b2",
+    "6f807da01023b4c68cae484a886c1b69a6f33878e860200f5840d00ca4392786"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 3441,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 1054.7,
+   "generator_in_space": true,
+   "ideal_dim": null,
+   "points": null,
+   "columns": 35443,
+   "deficient": null
+  }
+ },
+ "extensions": {
+  "9": {
+   "k0": 9,
+   "W": {
+    "rank": 21644,
+    "profile": [
+     0,
+     5,
+     168,
+     1295,
+     6140,
+     21644
+    ],
+    "part_profiles": [
+     [
+      0,
+      3,
+      89,
+      653,
+      3098,
+      10850
+     ],
+     [
+      0,
+      2,
+      79,
+      642,
+      3042,
+      10794
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "12014a81ef94a75e3c4090b8d578dc7d4b28988a6ce9b800107cce6a83595eff",
+     "56cdd321df4426f6d800748342a19664aee0fa1780b0edc1fdcf6aa0d7e9c733"
+    ],
+    "expected_profile": [
+     0,
+     5,
+     168,
+     1295,
+     6140,
+     21644
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 6140,
+     "nonzero_residuals": 13042,
+     "passed": false
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 64,
+     "maps": 40,
+     "passed": false
+    },
+    "generator_rows": 1351,
+    "generator_rows_outside": 0,
+    "construction": "direct assembly (free_extension_direct)",
+    "seconds": 44.7
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": false,
+   "kernel_hypotheses_hold": false,
+   "equals_V_next": false,
+   "equals_V_next_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+   "W_profile_equals_V_next_profile": false,
+   "recursion_holds": false
+  },
+  "10": {
+   "k0": 10,
+   "W": {
+    "rank": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "part_profiles": [
+     [
+      0,
+      0,
+      2,
+      74,
+      1748,
+      12546
+     ],
+     [
+      0,
+      0,
+      0,
+      68,
+      1693,
+      12487
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "ce427f7a6b7b3f7b807aa70e106c04e6c7e41ece694a7032fb7fd214f8810b47",
+     "f4efd6b62fd1de8b3eaf45a9ae229c0ef06d9baf8f855820732e415a501284f0"
+    ],
+    "expected_profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 3441,
+     "nonzero_residuals": 4032,
+     "passed": false
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 16,
+     "maps": 44,
+     "passed": false
+    },
+    "generator_rows": 1794,
+    "generator_rows_outside": 0,
+    "construction": "direct assembly (free_extension_direct)",
+    "seconds": 352.8
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": false,
+   "kernel_hypotheses_hold": false,
+   "equals_V_next": false,
+   "equals_V_next_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+   "W_profile_equals_V_next_profile": true,
+   "recursion_holds": true
+  },
+  "11": {
+   "k0": 11,
+   "W": {
+    "rank": 32057,
+    "profile": [
+     0,
+     0,
+     2,
+     146,
+     3727,
+     32057
+    ],
+    "part_profiles": [
+     [
+      0,
+      0,
+      2,
+      76,
+      1892,
+      16061
+     ],
+     [
+      0,
+      0,
+      0,
+      70,
+      1835,
+      15996
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "9bcc2887e8d089fd1a4d578d987266b16cc332647f2c8576d506846fce57afe8",
+     "bac4bd3ebe405d37dbd61c41181b9490df64dc32ff1ccacae969cda7d05be965"
+    ],
+    "expected_profile": [
+     0,
+     0,
+     2,
+     146,
+     3727,
+     32057
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 3727,
+     "nonzero_residuals": 0,
+     "passed": true
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 0,
+     "maps": 48,
+     "passed": true
+    },
+    "generator_rows": 2325,
+    "generator_rows_outside": 0,
+    "construction": "direct assembly (free_extension_direct)",
+    "seconds": 691.8
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": true,
+   "kernel_hypotheses_hold": true
+  }
+ },
+ "witness": {
+  "9": {
+   "candidates_low_weight": 1241,
+   "tested": 1241,
+   "found": [],
+   "generator_degree": 2,
+   "rule": "e_i + 2 < 2^9, all weights of tau_e(g) <= 5",
+   "seconds": 0.2,
+   "base_depth": 9
+  },
+  "10": {
+   "candidates_low_weight": 1672,
+   "tested": 1672,
+   "found": [],
+   "generator_degree": 2,
+   "rule": "e_i + 2 < 2^10, all weights of tau_e(g) <= 5",
+   "seconds": 2.3,
+   "base_depth": 10
+  },
+  "11": {
+   "candidates_low_weight": 2191,
+   "tested": 2191,
+   "found": [],
+   "generator_degree": 2,
+   "rule": "e_i + 2 < 2^11, all weights of tau_e(g) <= 5",
+   "seconds": 13.7,
+   "base_depth": 11
+  }
+ },
+ "maxrss_mb": 4802,
+ "seconds": 2737.3,
+ "command": "scripts/ic_bounds_freeext_run.py chain --D 5 --witness --drop-w --ext-top --p 15361 --a 4021 --b 9917 --seed 12 --want --draw-k 10 --kmin 9 --kmax 11 --name D5-p15361-s12",
+ "source_sha256": {
+  "csd/ic_bounds_freeext.py": "c3ae3c68eefc2306146bae2f819609dcc9da84c7b6663301d09ef6becbc39d39",
+  "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
+  "scripts/ic_bounds_freeext_run.py": "a02f5a7afd906fafb3e83947bbb86dfcb2dc866299ad10e3bc03ca7b3a5af684",
+  "scripts/ic_bounds_d5_verify.py": "1c94b5bdd9fc50646a3fc8f927b2c0fe74d22186db19b69df8cb2606031ff06f"
+ },
+ "label": "exact",
+ "date": "2026-11-10"
+}

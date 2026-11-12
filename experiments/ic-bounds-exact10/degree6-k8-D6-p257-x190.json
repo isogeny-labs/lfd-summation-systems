@@ -1,0 +1,51 @@
+{
+ "instance": {
+  "prime": 257,
+  "a": 1,
+  "b": 0,
+  "k": 8,
+  "scale": 1,
+  "target_x": 190,
+  "seed": 10,
+  "points": 252,
+  "generator_sha256": "a44de481917aa5a6a500eb87673df07243aa30f439049e0d6d4ddddfdbda12dc"
+ },
+ "degree": 6,
+ "v5_sha256": "636d184a4d2a9844c2d3a8f2ef2a5dae764186e6bb284184892d7fa8e3ae9f32",
+ "combos": 2000,
+ "terms": 4,
+ "round_seed": 20261107,
+ "result": {
+  "k": 8,
+  "prime": 257,
+  "degree": 6,
+  "cols": 14893,
+  "sym_cols": 7493,
+  "anti_cols": 7400,
+  "points": 252,
+  "eval_rank_le": 252,
+  "eval_rank_lt": 252,
+  "evaluation_onto_lt": true,
+  "target": 14641,
+  "rank": 14641,
+  "sym_rank": 7367,
+  "anti_rank": 7274,
+  "contains_one": false,
+  "low_dimension": 6633,
+  "reached": true,
+  "closed": false,
+  "rounds": 2,
+  "verify_passes": [],
+  "seconds": 156.66,
+  "exact_dimension": 14641,
+  "status": "reached",
+  "lfd_upper_bound": 6,
+  "certificate": "dim V_D = |M_<=D| - |Z| and ev(M_<D) onto Z: V_D = I cap M_<=D, LFD <= D"
+ },
+ "rank_history": [
+  12074,
+  14641
+ ],
+ "seconds": 160,
+ "seconds_total": 394
+}

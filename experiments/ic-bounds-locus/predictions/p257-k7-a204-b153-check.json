@@ -1,0 +1,146 @@
+{
+ "prediction_file": "experiments/ic-bounds-locus/predictions/p257-k7-a204-b153.json",
+ "prediction_sha256": "e614925a149ca861bb9d58aa6d22c5676efbe19378506fa14a5beca41ab877b2",
+ "data_file": "experiments/ic-bounds-locus/heldout/p257-k7-a204-b153.jsonl",
+ "targets_computed": 117,
+ "targets_predicted_over": 117,
+ "rules": {
+  "t0_j0": {
+   "key": "V3",
+   "predicted": [],
+   "actual": [
+    73,
+    184
+   ],
+   "misses": [
+    73,
+    184
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "t0_j1728": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "misses": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "false_alarms": [],
+   "exact_match": false
+  },
+  "t0_other": {
+   "key": "V4",
+   "predicted": [
+    0
+   ],
+   "actual": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "misses": [
+    73,
+    76,
+    184
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {
+    "0": 849
+   },
+   "values_match": true
+  },
+  "tangent_3t2+a": {
+   "key": "V3",
+   "predicted": [
+    73,
+    184
+   ],
+   "actual": [
+    73,
+    184
+   ],
+   "misses": [],
+   "false_alarms": [],
+   "exact_match": true,
+   "values_on_predicted": {
+    "73": 40,
+    "184": 40
+   },
+   "values_match": true
+  },
+  "order_two": {
+   "key": "V4",
+   "predicted": [
+    76
+   ],
+   "actual": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "misses": [
+    0,
+    73,
+    184
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {
+    "76": 835
+   },
+   "values_match": true
+  },
+  "cubic_C1": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "misses": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "polynomial_union": {
+   "key": "any",
+   "predicted": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "actual": [
+    0,
+    73,
+    76,
+    184
+   ],
+   "misses": [],
+   "false_alarms": [],
+   "exact_match": true
+  }
+ }
+}

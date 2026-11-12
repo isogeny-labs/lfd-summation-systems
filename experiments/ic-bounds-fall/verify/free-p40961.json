@@ -1,0 +1,271 @@
+{
+ "base7": {
+  "dim": 829,
+  "profile": [
+   0,
+   0,
+   2,
+   115,
+   829
+  ],
+  "one_in": false
+ },
+ "k0=7,k=8": {
+  "rows": 1061,
+  "predicted": 1061,
+  "certificate": {
+   "dim": 1061,
+   "contains_generator_rows": true,
+   "closed": true,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    119,
+    1061
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 1061,
+   "rank_b": 1061,
+   "rank_sum": 1061,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_dim": 829,
+  "stable_vs_base": {
+   "rank_a": 829,
+   "rank_b": 829,
+   "rank_sum": 829,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_in_base": true
+ },
+ "k0=7,k=9": {
+  "rows": 1301,
+  "predicted": 1301,
+  "certificate": {
+   "dim": 1301,
+   "contains_generator_rows": true,
+   "closed": true,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    123,
+    1301
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 1301,
+   "rank_b": 1301,
+   "rank_sum": 1301,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_dim": 829,
+  "stable_vs_base": {
+   "rank_a": 829,
+   "rank_b": 829,
+   "rank_sum": 829,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_in_base": true
+ },
+ "k0=7,k=10": {
+  "rows": 1549,
+  "predicted": 1549,
+  "certificate": {
+   "dim": 1549,
+   "contains_generator_rows": true,
+   "closed": true,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    127,
+    1549
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 1549,
+   "rank_b": 1549,
+   "rank_sum": 1549,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_dim": 829,
+  "stable_vs_base": {
+   "rank_a": 829,
+   "rank_b": 829,
+   "rank_sum": 829,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_in_base": true
+ },
+ "base6": {
+  "dim": 605,
+  "profile": [
+   0,
+   0,
+   2,
+   111,
+   605
+  ],
+  "one_in": false
+ },
+ "k0=6,k=7": {
+  "rows": 829,
+  "predicted": 829,
+  "certificate": {
+   "dim": 829,
+   "contains_generator_rows": true,
+   "closed": false,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 829,
+   "rank_b": 829,
+   "rank_sum": 871,
+   "equal": false,
+   "only_in_a": 42,
+   "only_in_b": 42
+  },
+  "stable_low_dim": 563,
+  "stable_vs_base": {
+   "rank_a": 563,
+   "rank_b": 605,
+   "rank_sum": 605,
+   "equal": false,
+   "only_in_a": 0,
+   "only_in_b": 42
+  },
+  "stable_low_in_base": true
+ },
+ "k0=6,k=8": {
+  "rows": 1061,
+  "predicted": 1061,
+  "certificate": {
+   "dim": 1061,
+   "contains_generator_rows": true,
+   "closed": false,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    119,
+    1061
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 1061,
+   "rank_b": 1061,
+   "rank_sum": 1103,
+   "equal": false,
+   "only_in_a": 42,
+   "only_in_b": 42
+  },
+  "stable_low_dim": 563,
+  "stable_vs_base": {
+   "rank_a": 563,
+   "rank_b": 605,
+   "rank_sum": 605,
+   "equal": false,
+   "only_in_a": 0,
+   "only_in_b": 42
+  },
+  "stable_low_in_base": true
+ },
+ "k0=6,k=9": {
+  "rows": 1301,
+  "predicted": 1301,
+  "certificate": {
+   "dim": 1301,
+   "contains_generator_rows": true,
+   "closed": false,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    123,
+    1301
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 1301,
+   "rank_b": 1301,
+   "rank_sum": 1343,
+   "equal": false,
+   "only_in_a": 42,
+   "only_in_b": 42
+  },
+  "stable_low_dim": 563,
+  "stable_vs_base": {
+   "rank_a": 563,
+   "rank_b": 605,
+   "rank_sum": 605,
+   "equal": false,
+   "only_in_a": 0,
+   "only_in_b": 42
+  },
+  "stable_low_in_base": true
+ },
+ "k0=6,k=10": {
+  "rows": 1549,
+  "predicted": 1549,
+  "certificate": {
+   "dim": 1549,
+   "contains_generator_rows": true,
+   "closed": false,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    127,
+    1549
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 1549,
+   "rank_b": 1549,
+   "rank_sum": 1591,
+   "equal": false,
+   "only_in_a": 42,
+   "only_in_b": 42
+  },
+  "stable_low_dim": 563,
+  "stable_vs_base": {
+   "rank_a": 563,
+   "rank_b": 605,
+   "rank_sum": 605,
+   "equal": false,
+   "only_in_a": 0,
+   "only_in_b": 42
+  },
+  "stable_low_in_base": true
+ },
+ "fall_rank_on_top_level_k6": 37,
+ "fall_rank_on_top_level_k7": 4
+}

@@ -1,0 +1,33 @@
+{
+ "k": 11,
+ "prime": 12289,
+ "a": 4021,
+ "b": 9917,
+ "seed": 12,
+ "want": true,
+ "target": [
+  4408,
+  4441
+ ],
+ "points": 348,
+ "attempts": 1,
+ "eval_rank_below_D": 348,
+ "onto": true,
+ "columns": 35443,
+ "Z_bound_2_2k": 4096,
+ "generator": {
+  "0,0": 12043,
+  "0,1": 1828,
+  "0,2": 1555,
+  "1,0": 1828,
+  "1,1": 1137,
+  "1,2": 3473,
+  "2,0": 1555,
+  "2,1": 3473,
+  "2,2": 1
+ },
+ "source_sha256": {
+  "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
+  "scripts/ic_bounds_d5_verify.py": "1c94b5bdd9fc50646a3fc8f927b2c0fe74d22186db19b69df8cb2606031ff06f"
+ }
+}

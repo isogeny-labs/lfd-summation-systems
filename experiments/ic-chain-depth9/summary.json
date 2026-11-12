@@ -1,0 +1,46 @@
+{
+  "seed": 20261104,
+  "cases": 10,
+  "unique_systems": 10,
+  "elapsed_seconds": 11198,
+  "by_depth": {
+    "7": {
+      "systems": 2,
+      "status": {
+        "exact-unit-shift": 1,
+        "exact-proper-shift": 1
+      },
+      "lfd": {
+        "5": 2
+      },
+      "falls": {
+        "[4, 5]": 2
+      }
+    },
+    "9": {
+      "systems": 8,
+      "status": {
+        "exact-proper-shift": 8
+      },
+      "lfd": {
+        "5": 8
+      },
+      "falls": {
+        "[4, 5]": 8
+      }
+    }
+  },
+  "by_base": {
+    "subgroup": {
+      "5": 4
+    },
+    "random-coset": {
+      "5": 4
+    }
+  },
+  "engine": "shift-structured closure: exact dense profile through degree 4, once-per-pivot shift closure at degrees 5 and 6",
+  "limitations": [
+    "Small seeded arm; no population inference.",
+    "An exact value needs the certificate at degree 5 (then V_4 exact decides the fall at 5); a certificate only at degree 6 gives an interval."
+  ]
+}

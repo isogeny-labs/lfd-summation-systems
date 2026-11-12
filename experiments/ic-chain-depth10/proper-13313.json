@@ -1,0 +1,46 @@
+{
+ "prime": 13313,
+ "a": 1,
+ "b": 0,
+ "seed": 11,
+ "target": [
+  7412,
+  6781
+ ],
+ "k": 10,
+ "degree": 5,
+ "points": 98,
+ "dim_V4": 1549,
+ "rounds": 17,
+ "rank_history": [
+  1351,
+  2016,
+  3492,
+  4496,
+  5948,
+  7197,
+  8711,
+  10049,
+  11527,
+  12768,
+  14316,
+  15512,
+  16610,
+  17759,
+  18467,
+  18557,
+  18569
+ ],
+ "product_cap": 6000,
+ "result": {
+  "status": "deficient-closed",
+  "lfd_lower_bound": 6,
+  "note": "V_5 is exactly the degree-5 closure and has dimension below dim(I \u2229 M_<=5), so an element of I of degree <= 5 is not in V_5: LFD >= 6; 1 is not in V_5",
+  "rank": 18569,
+  "target": 21602,
+  "deficiency": 3033,
+  "low_dimension": 3163,
+  "contains_one": false
+ },
+ "basis_sha256": "456b5e9cfaebf9040cf2d10a3e153c6bb52ac4a531f32c810343de2524009fc2"
+}

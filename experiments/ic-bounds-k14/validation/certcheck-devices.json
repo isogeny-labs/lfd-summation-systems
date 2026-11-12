@@ -1,0 +1,427 @@
+{
+ "group": "devices",
+ "cases": [
+  {
+   "name": "proper-p15361-k7-D4",
+   "runs": {
+    "cpu": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 829,
+     "part_ranks": [
+      425,
+      404
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      115,
+      829
+     ],
+     "basis_sha256": [
+      "3ef1cd092fd750ebbac07239ee245a6100a1bc5ae480ee13659c134fa5a597d9",
+      "b8ea7d3c760e3c3e6d9af8434144f21c2f21a3e2a408ce20829d04452d5a99e4"
+     ],
+     "rows_checked": 115,
+     "triples_checked": 3220,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.1,
+     "maxrss_mb": 43
+    },
+    "fake-gpu": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 829,
+     "part_ranks": [
+      425,
+      404
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      115,
+      829
+     ],
+     "basis_sha256": [
+      "3ef1cd092fd750ebbac07239ee245a6100a1bc5ae480ee13659c134fa5a597d9",
+      "b8ea7d3c760e3c3e6d9af8434144f21c2f21a3e2a408ce20829d04452d5a99e4"
+     ],
+     "rows_checked": 115,
+     "triples_checked": 3220,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.1,
+     "maxrss_mb": 43
+    },
+    "cpu-tiny-blocks": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 829,
+     "part_ranks": [
+      425,
+      404
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      115,
+      829
+     ],
+     "basis_sha256": [
+      "3ef1cd092fd750ebbac07239ee245a6100a1bc5ae480ee13659c134fa5a597d9",
+      "b8ea7d3c760e3c3e6d9af8434144f21c2f21a3e2a408ce20829d04452d5a99e4"
+     ],
+     "rows_checked": 115,
+     "triples_checked": 3220,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.1,
+     "maxrss_mb": 41
+    },
+    "fake-gpu-tiny-blocks": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 829,
+     "part_ranks": [
+      425,
+      404
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      115,
+      829
+     ],
+     "basis_sha256": [
+      "3ef1cd092fd750ebbac07239ee245a6100a1bc5ae480ee13659c134fa5a597d9",
+      "b8ea7d3c760e3c3e6d9af8434144f21c2f21a3e2a408ce20829d04452d5a99e4"
+     ],
+     "rows_checked": 115,
+     "triples_checked": 3220,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 41
+    },
+    "cpu-forced-inner-7": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 829,
+     "part_ranks": [
+      425,
+      404
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      115,
+      829
+     ],
+     "basis_sha256": [
+      "3ef1cd092fd750ebbac07239ee245a6100a1bc5ae480ee13659c134fa5a597d9",
+      "b8ea7d3c760e3c3e6d9af8434144f21c2f21a3e2a408ce20829d04452d5a99e4"
+     ],
+     "rows_checked": 115,
+     "triples_checked": 3220,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": true,
+     "seconds": 0.3,
+     "maxrss_mb": 125
+    }
+   },
+   "identical_verdicts": true,
+   "passed": true
+  },
+  {
+   "name": "unit-p12289-k8-D4",
+   "runs": {
+    "cpu": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 52
+    },
+    "fake-gpu": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 53
+    },
+    "cpu-tiny-blocks": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.4,
+     "maxrss_mb": 44
+    },
+    "fake-gpu-tiny-blocks": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 1.1,
+     "maxrss_mb": 45
+    },
+    "cpu-forced-inner-7": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": true,
+     "seconds": 1.0,
+     "maxrss_mb": 125
+    }
+   },
+   "identical_verdicts": true,
+   "passed": true
+  },
+  {
+   "name": "cli --selftest --device fake-gpu",
+   "rc": 0,
+   "passed": true
+  }
+ ],
+ "passed": true,
+ "checker_sha256": "ff13b128b5ba252192a7231a856dad8fd20c1625fbd2545f2bb4e6c0e50a4970",
+ "harness_sha256": "02561b89a007f91edbbe44856e73dc5af2da21ee861f59acfaa0fbf7dc88997c"
+}

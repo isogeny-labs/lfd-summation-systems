@@ -1,0 +1,349 @@
+{
+ "p40961": {
+  "instance": {
+   "p": 40961,
+   "a": 21223,
+   "b": 9887,
+   "target": [
+    4748,
+    524
+   ]
+  },
+  "on_curve": true,
+  "dims": {
+   "6": 605,
+   "7": 829,
+   "8": 1061,
+   "9": 1301
+  },
+  "profiles": {
+   "6": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "7": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "8": [
+    0,
+    0,
+    2,
+    119,
+    1061
+   ],
+   "9": [
+    0,
+    0,
+    2,
+    123,
+    1301
+   ]
+  },
+  "solutions": {
+   "6": 2,
+   "7": 2,
+   "8": 2,
+   "9": null
+  },
+  "one_in": {
+   "6": false,
+   "7": false,
+   "8": false,
+   "9": false
+  },
+  "closed": {
+   "6": true,
+   "7": true,
+   "8": true,
+   "9": true
+  },
+  "free": {
+   "8": {
+    "cert": {
+     "dim": 1061,
+     "contains_generator_rows": true,
+     "closed": true,
+     "contains_one": false,
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ]
+    },
+    "cmp": {
+     "rank_a": 1061,
+     "rank_b": 1061,
+     "rank_sum": 1061,
+     "equal": true,
+     "only_in_a": 0,
+     "only_in_b": 0
+    }
+   },
+   "9": {
+    "cert": {
+     "dim": 1301,
+     "contains_generator_rows": true,
+     "closed": true,
+     "contains_one": false,
+     "profile": [
+      0,
+      0,
+      2,
+      123,
+      1301
+     ]
+    },
+    "cmp": {
+     "rank_a": 1301,
+     "rank_b": 1301,
+     "rank_sum": 1301,
+     "equal": true,
+     "only_in_a": 0,
+     "only_in_b": 0
+    }
+   }
+  }
+ },
+ "p12289r3": {
+  "instance": {
+   "p": 12289,
+   "a": 3899,
+   "b": 9710,
+   "target": [
+    9895,
+    11610
+   ]
+  },
+  "on_curve": true,
+  "dims": {
+   "6": 605,
+   "7": 829,
+   "8": 1061,
+   "9": 1301
+  },
+  "profiles": {
+   "6": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "7": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "8": [
+    0,
+    0,
+    2,
+    119,
+    1061
+   ],
+   "9": [
+    0,
+    0,
+    2,
+    123,
+    1301
+   ]
+  },
+  "solutions": {
+   "6": 2,
+   "7": 4,
+   "8": 8,
+   "9": null
+  },
+  "one_in": {
+   "6": false,
+   "7": false,
+   "8": false,
+   "9": false
+  },
+  "closed": {
+   "6": true,
+   "7": true,
+   "8": true,
+   "9": true
+  },
+  "free": {
+   "8": {
+    "cert": {
+     "dim": 1061,
+     "contains_generator_rows": true,
+     "closed": true,
+     "contains_one": false,
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ]
+    },
+    "cmp": {
+     "rank_a": 1061,
+     "rank_b": 1061,
+     "rank_sum": 1061,
+     "equal": true,
+     "only_in_a": 0,
+     "only_in_b": 0
+    }
+   },
+   "9": {
+    "cert": {
+     "dim": 1301,
+     "contains_generator_rows": true,
+     "closed": true,
+     "contains_one": false,
+     "profile": [
+      0,
+      0,
+      2,
+      123,
+      1301
+     ]
+    },
+    "cmp": {
+     "rank_a": 1301,
+     "rank_b": 1301,
+     "rank_sum": 1301,
+     "equal": true,
+     "only_in_a": 0,
+     "only_in_b": 0
+    }
+   }
+  }
+ },
+ "p12289j1728": {
+  "instance": {
+   "p": 12289,
+   "a": 1,
+   "b": 0,
+   "target": [
+    9362,
+    1126
+   ]
+  },
+  "on_curve": true,
+  "dims": {
+   "6": 605,
+   "7": 829,
+   "8": 1061,
+   "9": 1301
+  },
+  "profiles": {
+   "6": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "7": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "8": [
+    0,
+    0,
+    2,
+    119,
+    1061
+   ],
+   "9": [
+    0,
+    0,
+    2,
+    123,
+    1301
+   ]
+  },
+  "solutions": {
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": null
+  },
+  "one_in": {
+   "6": false,
+   "7": false,
+   "8": false,
+   "9": false
+  },
+  "closed": {
+   "6": true,
+   "7": true,
+   "8": true,
+   "9": true
+  },
+  "free": {
+   "8": {
+    "cert": {
+     "dim": 1061,
+     "contains_generator_rows": true,
+     "closed": true,
+     "contains_one": false,
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ]
+    },
+    "cmp": {
+     "rank_a": 1061,
+     "rank_b": 1061,
+     "rank_sum": 1061,
+     "equal": true,
+     "only_in_a": 0,
+     "only_in_b": 0
+    }
+   },
+   "9": {
+    "cert": {
+     "dim": 1301,
+     "contains_generator_rows": true,
+     "closed": true,
+     "contains_one": false,
+     "profile": [
+      0,
+      0,
+      2,
+      123,
+      1301
+     ]
+    },
+    "cmp": {
+     "rank_a": 1301,
+     "rank_b": 1301,
+     "rank_sum": 1301,
+     "equal": true,
+     "only_in_a": 0,
+     "only_in_b": 0
+    }
+   }
+  }
+ },
+ "pivot_set_symdiff_vs_first": {
+  "p40961": 0,
+  "p12289r3": 0,
+  "p12289j1728": 0
+ }
+}

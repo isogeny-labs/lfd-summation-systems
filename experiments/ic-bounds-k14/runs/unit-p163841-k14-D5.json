@@ -1,0 +1,150 @@
+{
+ "k": 14,
+ "D": 5,
+ "p": 163841,
+ "split": true,
+ "gens": "all",
+ "columns": 122438,
+ "generator_rows": 3683,
+ "rank": 47849,
+ "profile": [
+  0,
+  0,
+  2,
+  154,
+  4323,
+  47849
+ ],
+ "part_profiles": [
+  [
+   0,
+   0,
+   2,
+   80,
+   2192,
+   23963
+  ],
+  [
+   0,
+   0,
+   0,
+   74,
+   2131,
+   23886
+  ]
+ ],
+ "part_ranks": [
+  23963,
+  23886
+ ],
+ "contains_one": false,
+ "closure_complete": true,
+ "closed": true,
+ "rounds": 25,
+ "seconds": 130.7,
+ "madds": 28018941946356,
+ "madds_detail": {
+  "reduce": 24806027293978,
+  "reduce_dense": 79383447260570,
+  "update": 2464967457486,
+  "rref": 747947194892
+ },
+ "madds_dense": 82596361912948,
+ "madds_closure_phase": 18104314714356,
+ "seconds_detail": {
+  "reduce": 18.86,
+  "update": 12.12,
+  "rref": 82.42
+ },
+ "peak_entries": [
+  894035567,
+  890470080
+ ],
+ "peak_phys_entries": [
+  932723750,
+  938525783
+ ],
+ "compactions": [
+  9,
+  9
+ ],
+ "rref_ok": true,
+ "basis_sha256": [
+  "490fb17b6f3fd8d64a39a6500ea5126e16be4ecd0dfa057d8aa2b4c6c171f12b",
+  "8c555fc89cd6b81dae7253eb7f234750f380dbf3cc1f0e506d9494f14a277141"
+ ],
+ "sweep_random": {
+  "t": 6,
+  "seed": 1,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "maps": 56
+ },
+ "sweep_full": {
+  "complete": true,
+  "rows_checked": 8646,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "sweeps_run": 1
+ },
+ "repairs": 0,
+ "repair_rows": 0,
+ "resumes": 0,
+ "device": "gpu",
+ "threads": 8,
+ "blas_threads_env": "8",
+ "maxrss_mb": 769,
+ "engine_sha256": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+ "engine_version": "ic_bounds_big/2",
+ "work_gb": 20.0,
+ "tile_mb": 1024.0,
+ "tile_rows": [
+  4381,
+  4388
+ ],
+ "batch": 2048,
+ "compact_frac": 0.05,
+ "t_random": 6,
+ "sweep_chunk": 256,
+ "stop_on_one": false,
+ "no_repair": false,
+ "compress": false,
+ "spill": {
+  "spills": 0,
+  "fetches": 0,
+  "d2h_bytes": 0,
+  "h2d_bytes": 0,
+  "d2h_s": 0.0,
+  "h2d_s": 0.0,
+  "switches": 0,
+  "tile_budget_bytes": null,
+  "dev_limit_bytes": null,
+  "host_tile_bytes": 0
+ },
+ "dev_used_mb": 8098,
+ "dev_total_mb": 143157,
+ "dev_peak_live_mb": null,
+ "status": "done",
+ "instance_file": "unit-p163841-a3-s21-k14.json",
+ "instance_sha256": "d02b2097f2348be3249846c4e9f869fd72034ae8852065421372c90f036048da",
+ "a": 3,
+ "b": 0,
+ "seed": 21,
+ "want": false,
+ "unit_nonresidue": true,
+ "instance_target": [
+  73730,
+  28291
+ ],
+ "attempts": 1,
+ "instance_k": 14,
+ "resumed_from_checkpoint": false,
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "instance": "d02b2097f2348be3249846c4e9f869fd72034ae8852065421372c90f036048da"
+ },
+ "points": 0,
+ "target": 122438,
+ "deficient": true
+}

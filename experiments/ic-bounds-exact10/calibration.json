@@ -1,0 +1,432 @@
+{
+ "note": "wall seconds of reached split closures on a shared 4-core host (load about 4), single BLAS thread; used only for an order-of-magnitude extrapolation",
+ "runs": [
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.26
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.58
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 0.91
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 5.09
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 12.94
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.3
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.53
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 0.68
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 4.1
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 10.55
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.27
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.69
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 0.9
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 4.8
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 13.28
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.26
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.46
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 1.0
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 4.7
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 12.87
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.29
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.48
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 0.95
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 4.8
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 12.88
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.25
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.62
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 0.95
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 4.42
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 13.06
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.26
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.55
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 0.82
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 5.59
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 12.54
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 4,
+   "cols": 386,
+   "seconds": 0.25
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 5,
+   "cols": 638,
+   "seconds": 0.66
+  },
+  {
+   "source": "validation-scratch",
+   "k": 5,
+   "D": 6,
+   "cols": 848,
+   "seconds": 0.7
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 5,
+   "cols": 1586,
+   "seconds": 4.55
+  },
+  {
+   "source": "validation-scratch",
+   "k": 6,
+   "D": 6,
+   "cols": 2510,
+   "seconds": 12.41
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 30.83
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 112.53
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 28.89
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 102.93
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 32.99
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 110.08
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 31.77
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 111.03
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 31.25
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 106.51
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 29.73
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 104.64
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 30.65
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 107.08
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 5,
+   "cols": 3473,
+   "seconds": 30.94
+  },
+  {
+   "source": "validation-scratch",
+   "k": 7,
+   "D": 6,
+   "cols": 6476,
+   "seconds": 106.49
+  },
+  {
+   "source": "midscale-D5",
+   "k": 8,
+   "D": 5,
+   "cols": 6885,
+   "seconds": 129.4
+  },
+  {
+   "source": "midscale-D5",
+   "k": 8,
+   "D": 5,
+   "cols": 6885,
+   "seconds": 132.8
+  },
+  {
+   "source": "midscale-D5",
+   "k": 8,
+   "D": 5,
+   "cols": 6885,
+   "seconds": 132.9
+  },
+  {
+   "source": "midscale-D5",
+   "k": 9,
+   "D": 5,
+   "cols": 12616,
+   "seconds": 431.6
+  },
+  {
+   "source": "degree6-k8-D6-p257-x190.json",
+   "k": 8,
+   "D": 6,
+   "cols": 14893,
+   "seconds": 394
+  }
+ ]
+}

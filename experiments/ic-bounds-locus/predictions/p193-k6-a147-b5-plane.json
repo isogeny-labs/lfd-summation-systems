@@ -1,0 +1,139 @@
+{
+ "prime": 193,
+ "k": 6,
+ "a": 147,
+ "b": 5,
+ "rules_file": "experiments/ic-bounds-locus/rules-k6-plane.json",
+ "rules_sha256": "9c524feb3d4fe8a3a6d3f283d08d72df193d614a6e144e1dc6221436d3fafc99",
+ "made_at_unix": 1794085006,
+ "predictions": {
+  "t0_j0": {
+   "key": "V3",
+   "clauses": [
+    [
+     "t=0",
+     "a=0"
+    ]
+   ],
+   "polynomial_AB": null,
+   "plane_lookup": null,
+   "predicted_t": [],
+   "expected_value": 44
+  },
+  "t0_j1728": {
+   "key": "LFD",
+   "clauses": [
+    [
+     "t=0",
+     "b=0"
+    ]
+   ],
+   "polynomial_AB": null,
+   "plane_lookup": null,
+   "predicted_t": [],
+   "expected_value": 4
+  },
+  "t0_other": {
+   "key": "V4",
+   "clauses": [
+    [
+     "t=0",
+     "not(a=0)",
+     "not(b=0)"
+    ]
+   ],
+   "polynomial_AB": null,
+   "plane_lookup": null,
+   "predicted_t": [],
+   "expected_value": 612
+  },
+  "tangent_3t2+a": {
+   "key": "V3",
+   "clauses": [
+    [
+     "3t2+a=0",
+     "not(t=0)"
+    ]
+   ],
+   "polynomial_AB": null,
+   "plane_lookup": null,
+   "predicted_t": [
+    12
+   ],
+   "expected_value": 34
+  },
+  "order_two": {
+   "key": "V4",
+   "clauses": [
+    [
+     "rhs=0",
+     "not(t=0)",
+     "not(3t2+a=0)"
+    ]
+   ],
+   "polynomial_AB": null,
+   "plane_lookup": null,
+   "predicted_t": [
+    68
+   ],
+   "expected_value": 607
+  },
+  "cubic_C1": {
+   "key": "V4",
+   "clauses": null,
+   "polynomial_AB": {
+    "prime": 193,
+    "coefficients": {
+     "0,0": 15,
+     "0,1": 162,
+     "1,0": 166,
+     "0,2": 8,
+     "1,1": 131,
+     "2,0": 96,
+     "0,3": 50,
+     "1,2": 72,
+     "2,1": 30,
+     "3,0": 1
+    }
+   },
+   "plane_lookup": null,
+   "predicted_t": [],
+   "expected_value": 602
+  },
+  "plane_C2": {
+   "key": "LFD",
+   "clauses": null,
+   "polynomial_AB": null,
+   "plane_lookup": {
+    "prime": 193,
+    "glob": "experiments/ic-bounds-locus/plane/p193-k6-plane-c*.jsonl",
+    "V3": 13,
+    "min_V4": 700
+   },
+   "predicted_t": [],
+   "expected_value": 4
+  },
+  "polynomial_union": {
+   "key": "any",
+   "clauses": [
+    [
+     "t=0"
+    ],
+    [
+     "3t2+a=0"
+    ],
+    [
+     "rhs=0"
+    ]
+   ],
+   "polynomial_AB": null,
+   "plane_lookup": null,
+   "predicted_t": [
+    12,
+    68
+   ],
+   "expected_value": null
+  }
+ },
+ "targets": 95
+}

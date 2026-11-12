@@ -1,0 +1,78 @@
+{
+ "prime": 40961,
+ "a": 21223,
+ "b": 9887,
+ "k": 6,
+ "seed": 7,
+ "target": [
+  4748,
+  524
+ ],
+ "curve_order": 40817,
+ "target_order": 40817,
+ "generator_value_at_k": 14529,
+ "points_at_k": [
+  2626,
+  169
+ ],
+ "generator": {
+  "2": 14954,
+  "128": 14954,
+  "65": 9568,
+  "66": 31465,
+  "129": 31465,
+  "1": 36886,
+  "64": 36886,
+  "0": 40854,
+  "130": 1
+ },
+ "generator_pairs": [
+  [
+   0,
+   0,
+   40854
+  ],
+  [
+   0,
+   1,
+   36886
+  ],
+  [
+   0,
+   2,
+   14954
+  ],
+  [
+   1,
+   0,
+   36886
+  ],
+  [
+   1,
+   1,
+   9568
+  ],
+  [
+   1,
+   2,
+   31465
+  ],
+  [
+   2,
+   0,
+   14954
+  ],
+  [
+   2,
+   1,
+   31465
+  ],
+  [
+   2,
+   2,
+   1
+  ]
+ ],
+ "instance_hash": "a032fc6f6f07d309f81bf9de6e971c77a0c903b8596c6ece13b2843ef5e8fd02",
+ "note": "random curve y^2=x^3+ax+b and random rational target of large order drawn from random.Random(seed) at depth 6; the solution set listed is the depth-6 one, per-depth solution counts are in the k*.json files"
+}

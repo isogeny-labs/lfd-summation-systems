@@ -1,0 +1,362 @@
+{
+ "p": 12289,
+ "a": 4021,
+ "b": 9917,
+ "seed": 12,
+ "want": true,
+ "D": 4,
+ "split": false,
+ "target_info": {
+  "target": [
+   4408,
+   4441
+  ],
+  "attempts": 1,
+  "drawn": true,
+  "draw_k": 10
+ },
+ "exceptional": {
+  "order_two": false,
+  "t_zero": false,
+  "tangent": false
+ },
+ "closures": {
+  "5": {
+   "rank": 386,
+   "profile": [
+    1,
+    11,
+    56,
+    176,
+    386
+   ],
+   "part_profiles": [
+    [
+     1,
+     11,
+     56,
+     176,
+     386
+    ]
+   ],
+   "contains_one": true,
+   "rref_ok": true,
+   "basis_sha256": [
+    "3583762bc711f4a72007109e10c501e75c309a4ca9ae0f59bdc7c0446273b6a1"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 176,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 0.2,
+   "generator_in_space": true,
+   "ideal_dim": 386,
+   "points": 0,
+   "columns": 386,
+   "deficient": false
+  },
+  "6": {
+   "rank": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "part_profiles": [
+    [
+     0,
+     0,
+     2,
+     111,
+     605
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "9b4440dacd53a856b0d363c8a2c4f4e9d349662c0928c3f214c10b98227a047f"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 111,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 0.4,
+   "generator_in_space": true,
+   "ideal_dim": 794,
+   "points": 0,
+   "columns": 794,
+   "deficient": true
+  },
+  "7": {
+   "rank": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "part_profiles": [
+    [
+     0,
+     0,
+     2,
+     115,
+     829
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "4603f8a93e576f98c15313a53d34073dbfbe91ff0474eec216d3de78e9195835"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 115,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 1.3,
+   "generator_in_space": true,
+   "ideal_dim": 1471,
+   "points": 0,
+   "columns": 1471,
+   "deficient": true
+  },
+  "8": {
+   "rank": 1061,
+   "profile": [
+    0,
+    0,
+    2,
+    119,
+    1061
+   ],
+   "part_profiles": [
+    [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "0777c91c8f36541d36f458c3c06752c2e1be1cc7cf8477cf8aa2f0cc981b01de"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 119,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 3.1,
+   "generator_in_space": true,
+   "ideal_dim": 2515,
+   "points": 2,
+   "columns": 2517,
+   "deficient": true
+  }
+ },
+ "extensions": {
+  "5": {
+   "k0": 5,
+   "W": {
+    "rank": 794,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794
+    ],
+    "part_profiles": [
+     [
+      1,
+      13,
+      79,
+      299,
+      794
+     ]
+    ],
+    "contains_one": true,
+    "rref_ok": true,
+    "basis_sha256": [
+     "e021275026d7b14a0907eb01cab1fa854e763c40e7a48f3f8fc389ae13f13352"
+    ],
+    "expected_profile": [
+     1,
+     13,
+     79,
+     299,
+     794
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 299,
+     "nonzero_residuals": 0,
+     "passed": true
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 0,
+     "maps": 12,
+     "passed": true
+    },
+    "generator_rows": 79,
+    "generator_rows_outside": 0,
+    "construction": "generic elimination",
+    "seconds": 0.6
+   },
+   "one_notin_S": false,
+   "g_in_S": true,
+   "W_closed": true,
+   "kernel_hypotheses_hold": false,
+   "equals_V_next": false,
+   "equals_V_next_by": "canonical RREF identical (same_space)",
+   "W_profile_equals_V_next_profile": false,
+   "recursion_holds": false
+  },
+  "6": {
+   "k0": 6,
+   "W": {
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "part_profiles": [
+     [
+      0,
+      0,
+      2,
+      115,
+      829
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "aac6eecb4d9b3839583c47e2b5335cdebfc2d3d60953f9584c185cbdecf84619"
+    ],
+    "expected_profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 115,
+     "nonzero_residuals": 127,
+     "passed": false
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 8,
+     "maps": 14,
+     "passed": false
+    },
+    "generator_rows": 106,
+    "generator_rows_outside": 0,
+    "construction": "generic elimination",
+    "seconds": 1.6
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": false,
+   "kernel_hypotheses_hold": false,
+   "equals_V_next": false,
+   "equals_V_next_by": "canonical RREF identical (same_space)",
+   "W_profile_equals_V_next_profile": true,
+   "recursion_holds": true
+  },
+  "7": {
+   "k0": 7,
+   "W": {
+    "rank": 1061,
+    "profile": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "part_profiles": [
+     [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "0777c91c8f36541d36f458c3c06752c2e1be1cc7cf8477cf8aa2f0cc981b01de"
+    ],
+    "expected_profile": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 119,
+     "nonzero_residuals": 0,
+     "passed": true
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 0,
+     "maps": 16,
+     "passed": true
+    },
+    "generator_rows": 137,
+    "generator_rows_outside": 0,
+    "construction": "generic elimination",
+    "seconds": 4.1
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": true,
+   "kernel_hypotheses_hold": true,
+   "equals_V_next": true,
+   "equals_V_next_by": "canonical RREF identical (same_space)",
+   "W_profile_equals_V_next_profile": true,
+   "recursion_holds": true
+  }
+ },
+ "maxrss_mb": 183,
+ "seconds": 11.4,
+ "command": "scripts/ic_bounds_freeext_run.py chain --p 12289 --a 4021 --b 9917 --seed 12 --want --draw-k 10 --D 4 --kmin 5 --kmax 8 --nosplit --name D4-p12289-s12-nosplit",
+ "source_sha256": {
+  "csd/ic_bounds_freeext.py": "c3ae3c68eefc2306146bae2f819609dcc9da84c7b6663301d09ef6becbc39d39",
+  "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
+  "scripts/ic_bounds_freeext_run.py": "a02f5a7afd906fafb3e83947bbb86dfcb2dc866299ad10e3bc03ca7b3a5af684",
+  "scripts/ic_bounds_d5_verify.py": "1c94b5bdd9fc50646a3fc8f927b2c0fe74d22186db19b69df8cb2606031ff06f"
+ },
+ "label": "exact",
+ "date": "2026-11-10"
+}

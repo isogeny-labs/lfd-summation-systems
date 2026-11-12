@@ -1,0 +1,122 @@
+{
+ "date": "2026-11-08",
+ "command": "python3 scripts/run_ic_chain_depth8.py --check-only --depths 9 --primes 7681 --out experiments/ic-chain-depth9 --workers 1 --product-cap 12000 --shift-max-cells 450000000",
+ "commit": "5035902d3fec63a8e36eb76078f6c78a3efa3892",
+ "status": "passed: every result replayed",
+ "systems": 10,
+ "note": "Each recomputed result equals the stored record in results.jsonl (all fields except seconds); source and data hashes in verification.json checked first. An earlier attempt was stopped by a 2-hour limit after 8/10 matching systems; this is the complete rerun.",
+ "per_system": [
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1073.9
+  },
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1089.3
+  },
+  {
+   "k": 7,
+   "prime": 7681,
+   "status": "exact-unit-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 18.9
+  },
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1113.3
+  },
+  {
+   "k": 7,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 17.4
+  },
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1105.5
+  },
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1101.9
+  },
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1083.8
+  },
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1052.2
+  },
+  {
+   "k": 9,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 1103.0
+  }
+ ],
+ "elapsed_seconds": 8798,
+ "results_sha256": "f332095dcbb3efb6ae93258903dd4d4284ad39eff8673a7f958cc1c84c1b5b24"
+}

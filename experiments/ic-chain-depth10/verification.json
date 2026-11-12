@@ -1,0 +1,17 @@
+{
+  "status": "passed: degree-5 shift closure built with every low pivot processed once and verified closed (11 chunks, all 2k shifts of all 3163 low rows re-reduced); 1 not in V_5; exact dense V_4 with exclusion certificate",
+  "source_sha256": {
+    "scripts/run_ic_chain_depth10_probe.py": "cd57dfcdaf5d92882d7669ac50f675553b952e0dd7a3a599e1164d1b97cddb0b",
+    "csd/ic_chain_shift_closure.py": "2e9b0452e81ee7d16bca9b4799116eed8c03b8a3d4b252ecce5f1568152b1a60",
+    "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+    "csd/ic_curve_sweep.py": "4ddefb24900dda4d4f52dcd33b5d30ac7ddf80e3704c1c51d08df0a60fe9874c",
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+    "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+    "csd/_elim.c": "1269131384fc5f110b90b70a1c8f174a60ca7fe968388f6e13f96eba56959290"
+  },
+  "data_sha256": {
+    "experiments/ic-chain-depth10/probe.json": "1fb97d358267288bf631b1625e996fcf153cc9f8ea5901242e9c91bcacd920c1"
+  },
+  "checkpoint_basis_sha256": "d4fe133411ff396d4b607165035615cde9e796f112f4a26bf23db1ef2612ee6b",
+  "note": "The 770 MB checkpoint basis is not committed; its hash is recorded for a rerun to compare."
+}

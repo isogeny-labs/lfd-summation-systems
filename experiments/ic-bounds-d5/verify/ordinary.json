@@ -1,0 +1,141 @@
+{
+ "rows": [
+  {
+   "instance": "unit",
+   "k": 4,
+   "D": 3,
+   "ordinary_dim": 81,
+   "ordinary_one": false,
+   "image_rank": 9,
+   "chain_rank": 9,
+   "chain_one": false,
+   "agree": true,
+   "seconds": 0.0
+  },
+  {
+   "instance": "unit",
+   "k": 4,
+   "D": 4,
+   "ordinary_dim": 495,
+   "ordinary_one": true,
+   "image_rank": 163,
+   "chain_rank": 163,
+   "chain_one": true,
+   "agree": true,
+   "seconds": 0.7
+  },
+  {
+   "instance": "unit",
+   "k": 4,
+   "D": 5,
+   "ordinary_dim": 1287,
+   "ordinary_one": true,
+   "image_rank": 219,
+   "chain_rank": 219,
+   "chain_one": true,
+   "agree": true,
+   "seconds": 6.1
+  },
+  {
+   "instance": "p13313",
+   "k": 4,
+   "D": 3,
+   "ordinary_dim": 81,
+   "ordinary_one": false,
+   "image_rank": 9,
+   "chain_rank": 9,
+   "chain_one": false,
+   "agree": true,
+   "seconds": 0.0
+  },
+  {
+   "instance": "p13313",
+   "k": 4,
+   "D": 4,
+   "ordinary_dim": 495,
+   "ordinary_one": true,
+   "image_rank": 163,
+   "chain_rank": 163,
+   "chain_one": true,
+   "agree": true,
+   "seconds": 0.6
+  },
+  {
+   "instance": "p13313",
+   "k": 4,
+   "D": 5,
+   "ordinary_dim": 1287,
+   "ordinary_one": true,
+   "image_rank": 219,
+   "chain_rank": 219,
+   "chain_one": true,
+   "agree": true,
+   "seconds": 6.9
+  },
+  {
+   "instance": "unit",
+   "k": 5,
+   "D": 3,
+   "ordinary_dim": 121,
+   "ordinary_one": false,
+   "image_rank": 11,
+   "chain_rank": 11,
+   "chain_one": false,
+   "agree": true,
+   "seconds": 0.0
+  },
+  {
+   "instance": "unit",
+   "k": 5,
+   "D": 4,
+   "ordinary_dim": 1001,
+   "ordinary_one": true,
+   "image_rank": 386,
+   "chain_rank": 386,
+   "chain_one": true,
+   "agree": true,
+   "seconds": 3.4
+  },
+  {
+   "instance": "unit",
+   "k": 5,
+   "D": 5,
+   "ordinary_dim": 3003,
+   "ordinary_one": true,
+   "image_rank": 638,
+   "chain_rank": 638,
+   "chain_one": true,
+   "agree": true,
+   "seconds": 49.5
+  },
+  {
+   "instance": "p15361",
+   "k": 5,
+   "D": 4,
+   "ordinary_dim": 999,
+   "ordinary_one": false,
+   "image_rank": 384,
+   "chain_rank": 384,
+   "chain_one": false,
+   "agree": true,
+   "seconds": 3.5
+  },
+  {
+   "instance": "p15361",
+   "k": 5,
+   "D": 5,
+   "ordinary_dim": 3001,
+   "ordinary_one": false,
+   "image_rank": 636,
+   "chain_rank": 636,
+   "chain_one": false,
+   "agree": true,
+   "seconds": 49.2
+  }
+ ],
+ "all_agree": true,
+ "source_sha256": {
+  "csd/ic_bounds_d5_verify.py": "e0628ef2e4a8b25272b7041d6bd65a3de3b83e25a5058a6e3563ec4495b1428c",
+  "scripts/ic_bounds_d5_verify.py": "1c94b5bdd9fc50646a3fc8f927b2c0fe74d22186db19b69df8cb2606031ff06f"
+ }
+}

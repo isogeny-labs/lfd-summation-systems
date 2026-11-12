@@ -1,0 +1,50 @@
+{
+ "prime": 40961,
+ "k": 7,
+ "D": 5,
+ "seed": 7,
+ "solutions": 2,
+ "monomials_le5": 3473,
+ "monomials_le4": 1471,
+ "dim_V5": 3471,
+ "low_profile": [
+  0,
+  13,
+  104,
+  468,
+  1469,
+  3471
+ ],
+ "dim_V5_le4": 1469,
+ "ideal_dimension_le5": 3471,
+ "evaluation_onto_below_5": true,
+ "reached_ideal": true,
+ "certificate": "V_5 = I \u2229 M_<=5 (rank = |M_<=5| - |Z|, M_<5 onto Z): LFD <= 5, V_5 \u2229 M_<=4 = I \u2229 M_<=4",
+ "contains_one": false,
+ "closed_verified": true,
+ "rounds": 11,
+ "rank_history": [
+  470,
+  736,
+  1190,
+  1543,
+  1981,
+  2351,
+  2749,
+  3046,
+  3330,
+  3458,
+  3471,
+  3471
+ ],
+ "seconds": 112.8,
+ "low_basis_file": {
+  "file": "k7-D5-low.npz",
+  "sha256": "fd0f2040a486787871953c8661990dc34877b851e05f217d608d90094e494473",
+  "basis_sha256": "5f39060e1ba45f1934ba4d9e7995903d1ee5c9df48ca426a17cf41e92913d6a4",
+  "shape": [
+   1469,
+   3473
+  ]
+ }
+}

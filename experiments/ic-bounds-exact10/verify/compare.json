@@ -1,0 +1,49 @@
+{
+ "batches": {
+  "validation-k56-v2.jsonl": {
+   "rows": 48,
+   "agree": 48
+  },
+  "validation-k56.jsonl": {
+   "rows": 48,
+   "agree": 48
+  },
+  "validation-k7a.jsonl": {
+   "rows": 6,
+   "agree": 6
+  },
+  "validation-k7b.jsonl": {
+   "rows": 6,
+   "agree": 6
+  },
+  "validation-k7c.jsonl": {
+   "rows": 6,
+   "agree": 6
+  },
+  "validation-k7d.jsonl": {
+   "rows": 3,
+   "agree": 3
+  },
+  "validation-k7e.jsonl": {
+   "rows": 3,
+   "agree": 3
+  }
+ },
+ "mismatches": [],
+ "totals_excluding_v2": {
+  "rows": 72,
+  "dim": 72,
+  "low": 72,
+  "one": 72,
+  "prev_dim": 72,
+  "prev_one": 72,
+  "block_one": 72,
+  "block_eq": 72,
+  "neg_expected": 56,
+  "neg_detected": 56,
+  "neg_rows": 56,
+  "undecided": 45,
+  "unit_not_one": 6,
+  "proper": 39
+ }
+}

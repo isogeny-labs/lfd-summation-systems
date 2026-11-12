@@ -1,0 +1,125 @@
+{
+ "targets": {
+  "compared": 208,
+  "mismatches": [],
+  "all_closed": true,
+  "lfd_mine_vs_producer": {
+   "(4, 4)": 13,
+   "(5, 5)": 84
+  },
+  "k6_certificates": {
+   "['local', ": 95,
+   "['unit', 4": 1
+  }
+ },
+ "plane": {
+  "compared": 795,
+  "mismatches": [
+   [
+    190,
+    2,
+    {
+     "prime": 193,
+     "k": 6,
+     "A": 190,
+     "B": 2,
+     "t": 1,
+     "lam": 1,
+     "certified": false,
+     "Z": 127,
+     "V3": 216,
+     "low3": 36,
+     "one3": false,
+     "codim3": 83,
+     "V4": 681,
+     "low4": 216,
+     "one4": false,
+     "codim4": 113,
+     "eval3": 83,
+     "saturated4": false
+    },
+    {
+     "V3": 216,
+     "low3": 36,
+     "one3": false,
+     "sat3": true,
+     "V4": 681,
+     "low4": 216,
+     "one4": false,
+     "sat4": true
+    }
+   ]
+  ],
+  "classes_recomputed": [
+   [
+    [
+     13,
+     1,
+     605,
+     111
+    ],
+    350
+   ],
+   [
+    [
+     "sat"
+    ],
+    191
+   ],
+   [
+    [
+     13,
+     1,
+     602,
+     111
+    ],
+    186
+   ],
+   [
+    [
+     13,
+     1,
+     607,
+     113
+    ],
+    36
+   ],
+   [
+    [
+     34,
+     3,
+     603,
+     111
+    ],
+    30
+   ],
+   [
+    [
+     34,
+     3,
+     600,
+     111
+    ],
+    1
+   ],
+   [
+    [
+     13,
+     1,
+     599,
+     111
+    ],
+    1
+   ]
+  ]
+ },
+ "invariance": {
+  "counts": {
+   "(6, 'verifier-plane', 't not in H', True)": 50,
+   "(6, 'verifier-plane', 't in H', True)": 38,
+   "(7, 'verifier-plane', 't in H', True)": 49,
+   "(7, 'verifier-plane', 't not in H', True)": 51
+  },
+  "failures": []
+ }
+}

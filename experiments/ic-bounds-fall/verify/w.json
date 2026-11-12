@@ -1,0 +1,63 @@
+{
+ "killed": [
+  [
+   1,
+   3
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   3,
+   1
+  ],
+  [
+   3,
+   2
+  ],
+  [
+   3,
+   3
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   4,
+   3
+  ]
+ ],
+ "n_equations": 7,
+ "kernel_dim": 2,
+ "formula_in_kernel": true,
+ "rank_of_kernel_plus_formula_plus_delta0": 2,
+ "a_plus_3t2_mod_p": 25124,
+ "k6": {
+  "weight": 2,
+  "support": 17,
+  "in_V4": true,
+  "g_w_span_V4_cap_M2": {
+   "rank_a": 2,
+   "rank_b": 2,
+   "rank_sum": 2,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  }
+ },
+ "k7": {
+  "weight": 2,
+  "support": 17,
+  "in_V4": true,
+  "g_w_span_V4_cap_M2": {
+   "rank_a": 2,
+   "rank_b": 2,
+   "rank_sum": 2,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  }
+ }
+}

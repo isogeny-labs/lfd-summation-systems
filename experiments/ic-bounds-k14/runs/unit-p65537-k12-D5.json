@@ -1,0 +1,138 @@
+{
+ "k": 12,
+ "D": 5,
+ "p": 65537,
+ "split": true,
+ "gens": "all",
+ "columns": 55455,
+ "generator_rows": 2325,
+ "rank": 32057,
+ "profile": [
+  0,
+  0,
+  2,
+  146,
+  3727,
+  32057
+ ],
+ "part_profiles": [
+  [
+   0,
+   0,
+   2,
+   76,
+   1892,
+   16061
+  ],
+  [
+   0,
+   0,
+   0,
+   70,
+   1835,
+   15996
+  ]
+ ],
+ "part_ranks": [
+  16061,
+  15996
+ ],
+ "contains_one": false,
+ "closure_complete": true,
+ "closed": true,
+ "rounds": 25,
+ "seconds": 207.9,
+ "madds": 5534459470192,
+ "madds_detail": {
+  "reduce": 4843712034396,
+  "reduce_dense": 14364400364618,
+  "update": 617546901186,
+  "rref": 73200534610
+ },
+ "madds_dense": 15055147800414,
+ "madds_closure_phase": 3267499366694,
+ "seconds_detail": {
+  "reduce": 10.54,
+  "update": 8.5,
+  "rref": 178.44
+ },
+ "peak_entries": [
+  192751192,
+  191656335
+ ],
+ "peak_phys_entries": [
+  205216362,
+  204001486
+ ],
+ "compactions": [
+  15,
+  15
+ ],
+ "rref_ok": true,
+ "basis_sha256": [
+  "51c808e13e507100060f5000fce89dfc1857e053843be7a52eeaccf1a22d1e61",
+  "e0d79628e6f08122d5e88e763a436c7d8324da1cbee536a54ada2a32ec1e1b96"
+ ],
+ "sweep_random": {
+  "t": 6,
+  "seed": 1,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "maps": 48
+ },
+ "sweep_full": {
+  "complete": true,
+  "rows_checked": 3727,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "sweeps_run": 1
+ },
+ "repairs": 0,
+ "repair_rows": 0,
+ "resumes": 0,
+ "device": "gpu",
+ "threads": 8,
+ "blas_threads_env": "8",
+ "maxrss_mb": 745,
+ "engine_sha256": "ba99c529151b787d007aaa42ba95aa518e71a38c86ef78069605b02f97331acd",
+ "engine_version": "ic_bounds_big/2",
+ "work_gb": 8.0,
+ "tile_mb": 512.0,
+ "tile_rows": [
+  4833,
+  4847
+ ],
+ "batch": 1024,
+ "compact_frac": 0.05,
+ "t_random": 6,
+ "sweep_chunk": 256,
+ "stop_on_one": false,
+ "no_repair": false,
+ "compress": false,
+ "dev_used_mb": 78270,
+ "dev_total_mb": 143157,
+ "dev_peak_live_mb": null,
+ "status": "done",
+ "instance_file": "unit-p65537-a1-s10-k12.json",
+ "instance_sha256": "71d41f02f9e5fac7054b546343270c722819069ed360bcafdc86ea726eeb354a",
+ "a": 1,
+ "b": 0,
+ "seed": 10,
+ "want": false,
+ "unit_nonresidue": true,
+ "instance_target": [
+  4271,
+  11720
+ ],
+ "attempts": 1,
+ "instance_k": 12,
+ "resumed_from_checkpoint": false,
+ "source_sha256": {
+  "engine": "ba99c529151b787d007aaa42ba95aa518e71a38c86ef78069605b02f97331acd",
+  "driver": "7aad3cbd3d89346f1e55b61c55963fb4eccc9022650cfe8ad0b3931abed4593d",
+  "instance": "71d41f02f9e5fac7054b546343270c722819069ed360bcafdc86ea726eeb354a"
+ },
+ "points": 0,
+ "target": 55455,
+ "deficient": true
+}

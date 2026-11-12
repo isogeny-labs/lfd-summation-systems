@@ -1,0 +1,120 @@
+{
+ "k": 8,
+ "D": 4,
+ "direct": {
+  "dim": 6885,
+  "profile": [
+   1,
+   17,
+   137,
+   697,
+   2517,
+   6885
+  ],
+  "contains_one": true,
+  "low_basis_sha256": [
+   "f5c360b601269958e5ec70746392c9f95af763d1bc21481685fede96cdd39982",
+   "5a1d2e32049df51be5eb2571fc3e00caeaca813d99f4b92b4dad432119be1e57"
+  ],
+  "low_part_ranks": [
+   1277,
+   1240
+  ],
+  "part_ranks": [
+   3461,
+   3424
+  ],
+  "seconds": 4.7,
+  "madds": 12895334361,
+  "closed": true
+ },
+ "rows": [
+  {
+   "variant": "cpu",
+   "exit": 0,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "fixed_point": true,
+   "evictions": 0,
+   "dev_peak_live_mb": null,
+   "vd": {
+    "source": "checkpoint",
+    "ckpt_reason": "closure_done",
+    "closure_complete": true,
+    "basis_on": "device"
+   }
+  },
+  {
+   "variant": "fake-gpu-device-basis",
+   "exit": 0,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "fixed_point": true,
+   "evictions": 0,
+   "dev_peak_live_mb": 802,
+   "vd": {
+    "source": "checkpoint",
+    "ckpt_reason": "closure_done",
+    "closure_complete": true,
+    "basis_on": "device"
+   }
+  },
+  {
+   "variant": "fake-gpu-host-basis-budget",
+   "exit": 0,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "fixed_point": true,
+   "evictions": 243,
+   "dev_peak_live_mb": 75,
+   "vd": {
+    "source": "checkpoint",
+    "ckpt_reason": "closure_done",
+    "closure_complete": true,
+    "basis_on": "host"
+   }
+  },
+  {
+   "variant": "sigterm-resume",
+   "interrupted_exit_codes": [
+    75,
+    75
+   ],
+   "final_exit": 0,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "resumes": 2,
+   "fixed_point": true
+  }
+ ],
+ "all_ok": true,
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "533c92a4132b9d68002efff9335e2850e57927b753793825cf4a2905c4156042"
+ }
+}

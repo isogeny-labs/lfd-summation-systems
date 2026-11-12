@@ -1,0 +1,48 @@
+{
+ "base7": {
+  "dim": 829,
+  "profile": [
+   0,
+   0,
+   2,
+   115,
+   829
+  ],
+  "one_in": false
+ },
+ "k0=7,k=12": {
+  "rows": 2069,
+  "predicted": 2069,
+  "certificate": {
+   "dim": 2069,
+   "contains_generator_rows": true,
+   "closed": true,
+   "contains_one": false,
+   "profile": [
+    0,
+    0,
+    2,
+    135,
+    2069
+   ]
+  },
+  "compare_W_vs_V4": {
+   "rank_a": 2069,
+   "rank_b": 2069,
+   "rank_sum": 2069,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_dim": 829,
+  "stable_vs_base": {
+   "rank_a": 829,
+   "rank_b": 829,
+   "rank_sum": 829,
+   "equal": true,
+   "only_in_a": 0,
+   "only_in_b": 0
+  },
+  "stable_low_in_base": true
+ }
+}

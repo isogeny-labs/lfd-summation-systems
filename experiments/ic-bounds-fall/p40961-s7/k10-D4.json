@@ -1,0 +1,72 @@
+{
+ "prime": 40961,
+ "k": 10,
+ "D": 4,
+ "seed": 7,
+ "solutions": 26,
+ "monomials_le4": 6196,
+ "ideal_dimension_le4_if_onto": 6170,
+ "dim_V4": 1549,
+ "low_profile": [
+  0,
+  0,
+  2,
+  127,
+  1549
+ ],
+ "dim_V4_le3": 127,
+ "dim_V4_le2": 2,
+ "formula_4k2": 1549,
+ "formula_4k87": 127,
+ "matches_formulas": true,
+ "contains_one": false,
+ "closed_verified": true,
+ "rounds": 9,
+ "rank_history": [
+  211,
+  295,
+  540,
+  672,
+  891,
+  1046,
+  1219,
+  1413,
+  1526,
+  1549
+ ],
+ "generator_rows": 211,
+ "birth_histogram": {
+  "0": 211,
+  "1": 84,
+  "2": 245,
+  "3": 132,
+  "4": 219,
+  "5": 155,
+  "6": 173,
+  "7": 194,
+  "8": 113,
+  "9": 23
+ },
+ "low_birth_histogram": {
+  "0": 26,
+  "1": 24,
+  "2": 9,
+  "3": 16,
+  "4": 12,
+  "5": 13,
+  "6": 16,
+  "7": 9,
+  "8": 2,
+  "9": 0
+ },
+ "seconds": 10.7,
+ "basis_file": {
+  "file": "k10-D4.npz",
+  "sha256": "f0ab2d4634ab63783ce84d529be473fbd31c2e6e7313241cbebefb211d247300",
+  "basis_sha256": "a0436b682451f619fe8e944aeb9f4caaf56104e13eefde216a338ee3dd375a50",
+  "shape": [
+   1549,
+   6196
+  ]
+ }
+}

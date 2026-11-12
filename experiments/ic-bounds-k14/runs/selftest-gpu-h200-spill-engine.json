@@ -1,0 +1,258 @@
+{
+ "report": {
+  "device": "gpu",
+  "numpy": "2.5.4",
+  "python": "3.12.3",
+  "cupy": "14.2.0",
+  "cuda_runtime": 12090,
+  "cuda_driver": 13020,
+  "name": "NVIDIA H200",
+  "total_memory_gb": 139.8,
+  "free_memory_gb": 139.3,
+  "compute_capability": "9.0",
+  "cublas_version": 120902
+ },
+ "arith_device": {
+  "modp_cases": 3300108,
+  "modp_failures": 0,
+  "product_cases": 3,
+  "product_failures": 0,
+  "matmul_sub_failures": 0,
+  "product_max_exact": [
+   9006916015551172,
+   9006757547750787,
+   8725719093871369
+  ],
+  "guard_hits": 0,
+  "passed": true
+ },
+ "arith_cpu": {
+  "modp_cases": 3300108,
+  "modp_failures": 0,
+  "product_cases": 3,
+  "product_failures": 0,
+  "matmul_sub_failures": 0,
+  "product_max_exact": [
+   9006916015551172,
+   9006757547750787,
+   8725719093871369
+  ],
+  "guard_hits": 0,
+  "passed": true
+ },
+ "cases": [
+  {
+   "case": "unit-k6-D5",
+   "rank": 1586,
+   "profile": [
+    1,
+    13,
+    79,
+    299,
+    794,
+    1586
+   ],
+   "contains_one": true,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "126f88ebc88184be",
+    "0527370c25f10d1f"
+   ],
+   "seconds_cpu": 0.3,
+   "seconds_device": 4.0
+  },
+  {
+   "case": "unit-k6-D6",
+   "rank": 2510,
+   "profile": [
+    1,
+    13,
+    79,
+    299,
+    794,
+    1586,
+    2510
+   ],
+   "contains_one": true,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "8250bccce8cfeb13",
+    "783b2f9e75e71522"
+   ],
+   "seconds_cpu": 0.7,
+   "seconds_device": 5.5
+  },
+  {
+   "case": "unit-k7-D5",
+   "rank": 3473,
+   "profile": [
+    1,
+    15,
+    106,
+    470,
+    1471,
+    3473
+   ],
+   "contains_one": true,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "c2dbabeb09304e51",
+    "d98d9bee18090030"
+   ],
+   "seconds_cpu": 1.2,
+   "seconds_device": 7.6
+  },
+  {
+   "case": "unit-k7-D6",
+   "rank": 6476,
+   "profile": [
+    1,
+    15,
+    106,
+    470,
+    1471,
+    3473,
+    6476
+   ],
+   "contains_one": true,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "54a5d2ccfd9ce966",
+    "0835a149b84b2d34"
+   ],
+   "seconds_cpu": 3.7,
+   "seconds_device": 13.3
+  },
+  {
+   "case": "proper-k6-D5",
+   "rank": 1584,
+   "profile": [
+    0,
+    11,
+    77,
+    297,
+    792,
+    1584
+   ],
+   "contains_one": false,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "653448a619f1dd2c",
+    "8a2ba8a7fbf9e19d"
+   ],
+   "seconds_cpu": 0.3,
+   "seconds_device": 5.1
+  },
+  {
+   "case": "proper-k6-D6",
+   "rank": 2508,
+   "profile": [
+    0,
+    11,
+    77,
+    297,
+    792,
+    1584,
+    2508
+   ],
+   "contains_one": false,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "4111530e47a83425",
+    "83b0db79f53e4fea"
+   ],
+   "seconds_cpu": 0.7,
+   "seconds_device": 5.8
+  },
+  {
+   "case": "proper-k7-D5",
+   "rank": 3469,
+   "profile": [
+    0,
+    11,
+    102,
+    466,
+    1467,
+    3469
+   ],
+   "contains_one": false,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "23d4523919d476f3",
+    "19adca9ad6b4846d"
+   ],
+   "seconds_cpu": 1.1,
+   "seconds_device": 7.9
+  },
+  {
+   "case": "proper-k7-D6",
+   "rank": 6472,
+   "profile": [
+    0,
+    11,
+    102,
+    466,
+    1467,
+    3469,
+    6472
+   ],
+   "contains_one": false,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_cpu": true,
+   "closed_device": true,
+   "sha": [
+    "6ffba6a7ec1807f1",
+    "3c2359db5c622fd9"
+   ],
+   "seconds_cpu": 4.2,
+   "seconds_device": 16.0
+  },
+  {
+   "case": "spill-proper-k7-D6",
+   "rank": 6472,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_device": true,
+   "spills": 486,
+   "fetches": 486,
+   "d2h_mb": 175,
+   "h2d_mb": 175,
+   "seconds_device": 40.8
+  },
+  {
+   "case": "spill-unit-k7-D5",
+   "rank": 3473,
+   "cpu_eq_device": true,
+   "matches_reference": true,
+   "closed_device": true,
+   "spills": 63,
+   "fetches": 63,
+   "d2h_mb": 13,
+   "h2d_mb": 13,
+   "seconds_device": 11.3
+  }
+ ],
+ "passed": true
+}

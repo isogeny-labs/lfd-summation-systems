@@ -1,0 +1,13 @@
+{
+ "description": "Frozen rules for the exceptional locus at k = 7, p = 257 (fitted on the 9 training curves and on the p = 257, k = 6 line sweep; the cubic C1 is the unique cubic over F_257 through the 16 C1 points of plane/p257-crossk.json). Keys refer to scripts/ic_bounds_locus_classify.deviations. Written before any held-out curve was computed.",
+ "rules": {
+  "t0_j0": {"k": 7, "key": "V3", "expected_value": 52, "clauses": [["t=0", "a=0"]]},
+  "t0_j1728": {"k": 7, "key": "V4", "clauses": [["t=0", "b=0"]]},
+  "t0_other": {"k": 7, "key": "V4", "expected_value": 849, "clauses": [["t=0", "not(a=0)", "not(b=0)"]]},
+  "tangent_3t2+a": {"k": 7, "key": "V3", "expected_value": 40, "clauses": [["3t2+a=0", "not(t=0)"]]},
+  "order_two": {"k": 7, "key": "V4", "expected_value": 835, "clauses": [["rhs=0", "not(t=0)", "not(3t2+a=0)"]]},
+  "cubic_C1": {"k": 7, "key": "V4", "expected_value": 826,
+               "polynomial_AB": {"prime": 257, "coefficients": {"0,0": 147, "0,1": 120, "1,0": 134, "0,2": 100, "1,1": 49, "2,0": 118, "0,3": 138, "1,2": 238, "2,1": 149, "3,0": 1}}},
+  "polynomial_union": {"k": 7, "key": "any", "clauses": [["t=0"], ["3t2+a=0"], ["rhs=0"]]}
+ }
+}

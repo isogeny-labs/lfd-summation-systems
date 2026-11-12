@@ -1,0 +1,38 @@
+{
+ "k": 13,
+ "prime": 163841,
+ "a": 3,
+ "b": 0,
+ "seed": 21,
+ "want": false,
+ "unit_nonresidue": true,
+ "target": [
+  73730,
+  28291
+ ],
+ "target_x_is_square": false,
+ "attempts": 1,
+ "points": 0,
+ "Z": [],
+ "columns": {
+  "4": 17902,
+  "5": 83682,
+  "6": 313912
+ },
+ "Z_bound_2_2k": 16384,
+ "generator": {
+  "0,0": 9,
+  "0,1": 49143,
+  "0,2": 32361,
+  "1,0": 49143,
+  "1,1": 99113,
+  "1,2": 16381,
+  "2,0": 32361,
+  "2,1": 16381,
+  "2,2": 1
+ },
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2"
+ }
+}

@@ -1,0 +1,693 @@
+{
+ "counts": {
+  "systems": 2277,
+  "const": 502,
+  "affine": 1439,
+  "order_two": 336,
+  "proper_ideal": 1486,
+  "unit_nonconst": 289,
+  "all_bilinear_symmetric": true
+ },
+ "structure": {
+  "affine_m_eff_eq_n_minus_1": {
+   "False": 296,
+   "True": 1143
+  },
+  "affine_r_eff": {
+   "2k-1": 1047,
+   "other": 237,
+   "2k": 155
+  },
+  "affine_r_eff_2k_bases": {
+   "frobenius-invariant": 154,
+   "random-subspace": 1
+  },
+  "order_two_r_eff": {
+   "2k": 336
+  },
+  "order_two_m_eff_eq_n": {
+   "True": 301,
+   "False": 35
+  }
+ },
+ "lookup_laws": {
+  "|Z|": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 183,
+    "singleton_cells": 76,
+    "pure_cells": 143,
+    "satisfy": 1335,
+    "violate": 440
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 162,
+    "singleton_cells": 74,
+    "pure_cells": 146,
+    "satisfy": 1061,
+    "violate": 378
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 91,
+    "singleton_cells": 50,
+    "pure_cells": 89,
+    "satisfy": 334,
+    "violate": 2
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 182,
+    "singleton_cells": 76,
+    "pure_cells": 143,
+    "satisfy": 1153,
+    "violate": 333
+   }
+  },
+  "(k,|Z|)": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 384,
+    "singleton_cells": 173,
+    "pure_cells": 304,
+    "satisfy": 1495,
+    "violate": 280
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 339,
+    "singleton_cells": 165,
+    "pure_cells": 305,
+    "satisfy": 1268,
+    "violate": 171
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 165,
+    "singleton_cells": 103,
+    "pure_cells": 164,
+    "satisfy": 335,
+    "violate": 1
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 377,
+    "singleton_cells": 173,
+    "pure_cells": 303,
+    "satisfy": 1279,
+    "violate": 207
+   }
+  },
+  "n-k": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 10,
+    "singleton_cells": 0,
+    "pure_cells": 0,
+    "satisfy": 984,
+    "violate": 791
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 10,
+    "singleton_cells": 0,
+    "pure_cells": 0,
+    "satisfy": 800,
+    "violate": 639
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 9,
+    "singleton_cells": 0,
+    "pure_cells": 3,
+    "satisfy": 280,
+    "violate": 56
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 10,
+    "singleton_cells": 0,
+    "pure_cells": 0,
+    "satisfy": 801,
+    "violate": 685
+   }
+  },
+  "2k-n": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 18,
+    "singleton_cells": 0,
+    "pure_cells": 3,
+    "satisfy": 1429,
+    "violate": 346
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 18,
+    "singleton_cells": 0,
+    "pure_cells": 5,
+    "satisfy": 1214,
+    "violate": 225
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 16,
+    "singleton_cells": 1,
+    "pure_cells": 12,
+    "satisfy": 325,
+    "violate": 11
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 18,
+    "singleton_cells": 0,
+    "pure_cells": 3,
+    "satisfy": 1202,
+    "violate": 284
+   }
+  },
+  "(n,k)": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 54,
+    "singleton_cells": 0,
+    "pure_cells": 14,
+    "satisfy": 1509,
+    "violate": 266
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 54,
+    "singleton_cells": 0,
+    "pure_cells": 27,
+    "satisfy": 1307,
+    "violate": 132
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 47,
+    "singleton_cells": 2,
+    "pure_cells": 41,
+    "satisfy": 325,
+    "violate": 11
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 54,
+    "singleton_cells": 0,
+    "pure_cells": 14,
+    "satisfy": 1256,
+    "violate": 230
+   }
+  },
+  "(n,k,class)": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 101,
+    "singleton_cells": 2,
+    "pure_cells": 68,
+    "satisfy": 1632,
+    "violate": 143
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 54,
+    "singleton_cells": 0,
+    "pure_cells": 27,
+    "satisfy": 1307,
+    "violate": 132
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 47,
+    "singleton_cells": 2,
+    "pure_cells": 41,
+    "satisfy": 325,
+    "violate": 11
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 98,
+    "singleton_cells": 5,
+    "pure_cells": 65,
+    "satisfy": 1362,
+    "violate": 124
+   }
+  },
+  "(n,k,class,base_kind,curve)": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 314,
+    "singleton_cells": 35,
+    "pure_cells": 272,
+    "satisfy": 1686,
+    "violate": 89
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 177,
+    "singleton_cells": 7,
+    "pure_cells": 140,
+    "satisfy": 1355,
+    "violate": 84
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 137,
+    "singleton_cells": 28,
+    "pure_cells": 132,
+    "satisfy": 331,
+    "violate": 5
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 298,
+    "singleton_cells": 44,
+    "pure_cells": 259,
+    "satisfy": 1417,
+    "violate": 69
+   }
+  },
+  "e,class": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 27,
+    "singleton_cells": 0,
+    "pure_cells": 16,
+    "satisfy": 1534,
+    "violate": 241
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 15,
+    "singleton_cells": 0,
+    "pure_cells": 7,
+    "satisfy": 1208,
+    "violate": 231
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 12,
+    "singleton_cells": 0,
+    "pure_cells": 9,
+    "satisfy": 326,
+    "violate": 10
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 27,
+    "singleton_cells": 2,
+    "pure_cells": 16,
+    "satisfy": 1306,
+    "violate": 180
+   }
+  },
+  "k+e,class": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 39,
+    "singleton_cells": 0,
+    "pure_cells": 27,
+    "satisfy": 1633,
+    "violate": 142
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 21,
+    "singleton_cells": 0,
+    "pure_cells": 14,
+    "satisfy": 1315,
+    "violate": 124
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 18,
+    "singleton_cells": 0,
+    "pure_cells": 13,
+    "satisfy": 318,
+    "violate": 18
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 38,
+    "singleton_cells": 0,
+    "pure_cells": 26,
+    "satisfy": 1364,
+    "violate": 122
+   }
+  },
+  "(k,e,class)": {
+   "all_nonconst": {
+    "systems": 1775,
+    "cells": 98,
+    "singleton_cells": 3,
+    "pure_cells": 74,
+    "satisfy": 1661,
+    "violate": 114
+   },
+   "affine": {
+    "systems": 1439,
+    "cells": 53,
+    "singleton_cells": 1,
+    "pure_cells": 34,
+    "satisfy": 1335,
+    "violate": 104
+   },
+   "order_two": {
+    "systems": 336,
+    "cells": 45,
+    "singleton_cells": 2,
+    "pure_cells": 40,
+    "satisfy": 326,
+    "violate": 10
+   },
+   "proper_ideals": {
+    "systems": 1486,
+    "cells": 95,
+    "singleton_cells": 5,
+    "pure_cells": 71,
+    "satisfy": 1393,
+    "violate": 93
+   }
+  }
+ },
+ "closed_laws": {
+  "B: affine, LFD = 2+[k+e>=3]+[k+e>=9]+[k+e>=19]": {
+   "systems": 1439,
+   "satisfy": 1315,
+   "violate": 124,
+   "lfd_below_prediction": 93,
+   "lfd_above_prediction": 31
+  },
+  "A: affine, LFD = 2/3/4/5 for e<=-1 / <=3 / <=8 / >=9": {
+   "systems": 1439,
+   "satisfy": 1208,
+   "violate": 231,
+   "lfd_below_prediction": 29,
+   "lfd_above_prediction": 202
+  },
+  "B on order-two (same thresholds)": {
+   "systems": 336,
+   "satisfy": 200,
+   "violate": 136,
+   "lfd_below_prediction": 131,
+   "lfd_above_prediction": 5
+  },
+  "semi-regular crossover min{D: sum_{i<=D} c_i(r_eff,m_eff) <= |Z|}": {
+   "systems": 1775,
+   "satisfy": 35,
+   "violate": 1740,
+   "lfd_below_prediction": 256,
+   "lfd_above_prediction": 1484
+  },
+  "semi-regular d_reg(r_eff, m_eff)": {
+   "systems": 1775,
+   "satisfy": 598,
+   "violate": 1177,
+   "lfd_below_prediction": 1173,
+   "lfd_above_prediction": 4
+  },
+  "k=10 grid rule: LFD 5 iff |Z|>470 else <=4 (proper, k>=8; equality to 5 / <=4 checked)": {
+   "systems": 489,
+   "satisfy": 489,
+   "violate": 0
+  }
+ },
+ "bounds": {
+  "LFD <= min(k,l)+2 = k+2": {
+   "systems": 1775,
+   "satisfy": 1775,
+   "violate": 0,
+   "examples": []
+  },
+  "LFD <= semi-regular d_reg(r_eff, m_eff)": {
+   "systems": 1775,
+   "satisfy": 1771,
+   "violate": 4,
+   "examples": [
+    {
+     "n": 5,
+     "k": 2,
+     "Z": 4,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 5,
+     "k": 2,
+     "Z": 4,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 6,
+     "k": 2,
+     "Z": 4,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 9,
+     "k": 3,
+     "Z": 2,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    }
+   ]
+  },
+  "LFD <= max(2, floor(log2|Z|)+1) (proper)": {
+   "systems": 1486,
+   "satisfy": 1197,
+   "violate": 289,
+   "examples": [
+    {
+     "n": 5,
+     "k": 3,
+     "Z": 3,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 5,
+     "k": 3,
+     "Z": 2,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 5,
+     "k": 3,
+     "Z": 3,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 5,
+     "k": 3,
+     "Z": 2,
+     "lfd": 3,
+     "cls": "order-two",
+     "base": "random-subspace"
+    },
+    {
+     "n": 5,
+     "k": 3,
+     "Z": 2,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    }
+   ]
+  },
+  "LFD <= max(2, floor(log2|Z|)+2) (proper)": {
+   "systems": 1486,
+   "satisfy": 1458,
+   "violate": 28,
+   "examples": [
+    {
+     "n": 5,
+     "k": 4,
+     "Z": 1,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 5,
+     "k": 4,
+     "Z": 1,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 6,
+     "k": 3,
+     "Z": 1,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 6,
+     "k": 4,
+     "Z": 1,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    },
+    {
+     "n": 6,
+     "k": 4,
+     "Z": 1,
+     "lfd": 3,
+     "cls": "affine",
+     "base": "random-subspace"
+    }
+   ]
+  },
+  "LFD <= 4 when |Z| <= 470 (proper)": {
+   "systems": 1458,
+   "satisfy": 1458,
+   "violate": 0,
+   "examples": []
+  },
+  "LFD <= 4 when k+e <= 18 (nonconst)": {
+   "systems": 1747,
+   "satisfy": 1747,
+   "violate": 0,
+   "examples": []
+  },
+  "LFD <= 3 when k+e <= 7 (affine)": {
+   "systems": 690,
+   "satisfy": 690,
+   "violate": 0,
+   "examples": []
+  },
+  "certificate degree D* - LFD": {
+   "0": 1476,
+   "1": 8,
+   "3": 2
+  }
+ },
+ "precertificate_profile_vs_group_mode": {
+  "all": {
+   "equal": 1678,
+   "differ": 97
+  },
+  "by_class_base": {
+   "affine/random-subspace": {
+    "equal": 1011,
+    "differ": 60
+   },
+   "order-two/random-subspace": {
+    "equal": 231
+   },
+   "order-two/frobenius-invariant": {
+    "equal": 100,
+    "differ": 5
+   },
+   "affine/frobenius-invariant": {
+    "equal": 336,
+    "differ": 32
+   }
+  },
+  "groups": 187,
+  "singleton_groups": 40,
+  "groups_with_both_base_kinds": 32
+ },
+ "inverse_family": [
+  {
+   "n": 1,
+   "Z": 1,
+   "lfd": 3,
+   "k_plus_e": 2,
+   "B_pred_order_two_thresholds": 2
+  },
+  {
+   "n": 2,
+   "Z": 3,
+   "lfd": 3,
+   "k_plus_e": 4,
+   "B_pred_order_two_thresholds": 3
+  },
+  {
+   "n": 3,
+   "Z": 7,
+   "lfd": 3,
+   "k_plus_e": 6,
+   "B_pred_order_two_thresholds": 3
+  },
+  {
+   "n": 4,
+   "Z": 15,
+   "lfd": 3,
+   "k_plus_e": 8,
+   "B_pred_order_two_thresholds": 3
+  },
+  {
+   "n": 5,
+   "Z": 31,
+   "lfd": 3,
+   "k_plus_e": 10,
+   "B_pred_order_two_thresholds": 4
+  },
+  {
+   "n": 6,
+   "Z": 63,
+   "lfd": 4,
+   "k_plus_e": 12,
+   "B_pred_order_two_thresholds": 4
+  },
+  {
+   "n": 7,
+   "Z": 127,
+   "lfd": 3,
+   "k_plus_e": 14,
+   "B_pred_order_two_thresholds": 4
+  },
+  {
+   "n": 8,
+   "Z": 255,
+   "lfd": 5,
+   "k_plus_e": 16,
+   "B_pred_order_two_thresholds": 4
+  },
+  {
+   "n": 9,
+   "Z": 511,
+   "lfd": 3,
+   "k_plus_e": 18,
+   "B_pred_order_two_thresholds": 4
+  },
+  {
+   "n": 10,
+   "Z": 1023,
+   "lfd": 6,
+   "k_plus_e": 20,
+   "B_pred_order_two_thresholds": 5
+  },
+  {
+   "n": 11,
+   "Z": 2047,
+   "lfd": 3,
+   "k_plus_e": 22,
+   "B_pred_order_two_thresholds": 5
+  },
+  {
+   "n": 12,
+   "Z": 4095,
+   "lfd": 7,
+   "k_plus_e": 24,
+   "B_pred_order_two_thresholds": 5
+  }
+ ]
+}

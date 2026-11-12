@@ -1,0 +1,11 @@
+{
+ "description": "Frozen polynomial rules for the exceptional locus at k = 6, p = 193 (fitted on the 9 training curves; keys refer to scripts/ic_bounds_locus_classify.deviations). Written before any held-out curve was computed.",
+ "rules": {
+  "t0_j0": {"k": 6, "key": "V3", "expected_value": 44, "clauses": [["t=0", "a=0"]]},
+  "t0_j1728": {"k": 6, "key": "LFD", "expected_value": 4, "clauses": [["t=0", "b=0"]]},
+  "t0_other": {"k": 6, "key": "V4", "expected_value": 612, "clauses": [["t=0", "not(a=0)", "not(b=0)"]]},
+  "tangent_3t2+a": {"k": 6, "key": "V3", "expected_value": 34, "clauses": [["3t2+a=0", "not(t=0)"]]},
+  "order_two": {"k": 6, "key": "V4", "expected_value": 607, "clauses": [["rhs=0", "not(t=0)", "not(3t2+a=0)"]]},
+  "polynomial_union": {"k": 6, "key": "any", "clauses": [["t=0"], ["3t2+a=0"], ["rhs=0"]]}
+ }
+}

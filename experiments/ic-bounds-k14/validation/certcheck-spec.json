@@ -1,0 +1,95 @@
+{
+ "group": "spec",
+ "cases": [
+  {
+   "kind": "S_3",
+   "p": 12289,
+   "a": 1,
+   "b": 0,
+   "X": 9362,
+   "equals_reference": true,
+   "vanishing_tests": 60,
+   "nonvanishing": 0
+  },
+  {
+   "kind": "S_3",
+   "p": 15361,
+   "a": 4021,
+   "b": 9917,
+   "X": 4491,
+   "equals_reference": true,
+   "vanishing_tests": 60,
+   "nonvanishing": 0
+  },
+  {
+   "kind": "S_3",
+   "p": 65537,
+   "a": 4021,
+   "b": 9917,
+   "X": 1424,
+   "equals_reference": true,
+   "vanishing_tests": 60,
+   "nonvanishing": 0
+  },
+  {
+   "kind": "layout",
+   "k": 6,
+   "D": 4,
+   "columns": 794,
+   "layout_equal": true,
+   "projection_equal": true
+  },
+  {
+   "kind": "layout",
+   "k": 7,
+   "D": 5,
+   "columns": 3473,
+   "layout_equal": true,
+   "projection_equal": true
+  },
+  {
+   "kind": "layout",
+   "k": 8,
+   "D": 4,
+   "columns": 2517,
+   "layout_equal": true,
+   "projection_equal": true
+  },
+  {
+   "kind": "W cap M_<D is spanned by the low rows",
+   "k": 6,
+   "D": 4,
+   "rank_W": 605,
+   "rank_on_high_columns": 494,
+   "dim_W_cap_M_lt_D": 111,
+   "low_rows": 111,
+   "equal": true
+  },
+  {
+   "kind": "dense full-coordinate closure test agrees with the checker",
+   "k": 6,
+   "D": 4,
+   "low_rows_dense": 111,
+   "dense_failing_row_shift_pairs": {
+    "untouched": 0,
+    "corrupted": 782
+   },
+   "checker": [
+    {
+     "case": "untouched",
+     "checker_closed": true,
+     "checker_failures": 0
+    },
+    {
+     "case": "low-coefficient +1",
+     "checker_closed": false,
+     "checker_failures": 632
+    }
+   ],
+   "agree": true
+  }
+ ],
+ "passed": true,
+ "checker_sha256": "ff13b128b5ba252192a7231a856dad8fd20c1625fbd2545f2bb4e6c0e50a4970",
+ "harness_sha256": "02561b89a007f91edbbe44856e73dc5af2da21ee861f59acfaa0fbf7dc88997c"
+}

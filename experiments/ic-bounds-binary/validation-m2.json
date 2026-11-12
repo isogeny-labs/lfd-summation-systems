@@ -1,0 +1,308 @@
+{
+ "agree": 0,
+ "checks": [],
+ "engine": "experiments/ic-curve-validation/code/lfd_engine.py (ordinary ring, field equations as inputs)",
+ "engine_b": "csd.ic_dreg._mxl_closure (MutantXL closure of the full Boolean Macaulay matrix, run to a fixed point); compared rank by rank with the stored local_profile quotient ranks",
+ "mxl_agree": 6,
+ "mxl_checks": [
+  {
+   "agree": true,
+   "case_id": "e1063a2e12364efd2d15",
+   "checked_degrees": 5,
+   "family": "m2",
+   "k": 8,
+   "n": 11,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 26,
+     "rounds": 1,
+     "stored_rank": 26
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 386,
+     "rounds": 2,
+     "stored_rank": 386
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 2479,
+     "rounds": 2,
+     "stored_rank": 2479
+    }
+   ],
+   "seconds": 0.38,
+   "solutions": 38,
+   "stored_lfd": 4,
+   "variables": 16
+  },
+  {
+   "agree": true,
+   "case_id": "cb75f68ba72b569c8277",
+   "checked_degrees": 5,
+   "family": "m2",
+   "k": 8,
+   "n": 12,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 27,
+     "rounds": 1,
+     "stored_rank": 27
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 432,
+     "rounds": 3,
+     "stored_rank": 432
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 2503,
+     "rounds": 3,
+     "stored_rank": 2503
+    }
+   ],
+   "seconds": 0.45,
+   "solutions": 14,
+   "stored_lfd": 4,
+   "variables": 16
+  },
+  {
+   "agree": true,
+   "case_id": "63f467cdfb356231a064",
+   "checked_degrees": 5,
+   "family": "m2",
+   "k": 9,
+   "n": 14,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 31,
+     "rounds": 1,
+     "stored_rank": 31
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 575,
+     "rounds": 2,
+     "stored_rank": 575
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 4026,
+     "rounds": 2,
+     "stored_rank": 4026
+    }
+   ],
+   "seconds": 2.69,
+   "solutions": 22,
+   "stored_lfd": 4,
+   "variables": 18
+  },
+  {
+   "agree": true,
+   "case_id": "e60d1255fd16dc138641",
+   "checked_degrees": 5,
+   "family": "m2",
+   "k": 9,
+   "n": 14,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 31,
+     "rounds": 1,
+     "stored_rank": 31
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 575,
+     "rounds": 2,
+     "stored_rank": 575
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 4024,
+     "rounds": 2,
+     "stored_rank": 4024
+    }
+   ],
+   "seconds": 2.18,
+   "solutions": 24,
+   "stored_lfd": 4,
+   "variables": 18
+  },
+  {
+   "agree": true,
+   "case_id": "9b314cf88ae02535bb30",
+   "checked_degrees": 6,
+   "family": "m2",
+   "k": 10,
+   "n": 12,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 11,
+     "rounds": 0,
+     "stored_rank": 11
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 311,
+     "rounds": 1,
+     "stored_rank": 311
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 5291,
+     "rounds": 4,
+     "stored_rank": 5291
+    },
+    {
+     "D": 5,
+     "agree": true,
+     "mxl_rank": 21148,
+     "rounds": 3,
+     "stored_rank": 21148
+    }
+   ],
+   "seconds": 105.01,
+   "solutions": 552,
+   "stored_lfd": 5,
+   "variables": 20
+  },
+  {
+   "agree": true,
+   "case_id": "3c628c16df60a597f8b4",
+   "checked_degrees": 6,
+   "family": "m2",
+   "k": 10,
+   "n": 11,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 30,
+     "rounds": 1,
+     "stored_rank": 30
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 448,
+     "rounds": 2,
+     "stored_rank": 448
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 5445,
+     "rounds": 4,
+     "stored_rank": 5445
+    },
+    {
+     "D": 5,
+     "agree": true,
+     "mxl_rank": 21201,
+     "rounds": 3,
+     "stored_rank": 21201
+    }
+   ],
+   "seconds": 100.25,
+   "solutions": 499,
+   "stored_lfd": 5,
+   "variables": 20
+  }
+ ],
+ "mxl_sampled": 6,
+ "rows_rehashed": 0,
+ "sampled": 0
+}

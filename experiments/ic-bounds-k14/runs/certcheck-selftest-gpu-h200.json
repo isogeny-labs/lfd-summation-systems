@@ -1,0 +1,171 @@
+{
+ "arith": {
+  "cases": [
+   {
+    "kind": "modp",
+    "p": 12289,
+    "n": 6029,
+    "exact": true
+   },
+   {
+    "kind": "gemm",
+    "p": 12289,
+    "fill": "max",
+    "inner": 20007,
+    "max_inner": 59652323,
+    "exact": true
+   },
+   {
+    "kind": "gemm",
+    "p": 12289,
+    "fill": "rand",
+    "inner": 20007,
+    "max_inner": 59652323,
+    "exact": true
+   },
+   {
+    "kind": "modp",
+    "p": 65537,
+    "n": 6029,
+    "exact": true
+   },
+   {
+    "kind": "gemm",
+    "p": 65537,
+    "fill": "max",
+    "inner": 4103,
+    "max_inner": 2097151,
+    "exact": true
+   },
+   {
+    "kind": "gemm",
+    "p": 65537,
+    "fill": "rand",
+    "inner": 4103,
+    "max_inner": 2097151,
+    "exact": true
+   },
+   {
+    "kind": "modp",
+    "p": 16777213,
+    "n": 6029,
+    "exact": true
+   },
+   {
+    "kind": "gemm",
+    "p": 16777213,
+    "fill": "max",
+    "inner": 39,
+    "max_inner": 32,
+    "exact": true
+   },
+   {
+    "kind": "gemm",
+    "p": 16777213,
+    "fill": "rand",
+    "inner": 39,
+    "max_inner": 32,
+    "exact": true
+   }
+  ],
+  "passed": true
+ },
+ "pipeline": {
+  "cases": [
+   {
+    "split": true,
+    "shifts": "all",
+    "negative": null,
+    "closed": true,
+    "g_in_W": true,
+    "one_excluded": true,
+    "failures": 0,
+    "as_expected": true
+   },
+   {
+    "split": true,
+    "shifts": "block1",
+    "negative": null,
+    "closed": true,
+    "g_in_W": true,
+    "one_excluded": true,
+    "failures": 0,
+    "as_expected": true
+   },
+   {
+    "split": true,
+    "shifts": "all",
+    "negative": "flip-low",
+    "closed": false,
+    "g_in_W": false,
+    "one_excluded": true,
+    "failures": 16,
+    "as_expected": true
+   },
+   {
+    "split": true,
+    "shifts": "block1",
+    "negative": "flip-low",
+    "closed": false,
+    "g_in_W": false,
+    "one_excluded": true,
+    "failures": 8,
+    "as_expected": true
+   },
+   {
+    "split": true,
+    "shifts": "all",
+    "negative": "drop-low",
+    "closed": true,
+    "g_in_W": false,
+    "one_excluded": true,
+    "failures": 0,
+    "as_expected": true
+   },
+   {
+    "split": true,
+    "shifts": "block1",
+    "negative": "drop-low",
+    "closed": true,
+    "g_in_W": false,
+    "one_excluded": true,
+    "failures": 0,
+    "as_expected": true
+   },
+   {
+    "split": false,
+    "shifts": "all",
+    "negative": null,
+    "closed": true,
+    "g_in_W": true,
+    "one_excluded": true,
+    "failures": 0,
+    "as_expected": true
+   },
+   {
+    "split": false,
+    "shifts": "all",
+    "negative": "flip-low",
+    "closed": false,
+    "g_in_W": false,
+    "one_excluded": true,
+    "failures": 8,
+    "as_expected": true
+   },
+   {
+    "split": false,
+    "shifts": "all",
+    "negative": "drop-low",
+    "closed": true,
+    "g_in_W": false,
+    "one_excluded": true,
+    "failures": 0,
+    "as_expected": true
+   }
+  ],
+  "passed": true
+ },
+ "passed": true,
+ "device": "gpu",
+ "source_sha256": "ff13b128b5ba252192a7231a856dad8fd20c1625fbd2545f2bb4e6c0e50a4970"
+}

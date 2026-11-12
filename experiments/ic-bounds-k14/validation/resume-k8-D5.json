@@ -1,0 +1,64 @@
+{
+ "extra": "",
+ "k": 8,
+ "D": 5,
+ "device": "cpu",
+ "rows": {
+  "uninterrupted": {
+   "match": true,
+   "seconds": 8.5
+  },
+  "sigterm_resume": {
+   "match": true,
+   "same_rounds": true,
+   "same_madds": false,
+   "exit_codes_of_interrupted_runs": [
+    75,
+    75
+   ],
+   "final_exit": 0,
+   "resumes": 2,
+   "closed": true,
+   "repairs": 0,
+   "ckpt_left": [
+    "ck-00000003"
+   ]
+  },
+  "sigterm_in_gens": {
+   "match": true,
+   "same_rounds": true,
+   "interrupted_exit": 75,
+   "final_exit": 0,
+   "resumes": 1,
+   "closed": true,
+   "signal_sent": true
+  },
+  "sigterm_in_sweep_full": {
+   "match": true,
+   "same_rounds": true,
+   "interrupted_exit": 75,
+   "final_exit": 0,
+   "resumes": 1,
+   "closed": true,
+   "signal_sent": true
+  },
+  "kill9_during_checkpoint": {
+   "match": true,
+   "same_rounds": true,
+   "killed_during_second_checkpoint": true,
+   "ckpt_dir_after_kill": [
+    ".tmp-00000002",
+    "ck-00000001"
+   ],
+   "final_exit": 0,
+   "resumes": 1,
+   "closed": true
+  }
+ },
+ "all_match": true,
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "validate": "516a5200a6561abfd8b05d32fa580e641a7c3f95b0e3e76a0c4718cee74e8f7e"
+ }
+}

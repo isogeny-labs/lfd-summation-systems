@@ -1,0 +1,24 @@
+{
+ "deg_per_var": [
+  4,
+  4,
+  4,
+  4
+ ],
+ "total_degree_in_x": 12,
+ "terms_in_x_generic": 439,
+ "symmetric": true,
+ "c333": "-8*(3*a*t + 6*b + 5*t**3)",
+ "c333_identity": true,
+ "x3^4_identity": true,
+ "max_exp_per_var_at_x4=t": [
+  4,
+  4,
+  4
+ ],
+ "s4_coeffs_sha256": "a0e248de11eb31da3c71dbadeafde15fc59486d2baa7e54bd4a4d4c829f1ba99",
+ "s4_terms_in_abx": 540,
+ "neg_control_nonzero": 100,
+ "decompositions_checked": 100,
+ "decompositions_vanish": 100
+}

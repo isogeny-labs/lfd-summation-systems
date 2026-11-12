@@ -1,0 +1,262 @@
+{
+ "agree": 0,
+ "checks": [],
+ "engine": "experiments/ic-curve-validation/code/lfd_engine.py (ordinary ring, field equations as inputs)",
+ "engine_b": "csd.ic_dreg._mxl_closure (MutantXL closure of the full Boolean Macaulay matrix, run to a fixed point); compared rank by rank with the stored local_profile quotient ranks",
+ "mxl_agree": 4,
+ "mxl_checks": [
+  {
+   "agree": true,
+   "case_id": "f2f3d3cf2b5f395f2c1a",
+   "checked_degrees": 7,
+   "family": "m3-direct",
+   "k": 2,
+   "n": 6,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 5,
+     "agree": true,
+     "mxl_rank": 1,
+     "rounds": 0,
+     "stored_rank": 1
+    },
+    {
+     "D": 6,
+     "agree": true,
+     "mxl_rank": 55,
+     "rounds": 3,
+     "stored_rank": 55
+    }
+   ],
+   "seconds": 0.01,
+   "solutions": 9,
+   "stored_lfd": 6,
+   "variables": 6
+  },
+  {
+   "agree": true,
+   "case_id": "0a0f2d841b8564f0ab1f",
+   "checked_degrees": 8,
+   "family": "m3-direct",
+   "k": 3,
+   "n": 7,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 5,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 6,
+     "agree": true,
+     "mxl_rank": 7,
+     "rounds": 0,
+     "stored_rank": 7
+    },
+    {
+     "D": 7,
+     "agree": true,
+     "mxl_rank": 490,
+     "rounds": 4,
+     "stored_rank": 490
+    }
+   ],
+   "seconds": 0.1,
+   "solutions": 12,
+   "stored_lfd": 7,
+   "variables": 9
+  },
+  {
+   "agree": true,
+   "case_id": "cb50c064174f73899749",
+   "checked_degrees": 8,
+   "family": "m3-direct",
+   "k": 4,
+   "n": 5,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 5,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 6,
+     "agree": true,
+     "mxl_rank": 5,
+     "rounds": 0,
+     "stored_rank": 5
+    },
+    {
+     "D": 7,
+     "agree": true,
+     "mxl_rank": 3150,
+     "rounds": 5,
+     "stored_rank": 3150
+    }
+   ],
+   "seconds": 1.58,
+   "solutions": 152,
+   "stored_lfd": 7,
+   "variables": 12
+  },
+  {
+   "agree": true,
+   "case_id": "ca0e5054aca3523b4209",
+   "checked_degrees": 8,
+   "family": "m3-direct",
+   "k": 5,
+   "n": 9,
+   "per_degree": [
+    {
+     "D": 0,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 1,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 2,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 3,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 4,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 5,
+     "agree": true,
+     "mxl_rank": 0,
+     "stored_rank": 0
+    },
+    {
+     "D": 6,
+     "agree": true,
+     "mxl_rank": 9,
+     "rounds": 0,
+     "stored_rank": 9
+    },
+    {
+     "D": 7,
+     "agree": true,
+     "mxl_rank": 16246,
+     "rounds": 5,
+     "stored_rank": 16246
+    }
+   ],
+   "seconds": 88.96,
+   "solutions": 138,
+   "stored_lfd": 7,
+   "variables": 15
+  }
+ ],
+ "mxl_sampled": 4,
+ "rows_rehashed": 0,
+ "sampled": 0
+}

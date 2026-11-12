@@ -1,0 +1,187 @@
+{
+ "started": "2026-11-11T22:05:45Z",
+ "steps": [
+  {
+   "name": "selftest-engine",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/out/selftest-gpu.json"
+   ],
+   "start": "2026-11-11T22:05:45Z",
+   "rc": 0,
+   "end": "2026-11-11T22:07:37Z"
+  },
+  {
+   "name": "selftest-lift",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_lift_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/out/lift-selftest-gpu.json"
+   ],
+   "start": "2026-11-11T22:07:37Z",
+   "rc": 0,
+   "end": "2026-11-11T22:11:26Z"
+  },
+  {
+   "name": "unit-p163841-k14-D6",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_big_run.py",
+    "closure",
+    "--instance",
+    "/workspace/in/unit-p163841-a3-s21-k14.json",
+    "--D",
+    "6",
+    "--device",
+    "gpu",
+    "--dev-gb",
+    "105",
+    "--work-gb",
+    "20",
+    "--tile-mb",
+    "1024",
+    "--batch",
+    "1024",
+    "--threads",
+    "8",
+    "--ckpt",
+    "/workspace/ckpt/unit-p163841-k14-D6",
+    "--ckpt-minutes",
+    "100000",
+    "--resume",
+    "--status",
+    "/workspace/out/unit-p163841-k14-D6.status.json",
+    "--out",
+    "/workspace/out/unit-p163841-k14-D6.json"
+   ],
+   "start": "2026-11-11T22:11:26Z",
+   "rc": 0,
+   "end": "2026-11-12T00:02:01Z"
+  },
+  {
+   "name": "lift-unit-p163841-k14-try1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_lift_run.py",
+    "lift",
+    "--ckpt",
+    "/workspace/ckpt/unit-p163841-k14-D6",
+    "--instance",
+    "/workspace/in/unit-p163841-a3-s21-k14.json",
+    "--device",
+    "gpu",
+    "--basis-on",
+    "host",
+    "--dev-gb",
+    "130",
+    "--work-gb",
+    "16",
+    "--lift-ckpt",
+    "/workspace/ckpt/unit-p163841-k14-D6-lift1",
+    "--ckpt-minutes",
+    "20",
+    "--resume",
+    "--status",
+    "/workspace/out/lift-unit-p163841-k14-D6to7.status.json",
+    "--out",
+    "/workspace/out/lift-unit-p163841-k14-D6to7.json"
+   ],
+   "start": "2026-11-12T00:02:01Z",
+   "rc": 0,
+   "end": "2026-11-12T00:16:25Z"
+  },
+  {
+   "name": "certcheck-unit-p163841-k14",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_cert_check.py",
+    "--device",
+    "gpu",
+    "--shifts",
+    "all",
+    "--instance",
+    "/workspace/in/unit-p163841-a3-s21-k14.json",
+    "--ckpt",
+    "/workspace/ckpt/unit-p163841-k14-D6",
+    "--D",
+    "6",
+    "--engine-record",
+    "/workspace/out/unit-p163841-k14-D6.json",
+    "--work-gb",
+    "45",
+    "--row-chunk",
+    "4096",
+    "--progress-seconds",
+    "30",
+    "--status",
+    "/workspace/out/certcheck-unit-p163841-k14-D6.status.json",
+    "--out",
+    "/workspace/out/certcheck-unit-p163841-k14-D6.json"
+   ],
+   "start": "2026-11-12T00:16:25Z",
+   "rc": 0,
+   "end": "2026-11-12T00:25:14Z"
+  }
+ ],
+ "readings": {
+  "unit-p163841-k14": {
+   "closure": {
+    "status": "done",
+    "closed": true,
+    "contains_one": false,
+    "rank": 448922,
+    "profile": [
+     0,
+     0,
+     2,
+     154,
+     4451,
+     73587,
+     448922
+    ],
+    "part_ranks": [
+     224688,
+     224234
+    ],
+    "repairs": 0,
+    "seconds": 6634.0,
+    "rc": 0
+   },
+   "lift": {
+    "rc": 0,
+    "status": "done",
+    "fixed_point": true,
+    "dim_VD1": 1683218,
+    "contains_one": true,
+    "rounds": 3,
+    "guard_hits": 0,
+    "seconds": 677.2,
+    "ideal_bound": 1683218,
+    "within_ideal": true,
+    "equals_ideal_part": true
+   },
+   "certcheck": {
+    "rc": 0,
+    "all_true": true,
+    "certificate_valid": true,
+    "one_excluded": true
+   }
+  }
+ },
+ "finished": true,
+ "ended": "2026-11-12T00:25:14Z"
+}

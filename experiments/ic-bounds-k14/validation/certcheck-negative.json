@@ -1,0 +1,786 @@
+{
+ "group": "negative",
+ "cases": [
+  {
+   "name": "untouched-control",
+   "note": "unmodified basis from the engine is accepted",
+   "results": {
+    "all": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 84
+    },
+    "block1": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 1904,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "block-1 only (uses sigma W = W)",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.2,
+     "maxrss_mb": 84
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "low-row-coefficient-changed",
+   "note": "part 0, row 170 (pivot weight 3), free column 978: +1 mod p",
+   "results": {
+    "all": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "cfa023f9860bd8db7a88395d9a1c35cdc2b165c887a66ee9cbc45036453ecd22",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 640,
+     "failures_by_direction": {
+      "sym->sym": 328,
+      "anti->sym": 296,
+      "sym->anti": 16,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "closure: 640 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 84
+    },
+    "block1": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "cfa023f9860bd8db7a88395d9a1c35cdc2b165c887a66ee9cbc45036453ecd22",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 1904,
+     "failures": 320,
+     "failures_by_direction": {
+      "sym->sym": 164,
+      "anti->sym": 148,
+      "sym->anti": 8,
+      "anti->anti": 0
+     },
+     "shift_mode": "block-1 only (uses sigma W = W)",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "closure: 320 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.1,
+     "maxrss_mb": 84
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "high-row-coefficient-changed-closure-only",
+   "note": "part 0, row 1 (pivot column 6, weight 4), free column 224: +1 mod p; g and m*g only involve weights <= 3 < D so they stay in W; only the shift of some low row lands on this pivot. rows tried before this one: 0",
+   "results": {
+    "all": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "c02e996af501540f1d70e12516cef225866f6def06c992204f7774f7113a4132",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 16,
+     "failures_by_direction": {
+      "sym->sym": 8,
+      "anti->sym": 8,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "closure: 16 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 84
+    },
+    "block1": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "c02e996af501540f1d70e12516cef225866f6def06c992204f7774f7113a4132",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 1904,
+     "failures": 8,
+     "failures_by_direction": {
+      "sym->sym": 4,
+      "anti->sym": 4,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "block-1 only (uses sigma W = W)",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "closure: 8 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.2,
+     "maxrss_mb": 84
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "high-row-coefficient-harmless",
+   "note": "no harmless high row among the first 200: every high row of part 0 is hit",
+   "passed": true
+  },
+  {
+   "name": "low-row-removed-all-tested",
+   "tested": 119,
+   "rejected": 119,
+   "format_invalid": 0,
+   "rejected_by_closure_only": 117,
+   "rejected_by_g_only": 0,
+   "rejected_by_both": 2,
+   "accepted": [],
+   "note": "each low row of the first 80 of each part removed in turn; an accepted removal means the removed row was redundant (the smaller space is still closed and contains g), which is a valid smaller certificate",
+   "passed": true
+  },
+  {
+   "name": "low-row-removed-closure-only",
+   "note": "part 0, row 0 removed; format valid, g still in W, rejected by the closure check",
+   "results": {
+    "all": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1060,
+     "part_ranks": [
+      541,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      118,
+      1060
+     ],
+     "basis_sha256": [
+      "50a3d3e185102ed49fb1adaf6f882c3461916feca1c6a9b5dc21fd914c961b3c",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 118,
+     "triples_checked": 3776,
+     "failures": 214,
+     "failures_by_direction": {
+      "sym->sym": 112,
+      "anti->sym": 102,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": false,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "some m*g (weight m <= 1) not in W",
+      "closure: 214 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 84
+    },
+    "block1": {
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1060,
+     "part_ranks": [
+      541,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      118,
+      1060
+     ],
+     "basis_sha256": [
+      "50a3d3e185102ed49fb1adaf6f882c3461916feca1c6a9b5dc21fd914c961b3c",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 118,
+     "triples_checked": 1888,
+     "failures": 107,
+     "failures_by_direction": {
+      "sym->sym": 56,
+      "anti->sym": 51,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "block-1 only (uses sigma W = W)",
+     "generator_multiples_in_W": false,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "some m*g (weight m <= 1) not in W",
+      "closure: 107 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.1,
+     "maxrss_mb": 84
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "interrupted-closure",
+   "note": "61 checkpoints kept (35 taken inside the closure phase); first, middle, last shown; all 35 checked",
+   "inside_closure_phase": 35,
+   "rejected": 33,
+   "accepted": 2,
+   "accepted_checkpoints_equal_final_basis": true,
+   "results": [
+    {
+     "checkpoint": "ck-00000002",
+     "state": [
+      "timer",
+      "closure",
+      false
+     ],
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 181,
+     "part_ranks": [
+      95,
+      86
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      41,
+      181
+     ],
+     "basis_sha256": [
+      "5c257955c13971a8e6d71d6ab0bd5141b309a1217ad2458e003124c5f8b918b7",
+      "aa43f76ef395f40829af6894af2211af5ce614f5f60ce4de9c282e82a5a90f3a"
+     ],
+     "rows_checked": 41,
+     "triples_checked": 1312,
+     "failures": 740,
+     "failures_by_direction": {
+      "sym->sym": 176,
+      "anti->sym": 204,
+      "sym->anti": 166,
+      "anti->anti": 194
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "closure: 740 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 84
+    },
+    {
+     "checkpoint": "ck-00000019",
+     "state": [
+      "timer",
+      "closure",
+      false
+     ],
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": false,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 793,
+     "part_ranks": [
+      399,
+      394
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      103,
+      793
+     ],
+     "basis_sha256": [
+      "2d9b607b55e3b1cb2d895d8adf92bb5810f23399807463193923235dc98a3b0b",
+      "1ecc070c0c04768a7c18504a35f43443fbeeb133a56ae14ba3b836783a922966"
+     ],
+     "rows_checked": 103,
+     "triples_checked": 3296,
+     "failures": 1014,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 638,
+      "sym->anti": 0,
+      "anti->anti": 376
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "closure: 1014 (row, shift, target) triples leave W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 84
+    },
+    {
+     "checkpoint": "ck-00000036",
+     "state": [
+      "timer",
+      "closure",
+      false
+     ],
+     "format_ok": true,
+     "g_in_W": true,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": true,
+     "all_true": true,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": true,
+     "rref_leading_column_ok": true,
+     "reasons": [],
+     "engine_record_equal": null,
+     "seconds": 0.3,
+     "maxrss_mb": 84
+    }
+   ],
+   "passed": true
+  },
+  {
+   "name": "engine-withheld-row-closure-done",
+   "note": "engine test hook --withhold 0:3 --gens g --no-repair; the checkpoint is the closure_done one",
+   "engine_rc": 0,
+   "checker": {
+    "format_ok": true,
+    "g_in_W": true,
+    "closed": true,
+    "one_excluded": true,
+    "certificate_valid": true,
+    "all_true": true,
+    "dimension": 1061,
+    "part_ranks": [
+     542,
+     519
+    ],
+    "profile": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "basis_sha256": [
+     "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+     "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+    ],
+    "rows_checked": 119,
+    "triples_checked": 3808,
+    "failures": 0,
+    "failures_by_direction": {
+     "sym->sym": 0,
+     "anti->sym": 0,
+     "sym->anti": 0,
+     "anti->anti": 0
+    },
+    "shift_mode": "all 2k shifts",
+    "generator_multiples_in_W": true,
+    "rref_leading_column_ok": true,
+    "reasons": [],
+    "engine_record_equal": null,
+    "seconds": 0.3,
+    "maxrss_mb": 84
+   },
+   "passed": true
+  },
+  {
+   "name": "g-coefficient-changed",
+   "note": "instance generator dict replaced; the basis was computed for the original g, so g is not in W and the dict disagrees with S_3(a, b, target[0])",
+   "results": {
+    "all": {
+     "format_ok": true,
+     "g_in_W": false,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": false,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "generator:instance dict differs from the formula S_3(a, b, target[0])",
+      "g not in W",
+      "some m*g (weight m <= 1) not in W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.2,
+     "maxrss_mb": 84,
+     "generator_equals_formula": false
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "g-other-target",
+   "note": "instance generator dict replaced; the basis was computed for the original g, so g is not in W and the dict disagrees with S_3(a, b, target[0])",
+   "results": {
+    "all": {
+     "format_ok": true,
+     "g_in_W": false,
+     "closed": true,
+     "one_excluded": true,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": 1061,
+     "part_ranks": [
+      542,
+      519
+     ],
+     "profile": [
+      0,
+      0,
+      2,
+      119,
+      1061
+     ],
+     "basis_sha256": [
+      "6cc54628772a8eae8f87e2ba815fe92c7f8239920ab189aea49b82bce4492aef",
+      "9f185bf061243a74f001c522388fb38b92a9fe7cc53ca38041c4cb295990d0d1"
+     ],
+     "rows_checked": 119,
+     "triples_checked": 3808,
+     "failures": 0,
+     "failures_by_direction": {
+      "sym->sym": 0,
+      "anti->sym": 0,
+      "sym->anti": 0,
+      "anti->anti": 0
+     },
+     "shift_mode": "all 2k shifts",
+     "generator_multiples_in_W": false,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "generator:instance dict differs from the formula S_3(a, b, target[0])",
+      "g not in W",
+      "some m*g (weight m <= 1) not in W"
+     ],
+     "engine_record_equal": null,
+     "seconds": 0.2,
+     "maxrss_mb": 84,
+     "generator_equals_formula": false
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "tile-byte-flipped",
+   "note": "sha256 of a tile differs from the manifest",
+   "results": {
+    "all": {
+     "format_ok": false,
+     "g_in_W": null,
+     "closed": null,
+     "one_excluded": null,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": null,
+     "part_ranks": null,
+     "profile": null,
+     "basis_sha256": null,
+     "rows_checked": null,
+     "triples_checked": null,
+     "failures": null,
+     "failures_by_direction": null,
+     "shift_mode": null,
+     "generator_multiples_in_W": null,
+     "rref_leading_column_ok": null,
+     "reasons": [
+      "format:p0_t00000.npy: sha256 mismatch"
+     ],
+     "engine_record_equal": null,
+     "seconds": null,
+     "maxrss_mb": null
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "duplicate-pivot",
+   "note": "two rows with the same pivot column",
+   "results": {
+    "all": {
+     "format_ok": false,
+     "g_in_W": null,
+     "closed": null,
+     "one_excluded": null,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": null,
+     "part_ranks": null,
+     "profile": null,
+     "basis_sha256": null,
+     "rows_checked": null,
+     "triples_checked": null,
+     "failures": null,
+     "failures_by_direction": null,
+     "shift_mode": null,
+     "generator_multiples_in_W": null,
+     "rref_leading_column_ok": null,
+     "reasons": [
+      "format:part 0: pivot columns not distinct"
+     ],
+     "engine_record_equal": null,
+     "seconds": null,
+     "maxrss_mb": null
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "coefficient-equal-p",
+   "note": "an entry equal to p (outside [0, p))",
+   "results": {
+    "all": {
+     "format_ok": false,
+     "g_in_W": null,
+     "closed": null,
+     "one_excluded": null,
+     "certificate_valid": false,
+     "all_true": false,
+     "dimension": null,
+     "part_ranks": null,
+     "profile": null,
+     "basis_sha256": null,
+     "rows_checked": null,
+     "triples_checked": null,
+     "failures": null,
+     "failures_by_direction": null,
+     "shift_mode": null,
+     "generator_multiples_in_W": null,
+     "rref_leading_column_ok": true,
+     "reasons": [
+      "format:entries_in_0_p_and_integral"
+     ],
+     "engine_record_equal": null,
+     "seconds": null,
+     "maxrss_mb": null
+    }
+   },
+   "passed": true
+  }
+ ],
+ "passed": true,
+ "checker_sha256": "ff13b128b5ba252192a7231a856dad8fd20c1625fbd2545f2bb4e6c0e50a4970",
+ "harness_sha256": "02561b89a007f91edbbe44856e73dc5af2da21ee861f59acfaa0fbf7dc88997c"
+}

@@ -1,0 +1,1041 @@
+{
+ "prime": 40961,
+ "seed": 7,
+ "k0": 7,
+ "kmax": 10,
+ "instance": {
+  "prime": 40961,
+  "a": 21223,
+  "b": 9887,
+  "target": [
+   4748,
+   524
+  ],
+  "target_order": 40817,
+  "curve_order": 40817,
+  "instance_hash": "a032fc6f6f07d309f81bf9de6e971c77a0c903b8596c6ece13b2843ef5e8fd02"
+ },
+ "dimensions": {
+  "6": {
+   "dim_V4": 605,
+   "low_profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "formula": 605,
+   "formula_low": 111,
+   "birth_histogram": {
+    "6": 69,
+    "8": 41,
+    "7": 66,
+    "5": 59,
+    "2": 89,
+    "4": 91,
+    "0": 79,
+    "9": 7,
+    "3": 60,
+    "1": 44
+   },
+   "low_birth_histogram": {
+    "8": 2,
+    "7": 9,
+    "6": 16,
+    "5": 13,
+    "1": 16,
+    "0": 18,
+    "4": 12,
+    "3": 16,
+    "2": 9
+   }
+  },
+  "7": {
+   "dim_V4": 829,
+   "low_profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "formula": 829,
+   "formula_low": 115,
+   "birth_histogram": {
+    "9": 11,
+    "8": 59,
+    "7": 98,
+    "6": 95,
+    "2": 122,
+    "0": 106,
+    "5": 83,
+    "4": 123,
+    "3": 78,
+    "1": 54
+   },
+   "low_birth_histogram": {
+    "1": 18,
+    "0": 20,
+    "8": 2,
+    "7": 9,
+    "6": 16,
+    "5": 13,
+    "4": 12,
+    "3": 16,
+    "2": 9
+   }
+  },
+  "8": {
+   "dim_V4": 1061,
+   "low_profile": [
+    0,
+    0,
+    2,
+    119,
+    1061
+   ],
+   "formula": 1061,
+   "formula_low": 119,
+   "birth_histogram": {
+    "2": 159,
+    "0": 137,
+    "9": 15,
+    "8": 77,
+    "7": 130,
+    "6": 121,
+    "5": 107,
+    "4": 155,
+    "3": 96,
+    "1": 64
+   },
+   "low_birth_histogram": {
+    "1": 20,
+    "0": 22,
+    "8": 2,
+    "7": 9,
+    "6": 16,
+    "5": 13,
+    "4": 12,
+    "3": 16,
+    "2": 9
+   }
+  },
+  "9": {
+   "dim_V4": 1301,
+   "low_profile": [
+    0,
+    0,
+    2,
+    123,
+    1301
+   ],
+   "formula": 1301,
+   "formula_low": 123,
+   "birth_histogram": {
+    "2": 200,
+    "0": 172,
+    "9": 19,
+    "8": 95,
+    "7": 162,
+    "6": 147,
+    "5": 131,
+    "4": 187,
+    "3": 114,
+    "1": 74
+   },
+   "low_birth_histogram": {
+    "1": 22,
+    "0": 24,
+    "8": 2,
+    "7": 9,
+    "6": 16,
+    "5": 13,
+    "4": 12,
+    "3": 16,
+    "2": 9
+   }
+  },
+  "10": {
+   "dim_V4": 1549,
+   "low_profile": [
+    0,
+    0,
+    2,
+    127,
+    1549
+   ],
+   "formula": 1549,
+   "formula_low": 127,
+   "birth_histogram": {
+    "2": 245,
+    "0": 211,
+    "9": 23,
+    "8": 113,
+    "7": 194,
+    "6": 173,
+    "5": 155,
+    "4": 219,
+    "3": 132,
+    "1": 84
+   },
+   "low_birth_histogram": {
+    "1": 24,
+    "0": 26,
+    "8": 2,
+    "7": 9,
+    "6": 16,
+    "5": 13,
+    "4": 12,
+    "3": 16,
+    "2": 9
+   }
+  }
+ },
+ "base": {
+  "k0": 7,
+  "dim": 829,
+  "low_profile": [
+   0,
+   0,
+   2,
+   115,
+   829
+  ],
+  "contains_one": false,
+  "basis_sha256": "4f42dad17ef7d685c01cb1733fd62084d04b5ca3f07cd1940801271346c08546"
+ },
+ "free_extension_from_k0": {
+  "7": {
+   "rows": 829,
+   "predicted_dim": 829,
+   "rows_by_high_weight": {
+    "0": 829
+   },
+   "equals_V4": {
+    "rank_a": 829,
+    "rank_b": 829,
+    "rank_sum": 829,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "certificate": {
+    "dim": 829,
+    "contains_generator_rows": true,
+    "closed": true,
+    "contains_one": false,
+    "certifies_one_not_in_VD": true
+   },
+   "stable_low_part_equals_base": null,
+   "certificate_seconds": 0.1
+  },
+  "8": {
+   "rows": 1061,
+   "predicted_dim": 1061,
+   "rows_by_high_weight": {
+    "0": 829,
+    "1": 230,
+    "2": 2
+   },
+   "equals_V4": {
+    "rank_a": 1061,
+    "rank_b": 1061,
+    "rank_sum": 1061,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "certificate": {
+    "dim": 1061,
+    "contains_generator_rows": true,
+    "closed": true,
+    "contains_one": false,
+    "certifies_one_not_in_VD": true
+   },
+   "stable_low_part_equals_base": {
+    "rank_a": 829,
+    "rank_b": 829,
+    "rank_sum": 829,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "certificate_seconds": 0.3
+  },
+  "9": {
+   "rows": 1301,
+   "predicted_dim": 1301,
+   "rows_by_high_weight": {
+    "0": 829,
+    "1": 460,
+    "2": 12
+   },
+   "equals_V4": {
+    "rank_a": 1301,
+    "rank_b": 1301,
+    "rank_sum": 1301,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "certificate": {
+    "dim": 1301,
+    "contains_generator_rows": true,
+    "closed": true,
+    "contains_one": false,
+    "certifies_one_not_in_VD": true
+   },
+   "stable_low_part_equals_base": {
+    "rank_a": 829,
+    "rank_b": 829,
+    "rank_sum": 829,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "certificate_seconds": 0.5
+  },
+  "10": {
+   "rows": 1549,
+   "predicted_dim": 1549,
+   "rows_by_high_weight": {
+    "0": 829,
+    "1": 690,
+    "2": 30
+   },
+   "equals_V4": {
+    "rank_a": 1549,
+    "rank_b": 1549,
+    "rank_sum": 1549,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "certificate": {
+    "dim": 1549,
+    "contains_generator_rows": true,
+    "closed": true,
+    "contains_one": false,
+    "certifies_one_not_in_VD": true
+   },
+   "stable_low_part_equals_base": {
+    "rank_a": 829,
+    "rank_b": 829,
+    "rank_sum": 829,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "certificate_seconds": 1.1
+  }
+ },
+ "free_extension_from_k0_6_fails": {
+  "7": {
+   "free_dim": 829,
+   "V4_dim": 829,
+   "sum_dim": 871,
+   "dims_only_in_free": 42,
+   "dims_only_in_V4": 42,
+   "stable_low_part_dim": 563,
+   "stable_low_part_in_V4_6": true,
+   "V4_6_minus_stable": 42,
+   "certificate": {
+    "dim": 829,
+    "contains_generator_rows": true,
+    "closed": false,
+    "contains_one": false,
+    "certifies_one_not_in_VD": false
+   }
+  },
+  "8": {
+   "free_dim": 1061,
+   "V4_dim": 1061,
+   "sum_dim": 1103,
+   "dims_only_in_free": 42,
+   "dims_only_in_V4": 42,
+   "stable_low_part_dim": 563,
+   "stable_low_part_in_V4_6": true,
+   "V4_6_minus_stable": 42,
+   "certificate": {
+    "dim": 1061,
+    "contains_generator_rows": true,
+    "closed": false,
+    "contains_one": false,
+    "certifies_one_not_in_VD": false
+   }
+  },
+  "9": {
+   "free_dim": 1301,
+   "V4_dim": 1301,
+   "sum_dim": 1343,
+   "dims_only_in_free": 42,
+   "dims_only_in_V4": 42,
+   "stable_low_part_dim": 563,
+   "stable_low_part_in_V4_6": true,
+   "V4_6_minus_stable": 42,
+   "certificate": {
+    "dim": 1301,
+    "contains_generator_rows": true,
+    "closed": false,
+    "contains_one": false,
+    "certifies_one_not_in_VD": false
+   }
+  }
+ },
+ "V4_6_fall_space_rank_on_top_level_columns": 37,
+ "V4_7_fall_space_rank_on_top_level_columns": 4,
+ "level_decomposition": {
+  "6": {
+   "fall_space": {
+    "exact_level_counts": {
+     "0,1": 3,
+     "0,1,2": 13,
+     "0,1,3": 2,
+     "0,1,2,3": 23,
+     "0,1,4": 2,
+     "0,1,2,4": 2,
+     "0,2,3,4": 1,
+     "1,2,3,4": 5,
+     "0,1,2,3,4": 23,
+     "0,1,5": 2,
+     "0,1,2,5": 2,
+     "0,1,2,3,4,5": 33
+    },
+    "negative_counts": 0,
+    "sum_of_counts": 111,
+    "dim": 111,
+    "span_of_level_pieces": 111,
+    "decomposes_into_level_pieces": true
+   },
+   "V4": {
+    "exact_level_counts": {
+     "0,1": 4,
+     "0,1,2": 25,
+     "0,1,3": 9,
+     "0,2,3": 5,
+     "1,2,3": 9,
+     "0,1,2,3": 53,
+     "0,1,4": 7,
+     "0,1,2,4": 37,
+     "0,1,3,4": 37,
+     "0,2,3,4": 46,
+     "1,2,3,4": 48,
+     "0,1,2,3,4": -10,
+     "0,1,5": 7,
+     "0,1,2,5": 27,
+     "0,1,3,5": 4,
+     "0,1,2,3,5": 63,
+     "0,1,4,5": 4,
+     "0,1,2,4,5": 86,
+     "0,1,3,4,5": 125,
+     "0,2,3,4,5": 146,
+     "1,2,3,4,5": 140,
+     "0,1,2,3,4,5": -267
+    },
+    "negative_counts": 2,
+    "sum_of_counts": 605,
+    "dim": 605,
+    "span_of_level_pieces": 605,
+    "decomposes_into_level_pieces": true
+   }
+  },
+  "7": {
+   "fall_space": {
+    "exact_level_counts": {
+     "0,1": 3,
+     "0,1,2": 13,
+     "0,1,3": 2,
+     "0,1,2,3": 23,
+     "0,1,4": 2,
+     "0,1,2,4": 2,
+     "0,2,3,4": 1,
+     "1,2,3,4": 5,
+     "0,1,2,3,4": 23,
+     "0,1,5": 2,
+     "0,1,2,5": 2,
+     "0,1,2,3,4,5": 33,
+     "0,1,6": 2,
+     "0,1,2,6": 2
+    },
+    "negative_counts": 0,
+    "sum_of_counts": 115,
+    "dim": 115,
+    "span_of_level_pieces": 115,
+    "decomposes_into_level_pieces": true
+   },
+   "V4": {
+    "exact_level_counts": {
+     "0,1": 4,
+     "0,1,2": 25,
+     "0,1,3": 9,
+     "0,2,3": 5,
+     "1,2,3": 9,
+     "0,1,2,3": 53,
+     "0,1,4": 7,
+     "0,1,2,4": 37,
+     "0,1,3,4": 37,
+     "0,2,3,4": 46,
+     "1,2,3,4": 48,
+     "0,1,2,3,4": -10,
+     "0,1,5": 7,
+     "0,1,2,5": 27,
+     "0,1,3,5": 4,
+     "0,1,2,3,5": 63,
+     "0,1,4,5": 4,
+     "0,1,2,4,5": 62,
+     "0,1,3,4,5": 95,
+     "0,2,3,4,5": 108,
+     "1,2,3,4,5": 110,
+     "0,1,2,3,4,5": -187,
+     "0,1,6": 7,
+     "0,1,2,6": 27,
+     "0,1,3,6": 4,
+     "0,1,2,3,6": 46,
+     "0,1,4,6": 4,
+     "0,1,2,4,6": 4,
+     "0,2,3,4,6": 2,
+     "1,2,3,4,6": 10,
+     "0,1,2,3,4,6": 46,
+     "0,1,5,6": 4,
+     "0,1,2,5,6": 4,
+     "0,1,2,4,5,6": 6,
+     "0,1,3,4,5,6": 20,
+     "0,2,3,4,5,6": 28,
+     "1,2,3,4,5,6": 20,
+     "0,1,2,3,4,5,6": 34
+    },
+    "negative_counts": 2,
+    "sum_of_counts": 829,
+    "dim": 829,
+    "span_of_level_pieces": 829,
+    "decomposes_into_level_pieces": true
+   }
+  },
+  "8": {
+   "fall_space": {
+    "exact_level_counts": {
+     "0,1": 3,
+     "0,1,2": 13,
+     "0,1,3": 2,
+     "0,1,2,3": 23,
+     "0,1,4": 2,
+     "0,1,2,4": 2,
+     "0,2,3,4": 1,
+     "1,2,3,4": 5,
+     "0,1,2,3,4": 23,
+     "0,1,5": 2,
+     "0,1,2,5": 2,
+     "0,1,2,3,4,5": 33,
+     "0,1,6": 2,
+     "0,1,2,6": 2,
+     "0,1,7": 2,
+     "0,1,2,7": 2
+    },
+    "negative_counts": 0,
+    "sum_of_counts": 119,
+    "dim": 119,
+    "span_of_level_pieces": 119,
+    "decomposes_into_level_pieces": true
+   },
+   "V4": {
+    "exact_level_counts": {
+     "0,1": 4,
+     "0,1,2": 25,
+     "0,1,3": 9,
+     "0,2,3": 5,
+     "1,2,3": 9,
+     "0,1,2,3": 53,
+     "0,1,4": 7,
+     "0,1,2,4": 37,
+     "0,1,3,4": 37,
+     "0,2,3,4": 46,
+     "1,2,3,4": 48,
+     "0,1,2,3,4": -10,
+     "0,1,5": 7,
+     "0,1,2,5": 27,
+     "0,1,3,5": 4,
+     "0,1,2,3,5": 63,
+     "0,1,4,5": 4,
+     "0,1,2,4,5": 62,
+     "0,1,3,4,5": 95,
+     "0,2,3,4,5": 108,
+     "1,2,3,4,5": 110,
+     "0,1,2,3,4,5": -187,
+     "0,1,6": 7,
+     "0,1,2,6": 27,
+     "0,1,3,6": 4,
+     "0,1,2,3,6": 46,
+     "0,1,4,6": 4,
+     "0,1,2,4,6": 4,
+     "0,2,3,4,6": 2,
+     "1,2,3,4,6": 10,
+     "0,1,2,3,4,6": 46,
+     "0,1,5,6": 4,
+     "0,1,2,5,6": 4,
+     "0,1,2,4,5,6": 6,
+     "0,1,3,4,5,6": 20,
+     "0,2,3,4,5,6": 28,
+     "1,2,3,4,5,6": 20,
+     "0,1,2,3,4,5,6": 34,
+     "0,1,7": 7,
+     "0,1,2,7": 27,
+     "0,1,3,7": 4,
+     "0,1,2,3,7": 46,
+     "0,1,4,7": 4,
+     "0,1,2,4,7": 4,
+     "0,2,3,4,7": 2,
+     "1,2,3,4,7": 10,
+     "0,1,2,3,4,7": 46,
+     "0,1,5,7": 4,
+     "0,1,2,5,7": 4,
+     "0,1,2,3,4,5,7": 66,
+     "0,1,6,7": 4,
+     "0,1,2,6,7": 4
+    },
+    "negative_counts": 2,
+    "sum_of_counts": 1061,
+    "dim": 1061,
+    "span_of_level_pieces": 1061,
+    "decomposes_into_level_pieces": true
+   }
+  }
+ },
+ "fall_space_structure": {
+  "description": "F_4(k) = F_4(k0) (+) sum_{j>=k0, i} tau_{2^j e_i} span(g, w)",
+  "checks": {
+   "8": {
+    "predicted": 119,
+    "compare": {
+     "rank_a": 119,
+     "rank_b": 119,
+     "rank_sum": 119,
+     "equal": true,
+     "a_in_b": true,
+     "b_in_a": true
+    }
+   },
+   "9": {
+    "predicted": 123,
+    "compare": {
+     "rank_a": 123,
+     "rank_b": 123,
+     "rank_sum": 123,
+     "equal": true,
+     "a_in_b": true,
+     "b_in_a": true
+    }
+   },
+   "10": {
+    "predicted": 127,
+    "compare": {
+     "rank_a": 127,
+     "rank_b": 127,
+     "rank_sum": 127,
+     "equal": true,
+     "a_in_b": true,
+     "b_in_a": true
+    }
+   }
+  }
+ },
+ "w_symbolic": {
+  "S3": "-4*b*(x1 + x2) + t**2*(x1 - x2)**2 - t*(4*b + 2*(a + x1*x2)*(x1 + x2)) + (-a + x1*x2)**2",
+  "killed_monomials": [
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    3
+   ],
+   [
+    3,
+    3
+   ]
+  ],
+  "solution": [
+   "q00",
+   "2*q22*(5*a**2*t + 2*a*b + 15*a*t**3 - 2*b*t**2 + 16*t**5)/(a + 3*t**2)",
+   "-q22*t*(11*a*t + 8*b + 17*t**3)/(a + 3*t**2)",
+   "2*q22*(5*a**2*t + 2*a*b + 15*a*t**3 - 2*b*t**2 + 16*t**5)/(a + 3*t**2)",
+   "2*q22*(a + 5*t**2)",
+   "2*q22*t",
+   "-q22*t*(11*a*t + 8*b + 17*t**3)/(a + 3*t**2)",
+   "2*q22*t",
+   "q22"
+  ],
+  "unknown_order": [
+   "q00",
+   "q01",
+   "q02",
+   "q10",
+   "q11",
+   "q12",
+   "q20",
+   "q21",
+   "q22"
+  ],
+  "free_parameters": [
+   "q00",
+   "q22"
+  ],
+  "note": "two free parameters: q00 (the g component) and one more; the second basis vector is w"
+ },
+ "w_numeric": {
+  "6": {
+   "kernel_dim": 2,
+   "max_weight": 2,
+   "equals_V4_cap_M2": {
+    "rank_a": 2,
+    "rank_b": 2,
+    "rank_sum": 2,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "free_unknowns": [
+    "q00",
+    "q22"
+   ]
+  },
+  "7": {
+   "kernel_dim": 2,
+   "max_weight": 2,
+   "equals_V4_cap_M2": {
+    "rank_a": 2,
+    "rank_b": 2,
+    "rank_sum": 2,
+    "equal": true,
+    "a_in_b": true,
+    "b_in_a": true
+   },
+   "free_unknowns": [
+    "q00",
+    "q22"
+   ]
+  }
+ },
+ "w_formula_on_instance": {
+  "6": {
+   "weight": 2,
+   "in_V4": true,
+   "support": 17,
+   "g_and_w_span_V4_cap_M2": true,
+   "denominator_a_plus_3t2": 25124
+  },
+  "7": {
+   "weight": 2,
+   "in_V4": true,
+   "support": 17,
+   "g_and_w_span_V4_cap_M2": true,
+   "denominator_a_plus_3t2": 25124
+  }
+ },
+ "multiplier_filtration": {
+  "instance": {
+   "prime": 1073153,
+   "a": 281783,
+   "b": 132345,
+   "target": [
+    247294,
+    569236
+   ],
+   "target_order": 536971
+  },
+  "solutions_k6": 0,
+  "6": {
+   "dim_Q_cap_Bw": [
+    1,
+    13,
+    79,
+    123,
+    212,
+    280,
+    377,
+    465,
+    546,
+    588,
+    605,
+    605,
+    605
+   ],
+   "dim_Qfall_cap_Bw": [
+    1,
+    13,
+    18,
+    34,
+    43,
+    59,
+    72,
+    88,
+    103,
+    111,
+    111,
+    111,
+    111
+   ],
+   "kappa4": [
+    1,
+    13,
+    79,
+    123,
+    212,
+    280,
+    377,
+    465,
+    583,
+    717,
+    781,
+    793,
+    794
+   ],
+   "kappa3": [
+    1,
+    13,
+    18,
+    34,
+    43,
+    59,
+    72,
+    88,
+    103,
+    222,
+    286,
+    298,
+    299
+   ],
+   "kappa_note": "kappa recorded for w = 0..12 (Dirac matrix capped at 7000 rows)",
+   "max_multiplier_weight": 10,
+   "note": "Q \u2229 B_w = kappa4(w) for small w means: every weight-<=4 combination of translates of g by weight <= w lies in V_4; the first w where they differ is where V_4 stops being \"everything reachable\"",
+   "dim_V4": 605
+  },
+  "7": {
+   "dim_Q_cap_Bw": [
+    1,
+    15,
+    106,
+    160,
+    282,
+    368,
+    497,
+    611,
+    724,
+    796,
+    829,
+    829,
+    829,
+    829,
+    829
+   ],
+   "dim_Qfall_cap_Bw": [
+    1,
+    15,
+    20,
+    38,
+    47,
+    63,
+    76,
+    92,
+    107,
+    115,
+    115,
+    115,
+    115,
+    115,
+    115
+   ],
+   "kappa4": [
+    1,
+    15,
+    106,
+    160,
+    282,
+    368,
+    497
+   ],
+   "kappa3": [
+    1,
+    15,
+    20,
+    38,
+    47,
+    63,
+    76
+   ],
+   "kappa_note": "kappa recorded for w = 0..6 (Dirac matrix capped at 7000 rows)",
+   "max_multiplier_weight": 10,
+   "note": "Q \u2229 B_w = kappa4(w) for small w means: every weight-<=4 combination of translates of g by weight <= w lies in V_4; the first w where they differ is where V_4 stops being \"everything reachable\"",
+   "dim_V4": 829
+  }
+ },
+ "cross_instances": {
+  "12289:3": {
+   "instance": {
+    "prime": 12289,
+    "a": 3899,
+    "b": 9710,
+    "target": [
+     9895,
+     11610
+    ],
+    "target_order": 6151
+   },
+   "dims": {
+    "6": 605,
+    "7": 829,
+    "8": 1061,
+    "9": 1301
+   },
+   "low_profiles": {
+    "6": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "7": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "8": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "9": [
+     0,
+     0,
+     2,
+     123,
+     1301
+    ]
+   },
+   "base_pivot_set_equal": true,
+   "base_pivot_symmetric_difference": 0,
+   "free_checks": {
+    "8": {
+     "dim_V4": 1061,
+     "formula": 1061,
+     "equals_free": true,
+     "certificate": true
+    },
+    "9": {
+     "dim_V4": 1301,
+     "formula": 1301,
+     "equals_free": true,
+     "certificate": true
+    }
+   }
+  },
+  "12289:j1728": {
+   "instance": {
+    "prime": 12289,
+    "a": 1,
+    "b": 0,
+    "target": [
+     9362,
+     1126
+    ],
+    "note": "j=1728 curve y^2=x^3+x, random target (depth-10 probe family)"
+   },
+   "dims": {
+    "6": 605,
+    "7": 829,
+    "8": 1061,
+    "9": 1301
+   },
+   "low_profiles": {
+    "6": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "7": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "8": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "9": [
+     0,
+     0,
+     2,
+     123,
+     1301
+    ]
+   },
+   "base_pivot_set_equal": true,
+   "base_pivot_symmetric_difference": 0,
+   "free_checks": {
+    "8": {
+     "dim_V4": 1061,
+     "formula": 1061,
+     "equals_free": true,
+     "certificate": true
+    },
+    "9": {
+     "dim_V4": 1301,
+     "formula": 1301,
+     "equals_free": true,
+     "certificate": true
+    }
+   }
+  }
+ },
+ "log": [
+  "k=6: loaded k6-D4.npz (605 rows)",
+  "k=7: loaded k7-D4.npz (829 rows)",
+  "k=8: loaded k8-D4.npz (1061 rows)",
+  "k=9: loaded k9-D4.npz (1301 rows)",
+  "k=10: loaded k10-D4.npz (1549 rows)",
+  "k=7: Free_k^(7)(V_4(7)) dim 829 (predicted 829), V_4 dim 829, equal True, certificate True, stable None",
+  "k=8: Free_k^(7)(V_4(7)) dim 1061 (predicted 1061), V_4 dim 1061, equal True, certificate True, stable True",
+  "k=9: Free_k^(7)(V_4(7)) dim 1301 (predicted 1301), V_4 dim 1301, equal True, certificate True, stable True",
+  "k=10: Free_k^(7)(V_4(7)) dim 1549 (predicted 1549), V_4 dim 1549, equal True, certificate True, stable True",
+  "k0=6 -> k=7: free dim 829, V_4 dim 829, sum 871; V_4(k) \u2229 M_lev<=5 has dim 563 \u2282 V_4(6) (True), closed False",
+  "k0=6 -> k=8: free dim 1061, V_4 dim 1061, sum 1103; V_4(k) \u2229 M_lev<=5 has dim 563 \u2282 V_4(6) (True), closed False",
+  "k0=6 -> k=9: free dim 1301, V_4 dim 1301, sum 1343; V_4(k) \u2229 M_lev<=5 has dim 563 \u2282 V_4(6) (True), closed False",
+  "k=6: fall-space level pieces {'0,1': 3, '0,1,2': 13, '0,1,3': 2, '0,1,2,3': 23, '0,1,4': 2, '0,1,2,4': 2, '0,2,3,4': 1, '1,2,3,4': 5, '0,1,2,3,4': 23, '0,1,5': 2, '0,1,2,5': 2, '0,1,2,3,4,5': 33} (decomposes: True); V_4 negative counts 2",
+  "k=7: fall-space level pieces {'0,1': 3, '0,1,2': 13, '0,1,3': 2, '0,1,2,3': 23, '0,1,4': 2, '0,1,2,4': 2, '0,2,3,4': 1, '1,2,3,4': 5, '0,1,2,3,4': 23, '0,1,5': 2, '0,1,2,5': 2, '0,1,2,3,4,5': 33, '0,1,6': 2, '0,1,2,6': 2} (decomposes: True); V_4 negative counts 2",
+  "k=8: fall-space level pieces {'0,1': 3, '0,1,2': 13, '0,1,3': 2, '0,1,2,3': 23, '0,1,4': 2, '0,1,2,4': 2, '0,2,3,4': 1, '1,2,3,4': 5, '0,1,2,3,4': 23, '0,1,5': 2, '0,1,2,5': 2, '0,1,2,3,4,5': 33, '0,1,6': 2, '0,1,2,6': 2, '0,1,7': 2, '0,1,2,7': 2} (decomposes: True); V_4 negative counts 2",
+  "w check: {6: {'kernel_dim': 2, 'max_weight': 2, 'equals_V4_cap_M2': {'rank_a': 2, 'rank_b': 2, 'rank_sum': 2, 'equal': True, 'a_in_b': True, 'b_in_a': True}, 'free_unknowns': ['q00', 'q22']}, 7: {'kernel_dim': 2, 'max_weight': 2, 'equals_V4_cap_M2': {'rank_a': 2, 'rank_b': 2, 'rank_sum': 2, 'equal': True, 'a_in_b': True, 'b_in_a': True}, 'free_unknowns': ['q00', 'q22']}}; formula check {6: {'weight': 2, 'in_V4': True, 'support': 17, 'g_and_w_span_V4_cap_M2': True, 'denominator_a_plus_3t2': 25124}, 7: {'weight': 2, 'in_V4': True, 'support': 17, 'g_and_w_span_V4_cap_M2': True, 'denominator_a_plus_3t2': 25124}}",
+  "unit instance k=6: dim 605, multiplier filtration [1, 13, 79, 123, 212, 280, 377, 465, 546, 588, 605, 605, 605], max weight 10",
+  "unit instance k=7: dim 829, multiplier filtration [1, 15, 106, 160, 282, 368, 497, 611, 724, 796, 829, 829, 829, 829, 829], max weight 10",
+  "instance 12289:3: dims {6: 605, 7: 829, 8: 1061, 9: 1301}, pivot set equal True, free checks [(8, True, True), (9, True, True)]",
+  "instance 12289:j1728: dims {6: 605, 7: 829, 8: 1061, 9: 1301}, pivot set equal True, free checks [(8, True, True), (9, True, True)]"
+ ]
+}

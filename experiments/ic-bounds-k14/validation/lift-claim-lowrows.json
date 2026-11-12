@@ -1,0 +1,70 @@
+{
+ "rows": [
+  {
+   "case": "unit-12289-k5-D4",
+   "part": 0,
+   "rank": 201,
+   "dim_intersection_independent": 91,
+   "low_rows": 91,
+   "sha_independent": "51994086169266ae",
+   "sha_low_rows": "51994086169266ae",
+   "equal": true
+  },
+  {
+   "case": "unit-12289-k5-D4",
+   "part": 1,
+   "rank": 185,
+   "dim_intersection_independent": 85,
+   "low_rows": 85,
+   "sha_independent": "9a7f9304eba34229",
+   "sha_low_rows": "9a7f9304eba34229",
+   "equal": true
+  },
+  {
+   "case": "unit-65537-k6-D4",
+   "part": 0,
+   "rank": 312,
+   "dim_intersection_independent": 58,
+   "low_rows": 58,
+   "sha_independent": "28d687bf8adac5db",
+   "sha_low_rows": "28d687bf8adac5db",
+   "equal": true
+  },
+  {
+   "case": "unit-65537-k6-D4",
+   "part": 1,
+   "rank": 293,
+   "dim_intersection_independent": 53,
+   "low_rows": 53,
+   "sha_independent": "4a9d70bc2ea32a94",
+   "sha_low_rows": "4a9d70bc2ea32a94",
+   "equal": true
+  },
+  {
+   "case": "proper-65537-X2-k6-D5",
+   "part": 0,
+   "rank": 803,
+   "dim_intersection_independent": 407,
+   "low_rows": 407,
+   "sha_independent": "a67c5760a1e88109",
+   "sha_low_rows": "a67c5760a1e88109",
+   "equal": true
+  },
+  {
+   "case": "proper-65537-X2-k6-D5",
+   "part": 1,
+   "rank": 781,
+   "dim_intersection_independent": 385,
+   "low_rows": 385,
+   "sha_independent": "5b5b4a7ab70237e2",
+   "sha_low_rows": "5b5b4a7ab70237e2",
+   "equal": true
+  }
+ ],
+ "all_equal": true,
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "533c92a4132b9d68002efff9335e2850e57927b753793825cf4a2905c4156042"
+ }
+}

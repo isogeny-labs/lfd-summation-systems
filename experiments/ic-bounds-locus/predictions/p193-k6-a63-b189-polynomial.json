@@ -1,0 +1,101 @@
+{
+ "prime": 193,
+ "k": 6,
+ "a": 63,
+ "b": 189,
+ "rules_file": "experiments/ic-bounds-locus/rules-k6.json",
+ "rules_sha256": "971dfc88e17d4f972b3594db8de58ecf9e6b03c5207fe5a5ca661ee3ffd1de16",
+ "made_at_unix": 1794082674,
+ "predictions": {
+  "t0_j0": {
+   "key": "V3",
+   "clauses": [
+    [
+     "t=0",
+     "a=0"
+    ]
+   ],
+   "predicted_t": [],
+   "expected_value": 44
+  },
+  "t0_j1728": {
+   "key": "LFD",
+   "clauses": [
+    [
+     "t=0",
+     "b=0"
+    ]
+   ],
+   "predicted_t": [],
+   "expected_value": 4
+  },
+  "t0_other": {
+   "key": "V4",
+   "clauses": [
+    [
+     "t=0",
+     "not(a=0)",
+     "not(b=0)"
+    ]
+   ],
+   "predicted_t": [
+    0
+   ],
+   "expected_value": 612
+  },
+  "tangent_3t2+a": {
+   "key": "V3",
+   "clauses": [
+    [
+     "3t2+a=0",
+     "not(t=0)"
+    ]
+   ],
+   "predicted_t": [
+    65,
+    128
+   ],
+   "expected_value": 34
+  },
+  "order_two": {
+   "key": "V4",
+   "clauses": [
+    [
+     "rhs=0",
+     "not(t=0)",
+     "not(3t2+a=0)"
+    ]
+   ],
+   "predicted_t": [
+    81,
+    132,
+    173
+   ],
+   "expected_value": 607
+  },
+  "polynomial_union": {
+   "key": "any",
+   "clauses": [
+    [
+     "t=0"
+    ],
+    [
+     "3t2+a=0"
+    ],
+    [
+     "rhs=0"
+    ]
+   ],
+   "predicted_t": [
+    0,
+    65,
+    81,
+    128,
+    132,
+    173
+   ],
+   "expected_value": null
+  }
+ },
+ "targets": 107
+}

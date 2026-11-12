@@ -1,0 +1,25 @@
+{
+  "status": "passed: exact arithmetic, containing spaces and local certificates checked, scalar roots and rational decompositions verified",
+  "source_sha256": {
+    "csd/ic_curve_sweep.py": "4ddefb24900dda4d4f52dcd33b5d30ac7ddf80e3704c1c51d08df0a60fe9874c",
+    "scripts/run_ic_curve_sweep.py": "8930962b8bce64019b7085499bb8ecf12008306fb4f16057a782d6e0b773e66e",
+    "csd/ic_arbitrary_bases.py": "e780d1ed4ca729c3a16163aebd73d28c119b8700dcc9feecc76c3d5fa6afe346",
+    "csd/ic_local_certificate.py": "85fe0c3f2ba28c2c8f3919aab6d808545268bda243b7130f2388fc389c2b08b2",
+    "csd/ic_boolean_closure.py": "81b86ab7fcb8c471d24eec3e3beaa3f9eff79223828f3e832087fcd2743b6fc6",
+    "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+    "csd/ic_research_campaign.py": "80d8ed78417a932dfa5f463efa5799aee51bfb0cb894c9e7afb25dd4686697ef",
+    "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+    "csd/_elim.c": "1269131384fc5f110b90b70a1c8f174a60ca7fe968388f6e13f96eba56959290",
+    "csd/gf2_ghs.py": "bd0e24d087eab7c9119366c2f7ae0e47d8928bf7f66d32376cf04cba9e650271",
+    "csd/field.py": "af3f1d2c22f76396d92bef3b4f1824c88f4706d07ae1f92b0335c12f739160c3",
+    "csd/gf2n.py": "a5bdbcf2fa0554b709dacdccff76a28030165d882911ccecbe8d9ab457511b98"
+  },
+  "data_sha256": {
+    "experiments/ic-curve-sweep/cases.csv": "a515a968b99dee7910f34179e29faac5ec6cd63882078856db55e9334e2cfa03",
+    "experiments/ic-curve-sweep/cases.jsonl": "8143967bdb69946ec711dda84e5a19684bbbd2bdecedd01230a3e2300b099a2e",
+    "experiments/ic-curve-sweep/results.jsonl": "b7a88e8831bf432192d864b0950d8eddd284323c9f466ccb5032a97b26b86e44",
+    "experiments/ic-curve-sweep/summary.json": "4722c5d0f3c407f9b97979d722b62541cf3c2fb6b215f9ac15c23d9ca600a404",
+    "experiments/ic-curve-sweep/systems.jsonl": "99248b4338e1dd133489d95bb85c036394d17870d8d6924a2d93cbac272c260f"
+  }
+}

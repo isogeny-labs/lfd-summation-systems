@@ -1,0 +1,478 @@
+{
+ "binary": {
+  "classes": {
+   "random": {
+    "systems": 650,
+    "unit_rate": 0.411,
+    "mean_solutions": 6.15
+   },
+   "invariant-nonsubfield": {
+    "systems": 211,
+    "unit_rate": 0.46,
+    "mean_solutions": 8.18
+   },
+   "subfield": {
+    "systems": 81,
+    "unit_rate": 0.704,
+    "mean_solutions": 1.14
+   }
+  },
+  "paired_all": {
+   "random vs invariant-nonsubfield": {
+    "cells": 129,
+    "a_higher": 22,
+    "a_lower": 8,
+    "equal": 99
+   },
+   "random vs subfield": {
+    "cells": 60,
+    "a_higher": 20,
+    "a_lower": 2,
+    "equal": 38
+   },
+   "invariant-nonsubfield vs subfield": {
+    "cells": 25,
+    "a_higher": 6,
+    "a_lower": 1,
+    "equal": 18
+   }
+  },
+  "paired_proper_only": {
+   "random vs invariant-nonsubfield": {
+    "cells": 84,
+    "a_higher": 3,
+    "a_lower": 5,
+    "equal": 76
+   },
+   "random vs subfield": {
+    "cells": 21,
+    "a_higher": 1,
+    "a_lower": 2,
+    "equal": 18
+   }
+  },
+  "stratified_by_k_and_solutions": [
+   {
+    "k": 2,
+    "solutions": "1-2",
+    "random_n": 19,
+    "random_mean": 2.0,
+    "invariant_n": 4,
+    "invariant_mean": 2.0
+   },
+   {
+    "k": 2,
+    "solutions": "unit",
+    "random_n": 89,
+    "random_mean": 1.449,
+    "invariant_n": 18,
+    "invariant_mean": 1.389
+   },
+   {
+    "k": 3,
+    "solutions": "1-2",
+    "random_n": 42,
+    "random_mean": 2.381,
+    "invariant_n": 4,
+    "invariant_mean": 2.5
+   },
+   {
+    "k": 3,
+    "solutions": "3-8",
+    "random_n": 6,
+    "random_mean": 3.0,
+    "invariant_n": 4,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 3,
+    "solutions": "unit",
+    "random_n": 76,
+    "random_mean": 1.974,
+    "invariant_n": 22,
+    "invariant_mean": 1.455
+   },
+   {
+    "k": 4,
+    "solutions": "1-2",
+    "random_n": 42,
+    "random_mean": 2.762,
+    "invariant_n": 13,
+    "invariant_mean": 2.615
+   },
+   {
+    "k": 4,
+    "solutions": "3-8",
+    "random_n": 27,
+    "random_mean": 3.0,
+    "invariant_n": 21,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 4,
+    "solutions": "9-32",
+    "random_n": 4,
+    "random_mean": 3.0,
+    "invariant_n": 3,
+    "invariant_mean": 3.667
+   },
+   {
+    "k": 4,
+    "solutions": "unit",
+    "random_n": 54,
+    "random_mean": 2.519,
+    "invariant_n": 18,
+    "invariant_mean": 1.944
+   },
+   {
+    "k": 5,
+    "solutions": "1-2",
+    "random_n": 32,
+    "random_mean": 3.0,
+    "invariant_n": 7,
+    "invariant_mean": 2.714
+   },
+   {
+    "k": 5,
+    "solutions": "3-8",
+    "random_n": 21,
+    "random_mean": 3.0,
+    "invariant_n": 2,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 5,
+    "solutions": "9-32",
+    "random_n": 29,
+    "random_mean": 3.379,
+    "invariant_n": 7,
+    "invariant_mean": 3.571
+   },
+   {
+    "k": 5,
+    "solutions": "unit",
+    "random_n": 30,
+    "random_mean": 3.0,
+    "invariant_n": 16,
+    "invariant_mean": 1.938
+   },
+   {
+    "k": 6,
+    "solutions": "1-2",
+    "random_n": 13,
+    "random_mean": 3.0,
+    "invariant_n": 3,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 6,
+    "solutions": "3-8",
+    "random_n": 30,
+    "random_mean": 3.033,
+    "invariant_n": 7,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 6,
+    "solutions": "33+",
+    "random_n": 8,
+    "random_mean": 3.625,
+    "invariant_n": 4,
+    "invariant_mean": 4.0
+   },
+   {
+    "k": 6,
+    "solutions": "9-32",
+    "random_n": 32,
+    "random_mean": 3.625,
+    "invariant_n": 12,
+    "invariant_mean": 3.583
+   },
+   {
+    "k": 6,
+    "solutions": "unit",
+    "random_n": 13,
+    "random_mean": 3.0,
+    "invariant_n": 13,
+    "invariant_mean": 2.385
+   },
+   {
+    "k": 7,
+    "solutions": "1-2",
+    "random_n": 2,
+    "random_mean": 4.0,
+    "invariant_n": 1,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 7,
+    "solutions": "3-8",
+    "random_n": 18,
+    "random_mean": 3.556,
+    "invariant_n": 4,
+    "invariant_mean": 3.75
+   },
+   {
+    "k": 7,
+    "solutions": "33+",
+    "random_n": 22,
+    "random_mean": 3.955,
+    "invariant_n": 9,
+    "invariant_mean": 3.778
+   },
+   {
+    "k": 7,
+    "solutions": "9-32",
+    "random_n": 33,
+    "random_mean": 3.727,
+    "invariant_n": 8,
+    "invariant_mean": 3.5
+   },
+   {
+    "k": 7,
+    "solutions": "unit",
+    "random_n": 5,
+    "random_mean": 3.6,
+    "invariant_n": 10,
+    "invariant_mean": 2.2
+   }
+  ],
+  "stratified_summary": {
+   "strata": 23,
+   "invariant_higher": 5,
+   "invariant_lower": 13,
+   "equal": 5,
+   "weighted_mean_invariant_minus_random": -0.282
+  }
+ },
+ "koblitz": {
+  "classes": {
+   "random": {
+    "systems": 560,
+    "unit_rate": 0.398,
+    "mean_solutions": 6.35
+   },
+   "invariant-nonsubfield": {
+    "systems": 177,
+    "unit_rate": 0.373,
+    "mean_solutions": 13.19
+   },
+   "subfield": {
+    "systems": 66,
+    "unit_rate": 0.576,
+    "mean_solutions": 6.85
+   }
+  },
+  "paired_all": {
+   "random vs invariant-nonsubfield": {
+    "cells": 131,
+    "a_higher": 7,
+    "a_lower": 31,
+    "equal": 93
+   },
+   "random vs subfield": {
+    "cells": 63,
+    "a_higher": 5,
+    "a_lower": 20,
+    "equal": 38
+   },
+   "invariant-nonsubfield vs subfield": {
+    "cells": 30,
+    "a_higher": 4,
+    "a_lower": 6,
+    "equal": 20
+   }
+  },
+  "paired_proper_only": {
+   "random vs invariant-nonsubfield": {
+    "cells": 90,
+    "a_higher": 2,
+    "a_lower": 20,
+    "equal": 68
+   },
+   "random vs subfield": {
+    "cells": 31,
+    "a_higher": 2,
+    "a_lower": 10,
+    "equal": 19
+   }
+  },
+  "stratified_by_k_and_solutions": [
+   {
+    "k": 2,
+    "solutions": "3-8",
+    "random_n": 1,
+    "random_mean": 3.0,
+    "invariant_n": 3,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 2,
+    "solutions": "unit",
+    "random_n": 75,
+    "random_mean": 1.933,
+    "invariant_n": 14,
+    "invariant_mean": 1.929
+   },
+   {
+    "k": 3,
+    "solutions": "1-2",
+    "random_n": 29,
+    "random_mean": 2.31,
+    "invariant_n": 2,
+    "invariant_mean": 2.5
+   },
+   {
+    "k": 3,
+    "solutions": "3-8",
+    "random_n": 11,
+    "random_mean": 2.909,
+    "invariant_n": 6,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 3,
+    "solutions": "unit",
+    "random_n": 68,
+    "random_mean": 2.118,
+    "invariant_n": 16,
+    "invariant_mean": 1.688
+   },
+   {
+    "k": 4,
+    "solutions": "1-2",
+    "random_n": 34,
+    "random_mean": 2.794,
+    "invariant_n": 6,
+    "invariant_mean": 2.333
+   },
+   {
+    "k": 4,
+    "solutions": "3-8",
+    "random_n": 30,
+    "random_mean": 2.933,
+    "invariant_n": 14,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 4,
+    "solutions": "9-32",
+    "random_n": 6,
+    "random_mean": 3.0,
+    "invariant_n": 12,
+    "invariant_mean": 3.333
+   },
+   {
+    "k": 4,
+    "solutions": "unit",
+    "random_n": 41,
+    "random_mean": 2.439,
+    "invariant_n": 14,
+    "invariant_mean": 2.357
+   },
+   {
+    "k": 5,
+    "solutions": "1-2",
+    "random_n": 23,
+    "random_mean": 3.0,
+    "invariant_n": 4,
+    "invariant_mean": 2.0
+   },
+   {
+    "k": 5,
+    "solutions": "3-8",
+    "random_n": 30,
+    "random_mean": 3.0,
+    "invariant_n": 1,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 5,
+    "solutions": "9-32",
+    "random_n": 16,
+    "random_mean": 3.688,
+    "invariant_n": 14,
+    "invariant_mean": 3.357
+   },
+   {
+    "k": 5,
+    "solutions": "unit",
+    "random_n": 27,
+    "random_mean": 3.0,
+    "invariant_n": 7,
+    "invariant_mean": 2.429
+   },
+   {
+    "k": 6,
+    "solutions": "1-2",
+    "random_n": 15,
+    "random_mean": 3.0,
+    "invariant_n": 1,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 6,
+    "solutions": "3-8",
+    "random_n": 16,
+    "random_mean": 3.062,
+    "invariant_n": 5,
+    "invariant_mean": 3.0
+   },
+   {
+    "k": 6,
+    "solutions": "33+",
+    "random_n": 6,
+    "random_mean": 4.0,
+    "invariant_n": 7,
+    "invariant_mean": 3.857
+   },
+   {
+    "k": 6,
+    "solutions": "9-32",
+    "random_n": 35,
+    "random_mean": 3.6,
+    "invariant_n": 14,
+    "invariant_mean": 3.571
+   },
+   {
+    "k": 6,
+    "solutions": "unit",
+    "random_n": 12,
+    "random_mean": 3.0,
+    "invariant_n": 8,
+    "invariant_mean": 2.25
+   },
+   {
+    "k": 7,
+    "solutions": "3-8",
+    "random_n": 21,
+    "random_mean": 3.667,
+    "invariant_n": 2,
+    "invariant_mean": 4.0
+   },
+   {
+    "k": 7,
+    "solutions": "33+",
+    "random_n": 21,
+    "random_mean": 3.905,
+    "invariant_n": 10,
+    "invariant_mean": 4.0
+   },
+   {
+    "k": 7,
+    "solutions": "9-32",
+    "random_n": 24,
+    "random_mean": 3.917,
+    "invariant_n": 9,
+    "invariant_mean": 3.556
+   }
+  ],
+  "stratified_summary": {
+   "strata": 21,
+   "invariant_higher": 6,
+   "invariant_lower": 12,
+   "equal": 3,
+   "weighted_mean_invariant_minus_random": -0.18
+  }
+ }
+}

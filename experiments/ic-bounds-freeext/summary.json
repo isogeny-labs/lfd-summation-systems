@@ -1,0 +1,2327 @@
+[
+ {
+  "name": "D3-p12289-s12",
+  "p": 12289,
+  "a": 4021,
+  "b": 9917,
+  "seed": 12,
+  "D": 3,
+  "split": true,
+  "X": 4408,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "least_valid_base": 3,
+  "least_base_kernel_hypotheses": 3,
+  "first_deficient_depth": 2,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "2": null,
+   "3": [
+    0,
+    3
+   ],
+   "4": [
+    0,
+    3
+   ],
+   "5": [
+    0,
+    3
+   ],
+   "6": [
+    0,
+    3
+   ],
+   "7": [
+    0,
+    3
+   ],
+   "8": [
+    0,
+    3
+   ]
+  },
+  "rows": [
+   {
+    "k": 2,
+    "rank": 5,
+    "profile": [
+     0,
+     0,
+     1,
+     5
+    ],
+    "one": false,
+    "ideal_dim": 15,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 4,
+    "W_sweep_bad": 2,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 3,
+    "rank": 7,
+    "profile": [
+     0,
+     0,
+     1,
+     7
+    ],
+    "one": false,
+    "ideal_dim": 42,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 4,
+    "rank": 9,
+    "profile": [
+     0,
+     0,
+     1,
+     9
+    ],
+    "one": false,
+    "ideal_dim": 93,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 5,
+    "rank": 11,
+    "profile": [
+     0,
+     0,
+     1,
+     11
+    ],
+    "one": false,
+    "ideal_dim": 176,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 6,
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "one": false,
+    "ideal_dim": 299,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 7,
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "one": false,
+    "ideal_dim": 470,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 17,
+    "profile": [
+     0,
+     0,
+     1,
+     17
+    ],
+    "one": false,
+    "ideal_dim": 695,
+    "deficient": true,
+    "points": 2,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D3-p193-unit-s10-nosplit",
+  "p": 193,
+  "a": 1,
+  "b": 0,
+  "seed": 10,
+  "D": 3,
+  "split": false,
+  "X": 147,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "least_valid_base": 3,
+  "least_base_kernel_hypotheses": 3,
+  "first_deficient_depth": 2,
+  "recursion_from_fall": true,
+  "witnesses": {},
+  "rows": [
+   {
+    "k": 2,
+    "rank": 5,
+    "profile": [
+     0,
+     0,
+     1,
+     5
+    ],
+    "one": false,
+    "ideal_dim": 15,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 2,
+    "W_sweep_bad": 2,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 3,
+    "rank": 7,
+    "profile": [
+     0,
+     0,
+     1,
+     7
+    ],
+    "one": false,
+    "ideal_dim": 42,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 4,
+    "rank": 9,
+    "profile": [
+     0,
+     0,
+     1,
+     9
+    ],
+    "one": false,
+    "ideal_dim": 93,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 5,
+    "rank": 11,
+    "profile": [
+     0,
+     0,
+     1,
+     11
+    ],
+    "one": false,
+    "ideal_dim": 160,
+    "deficient": true,
+    "points": 16,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 6,
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "one": false,
+    "ideal_dim": 263,
+    "deficient": true,
+    "points": 36,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D3-p193-unit-s10",
+  "p": 193,
+  "a": 1,
+  "b": 0,
+  "seed": 10,
+  "D": 3,
+  "split": true,
+  "X": 147,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "least_valid_base": 3,
+  "least_base_kernel_hypotheses": 3,
+  "first_deficient_depth": 2,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "2": null,
+   "3": [
+    0,
+    3
+   ],
+   "4": [
+    0,
+    3
+   ],
+   "5": [
+    0,
+    3
+   ],
+   "6": [
+    0,
+    3
+   ]
+  },
+  "rows": [
+   {
+    "k": 2,
+    "rank": 5,
+    "profile": [
+     0,
+     0,
+     1,
+     5
+    ],
+    "one": false,
+    "ideal_dim": 15,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 4,
+    "W_sweep_bad": 2,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 3,
+    "rank": 7,
+    "profile": [
+     0,
+     0,
+     1,
+     7
+    ],
+    "one": false,
+    "ideal_dim": 42,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 4,
+    "rank": 9,
+    "profile": [
+     0,
+     0,
+     1,
+     9
+    ],
+    "one": false,
+    "ideal_dim": 93,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 5,
+    "rank": 11,
+    "profile": [
+     0,
+     0,
+     1,
+     11
+    ],
+    "one": false,
+    "ideal_dim": 160,
+    "deficient": true,
+    "points": 16,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 6,
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "one": false,
+    "ideal_dim": 263,
+    "deficient": true,
+    "points": 36,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D3-p257-s21",
+  "p": 257,
+  "a": 3,
+  "b": 7,
+  "seed": 21,
+  "D": 3,
+  "split": true,
+  "X": 85,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "least_valid_base": 3,
+  "least_base_kernel_hypotheses": 3,
+  "first_deficient_depth": 2,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "2": null,
+   "3": [
+    0,
+    3
+   ],
+   "4": [
+    0,
+    3
+   ],
+   "5": [
+    0,
+    3
+   ],
+   "6": [
+    0,
+    3
+   ],
+   "7": [
+    0,
+    3
+   ],
+   "8": [
+    0,
+    3
+   ]
+  },
+  "rows": [
+   {
+    "k": 2,
+    "rank": 5,
+    "profile": [
+     0,
+     0,
+     1,
+     5
+    ],
+    "one": false,
+    "ideal_dim": 15,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 4,
+    "W_sweep_bad": 2,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 3,
+    "rank": 7,
+    "profile": [
+     0,
+     0,
+     1,
+     7
+    ],
+    "one": false,
+    "ideal_dim": 42,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 4,
+    "rank": 9,
+    "profile": [
+     0,
+     0,
+     1,
+     9
+    ],
+    "one": false,
+    "ideal_dim": 93,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 5,
+    "rank": 11,
+    "profile": [
+     0,
+     0,
+     1,
+     11
+    ],
+    "one": false,
+    "ideal_dim": 170,
+    "deficient": true,
+    "points": 6,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 6,
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "one": false,
+    "ideal_dim": 287,
+    "deficient": true,
+    "points": 12,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 7,
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "one": false,
+    "ideal_dim": 401,
+    "deficient": true,
+    "points": 69,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 17,
+    "profile": [
+     0,
+     0,
+     1,
+     17
+    ],
+    "one": false,
+    "ideal_dim": 420,
+    "deficient": true,
+    "points": 277,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D4-p12289-order2-X1479",
+  "p": 12289,
+  "a": 1,
+  "b": 0,
+  "seed": null,
+  "D": 4,
+  "split": true,
+  "X": 1479,
+  "exceptional": {
+   "order_two": true,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "least_valid_base": 7,
+  "least_base_kernel_hypotheses": 7,
+  "first_deficient_depth": 6,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null,
+   "9": null
+  },
+  "rows": [
+   {
+    "k": 4,
+    "rank": 161,
+    "profile": [
+     0,
+     7,
+     35,
+     91,
+     161
+    ],
+    "one": false,
+    "ideal_dim": 161,
+    "deficient": false,
+    "points": 2,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 199,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 5,
+    "rank": 384,
+    "profile": [
+     0,
+     9,
+     54,
+     174,
+     384
+    ],
+    "one": false,
+    "ideal_dim": 384,
+    "deficient": false,
+    "points": 2,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 285,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 6,
+    "rank": 607,
+    "profile": [
+     0,
+     0,
+     2,
+     113,
+     607
+    ],
+    "one": false,
+    "ideal_dim": 792,
+    "deficient": true,
+    "points": 2,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 184,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 7,
+    "rank": 835,
+    "profile": [
+     0,
+     0,
+     2,
+     117,
+     835
+    ],
+    "one": false,
+    "ideal_dim": 1469,
+    "deficient": true,
+    "points": 2,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 1071,
+    "profile": [
+     0,
+     0,
+     2,
+     121,
+     1071
+    ],
+    "one": false,
+    "ideal_dim": 2515,
+    "deficient": true,
+    "points": 2,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 9,
+    "rank": 1315,
+    "profile": [
+     0,
+     0,
+     2,
+     125,
+     1315
+    ],
+    "one": false,
+    "ideal_dim": 4022,
+    "deficient": true,
+    "points": 26,
+    "W_closed": null,
+    "W_gen_outside": null,
+    "W_sweep_bad": null,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": null
+   }
+  ]
+ },
+ {
+  "name": "D4-p12289-s12-nosplit",
+  "p": 12289,
+  "a": 4021,
+  "b": 9917,
+  "seed": 12,
+  "D": 4,
+  "split": false,
+  "X": 4408,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "least_valid_base": 7,
+  "least_base_kernel_hypotheses": 7,
+  "first_deficient_depth": 6,
+  "recursion_from_fall": true,
+  "witnesses": {},
+  "rows": [
+   {
+    "k": 5,
+    "rank": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "one": true,
+    "ideal_dim": 386,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 6,
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "one": false,
+    "ideal_dim": 794,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 127,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 7,
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "one": false,
+    "ideal_dim": 1471,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 1061,
+    "profile": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "one": false,
+    "ideal_dim": 2515,
+    "deficient": true,
+    "points": 2,
+    "W_closed": null,
+    "W_gen_outside": null,
+    "W_sweep_bad": null,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": null
+   }
+  ]
+ },
+ {
+  "name": "D4-p12289-s12",
+  "p": 12289,
+  "a": 4021,
+  "b": 9917,
+  "seed": 12,
+  "D": 4,
+  "split": true,
+  "X": 4408,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "least_valid_base": 7,
+  "least_base_kernel_hypotheses": 7,
+  "first_deficient_depth": 6,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null,
+   "9": null
+  },
+  "rows": [
+   {
+    "k": 4,
+    "rank": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "one": true,
+    "ideal_dim": 163,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 5,
+    "rank": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "one": true,
+    "ideal_dim": 386,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 6,
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "one": false,
+    "ideal_dim": 794,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 198,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 7,
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "one": false,
+    "ideal_dim": 1471,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 1061,
+    "profile": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "one": false,
+    "ideal_dim": 2515,
+    "deficient": true,
+    "points": 2,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 9,
+    "rank": 1301,
+    "profile": [
+     0,
+     0,
+     2,
+     123,
+     1301
+    ],
+    "one": false,
+    "ideal_dim": 4032,
+    "deficient": true,
+    "points": 16,
+    "W_closed": null,
+    "W_gen_outside": null,
+    "W_sweep_bad": null,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": null
+   }
+  ]
+ },
+ {
+  "name": "D4-p12289-t0-X0",
+  "p": 12289,
+  "a": 1,
+  "b": 0,
+  "seed": null,
+  "D": 4,
+  "split": true,
+  "X": 0,
+  "exceptional": {
+   "order_two": true,
+   "t_zero": true,
+   "tangent": false
+  },
+  "depths": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "least_valid_base": null,
+  "least_base_kernel_hypotheses": null,
+  "first_deficient_depth": null,
+  "recursion_from_fall": null,
+  "witnesses": {
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null,
+   "9": null
+  },
+  "rows": [
+   {
+    "k": 4,
+    "rank": 147,
+    "profile": [
+     0,
+     1,
+     21,
+     77,
+     147
+    ],
+    "one": false,
+    "ideal_dim": 147,
+    "deficient": false,
+    "points": 16,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 174,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 5,
+    "rank": 354,
+    "profile": [
+     0,
+     1,
+     28,
+     144,
+     354
+    ],
+    "one": false,
+    "ideal_dim": 354,
+    "deficient": false,
+    "points": 32,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 244,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 6,
+    "rank": 730,
+    "profile": [
+     0,
+     1,
+     35,
+     235,
+     730
+    ],
+    "one": false,
+    "ideal_dim": 730,
+    "deficient": false,
+    "points": 64,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 318,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 7,
+    "rank": 1343,
+    "profile": [
+     0,
+     1,
+     42,
+     350,
+     1343
+    ],
+    "one": false,
+    "ideal_dim": 1343,
+    "deficient": false,
+    "points": 128,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 400,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 8,
+    "rank": 2261,
+    "profile": [
+     0,
+     1,
+     49,
+     489,
+     2261
+    ],
+    "one": false,
+    "ideal_dim": 2261,
+    "deficient": false,
+    "points": 256,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 490,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 9,
+    "rank": 3552,
+    "profile": [
+     0,
+     1,
+     56,
+     652,
+     3552
+    ],
+    "one": false,
+    "ideal_dim": 3552,
+    "deficient": false,
+    "points": 512,
+    "W_closed": null,
+    "W_gen_outside": null,
+    "W_sweep_bad": null,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": null
+   }
+  ]
+ },
+ {
+  "name": "D4-p12289-tangent-X64",
+  "p": 12289,
+  "a": 1,
+  "b": 0,
+  "seed": null,
+  "D": 4,
+  "split": true,
+  "X": 64,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": true
+  },
+  "depths": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "least_valid_base": 7,
+  "least_base_kernel_hypotheses": 7,
+  "first_deficient_depth": 6,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null,
+   "9": null
+  },
+  "rows": [
+   {
+    "k": 4,
+    "rank": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "one": true,
+    "ideal_dim": 163,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 5,
+    "rank": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "one": true,
+    "ideal_dim": 386,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 6,
+    "rank": 603,
+    "profile": [
+     0,
+     0,
+     3,
+     111,
+     603
+    ],
+    "one": false,
+    "ideal_dim": 794,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 198,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 7,
+    "rank": 828,
+    "profile": [
+     0,
+     0,
+     3,
+     117,
+     828
+    ],
+    "one": false,
+    "ideal_dim": 1467,
+    "deficient": true,
+    "points": 4,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 1065,
+    "profile": [
+     0,
+     0,
+     3,
+     123,
+     1065
+    ],
+    "one": false,
+    "ideal_dim": 2489,
+    "deficient": true,
+    "points": 28,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 9,
+    "rank": 1314,
+    "profile": [
+     0,
+     0,
+     3,
+     129,
+     1314
+    ],
+    "one": false,
+    "ideal_dim": 4004,
+    "deficient": true,
+    "points": 44,
+    "W_closed": null,
+    "W_gen_outside": null,
+    "W_sweep_bad": null,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": null
+   }
+  ]
+ },
+ {
+  "name": "D4-p257-unit-s10",
+  "p": 257,
+  "a": 1,
+  "b": 0,
+  "seed": 10,
+  "D": 4,
+  "split": true,
+  "X": 220,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "least_valid_base": 7,
+  "least_base_kernel_hypotheses": 7,
+  "first_deficient_depth": 6,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null
+  },
+  "rows": [
+   {
+    "k": 4,
+    "rank": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "one": true,
+    "ideal_dim": 163,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 5,
+    "rank": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "one": true,
+    "ideal_dim": 386,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 6,
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "one": false,
+    "ideal_dim": 794,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 198,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 7,
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "one": false,
+    "ideal_dim": 1471,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 1061,
+    "profile": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "one": false,
+    "ideal_dim": 2265,
+    "deficient": true,
+    "points": 252,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D4-p7681-s21",
+  "p": 7681,
+  "a": 3,
+  "b": 7,
+  "seed": 21,
+  "D": 4,
+  "split": true,
+  "X": 5651,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "least_valid_base": 7,
+  "least_base_kernel_hypotheses": 7,
+  "first_deficient_depth": 6,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null,
+   "9": null
+  },
+  "rows": [
+   {
+    "k": 4,
+    "rank": 163,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "one": true,
+    "ideal_dim": 163,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 5,
+    "rank": 386,
+    "profile": [
+     1,
+     11,
+     56,
+     176,
+     386
+    ],
+    "one": true,
+    "ideal_dim": 386,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 6,
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "one": false,
+    "ideal_dim": 794,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 198,
+    "W_equals_next": false,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 7,
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "one": false,
+    "ideal_dim": 1471,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 8,
+    "rank": 1061,
+    "profile": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "one": false,
+    "ideal_dim": 2507,
+    "deficient": true,
+    "points": 10,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "canonical RREF identical (same_space)",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 9,
+    "rank": 1301,
+    "profile": [
+     0,
+     0,
+     2,
+     123,
+     1301
+    ],
+    "one": false,
+    "ideal_dim": 4002,
+    "deficient": true,
+    "points": 46,
+    "W_closed": null,
+    "W_gen_outside": null,
+    "W_sweep_bad": null,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": null
+   }
+  ]
+ },
+ {
+  "name": "D5-p12289-s12",
+  "p": 12289,
+  "a": 4021,
+  "b": 9917,
+  "seed": 12,
+  "D": 5,
+  "split": true,
+  "X": 4408,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   9,
+   10,
+   11
+  ],
+  "least_valid_base": 11,
+  "least_base_kernel_hypotheses": 11,
+  "first_deficient_depth": 10,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "9": null,
+   "10": null,
+   "11": null
+  },
+  "rows": [
+   {
+    "k": 9,
+    "rank": 12600,
+    "profile": [
+     0,
+     3,
+     156,
+     972,
+     4032,
+     12600
+    ],
+    "one": false,
+    "ideal_dim": 12600,
+    "deficient": false,
+    "points": 16,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 13025,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 10,
+    "rank": 18569,
+    "profile": [
+     0,
+     0,
+     2,
+     138,
+     3163,
+     18569
+    ],
+    "one": false,
+    "ideal_dim": 21600,
+    "deficient": true,
+    "points": 100,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 4032,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 11,
+    "rank": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "one": false,
+    "ideal_dim": 35095,
+    "deficient": true,
+    "points": 348,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "recorded V_D(k+1) SHA-256",
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D5-p12289-unit-s10",
+  "p": 12289,
+  "a": 1,
+  "b": 0,
+  "seed": 10,
+  "D": 5,
+  "split": true,
+  "X": 9362,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   9,
+   10,
+   11
+  ],
+  "least_valid_base": 11,
+  "least_base_kernel_hypotheses": 11,
+  "first_deficient_depth": 10,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "9": null,
+   "10": null,
+   "11": null
+  },
+  "rows": [
+   {
+    "k": 9,
+    "rank": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "one": true,
+    "ideal_dim": 12616,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 10,
+    "rank": 18569,
+    "profile": [
+     0,
+     0,
+     2,
+     138,
+     3163,
+     18569
+    ],
+    "one": false,
+    "ideal_dim": 21700,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 4032,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 11,
+    "rank": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "one": false,
+    "ideal_dim": 35443,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "recorded V_D(k+1) SHA-256",
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D5-p13313-s11",
+  "p": 13313,
+  "a": 1,
+  "b": 0,
+  "seed": 11,
+  "D": 5,
+  "split": true,
+  "X": 7412,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   9,
+   10,
+   11
+  ],
+  "least_valid_base": null,
+  "least_base_kernel_hypotheses": 11,
+  "first_deficient_depth": 10,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "9": null,
+   "10": null,
+   "11": null
+  },
+  "rows": [
+   {
+    "k": 9,
+    "rank": 12572,
+    "profile": [
+     0,
+     0,
+     128,
+     944,
+     4004,
+     12572
+    ],
+    "one": false,
+    "ideal_dim": 12572,
+    "deficient": false,
+    "points": 44,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 24156,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 10,
+    "rank": 18569,
+    "profile": [
+     0,
+     0,
+     2,
+     138,
+     3163,
+     18569
+    ],
+    "one": false,
+    "ideal_dim": 21602,
+    "deficient": true,
+    "points": 98,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 4032,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 11,
+    "rank": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "one": false,
+    "ideal_dim": null,
+    "deficient": null,
+    "points": null,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D5-p15361-s12",
+  "p": 15361,
+  "a": 4021,
+  "b": 9917,
+  "seed": 12,
+  "D": 5,
+  "split": true,
+  "X": 7776,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   9,
+   10,
+   11
+  ],
+  "least_valid_base": null,
+  "least_base_kernel_hypotheses": 11,
+  "first_deficient_depth": 10,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "9": null,
+   "10": null,
+   "11": null
+  },
+  "rows": [
+   {
+    "k": 9,
+    "rank": 12602,
+    "profile": [
+     0,
+     5,
+     158,
+     974,
+     4034,
+     12602
+    ],
+    "one": false,
+    "ideal_dim": 12602,
+    "deficient": false,
+    "points": 14,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 13042,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 10,
+    "rank": 18569,
+    "profile": [
+     0,
+     0,
+     2,
+     138,
+     3163,
+     18569
+    ],
+    "one": false,
+    "ideal_dim": 21640,
+    "deficient": true,
+    "points": 60,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 4032,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 11,
+    "rank": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "one": false,
+    "ideal_dim": null,
+    "deficient": null,
+    "points": null,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": true
+   }
+  ]
+ },
+ {
+  "name": "D5-p40961-unit-s10",
+  "p": 40961,
+  "a": 1,
+  "b": 0,
+  "seed": 10,
+  "D": 5,
+  "split": true,
+  "X": 2136,
+  "exceptional": {
+   "order_two": false,
+   "t_zero": false,
+   "tangent": false
+  },
+  "depths": [
+   9,
+   10,
+   11,
+   12
+  ],
+  "least_valid_base": 11,
+  "least_base_kernel_hypotheses": 11,
+  "first_deficient_depth": 10,
+  "recursion_from_fall": true,
+  "witnesses": {
+   "9": null,
+   "10": null,
+   "11": null,
+   "12": null
+  },
+  "rows": [
+   {
+    "k": 9,
+    "rank": 12616,
+    "profile": [
+     1,
+     19,
+     172,
+     988,
+     4048,
+     12616
+    ],
+    "one": true,
+    "ideal_dim": 12616,
+    "deficient": false,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": false,
+    "hyp": false
+   },
+   {
+    "k": 10,
+    "rank": 18569,
+    "profile": [
+     0,
+     0,
+     2,
+     138,
+     3163,
+     18569
+    ],
+    "one": false,
+    "ideal_dim": 21700,
+    "deficient": true,
+    "points": 0,
+    "W_closed": false,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 4032,
+    "W_equals_next": false,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": true,
+    "hyp": false
+   },
+   {
+    "k": 11,
+    "rank": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "one": false,
+    "ideal_dim": 35443,
+    "deficient": true,
+    "points": 0,
+    "W_closed": true,
+    "W_gen_outside": 0,
+    "W_sweep_bad": 0,
+    "W_equals_next": true,
+    "W_equals_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+    "recursion_to_next": true,
+    "hyp": true
+   },
+   {
+    "k": 12,
+    "rank": 32057,
+    "profile": [
+     0,
+     0,
+     2,
+     146,
+     3727,
+     32057
+    ],
+    "one": false,
+    "ideal_dim": 55455,
+    "deficient": true,
+    "points": 0,
+    "W_closed": null,
+    "W_gen_outside": null,
+    "W_sweep_bad": null,
+    "W_equals_next": null,
+    "W_equals_by": null,
+    "recursion_to_next": null,
+    "hyp": null
+   }
+  ]
+ }
+]

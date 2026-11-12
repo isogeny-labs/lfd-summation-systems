@@ -1,0 +1,13 @@
+k0=7 k=11: {'rows': 1805, 'predicted': 1805, 'certificate': {'dim': 1805, 'contains_generator_rows': True, 'closed': True, 'contains_one': False, 'profile': [0, 0, 2, 131, 1805]}, 'compare_W_vs_V4': {'rank_a': 1805, 'rank_b': 1805, 'rank_sum': 1805, 'equal': True, 'only_in_a': 0, 'only_in_b': 0}, 'stable_low_dim': 829, 'stable_vs_base': {'rank_a': 829, 'rank_b': 829, 'rank_sum': 829, 'equal': True, 'only_in_a': 0, 'only_in_b': 0}, 'stable_low_in_base': True}
+Traceback (most recent call last):
+  File "/home/user/ml-cryptanalysis/scripts/ic_bounds_fall_verify.py", line 685, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/ml-cryptanalysis/scripts/ic_bounds_fall_verify.py", line 680, in main
+    dict(closures=cmd_closures, free=cmd_free, levels=cmd_levels, w=cmd_w, cross=cmd_cross,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         mult=cmd_mult, d5=cmd_d5)[args.cmd](args, args.out, log)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/ml-cryptanalysis/scripts/ic_bounds_fall_verify.py", line 359, in cmd_free
+    cmp_ = compare(W, Vk['E'], p)
+  File "/home/user/ml-cryptanalysis/scripts/ic_bounds_f

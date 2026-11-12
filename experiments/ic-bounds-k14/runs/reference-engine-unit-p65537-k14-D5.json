@@ -1,0 +1,83 @@
+{
+ "k": 14,
+ "D": 5,
+ "p": 65537,
+ "split": true,
+ "gens": "all",
+ "columns": 122438,
+ "finished": true,
+ "rank": 47849,
+ "profile": [
+  0,
+  0,
+  2,
+  154,
+  4323,
+  47849
+ ],
+ "part_profiles": [
+  [
+   0,
+   0,
+   2,
+   80,
+   2192,
+   23963
+  ],
+  [
+   0,
+   0,
+   0,
+   74,
+   2131,
+   23886
+  ]
+ ],
+ "part_ranks": [
+  23963,
+  23886
+ ],
+ "contains_one": false,
+ "rounds": 93,
+ "closure_seconds": 11935.3,
+ "madds": 107241007271403,
+ "peak_entries": [
+  894035567,
+  890470080
+ ],
+ "rref_ok": true,
+ "basis_sha256": [
+  "cfbdb672ca0152acda1e57255301b03fc7936067c934b461d639f77101557bd9",
+  "fceae22f1abb0f250a8adeedb69142199f611681a6d404352c7a5b23846a5f81"
+ ],
+ "sweep_random": {
+  "t": 6,
+  "seed": 1,
+  "nonzero_residuals": 0,
+  "maps": 56,
+  "passed": true
+ },
+ "sweep_full": {
+  "complete": true,
+  "rows_checked": 4323,
+  "nonzero_residuals": 0,
+  "passed": true
+ },
+ "points": 0,
+ "target": 122438,
+ "deficient": true,
+ "seconds": 16333.3,
+ "maxrss_mb": 13702,
+ "a": 1,
+ "b": 0,
+ "seed": 10,
+ "want": false,
+ "instance_target": [
+  4271,
+  11720
+ ],
+ "source_sha256": {
+  "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
+  "scripts/ic_bounds_d5_verify.py": "1c94b5bdd9fc50646a3fc8f927b2c0fe74d22186db19b69df8cb2606031ff06f"
+ }
+}

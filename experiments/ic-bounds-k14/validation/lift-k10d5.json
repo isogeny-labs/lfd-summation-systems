@@ -1,0 +1,282 @@
+{
+ "set": "k10d5",
+ "devices": [
+  "cpu",
+  "fake-gpu"
+ ],
+ "modes": [
+  "plain"
+ ],
+ "all_ok": true,
+ "rows": [
+  {
+   "case": "unit-65537-k10-D5to6",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 10,
+   "D": 5,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 60460,
+    "profile": [
+     1,
+     21,
+     211,
+     1351,
+     6196,
+     21700,
+     60460
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "a2f9245b18b2e968",
+     "118740867a8b80f4"
+    ],
+    "seconds": 0.0,
+    "madds": null,
+    "source": "experiments/ic-bounds-k14/RESULTS.md row D=6 k=10 (dim 60460 = columns, closed, 1 in V_6)"
+   },
+   "lift": {
+    "dim": 60460,
+    "profile": [
+     1,
+     21,
+     211,
+     1351,
+     6196,
+     21700,
+     60460
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "a2f9245b18b2e968",
+     "118740867a8b80f4"
+    ],
+    "dim_VD": 18569,
+    "free": [
+     1567,
+     1564
+    ],
+    "regular_top": [
+     19042,
+     18930
+    ],
+    "special_top": [
+     398,
+     390
+    ],
+    "dim_T": [
+     1965,
+     1954
+    ],
+    "dim_K": [
+     1965,
+     1954
+    ],
+    "falls": [
+     1567,
+     1564
+    ],
+    "falls_new_per_round": [
+     [
+      853,
+      693
+     ],
+     [
+      714,
+      871
+     ]
+    ],
+    "rounds": 2,
+    "reductions": 186921,
+    "counts": {
+     "images": 45876,
+     "eterm_rows": 141045,
+     "madds_gemm": 66222485921,
+     "candidates": 301068,
+     "candidates_nonzero": 11524,
+     "batches": 113,
+     "follower_builds": 78,
+     "follower_evictions": 38,
+     "fall_images": 30920
+    },
+    "madds": {
+     "gemm": 66222485921,
+     "k_reduce_update_rref": 18983079858,
+     "follower_sync": 119569735812,
+     "total": 204775301591
+    },
+    "seconds": 23.6,
+    "vd_closure": {
+     "rank": 18569,
+     "seconds": 103.3,
+     "madds": 539936272504
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 817,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.2999999998137355,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      1965,
+      1954
+     ]
+    }
+   }
+  },
+  {
+   "case": "unit-65537-k10-D5to6",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 10,
+   "D": 5,
+   "device": "fake-gpu",
+   "mode": "plain",
+   "solutions": 0,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 60460,
+    "profile": [
+     1,
+     21,
+     211,
+     1351,
+     6196,
+     21700,
+     60460
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "a2f9245b18b2e968",
+     "118740867a8b80f4"
+    ],
+    "seconds": 0.0,
+    "madds": null,
+    "source": "experiments/ic-bounds-k14/RESULTS.md row D=6 k=10 (dim 60460 = columns, closed, 1 in V_6)"
+   },
+   "lift": {
+    "dim": 60460,
+    "profile": [
+     1,
+     21,
+     211,
+     1351,
+     6196,
+     21700,
+     60460
+    ],
+    "contains_one": true,
+    "low_sha": [
+     "a2f9245b18b2e968",
+     "118740867a8b80f4"
+    ],
+    "dim_VD": 18569,
+    "free": [
+     1567,
+     1564
+    ],
+    "regular_top": [
+     19042,
+     18930
+    ],
+    "special_top": [
+     398,
+     390
+    ],
+    "dim_T": [
+     1965,
+     1954
+    ],
+    "dim_K": [
+     1965,
+     1954
+    ],
+    "falls": [
+     1567,
+     1564
+    ],
+    "falls_new_per_round": [
+     [
+      853,
+      693
+     ],
+     [
+      714,
+      871
+     ]
+    ],
+    "rounds": 2,
+    "reductions": 186921,
+    "counts": {
+     "images": 45876,
+     "eterm_rows": 141045,
+     "madds_gemm": 66222485921,
+     "candidates": 301068,
+     "candidates_nonzero": 11524,
+     "batches": 113,
+     "follower_builds": 78,
+     "follower_evictions": 38,
+     "fall_images": 30920
+    },
+    "madds": {
+     "gemm": 66222485921,
+     "k_reduce_update_rref": 18983079858,
+     "follower_sync": 119569735812,
+     "total": 204775301591
+    },
+    "seconds": 27.2,
+    "vd_closure": {
+     "rank": 18569,
+     "seconds": 101.2,
+     "madds": 539936272504
+    },
+    "dev_peak_live_mb": 690,
+    "maxrss_mb": 869,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.2999999998137355,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      1965,
+      1954
+     ]
+    }
+   }
+  }
+ ],
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "1870a501365977b07d98cbf84f92b6217a9466e688c2573da1e87b6af1a6fe3d"
+ }
+}

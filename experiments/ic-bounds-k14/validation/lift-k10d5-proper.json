@@ -1,0 +1,150 @@
+{
+ "set": "k10d5-proper",
+ "devices": [
+  "cpu"
+ ],
+ "modes": [
+  "plain"
+ ],
+ "all_ok": true,
+ "rows": [
+  {
+   "case": "proper-65537-X1424-k10-D5to6",
+   "p": 65537,
+   "a": 4021,
+   "b": 9917,
+   "X": 1424,
+   "k": 10,
+   "D": 5,
+   "device": "cpu",
+   "mode": "plain",
+   "solutions": 14,
+   "ok": true,
+   "compare": {
+    "dim": true,
+    "profile": true,
+    "contains_one": true,
+    "low_sha": true,
+    "part_dims": true,
+    "all": true
+   },
+   "direct": {
+    "dim": 60446,
+    "profile": [
+     0,
+     7,
+     197,
+     1337,
+     6182,
+     21686,
+     60446
+    ],
+    "contains_one": false,
+    "low_sha": [
+     "127118852c8be87b",
+     "dd697484704c8cc6"
+    ],
+    "seconds": 760.6,
+    "madds": 5259134630079,
+    "source": "engine closure, closed, full sweep clean"
+   },
+   "lift": {
+    "dim": 60446,
+    "profile": [
+     0,
+     7,
+     197,
+     1337,
+     6182,
+     21686,
+     60446
+    ],
+    "contains_one": false,
+    "low_sha": [
+     "127118852c8be87b",
+     "dd697484704c8cc6"
+    ],
+    "dim_VD": 18569,
+    "free": [
+     1567,
+     1564
+    ],
+    "regular_top": [
+     19042,
+     18930
+    ],
+    "special_top": [
+     398,
+     390
+    ],
+    "dim_T": [
+     1965,
+     1954
+    ],
+    "dim_K": [
+     1958,
+     1947
+    ],
+    "falls": [
+     1560,
+     1557
+    ],
+    "falls_new_per_round": [
+     [
+      853,
+      693
+     ],
+     [
+      707,
+      864
+     ]
+    ],
+    "rounds": 2,
+    "reductions": 861745,
+    "counts": {
+     "images": 370460,
+     "eterm_rows": 491285,
+     "madds_gemm": 69963957641,
+     "candidates": 332488,
+     "candidates_nonzero": 11525,
+     "batches": 113,
+     "follower_builds": 117,
+     "follower_evictions": 77,
+     "fall_images": 62340
+    },
+    "madds": {
+     "gemm": 69963957641,
+     "k_reduce_update_rref": 36668327418,
+     "follower_sync": 119542651447,
+     "total": 226174936506
+    },
+    "seconds": 36.7,
+    "vd_closure": {
+     "rank": 18569,
+     "seconds": 72.6,
+     "madds": 539936419470
+    },
+    "dev_peak_live_mb": null,
+    "maxrss_mb": 4535248,
+    "settings": {
+     "work_gb": 0.39999999944120646,
+     "cache_gb": 0.25,
+     "batch_units": null,
+     "direct_rows": null,
+     "include_low": false,
+     "fall_every": 8,
+     "stop_on_one": false,
+     "tile_rows_K": [
+      1965,
+      1954
+     ]
+    }
+   }
+  }
+ ],
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "harness": "52cf247eea2db41d22679bcaa0a3a1811c7d2441a130d204794dd386436651a5"
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "passed: exact dense profiles through degree 4 with exclusion certificates; shift-closure rank certificates at degree 5/6",
+  "source_sha256": {
+    "csd/ic_chain_shift_closure.py": "2e9b0452e81ee7d16bca9b4799116eed8c03b8a3d4b252ecce5f1568152b1a60",
+    "scripts/run_ic_chain_depth8.py": "47441e687273dc28593dc113fa64afd8542ee7d8c83c94b76d382efc9dfac6d6",
+    "csd/ic_curve_sweep.py": "4ddefb24900dda4d4f52dcd33b5d30ac7ddf80e3704c1c51d08df0a60fe9874c",
+    "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+    "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+    "csd/_elim.c": "1269131384fc5f110b90b70a1c8f174a60ca7fe968388f6e13f96eba56959290"
+  },
+  "data_sha256": {
+    "experiments/ic-chain-depth9/cases.jsonl": "a66a01f208dbac0cbf0a25d2f85ab09738dfcc145788b573fdae3c6260208d49",
+    "experiments/ic-chain-depth9/results.jsonl": "f332095dcbb3efb6ae93258903dd4d4284ad39eff8673a7f958cc1c84c1b5b24",
+    "experiments/ic-chain-depth9/summary.json": "3ac948898cc1c41d7751136dd93dd3a2a85c0b66e4d1cb7d68cef0482659148a",
+    "experiments/ic-chain-depth9/systems.jsonl": "2d5c1bbfe69a8e944e91c345782c82bb41df5472768af66a9fae38720654683a"
+  }
+}

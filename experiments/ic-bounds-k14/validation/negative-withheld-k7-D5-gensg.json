@@ -1,0 +1,436 @@
+{
+ "extra": "",
+ "k": 7,
+ "D": 5,
+ "gens": "g",
+ "rows": [
+  {
+   "withheld": "0:0",
+   "t_random": 6,
+   "no_repair_exit": 3,
+   "no_repair_closed": false,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 84,
+    "passed": false,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": false,
+    "rows_checked": 0,
+    "nonzero_residuals": 84,
+    "passed": false,
+    "note": "randomized sweep failed (no repair)"
+   },
+   "hash_wrong_without_repair": true,
+   "rank_without_repair": 1,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 1,
+   "repair_rows": 14,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:1",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:2",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:3",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:5",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:8",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:13",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:21",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:40",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "1:0",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "1:2",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "1:7",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "1:30",
+   "t_random": 6,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 6,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 28
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "0:0",
+   "t_random": 0,
+   "no_repair_exit": 3,
+   "no_repair_closed": false,
+   "sweep_random": {
+    "t": 0,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 0
+   },
+   "sweep_full": {
+    "complete": false,
+    "rows_checked": 1,
+    "nonzero_residuals": 7,
+    "passed": false,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": true,
+   "rank_without_repair": 1,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 1,
+   "repair_rows": 7,
+   "repair_closed": true,
+   "repair_hash_match": true
+  },
+  {
+   "withheld": "1:0",
+   "t_random": 0,
+   "no_repair_exit": 0,
+   "no_repair_closed": true,
+   "sweep_random": {
+    "t": 0,
+    "seed": 1,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "maps": 0
+   },
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 2934,
+    "nonzero_residuals": 0,
+    "passed": true,
+    "sweeps_run": 1
+   },
+   "hash_wrong_without_repair": false,
+   "rank_without_repair": 3469,
+   "ref_rank": 3469,
+   "repair_exit": 0,
+   "repair_repairs": 0,
+   "repair_rows": 0,
+   "repair_closed": true,
+   "repair_hash_match": true
+  }
+ ],
+ "note": "withholding a low row is detected whenever the final basis is wrong; rows whose shifts already lie in the span of the others do not change the result and are reported as such",
+ "detected_all": true,
+ "repaired_all": true,
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "validate": "516a5200a6561abfd8b05d32fa580e641a7c3f95b0e3e76a0c4718cee74e8f7e"
+ }
+}

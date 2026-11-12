@@ -1,0 +1,155 @@
+{
+ "k": 13,
+ "D": 6,
+ "p": 65537,
+ "split": true,
+ "gens": "all",
+ "columns": 313912,
+ "generator_rows": 17902,
+ "rank": 312884,
+ "profile": [
+  0,
+  0,
+  2,
+  1924,
+  16874,
+  82654,
+  312884
+ ],
+ "part_profiles": [
+  [
+   0,
+   0,
+   2,
+   969,
+   8483,
+   41373,
+   156631
+  ],
+  [
+   0,
+   0,
+   0,
+   955,
+   8391,
+   41281,
+   156253
+  ]
+ ],
+ "part_ranks": [
+  156631,
+  156253
+ ],
+ "contains_one": false,
+ "closure_complete": true,
+ "closed": true,
+ "rounds": 51,
+ "seconds": 2156.6,
+ "madds": 787991399199039,
+ "madds_detail": {
+  "reduce": 401254939692094,
+  "reduce_dense": 3597189456536230,
+  "update": 357087948765818,
+  "rref": 29648510741127
+ },
+ "madds_dense": 3983925916043175,
+ "madds_closure_phase": 786575114180503,
+ "seconds_detail": {
+  "reduce": 411.09,
+  "update": 336.43,
+  "rref": 1315.56
+ },
+ "peak_entries": [
+  6173561856,
+  6143956560
+ ],
+ "peak_phys_entries": [
+  6525585168,
+  6495903960
+ ],
+ "compactions": [
+  71,
+  56
+ ],
+ "rref_ok": true,
+ "basis_sha256": [
+  "52a718f7333ea16c8525b72595fbe1ec81b91f82be47d53fbd57e65e60731f40",
+  "f9e535b8692e44ded4dc1e08fe12b90377eb2a04d071bacd808c1cc5462ba27e"
+ ],
+ "sweep_random": {
+  "t": 6,
+  "seed": 1,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "maps": 52
+ },
+ "sweep_full": {
+  "complete": true,
+  "rows_checked": 165308,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "sweeps_run": 1
+ },
+ "repairs": 0,
+ "repair_rows": 0,
+ "resumes": 0,
+ "device": "gpu",
+ "threads": 12,
+ "blas_threads_env": "12",
+ "maxrss_mb": 869,
+ "engine_sha256": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+ "engine_version": "ic_bounds_big/2",
+ "work_gb": 20.0,
+ "tile_mb": 1024.0,
+ "tile_rows": [
+  1708,
+  1712
+ ],
+ "batch": 2048,
+ "compact_frac": 0.05,
+ "t_random": 6,
+ "sweep_chunk": 256,
+ "stop_on_one": false,
+ "no_repair": false,
+ "compress": false,
+ "spill": {
+  "spills": 0,
+  "fetches": 0,
+  "d2h_bytes": 0,
+  "h2d_bytes": 0,
+  "d2h_s": 0.0,
+  "h2d_s": 0.0,
+  "switches": 248,
+  "tile_budget_bytes": 88583827664,
+  "dev_limit_bytes": 112742891520,
+  "host_tile_bytes": 0
+ },
+ "dev_used_mb": 1334,
+ "dev_total_mb": 143157,
+ "dev_peak_live_mb": null,
+ "status": "done",
+ "instance_file": "proper-p65537-s12-k13.json",
+ "instance_sha256": "8e8b7303046b6c40bd3dc80c1d3d70cbd3b6bb9ee19358ea6e08ccee8dbc351d",
+ "a": 4021,
+ "b": 9917,
+ "seed": 12,
+ "want": true,
+ "unit_nonresidue": false,
+ "instance_target": [
+  1424,
+  826
+ ],
+ "attempts": 1,
+ "instance_k": 13,
+ "resumed_from_checkpoint": false,
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "instance": "8e8b7303046b6c40bd3dc80c1d3d70cbd3b6bb9ee19358ea6e08ccee8dbc351d"
+ },
+ "points": 1028,
+ "target": 312884,
+ "soundness_vanish_on_Z": true,
+ "eval_rank_below_D": 1028,
+ "deficient": false
+}

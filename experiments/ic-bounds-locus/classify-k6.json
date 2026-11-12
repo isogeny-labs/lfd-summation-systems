@@ -1,0 +1,1317 @@
+{
+ "prime": 193,
+ "k": 6,
+ "generic": {
+  "V3": 13,
+  "V4": 605,
+  "low4": 111
+ },
+ "records": 890,
+ "training_records": 890,
+ "per_curve": [
+  {
+   "a": 0,
+   "b": 1,
+   "j": 0,
+   "holdout": false,
+   "targets": 97,
+   "order_two_targets": 3,
+   "deviating": 4,
+   "deviating_t": [
+    0,
+    85,
+    109,
+    192
+   ]
+  },
+  {
+   "a": 0,
+   "b": 5,
+   "j": 0,
+   "holdout": false,
+   "targets": 108,
+   "order_two_targets": 0,
+   "deviating": 0,
+   "deviating_t": []
+  },
+  {
+   "a": 1,
+   "b": 0,
+   "j": 184,
+   "holdout": false,
+   "targets": 105,
+   "order_two_targets": 3,
+   "deviating": 7,
+   "deviating_t": [
+    0,
+    8,
+    40,
+    81,
+    112,
+    153,
+    185
+   ]
+  },
+  {
+   "a": 5,
+   "b": 0,
+   "j": 184,
+   "holdout": false,
+   "targets": 109,
+   "order_two_targets": 1,
+   "deviating": 3,
+   "deviating_t": [
+    0,
+    96,
+    97
+   ]
+  },
+  {
+   "a": 22,
+   "b": 23,
+   "j": 97,
+   "holdout": false,
+   "targets": 98,
+   "order_two_targets": 1,
+   "deviating": 4,
+   "deviating_t": [
+    0,
+    134,
+    135,
+    192
+   ]
+  },
+  {
+   "a": 46,
+   "b": 29,
+   "j": 190,
+   "holdout": false,
+   "targets": 89,
+   "order_two_targets": 0,
+   "deviating": 1,
+   "deviating_t": [
+    144
+   ]
+  },
+  {
+   "a": 61,
+   "b": 121,
+   "j": 119,
+   "holdout": false,
+   "targets": 105,
+   "order_two_targets": 3,
+   "deviating": 4,
+   "deviating_t": [
+    0,
+    11,
+    45,
+    137
+   ]
+  },
+  {
+   "a": 68,
+   "b": 122,
+   "j": 97,
+   "holdout": false,
+   "targets": 96,
+   "order_two_targets": 1,
+   "deviating": 3,
+   "deviating_t": [
+    42,
+    96,
+    136
+   ]
+  },
+  {
+   "a": 111,
+   "b": 126,
+   "j": 125,
+   "holdout": false,
+   "targets": 83,
+   "order_two_targets": 0,
+   "deviating": 3,
+   "deviating_t": [
+    0,
+    28,
+    60
+   ]
+  }
+ ],
+ "signatures": [
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 607,
+    "exact_lfd": 5,
+    "low3": 1,
+    "low4": 113,
+    "one4": false
+   },
+   "count": 10,
+   "members": [
+    {
+     "a": 0,
+     "b": 1,
+     "t": 85,
+     "Z": 17,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "a=0",
+      "b in H",
+      "c10/c11 in H",
+      "c20/c00 in H",
+      "j=0",
+      "rhs=0",
+      "some t-e in H",
+      "t3+b=0",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 0,
+     "b": 1,
+     "t": 109,
+     "Z": 26,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "a2-4bt in H",
+      "a=0",
+      "b in H",
+      "c00/c11 in H",
+      "c00/c22 in H",
+      "c11/c22 in H",
+      "c21/c20 in H",
+      "j=0",
+      "rhs=0",
+      "some t-e in H",
+      "t3+b=0",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 0,
+     "b": 1,
+     "t": 192,
+     "Z": 17,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "3t2+a in H",
+      "a=0",
+      "b in H",
+      "c10/c00 in H",
+      "c20/c22 in H",
+      "j=0",
+      "rhs=0",
+      "t in H",
+      "t2+a in H",
+      "t3+b=0",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 1,
+     "b": 0,
+     "t": 81,
+     "Z": 18,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "a in H",
+      "a2-4bt in H",
+      "at+2b in H",
+      "b=0",
+      "c00/c22 in H",
+      "c20/c00 in H",
+      "c20/c22 in H",
+      "j=1728",
+      "rhs=0",
+      "some t-e in H",
+      "t in H",
+      "t2+a=0",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 1,
+     "b": 0,
+     "t": 112,
+     "Z": 18,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "a in H",
+      "a2-4bt in H",
+      "at+2b in H",
+      "b=0",
+      "c00/c22 in H",
+      "c20/c00 in H",
+      "c20/c22 in H",
+      "j=1728",
+      "rhs=0",
+      "some t-e in H",
+      "t in H",
+      "t2+a=0",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 22,
+     "b": 23,
+     "t": 192,
+     "Z": 22,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "a2-4bt in H",
+      "at+2b in H",
+      "b in H",
+      "c00/c22 in H",
+      "c10/c11 in H",
+      "c20/c00 in H",
+      "c20/c22 in H",
+      "rhs=0",
+      "t in H",
+      "t2+a in H"
+     ]
+    },
+    {
+     "a": 61,
+     "b": 121,
+     "t": 11,
+     "Z": 26,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "b in H",
+      "c00/c11 in H",
+      "c20/c22 in H",
+      "rhs=0",
+      "some t-e in H",
+      "t in H",
+      "t2+a in H",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 61,
+     "b": 121,
+     "t": 45,
+     "Z": 22,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "b in H",
+      "c10/c11 in H",
+      "c11/c22 in H",
+      "c20/c00 in H",
+      "c21/c20 in H",
+      "rhs=0",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 61,
+     "b": 121,
+     "t": 137,
+     "Z": 20,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "b in H",
+      "c10/c11 in H",
+      "c20/c00 in H",
+      "rhs=0",
+      "some t-e in H",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 68,
+     "b": 122,
+     "t": 136,
+     "Z": 25,
+     "deviation": {
+      "V4": 607,
+      "low4": 113
+     },
+     "true_features": [
+      "a in H",
+      "at+2b in H",
+      "b in H",
+      "c10/c00 in H",
+      "c11/c22 in H",
+      "c21/c20 in H",
+      "rhs=0"
+     ]
+    }
+   ],
+   "common_features": [
+    "rhs=0"
+   ],
+   "common_feature_counts_among_generic": {
+    "rhs=0": 0
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 766,
+    "exact_lfd": 4,
+    "low3": 1,
+    "low4": 271,
+    "one4": false
+   },
+   "count": 3,
+   "members": [
+    {
+     "a": 1,
+     "b": 0,
+     "t": 40,
+     "Z": 28,
+     "deviation": {
+      "V4": 766,
+      "low4": 271,
+      "LFD": 4
+     },
+     "true_features": [
+      "3t2+a in H",
+      "a in H",
+      "a2-4bt in H",
+      "b=0",
+      "c00/c22 in H",
+      "c10/c11 in H",
+      "c21/c20 in H",
+      "j=1728",
+      "some t-e in H",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 1,
+     "b": 0,
+     "t": 153,
+     "Z": 28,
+     "deviation": {
+      "V4": 766,
+      "low4": 271,
+      "LFD": 4
+     },
+     "true_features": [
+      "3t2+a in H",
+      "a in H",
+      "a2-4bt in H",
+      "b=0",
+      "c00/c22 in H",
+      "c10/c11 in H",
+      "c21/c20 in H",
+      "j=1728",
+      "some t-e in H",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 22,
+     "b": 23,
+     "t": 135,
+     "Z": 28,
+     "deviation": {
+      "V4": 766,
+      "low4": 271,
+      "LFD": 4
+     },
+     "true_features": [
+      "at+2b in H",
+      "b in H",
+      "c10/c11 in H",
+      "c20/c00 in H",
+      "c21/c20 in H",
+      "t2+a in H"
+     ]
+    }
+   ],
+   "common_features": [
+    "c10/c11 in H",
+    "c21/c20 in H"
+   ],
+   "common_feature_counts_among_generic": {
+    "c10/c11 in H": 300,
+    "c21/c20 in H": 281
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 612,
+    "exact_lfd": 5,
+    "low3": 1,
+    "low4": 117,
+    "one4": false
+   },
+   "count": 3,
+   "members": [
+    {
+     "a": 111,
+     "b": 126,
+     "t": 0,
+     "Z": 6,
+     "deviation": {
+      "V4": 612,
+      "low4": 117
+     },
+     "true_features": [
+      "b in H",
+      "c11/c22 in H",
+      "rhs in H",
+      "t=0"
+     ]
+    },
+    {
+     "a": 22,
+     "b": 23,
+     "t": 0,
+     "Z": 34,
+     "deviation": {
+      "V4": 612,
+      "low4": 117
+     },
+     "true_features": [
+      "all t-e in H",
+      "b in H",
+      "c00/c11 in H",
+      "c10/c00 in H",
+      "c10/c11 in H",
+      "rhs in H",
+      "some t-e in H",
+      "t=0",
+      "x2R in H"
+     ]
+    },
+    {
+     "a": 61,
+     "b": 121,
+     "t": 0,
+     "Z": 22,
+     "deviation": {
+      "V4": 612,
+      "low4": 117
+     },
+     "true_features": [
+      "b in H",
+      "c11/c22 in H",
+      "rhs in H",
+      "some t-e in H",
+      "t=0",
+      "three rational 2-torsion"
+     ]
+    }
+   ],
+   "common_features": [
+    "b in H",
+    "rhs in H",
+    "t=0"
+   ],
+   "common_feature_counts_among_generic": {
+    "b in H": 549,
+    "rhs in H": 292,
+    "t=0": 0
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 602,
+    "exact_lfd": 5,
+    "low3": 1,
+    "low4": 111,
+    "one4": false
+   },
+   "count": 3,
+   "members": [
+    {
+     "a": 111,
+     "b": 126,
+     "t": 28,
+     "Z": 18,
+     "deviation": {
+      "V4": 602
+     },
+     "true_features": [
+      "b in H",
+      "c21/c20 in H"
+     ]
+    },
+    {
+     "a": 111,
+     "b": 126,
+     "t": 60,
+     "Z": 8,
+     "deviation": {
+      "V4": 602
+     },
+     "true_features": [
+      "b in H",
+      "c10/c11 in H",
+      "c11/c22 in H",
+      "c20/c22 in H",
+      "rhs in H",
+      "t in H"
+     ]
+    },
+    {
+     "a": 68,
+     "b": 122,
+     "t": 96,
+     "Z": 30,
+     "deviation": {
+      "V4": 602
+     },
+     "true_features": [
+      "3at+4b=0",
+      "3t2+a in H",
+      "a in H",
+      "a2-4bt in H",
+      "b in H",
+      "c00/c22 in H",
+      "rhs in H",
+      "t2+a in H"
+     ]
+    }
+   ],
+   "common_features": [
+    "b in H"
+   ],
+   "common_feature_counts_among_generic": {
+    "b in H": 549
+   }
+  },
+  {
+   "signature": {
+    "V3": 34,
+    "V4": 603,
+    "exact_lfd": 5,
+    "low3": 3,
+    "low4": 111,
+    "one4": false
+   },
+   "count": 2,
+   "members": [
+    {
+     "a": 1,
+     "b": 0,
+     "t": 8,
+     "Z": 28,
+     "deviation": {
+      "V3": 34,
+      "V4": 603
+     },
+     "true_features": [
+      "3t2+a=0",
+      "a in H",
+      "a2-4bt in H",
+      "at+2b in H",
+      "b=0",
+      "c00/c22 in H",
+      "c20/c00 in H",
+      "c20/c22 in H",
+      "j=1728",
+      "some t-e in H",
+      "t in H",
+      "three rational 2-torsion"
+     ]
+    },
+    {
+     "a": 1,
+     "b": 0,
+     "t": 185,
+     "Z": 28,
+     "deviation": {
+      "V3": 34,
+      "V4": 603
+     },
+     "true_features": [
+      "3t2+a=0",
+      "a in H",
+      "a2-4bt in H",
+      "at+2b in H",
+      "b=0",
+      "c00/c22 in H",
+      "c20/c00 in H",
+      "c20/c22 in H",
+      "j=1728",
+      "some t-e in H",
+      "t in H",
+      "three rational 2-torsion"
+     ]
+    }
+   ],
+   "common_features": [
+    "3t2+a=0",
+    "a in H",
+    "a2-4bt in H",
+    "at+2b in H",
+    "b=0",
+    "c00/c22 in H",
+    "c20/c00 in H",
+    "c20/c22 in H",
+    "j=1728",
+    "some t-e in H",
+    "t in H",
+    "three rational 2-torsion"
+   ],
+   "common_feature_counts_among_generic": {
+    "3t2+a=0": 0,
+    "a in H": 191,
+    "a2-4bt in H": 330,
+    "at+2b in H": 206,
+    "b=0": 204,
+    "c00/c22 in H": 330,
+    "c20/c00 in H": 290,
+    "c20/c22 in H": 298,
+    "j=1728": 204,
+    "some t-e in H": 308,
+    "t in H": 298,
+    "three rational 2-torsion": 292
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 762,
+    "exact_lfd": 4,
+    "low3": 1,
+    "low4": 267,
+    "one4": false
+   },
+   "count": 2,
+   "members": [
+    {
+     "a": 5,
+     "b": 0,
+     "t": 96,
+     "Z": 32,
+     "deviation": {
+      "V4": 762,
+      "low4": 267,
+      "LFD": 4
+     },
+     "true_features": [
+      "at+2b in H",
+      "b=0",
+      "c10/c11 in H",
+      "j=1728",
+      "t2+a in H",
+      "x2R in H"
+     ]
+    },
+    {
+     "a": 5,
+     "b": 0,
+     "t": 97,
+     "Z": 32,
+     "deviation": {
+      "V4": 762,
+      "low4": 267,
+      "LFD": 4
+     },
+     "true_features": [
+      "at+2b in H",
+      "b=0",
+      "c10/c11 in H",
+      "j=1728",
+      "t2+a in H",
+      "x2R in H"
+     ]
+    }
+   ],
+   "common_features": [
+    "at+2b in H",
+    "b=0",
+    "c10/c11 in H",
+    "j=1728",
+    "t2+a in H",
+    "x2R in H"
+   ],
+   "common_feature_counts_among_generic": {
+    "at+2b in H": 206,
+    "b=0": 204,
+    "c10/c11 in H": 300,
+    "j=1728": 204,
+    "t2+a in H": 277,
+    "x2R in H": 325
+   }
+  },
+  {
+   "signature": {
+    "V3": 44,
+    "V4": 773,
+    "exact_lfd": 4,
+    "low3": 4,
+    "low4": 278,
+    "one4": false
+   },
+   "count": 1,
+   "members": [
+    {
+     "a": 0,
+     "b": 1,
+     "t": 0,
+     "Z": 21,
+     "deviation": {
+      "V3": 44,
+      "V4": 773,
+      "low4": 278,
+      "LFD": 4
+     },
+     "true_features": [
+      "3t2+a=0",
+      "a2-4bt=0",
+      "a=0",
+      "b in H",
+      "j=0",
+      "psi3=0",
+      "rhs in H",
+      "some t-e in H",
+      "t2+3a=0",
+      "t2+a=0",
+      "t2-a=0",
+      "t=0",
+      "three rational 2-torsion",
+      "x2R=t",
+      "x2R_num=0"
+     ]
+    }
+   ],
+   "common_features": [
+    "3t2+a=0",
+    "a2-4bt=0",
+    "a=0",
+    "b in H",
+    "j=0",
+    "psi3=0",
+    "rhs in H",
+    "some t-e in H",
+    "t2+3a=0",
+    "t2+a=0",
+    "t2-a=0",
+    "t=0",
+    "three rational 2-torsion",
+    "x2R=t",
+    "x2R_num=0"
+   ],
+   "common_feature_counts_among_generic": {
+    "3t2+a=0": 0,
+    "a2-4bt=0": 3,
+    "a=0": 201,
+    "b in H": 549,
+    "j=0": 201,
+    "psi3=0": 1,
+    "rhs in H": 292,
+    "some t-e in H": 308,
+    "t2+3a=0": 4,
+    "t2+a=0": 0,
+    "t2-a=0": 2,
+    "t=0": 0,
+    "three rational 2-torsion": 292,
+    "x2R=t": 1,
+    "x2R_num=0": 8
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 730,
+    "exact_lfd": 4,
+    "low3": 1,
+    "low4": 235,
+    "one4": false
+   },
+   "count": 1,
+   "members": [
+    {
+     "a": 1,
+     "b": 0,
+     "t": 0,
+     "Z": 64,
+     "deviation": {
+      "V4": 730,
+      "low4": 235,
+      "LFD": 4
+     },
+     "true_features": [
+      "2t3-b=0",
+      "3at+4b=0",
+      "3t2+a in H",
+      "a in H",
+      "a2-4bt in H",
+      "all t-e in H",
+      "at+2b=0",
+      "at+3b=0",
+      "at+b=0",
+      "at-b=0",
+      "b=0",
+      "c00/c22 in H",
+      "j=1728",
+      "rhs=0",
+      "some t-e in H",
+      "t2+a in H",
+      "t3+b=0",
+      "t3-b=0",
+      "t=0",
+      "three rational 2-torsion"
+     ]
+    }
+   ],
+   "common_features": [
+    "2t3-b=0",
+    "3at+4b=0",
+    "3t2+a in H",
+    "a in H",
+    "a2-4bt in H",
+    "all t-e in H",
+    "at+2b=0",
+    "at+3b=0",
+    "at+b=0",
+    "at-b=0",
+    "b=0",
+    "c00/c22 in H",
+    "j=1728",
+    "rhs=0",
+    "some t-e in H",
+    "t2+a in H",
+    "t3+b=0",
+    "t3-b=0",
+    "t=0",
+    "three rational 2-torsion"
+   ],
+   "common_feature_counts_among_generic": {
+    "2t3-b=0": 0,
+    "3at+4b=0": 1,
+    "3t2+a in H": 269,
+    "a in H": 191,
+    "a2-4bt in H": 330,
+    "all t-e in H": 109,
+    "at+2b=0": 4,
+    "at+3b=0": 2,
+    "at+b=0": 1,
+    "at-b=0": 2,
+    "b=0": 204,
+    "c00/c22 in H": 330,
+    "j=1728": 204,
+    "rhs=0": 0,
+    "some t-e in H": 308,
+    "t2+a in H": 277,
+    "t3+b=0": 3,
+    "t3-b=0": 11,
+    "t=0": 0,
+    "three rational 2-torsion": 292
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 760,
+    "exact_lfd": 4,
+    "low3": 1,
+    "low4": 265,
+    "one4": false
+   },
+   "count": 1,
+   "members": [
+    {
+     "a": 22,
+     "b": 23,
+     "t": 134,
+     "Z": 34,
+     "deviation": {
+      "V4": 760,
+      "low4": 265,
+      "LFD": 4
+     },
+     "true_features": [
+      "3t2+a in H",
+      "a2-4bt in H",
+      "at+2b in H",
+      "b in H",
+      "c00/c22 in H",
+      "c10/c11 in H",
+      "c21/c20 in H",
+      "t2+a in H"
+     ]
+    }
+   ],
+   "common_features": [
+    "3t2+a in H",
+    "a2-4bt in H",
+    "at+2b in H",
+    "b in H",
+    "c00/c22 in H",
+    "c10/c11 in H",
+    "c21/c20 in H",
+    "t2+a in H"
+   ],
+   "common_feature_counts_among_generic": {
+    "3t2+a in H": 269,
+    "a2-4bt in H": 330,
+    "at+2b in H": 206,
+    "b in H": 549,
+    "c00/c22 in H": 330,
+    "c10/c11 in H": 300,
+    "c21/c20 in H": 281,
+    "t2+a in H": 277
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 786,
+    "exact_lfd": 4,
+    "low3": 1,
+    "low4": 291,
+    "one4": false
+   },
+   "count": 1,
+   "members": [
+    {
+     "a": 46,
+     "b": 29,
+     "t": 144,
+     "Z": 8,
+     "deviation": {
+      "V4": 786,
+      "low4": 291,
+      "LFD": 4
+     },
+     "true_features": [
+      "b in H",
+      "c10/c00 in H",
+      "c11/c22 in H",
+      "c20/c00 in H",
+      "c21/c20 in H"
+     ]
+    }
+   ],
+   "common_features": [
+    "b in H",
+    "c10/c00 in H",
+    "c11/c22 in H",
+    "c20/c00 in H",
+    "c21/c20 in H"
+   ],
+   "common_feature_counts_among_generic": {
+    "b in H": 549,
+    "c10/c00 in H": 291,
+    "c11/c22 in H": 281,
+    "c20/c00 in H": 290,
+    "c21/c20 in H": 281
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 794,
+    "exact_lfd": 4,
+    "low3": 1,
+    "low4": 299,
+    "one4": true
+   },
+   "count": 1,
+   "members": [
+    {
+     "a": 5,
+     "b": 0,
+     "t": 0,
+     "Z": 0,
+     "deviation": {
+      "V4": 794,
+      "low4": 299,
+      "one4": true,
+      "LFD": 4
+     },
+     "true_features": [
+      "2t3-b=0",
+      "3at+4b=0",
+      "at+2b=0",
+      "at+3b=0",
+      "at+b=0",
+      "at-b=0",
+      "b=0",
+      "c00/c11 in H",
+      "j=1728",
+      "rhs=0",
+      "t3+b=0",
+      "t3-b=0",
+      "t=0"
+     ]
+    }
+   ],
+   "common_features": [
+    "2t3-b=0",
+    "3at+4b=0",
+    "at+2b=0",
+    "at+3b=0",
+    "at+b=0",
+    "at-b=0",
+    "b=0",
+    "c00/c11 in H",
+    "j=1728",
+    "rhs=0",
+    "t3+b=0",
+    "t3-b=0",
+    "t=0"
+   ],
+   "common_feature_counts_among_generic": {
+    "2t3-b=0": 0,
+    "3at+4b=0": 1,
+    "at+2b=0": 4,
+    "at+3b=0": 2,
+    "at+b=0": 1,
+    "at-b=0": 2,
+    "b=0": 204,
+    "c00/c11 in H": 281,
+    "j=1728": 204,
+    "rhs=0": 0,
+    "t3+b=0": 3,
+    "t3-b=0": 11,
+    "t=0": 0
+   }
+  },
+  {
+   "signature": {
+    "V3": 13,
+    "V4": 770,
+    "exact_lfd": 4,
+    "low3": 1,
+    "low4": 275,
+    "one4": false
+   },
+   "count": 1,
+   "members": [
+    {
+     "a": 68,
+     "b": 122,
+     "t": 42,
+     "Z": 24,
+     "deviation": {
+      "V4": 770,
+      "low4": 275,
+      "LFD": 4
+     },
+     "true_features": [
+      "a in H",
+      "all t-e in H",
+      "b in H",
+      "c10/c11 in H",
+      "c11/c22 in H",
+      "c20/c22 in H",
+      "some t-e in H",
+      "t in H"
+     ]
+    }
+   ],
+   "common_features": [
+    "a in H",
+    "all t-e in H",
+    "b in H",
+    "c10/c11 in H",
+    "c11/c22 in H",
+    "c20/c22 in H",
+    "some t-e in H",
+    "t in H"
+   ],
+   "common_feature_counts_among_generic": {
+    "a in H": 191,
+    "all t-e in H": 109,
+    "b in H": 549,
+    "c10/c11 in H": 300,
+    "c11/c22 in H": 281,
+    "c20/c22 in H": 298,
+    "some t-e in H": 308,
+    "t in H": 298
+   }
+  }
+ ],
+ "searches": {
+  "dev_any": {
+   "positives": 29,
+   "total": 890,
+   "minimal_terms": null,
+   "solutions": [],
+   "solution_count": 0
+  },
+  "dev_V3": {
+   "positives": 3,
+   "total": 890,
+   "minimal_terms": 1,
+   "solutions": [
+    [
+     [
+      "3t2+a=0"
+     ]
+    ]
+   ],
+   "solution_count": 1
+  },
+  "dev_V4": {
+   "positives": 29,
+   "total": 890,
+   "minimal_terms": null,
+   "solutions": [],
+   "solution_count": 0
+  },
+  "dev_low4": {
+   "positives": 24,
+   "total": 890,
+   "minimal_terms": null,
+   "solutions": [],
+   "solution_count": 0
+  },
+  "dev_one4": {
+   "positives": 1,
+   "total": 890,
+   "minimal_terms": 1,
+   "solutions": [
+    [
+     [
+      "2t3-b=0",
+      "c00/c11 in H"
+     ]
+    ]
+   ],
+   "solution_count": 1
+  },
+  "dev_LFD": {
+   "positives": 11,
+   "total": 890,
+   "minimal_terms": null,
+   "solutions": [],
+   "solution_count": 0
+  }
+ },
+ "signature_histogram": [
+  [
+   [
+    13,
+    605,
+    111
+   ],
+   861
+  ],
+  [
+   [
+    13,
+    607,
+    113
+   ],
+   10
+  ],
+  [
+   [
+    13,
+    766,
+    271
+   ],
+   3
+  ],
+  [
+   [
+    13,
+    612,
+    117
+   ],
+   3
+  ],
+  [
+   [
+    13,
+    602,
+    111
+   ],
+   3
+  ],
+  [
+   [
+    34,
+    603,
+    111
+   ],
+   2
+  ],
+  [
+   [
+    13,
+    762,
+    267
+   ],
+   2
+  ],
+  [
+   [
+    44,
+    773,
+    278
+   ],
+   1
+  ],
+  [
+   [
+    13,
+    730,
+    235
+   ],
+   1
+  ],
+  [
+   [
+    13,
+    760,
+    265
+   ],
+   1
+  ],
+  [
+   [
+    13,
+    786,
+    291
+   ],
+   1
+  ],
+  [
+   [
+    13,
+    794,
+    299
+   ],
+   1
+  ],
+  [
+   [
+    13,
+    770,
+    275
+   ],
+   1
+  ]
+ ]
+}

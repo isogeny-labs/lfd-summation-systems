@@ -1,0 +1,140 @@
+{
+ "prediction_file": "experiments/ic-bounds-locus/predictions/p257-k7-a251-b5.json",
+ "prediction_sha256": "affafe7ebdda2142c29411475a404524387dd1d736abaf16ff60fc8d79fb2ec7",
+ "data_file": "experiments/ic-bounds-locus/heldout/p257-k7-a251-b5.jsonl",
+ "targets_computed": 139,
+ "targets_predicted_over": 139,
+ "rules": {
+  "t0_j0": {
+   "key": "V3",
+   "predicted": [],
+   "actual": [
+    60
+   ],
+   "misses": [
+    60
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "t0_j1728": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "misses": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "false_alarms": [],
+   "exact_match": false
+  },
+  "t0_other": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "misses": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "tangent_3t2+a": {
+   "key": "V3",
+   "predicted": [
+    60
+   ],
+   "actual": [
+    60
+   ],
+   "misses": [],
+   "false_alarms": [],
+   "exact_match": true,
+   "values_on_predicted": {
+    "60": 40
+   },
+   "values_match": true
+  },
+  "order_two": {
+   "key": "V4",
+   "predicted": [
+    1,
+    73,
+    183
+   ],
+   "actual": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "misses": [
+    60
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {
+    "1": 835,
+    "73": 835,
+    "183": 835
+   },
+   "values_match": true
+  },
+  "cubic_C1": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "misses": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "polynomial_union": {
+   "key": "any",
+   "predicted": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "actual": [
+    1,
+    60,
+    73,
+    183
+   ],
+   "misses": [],
+   "false_alarms": [],
+   "exact_match": true
+  }
+ }
+}

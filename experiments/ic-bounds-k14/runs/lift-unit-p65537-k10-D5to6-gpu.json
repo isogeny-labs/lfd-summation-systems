@@ -1,0 +1,184 @@
+{
+ "k": 10,
+ "D": 5,
+ "D_target": 6,
+ "p": 65537,
+ "dim_VD": 18569,
+ "part_ranks_VD": [
+  9311,
+  9258
+ ],
+ "free_columns_VD": [
+  1567,
+  1564
+ ],
+ "regular_orbits_weight_D": 7703,
+ "free_type_monomials_weight_D": 98,
+ "regular_top_orbits": [
+  19042,
+  18930
+ ],
+ "special_top_orbits": [
+  398,
+  390
+ ],
+ "dim_T": [
+  1965,
+  1954
+ ],
+ "dim_K": [
+  1965,
+  1954
+ ],
+ "falls": [
+  1567,
+  1564
+ ],
+ "falls_new_per_round": [
+  [
+   1025,
+   1017
+  ],
+  [
+   542,
+   547
+  ]
+ ],
+ "rounds": 2,
+ "contains_one": true,
+ "fixed_point": true,
+ "status": "done",
+ "dim_VD1": 60460,
+ "part_dims_VD1": [
+  30318,
+  30142
+ ],
+ "profile": [
+  1,
+  21,
+  211,
+  1351,
+  6196,
+  21700,
+  60460
+ ],
+ "part_profiles_low": [
+  [
+   1,
+   11,
+   111,
+   681,
+   3126,
+   10878
+  ],
+  [
+   0,
+   10,
+   100,
+   670,
+   3070,
+   10822
+  ]
+ ],
+ "low_basis_sha256": [
+  "a2f9245b18b2e968dbf8cc2f621f2e0bc6a59106b0304264b76a852d37689ae8",
+  "118740867a8b80f4c3e84057651fc48457f25f159894e94dfce3a5cb6b11615a"
+ ],
+ "low_part_ranks": [
+  10878,
+  10822
+ ],
+ "bounds_only": false,
+ "regular_columns_covered": [
+  19042,
+  18930
+ ],
+ "reductions": 456013,
+ "counts": {
+  "images": 201309,
+  "eterm_rows": 254704,
+  "madds_gemm": 342246249082,
+  "candidates": 310988,
+  "candidates_nonzero": 20627,
+  "batches": 12,
+  "follower_builds": 40,
+  "follower_evictions": 0,
+  "fall_images": 40840
+ },
+ "madds": {
+  "gemm": 342246249082,
+  "k_reduce_update_rref": 125473299627,
+  "follower_sync": 182759381830,
+  "total": 650478930539
+ },
+ "k_madds_detail": [
+  {
+   "reduce": 32713897408,
+   "reduce_dense": 0,
+   "update": 325600750,
+   "rref": 31469073469
+  },
+  {
+   "reduce": 32906386734,
+   "reduce_dense": 0,
+   "update": 471771573,
+   "rref": 27586569693
+  }
+ ],
+ "seconds": 8.4,
+ "device": "gpu",
+ "maxrss_mb": 699,
+ "resumes": 0,
+ "settings": {
+  "work_gb": 4.0,
+  "cache_gb": null,
+  "batch_units": null,
+  "direct_rows": null,
+  "include_low": false,
+  "fall_every": 8,
+  "stop_on_one": false,
+  "tile_rows_K": [
+   1965,
+   1954
+  ]
+ },
+ "test_hooks": {
+  "drop_shift": null,
+  "no_fall_shifts": false
+ },
+ "vd": {
+  "source": "engine closure in this process",
+  "closed": true,
+  "rank": 18569,
+  "basis_sha256": [
+   "5bd3d7355de857bac19848d3b1388a7ede1e8e476e5b035c282852bd5c1fc240",
+   "7bb4f1ecc532dbdeef449ef5c2c24a1a3f23ee73490f814cdb216cc074c5f249"
+  ],
+  "seconds": 54.2,
+  "basis_id": "5bd3d7355de857bac19848d3b1388a7ede1e8e476e5b035c282852bd5c1fc240,7bb4f1ecc532dbdeef449ef5c2c24a1a3f23ee73490f814cdb216cc074c5f249"
+ },
+ "guard_hits": 0,
+ "source_sha256": {
+  "lift": "93e8d19b686357c41d3cae307495ba4a09453821957642eaedae514a16a44b7f",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6f3e1109929cb5ba63923f8d501ba2f47388cec464304188b8e013de715feff2"
+ },
+ "lift_version": "ic_bounds_lift/1",
+ "engine_version": "ic_bounds_big/2",
+ "dev_used_mb": 81410,
+ "dev_total_mb": 143157,
+ "dev_peak_live_mb": null,
+ "resumed_from_checkpoint": false,
+ "instance_file": "unit-p65537-a1-s10-k10.json",
+ "instance_sha256": "fa6b2beaf3201aa64de015462ed44dd76b6c889b62c185b4cd79d40b9e7dc9a7",
+ "a": 1,
+ "b": 0,
+ "seed": 10,
+ "want": false,
+ "unit_nonresidue": true,
+ "instance_target": [
+  4271,
+  11720
+ ],
+ "instance_points": 0
+}

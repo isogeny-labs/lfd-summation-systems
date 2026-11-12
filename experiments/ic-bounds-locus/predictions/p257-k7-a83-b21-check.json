@@ -1,0 +1,132 @@
+{
+ "prediction_file": "experiments/ic-bounds-locus/predictions/p257-k7-a83-b21.json",
+ "prediction_sha256": "532ed5e9557b7fdf75d682d4fd71d2960cc7b264ebcef6a352e2e61a0a77e60f",
+ "data_file": "experiments/ic-bounds-locus/heldout/p257-k7-a83-b21.jsonl",
+ "targets_computed": 115,
+ "targets_predicted_over": 115,
+ "rules": {
+  "t0_j0": {
+   "key": "V3",
+   "predicted": [],
+   "actual": [
+    217
+   ],
+   "misses": [
+    217
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "t0_j1728": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    0,
+    8,
+    217
+   ],
+   "misses": [
+    0,
+    8,
+    217
+   ],
+   "false_alarms": [],
+   "exact_match": false
+  },
+  "t0_other": {
+   "key": "V4",
+   "predicted": [
+    0
+   ],
+   "actual": [
+    0,
+    8,
+    217
+   ],
+   "misses": [
+    8,
+    217
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {
+    "0": 849
+   },
+   "values_match": true
+  },
+  "tangent_3t2+a": {
+   "key": "V3",
+   "predicted": [
+    217
+   ],
+   "actual": [
+    217
+   ],
+   "misses": [],
+   "false_alarms": [],
+   "exact_match": true,
+   "values_on_predicted": {
+    "217": 40
+   },
+   "values_match": true
+  },
+  "order_two": {
+   "key": "V4",
+   "predicted": [],
+   "actual": [
+    0,
+    8,
+    217
+   ],
+   "misses": [
+    0,
+    8,
+    217
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {},
+   "values_match": true
+  },
+  "cubic_C1": {
+   "key": "V4",
+   "predicted": [
+    8
+   ],
+   "actual": [
+    0,
+    8,
+    217
+   ],
+   "misses": [
+    0,
+    217
+   ],
+   "false_alarms": [],
+   "exact_match": false,
+   "values_on_predicted": {
+    "8": 826
+   },
+   "values_match": true
+  },
+  "polynomial_union": {
+   "key": "any",
+   "predicted": [
+    0,
+    217
+   ],
+   "actual": [
+    0,
+    8,
+    217
+   ],
+   "misses": [
+    8
+   ],
+   "false_alarms": [],
+   "exact_match": false
+  }
+ }
+}

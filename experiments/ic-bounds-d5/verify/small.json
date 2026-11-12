@@ -1,0 +1,799 @@
+{
+ "rows": [
+  {
+   "instance": "probe-unit",
+   "k": 6,
+   "D": 3,
+   "points": 0,
+   "ref_points": 0,
+   "mine_split": {
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 13,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "probe-unit",
+   "k": 6,
+   "D": 4,
+   "points": 0,
+   "ref_points": 0,
+   "mine_split": {
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 605,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "probe-unit",
+   "k": 6,
+   "D": 5,
+   "points": 0,
+   "ref_points": 0,
+   "mine_split": {
+    "rank": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "one": true,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 1586,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 1586,
+    "contains_one": true,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ]
+   },
+   "agree": true
+  },
+  {
+   "instance": "proper-13313",
+   "k": 6,
+   "D": 3,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 13,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "proper-13313",
+   "k": 6,
+   "D": 4,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 605,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "proper-13313",
+   "k": 6,
+   "D": 5,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 1582,
+    "profile": [
+     0,
+     9,
+     75,
+     295,
+     790,
+     1582
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 1582,
+    "profile": [
+     0,
+     9,
+     75,
+     295,
+     790,
+     1582
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 1582,
+    "contains_one": false,
+    "profile": [
+     0,
+     9,
+     75,
+     295,
+     790,
+     1582
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "random-15361",
+   "k": 6,
+   "D": 3,
+   "points": 2,
+   "ref_points": 2,
+   "mine_split": {
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 13,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 13,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     1,
+     13
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "random-15361",
+   "k": 6,
+   "D": 4,
+   "points": 2,
+   "ref_points": 2,
+   "mine_split": {
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 605,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 605,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "random-15361",
+   "k": 6,
+   "D": 5,
+   "points": 2,
+   "ref_points": 2,
+   "mine_split": {
+    "rank": 1584,
+    "profile": [
+     0,
+     11,
+     77,
+     297,
+     792,
+     1584
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 1584,
+    "profile": [
+     0,
+     11,
+     77,
+     297,
+     792,
+     1584
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 1584,
+    "contains_one": false,
+    "profile": [
+     0,
+     11,
+     77,
+     297,
+     792,
+     1584
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "probe-unit",
+   "k": 7,
+   "D": 3,
+   "points": 0,
+   "ref_points": 0,
+   "mine_split": {
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 15,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "probe-unit",
+   "k": 7,
+   "D": 4,
+   "points": 0,
+   "ref_points": 0,
+   "mine_split": {
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 829,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "probe-unit",
+   "k": 7,
+   "D": 5,
+   "points": 0,
+   "ref_points": 0,
+   "mine_split": {
+    "rank": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "one": true,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 3473,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 3473,
+    "contains_one": true,
+    "profile": [
+     1,
+     15,
+     106,
+     470,
+     1471,
+     3473
+    ]
+   },
+   "agree": true
+  },
+  {
+   "instance": "proper-13313",
+   "k": 7,
+   "D": 3,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 15,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "proper-13313",
+   "k": 7,
+   "D": 4,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 829,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "proper-13313",
+   "k": 7,
+   "D": 5,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 3469,
+    "profile": [
+     0,
+     11,
+     102,
+     466,
+     1467,
+     3469
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 3469,
+    "profile": [
+     0,
+     11,
+     102,
+     466,
+     1467,
+     3469
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 3469,
+    "contains_one": false,
+    "profile": [
+     0,
+     11,
+     102,
+     466,
+     1467,
+     3469
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "random-15361",
+   "k": 7,
+   "D": 3,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 15,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 15,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     1,
+     15
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "random-15361",
+   "k": 7,
+   "D": 4,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 829,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 829,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     2,
+     115,
+     829
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  },
+  {
+   "instance": "random-15361",
+   "k": 7,
+   "D": 5,
+   "points": 4,
+   "ref_points": 4,
+   "mine_split": {
+    "rank": 3469,
+    "profile": [
+     0,
+     11,
+     102,
+     466,
+     1467,
+     3469
+    ],
+    "one": false,
+    "sweep": true,
+    "rsweep": true
+   },
+   "mine_nosplit": {
+    "rank": 3469,
+    "profile": [
+     0,
+     11,
+     102,
+     466,
+     1467,
+     3469
+    ],
+    "sweep": true
+   },
+   "ref_dense": {
+    "dim": 3469,
+    "contains_one": false,
+    "profile": [
+     0,
+     11,
+     102,
+     466,
+     1467,
+     3469
+    ],
+    "exclusion_certificate": true
+   },
+   "agree": true
+  }
+ ],
+ "all_agree": true,
+ "source_sha256": {
+  "csd/ic_bounds_d5_verify.py": "e0628ef2e4a8b25272b7041d6bd65a3de3b83e25a5058a6e3563ec4495b1428c",
+  "scripts/ic_bounds_d5_verify.py": "1c94b5bdd9fc50646a3fc8f927b2c0fe74d22186db19b69df8cb2606031ff06f"
+ }
+}

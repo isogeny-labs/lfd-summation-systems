@@ -1,0 +1,455 @@
+{
+ "rows": [
+  {
+   "case": "unit-65537-k6-D5",
+   "ref_rank": 1586,
+   "ref_profile": [
+    1,
+    13,
+    79,
+    299,
+    794,
+    1586
+   ],
+   "ref_one": true,
+   "ref_hashes": [
+    "126f88ebc88184be",
+    "0527370c25f10d1f"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.6,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 1.2,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 6.8,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "unit-65537-k7-D5",
+   "ref_rank": 3473,
+   "ref_profile": [
+    1,
+    15,
+    106,
+    470,
+    1471,
+    3473
+   ],
+   "ref_one": true,
+   "ref_hashes": [
+    "c2dbabeb09304e51",
+    "d98d9bee18090030"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 1.8,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 3.3,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 37.1,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "unit-65537-k8-D5",
+   "ref_rank": 6885,
+   "ref_profile": [
+    1,
+    17,
+    137,
+    697,
+    2517,
+    6885
+   ],
+   "ref_one": true,
+   "ref_hashes": [
+    "0301c1b5d2152c88",
+    "8cbb23c798595b3a"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 5.1,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 7.4,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 213.2,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "unit-65537-k6-D6",
+   "ref_rank": 2510,
+   "ref_profile": [
+    1,
+    13,
+    79,
+    299,
+    794,
+    1586,
+    2510
+   ],
+   "ref_one": true,
+   "ref_hashes": [
+    "8250bccce8cfeb13",
+    "783b2f9e75e71522"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 1.0,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 2.1,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 11.8,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "unit-65537-k7-D6",
+   "ref_rank": 6476,
+   "ref_profile": [
+    1,
+    15,
+    106,
+    470,
+    1471,
+    3473,
+    6476
+   ],
+   "ref_one": true,
+   "ref_hashes": [
+    "54a5d2ccfd9ce966",
+    "0835a149b84b2d34"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 4.9,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 7.8,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 117.1,
+     "points": 0,
+     "deficient": false,
+     "sound": null,
+     "eval_rank": null
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "proper-65537-k6-D5",
+   "ref_rank": 1584,
+   "ref_profile": [
+    0,
+    11,
+    77,
+    297,
+    792,
+    1584
+   ],
+   "ref_one": false,
+   "ref_hashes": [
+    "e994fd850ee4757f",
+    "337e026cbf6e44ff"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 0.5,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 1.2,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 6.1,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "proper-65537-k7-D5",
+   "ref_rank": 3471,
+   "ref_profile": [
+    0,
+    13,
+    104,
+    468,
+    1469,
+    3471
+   ],
+   "ref_one": false,
+   "ref_hashes": [
+    "bc116b323e5fffc6",
+    "9d0f0ae96b3f76c8"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 1.7,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 2.9,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 40.6,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "proper-65537-k8-D5",
+   "ref_rank": 6883,
+   "ref_profile": [
+    0,
+    15,
+    135,
+    695,
+    2515,
+    6883
+   ],
+   "ref_one": false,
+   "ref_hashes": [
+    "ea006e4c9cceb267",
+    "40bd35b3f4227d5a"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 5.0,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 7.7,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 227.0,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "proper-65537-k6-D6",
+   "ref_rank": 2508,
+   "ref_profile": [
+    0,
+    11,
+    77,
+    297,
+    792,
+    1584,
+    2508
+   ],
+   "ref_one": false,
+   "ref_hashes": [
+    "6f46b328a8c6a8e5",
+    "548a555784462783"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 1.5,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 2.6,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 14.0,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    }
+   },
+   "all_match": true
+  },
+  {
+   "case": "proper-65537-k7-D6",
+   "ref_rank": 6474,
+   "ref_profile": [
+    0,
+    13,
+    104,
+    468,
+    1469,
+    3471,
+    6474
+   ],
+   "ref_one": false,
+   "ref_hashes": [
+    "b307d40802761e94",
+    "fc4e1fd734e4c2b4"
+   ],
+   "modes": {
+    "plain": {
+     "match": true,
+     "seconds": 5.2,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "fake-gpu": {
+     "match": true,
+     "seconds": 7.9,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    },
+    "tiny": {
+     "match": true,
+     "seconds": 116.9,
+     "points": 2,
+     "deficient": false,
+     "sound": true,
+     "eval_rank": 2
+    }
+   },
+   "all_match": true
+  }
+ ],
+ "all_match": true,
+ "hash_dtype": "uint32 (p >= 65536)",
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "validate": "516a5200a6561abfd8b05d32fa580e641a7c3f95b0e3e76a0c4718cee74e8f7e"
+ }
+}

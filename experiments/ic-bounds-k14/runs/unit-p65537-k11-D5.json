@@ -1,0 +1,138 @@
+{
+ "k": 11,
+ "D": 5,
+ "p": 65537,
+ "split": true,
+ "gens": "all",
+ "columns": 35443,
+ "generator_rows": 1794,
+ "rank": 25033,
+ "profile": [
+  0,
+  0,
+  2,
+  142,
+  3441,
+  25033
+ ],
+ "part_profiles": [
+  [
+   0,
+   0,
+   2,
+   74,
+   1748,
+   12546
+  ],
+  [
+   0,
+   0,
+   0,
+   68,
+   1693,
+   12487
+  ]
+ ],
+ "part_ranks": [
+  12546,
+  12487
+ ],
+ "contains_one": false,
+ "closure_complete": true,
+ "closed": true,
+ "rounds": 25,
+ "seconds": 151.4,
+ "madds": 2096089912501,
+ "madds_detail": {
+  "reduce": 1794543026815,
+  "reduce_dense": 4889791815066,
+  "update": 272067264212,
+  "rref": 29479621474
+ },
+ "madds_dense": 5191338700752,
+ "madds_closure_phase": 1297234679556,
+ "seconds_detail": {
+  "reduce": 6.48,
+  "update": 4.52,
+  "rref": 133.82
+ },
+ "peak_entries": [
+  78809916,
+  78216287
+ ],
+ "peak_phys_entries": [
+  83220228,
+  82441755
+ ],
+ "compactions": [
+  22,
+  21
+ ],
+ "rref_ok": true,
+ "basis_sha256": [
+  "ebd64c5674dbb615717fdb7366e9a344a4bb1cf0ed3e06a3494f8bc5b08788dd",
+  "0e6f0853cf30d3c972594affa694d8cf44f5c44087e6d7981c56274bfcb31286"
+ ],
+ "sweep_random": {
+  "t": 6,
+  "seed": 1,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "maps": 44
+ },
+ "sweep_full": {
+  "complete": true,
+  "rows_checked": 3441,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "sweeps_run": 1
+ },
+ "repairs": 0,
+ "repair_rows": 0,
+ "resumes": 0,
+ "device": "gpu",
+ "threads": 8,
+ "blas_threads_env": "8",
+ "maxrss_mb": 728,
+ "engine_sha256": "ba99c529151b787d007aaa42ba95aa518e71a38c86ef78069605b02f97331acd",
+ "engine_version": "ic_bounds_big/2",
+ "work_gb": 8.0,
+ "tile_mb": 512.0,
+ "tile_rows": [
+  7559,
+  7588
+ ],
+ "batch": 1024,
+ "compact_frac": 0.05,
+ "t_random": 6,
+ "sweep_chunk": 256,
+ "stop_on_one": false,
+ "no_repair": false,
+ "compress": false,
+ "dev_used_mb": 57128,
+ "dev_total_mb": 143157,
+ "dev_peak_live_mb": null,
+ "status": "done",
+ "instance_file": "unit-p65537-a1-s10-k11.json",
+ "instance_sha256": "b8abb57022ca48f9c9418c9a43161ebae6e66287cd80d4af3faebb295d9d1d3e",
+ "a": 1,
+ "b": 0,
+ "seed": 10,
+ "want": false,
+ "unit_nonresidue": true,
+ "instance_target": [
+  4271,
+  11720
+ ],
+ "attempts": 1,
+ "instance_k": 11,
+ "resumed_from_checkpoint": false,
+ "source_sha256": {
+  "engine": "ba99c529151b787d007aaa42ba95aa518e71a38c86ef78069605b02f97331acd",
+  "driver": "7aad3cbd3d89346f1e55b61c55963fb4eccc9022650cfe8ad0b3931abed4593d",
+  "instance": "b8abb57022ca48f9c9418c9a43161ebae6e66287cd80d4af3faebb295d9d1d3e"
+ },
+ "points": 0,
+ "target": 35443,
+ "deficient": true
+}

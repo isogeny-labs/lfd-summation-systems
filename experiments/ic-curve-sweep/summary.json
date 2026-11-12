@@ -1,0 +1,1419 @@
+{
+  "seed": 20261104,
+  "cases": 3163,
+  "unique_systems": 3005,
+  "skips": [
+    {
+      "kind": "prime",
+      "prime": 97,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 97,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 97,
+      "a": 1,
+      "b": 0,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 97,
+      "a": 95,
+      "b": 81,
+      "k": 2,
+      "base_kind": "subgroup",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 97,
+      "a": 27,
+      "b": 42,
+      "k": 3,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 193,
+      "a": 23,
+      "b": 169,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 193,
+      "a": 151,
+      "b": 81,
+      "k": 2,
+      "base_kind": "subgroup",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 257,
+      "a": 166,
+      "b": 106,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 257,
+      "a": 34,
+      "b": 176,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 257,
+      "a": 34,
+      "b": 176,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 641,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 641,
+      "a": 1,
+      "b": 0,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 641,
+      "a": 542,
+      "b": 22,
+      "k": 2,
+      "base_kind": "subgroup",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 641,
+      "a": 542,
+      "b": 22,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 641,
+      "a": 542,
+      "b": 22,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 641,
+      "a": 608,
+      "b": 315,
+      "k": 2,
+      "base_kind": "subgroup",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 641,
+      "a": 608,
+      "b": 315,
+      "k": 3,
+      "base_kind": "subgroup",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 7681,
+      "a": 7045,
+      "b": 6063,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "prime",
+      "prime": 7681,
+      "a": 7045,
+      "b": 6063,
+      "k": 2,
+      "base_kind": "random-coset",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 5,
+      "k": 2,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 5,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 5,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 5,
+      "a": 8,
+      "b": 18,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 5,
+      "k": 3,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 5,
+      "a": 8,
+      "b": 18,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 5,
+      "a": 8,
+      "b": 18,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 15,
+      "b": 28,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 15,
+      "b": 28,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 15,
+      "b": 28,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 15,
+      "b": 28,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 8,
+      "b": 3,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 8,
+      "b": 3,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 6,
+      "a": 8,
+      "b": 3,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "k": 2,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 22,
+      "b": 23,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 22,
+      "b": 23,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 110,
+      "b": 5,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 0,
+      "b": 1,
+      "k": 3,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 1,
+      "b": 1,
+      "k": 3,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "a": 0,
+      "b": 1,
+      "k": 4,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 7,
+      "k": 5,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 8,
+      "a": 74,
+      "b": 233,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 8,
+      "a": 74,
+      "b": 233,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 8,
+      "a": 241,
+      "b": 189,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 8,
+      "a": 241,
+      "b": 189,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 8,
+      "a": 0,
+      "b": 1,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 8,
+      "a": 1,
+      "b": 1,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 8,
+      "a": 241,
+      "b": 189,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 9,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 9,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 9,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 9,
+      "a": 309,
+      "b": 480,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 9,
+      "a": 0,
+      "b": 1,
+      "k": 3,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 9,
+      "k": 4,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 9,
+      "k": 5,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "a": 414,
+      "b": 564,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "k": 3,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "a": 0,
+      "b": 1,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "a": 1,
+      "b": 1,
+      "k": 3,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 10,
+      "k": 7,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "k": 2,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "a": 1369,
+      "b": 448,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "a": 1353,
+      "b": 1002,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "k": 3,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "k": 4,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "k": 5,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "k": 6,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 11,
+      "k": 7,
+      "reason": "No Frobenius-invariant subspace of this dimension"
+    },
+    {
+      "kind": "binary",
+      "n": 12,
+      "a": 0,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 12,
+      "a": 1,
+      "b": 1,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 12,
+      "a": 2785,
+      "b": 3234,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 12,
+      "a": 2785,
+      "b": 3234,
+      "k": 2,
+      "base_kind": "random-subspace",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 12,
+      "a": 3389,
+      "b": 1671,
+      "k": 2,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    },
+    {
+      "kind": "binary",
+      "n": 12,
+      "a": 2785,
+      "b": 3234,
+      "k": 3,
+      "base_kind": "frobenius-invariant",
+      "reason": "No nonzero planted sum found"
+    }
+  ],
+  "exact_systems": 3005,
+  "capped_systems": 0,
+  "lfd_histogram": {
+    "1": 11,
+    "2": 625,
+    "3": 774,
+    "5": 312,
+    "4": 1217,
+    "0": 66
+  },
+  "by_kind": {
+    "prime": {
+      "cases": 1262,
+      "systems": 1260
+    },
+    "binary": {
+      "cases": 950,
+      "systems": 942
+    },
+    "koblitz": {
+      "cases": 951,
+      "systems": 803
+    }
+  },
+  "groups": [
+    {
+      "kind": "prime",
+      "base_kind": "random-coset",
+      "symmetric": false,
+      "k": 2,
+      "cases": 145,
+      "systems": 145,
+      "exact_systems": 145,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 142,
+        "3": 3
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.9793103448275864,
+      "lean_upper_bound": 5,
+      "written_upper_bound": 5
+    },
+    {
+      "kind": "prime",
+      "base_kind": "random-coset",
+      "symmetric": false,
+      "k": 3,
+      "cases": 157,
+      "systems": 157,
+      "exact_systems": 157,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 157
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 4.0,
+      "lean_upper_bound": 7,
+      "written_upper_bound": 7
+    },
+    {
+      "kind": "prime",
+      "base_kind": "random-coset",
+      "symmetric": false,
+      "k": 4,
+      "cases": 158,
+      "systems": 157,
+      "exact_systems": 157,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 157
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 4.0,
+      "lean_upper_bound": 9,
+      "written_upper_bound": 9
+    },
+    {
+      "kind": "prime",
+      "base_kind": "random-coset",
+      "symmetric": false,
+      "k": 5,
+      "cases": 158,
+      "systems": 158,
+      "exact_systems": 158,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 158
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 4.0,
+      "lean_upper_bound": 11,
+      "written_upper_bound": 11
+    },
+    {
+      "kind": "prime",
+      "base_kind": "random-coset",
+      "symmetric": false,
+      "k": 6,
+      "cases": 126,
+      "systems": 126,
+      "exact_systems": 126,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "5": 118,
+        "4": 8
+      },
+      "max_exact_lfd": 5,
+      "mean_exact_lfd": 4.936507936507937,
+      "lean_upper_bound": 13,
+      "written_upper_bound": 13
+    },
+    {
+      "kind": "prime",
+      "base_kind": "random-coset",
+      "symmetric": false,
+      "k": 7,
+      "cases": 96,
+      "systems": 96,
+      "exact_systems": 96,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "5": 90,
+        "4": 6
+      },
+      "max_exact_lfd": 5,
+      "mean_exact_lfd": 4.9375,
+      "lean_upper_bound": 15,
+      "written_upper_bound": 15
+    },
+    {
+      "kind": "prime",
+      "base_kind": "subgroup",
+      "symmetric": true,
+      "k": 2,
+      "cases": 75,
+      "systems": 75,
+      "exact_systems": 75,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 75
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 4.0,
+      "lean_upper_bound": 5,
+      "written_upper_bound": 5
+    },
+    {
+      "kind": "prime",
+      "base_kind": "subgroup",
+      "symmetric": true,
+      "k": 3,
+      "cases": 78,
+      "systems": 78,
+      "exact_systems": 78,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 78
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 4.0,
+      "lean_upper_bound": 7,
+      "written_upper_bound": 7
+    },
+    {
+      "kind": "prime",
+      "base_kind": "subgroup",
+      "symmetric": true,
+      "k": 4,
+      "cases": 79,
+      "systems": 78,
+      "exact_systems": 78,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 78
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 4.0,
+      "lean_upper_bound": 9,
+      "written_upper_bound": 9
+    },
+    {
+      "kind": "prime",
+      "base_kind": "subgroup",
+      "symmetric": true,
+      "k": 5,
+      "cases": 79,
+      "systems": 79,
+      "exact_systems": 79,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 79
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 4.0,
+      "lean_upper_bound": 11,
+      "written_upper_bound": 11
+    },
+    {
+      "kind": "prime",
+      "base_kind": "subgroup",
+      "symmetric": true,
+      "k": 6,
+      "cases": 63,
+      "systems": 63,
+      "exact_systems": 63,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "5": 59,
+        "4": 4
+      },
+      "max_exact_lfd": 5,
+      "mean_exact_lfd": 4.936507936507937,
+      "lean_upper_bound": 13,
+      "written_upper_bound": 13
+    },
+    {
+      "kind": "prime",
+      "base_kind": "subgroup",
+      "symmetric": true,
+      "k": 7,
+      "cases": 48,
+      "systems": 48,
+      "exact_systems": 48,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "5": 45,
+        "4": 3
+      },
+      "max_exact_lfd": 5,
+      "mean_exact_lfd": 4.9375,
+      "lean_upper_bound": 15,
+      "written_upper_bound": 15
+    },
+    {
+      "kind": "binary",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 2,
+      "cases": 49,
+      "systems": 47,
+      "exact_systems": 47,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "1": 5,
+        "2": 28,
+        "0": 12,
+        "3": 2
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 1.425531914893617,
+      "lean_upper_bound": 5,
+      "written_upper_bound": 4
+    },
+    {
+      "kind": "binary",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 3,
+      "cases": 55,
+      "systems": 55,
+      "exact_systems": 55,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 11,
+        "0": 8,
+        "2": 36
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 1.9090909090909092,
+      "lean_upper_bound": 7,
+      "written_upper_bound": 5
+    },
+    {
+      "kind": "binary",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 4,
+      "cases": 72,
+      "systems": 71,
+      "exact_systems": 71,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 35,
+        "0": 3,
+        "2": 30,
+        "4": 3
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 2.492957746478873,
+      "lean_upper_bound": 9,
+      "written_upper_bound": 6
+    },
+    {
+      "kind": "binary",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 5,
+      "cases": 40,
+      "systems": 40,
+      "exact_systems": 40,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 13,
+        "2": 22,
+        "4": 4,
+        "0": 1
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 2.475,
+      "lean_upper_bound": 11,
+      "written_upper_bound": 7
+    },
+    {
+      "kind": "binary",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 6,
+      "cases": 48,
+      "systems": 47,
+      "exact_systems": 47,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 11,
+        "3": 26,
+        "0": 2,
+        "2": 8
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 2.9361702127659575,
+      "lean_upper_bound": 13,
+      "written_upper_bound": 8
+    },
+    {
+      "kind": "binary",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 7,
+      "cases": 32,
+      "systems": 32,
+      "exact_systems": 32,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 14,
+        "2": 8,
+        "3": 10
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.1875,
+      "lean_upper_bound": 15,
+      "written_upper_bound": 9
+    },
+    {
+      "kind": "binary",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 2,
+      "cases": 114,
+      "systems": 111,
+      "exact_systems": 111,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 83,
+        "0": 23,
+        "3": 2,
+        "1": 3
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 1.5765765765765767,
+      "lean_upper_bound": 5,
+      "written_upper_bound": 4
+    },
+    {
+      "kind": "binary",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 3,
+      "cases": 124,
+      "systems": 124,
+      "exact_systems": 124,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 83,
+        "3": 34,
+        "0": 7
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 2.161290322580645,
+      "lean_upper_bound": 7,
+      "written_upper_bound": 5
+    },
+    {
+      "kind": "binary",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 4,
+      "cases": 128,
+      "systems": 127,
+      "exact_systems": 127,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 91,
+        "2": 36
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 2.716535433070866,
+      "lean_upper_bound": 9,
+      "written_upper_bound": 6
+    },
+    {
+      "kind": "binary",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 5,
+      "cases": 112,
+      "systems": 112,
+      "exact_systems": 112,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 101,
+        "4": 11
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.0982142857142856,
+      "lean_upper_bound": 11,
+      "written_upper_bound": 7
+    },
+    {
+      "kind": "binary",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 6,
+      "cases": 96,
+      "systems": 96,
+      "exact_systems": 96,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 26,
+        "3": 70
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.2708333333333335,
+      "lean_upper_bound": 13,
+      "written_upper_bound": 8
+    },
+    {
+      "kind": "binary",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 7,
+      "cases": 80,
+      "systems": 80,
+      "exact_systems": 80,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 60,
+        "3": 20
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.75,
+      "lean_upper_bound": 15,
+      "written_upper_bound": 9
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 2,
+      "cases": 55,
+      "systems": 37,
+      "exact_systems": 37,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 26,
+        "0": 4,
+        "3": 6,
+        "1": 1
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 1.9189189189189189,
+      "lean_upper_bound": 5,
+      "written_upper_bound": 4
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 3,
+      "cases": 53,
+      "systems": 44,
+      "exact_systems": 44,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 23,
+        "3": 17,
+        "0": 3,
+        "1": 1
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 2.227272727272727,
+      "lean_upper_bound": 7,
+      "written_upper_bound": 5
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 4,
+      "cases": 71,
+      "systems": 59,
+      "exact_systems": 59,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 19,
+        "4": 6,
+        "3": 34
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 2.7796610169491527,
+      "lean_upper_bound": 9,
+      "written_upper_bound": 6
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 5,
+      "cases": 40,
+      "systems": 33,
+      "exact_systems": 33,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 16,
+        "4": 6,
+        "2": 11
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 2.8484848484848486,
+      "lean_upper_bound": 11,
+      "written_upper_bound": 7
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 6,
+      "cases": 48,
+      "systems": 42,
+      "exact_systems": 42,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "4": 17,
+        "3": 17,
+        "2": 8
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.2142857142857144,
+      "lean_upper_bound": 13,
+      "written_upper_bound": 8
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "frobenius-invariant",
+      "symmetric": true,
+      "k": 7,
+      "cases": 32,
+      "systems": 28,
+      "exact_systems": 28,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 7,
+        "4": 17,
+        "3": 4
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.357142857142857,
+      "lean_upper_bound": 15,
+      "written_upper_bound": 9
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 2,
+      "cases": 112,
+      "systems": 91,
+      "exact_systems": 91,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 87,
+        "0": 2,
+        "1": 1,
+        "3": 1
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 1.956043956043956,
+      "lean_upper_bound": 5,
+      "written_upper_bound": 4
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 3,
+      "cases": 124,
+      "systems": 108,
+      "exact_systems": 108,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 78,
+        "3": 29,
+        "0": 1
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 2.25,
+      "lean_upper_bound": 7,
+      "written_upper_bound": 5
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 4,
+      "cases": 128,
+      "systems": 111,
+      "exact_systems": 111,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "2": 32,
+        "3": 79
+      },
+      "max_exact_lfd": 3,
+      "mean_exact_lfd": 2.7117117117117115,
+      "lean_upper_bound": 9,
+      "written_upper_bound": 6
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 5,
+      "cases": 112,
+      "systems": 96,
+      "exact_systems": 96,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 85,
+        "4": 11
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.1145833333333335,
+      "lean_upper_bound": 11,
+      "written_upper_bound": 7
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 6,
+      "cases": 96,
+      "systems": 84,
+      "exact_systems": 84,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 56,
+        "4": 28
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.3333333333333335,
+      "lean_upper_bound": 13,
+      "written_upper_bound": 8
+    },
+    {
+      "kind": "koblitz",
+      "base_kind": "random-subspace",
+      "symmetric": false,
+      "k": 7,
+      "cases": 80,
+      "systems": 70,
+      "exact_systems": 70,
+      "capped_systems": 0,
+      "exact_lfd_histogram": {
+        "3": 12,
+        "4": 58
+      },
+      "max_exact_lfd": 4,
+      "mean_exact_lfd": 3.8285714285714287,
+      "lean_upper_bound": 15,
+      "written_upper_bound": 9
+    }
+  ],
+  "elapsed_seconds": 2352,
+  "limitations": [
+    "Seeded, structured case grid: no population inference and no claim about other bases.",
+    "Caps retain intervals (lower bound from strict falls, upper bound from the Lean theorem) and never certify an exact value.",
+    "Exact values are ordinary iterated LFDs of the specified presentations; relation yield, independent relation rank and ECDLP cost are not measured.",
+    "A planted decomposition proves one rational decomposition exists; it is not a relation-rate statement."
+  ]
+}

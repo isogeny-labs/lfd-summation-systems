@@ -1,0 +1,52 @@
+{
+ "rows": [
+  {
+   "k": 6,
+   "D": 5,
+   "ref_contains_one": true,
+   "exit_stop": 2,
+   "status": "one",
+   "contains_one": true,
+   "closure_complete": false,
+   "closed": false,
+   "rank_at_stop": 1584,
+   "full_rank": 1586,
+   "full_run_contains_one": true,
+   "full_run_matches": true
+  },
+  {
+   "k": 7,
+   "D": 5,
+   "ref_contains_one": true,
+   "exit_stop": 2,
+   "status": "one",
+   "contains_one": true,
+   "closure_complete": false,
+   "closed": false,
+   "rank_at_stop": 3407,
+   "full_rank": 3473,
+   "full_run_contains_one": true,
+   "full_run_matches": true
+  },
+  {
+   "k": 6,
+   "D": 6,
+   "ref_contains_one": true,
+   "exit_stop": 2,
+   "status": "one",
+   "contains_one": true,
+   "closure_complete": false,
+   "closed": false,
+   "rank_at_stop": 2510,
+   "full_rank": 2510,
+   "full_run_contains_one": true,
+   "full_run_matches": true
+  }
+ ],
+ "passed": true,
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "validate": "516a5200a6561abfd8b05d32fa580e641a7c3f95b0e3e76a0c4718cee74e8f7e"
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "k": 11,
+ "D": 6,
+ "p": 65537,
+ "split": true,
+ "gens": "all",
+ "columns": 110056,
+ "finished": true,
+ "rank": 110056,
+ "profile": [
+  1,
+  23,
+  254,
+  1794,
+  9109,
+  35443,
+  110056
+ ],
+ "part_profiles": [
+  [
+   1,
+   12,
+   133,
+   903,
+   4588,
+   17755,
+   55144
+  ],
+  [
+   0,
+   11,
+   121,
+   891,
+   4521,
+   17688,
+   54912
+  ]
+ ],
+ "part_ranks": [
+  55144,
+  54912
+ ],
+ "contains_one": true,
+ "rounds": 739,
+ "closure_seconds": 6623.9,
+ "madds": 202145842928895,
+ "peak_entries": [
+  760213159,
+  753831647
+ ],
+ "rref_ok": true,
+ "basis_sha256": [
+  "b9b3695c01e433a067fde035143b669e434d32bb286dc7b1e98806a19e0c0752",
+  "77fef68dc0d2693b5a6857a74fd862b83c613c3682f6b91041626555e62dd7cb"
+ ],
+ "sweep_random": {
+  "t": 6,
+  "seed": 1,
+  "nonzero_residuals": 0,
+  "maps": 44,
+  "passed": true
+ },
+ "sweep_full": {
+  "complete": true,
+  "rows_checked": 35443,
+  "nonzero_residuals": 0,
+  "passed": true
+ },
+ "points": 0,
+ "target": 110056,
+ "deficient": false,
+ "seconds": 6909.2,
+ "maxrss_mb": 23422,
+ "a": 1,
+ "b": 0,
+ "seed": 10,
+ "want": false,
+ "instance_target": [
+  4271,
+  11720
+ ],
+ "driver": "experiments/ic-bounds-k14/relaunch/ref_k11.py",
+ "source_sha256": {
+  "refeng_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
+  "ref_k11.py": "f3708b3dd9fe8857500e9939bdc4e0d245ca97e1784f19869a4744f78e958e31"
+ }
+}

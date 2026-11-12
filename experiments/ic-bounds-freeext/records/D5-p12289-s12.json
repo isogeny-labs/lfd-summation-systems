@@ -1,0 +1,460 @@
+{
+ "p": 12289,
+ "a": 4021,
+ "b": 9917,
+ "seed": 12,
+ "want": true,
+ "D": 5,
+ "split": true,
+ "target_info": {
+  "target": [
+   4408,
+   4441
+  ],
+  "attempts": 1,
+  "drawn": true,
+  "draw_k": 10
+ },
+ "exceptional": {
+  "order_two": false,
+  "t_zero": false,
+  "tangent": false
+ },
+ "closures": {
+  "9": {
+   "rank": 12600,
+   "profile": [
+    0,
+    3,
+    156,
+    972,
+    4032,
+    12600
+   ],
+   "part_profiles": [
+    [
+     0,
+     2,
+     83,
+     491,
+     2039,
+     6323
+    ],
+    [
+     0,
+     1,
+     73,
+     481,
+     1993,
+     6277
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "392fb0c4dacd184d6b11d02ef4421c13c3d4f2537e0e0d0a2d607a6e36b5ab75",
+    "f93b86d1fea3ff8d9e7045b26bdb950690911473f75516141a8d0067e1e2b3a0"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 4032,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 65.2,
+   "generator_in_space": true,
+   "ideal_dim": 12600,
+   "points": 16,
+   "columns": 12616,
+   "deficient": false
+  },
+  "10": {
+   "rank": 18569,
+   "profile": [
+    0,
+    0,
+    2,
+    138,
+    3163,
+    18569
+   ],
+   "part_profiles": [
+    [
+     0,
+     0,
+     2,
+     72,
+     1608,
+     9311
+    ],
+    [
+     0,
+     0,
+     0,
+     66,
+     1555,
+     9258
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "3c1c6dfa442394861e61e43e49c5351c1bd5ccb2d7be5b847fe016595a102a27",
+    "5b8a5ad5dca89425c5fa5b4b2d5c5d4a26286deb0880063f3d5773de734bc336"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 3163,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 274.7,
+   "generator_in_space": true,
+   "ideal_dim": 21600,
+   "points": 100,
+   "columns": 21700,
+   "deficient": true
+  },
+  "11": {
+   "rank": 25033,
+   "profile": [
+    0,
+    0,
+    2,
+    142,
+    3441,
+    25033
+   ],
+   "part_profiles": [
+    [
+     0,
+     0,
+     2,
+     74,
+     1748,
+     12546
+    ],
+    [
+     0,
+     0,
+     0,
+     68,
+     1693,
+     12487
+    ]
+   ],
+   "contains_one": false,
+   "rref_ok": true,
+   "basis_sha256": [
+    "0bf495bb425de1e0852b92d4ab19f5507c59dc11bacbdf3ece28683341bd1192",
+    "96b503169bb7b0daff9288426bfda690b6d620fa0502df7e2f0773bdcf4e2cf6"
+   ],
+   "sweep_full": {
+    "complete": true,
+    "rows_checked": 3441,
+    "nonzero_residuals": 0,
+    "passed": true
+   },
+   "seconds": 1034.3,
+   "generator_in_space": true,
+   "ideal_dim": 35095,
+   "points": 348,
+   "columns": 35443,
+   "deficient": true
+  }
+ },
+ "extensions": {
+  "9": {
+   "k0": 9,
+   "W": {
+    "rank": 21636,
+    "profile": [
+     0,
+     3,
+     162,
+     1287,
+     6132,
+     21636
+    ],
+    "part_profiles": [
+     [
+      0,
+      2,
+      86,
+      649,
+      3094,
+      10846
+     ],
+     [
+      0,
+      1,
+      76,
+      638,
+      3038,
+      10790
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "8230b1269aadeccd0c1e9fea4f2171d623d05575074e9a4d7d745f2a7e260004",
+     "7a574f50bc70f4c37bdef09b21c9de0b6eb5306457bb011d20248e8fd702a054"
+    ],
+    "expected_profile": [
+     0,
+     3,
+     162,
+     1287,
+     6132,
+     21636
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 6132,
+     "nonzero_residuals": 13025,
+     "passed": false
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 64,
+     "maps": 40,
+     "passed": false
+    },
+    "generator_rows": 1351,
+    "generator_rows_outside": 0,
+    "construction": "direct assembly (free_extension_direct)",
+    "seconds": 42.3
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": false,
+   "kernel_hypotheses_hold": false,
+   "equals_V_next": false,
+   "equals_V_next_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+   "W_profile_equals_V_next_profile": false,
+   "recursion_holds": false
+  },
+  "10": {
+   "k0": 10,
+   "W": {
+    "rank": 25033,
+    "profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "part_profiles": [
+     [
+      0,
+      0,
+      2,
+      74,
+      1748,
+      12546
+     ],
+     [
+      0,
+      0,
+      0,
+      68,
+      1693,
+      12487
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "268ab9d5ee876ee4ce1c083014554e35432f6277842d5a347dbbe9b1db346f9c",
+     "d2013553fa12dc0ca5a6c8039f86cc7ca495d6c72c5de7f275ebe9578e05b0cb"
+    ],
+    "expected_profile": [
+     0,
+     0,
+     2,
+     142,
+     3441,
+     25033
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 3441,
+     "nonzero_residuals": 4032,
+     "passed": false
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 16,
+     "maps": 44,
+     "passed": false
+    },
+    "generator_rows": 1794,
+    "generator_rows_outside": 0,
+    "construction": "direct assembly (free_extension_direct)",
+    "seconds": 198.3,
+    "reference_V_next": {
+     "file": "experiments/ic-bounds-d5/verify/k11-p12289-s12-D5.json",
+     "file_sha256": "74b45aed2182c2eaff6cc772384cfab0adfdc06909e62cdfdf1f0fc4e26b42b2",
+     "rank": 25033,
+     "profile": [
+      0,
+      0,
+      2,
+      142,
+      3441,
+      25033
+     ],
+     "basis_sha256": [
+      "0bf495bb425de1e0852b92d4ab19f5507c59dc11bacbdf3ece28683341bd1192",
+      "96b503169bb7b0daff9288426bfda690b6d620fa0502df7e2f0773bdcf4e2cf6"
+     ],
+     "sweep_full_passed": true,
+     "target": 35095
+    },
+    "equals_reference_V_next": false
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": false,
+   "kernel_hypotheses_hold": false,
+   "equals_V_next": false,
+   "equals_V_next_by": "SHA-256 of the canonical RREFs (W freed before V_D(k+1))",
+   "W_profile_equals_V_next_profile": true,
+   "recursion_holds": true
+  },
+  "11": {
+   "k0": 11,
+   "W": {
+    "rank": 32057,
+    "profile": [
+     0,
+     0,
+     2,
+     146,
+     3727,
+     32057
+    ],
+    "part_profiles": [
+     [
+      0,
+      0,
+      2,
+      76,
+      1892,
+      16061
+     ],
+     [
+      0,
+      0,
+      0,
+      70,
+      1835,
+      15996
+     ]
+    ],
+    "contains_one": false,
+    "rref_ok": true,
+    "basis_sha256": [
+     "08443452908ce6c07d8107cac01184d13fedfdf74f706ec7913dfe43e1d12013",
+     "570627bf5a4d7e72346166768a81114535f807a3d1069a375efd54225e3605b2"
+    ],
+    "expected_profile": [
+     0,
+     0,
+     2,
+     146,
+     3727,
+     32057
+    ],
+    "profile_formula_ok": true,
+    "sweep_full": {
+     "complete": true,
+     "rows_checked": 3727,
+     "nonzero_residuals": 0,
+     "passed": true
+    },
+    "sweep_random": {
+     "t": 4,
+     "seed": 1,
+     "nonzero_residuals": 0,
+     "maps": 48,
+     "passed": true
+    },
+    "generator_rows": 2325,
+    "generator_rows_outside": 0,
+    "construction": "direct assembly (free_extension_direct)",
+    "seconds": 872.1,
+    "reference_V_next": {
+     "file": "experiments/ic-bounds-d5/verify/k12-p12289-s12-D5.json",
+     "file_sha256": "2dce87b5ca26f73c28db5575766864e914f89864cf1619c22520ce35d670cc8e",
+     "rank": 32057,
+     "profile": [
+      0,
+      0,
+      2,
+      146,
+      3727,
+      32057
+     ],
+     "basis_sha256": [
+      "08443452908ce6c07d8107cac01184d13fedfdf74f706ec7913dfe43e1d12013",
+      "570627bf5a4d7e72346166768a81114535f807a3d1069a375efd54225e3605b2"
+     ],
+     "sweep_full_passed": true,
+     "target": 54056
+    },
+    "equals_reference_V_next": true
+   },
+   "one_notin_S": true,
+   "g_in_S": true,
+   "W_closed": true,
+   "kernel_hypotheses_hold": true
+  }
+ },
+ "witness": {
+  "9": {
+   "candidates_low_weight": 1241,
+   "tested": 1241,
+   "found": [],
+   "generator_degree": 2,
+   "rule": "e_i + 2 < 2^9, all weights of tau_e(g) <= 5",
+   "seconds": 0.2,
+   "base_depth": 9
+  },
+  "10": {
+   "candidates_low_weight": 1672,
+   "tested": 1672,
+   "found": [],
+   "generator_degree": 2,
+   "rule": "e_i + 2 < 2^10, all weights of tau_e(g) <= 5",
+   "seconds": 2.4,
+   "base_depth": 10
+  },
+  "11": {
+   "candidates_low_weight": 2191,
+   "tested": 2191,
+   "found": [],
+   "generator_degree": 2,
+   "rule": "e_i + 2 < 2^11, all weights of tau_e(g) <= 5",
+   "seconds": 13.8,
+   "base_depth": 11
+  }
+ },
+ "maxrss_mb": 4765,
+ "seconds": 2510.1,
+ "command": "scripts/ic_bounds_freeext_run.py chain --D 5 --witness --drop-w --ext-top --p 12289 --a 4021 --b 9917 --seed 12 --want --draw-k 10 --kmin 9 --kmax 11 --ref-name k{k}-p12289-s12-D5.json --name D5-p12289-s12",
+ "source_sha256": {
+  "csd/ic_bounds_freeext.py": "c3ae3c68eefc2306146bae2f819609dcc9da84c7b6663301d09ef6becbc39d39",
+  "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
+  "scripts/ic_bounds_freeext_run.py": "a02f5a7afd906fafb3e83947bbb86dfcb2dc866299ad10e3bc03ca7b3a5af684",
+  "scripts/ic_bounds_d5_verify.py": "1c94b5bdd9fc50646a3fc8f927b2c0fe74d22186db19b69df8cb2606031ff06f"
+ },
+ "label": "exact",
+ "date": "2026-11-10"
+}
