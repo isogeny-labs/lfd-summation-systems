@@ -1,5 +1,7 @@
 # Item 1: exact LFD of three-summand (m = 3) prime subgroup-chain systems
 
+> **Note (2026-11-12).** Some runs listed below as not run were run later and are reported in `paper/curve-lfd-bounds.tex`, including the `k = 6` degree-7 closure (`experiments/ic-bounds-m3-depth/`) and the three-to-eight-summand runs (`experiments/ic-bounds-msum/`). The lists below record the state when this file was written.
+
 Status: complete for k = 1, 2, 3, 4. 461 seeded cases (5 primes x 6 curves x up to 4 targets x
 4 depths); every case has an exact certified LFD in all three encodings (direct m = 3, split m = 3
 with a free auxiliary, m = 2 reference): 1383 exact values, no capped case. Seed 20261107.

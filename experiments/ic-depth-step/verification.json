@@ -1,0 +1,12 @@
+{
+  "status": "passed: exact dense closures with exclusion certificates",
+  "source_sha256": {
+    "scripts/run_ic_depth_step.py": "0b2373d7cb9fc63a60464f42dd87e570df137dedbba2223e65aac14436e73574",
+    "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+    "csd/ic_curve_sweep.py": "4ddefb24900dda4d4f52dcd33b5d30ac7ddf80e3704c1c51d08df0a60fe9874c",
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1"
+  },
+  "data_sha256": {
+    "experiments/ic-depth-step/growth.json": "227a99e04f47bb9671681fdd8420b709d282a32d582e9124795b42a4b6bc6fc6"
+  }
+}

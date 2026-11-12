@@ -1,5 +1,7 @@
 # N6: genericity of the depth-7 base. What is true, what is provable, what is proved
 
+> **Note (2026-11-12).** Links to `docs/IC_*.md` point to notes of the original development that are not included in this repository; only `docs/IC_FALL_COUNTEREXAMPLES.md` is. The statements they describe are in the Lean sources and in `paper/`.
+
 Date: 2026-11-08. Branch `claude/lfd-proofs-20261108`. Companion data and commands:
 `experiments/ic-bounds-genericity/` (README there). This document settles the five questions of
 the N6 task (`docs/IC_BOUNDS_PROGRAM.md`, Section 4) for the two-summand prime chain closure at

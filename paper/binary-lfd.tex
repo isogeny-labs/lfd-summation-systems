@@ -16,25 +16,24 @@
 \newcommand{\wt}{\operatorname{wt}}
 \newcommand{\NF}{\operatorname{NF}}
 \newcommand{\Id}{\langle F\rangle}
+\setlength{\emergencystretch}{3em}
 \title{Degree budgets for binary summation systems:\\inverse families and arbitrary coordinate spaces}
 \author{}
-\date{Internal review draft, 30 October 2026}
+\date{Internal review draft, 30 October 2026; revised 12 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
 We study ordinary iterated last fall degree for explicitly presented binary
 two-summand elliptic-curve coordinate systems with Boolean field equations.
-For the inverse family over $\F_{2^d}$ we give a written proof of the exact
-value $3$ for odd $d$, and $\max(3,d/2+1)$ for even $d$. The argument translates
+For the inverse family over $\F_{2^n}$ we give a written proof of the exact value $3$ for odd $n$, and $\max(3,n/2+1)$ for even $n$. The argument translates
 classical cyclic nonadjacent representations into degree-charged polynomial
 rewrites and a full-closure lower obstruction. For arbitrary coordinate
 spaces of dimensions $k,\ell$ and any target, a fiber-selector argument gives
 $\lfd\leq\min(k,\ell)+2$. Together these give linear worst-case growth under
 a dimension-at-most budget, with explicit lower and upper constants.
-A seeded campaign outside the scaled-subfield class gives 613 distinct
-systems with exact finite degree computations. We distinguish written
+A seeded campaign outside the scaled-subfield class gives 613 distinct systems with exact finite degree computations; its records are not included in the public repository. We distinguish written
 proofs, kernel-checked components, and finite arithmetic throughout.
-Independent proof and novelty review remain outstanding. No useful-relation
+An internal referee report on the proofs exists; independent external proof and novelty review remain outstanding. No useful-relation
 cost improvement or generic ECDLP complexity claim is made.
 \end{abstract}
 
@@ -451,12 +450,11 @@ the at-most quantifier is essential. No monotonicity claim about the
 exact-dimension maximum is used. No arbitrary-$m\ge3$ consequence is asserted.
 
 \section{Finite evidence outside the structured family}
-The new deterministic campaign uses seed 20261030. For $k=2,\ldots,8$ take
+The records of this section are not included in the public repository \texttt{isogeny-labs/\allowbreak lfd-summation-systems}; the numbers below are reported from the original campaign and cannot be checked from that repository. The new deterministic campaign uses seed 20261030. For $k=2,\ldots,8$ take
 ambient degrees in $\{k+1,k+3,2k\}$ and four canonical random spaces per
 degree, rejecting every scaled subfield. Such rejection is exact: if $k\mid n$,
 a dimension-$k$ space is a scaled subfield precisely when all basis ratios
-are fixed by $2^k$ Frobenius. Use $(a,b)=(0,1),(1,1),(2,3)$ and three
-target categories. The resulting 702 geometric cases consist of 240
+are fixed by $2^k$ Frobenius. Use $(a,b)=(0,1),(1,1),(z,z+1)$, with $z$ the generator of the polynomial basis of $K$ (integer encodings $2$ and $3$), and three target categories. The resulting 702 geometric cases consist of 240
 order-two, 240 nonzero random rational, and 222 planted rational-decomposition
 targets. Eighteen unavailable planted cases are recorded as skips.
 All targets and planted sums are checked by exact group arithmetic.
@@ -524,7 +522,7 @@ certification are established research topics. The repository's source-level
 novelty audit records additional overlapping work and which primary texts
 were read. An exact novelty claim requires independent specialist review.
 
-The pinned Lean 4.19.0/mathlib artifact audits 424 declarations without
+The pinned Lean 4.19.0/mathlib artifact audits 513 declarations (424 when this draft was first written) without
 project axioms, proof placeholders or native-decide overrides. Among the
 checked components are the ordinary closure definitions, degree-safe affine
 transport, local-to-global reduction theorem, scalar binary fiber bounds,
@@ -543,8 +541,7 @@ and lower bounds for all-length one-bit split systems; neither supplies
 universal larger-$m$ arbitrary-base sharpness.
 
 \section{Reproduction and unresolved questions}
-The source package includes this manuscript, figures, exact data, source/data
-SHA256 manifests, pinned formal sources and audit logs. From the repository:
+The original source package included this manuscript, figures, exact data, source/data SHA256 manifests, pinned formal sources and audit logs. Of its scripts, only \texttt{verify\_\allowbreak lean\_\allowbreak fall\_\allowbreak degrees.py} is in the public repository, together with the formal sources; the commands below, other than that one, refer to the original package and do not run from the public repository. From the original package:
 \begin{verbatim}
 python scripts/reproduce_ic_paper.py --lake /path/to/lake
 \end{verbatim}

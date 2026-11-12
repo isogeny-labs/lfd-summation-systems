@@ -45,8 +45,7 @@ with part ranks $30{,}318+30{,}142$, $1\in V_6$, and a deterministic sweep of
 all $21{,}700$ low rows with no residual. With the lower bound this gives the exact profile
 $4$ for $k=2,\ldots,5$, $5$ for $k=6,\ldots,9$ and $6$ at $k=10$ on the
 instances computed, matching the averaged degree of regularity that Petit,
-Kosters and Messeng report for the same subgroup-chain presentation at every
-depth $k=2,\ldots,10$~\cite[Table~4]{pkm}.
+Kosters and Messeng report for the same subgroup-chain presentation at every depth $k=2,\ldots,10$, and at $k=11$~\cite[Table~4]{pkm}.
 
 \paragraph{Depths eleven to fourteen.}
 Two sets of closures extend the depth-ten measurement: closures of an
@@ -230,7 +229,7 @@ column was met in exactly one batch, with all seven of its generators.
 
 The lift agrees with the direct closure in $170$ runs over $37$ cases with
 $D\le5$ and $k\le11$, over the primes $12289$, $15361$, $65537$ and
-$16777213$: the dimension, the profile, the membership of $1$ and the
+$16777213$ (for the last, as polynomial systems, since $4\,\|\,p-1$): the dimension, the profile, the membership of $1$ and the
 canonical hash of $V_{D+1}\cap M_{\le D}$ in both parts are equal in every
 run. The cases include instances with solutions, where the lifted space
 equals the ideal part, and the transitions at which $1$ enters, $D=4\to5$
@@ -249,7 +248,7 @@ the lift reached its fixed point in three rounds, with $494+494$,
 $12{,}260+12{,}260$ and $11{,}197+11{,}181$ new falls and $K$ of codimension
 $1185$ in $T$ in each part. It gives $\dim V_7(14)=1{,}680{,}848$, exactly
 the bound, without $1$, and $\dim(V_7\cap M_{\le6})=496{,}808=499{,}178-2370$.
-So the evaluation of $M_{<7}$ on $Z$ has rank $2370$, $V_7$ is the degree-$7$
+The evaluation of $M_{<6}$, and hence of $M_{<7}$, on $Z$ has rank $2370$, computed directly with the degree-$6$ closure (\code{experiments/\allowbreak{}ic-bounds-k14/\allowbreak{}relaunch/\allowbreak{}fetched/\allowbreak{}proper-p114689-k14-D6.json}); the dimension count alone gives only the trivial bound $\le2370$. So $V_7$ is the degree-$7$
 part of the ideal, and the local-to-global criterion gives $\lfd\le7$; since
 $V_6$ is $47{,}886$ dimensions short of the degree-$6$ part of the ideal,
 $\lfd=7$ exactly on this curve as well ($4679$ seconds; every regular
@@ -303,9 +302,7 @@ Over $p=114689$ the instance is the random curve $y^2=x^3+31415x+92653$
 with target $(80359,998)$ (seed $22$; $594$ solutions at $k=13$ and $2370$
 at $k=14$). At $k=13$, $\dim V_5=39{,}657$, and $V_6$ is closed of dimension
 $313{,}318=313{,}912-594$ with $\dim(V_6\cap M_{\le5})=83{,}088=83{,}682-594$.
-Since $V_6$ lies in the ideal and the evaluation on $Z$ has rank at most
-$594$, the evaluation of $M_{<6}$ on $Z$ has rank $594$ and $V_6$ equals the
-degree-$6$ part of the ideal; $V_5$ is $43{,}431$ dimensions short of the
+The evaluation of $M_{<6}$ on $Z$ has rank $594$, computed directly (\code{experiments/\allowbreak{}ic-bounds-k14/\allowbreak{}runs/\allowbreak{}proper-p114689-k13-D6.json}); since $V_6$ lies in the ideal, $V_6$ equals the degree-$6$ part of the ideal; $V_5$ is $43{,}431$ dimensions short of the
 degree-$5$ part. The local-to-global criterion gives $\lfd=6$ exactly, as on
 the random curve over $p=65537$. At $k=14$, $\dim V_5=47{,}849$ with the same profile, and the degree-$6$
 closure is closed of dimension $448{,}922$, with the profile and part ranks
@@ -338,15 +335,13 @@ they were computed. The
 recursion is an exact observation on computed closures, not a theorem, and it
 is an identity of dimensions at its first step: the free extension of
 $V_5(10)$ to depth $11$ is not closed (the sweep of the free-extension space
-leaves nonzero residuals on all four instances tested) and is a different space from
+leaves nonzero residuals on all five instances tested) and is a different space from
 $V_5(11)$ of the same dimension. The free extension of $V_5(11)$ to depth $12$
-is closed, contains the generator and excludes $1$ on those four instances,
-and on the two for which $V_5(12)$ was computed it has the same canonical
+is closed, contains the generator and excludes $1$ on those five instances, and on the three for which $V_5(12)$ was computed it has the same canonical
 basis hash as $V_5(12)$. Closedness at depth $12$ is the hypothesis of
 Theorem~\ref{thm:reduction}; applied to this computed base, and not to a
 kernel-checked one, it gives $1\notin V_5(k)$ and $V_5(k)\subseteq W_k(V_5(11))$, the
-construction of the theorem with $D=5$ and base depth $11$, for
-every $k\ge12$ on those instances. So the free-extension structure of $V_5$
+construction of the theorem with $D=5$ and base depth $11$, for every $k\ge12$ on those instances, as polynomial systems; over $p=12289$ they are subgroup systems only for $k\le12$. So the free-extension structure of $V_5$
 starts at depth $11$ as a base, and the recursion of dimensions starts one
 depth earlier.
 
@@ -361,8 +356,7 @@ independent check; on the random curve over $p=65537$ it is one run\CERTNOTE. Th
 $\lfd\le7$ at $k=14$ is the lift on three instances (the two unit instances
 and the random curve over $p=114689$), one run each, without a
 certificate, as described above. For $D=6$ the reference engine confirms the
-full closure at $k=10$ and $k=11$; for $k\ge12$ there is no second engine. No $k=14$ degree-$6$ basis
-(about $45$ GB each) was kept, only the hashes and the checker's record.
+full closure at $k=10$ and $k=11$; for $k\ge12$ there is no second engine. No $k=14$ degree-$6$ basis (about $45$ GB each) was kept, only the hashes and the checker's record. The lift record names its input basis by a hash over file names, sizes and digests, and the checker record by a manifest hash and per-file digests without sizes, so the two cannot be matched hash for hash; they agree in checkpoint slot, source identifier, rank and free-column counts.
 Beyond $k=14$ only degree-$5$ closures were computed, at $k=15$ on two
 instances and at $k=16$ on one; nothing is known about $V_6$ and $V_7$
 there beyond the consequences of Theorem~\ref{thm:restrict}.
@@ -373,18 +367,7 @@ $\lfd(k)=\lfloor(k+14)/4\rfloor$ for $2\le k\le14$. We state this law as a
 conjecture for generic two-summand prime chain systems, not as a theorem: it
 was fitted to the exact values at $k\le13$, and the exceptional systems of
 Section~\ref{sec:results} already deviate from it. For unit ideals it reduces, by Theorem~\ref{thm:restrict}, to the two finite statements
-$1\in V_D(4D-11)$ and $1\notin V_D(4D-10)$ for every $D$. Three predictions
-were written down and committed to the repository before the runs:
-$\dim V_5(14)=47{,}849$ with profile $(0,0,2,154,4323,47849)$; $V_6(k)$ equal
-to the degree-$6$ part of the ideal for $k\le13$, with $1\in V_6(13)$ on unit
-ideals; and $V_6(14)$ a proper subspace not containing $1$ on unit ideals.
-All three held on the unit instance; the first also held on
-the random curve, and the same statements hold at the depths computed on
-the unit instance over $p=163841$. The value $7$ at $k=14$ was computed
-after these predictions, by the lift, and was not among them; it is the
-value the law gives. What remains untested is every depth beyond $14$
-(including the prediction that the free-extension structure of $V_6$ starts
-at $k=14$), the value at $k=14$ by a second method,
+$1\in V_D(4D-11)$ and $1\notin V_D(4D-10)$ for every $D$. Six predictions were frozen in \code{experiments/\allowbreak{}ic-bounds-freeext/\allowbreak{}predictions-2026-11-10.json} before the runs. Four concern depths reported here: $\dim V_5(14)=47{,}849$ with profile $(0,0,2,154,4323,47849)$; $V_6(k)$ equal to the degree-$6$ part of the ideal for $k\le13$, with $1\in V_6(13)$ on unit ideals; $V_6(14)$ a proper subspace not containing $1$ on unit ideals; and a table of values of the law, which includes $\lfd(14)=7$. All four held on the unit instance; the first also held on the random curve, and the same statements hold at the depths computed on the unit instance over $p=163841$. The value $7$ at $k=14$ was therefore predicted, and was computed afterwards by the lift. Two predictions concern depths not computed: the closed form for $\dim V_5$ at $k=17,18$, and the base depth of the free extension of $V_6$ (\code{d6-base-15}). That the predictions preceded the runs rests on the dates recorded in the files. What remains untested is every depth beyond $16$ for $V_5$ and beyond $14$ for $V_6$, the value at $k=14$ by a second method,
 and uniformity over curves, primes and targets: the degree-$6$ evidence at
 depths $13$ and $14$ is two unit instances with $j=1728$ and two random
 curves, over three primes, and the degree-$7$ evidence is three of these
@@ -474,8 +457,7 @@ three depths. The upper bound at $k=14$ comes from a degree-lifting
 computation on three instances; it has a written proof and passed a control
 on a curve with solutions, but has no independent certificate. The values
 fit $\mathrm{LFD}(k)=\lfloor(k+14)/4\rfloor$, which we state as a
-conjecture. Binary and Koblitz values are at most $5$ for dimensions up to
-$10$. For two summands the measured values are thus far below the proved
+conjecture. On the binary and Koblitz grids computed, every value is at most $5$ for dimensions up to $10$; this is not a bound, since the inverse family of the companion manuscript, on a Koblitz curve, has value $6$ at dimension $10$. For two summands the measured values are thus far below the proved
 bounds, and we describe what a tight bound would need. With three to eight
 summands the picture is different: at every depth $k\le m-1$ computed the
 value is exactly $mk+1$, so the bound is attained, with values up to $25$. We make no claim about the cost of computing
@@ -483,7 +465,7 @@ discrete logarithms.
 \end{abstract}
 
 \section{Introduction}
-The last fall degree of Huang, Kosters, Yang and Yeo~\cite{hkyy} is the
+The last fall degree, introduced by Huang, Kosters and Yeo~\cite{hky15} and developed by Huang, Kosters, Yang and Yeo~\cite{hkyy}, is the
 degree-charged invariant that, together with the number of solutions,
 controls the linear-algebra solving of zero-dimensional Weil-descent and
 summation-polynomial systems~\cite[Prop.~2.8]{hkyy}: for an input
@@ -497,8 +479,7 @@ a multiplicative subgroup of $\F_p^*$ of two-power order, written through
 squaring chains (Petit, Kosters and Messeng~\cite{pkm}); binary curves with an
 $\F_2$-linear coordinate space, descended to Boolean coordinates
 (Faug\`ere, Perret, Petit and Renault~\cite{fppr}; Semaev~\cite{semaev});
-and Koblitz curves, the binary curves with $b=1$ whose Frobenius is a curve
-automorphism, for which Frobenius-invariant coordinate spaces are the
+and Koblitz curves, the binary curves with $b=1$ which are defined over $\F_2$, so that the Frobenius map is an endomorphism of the curve, and for which Frobenius-invariant coordinate spaces are the
 natural \emph{symmetric} factor bases.
 
 \paragraph{Results.}
@@ -525,8 +506,7 @@ to $k+2$ for nonsingular curves (Theorem~\ref{thm:selector}).
 depth for every two-summand prime chain system with unit ideal and
 $3t^2+a\ne0$ (Theorem~\ref{thm:three}); $\lfd\ge7$ at every depth $k\ge3$
 for the direct three-summand system with $5t^3+3at+6b\ne0$
-(Theorem~\ref{thm:carry}); $\lfd\ge5$ at every depth $k\ge8$ for two
-explicit two-summand instances (Theorem~\ref{thm:reduction}), using an
+(Theorem~\ref{thm:carry}); $\lfd\ge5$ at every depth $k\ge8$ for two explicit two-summand polynomial systems, one of them a subgroup system for $k\le13$ (Theorem~\ref{thm:reduction}), using an
 equivalence between the closure modulo the chains and the ordinary closure
 (Theorem~\ref{thm:bridge}); the persistence of an exclusion $1\notin V_D$ at
 all larger depths (Theorem~\ref{thm:restrict}); and one exact value above
@@ -554,12 +534,11 @@ every instance computed and at least $8$ on one instance at $k=6$. With
 $m=3,\ldots,8$ summands (the summation polynomials $S_4$ to $S_9$) and depth
 $k\le m-1$, the value is exactly $mk+1$ on $409$ of $412$ instances, so the
 dimension bound is attained by summation systems (Table~\ref{tab:msum}). For
-binary and Koblitz curves the two-summand value is at most $5$ for
-coordinate spaces of dimension up to $10$.
+binary and Koblitz curves the two-summand value is at most $5$ on the grids computed, for coordinate spaces of dimension up to $10$; the structured inverse family, on a Koblitz curve, reaches $\lfloor k/2\rfloor+1$, which is $6$ at $k=10$.
 
 \emph{Explanations.} The step of the prime value at depth $6$ is the point
 at which a quadratic closure dimension, measured at $k=6,\ldots,13$ and
-explained for $k\ge7$ by a written reduction theorem, falls below the
+bounded above for $k\ge8$ by the kernel-checked reduction theorem applied to a computed base, falls below the
 quartic dimension of the degree-$4$ part of the ideal. On binary curves the
 apparent difference between random and Frobenius-invariant factor bases
 follows the number of solutions. Section~\ref{sec:missing} states what a
@@ -580,7 +559,7 @@ to newly derived rows. Define
 \]
 This is the ordinary iterated closure of~\cite{hkyy}; the convention permits
 zero for proper ideals and is not the degree at which a particular solver
-stops~\cite{cg}. The Lean development formalizes $V_{F,D}$ as an inductive
+stops~\cite{cg}. When we call a computed value \emph{generic}, we mean that it was found on random instances (random curves and random rational targets of large order, not of order two, with $3t^2+a\ne0$); this is not a claim about a Zariski-open set of coefficients, which is open (item~1 of Section~\ref{sec:missing}). The Lean development formalizes $V_{F,D}$ as an inductive
 predicate (\code{InClosure}) over \code{MvPolynomial}, and
 $\lfd(F)\le d$ as \code{HasLFDBound F d}.
 
@@ -716,8 +695,7 @@ $\alpha-\beta^2\ne0$ reads $-2(3t^2+a)\ne0$
 \end{proof}
 This generalizes the lower half of the all-depth family of
 \code{PrimeM2Sharp} ($b=t=0$, where the condition is $a\ne0$) to every curve
-and target. The condition $3t^2+a\ne0$ is the one that separates ordinary
-ordinary first fall degree $3$ from $4$
+and target. The condition $3t^2+a\ne0$ is the one that separates ordinary first fall degree $3$ from $4$
 (\code{PrimeM2General.exact\_ordinary\_ffd},
 \code{PrimeFieldConclusions.ordinary\_ffd}), and
 the four sweep systems with $\dim V_3\ne2k+1$ are consistent with it.
@@ -786,7 +764,7 @@ Boolean sharpness & $\{Z_i^2-Z_i\}\cup\{\text{one degree-}r\text{ row}\}$, $r\ge
 \caption{Kernel-checked bounds; the first four statements are in the
 \code{CurveBounds} namespace. For $m$ summands on coordinate spaces of
 dimension $k$, $r=mk$ (plus $(m-2)n$ auxiliary coordinates in a left chain),
-so every family has the bound $mk+1$ for the two-summand direct encodings.
+so every family has the bound $mk+1$ for the direct encodings without auxiliary coordinates, $2k+1$ for two summands.
 The sharpness row is an abstract Boolean family, not a curve system.}
 \label{tab:bounds}
 \end{table}
@@ -798,8 +776,8 @@ The sharpness row is an abstract Boolean family, not a curve system.}
 Family ($m=2$) & Proved upper & Proved lower (family) & Written & Measured, certified\\
 \midrule
 Prime chains, depth $k$ & $2k+1$; $mk+1$ for all $m$ (Lean) & $\ge4$ for unit ideals with $3t^2+a\ne0$, every $k$; $=4$ for $y^2=x^3+ax$, target $(0,0)$, $a\ne0$, $a^{2^k}\ne1$ (Lean) & $\le k+2$, nonsingular curve (written, Theorem~\ref{thm:selector}) & $4$ ($k\le5$); $5$ ($k=6,\ldots,9$, generic targets); $6$ ($k=10,\ldots,13$, unit instance over $p=65537$); $7$ ($k=14$, upper bound by the degree lift)\\
-Binary, spaces of dimension $k,\ell$ & $k+\ell+1$ (Lean) & $\ge\lfloor k/2\rfloor+1$, inverse family, $k\ge6$ (written) & $\le\min(k,\ell)+2$ (written) & $\le5$ through $k=10$; $5$ occurs from $k=8$\\
-Koblitz, same & $k+\ell+1$ (Lean) & as binary & as binary & $\le5$ through $k=10$; $5$ occurs from $k=8$\\
+Binary, spaces of dimension $k,\ell$ & $k+\ell+1$ (Lean) & --- & $\le\min(k,\ell)+2$; worst case over dimension $\le k$ at least $\lfloor k/2\rfloor+1$ for $k\ge6$ (inverse family; for odd $k$ the witness has dimension $k-1$) & $\le5$ on the grids through $k=10$; $5$ occurs from $k=8$\\
+Koblitz, same & $k+\ell+1$ (Lean) & --- & as binary (the inverse family is Koblitz) & $\le5$ on the grids through $k=10$; $5$ occurs from $k=8$\\
 Boolean abstract, $r$ coordinates & $r+1$ (Lean) & $=r+1$ (Lean) & --- & ---\\
 \bottomrule
 \end{tabular}
@@ -832,17 +810,7 @@ Work in the chain quotient $\F_p[(\mathbb Z/2^k)^2]$ with Hamming-weight
 degree; the passage to the ordinary ring is Theorem~\ref{thm:bridge}. For a
 point $\alpha$ of the first block, the character idempotent $e_\alpha$ is a
 polynomial in the $k$ chain variables of that block, of weight $k$, and
-$e_\alpha g$ has weight at most $k+2$ and equals $e_\alpha$ times the
-fibre polynomial $g(\alpha,x_2)$, of degree at most $2$ in $x_2$. The chain
-system of a univariate polynomial of degree at most $2$ has last fall degree
-at most $2$, including every degenerate case (constant, linear, double
-root, roots outside the subgroup), so every element of the ideal supported on
-the fibre $x_1=\alpha$ is derived within weight $k+2$, each later product
-being one variable times a row of weight below the budget. Nonsingularity
-of the curve guarantees that no fibre polynomial vanishes identically.
-Summing over $\alpha$ gives $I\cap M_{\le D}\subset V_D$ for $D=k+2$, and
-the local-to-global criterion (\code{LocalReductionBound.lfd\_bound\_of\_local})
-gives the bound. The full proof is in the repository (Section~\ref{sec:artifacts}).
+$e_\alpha g$ has weight at most $k+2$ and equals $e_\alpha$ times the fibre polynomial $g(\alpha,x_2)$, of degree at most $2$ in $x_2$. Nonsingularity of the curve guarantees that no fibre polynomial vanishes identically, so on each fibre the functions on the zero set are represented by $\rho e_\alpha$ with $\rho\in\{1,x_2\}$, of weight at most $k+1=D-1$ for $D=k+2$. These representatives span a complement of the ideal, with projector $\pi$. Using the chain system of the fibre polynomial (every degenerate case included: constant, linear, double root, roots outside the subgroup), each correction $v\cdot\rho e_\alpha-\pi(v\cdot\rho e_\alpha)$ for a chain variable $v$, and $1-\pi(1)$, lies in $V_{k+2}$. Induction on monomials then gives $m-\pi(m)\in V_{\max(k+2,\wt m)}$ for every monomial $m$, which is the hypothesis of the local-to-global criterion (\code{LocalReductionBound.lfd\_bound\_of\_local}, whose conditions \code{bounded} and \code{room} are the weight bound $k+1$ of the representatives), and it gives the bound. The full proof is in the repository (Section~\ref{sec:artifacts}).
 \end{proof}
 
 The theorem is not formalized; the kernel-checked bound remains $2k+1$,
@@ -850,8 +818,7 @@ which needs no hypothesis on $a,b,t$. A separate review checked every
 step of the proof, and the statement was tested by exact computation in the
 ordinary ring, with an implementation independent of the proof, on $149{,}122$ systems with $2\le k\le5$, including every
 nonsingular $(a,b,t)$ over $\F_5$, $\F_{13}$, $\F_{17}$, $\F_{29}$,
-$\F_{37}$ at $k=2$; random degree-$2$ generators do exceed the bound, so the test could have
-failed. The bound is attained
+$\F_{37}$ at $k=2$. This test has no working negative control: random degree-$2$ generators exceed the bound only at unequal depths, and at equal depths an independent check of $292$ random generators during review (\code{docs/\allowbreak{}reviews-20261112/\allowbreak{}referee-U1.md}) found none above $k+2$, so a failure of the test was not demonstrated to be possible. The per-instance records of the test were not kept; only its counts are recorded, in \code{docs/\allowbreak{}reviews-U1-upper-bound-redteam-20261110.md}. The bound is attained
 at $k=2$, where $\lfd=4$ exactly when $3t^2+a\ne0$ and $3$ otherwise on all
 $132{,}303$ systems. For $k\ge3$ no computed system attains it (the largest
 exact values are $4$ for $k\le5$, $5$ for $k=6,\ldots,9$ and $6$ at $k=10$),
@@ -983,7 +950,7 @@ $9$ & $5$ & --- & --- & $8$ systems; shift engine, rank certificate; recomputed 
 $10$ & $6$ ($\ge6$ on two more instances) & $18{,}569$ & full & unit instances over $p=12289$ (two engines) and $p=65537$; closed $V_5$ without $1$; $1\in V_6$ & $6$\\
 $11$ & $6$ & $25{,}033$ & full & unit instance, $p=65537$ (third engine); $\ge6$ on two instances, $p=12289$ & $6$\\
 $12$ & $6$ & $32{,}057$ & full & as $k=11$ & ---\\
-$13$ & $6$ & $39{,}657$ & full & as $k=11$; random curve, $p=65537$: $V_6=I\cap M_{\le6}$ & ---\\
+$13$ & $6$ & $39{,}657$ & full & unit instance, $p=65537$; $\ge6$ on two instances, $p=40961$; random curve, $p=65537$: $V_6=I\cap M_{\le6}$ & ---\\
 $14$ & $7$ ($\ge7$ certified; $\le7$ by the lift, uncertified) & $47{,}849$ & closed, $1\notin V_6$ & unit instances, $p=65537$ and $163841$, random curves, $p=65537$ and $114689$: $\dim V_6=448{,}922$; independent checker\CERTTAB; lift on three: $V_7$ is the degree-$7$ part of the ideal & ---\\
 $15$ & $\ge7$ & $56{,}649$ & $1\notin V_6$ & unit instance, $p=65537$; Theorem~\ref{thm:restrict} & ---\\
 every $k\ge2$ & $\ge4$ if $3t^2+a\ne0$, unit ideal & & & Lean (Theorem~\ref{thm:three}) & ---\\
@@ -1040,12 +1007,7 @@ $|M_{\le4}|=\binom{2k}{\le4}$ between $k=5$ ($389\ge386$, extrapolated) and
 $k=6$ ($605<794$): beyond it the degree-$4$ closure cannot contain the
 degree-$4$ part of the ideal and $\lfd\ge5$; the matching upper bound $5$ is
 the separately measured certificate at degree $5$ for $k\le9$, and it fails
-at $k=10$. For $k\ge7$ the identity is explained per instance: $V_4(k)$ is
-the free high-level extension of $V_4(7)$, of dimension
-$829+230(k-7)+2\binom{2k-14}{2}=4k^2+172k-571$, by a written reduction
-theorem that turns closedness at depth $8$ into closedness at every depth
-$k\ge8$, checked exactly at $k=7,\ldots,12$ on three instances and with
-$\dim V_4$ confirmed through $k=13$ by an independent engine. What
+at $k=10$. For $k\ge8$ the identity is bounded above per instance: $V_4(k)$ lies in the free high-level extension of $V_4(7)$, of dimension $829+230(k-7)+2\binom{2k-14}{2}=4k^2+172k-571$ (a written count), by the kernel-checked reduction theorem (Theorem~\ref{thm:reduction}), which turns closedness at depth $8$ into closedness at every depth $k\ge8$. Equality is a computation: it was checked at $k=8,\ldots,12$ on one instance and at $k=8,9$ on two more, and $\dim V_4$ was confirmed through $k=13$ by an independent engine. What
 remains open is the genericity of the depth-$7$ base in $(a,b,t)$; with it,
 $\lfd\ge5$ would follow for every such system with $|M_{\le4}|-|Z|$ above
 the bound.
@@ -1066,8 +1028,7 @@ The proved bounds are dimension bounds, linear in $k$, while every certified
 two-summand value is $3$, $4$ or $5$ for prime chains through $k=9$ (with
 $\lfd=6$ on a unit instance at $k=10,\ldots,13$, $\lfd=7$ on it at
 $k=14$, and $\lfd\ge6$ on every other instance computed at
-$k=10,\ldots,13$) and at most $5$ through $k=10$ for binary and
-Koblitz systems. This section states, as
+$k=10,\ldots,13$) and at most $5$ through $k=10$ for the binary and Koblitz systems computed, which exclude the inverse family with value $\lfloor k/2\rfloor+1$. This section states, as
 precisely as the evidence allows, what separates the two.
 
 \paragraph{The mechanism, restated in the group algebra.}
@@ -1162,7 +1123,7 @@ kernel-checked bound $mk+1$ is attained there
 the coefficient $-8(5t^3+3at+6b)$ of $x_1^3x_2^3x_3^3$ vanishes.
 
 \begin{theorem}[Carry lower bound; kernel-checked]\label{thm:carry}
-Let $G$ be a reduced-ideal-trivial set, $g$ a reduced polynomial of degree
+Let $G$ be a reduced-ideal-trivial set with $0\notin G$, $g$ a reduced polynomial of degree
 $d$, and $h$ a reduced polynomial of degree at most $d$ with
 $h-a\,g\in\langle G\rangle$ for some $a$ and $h\ne c\,g$ for every constant
 $c$. Then $\lfd(G\cup\{g\})\ge d+1$. For three summands, every field with
@@ -1170,7 +1131,7 @@ $2\ne0$, every depth $k\ge3$ and $5t^3+3at+6b\ne0$, the direct system
 $G_{3,k}\cup\{\NF(S_4)\}$ has $\lfd\ge7$.
 \end{theorem}
 \begin{proof}
-By \code{QuotientLowerBound.closure\_le\_quotient\_span}, $V_d$ lies in
+By \code{FiniteQuotient.closure\_le\_quotient\_span}, $V_d$ lies in
 $(\langle G\rangle\cap M_{\le d})+K g$; if $h$ were there, the reduced
 element $h-cg$ would lie in $\langle G\rangle$ and vanish
 (\code{CarryLower.not\_hasLFDBound\_of\_carry},
@@ -1277,8 +1238,7 @@ On $409$ of the $412$ instances with $2\le k\le m-1$ the generator has
 degree $mk$ and the two hypotheses on $h$ hold, so $\lfd=mk+1$ exactly
 (Table~\ref{tab:msum}, Figure~\ref{fig:variables}). The dimension bound is therefore attained by
 summation systems themselves for every $m$ from $3$ to $8$, with values up
-to $25$, and not only by the abstract Boolean family of
-Table~\ref{tab:bounds}. The three exceptions are unit ideals on
+to $25$, and not only by the abstract Boolean family of Table~\ref{tab:bounds}. The attainment is of the simplest kind: at budget $\deg g$ the generator cannot be multiplied, so the lower bound is one more than the input degree, and with $\deg g=mk$ it meets the upper bound $\max(mk+1,\delta)$. These systems have one fall, directly above the input degree; the agreement says nothing about how the closures grow, and it is not comparable with the two-summand profile, whose falls lie above $\deg g+1$. The three exceptions are unit ideals on
 $y^2=x^3+x$ with $\deg g=mk-1$; the argument decides nothing for them. For
 $k\ge m$ the generator has degree $m(m-1)$ on every instance computed, which
 gives $\lfd\ge m(m-1)+1$: the bound $7$ for three summands at $k=3,4$
@@ -1286,8 +1246,7 @@ gives $\lfd\ge m(m-1)+1$: the bound $7$ for three summands at $k=3,4$
 $\lfd\ge13$ for four summands at $k=4,5$ ($56$ instances), where the upper
 bounds are $17$ and $21$. For $m\ge4$ the lower bounds use the kernel-checked
 statement with hypotheses established by this exact computation and not by
-the kernel. The largest cases rest on few instances (eight with $2^{20}$ or
-$2^{21}$ grid points, two with $2^{24}$), depths with more than $2^{24}$
+the kernel. The largest cases rest on few instances (sixteen with $2^{20}$ or $2^{21}$ grid points, four with $2^{24}$), depths with more than $2^{24}$
 grid points were not computed, and no exact value is known for $k\ge m$
 when $m\ge4$.
 
@@ -1300,25 +1259,20 @@ reduced space under the rule $w\mapsto\NF(x\,w)$ for $\deg w<D$.
 \begin{theorem}[Chain bridge; kernel-checked]\label{thm:bridge}
 For every field with $2\ne0$, all $m,k$, every input set
 $F=G_{m,k}\cup R$ and every $D\ge2$: $p\in V_D(F)$ if and only if
-$\deg p\le D$ and $\NF(p)\in V^{q}_D(F)$. Equivalently
-$V_D(F)=(\langle G_{m,k}\rangle\cap M_{\le D})\oplus V^{q}_D(F)$
-(\code{ChainClosureBridge.chain\_mem\_closure\_iff}).
+$\deg p\le D$ and $\NF(p)\in V^{q}_D(F)$ (\code{ChainClosureBridge.chain\_mem\_closure\_iff}).
 \end{theorem}
+The direct-sum form $V_D(F)=(\langle G_{m,k}\rangle\cap M_{\le D})\oplus V^{q}_D(F)$ follows at once; it is written, not a separate Lean declaration.
 
 This proves the premise used throughout the computations, that working
 modulo the chains gives the ordinary closure for $D\ge2$, which had been
 checked only numerically. The second statement is the reduction of all
-depths to one finite base. For a subspace $S$ of the depth-$7$ chain algebra
-(degree at most $4$), let $W_k(S)=\bigoplus_q\tau_q(S\cap
-M_{\le4-\wt q})$, the sum over high exponent patterns $q$ on levels
-$7,\ldots,k-1$ of the translates of $S$.
+depths to one finite base. For a base depth $k_0$, a degree $D$ and a subspace $S$ of the depth-$k_0$ chain algebra in degree at most $D$, let $W_k(S)=\bigoplus_q\tau_q(S\cap M_{\le D-\wt q})$, the sum over high exponent patterns $q$ on levels $k_0,\ldots,k-1$ of the translates of $S$. Below, $k_0=7$ and $D=4$ unless stated otherwise.
 
 \begin{theorem}[Depth reduction; kernel-checked]\label{thm:reduction}
-For every subspace $S$ and all $k_0,D,m$: if $W_{k_0+1}(S)$ is closed under
+Let $K$ be a field with $2\ne0$. For every subspace $S$ and all $k_0,D,m$: if $W_{k_0+1}(S)$ is closed under
 the admissible variable products at depth $k_0+1$, then $W_k(S)$ is closed
 at every depth $k\ge k_0+1$, and $1\in W_k(S)$ if and only if $1\in S$
-(\code{DepthReduction.W\_closed}, \code{single\_zero\_mem\_W\_iff}).
-Consequently, for two-summand prime chain systems: if some $S$ at depth $7$
+(\code{DepthReduction.W\_closed}, \code{single\_zero\_mem\_W\_iff}). If moreover $S$ contains the generator, then the normal forms of $V_D(k)$ lie in $W_k(S)$ for every $k\ge k_0+1$ (\code{ShiftWitness.normalForm\_mem\_map\_W}). Consequently, for two-summand prime chain systems: if some $S$ at depth $7$
 contains the generator, excludes $1$, and has $W_8(S)$ closed, then
 $1\notin V_4$ at every depth $k\ge8$, and a unit ideal has $\lfd\ge5$ at
 every depth $k\ge8$ (\code{ChainModelMap.n5\_lfd\_ge\_five},
@@ -1334,8 +1288,7 @@ large integer, so that a membership test is a few big-integer
 multiply-and-adds followed by a check of each free slot modulo $p$. The
 closedness of $W_8(S)$ reduces, through the component formulas of the
 reduction, to $3220$ such memberships at depth $7$, about $2\cdot10^7$
-kernel operations, which run in about $14$ minutes per instance in $43$
-\code{decide +kernel} chunks. The result is unconditional for these
+kernel operations, which run in about $14$ minutes per instance in $42$ \code{decide +kernel} chunks. The result is unconditional for these
 instances: $1\notin V_4(k)$ at every depth $k\ge8$
 (\code{N5CertInstanceP40961.not\_one\_in\_closure},
 \code{N5CertInstanceP11.not\_one\_in\_closure}).
@@ -1346,18 +1299,17 @@ $V_D$, and an element of the low box outside $S$ stays outside $W_k(S)$ at
 every depth. No single shifted generator $x_1^{e_1}x_2^{e_2}g$ of weight at
 most $4$ is such an element (all $131$ candidates with $e_i\le125$ lie in
 $V_4(7)$), but a combination $h\,g$ with $\deg h=(46,46)$ is: it has weight
-at most $4$, about $150$ monomials, and a nonzero echelon residual. The
+at most $4$, $161$ monomials, and a nonzero echelon residual. The
 kernel checks the product in chunks and the residual, which gives, with no
 hypothesis left,
 \[
  \lfd\ge5\quad\text{at every depth }k\ge8
 \]
-for $p=40961$, $(a,b,t)=(21223,9887,4748)$ and for $p=11$, $(2,5,7)$;
+for $p=40961$, $(a,b,t)=(21223,9887,4748)$ and for $p=11$, $(2,5,7)$, as statements about these polynomial systems at every depth. They are subgroup systems only where $2^k\mid p-1$: for $p=40961$ that is $k\le13$, beyond which the statement concerns the same system over an extension field; $p=11$ has no subgroup of order $2^k$ for $k\ge2$, and $t=7$ is not the abscissa of a rational point of $y^2=x^3+2x+5$, so that instance is a test polynomial system rather than a summation system over $\F_{11}$;
 the Lean statements are \code{lfd\_ge\_five} in the modules
 \code{N5CertWitnessInstanceP40961} and \code{N5CertWitnessInstanceP11}. The
 same statement for any
-degree $D$ and base depth $k_0$, conditional on one base certificate per
-$D$, is \code{GrowthSchema.growth\_schema}; only $D=4$, $k_0=7$ is
+degree $D$ and base depth $k_0$, conditional on one base certificate per $D$ and with $k_0\ge2$, is \code{GrowthSchema.growth\_schema}; only $D=4$, $k_0=7$ is
 certified.
 
 \begin{theorem}[An exact value above four; kernel-checked]\label{thm:exactsix}
@@ -1387,10 +1339,7 @@ remains a certified computation.
 For every field, all $a,b,t$, every $k\ge2$ and $D\ge2$: the substitution
 $u_{i,k}\mapsto1$ maps the degree-$D$ closure at depth $k+1$ into the
 degree-$D$ closure at depth $k$. Hence $1\in V_D(k+1)$ implies
-$1\in V_D(k)$, an exclusion $1\notin V_D(k_0)$ holds at every depth
-$k\ge k_0$, and for unit ideals the last fall degree is nondecreasing in the
-depth (\code{DepthRestrictionM2.restrict\_closure},
-\code{not\_one\_of\_le}, \code{lfd\_gt\_of\_le}).
+$1\in V_D(k)$, and an exclusion $1\notin V_D(k_0)$ holds at every depth $k\ge k_0$ (\code{DepthRestrictionM2.restrict\_closure}, \code{not\_one\_of\_le}, \code{lfd\_gt\_of\_le}). As a short written corollary, not a Lean declaration, the last fall degree is nondecreasing in the depth over any range of depths on which the ideal is the unit ideal.
 \end{theorem}
 
 The substitution sends the chain equations of depth $k+1$ to those of depth
@@ -1427,41 +1376,29 @@ instances, which $1\in V_7(17)$ would imply.
  the closure over the polynomial ring in the coefficients of $g$ and identify
  the pivots as polynomials in $a$, $b$, $t$; the top coefficients of $S_3$
  are $1$, $-2(t^2+a)$ and $-2t$, so already the degree-$3$ analysis needs
- $3t^2+a\ne0$ (Theorem~\ref{thm:three}). At $k=6$ and $p=193$ the
- exceptional set is known completely (and was re-verified on a stratified
+ $3t^2+a\ne0$ (Theorem~\ref{thm:three}). At $k=6$ and $p=193$ the exceptional set among the targets computed is known (it was re-verified on a stratified
 sample of $96$ targets including every deviating one): over $1276$ targets on $13$ curves the exact
  LFD is $5$ except for $12$ targets with value $4$, which are exactly those
  with $t=0$ and $ab=0$ ($3$) or with normalized point $(a/t^2,b/t^3)$ in a
- set $C_2$ of $190$ points of the plane that lies on no curve of degree at
- most $18$ ($9$); a cubic $C_1$ and the tangent line $3t^2+a=0$ change the
+ set $C_2$ of $190$ points of the plane ($9$); $C_2$ lies on no curve of degree at most $18$, which carries little information, since $190$ points in general position lie on no such curve; a cubic $C_1$ and the tangent line $3t^2+a=0$ change the
  closure dimensions but not the LFD.
  On one $C_2$-class target at $k=7$ ($p=257$) the exact LFD is $5$, so the
  exceptional set depends on the depth at least there, and if $C_2$ is not the
  reduction of a curve the theorem must be stated prime by prime.
- An analysis of this item (with written proofs, not kernel-checked) gives three conclusions. First, the closure
- dimension is semicontinuous in neither direction (order-two targets have
- $607>605$, the tangent line $603<605$), so the generic facts cannot be
- inferred from computed points; what is needed is the generic depth-$7$
- basis over $\F_p(a/t^2,b/t^3)$, whose common denominator has degree at least
- $480$ along a random line of the plane (exact, $k=6$ and $7$), a certificate
- of about $10^{10}$ coefficients that is out of reach of the kernel. Second,
+ An analysis of this item (with written proofs, not kernel-checked) gives three conclusions. First, the computed closure dimensions lie on both sides of $605$ (order-two targets $607$, the tangent line $603$). Rigorously, only the drop below the computed value on the line $b=t=0$ is established; if $605$ is the generic value, as conjectured, the dimension is semicontinuous in neither direction, and the generic facts cannot be inferred from computed points; what is needed is the generic depth-$7$
+ basis over $\F_p(a/t^2,b/t^3)$, whose common denominator has degree at least $480$ along a random line of the plane (an exact lower bound at $k=6$ and $7$, whose records are not in the repository), a certificate of an estimated $10^{10}$ coefficients that is out of reach of the kernel. Second,
  full invariance of the closure dimension under $(a,b,t)\mapsto(\mu^2a,\mu^3b,\mu
  t)$ fails for $\mu\notin H$ ($730$ against $794$ on the $t=b=0$ line at
  $p=193$), but the depth-$8$ certificate is invariant: scaling by $\mu$ is
  the same system with the coset $\mu^{-1}H$ as factor base, and the free
  extension $W_k(S)$ remains closed in every twisted algebra. Hence one point
- that passes the depth-$7$/$8$ certificate gives $\lfd\ge5$ at every depth
- $k\ge8$ on its whole orbit of $p-1$ scalings (unit ideals; proper ideals
+ that passes the depth-$7$/$8$ certificate gives $\lfd\ge5$ at every depth $k\ge8$, as polynomial systems (subgroup systems only while $2^k\mid p-1$, so $k\le6$ at $p=193$), on its whole orbit of $p-1$ scalings (unit ideals; proper ideals
  when $|Z|$ is below the dimension gap). Third, the strongest exact
- description of the exceptional set within reach is per prime: the
- certificate at all $37{,}249$ points of the plane at $p=193$ is about $52$
- CPU-hours.
+ description of the exceptional set within reach is per prime: the certificate at all $37{,}249$ points of the plane at $p=193$ is estimated at about $52$ CPU-hours.
 \item \emph{The polynomials $d_D(k)$.} For $D=3$ the kernel-checked
  Theorem~\ref{thm:three} proves the consequence that matters, $1\notin V_3$
  at every depth when $3t^2+a\ne0$, by showing that no combination of $g$ and
- its multiples by a variable falls below degree $3$. For $D=4$ the identity
- $4k^2+172k-571$ is explained per instance for $k\ge7$ by the free
- high-level extension of $V_4(7)$ (Section~\ref{sec:results}); a
+ its multiples by a variable falls below degree $3$. For $D=4$ the identity $4k^2+172k-571$ is an upper bound per instance for $k\ge8$, by the free high-level extension of $V_4(7)$, and an equality on the computed range (Section~\ref{sec:results}); a
  parametric description of $V_4(7)$, of dimension $829$ with a fall of
  dimension $2k+86$ above $V_3$ in the low part, is still missing. For $D=5$ the closure is full through $k=9$ and
  $\dim V_5=18{,}569$, $25{,}033$, $32{,}057$, $39{,}657$, $47{,}849$,
@@ -1469,8 +1406,7 @@ sample of $96$ targets including every deviating one): over $1276$ targets on $1
  $k=10,\ldots,16$ satisfy the exact recursion of
  Section~\ref{sec:missing}, so $d_5$ is a cubic on the computed range; whether
  the recursion holds beyond $k=16$ is untested. For $D=6$ the closure is
- full through $k=13$ and has dimension $448{,}922$ at $k=14$ on three instances;
- the deficient codimensions $10$, $189$, $3131$, $50{,}256$ at the first
+ full through $k=13$ and has dimension $448{,}922$ at $k=14$ on four instances; the deficient codimensions $10$, $189$, $3131$, $50{,}256$ at the first
  deficient depths $4D-10$ have no formula.
 \item \emph{A lower bound outside the exceptional locus.} An upper bound
  $\dim V_4\le f(k)$ with $f$ quadratic cannot hold for every instance
@@ -1504,14 +1440,13 @@ sample of $96$ targets including every deviating one): over $1276$ targets on $1
  both of them and on a random curve; a direct closure in $M_{\le7}$ at that
  depth, which would certify it, is out of reach.
 \item \emph{Binary and Koblitz.} The written $\min(k,\ell)+2$ bound is
- tight in order but not in constant; the measured two-summand values are at
- most $5$ through $k=10$. On the first grid the $28$ systems with value $5$, all at $k=10$,
+ tight in order but not in constant; the measured two-summand values on the grids are at most $5$ through $k=10$, and the inverse family (a Koblitz curve) has $6$ at $k=10$. On the first grid the $28$ systems with value $5$, all at $k=10$,
  were exactly those with more than $470$ solutions. A follow-up shows that this is not a law. Every
  equation is affine bilinear in the two coordinate blocks and the curve
  coefficient $a$ does not occur; for a target with $x_R\ne0$ the trace form
  $\operatorname{Tr}(\cdot/x_R^2)$ gives one linear equation, which is why a
  trace-zero coordinate space doubles or empties the solution set. Two
- candidate laws were fixed before $80$ new systems were run: the value as a
+ candidate laws were fixed before $80$ new cases ($75$ distinct systems) were run: the value as a
  function of the expected log-count $e$ of solutions alone, and as a
  function of $k+e$. Both are refuted ($11$ hits against $36$ misses, and
  $36$ against $11$, on the $47$ systems chosen to separate them): a
@@ -1521,8 +1456,7 @@ sample of $96$ targets including every deviating one): over $1276$ targets on $1
  with $255$ solutions has value $5$ at $k=8$, the inverse-family value
  $k/2+1$. A two-term rule (a floor that grows with $k$ and a term that grows
  with the solution count) fits the old and new data but was chosen after the
- check, so it is a conjecture. The pre-certificate closure dimensions depend
- only on $(n,k)$ and the target class in $1678$ of $1775$ systems. A tight
+ check, so it is a conjecture. The pre-certificate closure dimensions depend only on $(n,k)$, the target class and two effective-dimension fields of the record in $1678$ of $1775$ systems. A tight
  bound must therefore depend on the coordinate space and on $k$, not only on
  the solution count or the dimension. The kernel
  specialization of the selector theorem is the open formal item of the
@@ -1533,8 +1467,7 @@ sample of $96$ targets including every deviating one): over $1276$ targets on $1
 \REPLAYTEXT
 
 \section{Related work}\label{sec:related}
-The closure and LFD framework is that of Huang, Kosters, Yang and
-Yeo~\cite{hkyy}, who also show that solving cost depends on the LFD together
+The last fall degree was introduced by Huang, Kosters and Yeo~\cite{hky15}; the closure framework used here is that of Huang, Kosters, Yang and Yeo~\cite{hkyy}, who also show that solving cost depends on the LFD together
 with the number of solutions~\cite[Prop.~2.8]{hkyy}; Caminata and
 Gorla~\cite{cg} relate LFD to solving degree and the degree of regularity,
 and their Theorem~2.9 and Example~4.3 give LFD $0$ for a Gr\"obner basis,
@@ -1560,8 +1493,7 @@ $\lfd\ge7$ and the lifted value $7$ at $k=14$ on it, and the dimension account o
 Section~\ref{sec:results}. Kousidis and
 Wiemers~\cite{kw19} study first fall degrees of summation polynomials.
 
-The binary descent with linear coordinate spaces is from Faug\`ere, Perret,
-Petit and Renault~\cite{fppr} after Semaev~\cite{semaev}; symmetrized
+Linear-subspace factor bases go back to Diem~\cite{diem11} and Petit and Quisquater~\cite{pq12}; the binary descent with linear coordinate spaces used here is from Faug\`ere, Perret, Petit and Renault~\cite{fppr} after Semaev~\cite{semaev}; symmetrized
 summation polynomials and small-order torsion are in Faug\`ere, Huot, Joux,
 Renault and Vitse~\cite{fhjrv}, and automorphism symmetries in Faug\`ere,
 Gaudry, Huot and Renault~\cite{fghr14}. Kosters and Yeo~\cite{ky} prove that
@@ -1586,8 +1518,7 @@ The Lean development (Lean~4.19.0 with Mathlib) has \LEANDECLS{} audited
 declarations. They depend only on the foundational axioms \code{propext},
 \code{Classical.choice} and \code{Quot.sound}, and use no further axioms, no
 \code{sorry} and no \code{native\_decide}. The certificates of the sweep are
-exact arithmetic and can be replayed. The local-to-global step for prime
-chains is the same rank argument as the Boolean one; it is applied by hand
+exact arithmetic and can be replayed. The Lean development contains no elliptic curve: $S_3$ and $S_4$ enter as explicit polynomials, which are not proved there to be summation polynomials, and the binary and Koblitz bounds are one generic Boolean theorem, the second being the first with $b=1$. The local-to-global step for prime chains is the same rank argument as the Boolean one; it is applied by hand
 and is not an instance of the kernel theorem.
 
 \section{Conclusion}
@@ -1610,8 +1541,7 @@ certificate, and every depth beyond $14$ is open. The law
 $\lfd(k)=\lfloor(k+14)/4\rfloor$ fits all of these values and remains a
 conjecture. With three summands the value is $7$ through $k=5$ and at least
 $8$ on one instance at $k=6$. With three to eight summands and depth
-$k\le m-1$ the bound $mk+1$ is attained on the instances computed. For binary and Koblitz curves the value is at
-most $5$ through dimension $10$, and the differences between random and
+$k\le m-1$ the bound $mk+1$ is attained on the instances computed. For binary and Koblitz curves the value is at most $5$ through dimension $10$ on the grids computed, while the structured inverse family grows as $\lfloor k/2\rfloor+1$, and the differences between random and
 Frobenius-invariant factor bases follow the number of solutions on our grid,
 which is an association and not a causal statement.
 
@@ -1621,8 +1551,7 @@ Section~\ref{sec:missing} lists what closing this gap would need.
 
 \section{Code and data}\label{sec:artifacts}
 The Lean development, the closure engines, the independent checker, the
-written proofs and every record behind the numbers in this paper are in the
-companion repository
+written proofs and the records behind the numbers in this paper are in the companion repository, except where the text says that records were not kept (the selector-bound test, the genericity denominator, and the $k=14$ degree-$6$ bases)
 \begin{center}
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
@@ -1642,6 +1571,7 @@ Free extension and predictions & \code{experiments/\allowbreak{}ic-bounds-freeex
 Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{ic-bounds-m3-depth/}\\
 Three to eight summands & \code{experiments/\allowbreak{}ic-bounds-msum/}\\
 Exceptional locus at $k=6$ & \code{experiments/\allowbreak{}ic-bounds-locus/}\\
+Depth-step table ($\dim V_3$, $\dim V_4$, $k=3,\ldots,10$) & \code{experiments/\allowbreak{}ic-depth-step/}\\
 Binary and Koblitz follow-up & \code{experiments/\allowbreak{}ic-bounds-binary/}, \code{ic-bounds-binary-law/}\\
 Independent ordinary-ring validator & \code{experiments/\allowbreak{}ic-curve-validation/}\\
 Written proofs and their reviews & \code{docs/\allowbreak{}proofs/}, \code{docs/\allowbreak{}reviews-*.md}\\
@@ -1723,8 +1653,7 @@ CRYPTO 2015, LNCS 9215. IACR ePrint 2015/573.
 \href{https://arxiv.org/abs/2103.07282}{arXiv:2103.07282}.
 \bibitem{gmp21} E. Gorla, D. Mueller and C. Petit.
 \emph{Stronger bounds on the cost of computing Gr\"obner bases for HFE systems}.
-Journal of Symbolic Computation.
-\href{https://doi.org/10.1016/j.jsc.2020.07.011}{doi:10.1016/j.jsc.2020.07.011}.
+Journal of Symbolic Computation 109 (2022), 386--398. \href{https://doi.org/10.1016/j.jsc.2020.07.011}{doi:10.1016/j.jsc.2020.07.011}.
 \bibitem{steiner24} M. J. Steiner.
 \emph{Solving degree bounds for iterated polynomial systems}.
 IACR Transactions on Symmetric Cryptology 2024(1), 357--411.
@@ -1746,6 +1675,12 @@ Journal of Automated Reasoning 26 (2001), 107--137.
 \bibitem{maletzky-immler18} A. Maletzky and F. Immler.
 \emph{Gr\"obner bases of modules and Faug\`ere's F4 algorithm in Isabelle/HOL}.
 CICM 2018. \href{https://arxiv.org/abs/1805.00304}{arXiv:1805.00304}.
+\bibitem{diem11} C. Diem.
+\emph{On the discrete logarithm problem in elliptic curves}.
+Compositio Mathematica 147(1) (2011), 75--104.
+\bibitem{pq12} C. Petit and J.-J. Quisquater.
+\emph{On polynomial systems arising from a Weil descent}.
+ASIACRYPT 2012, LNCS 7658, 451--466.
 \bibitem{silv} J. H. Silverman.
 \emph{The Arithmetic of Elliptic Curves}, 2nd ed. Springer GTM 106, 2009.
 \bibitem{guo26} Guo, Shen, Liu and Zhi.

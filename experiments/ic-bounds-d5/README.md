@@ -1,5 +1,7 @@
 # ic-bounds-d5: the degree-5 closure dimension d_5(k) at depths 10-13
 
+> **Note (2026-11-12).** Some runs listed below as not run were run later and are reported in `paper/curve-lfd-bounds.tex`, including the closures at `k = 11..13` (`verify/`) and the GPU closures to `k = 16` (`experiments/ic-bounds-k14/`). The lists below record the state when this file was written.
+
 Item 3 of the bounds programme: prepare (and, where it fits, take) the measurement of the
 degree-5 closure dimension `d_5(k) = dim V_5` of two-summand prime chain systems for
 `k = 10, 11, 12, 13`, starting from the depth-10 probe (`scripts/run_ic_chain_depth10_probe.py`,

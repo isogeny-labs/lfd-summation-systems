@@ -1,9 +1,11 @@
 # Verified Lean build and axiom audit
 
+> **Note (2026-11-12).** Links to `docs/IC_*.md` point to notes of the original development that are not included in this repository; only `docs/IC_FALL_COUNTEREXAMPLES.md` is. The statements they describe are in the Lean sources and in `paper/`.
+
 The [verification report](verification.json) records a successful Lean 4.19.0
 build with pinned mathlib revision
 `c44e0c8ee63ca166450922a373c7409c5d26b00b`. The
-[build log](build.log) and [axiom log](axioms.log) are retained. The 339 audited
+[build log](build.log) and [axiom log](axioms.log) are retained. The 513 audited (339 when this README was first written)
 declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no
 project axioms or proof placeholders. The verifier also checks source tokens,
 toolchain version, source hashes, and the mathlib revision.

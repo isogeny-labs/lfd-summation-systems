@@ -1,5 +1,7 @@
 # Lean foundation for degree-bounded relation systems
 
+> **Note (2026-11-12).** Links to `docs/IC_*.md` point to notes of the original development that are not included in this repository; only `docs/IC_FALL_COUNTEREXAMPLES.md` is. The statements they describe are in the Lean sources and in `paper/`.
+
 This project formalizes full iterated degree closure, an explicit bounded
 normal-form criterion, the graded-lex finite-quotient theorem, explicit grid
 bounds, and exact last fall degrees for a quadratic family.

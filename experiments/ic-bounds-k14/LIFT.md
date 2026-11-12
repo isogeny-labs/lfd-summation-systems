@@ -1,7 +1,7 @@
 # Degree lift through the quotient: V_D -> V_{D+1} without a closure in M_<=D+1
 
 Labels: **proof** (written out below), **exact** (certified computation, command named), **empirical**,
-**estimate**, **unverified**.  Nothing here has been run on a real GPU; see section 9.
+**estimate**, **unverified**.  Sections 1–9 were written before any GPU run; three `k = 14` lifts on a real card are reported in section 9a.
 
 | file | role |
 |---|---|
@@ -382,7 +382,7 @@ lower bounds only).  Add `--include-low` to make the result independent of the c
 says `closed: true` (the checkpoint written at the end of the closure phase precedes the sweep; the lift
 records the checkpoint's file hashes as `vd.basis_id` and cannot know the sweep's verdict).
 
-## 9. Not verified on a real device
+## 9. Not verified on a real device (as of writing; superseded by section 9a)
 
 Nothing in `ic_bounds_lift.py` has run under cupy.  Everything was exercised through `--device fake-gpu`
 (numpy semantics, host/device mixing forbidden, live device bytes counted and, in the checkpoint test, limited).
