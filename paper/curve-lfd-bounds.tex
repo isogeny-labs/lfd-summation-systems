@@ -1621,20 +1621,22 @@ Section~\ref{sec:missing} lists what closing this gap would need.
 
 \section{Code and data}\label{sec:artifacts}
 The Lean development, the closure engines, the independent checker, the
-written proofs and every record behind the numbers in this paper are kept in
-the project repository. Paths are relative to its root. The repository is
-not public at the time of writing; the material is available from the
-author on request.
+written proofs and every record behind the numbers in this paper are in the
+companion repository
+\begin{center}
+\url{https://github.com/isogeny-labs/lfd-summation-systems}
+\end{center}
+Paths are relative to its root.
 
 \begin{center}\small
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{6.6cm}>{\raggedright\arraybackslash}p{8.4cm}@{}}
 \toprule
 Material & Location\\
 \midrule
-Lean development and its audit & \code{formal/}, \code{experiments/\allowbreak{}ic-lean/}\\
+Lean development, its audit and certificate data & \code{formal/}, \code{experiments/\allowbreak{}ic-lean/}, \code{ic-bounds-cert/}, \code{ic-bounds-exact-k6/}\\
 Sweep (Sections~\ref{sec:sweep} and~\ref{sec:results}) & \code{experiments/\allowbreak{}ic-curve-sweep/}\\
 Depths $8$, $9$ and $10$ & \code{experiments/\allowbreak{}ic-chain-depth8/}, \code{-depth9/}, \code{-depth10/}\\
-Independent engine, depths $10$ to $13$; $\dim V_4$ & \code{experiments/\allowbreak{}ic-bounds-d5/}, \code{ic-bounds-fall/}\\
+Independent engine, depths $10$ to $13$; $\dim V_4$ & \code{experiments/\allowbreak{}ic-bounds-d5/}, \code{ic-bounds-exact10/}, \code{ic-bounds-fall/}\\
 GPU engine, degree lift and checker, depths $10$ to $16$ & \code{experiments/\allowbreak{}ic-bounds-k14/}\\
 Free extension and predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/}\\
 Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{ic-bounds-m3-depth/}\\
