@@ -1,0 +1,471 @@
+info: downloading installer
+warning: could not check for elan self-update: failed to parse latest release tag
+info: downloading https://releases.lean-lang.org/lean4/v4.19.0/lean-4.19.0-linux.tar.zst
+info: installing /root/.elan/toolchains/leanprover--lean4---v4.19.0
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+info: mathlib: checking out revision 'c44e0c8ee63ca166450922a373c7409c5d26b00b'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision '77e08eddc486491d7b9e470926b3dbe50319451a'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision '25078369972d295301f5a1e53c3e5850cf6d9d4c'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision 'c4919189477c3221e6a204008998b0d724f49904'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '5d50b08dedd7d69b3d9b3176e0d58a23af228884'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision 'fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision 'f5d04a9c4973d401c8c92500711518f7c656f034'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '02dbd02bc00ec4916e99b04b2245b30200e200d0'
+✔ [2/12] Built Cache.Lean
+✔ [3/12] Built Cache.Lean:c.o
+✔ [4/12] Built Cache.IO
+✔ [5/12] Built Cache.Hashing
+✔ [6/12] Built Cache.Requests
+✔ [7/12] Built Cache.Hashing:c.o
+✔ [8/12] Built Cache.Main
+✔ [9/12] Built Cache.IO:c.o
+✔ [10/12] Built Cache.Requests:c.o
+✔ [11/12] Built Cache.Main:c.o
+✔ [12/12] Built cache
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 1075k  100 1075k    0     0  3137k      0 --:--:-- --:--:-- --:--:-- 11.5M
+
+installing leantar 0.1.15
+Attempting to download 6641 file(s)
+
+Downloaded: 1 file(s) [attempted 1/6641 = 0%]
+Downloaded: 3 file(s) [attempted 3/6641 = 0%]
+Downloaded: 73 file(s) [attempted 73/6641 = 1%]
+Downloaded: 144 file(s) [attempted 144/6641 = 2%]
+Downloaded: 225 file(s) [attempted 225/6641 = 3%]
+Downloaded: 304 file(s) [attempted 304/6641 = 4%]
+Downloaded: 385 file(s) [attempted 385/6641 = 5%]
+Downloaded: 461 file(s) [attempted 461/6641 = 6%]
+Downloaded: 549 file(s) [attempted 549/6641 = 8%]
+Downloaded: 633 file(s) [attempted 633/6641 = 9%]
+Downloaded: 717 file(s) [attempted 717/6641 = 10%]
+Downloaded: 793 file(s) [attempted 793/6641 = 11%]
+Downloaded: 874 file(s) [attempted 874/6641 = 13%]
+Downloaded: 957 file(s) [attempted 957/6641 = 14%]
+Downloaded: 1045 file(s) [attempted 1045/6641 = 15%]
+Downloaded: 1133 file(s) [attempted 1133/6641 = 17%]
+Downloaded: 1214 file(s) [attempted 1214/6641 = 18%]
+Downloaded: 1298 file(s) [attempted 1298/6641 = 19%]
+Downloaded: 1388 file(s) [attempted 1388/6641 = 20%]
+Downloaded: 1469 file(s) [attempted 1469/6641 = 22%]
+Downloaded: 1550 file(s) [attempted 1550/6641 = 23%]
+Downloaded: 1638 file(s) [attempted 1638/6641 = 24%]
+Downloaded: 1724 file(s) [attempted 1724/6641 = 25%]
+Downloaded: 1807 file(s) [attempted 1807/6641 = 27%]
+Downloaded: 1888 file(s) [attempted 1888/6641 = 28%]
+Downloaded: 1981 file(s) [attempted 1981/6641 = 29%]
+Downloaded: 2069 file(s) [attempted 2069/6641 = 31%]
+Downloaded: 2150 file(s) [attempted 2150/6641 = 32%]
+Downloaded: 2236 file(s) [attempted 2236/6641 = 33%]
+Downloaded: 2322 file(s) [attempted 2322/6641 = 34%]
+Downloaded: 2408 file(s) [attempted 2408/6641 = 36%]
+Downloaded: 2493 file(s) [attempted 2493/6641 = 37%]
+Downloaded: 2582 file(s) [attempted 2582/6641 = 38%]
+Downloaded: 2667 file(s) [attempted 2667/6641 = 40%]
+Downloaded: 2751 file(s) [attempted 2751/6641 = 41%]
+Downloaded: 2829 file(s) [attempted 2829/6641 = 42%]
+Downloaded: 2920 file(s) [attempted 2920/6641 = 43%]
+Downloaded: 3005 file(s) [attempted 3005/6641 = 45%]
+Downloaded: 3089 file(s) [attempted 3089/6641 = 46%]
+Downloaded: 3171 file(s) [attempted 3171/6641 = 47%]
+Downloaded: 3256 file(s) [attempted 3256/6641 = 49%]
+Downloaded: 3341 file(s) [attempted 3341/6641 = 50%]
+Downloaded: 3422 file(s) [attempted 3422/6641 = 51%]
+Downloaded: 3513 file(s) [attempted 3513/6641 = 52%]
+Downloaded: 3596 file(s) [attempted 3596/6641 = 54%]
+Downloaded: 3679 file(s) [attempted 3679/6641 = 55%]
+Downloaded: 3765 file(s) [attempted 3765/6641 = 56%]
+Downloaded: 3856 file(s) [attempted 3856/6641 = 58%]
+Downloaded: 3941 file(s) [attempted 3941/6641 = 59%]
+Downloaded: 4027 file(s) [attempted 4027/6641 = 60%]
+Downloaded: 4115 file(s) [attempted 4115/6641 = 61%]
+Downloaded: 4203 file(s) [attempted 4203/6641 = 63%]
+Downloaded: 4289 file(s) [attempted 4289/6641 = 64%]
+Downloaded: 4370 file(s) [attempted 4370/6641 = 65%]
+Downloaded: 4458 file(s) [attempted 4458/6641 = 67%]
+Downloaded: 4539 file(s) [attempted 4539/6641 = 68%]
+Downloaded: 4637 file(s) [attempted 4637/6641 = 69%]
+Downloaded: 4708 file(s) [attempted 4708/6641 = 70%]
+Downloaded: 4799 file(s) [attempted 4799/6641 = 72%]
+Downloaded: 4885 file(s) [attempted 4885/6641 = 73%]
+Downloaded: 4970 file(s) [attempted 4970/6641 = 74%]
+Downloaded: 5051 file(s) [attempted 5051/6641 = 76%]
+Downloaded: 5130 file(s) [attempted 5130/6641 = 77%]
+Downloaded: 5218 file(s) [attempted 5218/6641 = 78%]
+Downloaded: 5305 file(s) [attempted 5305/6641 = 79%]
+Downloaded: 5389 file(s) [attempted 5389/6641 = 81%]
+Downloaded: 5470 file(s) [attempted 5470/6641 = 82%]
+Downloaded: 5556 file(s) [attempted 5556/6641 = 83%]
+Downloaded: 5644 file(s) [attempted 5644/6641 = 84%]
+Downloaded: 5730 file(s) [attempted 5730/6641 = 86%]
+Downloaded: 5809 file(s) [attempted 5809/6641 = 87%]
+Downloaded: 5887 file(s) [attempted 5887/6641 = 88%]
+Downloaded: 5970 file(s) [attempted 5970/6641 = 89%]
+Downloaded: 6052 file(s) [attempted 6052/6641 = 91%]
+Downloaded: 6130 file(s) [attempted 6130/6641 = 92%]
+Downloaded: 6214 file(s) [attempted 6214/6641 = 93%]
+Downloaded: 6294 file(s) [attempted 6294/6641 = 94%]
+Downloaded: 6380 file(s) [attempted 6380/6641 = 96%]
+Downloaded: 6466 file(s) [attempted 6466/6641 = 97%]
+Downloaded: 6554 file(s) [attempted 6554/6641 = 98%]
+Downloaded: 6633 file(s) [attempted 6633/6641 = 99%]
+Downloaded: 6641 file(s) [attempted 6641/6641 = 100%] (100% success)
+Decompressing 6641 file(s)
+Unpacked in 17846 ms
+Completed successfully!
+Thu Nov 12 22:45:47 UTC 2026
+✔ [1635/1701] Built ICFallDegrees.CyclicNAF
+✔ [1636/1704] Built ICFallDegrees.Closure
+✔ [1637/1704] Built ICFallDegrees.BinaryFiber
+✔ [1638/1704] Built ICFallDegrees.BinaryDescent
+✔ [1639/1704] Built ICFallDegrees.CyclicCarryWindow
+⚠ [1640/1704] Built ICFallDegrees.BinaryExtensionFields
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:19:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:20:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:21:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:22:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:29:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1641/1704] Built ICFallDegrees.CyclicInverseRewrite
+✔ [1642/1704] Built ICFallDegrees.AffineTransport
+✔ [1643/1704] Built ICFallDegrees.VariableClosure
+✔ [1644/1704] Built ICFallDegrees.SquareChainRefutation
+✔ [1645/1704] Built ICFallDegrees.SparsePolynomial
+✔ [1646/1704] Built ICFallDegrees.FirstFall
+✔ [1647/1704] Built ICFallDegrees.Certificate
+✔ [1651/1704] Built ICFallDegrees.PointIdeal
+✔ [1652/1704] Built ICFallDegrees.LowerBounds
+✔ [1653/1704] Built ICFallDegrees.NormalFormBound
+✔ [1654/1704] Built ICFallDegrees.CyclicProductBridge
+⚠ [1655/1704] Built ICFallDegrees.BinaryInverseCoordinates
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:24:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.form_degree':
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:30:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.boolean_degree':
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:34:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.square_form':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:65:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.conjugate_cycle':
+  [Nontrivial K]
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:69:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.target_zero_s3':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.component_reconstruction':
+  [Nontrivial K]
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:128:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.prime_field_fixed':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:135:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.form_frobenius':
+  [Nontrivial K]
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:154:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.mapped_component_degree':
+  [Nontrivial K]
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1656/1704] Built ICFallDegrees.ScalarExtensionTransport
+warning: ././././ICFallDegrees/ScalarExtensionTransport.lean:73:6: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [1657/1704] Built ICFallDegrees.PresentationTransport
+warning: ././././ICFallDegrees/PresentationTransport.lean:17:12: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [1658/1704] Built ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1659/1704] Built ICFallDegrees.SparseCoefficient
+warning: ././././ICFallDegrees/SparseCoefficient.lean:25:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparsePolynomial.meaning_coefficient':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/SparseCoefficient.lean:39:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparsePolynomial.meaning_variable':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [1660/1704] Built ICFallDegrees.SparseCertificate
+✔ [1661/1709] Built ICFallDegrees.BooleanPair
+⚠ [1662/1711] Built ICFallDegrees.QuadraticFamily
+warning: ././././ICFallDegrees/QuadraticFamily.lean:143:2: try 'simp at hd' instead of 'simpa using hd'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:150:40: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:154:40: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:171:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:171:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:175:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:175:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:177:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:177:80: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:182:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1663/1711] Built ICFallDegrees.LocalReductionBound
+✔ [1664/1711] Built ICFallDegrees.FiniteQuotient
+⚠ [1665/1712] Built ICFallDegrees.SparseLowerCertificate
+warning: ././././ICFallDegrees/SparseLowerCertificate.lean:41:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparseLowerCertificate.meaning_project':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/SparseLowerCertificate.lean:59:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparseLowerCertificate.rowCheck_spec':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1668/1712] Built ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1670/1712] Built ICFallDegrees.SparseDAG
+warning: ././././ICFallDegrees/SparseDAG.lean:173:38: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [1671/1712] Built ICFallDegrees.BooleanRaw
+⚠ [1672/1712] Built ICFallDegrees.RawPresentation
+warning: ././././ICFallDegrees/RawPresentation.lean:83:2: try 'simp at he' instead of 'simpa using he'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [1673/1712] Built ICFallDegrees.QuotientLowerBound
+✔ [1676/1712] Built ICFallDegrees.GridQuotient
+⚠ [1677/1712] Built ICFallDegrees.LowerCertificateSupport
+warning: ././././ICFallDegrees/LowerCertificateSupport.lean:40:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.LowerCertificateSupport.rowSpace_coefficient_zero':
+  [Nontrivial K]
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/LowerCertificateSupport.lean:49:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.LowerCertificateSupport.rowSpace_no_low':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [1678/1712] Built ICFallDegrees.PowerIdeals
+✔ [1679/1712] Built ICFallDegrees.QuadraticNoLow
+✔ [1680/1712] Built ICFallDegrees.GeneratedBinaryOrdinary
+✔ [1681/1712] Built ICFallDegrees.SparseTrustChecks
+✔ [1682/1712] Built ICFallDegrees.GeneratedBinaryKoblitz
+✔ [1683/1713] Built ICFallDegrees.PrimeCounterexample
+⚠ [1685/1717] Built ICFallDegrees.BinaryFamily
+warning: ././././ICFallDegrees/BinaryFamily.lean:115:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryFamily.normalized_lfd_three':
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryFamily.lean:121:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryFamily.normalized_first_strict_fall_three':
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryFamily.lean:140:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryFamily.normalized_ideal_proper':
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1686/1717] Built ICFallDegrees.BinaryS3Bounds
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:31:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryS3Bounds.affine_degree':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:40:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryS3Bounds.affine_square_identity':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:58:8: automatically included section variable(s) unused in theorem '_private.ICFallDegrees.BinaryS3Bounds.0.ICFallDegrees.BinaryS3Bounds.product_degree':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:62:8: automatically included section variable(s) unused in theorem '_private.ICFallDegrees.BinaryS3Bounds.0.ICFallDegrees.BinaryS3Bounds.add_degree':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:91:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryS3Bounds.normalization_identity':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [1687/1717] Built ICFallDegrees.BooleanSharp
+✔ [1688/1717] Built ICFallDegrees.LowDegreeCoefficients
+⚠ [1689/1718] Built ICFallDegrees.QuadraticHomogeneousFamily
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:28:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.coefficient_pivots':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:36:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.q_homogeneous':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:60:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.witness_homogeneous':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:76:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.origin_values':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:79:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.origin_derivatives':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [1693/1718] Built ICFallDegrees.SparsePrimeCertificate
+✔ [1694/1718] Built ICFallDegrees.GeneralQuadraticTop
+⚠ [1695/1718] Built ICFallDegrees.BinaryTriple
+warning: ././././ICFallDegrees/BinaryTriple.lean:123:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1699/1718] Built ICFallDegrees.PrimeM2Homogeneous
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:28:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.PrimeM2Homogeneous.raw_normalization_identity':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:34:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.PrimeM2Homogeneous.tail_small':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:46:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.PrimeM2Homogeneous.derivative_zero_family_identity':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:56:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1700/1722] Built ICFallDegrees.GeneralQuadraticClassification
+⚠ [1702/1722] Built ICFallDegrees.SplitChainLower
+warning: ././././ICFallDegrees/SplitChainLower.lean:34:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:37:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:53:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:109:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:117:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:225:16: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1703/1723] Built ICFallDegrees.PrimeM2General
+✔ [1707/1728] Built ICFallDegrees.TruncatedFirstFall
+✔ [1710/1751] Built ICFallDegrees.PrimeM2Sharp
+✔ [1739/1752] Built ICFallDegrees.PrimeM2Truncated
+✔ [1741/1823] Built ICFallDegrees.MooreMatrix
+✔ [1776/1823] Built ICFallDegrees.PrimeFieldConclusions
+✔ [1777/1823] Built ICFallDegrees.N5Cert
+✔ [1778/1823] Built ICFallDegrees.PrimeM2Lower
+✔ [1779/1823] Built ICFallDegrees.BinaryWeight
+✔ [1780/1823] Built ICFallDegrees.ExactK6Cert
+✔ [1781/1823] Built ICFallDegrees.ChainQuotient
+✔ [1782/1823] Built ICFallDegrees.BinaryDimensionTwoSystems
+✔ [1783/1823] Built ICFallDegrees.DepthReduction
+✔ [1784/1823] Built ICFallDegrees.N5CertDataP11
+✔ [1785/1823] Built ICFallDegrees.DepthRestriction
+✔ [1786/1823] Built ICFallDegrees.ChainClosureBridge
+✔ [1787/1823] Built ICFallDegrees.CarryLower
+✔ [1788/1823] Built ICFallDegrees.CurveBounds
+⚠ [1789/1823] Built ICFallDegrees.BinaryDimensionTwoCurves
+warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:2: 'all_goals rfl' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:12: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [1790/1823] Built ICFallDegrees.DepthRestrictionM2
+✔ [1791/1823] Built ICFallDegrees.ChainTranslation
+✔ [1792/1823] Built ICFallDegrees.DepthReductionBridge
+✔ [1793/1823] Built ICFallDegrees.N5CertDataP40961
+✔ [1794/1823] Built ICFallDegrees.BinaryDimensionTwoBases
+✔ [1795/1823] Built ICFallDegrees.GeneratedPrimeLower
+✔ [1796/1823] Built ICFallDegrees.ChainModelMap
+✔ [1797/1823] Built ICFallDegrees.Prime257System
+✔ [1798/1823] Built ICFallDegrees.N5CertSound
+✔ [1799/1823] Built ICFallDegrees.ShiftWitness
+✔ [1800/1823] Built ICFallDegrees.GeneratedPrimeFirstFall
+✔ [1801/1823] Built ICFallDegrees.Prime257Homogeneous
+✔ [1802/1823] Built ICFallDegrees.M3CarryLower
+✖ [1803/1823] Building ICFallDegrees.GeneratedPrimeUpper
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /root/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lean ././././ICFallDegrees/GeneratedPrimeUpper.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GeneratedPrimeUpper.olean -i ././.lake/build/lib/lean/ICFallDegrees/GeneratedPrimeUpper.ilean -c ././.lake/build/ir/ICFallDegrees/GeneratedPrimeUpper.c --json
+error: Lean exited with code 137
+✔ [1804/1823] Built ICFallDegrees.ExactK6LowerSound
+✔ [1805/1823] Built ICFallDegrees.ExactK6UpperSound
+✔ [1806/1823] Built ICFallDegrees.N5CertWitness
+✔ [1808/1823] Built ICFallDegrees.GrowthSchema
+✔ [1809/1823] Built ICFallDegrees.ExactK6DataP1153
+✔ [1810/1823] Built ICFallDegrees.N5CertWitnessDataP40961
+✔ [1811/1823] Built ICFallDegrees.N5CertWitnessDataP11
+✔ [1812/1823] Built ICFallDegrees.ExactK6KernelLowerP1153
+✔ [1813/1823] Built ICFallDegrees.ExactK6KernelUpperP1153
+✔ [1814/1823] Built ICFallDegrees.ExactK6InstanceP1153
+✔ [1815/1823] Built ICFallDegrees.ExactK6Deeper
+✔ [1816/1823] Built ICFallDegrees.N5CertKernelP40961
+✔ [1817/1823] Built ICFallDegrees.N5CertKernelP11
+✔ [1818/1823] Built ICFallDegrees.N5CertInstanceP40961
+✔ [1819/1823] Built ICFallDegrees.N5CertInstanceP11
+✔ [1820/1823] Built ICFallDegrees.N5CertWitnessInstanceP11
+✔ [1821/1823] Built ICFallDegrees.N5CertWitnessInstanceP40961
+Some required builds logged failures:
+- ICFallDegrees.GeneratedPrimeUpper
+error: build failed
+
+real	17m3.847s
+user	55m57.869s
+sys	0m50.357s
+EXIT 1
