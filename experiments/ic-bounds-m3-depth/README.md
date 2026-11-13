@@ -1,5 +1,7 @@
 # Three-summand direct chain system: last fall degree against depth
 
+> **Note (2026-11-12).** Some runs listed below as not run were run later and are reported in `paper/curve-lfd-bounds.tex`, including the `k = 6` degree-7 closure reported in the paper (Section 7, "Three summands"). The lists below record the state when this file was written.
+
 Status (2026-11-10): exact LFD at depth k = 5 on 12 instances (8 primes with 32 | p - 1), closure
 profiles for D = 5..8 at k = 2..5 on the same instances, the free-extension recursion test, and
 the two-summand reference on the same instances. The depth-6, degree-7 closure has run on one instance (see "Depth 6"): V_7 falls behind

@@ -1,5 +1,7 @@
 # U1: upper bounds for the two-summand prime chain LFD below the dimension bound
 
+> **Status note (2026-11-12).** The proof of the `k+2` bound (Sections 1–2.5) was refereed again in `docs/reviews-20261112/referee-U1.md` with no gap found. Findings F1, F2, F5, F6, F7, F9, F10 and F11 of `docs/reviews-U1-upper-bound-redteam-20261110.md` are not resolved in this note; none affects the proof. The directories `experiments/ic-bounds-upper/` and `experiments/ic-bounds-upper-redteam/` named below are not in this repository, and their per-instance records were not kept; the counts are recorded only in the 2026-11-10 review. The paper's proof sketch now follows Section 2.5.
+
 Status (2026-11-10). Evidence labels: **kernel** (Lean-checked), **proof** (written out in full
 here), **exact** (certified computation, command and output named), **empirical** (pattern in
 data), **conjecture**. Scripts and outputs: `experiments/ic-bounds-upper/`.

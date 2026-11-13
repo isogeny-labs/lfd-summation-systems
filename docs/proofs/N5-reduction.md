@@ -1,5 +1,7 @@
 # N5: the depth reduction for the degree-4 closure, stated in the ordinary ring
 
+> **Status note (2026-11-12).** `S = V_4(7)` has 829 rows in **1471** columns, not 3473 as written below. The base hypotheses (B1), (B2) and `gen` are now kernel-checked without `native_decide` for `p = 40961` and `p = 11` (`N5CertInstanceP40961`, `N5CertInstanceP11`, 42 `decide +kernel` theorems each), so the remark in Section 9 that they are not kernel-replayable is superseded. The primary instance over `p = 40961` is a proper ideal. `docs/IC_BOUNDS_PROGRAM.md`, cited below, is not in this repository.
+
 Status (2026-11-08). Written proof, self-contained, of the reduction theorem N5
 (`docs/IC_BOUNDS_PROGRAM.md`, Section 4) for the closure `InClosure` of
 `formal/ICFallDegrees/Closure.lean`, that is, the ordinary iterated closure in the

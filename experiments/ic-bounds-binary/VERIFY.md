@@ -1,5 +1,7 @@
 # Independent verification of item 6 (binary and Koblitz at larger size)
 
+> **Note (2026-11-12).** Links to `docs/IC_*.md` point to notes of the original development that are not included in this repository; only `docs/IC_FALL_COUNTEREXAMPLES.md` is. The statements they describe are in the Lean sources and in `paper/`.
+
 Date 2026-11-08. Verifier code is new and does not import the producer's modules or scripts, or any
 closure engine in the repository (`csd.ic_bounds_binary`, `scripts/ic_bounds_binary_{run,validate,related,summarize}.py`,
 `csd.ic_boolean_closure`, `csd.ic_local_certificate`, `csd/_elim.c`). From `csd.ic_dreg` it uses only

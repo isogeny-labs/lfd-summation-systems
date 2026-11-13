@@ -1,5 +1,7 @@
 # ic-bounds-exact10: preparing the exact LFD at depth 10, and the next step (item 4)
 
+> **Note (2026-11-12).** Some runs listed below as not run were run later and are reported in `paper/curve-lfd-bounds.tex`, including the degree-6 closures at `k = 10..14` (`experiments/ic-bounds-k14/`). The lists below record the state when this file was written.
+
 Two-summand prime chain systems: subgroup (or coset) chains of depth `k` over `F_p` with
 `2^k | p-1`. The normalized generator is `g = NF(S_3(c x1, c x2, x_R))` modulo the chains. LFD
 means the ordinary iterated last fall degree. Every claim below carries one of these labels:

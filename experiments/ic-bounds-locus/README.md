@@ -1,5 +1,7 @@
 # Bounds program, item 2: the exceptional locus of the two-summand prime chain closure
 
+> **Note (2026-11-12).** Some runs listed below as not run were run later and are reported in `paper/curve-lfd-bounds.tex`, including the held-out and cross-depth runs (`heldout/`, `verify/`). The lists below record the state when this file was written.
+
 System: PKM two-summand chain presentation, `{g_t} + chain`, with
 `g_t = NF(S_3(x1, x2, t))` (`csd.ic_dreg.pkm_generator`), H the subgroup of
 order 2^k of F_p^*, 2k chain variables. All dimensions below are **modulo the

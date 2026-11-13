@@ -1,5 +1,7 @@
 # Relaunch plan: the k = 14 runs lost on 2026-11-11
 
+> **Note (2026-11-12).** Some runs listed below as not run were run later and are reported in `paper/curve-lfd-bounds.tex`, including the `p = 163841` closures and lift (`runs/*p163841*`, `relaunch/fetched-e/`). The lists below record the state when this file was written.
+
 Status: **launched 2026-11-11** with `relaunch/launch.sh` after the account was funded ($48.91, so the lifetime
 caps were shortened to 27,000 s for the GPU pod and 36,000 s for the CPU pod). GPU pod `icb-k14b`
 (`mq9aalc4ub1tbl`, H200, $5.29/h, created 06:15 UTC): both self-tests passed through `nopool_run.py`

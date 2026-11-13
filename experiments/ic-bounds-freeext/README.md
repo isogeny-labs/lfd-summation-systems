@@ -74,4 +74,9 @@ Exceptional abscissas: `python3 scripts/ic_bounds_freeext_run.py exceptional --p
 Records: `records/<name>.json` (command, source SHA-256 of the four sources, ranks, profiles,
 basis SHA-256 per swap part, sweep counts, generator-row counts, witness search, timings).
 
-RESULTS_PLACEHOLDER
+## Results
+
+The outcome of each frozen prediction, with the records that test it, is in
+[`outcomes-2026-11-10.json`](outcomes-2026-11-10.json); the free-extension table is [`table.md`](table.md)
+and [`summary.json`](summary.json). The results are reported in `paper/curve-lfd-bounds.tex`, Section 7
+("The recursion" and "The growth law, as a conjecture").
