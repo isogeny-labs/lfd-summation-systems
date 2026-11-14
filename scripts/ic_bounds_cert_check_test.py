@@ -24,6 +24,7 @@ import random
 import resource
 import shutil
 import signal
+import tempfile
 import subprocess
 import sys
 import time
@@ -741,7 +742,7 @@ def group_devices():
 def main():
     global SC
     ap = argparse.ArgumentParser()
-    ap.add_argument('--scratch', default='/tmp/claude-0/-home-user/a6e79f2a-a5ec-5904-b377-343a14909fff/scratchpad/certcheck')
+    ap.add_argument('--scratch', default=os.path.join(tempfile.gettempdir(), 'lfd-certcheck'))
     ap.add_argument('--groups', default='arith,spec,positive,reference,negative,devices')
     ap.add_argument('--only', default=None, help='positive group: comma separated name fragments')
     ap.add_argument('--keep', action='store_true')
