@@ -24,7 +24,7 @@ GQL = "https://api.runpod.io/graphql"
 IMAGE = "runpod/base:1.0.2-ubuntu2404"
 STATE_DIR = os.environ.get(
     "POD_STATE_DIR",
-    "/tmp/claude-0/-home-user/a6e79f2a-a5ec-5904-b377-343a14909fff/scratchpad/pod")
+    os.path.join(os.path.expanduser("~"), ".lfd-pod-state"))
 
 # --------------------------------------------------------------------------
 # Control server (runs on the pod as /root/ctl.py). Standard library only.

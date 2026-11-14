@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code or data, please cite the paper (preferred-citation) and,
+  where you rely on a specific record, this repository at the version you used.
+title: "Last fall degrees of elliptic curve summation systems: code and data"
+type: software
+authors:
+  - family-names: Buran
+    given-names: Adam
+repository-code: "https://github.com/isogeny-labs/lfd-summation-systems"
+license:
+  - MIT
+  - CC-BY-4.0
+version: "1.0.0"
+keywords:
+  - elliptic curve discrete logarithm
+  - index calculus
+  - summation polynomials
+  - last fall degree
+  - Lean 4
+  - formal verification
+preferred-citation:
+  type: article
+  title: "Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values"
+  authors:
+    - family-names: Buran
+      given-names: Adam
+  year: 2026
+  status: preprint
