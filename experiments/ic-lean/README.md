@@ -5,8 +5,8 @@
 The [verification report](verification.json) records a successful Lean 4.19.0
 build with pinned mathlib revision
 `c44e0c8ee63ca166450922a373c7409c5d26b00b`. The
-[build log](build.log) and [axiom log](axioms.log) are retained. The 582 audited (339 when this README was first written, 513 at
-the cold build of 2026-11-12) declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no
+[build log](build.log) and [axiom log](axioms.log) are retained. The 628 audited (339 when this README was first written, 513 at
+the cold build of 2026-11-12, 582 before the fixed-curve growth theorem was added on 2026-11-14) declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no
 project axioms or proof placeholders. The verifier also checks source tokens,
 toolchain version, source hashes, and the mathlib revision.
 
@@ -60,6 +60,8 @@ for a growing-depth order-two-target curve family. Its separate
 audit coverage and three finite closure regressions.
 
 **Cold build coverage.** The cold build of 2026-11-12 (`BUILD-COLD-20261112.md`) covers the
-513 declarations on `main` at that date. The 69 declarations added since (the `Growth*`, `Selector*`,
-`UnitInstance` and `DepthFourteen` modules) are covered by the warm audit in `axioms.log` and by CI,
-not yet by a cold build log.
+513 declarations on `main` at that date. The cold build of 2026-11-14 (`BUILD-COLD-20261114.md`, records in
+`all-modules-20261114/`) covers every module of `formal/ICFallDegrees/`, including the `Growth*`, `Selector*`,
+`UnitInstance` and `DepthFourteen` modules and the fixed-curve growth theorem: 628 declarations of `Audit.lean`
+and 840 declarations over all files that print axioms, foundational axioms only. It ran on macOS; the workflow
+`.github/workflows/lean-all-modules.yml` repeats it on Linux.

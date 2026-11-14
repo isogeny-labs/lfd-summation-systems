@@ -15,7 +15,7 @@ author must agree.
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `curve-lfd-bounds.pdf` (38 pages) |
+| Content | `curve-lfd-bounds.pdf` (39 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY |

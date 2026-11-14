@@ -1,0 +1,30 @@
+# Cold build of every module, 2026-11-14
+
+Machine: macOS (arm64), Lean 4.19.0 (commit 6caaee842e94), Mathlib `c44e0c8ee63ca166450922a373c7409c5d26b00b`.
+`formal/.lake/build` did not exist before the run; only the Mathlib oleans came from the Mathlib cache
+(`lake env lean --run .lake/packages/mathlib/Cache/Main.lean get`). Command, from the repository root:
+
+    python3 scripts/lean_check_all.py --out <directory>
+
+Records in `all-modules-20261114/`:
+
+- `build-pass1.log`: `lake build ICFallDegrees.GeneratedPrimeUpper` alone (315 s), then `lake build` of the
+  root and all 218 module files then present (797 s). 217 built. One failed:
+  `ICFallDegrees.GrowthUnitFrobenius`, with `bad import 'Mathlib.Tactic.Omega'`. That file was a side result
+  that nothing imports; its proof also fails once the import is corrected, so it was removed from this
+  repository (see `formal/README.md`). No other module reported an error.
+- `build-pass2.log`: the same command after the removal and after `ICFallDegrees.lean` and `Audit.lean` were
+  extended by the fixed-curve growth theorem: "Build completed successfully" for the root and all 217 modules.
+  This pass rebuilt only the two changed files; the other oleans are those of pass 1.
+- `axioms.log`: the output of every file that contains `#print axioms` (80 files: `Audit.lean`, the 47 files
+  `formal/N8*Audit.lean`, and 32 modules that print their own).
+- `summary.json`: 884 answers for 840 distinct declarations. 830 depend on `propext`, `Classical.choice` and
+  `Quot.sound`, 8 on `propext` and `Quot.sound`, 2 on `propext`; none on anything else. No `sorryAx`.
+  It also lists the SHA-256 of every Lean source file and of the toolchain and manifest files.
+
+The same run then executed `scripts/verify_lean_fall_degrees.py`, which wrote `build.log`, `axioms.log` and
+`verification.json` in this directory: 628 declarations of `Audit.lean`, foundational axioms only.
+
+This is the first build from an empty build directory of the modules added after the cold build of 2026-11-12
+(`Growth*`, `Selector*`, `UnitInstance`, `DepthFourteen`), and of the fixed-curve growth modules. The workflow
+`.github/workflows/lean-all-modules.yml` repeats it on Linux for every change under `formal/`.

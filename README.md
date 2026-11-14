@@ -15,7 +15,7 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `formal/` | Lean 4 project `ICFallDegrees` (Lean 4.19.0, Mathlib pinned in `lake-manifest.json`) |
 | `csd/` | closure engines and certificate code (Python) |
 | `scripts/` | drivers: one script per experiment, the figure script and the paper build |
-| `docs/proofs/` | written proofs that are not formalized (the depth reduction, genericity, the growth theorem `N8-growth.md`, the block-of-four lemmas `N9-block-four.md`) and the plans of the Lean formalizations |
+| `docs/proofs/` | written proofs that are not formalized (the depth reduction, genericity, the growth theorem `N8-growth.md`, the block-of-four lemmas `N9-block-four.md`), the plans of the Lean formalizations, and the notes behind the kernel-checked fixed-curve growth theorem (the other `N8-*.md`; start with `N8-two-torsion-rational-route.md`) |
 | `docs/reviews-*.md` | reviews of the written proofs, the red-team reviews of the growth proof and the audit of the paper |
 | `experiments/ic-lean/` | audit of the Lean development (declarations and their axioms) |
 | `experiments/ic-curve-sweep/` | the sweep of Sections 5 and 6 |
@@ -49,6 +49,7 @@ builds with pdfLaTeX or Tectonic. The Lean project needs Lean 4.19.0 (see `forma
     python3 scripts/ic_bounds_msum.py selftest      # three to eight summands: must print SELFTEST PASSED
     python3 scripts/plot_ic_lfd_figures.py          # regenerates three figures from the records
     python3 scripts/build_ic_curve_paper.py         # regenerates the sweep tables, one figure and the PDF
+    for s in scripts/check_n8_*.py; do python3 $s; done   # 33 exact regressions behind the fixed-curve growth theorem
 
 ## Reproducing the main computations
 
@@ -64,7 +65,9 @@ builds with pdfLaTeX or Tectonic. The Lean project needs Lean 4.19.0 (see `forma
     python scripts/analyze_ic_base_classes.py
     python scripts/ic_bounds_msum.py run --max-log2-points 24
 
-The first command builds the Lean project and prints the axiom dependencies of every audited declaration. The
+The first command builds the Lean project and prints the axiom dependencies of every audited declaration.
+`python3 scripts/lean_check_all.py --out <dir>` goes further: it builds every module under `formal/ICFallDegrees/`,
+including those the root file does not import, and audits every `#print axioms` in the project (`formal/README.md`). The
 depth-ten runs take about two hours each and the degree-six closure about five hours. The commands for the GPU
 runs and for the degree lift are in `experiments/ic-bounds-k14/README.md` and `LIFT.md`.
 

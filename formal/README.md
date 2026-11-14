@@ -44,7 +44,7 @@ python scripts/verify_lean_fall_degrees.py
 
 The verifier writes [the report](../experiments/ic-lean/verification.json),
 [build log](../experiments/ic-lean/build.log), and
-[axiom log](../experiments/ic-lean/axioms.log). The checked run covers 582
+[axiom log](../experiments/ic-lean/axioms.log). The checked run covers 628
 public declarations, whose proof
 dependencies are subsets of mathlib's standard foundational axioms
 `propext`, `Classical.choice`, and `Quot.sound`. No project axioms,
@@ -170,3 +170,80 @@ affine/input transport. The universal polynomial normalization, lower
 obstruction and concrete filtered-input equivalence specialization remain
 open. The aggregate reproduction command builds the pinned project alongside
 the complete saved arithmetic and manuscript.
+
+## Growth on a fixed curve (the `N8` modules, added 2026-11-14)
+
+The modules `Growth*.lean` added on 2026-11-14 (98 files, from ml-cryptanalysis `754452b1`) prove the growth
+theorem of the paper for one instance without any hypothesis: the normalized two-summand chain system
+`PrimeM2General.inputs k _ 6 (-7) 1`, that is `y^2 = x^3 + 6x - 7` with the target abscissa `1` of the point
+`(1,0)` of order two. The statements:
+
+| Declaration | Statement |
+|---|---|
+| `GrowthFixedE6.model` | the rational function field `C(X)` with `xi_1 = X`, `xi_2 = (X+8)/(X-1)` is a `GrowthMain.CurveModel` (the vanishing-sum bound is proved, not assumed) |
+| `GrowthFixedE6.unit` | over `C` the ideal is the unit ideal at every depth `k >= 2` |
+| `GrowthFixedE6.exists_lfd_linear_window` | over `C`, for `k >= 24`, there is a last fall degree `d` and `floor((k-10)/14) < d <= k+2` |
+| `GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime` | over `F_p`, for `D >= 1`, `k >= 14D+10` and every prime `p >= 2^(k+1)+1`: `1` is not in `V_D` |
+| `GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound` | for each `k` there is `B` such that the ideal over `F_p` is the unit ideal for every prime `p > B` (`B` is not computed) |
+| `GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above` | for `k >= 24` and every `B` there is a prime `p > B`, `p = 1 mod 2^(k+1)`, such that the system over `F_p` has a last fall degree `d` with `floor((k-10)/14) < d <= k+2` |
+| `GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence` | a strictly increasing sequence of such primes, one for each depth `k = n + 24` |
+
+Not proved: the statement for every prime `p = 1 mod 2^(k+1)`, for one prime at all depths, or for another
+curve or target. The general growth theorem (`GrowthMain.growth_theorem`) still takes a `CurveModel` as a
+hypothesis; for a target that is not of order two this needs a function field of genus one, which is not
+formalized.
+
+How the proof is organized (module name patterns):
+
+- *The model.* For a target of order two `S_3(x_1,x_2,t)` is a square whose root is a Möbius map:
+  `GrowthSecant`, `GrowthRationalCoordinates`, `GrowthRatFuncModel`, `GrowthRatFuncLogDerivative`.
+- *Wronskians of rational functions.* Derivatives on `K(X)`, Leibniz rules, common denominators, degree
+  budgets, and the nonvanishing of Wronskians of polynomials of distinct degrees: `GrowthComplexRatFuncDerivative`,
+  `GrowthRatFunc*`, `GrowthPolynomialWronskian*`, `GrowthWronskian*`, `GrowthRationalWronskianRec`,
+  `GrowthGeneralRationalWronskian`.
+- *Minimal linear relations (circuits) and their exponent spread.* `GrowthCircuit*`, `GrowthActual*`,
+  `GrowthFiniteCofactor*`, `GrowthInfinityCofactorDegree`; the result is `GrowthActualCircuitSpread`, which
+  `GrowthFixedE6.model` uses.
+- *Unit ideal in characteristic zero.* On the grid of roots of unity the factor of `S_3` cannot vanish, by
+  a norm inequality: `GrowthCharZero*`, `GrowthRationalE6Unit`.
+- *Prime fields.* The spread bound for the monomials with exponents below `2^k`, in characteristic above
+  `2^(k+1)` (`GrowthBoxSpread`, `GrowthPrimeE6Box*`, `GrowthPrimeE6NativeBoxSpread`, `GrowthPrimeBoxNonmembership`);
+  the unit ideal modulo all primes above a bound, through an identity over the integers
+  (`GrowthFieldCoefficientRetraction`, `GrowthRationalBezout*`, `GrowthIntegralBezout*`, `GrowthFixedE6Integral*`);
+  primes `p = 1 mod 2^(k+1)` above any bound (`GrowthPrimeAdmissible`); the assembly (`GrowthPrimeNativeWindow`,
+  `GrowthFixedE6PrimeTheta`, `GrowthFixedE6PrimeSequence`).
+- *Finite-stage closures.* The closure `V_D` as a finite iteration of row spaces: `GrowthConcreteClosure*`,
+  `GrowthBoundedDegreeLeastClosure`, `GrowthFiniteStabilization`.
+
+The final theorem imports 132 modules, 89 of them among the 98 new ones. Nine new modules are side results it
+does not use: `GrowthComplexCofactorArithmetic`, `GrowthPoleArithmetic`, `GrowthRatFuncWronskianTwo`,
+`GrowthRationalBoundary`, `GrowthRationalGridUnit`, `GrowthRationalMobius`, `GrowthRationalPoleArithmetic`,
+`GrowthSecantFactorization` and `GrowthTwoTorsion`. One upstream file is omitted: `GrowthUnitFrobenius.lean`
+(an explicit characteristic-p unit certificate that nothing imports) does not compile with the pinned
+toolchain; it imports `Mathlib.Tactic.Omega`, which Mathlib v4.19.0 does not have, and its proof fails after
+that import is corrected.
+
+Three files adapt Apache-2.0 sources and say so in their headers: `GrowthComplexRatFuncDerivative.lean`
+(JacobianTwo; licence text in `third_party/`), `GrowthPolynomialWronskianBasis.lean` and
+`GrowthPolynomialWronskianDistinctDegree.lean` (ArkLib). `GrowthRatFuncHigherLeibniz.lean` follows a Mathlib
+proof.
+
+### Building every module
+
+`ICFallDegrees.lean` imports the final theorem, so `lake build` covers its 132 modules. Seven of the 217
+modules are outside the default target: `Audit`, `SparseDemo` and the five side results
+`GrowthComplexCofactorArithmetic`, `GrowthRatFuncWronskianTwo`, `GrowthRationalBoundary`,
+`GrowthRationalGridUnit` and `GrowthRationalMobius`. To build all of them and audit every `#print axioms` of the project (the file
+`ICFallDegrees/Audit.lean`, the 47 files `N8*Audit.lean` in this directory, and the modules that print their
+own), run from the repository root:
+
+```sh
+cd formal && lake exe cache get && cd ..
+python3 scripts/lean_check_all.py --out /tmp/lean-check
+```
+
+On a machine where the `cache` executable does not start (seen on macOS with Darwin 27, where dyld rejects
+the binary linked by the Lean 4.19 toolchain), fetch the Mathlib cache with
+`lake env lean --run .lake/packages/mathlib/Cache/Main.lean get` instead. The workflow
+`.github/workflows/lean-all-modules.yml` runs the same script on Linux. The files `N8*Audit.lean` are the audit
+files of the individual upstream steps and are kept as they were.

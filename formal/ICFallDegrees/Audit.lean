@@ -630,3 +630,18 @@ import ICFallDegrees
 #print axioms ICFallDegrees.GrowthUnitCertificate.power_difference_unit_certificate
 #print axioms ICFallDegrees.GrowthUnitCertificate.square_power_difference_unit_certificate
 #print axioms ICFallDegrees.GrowthUnitCertificate.square_unit_of_frobenius_mismatch
+
+-- Fixed-curve growth, y^2 = x^3 + 6x - 7 with the target of order two (paper: "Growth on a fixed curve").
+#print axioms ICFallDegrees.GrowthFixedE6.model
+#print axioms ICFallDegrees.GrowthFixedE6.unit
+#print axioms ICFallDegrees.GrowthFixedE6.lfd_gt_linear
+#print axioms ICFallDegrees.GrowthFixedE6.lfd_linear_window
+#print axioms ICFallDegrees.GrowthFixedE6.exists_lfd_linear_window
+#print axioms ICFallDegrees.GrowthFixedE6.exists_lfd_theta
+#print axioms ICFallDegrees.GrowthPrimeE6NativeBoxSpread.e6_native_box_spread
+#print axioms ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime
+#print axioms ICFallDegrees.GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound
+#print axioms ICFallDegrees.GrowthPrimeAdmissible.exists_admissible_prime_above
+#print axioms ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_prime_theta_of_native_certificates
+#print axioms ICFallDegrees.GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above
+#print axioms ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence

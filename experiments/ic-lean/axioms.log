@@ -712,3 +712,83 @@
 'ICFallDegrees.GrowthExistence.unit_instance' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ICFallDegrees.GrowthExistence.growth_instance' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ICFallDegrees.GrowthExistence.growth_instance_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecant.s3_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecant.companion_discriminant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecant.secant_numerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecant.secant_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthPoleArithmetic.spread_from_two_pole_orders' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthPoleArithmetic.spread_from_genus_one_height' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthSecant.s3_eq_S3at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecant.secant_on_curve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecantFactorization.s3_square_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthSecantFactorization.square_of_s3_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecantFactorization.s3_zero_of_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSecantFactorization.s3_square_of_target_root' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthSecantFactorization.s3_perfect_square_of_target_root' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthSecantFactorization.two_torsion_derivative_ne_of_nonsingular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.mul_mobius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.mobius_on_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.mobius_on_S3at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.mobius_target_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.mobius_ne_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.mobius_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.fixed_curve_target_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.fixed_curve_nonsingular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthTwoTorsion.fixed_curve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalPoleArithmetic.spread_from_simple_poles' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalUnit.target_is_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalUnit.s3_square_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalUnit.parameter_of_s3_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalUnit.s3_ne_zero_of_parameter_not_in_subfield' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalUnit.discriminant_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalUnit.nonsingular_of_parameter_conditions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthUnitCertificate.power_difference_unit_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthUnitCertificate.square_power_difference_unit_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthUnitCertificate.square_unit_of_frobenius_mismatch' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthFixedE6.model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthFixedE6.unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthFixedE6.lfd_gt_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthFixedE6.lfd_linear_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthFixedE6.exists_lfd_linear_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthFixedE6.exists_lfd_theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthPrimeE6NativeBoxSpread.e6_native_box_spread' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthPrimeAdmissible.exists_admissible_prime_above' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_prime_theta_of_native_certificates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
