@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthPolynomialWronskianBasis
+
+#print axioms ICFallDegrees.GrowthPolynomialWronskianBasis.classicalWronskian_of_linearComb
+#print axioms ICFallDegrees.GrowthPolynomialWronskianBasis.polynomial_wronskian_ne_zero_of_basis

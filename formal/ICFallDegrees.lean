@@ -114,3 +114,12 @@ import ICFallDegrees.GrowthSpread
 import ICFallDegrees.GrowthMain
 import ICFallDegrees.GrowthCriterion
 import ICFallDegrees.GrowthExistence
+import ICFallDegrees.GrowthSecant
+import ICFallDegrees.GrowthPoleArithmetic
+import ICFallDegrees.GrowthSecantFactorization
+import ICFallDegrees.GrowthTwoTorsion
+
+import ICFallDegrees.GrowthRationalPoleArithmetic
+import ICFallDegrees.GrowthRationalUnit
+
+import ICFallDegrees.GrowthUnitCertificate

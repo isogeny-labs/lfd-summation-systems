@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthRatFuncDenominatorIndependence
+#print axioms ICFallDegrees.GrowthRatFuncDenominatorIndependence.polynomial_linearIndependent_of_clear
+#print axioms ICFallDegrees.GrowthRatFuncDenominatorIndependence.exists_independent_polynomial_representatives

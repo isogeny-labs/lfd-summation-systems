@@ -1,0 +1,8 @@
+import ICFallDegrees.GrowthComplexRatFuncDerivative
+
+#print axioms ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_mk
+#print axioms ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_algebraMap
+#print axioms ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_add
+#print axioms ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_mul
+#print axioms ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_eq_zero_iff
+#print axioms ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivativeDerivation

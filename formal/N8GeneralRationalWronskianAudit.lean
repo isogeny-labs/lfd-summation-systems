@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthGeneralRationalWronskian
+#print axioms ICFallDegrees.GrowthGeneralRationalWronskian.polynomial_wronskian_ne_zero_of_linearIndependent
+#print axioms ICFallDegrees.GrowthGeneralRationalWronskian.rational_wronskian_ne_zero_of_linearIndependent

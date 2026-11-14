@@ -1,0 +1,29 @@
+import ICFallDegrees.GrowthRationalCoordinates
+import ICFallDegrees.GrowthRationalFrobenius
+import ICFallDegrees.GrowthRationalGridUnit
+import ICFallDegrees.GrowthRatFuncModel
+import ICFallDegrees.GrowthUnitCertificate
+import ICFallDegrees.GrowthRationalPoleArithmetic
+
+#print axioms ICFallDegrees.GrowthRationalUnit.target_is_root
+#print axioms ICFallDegrees.GrowthRationalUnit.s3_square_family
+#print axioms ICFallDegrees.GrowthRationalUnit.parameter_of_s3_zero
+#print axioms ICFallDegrees.GrowthRationalUnit.s3_ne_zero_of_parameter_not_in_subfield
+#print axioms ICFallDegrees.GrowthRationalUnit.discriminant_factor
+#print axioms ICFallDegrees.GrowthRationalUnit.nonsingular_of_parameter_conditions
+#print axioms ICFallDegrees.GrowthUnitCertificate.power_difference_unit_certificate
+#print axioms ICFallDegrees.GrowthUnitCertificate.square_power_difference_unit_certificate
+#print axioms ICFallDegrees.GrowthUnitCertificate.square_unit_of_frobenius_mismatch
+#print axioms ICFallDegrees.GrowthRationalPoleArithmetic.spread_from_simple_poles
+#print axioms ICFallDegrees.GrowthRationalCoordinates.rational_s3_on_curve
+#print axioms ICFallDegrees.GrowthRationalCoordinates.rationalZ_ne_zero
+#print axioms ICFallDegrees.GrowthRationalCoordinates.rational_algebraic_data
+
+#print axioms ICFallDegrees.GrowthRationalFrobenius.pow_fixed_of_root
+#print axioms ICFallDegrees.GrowthRationalFrobenius.q_frobenius_fixed
+
+#print axioms ICFallDegrees.GrowthRationalGridUnit.square_unit_of_grid_roots
+
+#print axioms ICFallDegrees.GrowthRatFuncModel.X_ne_constant
+#print axioms ICFallDegrees.GrowthRatFuncModel.numerator_ne_zero
+#print axioms ICFallDegrees.GrowthRatFuncModel.ratFunc_algebraic_data

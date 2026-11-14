@@ -1,0 +1,9 @@
+import ICFallDegrees.GrowthPolynomialQuotientBridge
+import ICFallDegrees.GrowthWronskianTightDegree
+import ICFallDegrees.GrowthMain
+
+#print axioms ICFallDegrees.GrowthPolynomialQuotientBridge.mul_derivative_pow
+#print axioms ICFallDegrees.GrowthPolynomialQuotientBridge.cleared_quotient_rule
+#print axioms ICFallDegrees.GrowthPolynomialQuotientBridge.concrete_cleared_log_derivative
+#print axioms ICFallDegrees.GrowthWronskianTightDegree.cofactor_natDegree_le_two
+#print axioms ICFallDegrees.GrowthMain.growth_theorem

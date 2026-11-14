@@ -1,0 +1,8 @@
+import ICFallDegrees.GrowthRatFuncIteratedLinear
+
+#print axioms ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_add
+#print axioms ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_zero_fun
+#print axioms ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_smul
+#print axioms ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_sum
+#print axioms ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_const_sum
+#print axioms ICFallDegrees.GrowthRatFuncIteratedLinear.relation_in_every_row

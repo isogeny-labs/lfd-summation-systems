@@ -1,0 +1,6 @@
+import ICFallDegrees.GrowthPolynomialWronskianMonomials
+
+#print axioms ICFallDegrees.GrowthPolynomialWronskianMonomials.derivativeMatrix_monomials_upper
+#print axioms ICFallDegrees.GrowthPolynomialWronskianMonomials.derivativeMatrix_monomials_diag
+#print axioms ICFallDegrees.GrowthPolynomialWronskianMonomials.monomial_wronskian_det
+#print axioms ICFallDegrees.GrowthPolynomialWronskianMonomials.monomial_wronskian_ne_zero

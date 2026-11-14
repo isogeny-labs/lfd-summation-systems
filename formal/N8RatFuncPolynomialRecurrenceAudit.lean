@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthRatFuncPolynomialRecurrence
+#print axioms ICFallDegrees.GrowthRatFuncPolynomialRecurrence.rationalNumeratorRec_algebraMap
+#print axioms ICFallDegrees.GrowthRatFuncPolynomialRecurrence.concrete_higher_derivative
+#print axioms ICFallDegrees.GrowthRatFuncPolynomialRecurrence.concrete_higher_derivative_numerator_degree

@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthCircuitReplacementFin
+#print axioms ICFallDegrees.GrowthCircuitReplacementFin.erase_sum_equivFin
+#print axioms ICFallDegrees.GrowthCircuitReplacementFin.exists_replacement_fin

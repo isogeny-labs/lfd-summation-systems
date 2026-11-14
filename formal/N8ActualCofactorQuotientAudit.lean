@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthActualCofactorQuotient
+
+#print axioms ICFallDegrees.GrowthActualCofactorQuotient.cofactorValue_eq_map_det
+#print axioms ICFallDegrees.GrowthActualCofactorQuotient.cofactor_ratio_of_independent_replacement

@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthCircuitInterface
+
+#print axioms ICFallDegrees.GrowthCircuitInterface.exponentPair_injective
+#print axioms ICFallDegrees.GrowthCircuitInterface.mono_xi_eq_monomial

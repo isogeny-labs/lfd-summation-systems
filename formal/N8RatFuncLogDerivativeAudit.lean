@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthRatFuncLogDerivative
+
+#print axioms ICFallDegrees.GrowthRatFuncLogDerivative.derivative_mk_mul_of_cleared
+#print axioms ICFallDegrees.GrowthRatFuncLogDerivative.concrete_rational_derivative
+#print axioms ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_eq_zero_iff

@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthRatFuncCommonDenominator
+#print axioms ICFallDegrees.GrowthRatFuncCommonDenominator.commonDenominator_ne_zero
+#print axioms ICFallDegrees.GrowthRatFuncCommonDenominator.denom_dvd_commonDenominator
+#print axioms ICFallDegrees.GrowthRatFuncCommonDenominator.exists_polynomial_numerators
+#print axioms ICFallDegrees.GrowthRatFuncCommonDenominator.exists_polynomial_wronskian_scale

@@ -588,3 +588,45 @@ import ICFallDegrees
 #print axioms ICFallDegrees.GrowthExistence.unit_instance
 #print axioms ICFallDegrees.GrowthExistence.growth_instance
 #print axioms ICFallDegrees.GrowthExistence.growth_instance_window
+#print axioms ICFallDegrees.GrowthSecant.s3_quadratic
+#print axioms ICFallDegrees.GrowthSecant.companion_discriminant
+#print axioms ICFallDegrees.GrowthSecant.secant_numerator
+#print axioms ICFallDegrees.GrowthSecant.secant_s3
+#print axioms ICFallDegrees.GrowthPoleArithmetic.spread_from_two_pole_orders
+#print axioms ICFallDegrees.GrowthPoleArithmetic.spread_from_genus_one_height
+#print axioms ICFallDegrees.GrowthSecant.s3_eq_S3at
+#print axioms ICFallDegrees.GrowthSecant.secant_on_curve
+
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_square_factorization
+#print axioms ICFallDegrees.GrowthSecantFactorization.square_of_s3_zero
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_zero_of_square
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_square_of_target_root
+
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_perfect_square_of_target_root
+
+#print axioms ICFallDegrees.GrowthSecantFactorization.two_torsion_derivative_ne_of_nonsingular
+
+#print axioms ICFallDegrees.GrowthTwoTorsion.mul_mobius
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_on_s3
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_on_S3at
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_target_difference
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_ne_target
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_involutive
+#print axioms ICFallDegrees.GrowthTwoTorsion.fixed_curve_target_root
+#print axioms ICFallDegrees.GrowthTwoTorsion.fixed_curve_nonsingular
+#print axioms ICFallDegrees.GrowthTwoTorsion.fixed_curve_s3
+
+#print axioms ICFallDegrees.GrowthRationalPoleArithmetic.spread_from_simple_poles
+
+-- Rational 2-torsion unit-family algebra (requires pinned CI verification).
+#print axioms ICFallDegrees.GrowthRationalUnit.target_is_root
+#print axioms ICFallDegrees.GrowthRationalUnit.s3_square_family
+#print axioms ICFallDegrees.GrowthRationalUnit.parameter_of_s3_zero
+#print axioms ICFallDegrees.GrowthRationalUnit.s3_ne_zero_of_parameter_not_in_subfield
+#print axioms ICFallDegrees.GrowthRationalUnit.discriminant_factor
+#print axioms ICFallDegrees.GrowthRationalUnit.nonsingular_of_parameter_conditions
+
+-- Explicit algebraic unit-certificate bridge (requires pinned CI).
+#print axioms ICFallDegrees.GrowthUnitCertificate.power_difference_unit_certificate
+#print axioms ICFallDegrees.GrowthUnitCertificate.square_power_difference_unit_certificate
+#print axioms ICFallDegrees.GrowthUnitCertificate.square_unit_of_frobenius_mismatch

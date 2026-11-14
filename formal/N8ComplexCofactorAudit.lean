@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthComplexCofactorArithmetic
+
+#print axioms ICFallDegrees.GrowthComplexCofactorArithmetic.doubled_l1_le_four_budget
+#print axioms ICFallDegrees.GrowthComplexCofactorArithmetic.doubled_l1_le_circuit_budget
+#print axioms ICFallDegrees.GrowthComplexCofactorArithmetic.doubled_l1_le_required_budget

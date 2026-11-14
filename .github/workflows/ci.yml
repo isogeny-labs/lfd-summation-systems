@@ -1,0 +1,58 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  python:
+    name: Python self-tests and N8 regressions
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: python -m pip install --disable-pip-version-check numpy matplotlib sympy==1.14.0
+      - name: Sources compile
+        run: python -m compileall -q csd scripts experiments
+      - name: Three to eight summands self-test
+        run: python scripts/ic_bounds_msum.py selftest
+      - name: N8 exact regressions (33 scripts)
+        run: |
+          set -euo pipefail
+          for script in scripts/check_n8_*.py; do
+            echo "::group::$script"
+            python "$script"
+            echo "::endgroup::"
+          done
+  lean:
+    name: Lean cold build of every module and axiom audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pin Lean 4.19.0 and Mathlib v4.19.0
+        run: |
+          test "$(cat formal/lean-toolchain)" = "leanprover/lean4:v4.19.0"
+          grep -q 'rev = "v4.19.0"' formal/lakefile.toml
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: formal
+          build: false
+          use-github-cache: false
+      - name: Build every module and audit every printed axiom list
+        run: python3 scripts/lean_check_all.py --out "$RUNNER_TEMP/lean-check"
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-check
+          path: ${{ runner.temp }}/lean-check

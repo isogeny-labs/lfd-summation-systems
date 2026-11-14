@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthActualCofactorCross
+
+#print axioms ICFallDegrees.GrowthActualCofactorCross.monomialProduct_replace
+#print axioms ICFallDegrees.GrowthActualCofactorCross.other_monomials_ne_zero
+#print axioms ICFallDegrees.GrowthActualCofactorCross.cofactor_cross_of_const_relation

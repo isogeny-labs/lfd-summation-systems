@@ -1,0 +1,6 @@
+import ICFallDegrees.GrowthActualMinorReplacement
+
+#print axioms ICFallDegrees.GrowthActualMinorReplacement.derivativeMatrix_replace
+#print axioms ICFallDegrees.GrowthActualMinorReplacement.determinant_replace_of_const_sum
+#print axioms ICFallDegrees.GrowthActualMinorReplacement.cofactor_factorization
+#print axioms ICFallDegrees.GrowthActualMinorReplacement.cofactor_replacement_product

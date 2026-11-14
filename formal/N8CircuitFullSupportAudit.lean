@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthCircuitFullSupport
+
+#print axioms ICFallDegrees.GrowthCircuitFullSupport.relation_support_eq_circuit
+#print axioms ICFallDegrees.GrowthCircuitFullSupport.relation_coeff_ne_zero
+#print axioms ICFallDegrees.GrowthCircuitFullSupport.exists_full_support_relation
