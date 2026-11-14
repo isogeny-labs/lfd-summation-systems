@@ -61,5 +61,7 @@ audit coverage and three finite closure regressions.
 
 **Cold build coverage.** The cold build of 2026-11-12 (`BUILD-COLD-20261112.md`) covers the
 513 declarations on `main` at that date. The 69 declarations added since (the `Growth*`, `Selector*`,
-`UnitInstance` and `DepthFourteen` modules) are covered by the warm audit in `axioms.log` and by CI,
-not yet by a cold build log.
+`UnitInstance` and `DepthFourteen` modules) are covered by the warm audit in `axioms.log`, not yet by a cold build log.
+The upstream Python CI does not build Lean; it supplies no additional
+Lean build evidence. The source digests in `verification.json` bind the
+saved warm audit to the source files in this checkout.
