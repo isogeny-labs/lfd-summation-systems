@@ -1,5 +1,8 @@
 # Fresh project build and axiom audit, 14 November 2026
 
+**Scope:** this receipt covers the reviewed 582-declaration snapshot. The
+newer 628-declaration growth extension in PRs #7/#8 is outside this receipt.
+
 **Passed.** [GitHub Actions run 43648104843](https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43648104843)
 rebuilt all 120 project modules from an empty project build directory, then
 ran the complete verifier and axiom audit of 582 declarations. The checkout
@@ -49,7 +52,9 @@ The earlier warm audit and 513-declaration cold-build records are preserved.
 
 ## Reproduction and method sources
 
-The workflow is `.github/workflows/lean-clean.yml`. It installs the toolchain
+The [one-shot workflow at the tested commit](https://github.com/isogeny-labs/lfd-summation-systems/blob/f13c9ed385f0dfb41a982c8494da3b05064c07fd/.github/workflows/lean-clean.yml)
+is retained in Git history; the current canonical CI remains
+`.github/workflows/ci.yml`. The one-shot workflow installs the toolchain
 named in `formal/lean-toolchain`, fetches the pinned dependencies, checks that
 the manifest is unchanged, and obtains the Mathlib cache. In a fresh checkout
 after that setup, run:

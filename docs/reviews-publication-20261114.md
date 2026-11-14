@@ -1,7 +1,9 @@
 # Publication review for IACR ePrint, 14 November 2026
 
 **Build follow-up:** the clean-build gap described in this original review is
-now closed. See the successful fresh-run evidence and the follow-up below.
+now closed for the reviewed 582-declaration snapshot. See the successful
+fresh-run evidence and the follow-up below. The newer 628-declaration
+integration in PR #8 is outside this review and receipt.
 
 ## Scope and verdict
 

@@ -1,6 +1,6 @@
 # Main manuscript: ePrint preparation
 
-**Status, 14 November 2026:** corrected ePrint candidate with a fresh clean Lean build and full axiom audit passed; ready for author submission review. No ePrint
+**Status of the 582-declaration candidate, 14 November 2026:** corrected ePrint candidate with a fresh clean Lean build and full axiom audit passed; ready for author submission review. No ePrint
 submission or editorial acceptance is recorded by this review. This is a
 technical and artifact review, not independent certification of every proof.
 
@@ -29,8 +29,9 @@ passed the full 582-declaration axiom audit. All 124 reviewed source digests
 and all audited axiom dependencies match the saved audit. Lean 4.19.0 and
 the committed Mathlib revision were used; only the Mathlib dependency cache
 was reused. The earlier 513-declaration cold build and warm audit remain
-archived with their original scope. The new dedicated Lean CI supplies the
-current clean-build evidence; the older upstream Python CI did not build Lean.
+archived with their original scope. The retained Linux run supplies this
+clean-build evidence. The newer 628-declaration integration in PR #8 is a
+separate manuscript version and is not covered by this receipt.
 
 ## Build and checks
 
