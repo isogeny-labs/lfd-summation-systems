@@ -61,8 +61,8 @@ inputs. Results meant to be fetched go under `/workspace/out/` and stay small.
 
 | Item | Where |
 | --- | --- |
-| Control token (never printed, never in the repo) | `scratchpad/pod/<name>.token`, mode 0600 |
-| Pod id, name, creation time | `scratchpad/pod/<name>.json` |
+| Control token (never printed, never in the repo) | `$POD_STATE_DIR/<name>.token`, mode 0600 |
+| Pod id, name, creation time | `$POD_STATE_DIR/<name>.json` |
 | Code, inputs, outputs | pod `/workspace/code`, `/workspace/in`, `/workspace/out` |
 | Job logs | pod `/workspace/logs/<job>.log` |
 | Job table (pid, command, start, exit code) | pod `/workspace/jobs.json`; exit files in `/workspace/jobs/` |
@@ -71,7 +71,7 @@ inputs. Results meant to be fetched go under `/workspace/out/` and stay small.
 
 The token is also in the pod environment (`CTL_TOKEN`), so it is visible in the Runpod
 console; it is useless once the pod is terminated. Jobs do not inherit it. The state
-directory is `$POD_STATE_DIR` (default: the scratchpad path above).
+directory is `$POD_STATE_DIR` (default: `~/.lfd-pod-state`).
 
 ## Smoke test, 2026-11-10 (main session)
 
