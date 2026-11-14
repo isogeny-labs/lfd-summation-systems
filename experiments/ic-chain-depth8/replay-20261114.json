@@ -1,0 +1,267 @@
+{
+ "date": "2026-11-14",
+ "command": "python scripts/replay_with_current_sources.py experiments/ic-chain-depth8 -- --workers 3",
+ "base_commit": "bb92980 (lfd-summation-systems, branch pub/readiness-20261114)",
+ "python": "3.11.14, numpy 2.4.6",
+ "status": "passed: every result replayed",
+ "systems": 22,
+ "note": "The record and the driver are unchanged. The replay copies the record to a temporary directory, replaces only the source hashes that changed since the run (listed below), keeps every data hash, and runs the driver with --check-only: each recomputed result equals the stored record in results.jsonl (all fields except seconds).",
+ "sources_changed_since_run": [
+  {
+   "source_changed_since_run": "csd/ic_chain_shift_closure.py",
+   "recorded": "4788018b321477dd1b0ae3377e134fea460ea6d65dbf0ad261738ddb550c8a63",
+   "current": "2e9b0452e81ee7d16bca9b4799116eed8c03b8a3d4b252ecce5f1568152b1a60"
+  },
+  {
+   "source_changed_since_run": "scripts/run_ic_chain_depth8.py",
+   "recorded": "c920a9e0555fa7968b5cc6f0dbb8dce086bc027b98e6c323357e91c6d77a2d09",
+   "current": "47441e687273dc28593dc113fa64afd8542ee7d8c83c94b76d382efc9dfac6d6"
+  }
+ ],
+ "per_system": [
+  {
+   "k": 7,
+   "prime": 7681,
+   "status": "exact-unit-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 19.0
+  },
+  {
+   "k": 7,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 39.2
+  },
+  {
+   "k": 8,
+   "prime": 257,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 152.1
+  },
+  {
+   "k": 8,
+   "prime": 257,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 158.8
+  },
+  {
+   "k": 8,
+   "prime": 257,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 169.1
+  },
+  {
+   "k": 8,
+   "prime": 257,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 204.5
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 152.2
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 157.2
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 165.2
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 169.7
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 170.3
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 185.6
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 209.0
+  },
+  {
+   "k": 8,
+   "prime": 769,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 211.4
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-unit-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 165.7
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 166.3
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 166.4
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 166.8
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 167.1
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 217.4
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 222.1
+  },
+  {
+   "k": 8,
+   "prime": 7681,
+   "status": "exact-proper-shift",
+   "lfd": 5,
+   "falls": [
+    4,
+    5
+   ],
+   "seconds": 240.0
+  }
+ ],
+ "elapsed_seconds": 1295,
+ "results_sha256": "ccd6b92d1a7d9f9ee992197a2df9a825c2168918335cc5d54737148b77363b17"
+}

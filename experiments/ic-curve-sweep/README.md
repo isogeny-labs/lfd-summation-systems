@@ -12,7 +12,7 @@ ordinary and Koblitz curves, with random and symmetric factor bases (seed 202611
 | `base-class-analysis.json` | the base-class analysis (`scripts/analyze_ic_base_classes.py`) |
 | `verification.json` | SHA-256 of the sources and of every record |
 
-Regenerate every case and replay every saved closure without writing files (about 40 minutes with 4 workers):
+Regenerate every case and replay every saved closure without writing files (25 minutes with 4 workers on an Apple M-series laptop, 2026-11-14):
 
     python scripts/run_ic_curve_sweep.py --check-only --workers 4
 
