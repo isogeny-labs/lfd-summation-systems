@@ -71,7 +71,7 @@ and `binary-lfd.tex` build with pdfLaTeX or Tectonic. The Lean project needs Lea
 The first command builds the Lean project and prints the axiom dependencies of every audited declaration; run
 `lake exe cache get` in `formal/` first to use Mathlib's prebuilt files, otherwise Mathlib is compiled from
 source. The continuous-integration workflow (`.github/workflows/ci.yml`) runs that build and audit, and the
-Python self-tests, on every push. Three sources of the depth-8 run were edited after it
+Python self-tests, on every pull request and every push to `main`. Three sources of the depth-8 run were edited after it
 (`experiments/ic-chain-depth8/NOTES.md`), so its record no longer passes the driver's source-hash check;
 `replay_with_current_sources.py` keeps the data hashes, reports the changed sources and replays every system
 with the current code. Thedepth-ten runs take about two hours each and the degree-six closure about five hours. The commands for the GPU
@@ -98,6 +98,9 @@ that readers can see how the results were checked:
   depths 11 to 16. They contain no credentials; the control token of a pod lives only on the pod and in the
   local state directory (`$POD_STATE_DIR`).
 - `docs/proofs/*-lean-plan.md` are plans of formalizations; the Lean sources are the result.
+- `docs/IC_BOUNDS_PROGRAM.md` is the working plan of the bounds programme (dated 2026-11-08, with status
+  sections up to 2026-11-12): claims with their labels, run orders and the task statements of the next proofs. The written proofs cite it for their task statements; where it and the
+  paper differ, the paper and the proofs are current.
 
 ## Notes
 
@@ -115,4 +118,6 @@ Please cite the paper; `CITATION.cff` has the entry for this repository.
 
 The software (the Python code, the Lean development and the scripts) is under the MIT licence (`LICENSE`). The
 papers, figures, written proofs, notes and data records are under the Creative Commons Attribution 4.0
-International licence (`LICENSE-CC-BY-4.0.txt`). `LICENSE` lists which files fall under which.
+International licence (`LICENSE-CC-BY-4.0.txt`). In detail: MIT covers `csd/`, `scripts/`, `tests/`, `formal/`
+and the code inside `experiments/`; CC BY 4.0 covers `paper/`, `docs/`, the Markdown files in `experiments/` and
+the data records (the JSON, JSONL, CSV, NPZ and log files in `experiments/`).
