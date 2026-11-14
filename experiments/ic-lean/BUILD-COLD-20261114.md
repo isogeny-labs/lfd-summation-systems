@@ -25,6 +25,6 @@ Records in `all-modules-20261114/`:
 The same run then executed `scripts/verify_lean_fall_degrees.py`, which wrote `build.log`, `axioms.log` and
 `verification.json` in this directory: 628 declarations of `Audit.lean`, foundational axioms only.
 
-This is the first build from an empty build directory of the modules added after the cold build of 2026-11-12
-(`Growth*`, `Selector*`, `UnitInstance`, `DepthFourteen`), and of the fixed-curve growth modules. The workflow
-`.github/workflows/lean-all-modules.yml` repeats it on Linux for every change under `formal/`.
+The build covers the modules added after the cold build of 2026-11-12 (`Growth*`, `Selector*`, `UnitInstance`,
+`DepthFourteen`) and the fixed-curve growth modules; for the latter it is the first build in this repository.
+The workflow `.github/workflows/lean-all-modules.yml` repeats it on Linux for every change under `formal/`.
