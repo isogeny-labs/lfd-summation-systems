@@ -29,7 +29,7 @@
 \newcommand{\code}[1]{{\ttfamily\let\_\codeus#1}}
 \setlength{\emergencystretch}{3em}
 \title{Last fall degrees of elliptic curve summation systems:\\ machine-checked bounds and exact values}
-\author{Adam Buran\\ \texttt{a.buran28@gmail.com}}
+\author{Adam Buran\\ \texttt{adam@isogenylabs.io}\\ \texttt{a.buran28@gmail.com}}
 \date{14 November 2026}
 \input{curve-sweep-data}
 \begin{document}
@@ -38,8 +38,8 @@
 We study the last fall degree (LFD) of summation-polynomial systems for
 elliptic-curve index calculus in three families: prime-field curves with a
 two-power subgroup factor base in squaring chains, and binary
-ordinary and Koblitz curves with Boolean descents. In Lean~4 with Mathlib,
-without project axioms, we kernel-check $\mathrm{LFD}\le\max(mk+1,\delta)$
+ordinary and Koblitz curves with Boolean descents. Using Lean~4 and Mathlib,
+we prove the following bounds without project axioms: $\mathrm{LFD}\le\max(mk+1,\delta)$
 for every input list with the chains; $\mathrm{LFD}\le k+2$ for two
 summands on nonsingular curves at every depth $k$; $\mathrm{LFD}\ge4$ at
 every depth for unit ideals with $3t^2+a\ne0$; $\mathrm{LFD}\ge7$ for
@@ -50,9 +50,10 @@ generic targets $\mathrm{LFD}=4$ for $k\le5$, $5$ for $k=6,\ldots,9$ and
 $6$ for $k=10,\ldots,13$ on a unit instance, matching the corrected
 degree-of-regularity breakpoints of Petit, Kosters and Messeng, whose
 unreduced presentation has the same LFD there. At $k=14$,
-$\mathrm{LFD}\ge7$ is certified and $\mathrm{LFD}\le7$ rests on a degree
-lift with a written proof and no certificate; in Lean these values are
-conditional on recorded closures. A twice-reviewed written proof shows that in characteristic $0$ or
+the lower bound $\mathrm{LFD}\ge7$ is certified. The matching upper bound
+comes from a degree lift with a written proof and no certificate; the Lean
+statements take the recorded closures as hypotheses. A written proof,
+checked in two reviews, shows that in characteristic $0$ or
 $p>2^{k+1}$ the LFD of unit-ideal instances with target abscissa $t\ne0$ is
 unbounded, at least $\lfloor(k-10)/14\rfloor+1$ for $k\ge38$ (in Lean,
 conditional on a vanishing-sum bound; for the curve $y^2=x^3+6x-7$ with the
@@ -63,10 +64,11 @@ every tested prediction recorded in advance. With three to eight summands
 at depth $k\le m-1$ the generator has the full degree $mk$ on $409$ of $412$
 instances, and there the kernel bound and a carry criterion checked per
 instance force $\mathrm{LFD}=mk+1$; at $m=4$, $k=4$, where $\deg g=12$ falls
-short of $mk=16$, the value is $13$, below the bound $17$. Binary and
-Koblitz values are exact through dimension $16$ (replicated, one engine);
-preregistered laws in the solution count are refuted. We claim nothing
-about discrete-logarithm cost.
+short of $mk=16$, the value is $13$, below the bound $17$. For binary and
+Koblitz systems we compute exact values through dimension $16$ and
+reproduce them in separate runs of the same engine. These data refute
+preregistered laws based on the solution count. The results concern
+polynomial-system degrees; we do not estimate discrete-logarithm costs.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -85,21 +87,21 @@ Yeo~\cite{hkyy}, is an invariant of the input list that, together with
 the number of solutions, controls linear-algebra solving of
 zero-dimensional systems~\cite[Prop.~2.8]{hkyy}.
 
-We ask how the LFD of summation-polynomial systems grows with the factor
-base: with the depth $k$ of a two-power subgroup factor base over a prime
-field, and with the dimension $k$ of a linear coordinate space over a binary
-field. We give bounds that hold at every depth and exact values as far as
-computation reaches.
+We study how the LFD grows as the factor base grows. Over prime fields,
+we vary the depth $k$ of the squaring chains that describe a two-power
+subgroup. Over binary fields, we vary the dimension $k$ of the coordinate
+space. We prove bounds valid at every depth and compute exact values on
+the instances within reach.
 
 \paragraph{Evidence labels.} Every result carries one of five labels:
 \emph{kernel-checked} (proved in Lean~4 with Mathlib, without project
 axioms; Appendix~\ref{app:lean}); \emph{written proof}; \emph{exact} (a
 computation in exact arithmetic that ends with a certificate;
 Appendix~\ref{app:methods}); \emph{empirical} (a pattern in exact data);
-\emph{conjecture}. One computed bound has none of these: the upper bound
-$\lfd\le7$ at $k=14$ is \emph{lifted}, that is, computed by the degree lift
-of Section~\ref{sec:depth14}, which has a written proof, and not closed by
-a certificate. Statements about binary curves taken from an unpublished
+\emph{conjecture}. We use the additional label \emph{lifted} for the upper bound
+$\lfd\le7$ at $k=14$. It comes from the degree lift of
+Section~\ref{sec:depth14}; the method has a written proof, but the result
+has no final closure certificate. Statements about binary curves taken from an unpublished
 draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft}).
 
 \paragraph{Contributions.}
@@ -150,14 +152,14 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
  random-versus-symmetric effects on binary curves separate into unit-ideal
  rate and solution count (Section~\ref{sec:sweep}).
 \end{enumerate}
-The bounds are statements about specified algebraic encodings. They imply
-nothing about relation yield, independent relation rank or the cost of a
-discrete logarithm, and we make no such claim.
+These bounds concern the algebraic encodings studied here. Assessing the
+cost of a discrete logarithm would also require relation yields and ranks,
+which we do not measure.
 
-\paragraph{Organization.} Section~\ref{sec:background} gives background,
-Section~\ref{sec:systems} the systems, Sections~\ref{sec:bounds}
-to~\ref{sec:growth} the results and Sections~\ref{sec:limitations}
-and~\ref{sec:future} the limitations and open problems.
+\paragraph{Organization.} We introduce the background in Section~\ref{sec:background} and define
+the systems in Section~\ref{sec:systems}. Sections~\ref{sec:bounds}
+to~\ref{sec:growth} present the results; Sections~\ref{sec:limitations}
+and~\ref{sec:future} discuss their limits and the remaining questions.
 Appendices~\ref{app:lean}, \ref{app:methods} and~\ref{app:data} contain
 the formal verification, the computational methods with the independent
 checks, and the data locations.
@@ -897,7 +899,7 @@ dimension profile. The closedness of $W_8(S)$ reduces, through the
 component formulas of the reduction, to $3220$ memberships at depth $7$
 (Appendix~\ref{app:lean} describes the certificate). The result is
 unconditional for these instances: $1\notin V_4(k)$ at every depth $k\ge8$.
-The lower bound itself needs no assumption on the ideal. By definition,
+The lower bound also applies to proper ideals. By definition,
 $\lfd>D$ as soon as one ideal element of degree at most $D$ lies outside
 $V_D$, and an element of the low box outside $S$ stays outside $W_k(S)$ at
 every depth. No single shifted generator $x_1^{e_1}x_2^{e_2}g$ of weight at
@@ -1474,9 +1476,9 @@ at most $7$ lies outside $V_7$, and
  \lfd\ge8\quad\text{at }k=6
 \]
 for this instance (exact; one instance, one engine). This is the first depth
-at which a three-summand value above $7$ is established on any instance,
-and it is the depth at which the two-summand degree-$4$ closure first falls
-behind. The exact value at $k=6$ would need the degree-$8$ closure
+at which our data establish a three-summand value above $7$. It is also
+the depth at which the two-summand degree-$4$ closure first falls behind
+the ideal. The exact value at $k=6$ would need the degree-$8$ closure
 ($|M_{\le8}|=106{,}762$ columns), which was not computed, and the only upper
 bound there is the kernel-checked $3k+1=19$.
 
@@ -1873,13 +1875,27 @@ function field in the proof has genus zero, so nothing here formalizes
 the genus-one bound that Theorem~\ref{thm:growth} needs for general
 targets, and that theorem stays a written proof, conditional in Lean. The
 integer $N_k$ is not computed, so the primes of (3) are not explicit and
-the statement is not claimed for every prime $p\equiv1\pmod{2^{k+1}}$, nor
-for one prime at all depths; (2) holds for every prime $p>2^{k+1}$. Since
+the statement is not claimed for one prime at all depths; it cannot hold
+for every prime $p\equiv1\pmod{2^{k+1}}$ (Remark~\ref{rem:fermatbad}). Item (2) holds for every prime
+$p>2^{k+1}$. Since
 $3t^2+a=9$, Theorem~\ref{thm:three} already gives $\lfd\ge4$ on these
 instances, and the lower bound of (1) and (3) exceeds it from $k=66$ on.
 As elsewhere in the development, no elliptic curve appears in Lean: the
 statements concern the explicit polynomial system with $a=6$, $b=-7$ and
 $t=1$ (Appendix~\ref{app:lean}).
+
+\begin{remark}[Bad admissible primes]\label{rem:fermatbad}
+Let $k\ge2$ and let $p$ be a prime factor of the Fermat number
+$2^{2^k}+1$. Then $2$ has order $2^{k+1}$ modulo $p$, so
+$p\equiv1\pmod{2^{k+1}}$, $p\ne3$ and $E_6$ is nonsingular over $\F_p$;
+and $4$ has order $2^k$. Setting $x_1=x_2=4$ and every chain variable to the
+corresponding power $4^{2^j}$ solves the chain equations, and there
+$(x_1-1)x_2-x_1-8=12-4-8=0$. So the system has a common zero over $\F_p$ and
+is not the unit ideal, at every depth $k\ge2$; the smallest case is $p=17$,
+$k=2$. Since $2^{2^k}+1$ has finitely many prime factors, this is consistent
+with (3). The argument is written and is not part of the kernel-checked
+development.
+\end{remark}
 
 \paragraph{Scope.} The range of the theorems ($k\ge24$) is beyond every
 computation here, so only its lemmas and the reduction were tested on data.
@@ -1982,9 +1998,10 @@ This is not proved.
  the curve-model hypothesis (scope in Section~\ref{sec:growth}).
  Brownawell--Masser and Voloch enter only through a self-contained proof,
  not checked against the original statements. The kernel-checked instance
- (Theorem~\ref{thm:growthfixed}) is one curve with a target of order two
- and a rational function field; over prime fields it holds along primes
- that are not explicit.
+ (Theorem~\ref{thm:growthfixed}), $y^2=x^3+6x-7$ with $t=1$, is one curve
+ with a target of order two and a rational function field; over prime
+ fields it holds along a sequence of primes that are not explicit, and not
+ for every admissible prime (Remark~\ref{rem:fermatbad}).
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
  is one instance and one engine, with no computation at $k\ge7$ and no
  prediction beyond $k=6$. The value $\deg g+1$ for four and five summands is
@@ -2011,10 +2028,10 @@ there, and every measured value is certified by exact arithmetic except the
 upper bound $\lfd\le7$ at $k=14$, which rests on the degree lift.
 
 \section{Future directions}\label{sec:future}
-The gap is between proved bounds of slope $1$ in $k$ and a measured prime
-profile of slope about $\tfrac14$. The items below are what closing it
-requires, in order of difficulty, followed by extensions of the
-computations.
+The proved upper bound grows with slope $1$ in $k$, while the measured
+prime profile suggests a slope near $\tfrac14$. Closing this gap requires
+a better account of how the closures grow. We describe the main obstacles
+below, followed by computations that could test the proposed explanations.
 \begin{enumerate}
 \item \emph{A genericity theorem.} For $k$ above a threshold, show that the
  row reduction of the degree-$D$ closure never pivots on a quantity that
@@ -2074,28 +2091,33 @@ computations.
 \end{enumerate}
 
 \section{Conclusion}\label{sec:conclusion}
-For the three presentation families of elliptic-curve index calculus with
-polynomial factor bases, the last fall degree is bounded above by the
-finite-quotient dimension bound $mk+1$, kernel-checked and unified across
-the families, and for two-summand prime chains on nonsingular curves by
-$k+2$, about half the dimension bound $2k+1$. Kernel-checked lower bounds hold at
-every depth. The certified two-summand prime values, $4$, $5$ and $6$
-through depth $13$ on the generic instances computed and $7$ at depth $14$
-(lower bound certified, upper bound by an uncertified degree lift),
-reproduce at the level of exact LFD the corrected degree-of-regularity
-breakpoints of Petit, Kosters and Messeng through their last depth $11$ and
-continue them to depth $14$; their unreduced presentation has the same LFD
-at these values. A written proof shows that the LFD is unbounded
-in the depth with slope at least $1/14$, and the kernel checks this for one
-curve with a target of order two; the data suggest slope $1/4$ and
-the conjectured law $\lfd(k)=\lfloor(k+14)/4\rfloor$; none of the six
-predictions recorded in advance for the two-summand prime law has failed,
-whereas preregistered laws for binary curves were refuted. With three to
-eight summands the picture is different: at depth $k\le m-1$ the bound
-$mk+1$ is attained on $409$ of $412$ instances, because the generator has
-the full degree $mk$, and at $m=4$, $k=4$, where it has not, the value is
-$13$, below the bound $17$. A tight upper bound is not proved;
-Section~\ref{sec:future} lists what it needs.
+We prove upper and lower bounds for the last fall degree of the three
+families of summation systems studied here. Lean checks the common
+finite-quotient bound $mk+1$ and, for two-summand prime chains on
+nonsingular curves, the sharper bound $k+2$. The latter is about half the
+dimension bound $2k+1$. The formal development also gives lower bounds
+that hold at every depth under the stated hypotheses.
+
+On the generic two-summand prime instances computed, the certified values
+are $4$, $5$ and $6$ through depth $13$. At depth $14$ the lower bound $7$
+is certified, while the matching upper bound rests on the degree lift
+without a final certificate. These values reproduce the corrected
+degree-of-regularity breakpoints of Petit, Kosters and Messeng through
+their last depth $11$ and extend the profile to depth $14$; their unreduced
+presentation has the same LFD at these values.
+
+The written growth proof establishes a lower slope of $1/14$, and the
+kernel checks it for one curve with a target of order two. The data
+suggest the larger slope $1/4$ and the law
+$\lfd(k)=\lfloor(k+14)/4\rfloor$. None of the six predictions recorded in
+advance for this prime-field law has failed on the values computed;
+preregistered laws for binary systems have been refuted. With three to
+eight summands at depth $k\le m-1$, the generator has full degree $mk$ on
+$409$ of $412$ instances, and the bounds force $\lfd=mk+1$ there. At
+$m=4$, $k=4$, the generator has smaller degree and the measured value is
+$13$, below the bound $17$. A tight upper bound for the two-summand profile
+remains open. Section~\ref{sec:future} describes the steps needed to
+address it.
 
 \appendix
 \small
