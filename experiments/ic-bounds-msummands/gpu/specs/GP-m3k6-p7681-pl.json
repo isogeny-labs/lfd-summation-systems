@@ -1,0 +1,38 @@
+{
+ "spec": {
+  "family": "prime",
+  "m": 3,
+  "k": 6,
+  "p": 7681,
+  "planted": true,
+  "seed": 11,
+  "Ds": [
+   8
+  ],
+  "note": "beyond the recorded D = 7 closure at k = 6 (V_7 fell behind, LFD >= 8)",
+  "name": "GP-m3k6-p7681-pl"
+ },
+ "build": {
+  "name": "GP-m3k6-p7681-pl",
+  "m": 3,
+  "k": 6,
+  "p": 7681,
+  "Ds": [
+   8
+  ],
+  "note": "beyond the recorded D = 7 closure at k = 6 (V_7 fell behind, LFD >= 8)",
+  "built": false,
+  "solutions": null,
+  "cost_by_D": [
+   {
+    "D": 8,
+    "columns": 106762,
+    "madds": 3650659749728184.0,
+    "seconds_model": 365.1,
+    "seconds_pessimistic": 1460.3,
+    "stored_peak_gb_float32": 10.62,
+    "stored_peak_gb_uint16": 5.31
+   }
+  ]
+ }
+}

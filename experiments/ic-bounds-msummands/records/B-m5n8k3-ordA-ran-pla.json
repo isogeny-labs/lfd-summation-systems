@@ -1,0 +1,138 @@
+{
+ "case": "B-m5n8k3-ordA-ran-pla",
+ "family": "binary",
+ "m": 5,
+ "n": 8,
+ "k": 3,
+ "variables": 15,
+ "curve": "ordA",
+ "a": 86,
+ "b": 16,
+ "basis": [
+  167,
+  118,
+  9
+ ],
+ "target": [
+  121,
+  58
+ ],
+ "target_class": "planted",
+ "base_kind": "random",
+ "frobenius_invariant": false,
+ "input_degree": 15,
+ "equations": 8,
+ "const_equation": false,
+ "system_hash": "19f1e964b12fd63620ccc6cd2f4198c7a8a13a9acb0ce87156b91f66a480c4f0",
+ "instance_hash": "380d0e8387c1ccf2590f2dad370d91c8c1135dd9db1c315c69525366dc81130c",
+ "points_sha256": "ba379dd4cc1965d9e0da901ec739fb1d5f4c109fac9d01224ff42ebd092eba48",
+ "solutions": 215,
+ "ideal_class": "proper",
+ "status": "exact-proper-local",
+ "exact_lfd": 15,
+ "strict_falls": [
+  14,
+  15
+ ],
+ "certificate_degree": 15,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  28752,
+  32553
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 16
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 14,
+   "codimension": 121
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 80,
+   "codimension": 576
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 187,
+   "codimension": 1941
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 215,
+   "codimension": 4944
+  },
+  {
+   "degree": 6,
+   "evaluation_rank": 215,
+   "codimension": 9949
+  },
+  {
+   "degree": 7,
+   "evaluation_rank": 215,
+   "codimension": 16384
+  },
+  {
+   "degree": 8,
+   "evaluation_rank": 215,
+   "codimension": 22819
+  },
+  {
+   "degree": 9,
+   "evaluation_rank": 215,
+   "codimension": 27824
+  },
+  {
+   "degree": 10,
+   "evaluation_rank": 215,
+   "codimension": 30827
+  },
+  {
+   "degree": 11,
+   "evaluation_rank": 215,
+   "codimension": 32192
+  },
+  {
+   "degree": 12,
+   "evaluation_rank": 215,
+   "codimension": 32647
+  },
+  {
+   "degree": 13,
+   "evaluation_rank": 215,
+   "codimension": 32751
+  },
+  {
+   "degree": 14,
+   "evaluation_rank": 215,
+   "codimension": 4015
+  },
+  {
+   "degree": 15,
+   "evaluation_rank": 215,
+   "codimension": 215
+  }
+ ],
+ "kernel_upper_bound": 16,
+ "cap_reason": null,
+ "engine": "csd.ic_bounds_bin_big.local_profile_bin(cpu)",
+ "seconds": 951.52,
+ "max_rss_gb": 1.88
+}

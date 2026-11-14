@@ -1,0 +1,49 @@
+{
+ "spec": {
+  "family": "prime",
+  "m": 3,
+  "k": 7,
+  "p": 7681,
+  "planted": false,
+  "seed": 10,
+  "Ds": [
+   7,
+   8
+  ],
+  "note": "k = 7",
+  "name": "GP-m3k7-p7681-r"
+ },
+ "build": {
+  "name": "GP-m3k7-p7681-r",
+  "m": 3,
+  "k": 7,
+  "p": 7681,
+  "Ds": [
+   7,
+   8
+  ],
+  "note": "k = 7",
+  "built": false,
+  "solutions": null,
+  "cost_by_D": [
+   {
+    "D": 7,
+    "columns": 198440,
+    "madds": 2.7349897272544e+16,
+    "seconds_model": 2735.0,
+    "seconds_pessimistic": 10940.0,
+    "stored_peak_gb_float32": 36.67,
+    "stored_peak_gb_uint16": 18.34
+   },
+   {
+    "D": 8,
+    "columns": 401930,
+    "madds": 2.272580697416995e+17,
+    "seconds_model": 22725.8,
+    "seconds_pessimistic": 90903.2,
+    "stored_peak_gb_float32": 150.45,
+    "stored_peak_gb_uint16": 75.23
+   }
+  ]
+ }
+}

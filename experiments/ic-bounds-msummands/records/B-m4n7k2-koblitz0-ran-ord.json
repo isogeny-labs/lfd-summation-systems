@@ -1,0 +1,54 @@
+{
+ "case": "B-m4n7k2-koblitz0-ran-ord",
+ "family": "binary",
+ "m": 4,
+ "n": 7,
+ "k": 2,
+ "variables": 8,
+ "curve": "koblitz0",
+ "a": 0,
+ "b": 1,
+ "basis": [
+  95,
+  61
+ ],
+ "target": [
+  0,
+  1
+ ],
+ "target_class": "order-two",
+ "base_kind": "random",
+ "frobenius_invariant": false,
+ "input_degree": 8,
+ "equations": 7,
+ "const_equation": false,
+ "system_hash": "52a7bd79965646badf0111e3daf09bf86025cc03dae54366f3be0a990a657a75",
+ "instance_hash": "40b95297f95cbc30a0478ecbd12fe4b803a571c4ed54b8c743c37fbbeac50bb4",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "status": "exact-unit",
+ "exact_lfd": 8,
+ "strict_falls": [
+  7,
+  8
+ ],
+ "certificate_degree": 8,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  171,
+  256
+ ],
+ "local_checks": [],
+ "kernel_upper_bound": 9,
+ "cap_reason": null,
+ "engine": "csd.ic_local_certificate.local_profile",
+ "seconds": 0.07,
+ "max_rss_gb": 1.24
+}

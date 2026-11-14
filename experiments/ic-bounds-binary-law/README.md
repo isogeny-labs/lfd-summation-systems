@@ -4,7 +4,7 @@ Status 2026-11-10. Systems: Weil descent of `S_3(x1, x2, x_R)` with `x1, x2` in 
 space `V` of dimension `k` in `F_(2^n)`, Boolean ring (field equations), exact ordinary LFD. The data
 are the existing certified values (`experiments/ic-curve-sweep`, k = 2..7; `experiments/ic-bounds-binary`,
 k = 8..10), deduplicated to **2277 distinct proper-subspace systems** (`k < n`), plus the full-field inverse
-family (`experiments/ic-binary-inverse`, k = n = 1..12), plus **80 new preregistered cases (60 distinct
+family (`experiments/ic-binary-inverse`, k = n = 1..12), plus **80 new preregistered cases (75 distinct
 systems, all certified)** and 4 subfield checks. No cost or speed claim is made.
 
 Labels: **proof** (written out here), **exact** (certified computation named), **empirical** (a pattern
@@ -177,3 +177,12 @@ The local criterion in Lean (`LocalReductionBound.lfd_bound_of_local`): LFD ≤ 
 `score.py` → `score.json` · `subfield_check.py` → `subfield-check.jsonl` · `bilinear_model.py` →
 `bilinear-pilot.jsonl` · `plot.py` → `lfd_vs_kplus_e.{svg,png}`.
 All runs with `ulimit -v 1500000`, one thread; peak 446 MB (P1, `D* = 5`, 66–95 s per system); no lock used.
+
+
+## Follow-up at k = 11 to 16 (2026-11-12)
+
+The post-hoc law above and laws A, B (with one more threshold at k + e = 19) and A_Z were frozen again and tested on
+57 new systems at k = 10 to 16: `experiments/ic-bounds-binary-deep/RESULTS.md`. None holds on all cells. B fails at
+k + e = 19, 20 (value 4, 24 systems); the post-hoc law, A and A_Z fail at (n, k) = (18, 13) (value 5, 3 systems); all
+four fail on trace-zero hyperplanes at k = 12, 13 (value 6, 4 systems); A fails at n = 2k - 1 (value 4, 11 systems).
+The scaled-subfield value k/2 + 1 holds at k = 10 and 12. The post-hoc law is therefore refuted as stated.

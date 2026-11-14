@@ -1,0 +1,2704 @@
+[
+ {
+  "source": "ic-curve-sweep",
+  "n": 5,
+  "k": 4,
+  "modulus": 37,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   17,
+   9,
+   5,
+   3
+  ],
+  "target": [
+   10,
+   18
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "7ffa0458131816f3ef653fe5c76158a0a763c4a585d0acacaf257fb2da715378",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    12,
+    88
+   ],
+   "Z": 5,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v00"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 11,
+  "k": 4,
+  "modulus": 2053,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   1145,
+   562,
+   333,
+   169
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "9dda5fccef50b0a472f43a63301ca0020538fe3d730fb5b9c259a4a8e82fc38a",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    10,
+    93
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v01"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 4,
+  "modulus": 4105,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   2304,
+   1327,
+   609,
+   187
+  ],
+  "target": [
+   3077,
+   998
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "4b66bbde2c2c72f2a580d51397c00801d80535a8243f4c7e3fc0a14ca5ff0e18",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    37
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v02"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 4,
+  "modulus": 1033,
+  "a": 608,
+  "b": 870,
+  "basis": [
+   569,
+   287,
+   154,
+   111
+  ],
+  "target": [
+   956,
+   691
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "d9afe2d95344e17811ad47e5d3148192c2cd98d9a06f5d02e2081e70fb349398",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    1,
+    37
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v03"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 4,
+  "modulus": 283,
+  "a": 241,
+  "b": 189,
+  "basis": [
+   146,
+   87,
+   32,
+   9
+  ],
+  "target": [
+   28,
+   108
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "682608cc4ea274e463d6be0d81fa70663143820a196faa5f9f7d0bf093ec08f8",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    15,
+    91
+   ],
+   "Z": 2,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v04"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 4,
+  "modulus": 4105,
+  "a": 3389,
+  "b": 1671,
+  "basis": [
+   2423,
+   1104,
+   575,
+   254
+  ],
+  "target": [
+   0,
+   2827
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "f7ab18aed0dfa060b7e45a1b56d7401050cf00b6605317d9d2303392f4a176e3",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    37
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v05"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 4,
+  "modulus": 283,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   176,
+   80,
+   12,
+   1
+  ],
+  "target": [
+   173,
+   145
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": true,
+  "system_hash": "884e53e5e47d0fa7057a5b4e873b37dd2ce0a8cd06b621c7b0265c20eb1cc38b",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    25,
+    89
+   ],
+   "Z": 4,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v06"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 4,
+  "modulus": 4105,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   2304,
+   1024,
+   130,
+   32
+  ],
+  "target": [
+   1254,
+   3690
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "321378aa31650017de7781a09ae1d5a1acdcbb29369ebf64f5c0db13db0040cc",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    37
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v07"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 7,
+  "k": 4,
+  "modulus": 131,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   76,
+   46,
+   30,
+   1
+  ],
+  "target": [
+   22,
+   126
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "aeba005b3bf792b4bb10b8ba045712cbaea62632e4508486a4dd556bdee90607",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    20,
+    93
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v08"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 6,
+  "k": 4,
+  "modulus": 67,
+  "a": 15,
+  "b": 28,
+  "basis": [
+   34,
+   22,
+   14,
+   1
+  ],
+  "target": [
+   60,
+   6
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "3608df682520cc2b42830b13f662c78fd4e6ccd47197818ad50f6e2e8c3f63ee",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    13,
+    93
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v09"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 5,
+  "k": 4,
+  "modulus": 37,
+  "a": 8,
+  "b": 18,
+  "basis": [
+   16,
+   9,
+   4,
+   2
+  ],
+  "target": [
+   22,
+   11
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "179b51e9cb9ec74d8129289584ac1eba3e56fe02a53b207f1f845796a567d542",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    37
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v10"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 6,
+  "k": 4,
+  "modulus": 67,
+  "a": 8,
+  "b": 3,
+  "basis": [
+   17,
+   8,
+   5,
+   3
+  ],
+  "target": [
+   28,
+   16
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "f500797754f7969b56448fe31164fe3badaf840cfaaf0de514cdb3f3f46e4980",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    5,
+    87
+   ],
+   "Z": 6,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v11"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 6,
+  "k": 5,
+  "modulus": 67,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   33,
+   17,
+   8,
+   5,
+   3
+  ],
+  "target": [
+   42,
+   40
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "80151f01b44c6f4e385b3dec319f63af441855ad1fa91d55197b0a63a2f613b5",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    15,
+    123,
+    366
+   ],
+   "Z": 20,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v12"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 5,
+  "modulus": 4105,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   2594,
+   1030,
+   262,
+   151,
+   80
+  ],
+  "target": [
+   3032,
+   4065
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "c5f6226cb67217e58994a383d6ac9fe5b179cca9a1a020e92d95261365ea37d7",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    21,
+    176
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v13"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 5,
+  "modulus": 1033,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   524,
+   265,
+   145,
+   71,
+   54
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "c88258ba78a9a1a7fcaca38b0d8286ade50dd6686da2280bc9480b297ce8d810",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    10,
+    174
+   ],
+   "Z": 2,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v14"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 5,
+  "modulus": 4105,
+  "a": 2785,
+  "b": 3234,
+  "basis": [
+   2053,
+   1033,
+   618,
+   173,
+   18
+  ],
+  "target": [
+   2031,
+   213
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "398a163d3dff143e71c6658fa512c7faab2bae76afb5c417c2ae77416e00feed",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    21,
+    176
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v15"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 5,
+  "modulus": 283,
+  "a": 241,
+  "b": 189,
+  "basis": [
+   161,
+   96,
+   16,
+   9,
+   2
+  ],
+  "target": [
+   75,
+   51
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "c898efec8099834a5bcb0aaaa82064ebfb6b90d5dd0cc99601987aedbc1c4b49",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    17,
+    170
+   ],
+   "Z": 6,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v16"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 6,
+  "k": 5,
+  "modulus": 67,
+  "a": 8,
+  "b": 3,
+  "basis": [
+   33,
+   17,
+   8,
+   5,
+   3
+  ],
+  "target": [
+   0,
+   8
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "22ecff5f85e4a482dc6529a97445b693f656b453eded95774ce0cdab67fb3822",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    6,
+    163
+   ],
+   "Z": 13,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v17"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 5,
+  "modulus": 4105,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   2434,
+   1186,
+   64,
+   8,
+   1
+  ],
+  "target": [
+   1116,
+   2571
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "5917fd95bfb536a9921af72c6b0ff807daab8139bb712c8f8fa52ddafb0edc05",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    20,
+    176
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v18"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 5,
+  "modulus": 1033,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   566,
+   308,
+   84,
+   14,
+   1
+  ],
+  "target": [
+   211,
+   860
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": true,
+  "system_hash": "09014b53f74140a9461ebf3b431ef5737cb736da920cd53db9de02bef9bbbded",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    56
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v19"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 5,
+  "modulus": 4105,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   2434,
+   1186,
+   64,
+   8,
+   1
+  ],
+  "target": [
+   1291,
+   908
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "a5458078af0eca9b7460936f59f3f95f9e54c53fc97885d54001c63afac18e8b",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    19,
+    172
+   ],
+   "Z": 4,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v20"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 5,
+  "modulus": 283,
+  "a": 74,
+  "b": 233,
+  "basis": [
+   162,
+   66,
+   18,
+   12,
+   1
+  ],
+  "target": [
+   0,
+   178
+  ],
+  "target_class": "order-two",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "a440b2fbf42e7a08d650ae1ff8b551333b04814f601eb2dc08fa37a160810907",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    8,
+    174
+   ],
+   "Z": 2,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v21"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 6,
+  "k": 5,
+  "modulus": 67,
+  "a": 8,
+  "b": 3,
+  "basis": [
+   16,
+   8,
+   4,
+   2,
+   1
+  ],
+  "target": [
+   15,
+   5
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "8682f1ecb594670bbba7e7c7a652d7fa2883512353cfdb64841589b21389205d",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    5,
+    75,
+    360
+   ],
+   "Z": 26,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v22"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 5,
+  "modulus": 1033,
+  "a": 414,
+  "b": 564,
+  "basis": [
+   566,
+   308,
+   84,
+   14,
+   1
+  ],
+  "target": [
+   19,
+   922
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": true,
+  "system_hash": "bb12560cdc5223376a5e20b3e84761c0941a2adcf2f78e38e10436e1275ec288",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    1,
+    56
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v23"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 6,
+  "modulus": 1033,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   525,
+   267,
+   141,
+   77,
+   38,
+   24
+  ],
+  "target": [
+   154,
+   134
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "2a5126dba54c057dda295e4bde1889e0735095c79cd3ff184c7228b0f352baec",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    21,
+    293
+   ],
+   "Z": 6,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v24"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 11,
+  "k": 6,
+  "modulus": 2053,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   1104,
+   594,
+   321,
+   196,
+   33,
+   14
+  ],
+  "target": [
+   1197,
+   166
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "5ee0d9d11ba3f33cb3bbe25460d4c461aef4e029c3401637ff2ee0f5426ea50a",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    22,
+    299
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v25"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 7,
+  "k": 6,
+  "modulus": 131,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   65,
+   33,
+   17,
+   8,
+   5,
+   2
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "0898244a2d55639c7f81e3e21dc81abd5c0c6595a04b57f08d8c45a44ef4ae17",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    7,
+    267
+   ],
+   "Z": 32,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v26"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 11,
+  "k": 6,
+  "modulus": 2053,
+  "a": 1369,
+  "b": 448,
+  "basis": [
+   1035,
+   517,
+   262,
+   134,
+   37,
+   20
+  ],
+  "target": [
+   1125,
+   285
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "c147cbf02f603b26927ab87363f1d754697b92c14d60d62e0501c78f2c99885f",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    22,
+    297
+   ],
+   "Z": 2,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v27"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 6,
+  "modulus": 1033,
+  "a": 608,
+  "b": 870,
+  "basis": [
+   525,
+   267,
+   141,
+   77,
+   38,
+   24
+  ],
+  "target": [
+   0,
+   836
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "b0f51f7fda9e461cbf2a3156dbbdae8dcc1df7724644c8d42858bb4bed78db80",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    10,
+    293
+   ],
+   "Z": 6,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v28"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 6,
+  "modulus": 4105,
+  "a": 2785,
+  "b": 3234,
+  "basis": [
+   2073,
+   1052,
+   560,
+   282,
+   138,
+   77
+  ],
+  "target": [
+   0,
+   3474
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "ad61e75ad5e3d9a378a4861b3bd7a6e0e69a96680a8a9d43ca120e7a996e210a",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    12,
+    299
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v29"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 6,
+  "modulus": 1033,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   566,
+   308,
+   182,
+   84,
+   14,
+   1
+  ],
+  "target": [
+   780,
+   914
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "5a07d818e2dc7a20e134c0f68514156f29ce718bf8212802e80946f91928f851",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    21,
+    212,
+    746
+   ],
+   "Z": 48,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v30"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 6,
+  "modulus": 515,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   258,
+   134,
+   70,
+   36,
+   22,
+   12
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "655467814f17d92a4c72651f3bb7135026205ac58275b949da17b1f64b777cd7",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    9,
+    299
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v31"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 6,
+  "modulus": 4105,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   2304,
+   1024,
+   130,
+   72,
+   32,
+   1
+  ],
+  "target": [
+   2896,
+   2691
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": true,
+  "system_hash": "1e8ee72f7455bddfce29bd757728e7b250970ba2718f1d621565896404988e9a",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    79
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v32"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 6,
+  "modulus": 283,
+  "a": 74,
+  "b": 233,
+  "basis": [
+   162,
+   66,
+   18,
+   10,
+   6,
+   1
+  ],
+  "target": [
+   9,
+   149
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "1451d86e7205ea0c129dd978c241a14331f26185b86ec757c46a52845d5de6cc",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    7,
+    139,
+    767
+   ],
+   "Z": 27,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v33"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 6,
+  "modulus": 4105,
+  "a": 3389,
+  "b": 1671,
+  "basis": [
+   2304,
+   1024,
+   130,
+   72,
+   32,
+   1
+  ],
+  "target": [
+   1322,
+   3521
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": true,
+  "system_hash": "aebb7949582e8a14f6130fae6bafec9c6bd2ebd716adba194375bf0e49ad590b",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    1,
+    56,
+    299
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v34"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 6,
+  "modulus": 515,
+  "a": 309,
+  "b": 480,
+  "basis": [
+   258,
+   134,
+   70,
+   36,
+   22,
+   12
+  ],
+  "target": [
+   0,
+   384
+  ],
+  "target_class": "order-two",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "9609bb75148c4d55532c6f5d259312772f2d56ca0f0775cebb2a746ecee32e40",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    9,
+    285
+   ],
+   "Z": 14,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v35"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 6,
+  "modulus": 515,
+  "a": 309,
+  "b": 480,
+  "basis": [
+   258,
+   134,
+   70,
+   36,
+   22,
+   12
+  ],
+  "target": [
+   412,
+   271
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "3eba63be7ac44c98645a903506095e8282cd9bb21925473147a6fecbe2717464",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    79
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v36"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 10,
+  "k": 7,
+  "modulus": 1033,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   549,
+   288,
+   132,
+   100,
+   21,
+   12,
+   3
+  ],
+  "target": [
+   576,
+   199
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "59195bcafc58457f9a10a39bfc15c062131a86f0d031f3c5dbac6210839d62a0",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    23,
+    309,
+    1455
+   ],
+   "Z": 16,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v37"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 7,
+  "modulus": 515,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   273,
+   129,
+   81,
+   48,
+   8,
+   4,
+   3
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "cc8321d63843543e5b55c2975aa80d01819168e3e938c8125d51de4bbab332e0",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    9,
+    436
+   ],
+   "Z": 34,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v38"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 7,
+  "modulus": 283,
+  "a": 74,
+  "b": 233,
+  "basis": [
+   129,
+   65,
+   33,
+   17,
+   8,
+   5,
+   2
+  ],
+  "target": [
+   0,
+   178
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "ff68c4e04f504f93581c00bbb6cc1cf441b548084ae3982007d2f3ee56f703c7",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    8,
+    392,
+    1402
+   ],
+   "Z": 69,
+   "cert": 4
+  },
+  "label": "order-two",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v39"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 7,
+  "modulus": 283,
+  "a": 241,
+  "b": 189,
+  "basis": [
+   128,
+   65,
+   33,
+   16,
+   8,
+   4,
+   2
+  ],
+  "target": [
+   146,
+   197
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "09b8e8387369e05d1231db50cc2a71797a2ae7b8c8f2ada1dff3cdc16b9b8f56",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    21,
+    229,
+    1409
+   ],
+   "Z": 62,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v40"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 7,
+  "modulus": 4105,
+  "a": 3389,
+  "b": 1671,
+  "basis": [
+   2075,
+   1025,
+   539,
+   262,
+   143,
+   81,
+   42
+  ],
+  "target": [
+   285,
+   4044
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "binary",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "e097057847faec01267a7e144ba60f1a82c265b1948d1e16d0031a6f85ba0b8c",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    25,
+    389,
+    1471
+   ],
+   "Z": 0,
+   "cert": 4
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "binary",
+  "name": "v41"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 7,
+  "modulus": 515,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   258,
+   134,
+   70,
+   36,
+   22,
+   12,
+   1
+  ],
+  "target": [
+   270,
+   227
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "207b2877282bfea0a25f18d1d7643b79957a9c5ef16c8caa5f209b1980d226de",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    22,
+    269,
+    1415
+   ],
+   "Z": 56,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v42"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 12,
+  "k": 7,
+  "modulus": 4105,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   2304,
+   1024,
+   130,
+   64,
+   32,
+   8,
+   1
+  ],
+  "target": [
+   3721,
+   3924
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "a17698ef152db96c2c15bd990c240c08b5d9fd0b157c103552d36336efe7dc0b",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    106
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v43"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 7,
+  "modulus": 515,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   258,
+   134,
+   70,
+   36,
+   22,
+   12,
+   1
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "ddbb1f9b3fa70e0453e21080d2703d13c19069886a60fa31bd9767038b7b44ec",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    9,
+    451
+   ],
+   "Z": 19,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v44"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 7,
+  "modulus": 515,
+  "a": 309,
+  "b": 480,
+  "basis": [
+   258,
+   134,
+   70,
+   36,
+   22,
+   12,
+   1
+  ],
+  "target": [
+   324,
+   413
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "768cb3fd784ad6d1c82f0c05ce7f06df2226a169daed01524de7016a3cc50088",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    22,
+    269,
+    1451
+   ],
+   "Z": 20,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v45"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 9,
+  "k": 7,
+  "modulus": 515,
+  "a": 309,
+  "b": 480,
+  "basis": [
+   258,
+   134,
+   70,
+   36,
+   22,
+   12,
+   1
+  ],
+  "target": [
+   0,
+   384
+  ],
+  "target_class": "order-two",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "37ef9be5ba746434450df1260f51def1b288c359cb35a6a8e577b751273a4013",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    9,
+    434
+   ],
+   "Z": 36,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v46"
+ },
+ {
+  "source": "ic-curve-sweep",
+  "n": 8,
+  "k": 7,
+  "modulus": 283,
+  "a": 241,
+  "b": 189,
+  "basis": [
+   160,
+   64,
+   16,
+   8,
+   4,
+   2,
+   1
+  ],
+  "target": [
+   222,
+   30
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "binary",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "9086b9b7224ba2f9d5e5a37101837e58d90480695fbeb54c7f6b288cca7e177c",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    106
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "binary",
+  "name": "v47"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 13,
+  "k": 8,
+  "modulus": 8219,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   4110,
+   2051,
+   1025,
+   545,
+   300,
+   166,
+   99,
+   31
+  ],
+  "target": [
+   8010,
+   8150
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "5c139cf3bff4c910cfb1317049c1f27bc968c4451df3af54d8a0d5dc6df63d9c",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    28,
+    478,
+    2511
+   ],
+   "Z": 6,
+   "cert": 4
+  },
+  "label": "affine",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v48"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 12,
+  "k": 8,
+  "modulus": 4105,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   2055,
+   1042,
+   528,
+   258,
+   135,
+   66,
+   50,
+   9
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "85b22c0c2299caf3a31874fe002f2530ddb5443b009b48309b3259387f91740e",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    12,
+    677
+   ],
+   "Z": 20,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v49"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 14,
+  "k": 8,
+  "modulus": 16417,
+  "a": 0,
+  "b": 1,
+  "basis": [
+   8196,
+   4376,
+   2066,
+   1340,
+   520,
+   186,
+   88,
+   1
+  ],
+  "target": [
+   0,
+   1
+  ],
+  "target_class": "order-two",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "e58b2d7e65048aab5b264d4d7ccdcb2c6b51d6f58c65e057104d90b03ef04fc5",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    14,
+    694
+   ],
+   "Z": 3,
+   "cert": 3
+  },
+  "label": "order-two",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v50"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 14,
+  "k": 8,
+  "modulus": 16417,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   8352,
+   4288,
+   2246,
+   1186,
+   614,
+   330,
+   30,
+   1
+  ],
+  "target": [
+   67,
+   6307
+  ],
+  "target_class": "planted-rational-decomposition",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "koblitz",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "bfbeadffe17622351bae48ff2783e92448326483af558154907306252e07ca0c",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "falls": [
+    2,
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    29,
+    693
+   ],
+   "Z": 4,
+   "cert": 3
+  },
+  "label": "affine",
+  "bk": "frobenius-invariant",
+  "cc": "koblitz",
+  "name": "v51"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 12,
+  "k": 8,
+  "modulus": 4105,
+  "a": 980,
+  "b": 3215,
+  "basis": [
+   2048,
+   1024,
+   256,
+   128,
+   32,
+   16,
+   4,
+   2
+  ],
+  "target": [
+   1356,
+   1916
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "ordinary-random",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "87b9775d0ffd7c0e9c20b2fd888f7905ef338da1148c829c4c3ab9388942ed4b",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    137
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "const",
+  "bk": "frobenius-invariant",
+  "cc": "ordinary-random",
+  "name": "v52"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 14,
+  "k": 8,
+  "modulus": 16417,
+  "a": 8991,
+  "b": 12131,
+  "basis": [
+   8195,
+   4134,
+   2111,
+   1044,
+   537,
+   296,
+   142,
+   117
+  ],
+  "target": [
+   0,
+   7820
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "ordinary-random",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "09880918cef030fa64d8c3a2a0bbff75d2e265bc3c6850b080a97f54db9347fc",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 3,
+   "falls": [
+    3
+   ],
+   "dims": [
+    0,
+    0,
+    14,
+    697
+   ],
+   "Z": 0,
+   "cert": 3
+  },
+  "label": "unit",
+  "bk": "random-subspace",
+  "cc": "ordinary-random",
+  "name": "v53"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 14,
+  "k": 9,
+  "modulus": 16417,
+  "a": 8991,
+  "b": 12131,
+  "basis": [
+   8200,
+   4098,
+   2053,
+   1035,
+   263,
+   143,
+   77,
+   39,
+   30
+  ],
+  "target": [
+   12555,
+   2974
+  ],
+  "target_class": "random-rational",
+  "base_kind": "frobenius-invariant",
+  "curve_class": "ordinary-random",
+  "frobenius_invariant": true,
+  "subfield": false,
+  "system_hash": "8b2eff8a6d318eb477285f23d72ef285373ecc7b14b7beaecf00f9c6ccce5d7e",
+  "ref": {
+   "status": "exact-unit",
+   "lfd": 2,
+   "falls": [
+    2
+   ],
+   "dims": [
+    0,
+    0,
+    172
+   ],
+   "Z": 0,
+   "cert": 2
+  },
+  "label": "n/a",
+  "bk": "frobenius-invariant",
+  "cc": "ordinary-random",
+  "name": "v54"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 11,
+  "k": 9,
+  "modulus": 2053,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   1024,
+   512,
+   257,
+   128,
+   66,
+   35,
+   16,
+   10,
+   6
+  ],
+  "target": [
+   44,
+   1270
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "6cabcb68155079134e1988b72a69d3c4121b29ad35bf60abe73a0433a3a4e45d",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    28,
+    419,
+    3952
+   ],
+   "Z": 96,
+   "cert": 4
+  },
+  "label": "n/a",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v55"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 12,
+  "k": 9,
+  "modulus": 4105,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   2056,
+   1025,
+   514,
+   267,
+   139,
+   73,
+   32,
+   16,
+   4
+  ],
+  "target": [
+   3051,
+   3068
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "8a01f6d86ac9bec25b0c13640df02819726e3f1e38effae80150e8dcf19a3046",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    29,
+    471,
+    3986
+   ],
+   "Z": 62,
+   "cert": 4
+  },
+  "label": "n/a",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v56"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 12,
+  "k": 10,
+  "modulus": 4105,
+  "a": 980,
+  "b": 3215,
+  "basis": [
+   2049,
+   1025,
+   513,
+   259,
+   129,
+   67,
+   35,
+   19,
+   8,
+   4
+  ],
+  "target": [
+   0,
+   3410
+  ],
+  "target_class": "order-two",
+  "base_kind": "random-subspace",
+  "curve_class": "ordinary-random",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "7c29fe365c8ce12f831659546e51a36b0f1a0356cc1d35fd595d7d44cbe8e22f",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    12,
+    948,
+    5933
+   ],
+   "Z": 263,
+   "cert": 4
+  },
+  "label": "n/a",
+  "bk": "random-subspace",
+  "cc": "ordinary-random",
+  "name": "v57"
+ },
+ {
+  "source": "ic-bounds-binary",
+  "n": 14,
+  "k": 10,
+  "modulus": 16417,
+  "a": 1,
+  "b": 1,
+  "basis": [
+   8196,
+   4096,
+   2051,
+   1031,
+   525,
+   271,
+   133,
+   73,
+   32,
+   16
+  ],
+  "target": [
+   12923,
+   12712
+  ],
+  "target_class": "random-rational",
+  "base_kind": "random-subspace",
+  "curve_class": "koblitz",
+  "frobenius_invariant": false,
+  "subfield": false,
+  "system_hash": "15b5e4e0c2682c4527bb052d2ca185c006a787bcaea76466a9f30c92bb2c2fbe",
+  "ref": {
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "dims": [
+    0,
+    0,
+    33,
+    622,
+    6132
+   ],
+   "Z": 64,
+   "cert": 4
+  },
+  "label": "n/a",
+  "bk": "random-subspace",
+  "cc": "koblitz",
+  "name": "v58"
+ }
+]

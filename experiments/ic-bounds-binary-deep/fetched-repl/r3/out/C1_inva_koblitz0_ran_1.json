@@ -1,0 +1,109 @@
+{
+ "name": "C1_inva_koblitz0_ran_1",
+ "system_hash": "9daf95e6374c53daad89f9d84ffa399df6677fec1db687c16fced6fcdf909216",
+ "n": 14,
+ "k": 11,
+ "n_points": 335,
+ "points_sha256": "9bec7223746982543a78713563508c1321a2c6a522f93b1f96ebe4a7e051b68a",
+ "cls": "affine",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "device": "cpu",
+ "status": "exact-proper-local",
+ "exact_lfd": 4,
+ "certificate_degree": 4,
+ "strict_falls": [
+  2,
+  3,
+  4
+ ],
+ "quotient_ranks": [
+  0,
+  0,
+  35,
+  665,
+  8774
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 23
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 22,
+   "codimension": 219
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 212,
+   "codimension": 1129
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 335,
+   "codimension": 335
+  }
+ ],
+ "profiles": [
+  [
+   0
+  ],
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   35
+  ],
+  [
+   0,
+   1,
+   42,
+   665
+  ],
+  [
+   0,
+   1,
+   42,
+   1459,
+   8774
+  ]
+ ],
+ "rref_sha256": [
+  "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+  "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+  "918f5bc705dbf88cf1b6ca6c90da19e2748767c390ce0fbe899c69703750c6ef",
+  "6d2860971085aac45363a8056b52a67e257943ef15174ec03465e9b382d98584",
+  "c335b22ea15969477c9446e4755ed53145418bf465126c82522c1a65aa0a76ae"
+ ],
+ "columns": [
+  1,
+  23,
+  254,
+  1794,
+  9109
+ ],
+ "per_degree_seconds": [
+  0.0,
+  0.0,
+  0.018,
+  0.208,
+  12.638
+ ],
+ "per_degree_flops": [
+  0.0,
+  0.0,
+  321792.0,
+  612247168.0,
+  378243358592.0
+ ],
+ "closed_all": true,
+ "repairs": 0,
+ "seconds": 12.92,
+ "peak_rss_mb": 391,
+ "device_peak_bytes": 0
+}

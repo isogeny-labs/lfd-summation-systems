@@ -1,0 +1,2437 @@
+{
+ "started": "2026-11-12T03:38:28Z",
+ "device": "cpu",
+ "steps": [
+  {
+   "name": "selftest",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "selftest",
+    "--device",
+    "cpu",
+    "--out",
+    "/workspace/r3/out/selftest-cpu.json"
+   ],
+   "start": "2026-11-12T03:38:28Z",
+   "rc": 0,
+   "end": "2026-11-12T03:38:29Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C1_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:38:29Z",
+   "rc": 0,
+   "end": "2026-11-12T03:38:43Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C1_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:38:43Z",
+   "rc": 0,
+   "end": "2026-11-12T03:38:56Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r3/out/C1_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T03:38:56Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:08Z"
+  },
+  {
+   "name": "C1_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C1_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:39:08Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:21Z"
+  },
+  {
+   "name": "C1_rand_koblitz1_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_rand_koblitz1_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_rand_koblitz1_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C1_rand_koblitz1_ran_0.json"
+   ],
+   "start": "2026-11-12T03:39:21Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:33Z"
+  },
+  {
+   "name": "C1_inva_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_inva_koblitz0_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_inva_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C1_inva_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:39:33Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:47Z"
+  },
+  {
+   "name": "C1_inva_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_inva_koblitz0_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_inva_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C1_inva_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:39:47Z",
+   "rc": 0,
+   "end": "2026-11-12T03:40:00Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ord_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C1_rand_ordinary_ord_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C1_rand_ordinary_ord_0.status.json",
+    "--out",
+    "/workspace/r3/out/C1_rand_ordinary_ord_0.json"
+   ],
+   "start": "2026-11-12T03:40:00Z",
+   "rc": 0,
+   "end": "2026-11-12T03:40:11Z"
+  },
+  {
+   "name": "C2a_trac_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C2a_trac_koblitz0_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C2a_trac_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C2a_trac_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:40:11Z",
+   "rc": 0,
+   "end": "2026-11-12T03:45:33Z"
+  },
+  {
+   "name": "C2a_trac_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C2a_trac_koblitz0_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C2a_trac_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C2a_trac_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:45:33Z",
+   "rc": 0,
+   "end": "2026-11-12T03:50:44Z"
+  },
+  {
+   "name": "C3a_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3a_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3a_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C3a_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:50:44Z",
+   "rc": 0,
+   "end": "2026-11-12T03:50:55Z"
+  },
+  {
+   "name": "C3a_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3a_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3a_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C3a_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:50:55Z",
+   "rc": 0,
+   "end": "2026-11-12T03:51:06Z"
+  },
+  {
+   "name": "C3a_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3a_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3a_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C3a_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:51:06Z",
+   "rc": 0,
+   "end": "2026-11-12T03:51:17Z"
+  },
+  {
+   "name": "C3b_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3b_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3b_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C3b_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:51:17Z",
+   "rc": 0,
+   "end": "2026-11-12T03:51:44Z"
+  },
+  {
+   "name": "C3b_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3b_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3b_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C3b_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:51:44Z",
+   "rc": 0,
+   "end": "2026-11-12T03:52:10Z"
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C6a_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C6a_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C6a_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:52:10Z",
+   "rc": 0,
+   "end": "2026-11-12T03:52:40Z"
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C6a_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C6a_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C6a_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:52:40Z",
+   "rc": 0,
+   "end": "2026-11-12T03:53:09Z"
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C6a_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C6a_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r3/out/C6a_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T03:53:09Z",
+   "rc": 0,
+   "end": "2026-11-12T03:53:39Z"
+  },
+  {
+   "name": "C6a_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C6a_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C6a_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C6a_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:53:39Z",
+   "rc": 0,
+   "end": "2026-11-12T03:54:08Z"
+  },
+  {
+   "name": "C3c_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3c_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3c_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C3c_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:54:08Z",
+   "rc": 0,
+   "end": "2026-11-12T03:55:09Z"
+  },
+  {
+   "name": "C3c_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3c_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3c_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C3c_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:55:09Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:11Z"
+  },
+  {
+   "name": "C4a_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4a_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4a_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C4a_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:56:11Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:23Z"
+  },
+  {
+   "name": "C4a_rand_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4a_rand_koblitz0_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4a_rand_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C4a_rand_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:56:23Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:35Z"
+  },
+  {
+   "name": "C4a_inva_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4a_inva_koblitz0_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4a_inva_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C4a_inva_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:56:35Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:46Z"
+  },
+  {
+   "name": "C4a_inva_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4a_inva_koblitz0_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4a_inva_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C4a_inva_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:56:46Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:59Z"
+  },
+  {
+   "name": "C4b_rand_koblitz1_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4b_rand_koblitz1_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4b_rand_koblitz1_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C4b_rand_koblitz1_ran_0.json"
+   ],
+   "start": "2026-11-12T03:56:59Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:26Z"
+  },
+  {
+   "name": "C4b_rand_koblitz1_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4b_rand_koblitz1_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4b_rand_koblitz1_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C4b_rand_koblitz1_ran_1.json"
+   ],
+   "start": "2026-11-12T03:57:26Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:53Z"
+  },
+  {
+   "name": "C4b_inva_koblitz1_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4b_inva_koblitz1_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4b_inva_koblitz1_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C4b_inva_koblitz1_ran_0.json"
+   ],
+   "start": "2026-11-12T03:57:53Z",
+   "rc": 0,
+   "end": "2026-11-12T03:58:19Z"
+  },
+  {
+   "name": "C4b_inva_koblitz1_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C4b_inva_koblitz1_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C4b_inva_koblitz1_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C4b_inva_koblitz1_ran_1.json"
+   ],
+   "start": "2026-11-12T03:58:19Z",
+   "rc": 0,
+   "end": "2026-11-12T03:58:47Z"
+  },
+  {
+   "name": "C3d_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3d_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3d_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C3d_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:58:47Z",
+   "rc": 0,
+   "end": "2026-11-12T04:00:58Z"
+  },
+  {
+   "name": "C3d_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3d_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3d_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/C3d_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T04:00:58Z",
+   "rc": 0,
+   "end": "2026-11-12T04:03:07Z"
+  },
+  {
+   "name": "C3e_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3e_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3e_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C3e_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T04:03:07Z",
+   "rc": 0,
+   "end": "2026-11-12T04:07:51Z"
+  },
+  {
+   "name": "C3f_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/C3f_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/C3f_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/C3f_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T04:07:51Z",
+   "rc": 0,
+   "end": "2026-11-12T04:17:21Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T04:17:21Z",
+   "rc": 0,
+   "end": "2026-11-12T04:17:33Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T04:17:33Z",
+   "rc": 0,
+   "end": "2026-11-12T04:17:45Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T04:17:45Z",
+   "rc": 0,
+   "end": "2026-11-12T04:17:57Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_3",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_ordinary_ran_3.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_ordinary_ran_3.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_ordinary_ran_3.json"
+   ],
+   "start": "2026-11-12T04:17:57Z",
+   "rc": 0,
+   "end": "2026-11-12T04:18:09Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_4",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_ordinary_ran_4.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_ordinary_ran_4.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_ordinary_ran_4.json"
+   ],
+   "start": "2026-11-12T04:18:09Z",
+   "rc": 0,
+   "end": "2026-11-12T04:18:21Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_5",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_ordinary_ran_5.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_ordinary_ran_5.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_ordinary_ran_5.json"
+   ],
+   "start": "2026-11-12T04:18:21Z",
+   "rc": 0,
+   "end": "2026-11-12T04:18:33Z"
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T04:18:33Z",
+   "rc": 0,
+   "end": "2026-11-12T04:18:45Z"
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_koblitz0_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T04:18:45Z",
+   "rc": 0,
+   "end": "2026-11-12T04:18:57Z"
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_2",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R1_rand_koblitz0_ran_2.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R1_rand_koblitz0_ran_2.status.json",
+    "--out",
+    "/workspace/r3/out/R1_rand_koblitz0_ran_2.json"
+   ],
+   "start": "2026-11-12T04:18:57Z",
+   "rc": 0,
+   "end": "2026-11-12T04:19:09Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R2_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R2_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r3/out/R2_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T04:19:09Z",
+   "rc": 0,
+   "end": "2026-11-12T04:19:38Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R2_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R2_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r3/out/R2_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T04:19:38Z",
+   "rc": 0,
+   "end": "2026-11-12T04:20:05Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R2_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R2_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r3/out/R2_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T04:20:05Z",
+   "rc": 0,
+   "end": "2026-11-12T04:20:33Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_3",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r3/in/R2_rand_ordinary_ran_3.json",
+    "--max-degree",
+    "4",
+    "--device",
+    "cpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r3/out/R2_rand_ordinary_ran_3.status.json",
+    "--out",
+    "/workspace/r3/out/R2_rand_ordinary_ran_3.json"
+   ],
+   "start": "2026-11-12T04:20:33Z",
+   "rc": 0,
+   "end": "2026-11-12T04:21:02Z"
+  }
+ ],
+ "cells": {
+  "C1": {
+   "purpose": "discriminating cell (n,k)=(14,11): e=8, k+e=19: law B 5, post-hoc 4",
+   "systems": {
+    "C1_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 280,
+     "seconds": 14.15,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8829
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:38:43Z"
+    },
+    "C1_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 210,
+     "seconds": 12.75,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8899
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:38:56Z"
+    },
+    "C1_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 260,
+     "seconds": 12.35,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8849
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:08Z"
+    },
+    "C1_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 243,
+     "seconds": 12.28,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8866
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:21Z"
+    },
+    "C1_rand_koblitz1_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 258,
+     "seconds": 12.11,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8851
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:33Z"
+    },
+    "C1_inva_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 270,
+     "seconds": 13.65,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8839
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:47Z"
+    },
+    "C1_inva_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 335,
+     "seconds": 12.92,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8774
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:40:00Z"
+    },
+    "C1_rand_ordinary_ord_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 268,
+     "seconds": 10.92,
+     "quotient_ranks": [
+      0,
+      0,
+      14,
+      1246,
+      8841
+     ],
+     "strict_falls": [
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:40:11Z"
+    }
+   }
+  },
+  "C2a": {
+   "purpose": "trace-zero hyperplane n=k+1, k=11 (e=11)",
+   "systems": {
+    "C2a_trac_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 5,
+     "engine_status": "exact-proper-local",
+     "n_points": 2070,
+     "seconds": 322.23,
+     "quotient_ranks": [
+      0,
+      0,
+      11,
+      297,
+      6468,
+      33373
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5
+     ],
+     "end": "2026-11-12T03:45:33Z"
+    },
+    "C2a_trac_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 5,
+     "engine_status": "exact-proper-local",
+     "n_points": 2070,
+     "seconds": 310.54,
+     "quotient_ranks": [
+      0,
+      0,
+      11,
+      297,
+      6468,
+      33373
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5
+     ],
+     "end": "2026-11-12T03:50:44Z"
+    }
+   }
+  },
+  "C3a": {
+   "purpose": "small |Z| n=2k-1, k=11 (e=1): does the floor rise to 5?",
+   "systems": {
+    "C3a_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 10.88,
+     "quotient_ranks": [
+      0,
+      0,
+      42,
+      1113,
+      9109
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:50:55Z"
+    },
+    "C3a_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 10.74,
+     "quotient_ranks": [
+      0,
+      0,
+      42,
+      1113,
+      9109
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:51:06Z"
+    },
+    "C3a_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 10.81,
+     "quotient_ranks": [
+      0,
+      0,
+      42,
+      1113,
+      9109
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:51:17Z"
+    }
+   }
+  },
+  "C3b": {
+   "purpose": "small |Z| n=2k-1, k=12",
+   "systems": {
+    "C3b_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 4,
+     "seconds": 26.74,
+     "quotient_ranks": [
+      0,
+      0,
+      46,
+      1334,
+      12947
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:51:44Z"
+    },
+    "C3b_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 26.38,
+     "quotient_ranks": [
+      0,
+      0,
+      46,
+      1334,
+      12951
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:52:10Z"
+    }
+   }
+  },
+  "C6a": {
+   "purpose": "discriminating (16,12): e=8, k+e=20: law B 5, post-hoc 4",
+   "systems": {
+    "C6a_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 258,
+     "seconds": 29.36,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12693
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:52:40Z"
+    },
+    "C6a_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 238,
+     "seconds": 29.72,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12713
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:53:09Z"
+    },
+    "C6a_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 284,
+     "seconds": 28.97,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12667
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:53:39Z"
+    },
+    "C6a_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 248,
+     "seconds": 29.43,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12703
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:54:08Z"
+    }
+   }
+  },
+  "C3c": {
+   "purpose": "small |Z| n=2k-1, k=13",
+   "systems": {
+    "C3c_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 61.0,
+     "quotient_ranks": [
+      0,
+      0,
+      50,
+      1575,
+      17902
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:55:09Z"
+    },
+    "C3c_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 2,
+     "seconds": 62.04,
+     "quotient_ranks": [
+      0,
+      0,
+      50,
+      1575,
+      17900
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:56:11Z"
+    }
+   }
+  },
+  "C4a": {
+   "purpose": "Koblitz (15,11): random and Frobenius-invariant bases (e=7)",
+   "systems": {
+    "C4a_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 118,
+     "seconds": 11.59,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      8991
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:56:23Z"
+    },
+    "C4a_rand_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 124,
+     "seconds": 11.32,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      8985
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:56:35Z"
+    },
+    "C4a_inva_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 116,
+     "seconds": 11.69,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      8993
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:56:46Z"
+    },
+    "C4a_inva_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 88,
+     "seconds": 12.44,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      9021
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:56:59Z"
+    }
+   }
+  },
+  "C4b": {
+   "purpose": "Koblitz (21,12): random and Frobenius-invariant bases (e=3..4)",
+   "systems": {
+    "C4b_rand_koblitz1_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 8,
+     "seconds": 26.51,
+     "quotient_ranks": [
+      0,
+      0,
+      44,
+      1194,
+      12943
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:26Z"
+    },
+    "C4b_rand_koblitz1_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 4,
+     "seconds": 26.86,
+     "quotient_ranks": [
+      0,
+      0,
+      44,
+      1194,
+      12947
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:53Z"
+    },
+    "C4b_inva_koblitz1_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 20,
+     "seconds": 26.24,
+     "quotient_ranks": [
+      0,
+      0,
+      20,
+      932,
+      12931
+     ],
+     "strict_falls": [
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:58:19Z"
+    },
+    "C4b_inva_koblitz1_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 2,
+     "seconds": 27.51,
+     "quotient_ranks": [
+      0,
+      0,
+      44,
+      1320,
+      12949
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:58:47Z"
+    }
+   }
+  },
+  "C3d": {
+   "purpose": "small |Z| n=2k-1, k=14",
+   "systems": {
+    "C3d_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 4,
+     "seconds": 130.71,
+     "quotient_ranks": [
+      0,
+      0,
+      54,
+      1836,
+      24154
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:00:58Z"
+    },
+    "C3d_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 2,
+     "seconds": 129.47,
+     "quotient_ranks": [
+      0,
+      0,
+      54,
+      1836,
+      24156
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:03:07Z"
+    }
+   }
+  },
+  "C3e": {
+   "purpose": "small |Z| n=2k-1, k=15 (D=6 is 768,212 columns: cap 5 unless budget remains)",
+   "systems": {
+    "C3e_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 283.26,
+     "quotient_ranks": [
+      0,
+      0,
+      58,
+      2117,
+      31931
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:07:51Z"
+    }
+   }
+  },
+  "C3f": {
+   "purpose": "small |Z| n=2k-1, k=16 (D=6 is 1,149,017 columns: cap 5)",
+   "systems": {
+    "C3f_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 570.35,
+     "quotient_ranks": [
+      0,
+      0,
+      62,
+      2418,
+      41449
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:17:21Z"
+    }
+   }
+  },
+  "R1": {
+   "purpose": "reserve: more systems at the discriminating cell (14,11) (within-cell variation)",
+   "systems": {
+    "R1_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 260,
+     "seconds": 11.87,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8849
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:17:33Z"
+    },
+    "R1_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 292,
+     "seconds": 12.08,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8817
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:17:45Z"
+    },
+    "R1_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 234,
+     "seconds": 11.8,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8875
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:17:57Z"
+    },
+    "R1_rand_ordinary_ran_3": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 270,
+     "seconds": 11.74,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8839
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:18:09Z"
+    },
+    "R1_rand_ordinary_ran_4": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 251,
+     "seconds": 11.73,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8858
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:18:21Z"
+    },
+    "R1_rand_ordinary_ran_5": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 241,
+     "seconds": 11.93,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8868
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:18:33Z"
+    },
+    "R1_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 250,
+     "seconds": 11.95,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8859
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:18:45Z"
+    },
+    "R1_rand_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 254,
+     "seconds": 11.71,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8855
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:18:57Z"
+    },
+    "R1_rand_koblitz0_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 254,
+     "seconds": 11.86,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8855
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:19:09Z"
+    }
+   }
+  },
+  "R2": {
+   "purpose": "reserve: (17,12): e=7, k+e=19: law B 5, post-hoc 4",
+   "systems": {
+    "R2_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 126,
+     "seconds": 28.28,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12825
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:19:38Z"
+    },
+    "R2_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 122,
+     "seconds": 27.65,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12829
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:20:05Z"
+    },
+    "R2_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 140,
+     "seconds": 27.96,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12811
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:20:33Z"
+    },
+    "R2_rand_ordinary_ran_3": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 104,
+     "seconds": 28.2,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12847
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:21:02Z"
+    }
+   }
+  }
+ },
+ "finished": true,
+ "elapsed_s": 2554,
+ "ended": "2026-11-12T04:21:02Z"
+}

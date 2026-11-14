@@ -1,0 +1,357 @@
+{
+ "all_ok": true,
+ "by_family": {
+  "p=12289,k1=5,k2=5": {
+   "cases": {
+    "linear-empty": 4,
+    "quadratic-empty": 380
+   },
+   "fibres": {
+    "0": 384,
+    "1": 0,
+    "2": 0
+   },
+   "instances": 12,
+   "proper": 0,
+   "unit": 12
+  },
+  "p=13,k1=2,k2=2": {
+   "cases": {
+    "const": 44,
+    "linear-empty": 400,
+    "linear-point": 180,
+    "quadratic-empty": 5440,
+    "quadratic-pair": 244,
+    "quadratic-point": 1804
+   },
+   "fibres": {
+    "0": 5884,
+    "1": 1984,
+    "2": 244
+   },
+   "instances": 2028,
+   "proper": 1132,
+   "unit": 896
+  },
+  "p=17,k1=1,k2=4": {
+   "cases": {
+    "linear-point": 4,
+    "quadratic-empty": 39,
+    "quadratic-pair": 31,
+    "quadratic-point": 6
+   },
+   "fibres": {
+    "0": 39,
+    "1": 10,
+    "2": 31
+   },
+   "instances": 40,
+   "proper": 30,
+   "unit": 10
+  },
+  "p=17,k1=2,k2=2": {
+   "cases": {
+    "const": 60,
+    "linear-empty": 780,
+    "linear-point": 248,
+    "quadratic-empty": 13700,
+    "quadratic-pair": 340,
+    "quadratic-point": 3368
+   },
+   "fibres": {
+    "0": 14540,
+    "1": 3616,
+    "2": 340
+   },
+   "instances": 4624,
+   "proper": 2116,
+   "unit": 2508
+  },
+  "p=17,k1=2,k2=4": {
+   "cases": {
+    "linear-empty": 1,
+    "linear-point": 9,
+    "quadratic-empty": 74,
+    "quadratic-pair": 62,
+    "quadratic-point": 14
+   },
+   "fibres": {
+    "0": 75,
+    "1": 23,
+    "2": 62
+   },
+   "instances": 40,
+   "proper": 39,
+   "unit": 1
+  },
+  "p=17,k1=3,k2=3": {
+   "cases": {
+    "const": 120,
+    "linear-empty": 1072,
+    "linear-point": 984,
+    "quadratic-empty": 21664,
+    "quadratic-pair": 3208,
+    "quadratic-point": 9944
+   },
+   "fibres": {
+    "0": 22856,
+    "1": 10928,
+    "2": 3208
+   },
+   "instances": 4624,
+   "proper": 4160,
+   "unit": 464
+  },
+  "p=17,k1=4,k2=4": {
+   "cases": {
+    "const": 240,
+    "linear-empty": 224,
+    "linear-point": 3888,
+    "quadratic-empty": 31408,
+    "quadratic-pair": 27520,
+    "quadratic-point": 10704
+   },
+   "fibres": {
+    "0": 31872,
+    "1": 14592,
+    "2": 27520
+   },
+   "instances": 4624,
+   "proper": 4624,
+   "unit": 0
+  },
+  "p=193,k1=3,k2=6": {
+   "cases": {
+    "quadratic-empty": 66,
+    "quadratic-pair": 3,
+    "quadratic-point": 11
+   },
+   "fibres": {
+    "0": 66,
+    "1": 11,
+    "2": 3
+   },
+   "instances": 10,
+   "proper": 9,
+   "unit": 1
+  },
+  "p=193,k1=4,k2=6": {
+   "cases": {
+    "quadratic-empty": 71,
+    "quadratic-pair": 4,
+    "quadratic-point": 21
+   },
+   "fibres": {
+    "0": 71,
+    "1": 21,
+    "2": 4
+   },
+   "instances": 6,
+   "proper": 6,
+   "unit": 0
+  },
+  "p=193,k1=5,k2=5": {
+   "cases": {
+    "linear-empty": 9,
+    "linear-point": 5,
+    "quadratic-empty": 791,
+    "quadratic-pair": 12,
+    "quadratic-point": 143
+   },
+   "fibres": {
+    "0": 800,
+    "1": 148,
+    "2": 12
+   },
+   "instances": 30,
+   "proper": 28,
+   "unit": 2
+  },
+  "p=193,k1=6,k2=6": {
+   "cases": {
+    "linear-empty": 2,
+    "linear-point": 2,
+    "quadratic-empty": 285,
+    "quadratic-pair": 21,
+    "quadratic-point": 74
+   },
+   "fibres": {
+    "0": 287,
+    "1": 76,
+    "2": 21
+   },
+   "instances": 6,
+   "proper": 6,
+   "unit": 0
+  },
+  "p=257,k1=6,k2=6": {
+   "cases": {
+    "linear-empty": 2,
+    "quadratic-empty": 195,
+    "quadratic-pair": 6,
+    "quadratic-point": 53
+   },
+   "fibres": {
+    "0": 197,
+    "1": 53,
+    "2": 6
+   },
+   "instances": 4,
+   "proper": 4,
+   "unit": 0
+  },
+  "p=40961,k1=4,k2=4": {
+   "cases": {
+    "linear-empty": 4,
+    "quadratic-empty": 188
+   },
+   "fibres": {
+    "0": 192,
+    "1": 0,
+    "2": 0
+   },
+   "instances": 12,
+   "proper": 0,
+   "unit": 12
+  },
+  "p=41,k1=3,k2=3": {
+   "cases": {
+    "const": 2,
+    "linear-empty": 57,
+    "linear-point": 16,
+    "quadratic-empty": 935,
+    "quadratic-pair": 21,
+    "quadratic-point": 169
+   },
+   "fibres": {
+    "0": 994,
+    "1": 185,
+    "2": 21
+   },
+   "instances": 150,
+   "proper": 86,
+   "unit": 64
+  },
+  "p=5,k1=1,k2=1": {
+   "cases": {
+    "const": 6,
+    "linear-empty": 22,
+    "linear-point": 12,
+    "quadratic-empty": 106,
+    "quadratic-pair": 6,
+    "quadratic-point": 48
+   },
+   "fibres": {
+    "0": 134,
+    "1": 60,
+    "2": 6
+   },
+   "instances": 100,
+   "proper": 46,
+   "unit": 54
+  },
+  "p=5,k1=2,k2=2": {
+   "cases": {
+    "const": 12,
+    "linear-empty": 16,
+    "linear-point": 52,
+    "quadratic-empty": 132,
+    "quadratic-pair": 64,
+    "quadratic-point": 124
+   },
+   "fibres": {
+    "0": 160,
+    "1": 176,
+    "2": 64
+   },
+   "instances": 100,
+   "proper": 96,
+   "unit": 4
+  },
+  "p=7,k1=1,k2=1": {
+   "cases": {
+    "const": 10,
+    "linear-empty": 56,
+    "linear-point": 18,
+    "quadratic-empty": 378,
+    "quadratic-pair": 12,
+    "quadratic-point": 114
+   },
+   "fibres": {
+    "0": 444,
+    "1": 132,
+    "2": 12
+   },
+   "instances": 294,
+   "proper": 100,
+   "unit": 194
+  },
+  "p=97,k1=2,k2=5": {
+   "cases": {
+    "quadratic-empty": 55,
+    "quadratic-pair": 5,
+    "quadratic-point": 20
+   },
+   "fibres": {
+    "0": 55,
+    "1": 20,
+    "2": 5
+   },
+   "instances": 20,
+   "proper": 14,
+   "unit": 6
+  },
+  "p=97,k1=3,k2=5": {
+   "cases": {
+    "linear-empty": 3,
+    "quadratic-empty": 113,
+    "quadratic-pair": 4,
+    "quadratic-point": 40
+   },
+   "fibres": {
+    "0": 116,
+    "1": 40,
+    "2": 4
+   },
+   "instances": 20,
+   "proper": 18,
+   "unit": 2
+  },
+  "p=97,k1=4,k2=4": {
+   "cases": {
+    "linear-empty": 25,
+    "linear-point": 3,
+    "quadratic-empty": 751,
+    "quadratic-pair": 19,
+    "quadratic-point": 162
+   },
+   "fibres": {
+    "0": 776,
+    "1": 165,
+    "2": 19
+   },
+   "instances": 60,
+   "proper": 50,
+   "unit": 10
+  },
+  "p=97,k1=5,k2=5": {
+   "cases": {
+    "linear-empty": 13,
+    "linear-point": 9,
+    "quadratic-empty": 897,
+    "quadratic-pair": 81,
+    "quadratic-point": 280
+   },
+   "fibres": {
+    "0": 910,
+    "1": 289,
+    "2": 81
+   },
+   "instances": 40,
+   "proper": 40,
+   "unit": 0
+  }
+ },
+ "seconds": 372.0,
+ "total": 16844
+}

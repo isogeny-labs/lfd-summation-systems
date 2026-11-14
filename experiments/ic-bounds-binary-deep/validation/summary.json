@@ -1,0 +1,30 @@
+{
+ "systems": 65,
+ "all_ok": 65,
+ "skipped": 0,
+ "by_class": {
+  "affine": 21,
+  "unit": 13,
+  "const": 12,
+  "order-two": 19
+ },
+ "by_k": {
+  "4": 14,
+  "5": 12,
+  "6": 15,
+  "7": 11,
+  "8": 8,
+  "9": 3,
+  "10": 2
+ },
+ "by_curve": {
+  "koblitz": 36,
+  "ordinary": 29
+ },
+ "frobenius_invariant": 35,
+ "subfield": 6,
+ "degrees_compared": 268,
+ "hash_checked_systems": 65,
+ "stored_equal": 59,
+ "with_stored": 59
+}

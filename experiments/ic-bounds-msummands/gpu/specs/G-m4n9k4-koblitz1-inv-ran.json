@@ -1,0 +1,42 @@
+{
+ "spec": {
+  "family": "binary",
+  "m": 4,
+  "n": 9,
+  "k": 4,
+  "curve": "koblitz1",
+  "a": 1,
+  "b": 1,
+  "base": "invariant",
+  "target": "random",
+  "seed": 20261112,
+  "idx": 1,
+  "tag": "r16",
+  "name": "G-m4n9k4-koblitz1-inv-ran"
+ },
+ "build": {
+  "name": "G-m4n9k4-koblitz1-inv-ran",
+  "m": 4,
+  "n": 9,
+  "k": 4,
+  "r": 16,
+  "built": true,
+  "input_degree": 12,
+  "input_degree_source": "built",
+  "solutions": 115,
+  "system_hash": "bc56fde29734b6e9a496dfbf4ebea955c6b1bf187256c6bd02023c7c473b6357",
+  "points_sha256": "52040c6c63cb606efc5e3da810f9de86bc5c2c2861d5b5351909ea4611221fe3",
+  "instance_hash": "c3238698ec341179abd8330b912406e01648993ad06a8ffae0cb4677b91714d5",
+  "cap_degree": 14,
+  "columns": 65519,
+  "basis_worst_gb": 0.16,
+  "predicted_device_peak_gb": 20.0,
+  "fits_device_141gb": true,
+  "seconds_model": 2.6,
+  "seconds_pessimistic": 10,
+  "frozen_prediction_c": {
+   "upper": 14,
+   "point": 13
+  }
+ }
+}

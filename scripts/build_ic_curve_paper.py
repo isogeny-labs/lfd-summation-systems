@@ -1,10 +1,10 @@
-"""Build the curve-bounds manuscript: data macros and tables from the sweep summary, the figure, and the PDF."""
+"""Build the curve-bounds manuscript: data macros and tables from the sweep summary, the figures, and the PDF."""
 from collections import Counter, defaultdict
 from pathlib import Path
 import hashlib, json, os, re, shutil, subprocess, tempfile
 
 KINDS = [('prime', 'Prime'), ('binary', 'Binary ordinary'), ('koblitz', 'Koblitz')]
-BASES = {'subgroup': 'subgroup (symmetric)', 'random-coset': 'random coset',
+BASES = {'subgroup': 'subgroup', 'random-coset': 'random coset',
          'frobenius-invariant': 'Frobenius-invariant (symmetric)', 'random-subspace': 'random subspace'}
 
 
@@ -68,9 +68,11 @@ def results_section(summary, cases, results):
         higher = sum(d > 0 for d in diffs); lower = sum(d < 0 for d in diffs); equal = sum(d == 0 for d in diffs)
         mean_sym = sum(max(sym[key]) for key in common) / len(common)
         mean_rnd = sum(max(rnd[key]) for key in common) / len(common)
+        # the prime arm compares the subgroup with random cosets of it; only the binary arms test Frobenius symmetry
+        other = 'subgroup' if label.startswith('Prime') else 'symmetric'
         lines.append(f"{label}: over {len(common)} cells (field, curve, $k$, target class) with both classes certified, "
-                     f"the maximum exact LFD of the random bases exceeds that of the symmetric bases in {higher} cells, "
-                     f"is lower in {lower} and equal in {equal}; the cell means are {mean_rnd:.2f} (random) and {mean_sym:.2f} (symmetric).")
+                     f"the maximum exact LFD of the random bases exceeds that of the {other} bases in {higher} cells, "
+                     f"is lower in {lower} and equal in {equal}; the cell means are {mean_rnd:.2f} (random) and {mean_sym:.2f} ({other}).")
     lines.append('')
     lines.append('\\paragraph{Growth in $k$ and the gap to the bound.}')
     for kind, label in KINDS:
@@ -158,6 +160,11 @@ def main():
     fig.savefig(figures / 'curve-sweep.pdf', metadata={'CreationDate': None, 'ModDate': None})
     fig.savefig(figures / 'curve-sweep.png', dpi=200)
     plt.close(fig)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('make_paper_figures', root / 'scripts/make_paper_figures.py')
+    paper_figures = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(paper_figures)
+    extra_figures = paper_figures.main()   # figures of the manuscript drawn from the repository records
     env = dict(os.environ, SOURCE_DATE_EPOCH='1793318400', FORCE_SOURCE_DATE='1', TZ='UTC')
     with tempfile.TemporaryDirectory(prefix='ic-curve-paper-') as temporary:
         for _ in range(3 if engine == 'pdflatex' else 1):   # Tectonic reruns by itself
@@ -173,9 +180,9 @@ def main():
         (paper / 'curve-lfd-bounds.pdf').write_bytes((Path(temporary) / 'curve-lfd-bounds.pdf').read_bytes())
         warnings = re.findall(r'(?:LaTeX|Package [^\n]+) Warning:[^\n]*', log)
         overfull = len(re.findall(r'Overfull \\hbox', log))
-    sources = ['scripts/build_ic_curve_paper.py', 'paper/curve-lfd-bounds.tex', 'paper/curve-sweep-data.tex',
+    sources = ['scripts/build_ic_curve_paper.py', 'scripts/make_paper_figures.py', 'paper/curve-lfd-bounds.tex', 'paper/curve-sweep-data.tex',
                'experiments/ic-curve-sweep/summary.json', 'experiments/ic-lean/verification.json']
-    outputs = ['paper/curve-lfd-bounds.pdf', 'paper/figures/curve-sweep.pdf', 'paper/figures/curve-sweep.png']
+    outputs = ['paper/curve-lfd-bounds.pdf', 'paper/figures/curve-sweep.pdf', 'paper/figures/curve-sweep.png'] + extra_figures
     report = dict(status='passed: PDF built; no unresolved citations or references; not a proof or novelty certificate',
                   tex_engine=engine,
                   latex_warnings=warnings, overfull_boxes=overfull,

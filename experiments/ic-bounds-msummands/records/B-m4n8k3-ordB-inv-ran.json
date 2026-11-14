@@ -1,0 +1,59 @@
+{
+ "case": "B-m4n8k3-ordB-inv-ran",
+ "family": "binary",
+ "m": 4,
+ "n": 8,
+ "k": 3,
+ "variables": 12,
+ "curve": "ordB",
+ "a": 190,
+ "b": 55,
+ "basis": [
+  188,
+  92,
+  1
+ ],
+ "target": [
+  105,
+  186
+ ],
+ "target_class": "random",
+ "base_kind": "invariant",
+ "frobenius_invariant": true,
+ "input_degree": 12,
+ "equations": 8,
+ "const_equation": false,
+ "system_hash": "9c703f3758169ec59e8246522ce0118f33d5d7d9f73da4e5eb3a2a1e07fe9d18",
+ "instance_hash": "fdd2e9cf4fb058410b114ff1192eaeb37195cea71f1450828ab6532df06bd03f",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "status": "exact-unit",
+ "exact_lfd": 12,
+ "strict_falls": [
+  11,
+  12
+ ],
+ "certificate_degree": 12,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  3837,
+  4096
+ ],
+ "local_checks": [],
+ "kernel_upper_bound": 13,
+ "cap_reason": null,
+ "engine": "csd.ic_local_certificate.local_profile",
+ "seconds": 25.46,
+ "max_rss_gb": 1.24
+}

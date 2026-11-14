@@ -1,0 +1,548 @@
+{
+ "job": "eq12",
+ "total": 151621,
+ "violations": [],
+ "uncertified": [],
+ "seconds": 1469.0,
+ "families": {
+  "k1-plane p=3 k=(1,1) s=(1,1) raw=False": {
+   "instances": 18,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 10,
+    "0": 6,
+    "2": 2
+   },
+   "seconds": 0.0
+  },
+  "k1-plane p=5 k=(1,1) s=(1,1) raw=False": {
+   "instances": 100,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 16,
+    "3": 70,
+    "0": 14
+   },
+   "seconds": 0.1
+  },
+  "k1-plane p=5 k=(1,1) s=(1,2) raw=False": {
+   "instances": 100,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 24,
+    "3": 72,
+    "0": 4
+   },
+   "seconds": 0.1
+  },
+  "k1-plane p=7 k=(1,1) s=(1,1) raw=False": {
+   "instances": 294,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 36,
+    "3": 234,
+    "0": 24
+   },
+   "seconds": 0.3
+  },
+  "k1-plane p=7 k=(1,1) s=(1,2) raw=False": {
+   "instances": 294,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 44,
+    "3": 244,
+    "0": 6
+   },
+   "seconds": 0.3
+  },
+  "k1-plane p=7 k=(1,1) s=(1,3) raw=False": {
+   "instances": 294,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 44,
+    "3": 244,
+    "0": 6
+   },
+   "seconds": 0.3
+  },
+  "k1-plane p=11 k=(1,1) s=(1,1) raw=False": {
+   "instances": 1210,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 82,
+    "3": 1100,
+    "0": 28
+   },
+   "seconds": 1.3
+  },
+  "k1-plane p=11 k=(1,1) s=(1,2) raw=False": {
+   "instances": 1210,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 98,
+    "3": 1108,
+    "0": 4
+   },
+   "seconds": 1.0
+  },
+  "k1-plane p=11 k=(1,1) s=(1,3) raw=False": {
+   "instances": 1210,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 98,
+    "3": 1104,
+    "0": 8
+   },
+   "seconds": 1.3
+  },
+  "k1-plane p=11 k=(1,1) s=(1,4) raw=False": {
+   "instances": 1210,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 98,
+    "3": 1104,
+    "0": 8
+   },
+   "seconds": 1.0
+  },
+  "k1-plane p=11 k=(1,1) s=(1,5) raw=False": {
+   "instances": 1210,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 98,
+    "3": 1108,
+    "0": 4
+   },
+   "seconds": 1.2
+  },
+  "k1-plane p=13 k=(1,1) s=(1,1) raw=False": {
+   "instances": 2028,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 122,
+    "3": 1866,
+    "0": 40
+   },
+   "seconds": 1.7
+  },
+  "k1-plane p=13 k=(1,1) s=(1,2) raw=False": {
+   "instances": 2028,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 142,
+    "3": 1880,
+    "0": 6
+   },
+   "seconds": 2.3
+  },
+  "k1-plane p=13 k=(1,1) s=(1,3) raw=False": {
+   "instances": 2028,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 142,
+    "3": 1880,
+    "0": 6
+   },
+   "seconds": 1.8
+  },
+  "k1-plane p=13 k=(1,1) s=(1,4) raw=False": {
+   "instances": 2028,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 142,
+    "3": 1880,
+    "0": 6
+   },
+   "seconds": 1.7
+  },
+  "k1-plane p=13 k=(1,1) s=(1,5) raw=False": {
+   "instances": 2028,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 140,
+    "3": 1884,
+    "0": 4
+   },
+   "seconds": 2.0
+  },
+  "k1-plane p=13 k=(1,1) s=(1,6) raw=False": {
+   "instances": 2028,
+   "bound": 3,
+   "lfd_hist": {
+    "2": 142,
+    "3": 1880,
+    "0": 6
+   },
+   "seconds": 1.8
+  },
+  "k2-plane p=5 k=(2,2) s=(1,1) raw=False": {
+   "instances": 100,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 16,
+    "4": 84
+   },
+   "seconds": 0.7
+  },
+  "k2-plane p=13 k=(2,2) s=(1,1) raw=False": {
+   "instances": 2028,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 144,
+    "4": 1884
+   },
+   "seconds": 19.0
+  },
+  "k2-plane p=13 k=(2,2) s=(1,2) raw=False": {
+   "instances": 2028,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 144,
+    "4": 1884
+   },
+   "seconds": 18.7
+  },
+  "k2-plane p=13 k=(2,2) s=(1,4) raw=False": {
+   "instances": 2028,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 144,
+    "4": 1884
+   },
+   "seconds": 21.4
+  },
+  "k2-plane p=17 k=(2,2) s=(1,1) raw=False": {
+   "instances": 4624,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 256,
+    "4": 4368
+   },
+   "seconds": 52.4
+  },
+  "k2-plane p=17 k=(2,2) s=(1,2) raw=False": {
+   "instances": 4624,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 256,
+    "4": 4368
+   },
+   "seconds": 58.5
+  },
+  "k2-plane p=17 k=(2,2) s=(1,3) raw=False": {
+   "instances": 4624,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 256,
+    "4": 4368
+   },
+   "seconds": 55.6
+  },
+  "k2-plane p=17 k=(2,2) s=(1,6) raw=False": {
+   "instances": 4624,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 256,
+    "4": 4368
+   },
+   "seconds": 53.5
+  },
+  "k2-plane p=29 k=(2,2) s=(1,1) raw=False": {
+   "instances": 23548,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 784,
+    "4": 22764
+   },
+   "seconds": 239.3
+  },
+  "k2-plane p=37 k=(2,2) s=(1,1) raw=False": {
+   "instances": 49284,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 1296,
+    "4": 47988
+   },
+   "seconds": 559.7
+  },
+  "k2-plane p=29 k=(2,2) s=(1,2) raw=False": {
+   "instances": 23548,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 784,
+    "4": 22764
+   },
+   "seconds": 253.4
+  },
+  "k2-special p=41 k=(2,2) s=(1,1) raw=False": {
+   "instances": 373,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 22,
+    "4": 351
+   },
+   "seconds": 3.3
+  },
+  "k2-special p=41 k=(2,2) s=(1,2) raw=False": {
+   "instances": 378,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 19,
+    "4": 359
+   },
+   "seconds": 3.4
+  },
+  "k2-special p=41 k=(2,2) s=(1,3) raw=False": {
+   "instances": 371,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 18,
+    "4": 353
+   },
+   "seconds": 3.3
+  },
+  "k2-special p=53 k=(2,2) s=(1,1) raw=False": {
+   "instances": 370,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 14,
+    "4": 356
+   },
+   "seconds": 3.7
+  },
+  "k2-special p=53 k=(2,2) s=(1,2) raw=False": {
+   "instances": 373,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 11,
+    "4": 362
+   },
+   "seconds": 4.2
+  },
+  "k2-special p=53 k=(2,2) s=(1,3) raw=False": {
+   "instances": 370,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 6,
+    "4": 364
+   },
+   "seconds": 3.2
+  },
+  "k2-special p=61 k=(2,2) s=(1,1) raw=False": {
+   "instances": 374,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 11,
+    "4": 363
+   },
+   "seconds": 3.3
+  },
+  "k2-special p=61 k=(2,2) s=(1,2) raw=False": {
+   "instances": 375,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 365
+   },
+   "seconds": 3.4
+  },
+  "k2-special p=61 k=(2,2) s=(1,3) raw=False": {
+   "instances": 384,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 20,
+    "4": 364
+   },
+   "seconds": 3.4
+  },
+  "k2-special p=73 k=(2,2) s=(1,1) raw=False": {
+   "instances": 379,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 16,
+    "4": 363
+   },
+   "seconds": 3.4
+  },
+  "k2-special p=73 k=(2,2) s=(1,2) raw=False": {
+   "instances": 368,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 8,
+    "4": 360
+   },
+   "seconds": 3.9
+  },
+  "k2-special p=73 k=(2,2) s=(1,3) raw=False": {
+   "instances": 370,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 14,
+    "4": 356
+   },
+   "seconds": 3.5
+  },
+  "k2-special p=97 k=(2,2) s=(1,1) raw=False": {
+   "instances": 372,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 12,
+    "4": 360
+   },
+   "seconds": 3.4
+  },
+  "k2-special p=97 k=(2,2) s=(1,2) raw=False": {
+   "instances": 378,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 16,
+    "4": 362
+   },
+   "seconds": 3.4
+  },
+  "k2-special p=97 k=(2,2) s=(1,3) raw=False": {
+   "instances": 375,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 365
+   },
+   "seconds": 4.0
+  },
+  "k2-special p=101 k=(2,2) s=(1,1) raw=False": {
+   "instances": 380,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 11,
+    "4": 369
+   },
+   "seconds": 3.6
+  },
+  "k2-special p=101 k=(2,2) s=(1,2) raw=False": {
+   "instances": 368,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 9,
+    "4": 359
+   },
+   "seconds": 3.7
+  },
+  "k2-special p=101 k=(2,2) s=(1,3) raw=False": {
+   "instances": 376,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 11,
+    "4": 365
+   },
+   "seconds": 4.1
+  },
+  "k2-special p=109 k=(2,2) s=(1,1) raw=False": {
+   "instances": 376,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 366
+   },
+   "seconds": 3.8
+  },
+  "k2-special p=109 k=(2,2) s=(1,2) raw=False": {
+   "instances": 370,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 11,
+    "4": 359
+   },
+   "seconds": 3.0
+  },
+  "k2-special p=109 k=(2,2) s=(1,3) raw=False": {
+   "instances": 376,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 15,
+    "4": 361
+   },
+   "seconds": 2.8
+  },
+  "k2-special p=113 k=(2,2) s=(1,1) raw=False": {
+   "instances": 373,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 8,
+    "4": 365
+   },
+   "seconds": 3.2
+  },
+  "k2-special p=113 k=(2,2) s=(1,2) raw=False": {
+   "instances": 377,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 16,
+    "4": 361
+   },
+   "seconds": 3.2
+  },
+  "k2-special p=113 k=(2,2) s=(1,3) raw=False": {
+   "instances": 374,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 364
+   },
+   "seconds": 3.3
+  },
+  "k2-special p=12289 k=(2,2) s=(1,1) raw=False": {
+   "instances": 376,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 366
+   },
+   "seconds": 5.0
+  },
+  "k2-special p=12289 k=(2,2) s=(1,2) raw=False": {
+   "instances": 375,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 365
+   },
+   "seconds": 4.2
+  },
+  "k2-special p=12289 k=(2,2) s=(1,3) raw=False": {
+   "instances": 380,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 370
+   },
+   "seconds": 4.5
+  },
+  "k2-special p=40961 k=(2,2) s=(1,1) raw=False": {
+   "instances": 376,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 12,
+    "4": 364
+   },
+   "seconds": 6.4
+  },
+  "k2-special p=40961 k=(2,2) s=(1,2) raw=False": {
+   "instances": 377,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 10,
+    "4": 367
+   },
+   "seconds": 7.7
+  },
+  "k2-special p=40961 k=(2,2) s=(1,3) raw=False": {
+   "instances": 379,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 8,
+    "4": 371
+   },
+   "seconds": 7.0
+  }
+ }
+}

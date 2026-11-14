@@ -1,0 +1,156 @@
+{
+ "p": 12289,
+ "a": 4021,
+ "b": 9917,
+ "t": 4408,
+ "D": 4,
+ "k": 7,
+ "dim_V_k": 829,
+ "profile_V_k": [
+  0,
+  0,
+  2,
+  115,
+  829
+ ],
+ "rows": [
+  {
+   "L": 7,
+   "shifts_levels": 4,
+   "dim_Tminus": 269,
+   "profile_Tminus": [
+    0,
+    0,
+    2,
+    74,
+    269
+   ],
+   "dim_low_part": 269,
+   "low_part_inside_V": true,
+   "equal": false,
+   "profile_low_part": [
+    0,
+    0,
+    2,
+    74,
+    269
+   ],
+   "seconds": 0.8
+  },
+  {
+   "L": 8,
+   "shifts_levels": 5,
+   "dim_Tminus": 551,
+   "profile_Tminus": [
+    0,
+    0,
+    2,
+    111,
+    551
+   ],
+   "dim_low_part": 551,
+   "low_part_inside_V": true,
+   "equal": false,
+   "profile_low_part": [
+    0,
+    0,
+    2,
+    111,
+    551
+   ],
+   "seconds": 3.1
+  },
+  {
+   "L": 9,
+   "shifts_levels": 6,
+   "dim_Tminus": 657,
+   "profile_Tminus": [
+    0,
+    0,
+    2,
+    115,
+    657
+   ],
+   "dim_low_part": 657,
+   "low_part_inside_V": true,
+   "equal": false,
+   "profile_low_part": [
+    0,
+    0,
+    2,
+    115,
+    657
+   ],
+   "seconds": 6.2
+  },
+  {
+   "L": 10,
+   "shifts_levels": 7,
+   "dim_Tminus": 889,
+   "profile_Tminus": [
+    0,
+    0,
+    2,
+    119,
+    889
+   ],
+   "dim_low_part": 829,
+   "low_part_inside_V": true,
+   "equal": true,
+   "profile_low_part": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "seconds": 15.4
+  },
+  {
+   "L": 11,
+   "shifts_levels": 8,
+   "dim_Tminus": 1129,
+   "profile_Tminus": [
+    0,
+    0,
+    2,
+    123,
+    1129
+   ],
+   "dim_low_part": 829,
+   "low_part_inside_V": true,
+   "equal": true,
+   "profile_low_part": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "seconds": 46.5
+  },
+  {
+   "L": 12,
+   "shifts_levels": 9,
+   "dim_Tminus": 1377,
+   "profile_Tminus": [
+    0,
+    0,
+    2,
+    127,
+    1377
+   ],
+   "dim_low_part": 829,
+   "low_part_inside_V": true,
+   "equal": true,
+   "profile_low_part": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "seconds": 118.5
+  }
+ ]
+}

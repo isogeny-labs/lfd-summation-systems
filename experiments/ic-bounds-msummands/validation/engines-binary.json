@@ -1,0 +1,119 @@
+{
+ "name": "engines-binary",
+ "ok": true,
+ "n": 10,
+ "rows": [
+  {
+   "m": 3,
+   "n": 7,
+   "k": 2,
+   "a": 0,
+   "b": 1,
+   "Z": 1,
+   "lfd_py": 6,
+   "lfd_big": 6,
+   "equal": true
+  },
+  {
+   "m": 3,
+   "n": 7,
+   "k": 2,
+   "a": 20,
+   "b": 64,
+   "Z": 10,
+   "lfd_py": 6,
+   "lfd_big": 6,
+   "equal": true
+  },
+  {
+   "m": 3,
+   "n": 8,
+   "k": 3,
+   "a": 0,
+   "b": 1,
+   "Z": 3,
+   "lfd_py": 7,
+   "lfd_big": 7,
+   "equal": true
+  },
+  {
+   "m": 3,
+   "n": 8,
+   "k": 3,
+   "a": 135,
+   "b": 171,
+   "Z": 3,
+   "lfd_py": 7,
+   "lfd_big": 7,
+   "equal": true
+  },
+  {
+   "m": 4,
+   "n": 6,
+   "k": 2,
+   "a": 0,
+   "b": 1,
+   "Z": 32,
+   "lfd_py": 8,
+   "lfd_big": 8,
+   "equal": true
+  },
+  {
+   "m": 4,
+   "n": 6,
+   "k": 2,
+   "a": 46,
+   "b": 33,
+   "Z": 52,
+   "lfd_py": 8,
+   "lfd_big": 8,
+   "equal": true
+  },
+  {
+   "m": 4,
+   "n": 8,
+   "k": 3,
+   "a": 0,
+   "b": 1,
+   "Z": 184,
+   "lfd_py": 12,
+   "lfd_big": 12,
+   "equal": true
+  },
+  {
+   "m": 4,
+   "n": 8,
+   "k": 3,
+   "a": 216,
+   "b": 154,
+   "Z": 67,
+   "lfd_py": 9,
+   "lfd_big": 9,
+   "equal": true
+  },
+  {
+   "m": 5,
+   "n": 6,
+   "k": 2,
+   "a": 0,
+   "b": 1,
+   "Z": 31,
+   "lfd_py": 10,
+   "lfd_big": 10,
+   "equal": true
+  },
+  {
+   "m": 5,
+   "n": 6,
+   "k": 2,
+   "a": 38,
+   "b": 47,
+   "Z": 25,
+   "lfd_py": 10,
+   "lfd_big": 10,
+   "equal": true
+  }
+ ],
+ "statement": "csd.ic_local_certificate.local_profile (python) vs csd.ic_bounds_bin_big.local_profile_bin (bit-packed, cpu): LFD, falls, quotient ranks equal",
+ "seconds": 64.5
+}

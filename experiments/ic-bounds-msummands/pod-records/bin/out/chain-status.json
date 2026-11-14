@@ -1,0 +1,585 @@
+{
+ "started": "2026-11-12T06:16:36Z",
+ "device": "gpu",
+ "steps": [
+  {
+   "name": "selftest",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/bin/out/selftest-gpu.json"
+   ],
+   "start": "2026-11-12T06:16:36Z",
+   "rc": 0,
+   "end": "2026-11-12T06:16:57Z"
+  },
+  {
+   "name": "build-G-m4n9k4-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m4n9k4-koblitz0-ran-ord.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:16:57Z",
+   "rc": 0,
+   "end": "2026-11-12T06:17:00Z"
+  },
+  {
+   "name": "G-m4n9k4-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m4n9k4-koblitz0-ran-ord.json",
+    "--max-degree",
+    "11",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m4n9k4-koblitz0-ran-ord.status.json",
+    "--out",
+    "/workspace/bin/out/G-m4n9k4-koblitz0-ran-ord.json"
+   ],
+   "start": "2026-11-12T06:17:00Z",
+   "rc": 0,
+   "end": "2026-11-12T06:17:18Z"
+  },
+  {
+   "name": "build-G-m4n9k4-koblitz1-inv-ran",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m4n9k4-koblitz1-inv-ran.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:17:18Z",
+   "rc": 0,
+   "end": "2026-11-12T06:17:21Z"
+  },
+  {
+   "name": "G-m4n9k4-koblitz1-inv-ran",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m4n9k4-koblitz1-inv-ran.json",
+    "--max-degree",
+    "15",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m4n9k4-koblitz1-inv-ran.status.json",
+    "--out",
+    "/workspace/bin/out/G-m4n9k4-koblitz1-inv-ran.json"
+   ],
+   "start": "2026-11-12T06:17:21Z",
+   "rc": 0,
+   "end": "2026-11-12T06:17:37Z"
+  },
+  {
+   "name": "build-G-m4n9k4-ordA-ran-pla",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m4n9k4-ordA-ran-pla.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:17:37Z",
+   "rc": 0,
+   "end": "2026-11-12T06:17:40Z"
+  },
+  {
+   "name": "G-m4n9k4-ordA-ran-pla",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m4n9k4-ordA-ran-pla.json",
+    "--max-degree",
+    "15",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m4n9k4-ordA-ran-pla.status.json",
+    "--out",
+    "/workspace/bin/out/G-m4n9k4-ordA-ran-pla.json"
+   ],
+   "start": "2026-11-12T06:17:40Z",
+   "rc": 0,
+   "end": "2026-11-12T06:17:56Z"
+  },
+  {
+   "name": "build-G-m3n10k6-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m3n10k6-koblitz0-ran-ord.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:17:56Z",
+   "rc": 0,
+   "end": "2026-11-12T06:17:57Z"
+  },
+  {
+   "name": "G-m3n10k6-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m3n10k6-koblitz0-ran-ord.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m3n10k6-koblitz0-ran-ord.status.json",
+    "--out",
+    "/workspace/bin/out/G-m3n10k6-koblitz0-ran-ord.json"
+   ],
+   "start": "2026-11-12T06:17:57Z",
+   "rc": 3,
+   "end": "2026-11-12T06:18:09Z"
+  },
+  {
+   "name": "build-G-m3n10k6-koblitz1-inv-ran",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m3n10k6-koblitz1-inv-ran.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:18:09Z",
+   "rc": 0,
+   "end": "2026-11-12T06:18:10Z"
+  },
+  {
+   "name": "G-m3n10k6-koblitz1-inv-ran",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m3n10k6-koblitz1-inv-ran.json",
+    "--max-degree",
+    "9",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m3n10k6-koblitz1-inv-ran.status.json",
+    "--out",
+    "/workspace/bin/out/G-m3n10k6-koblitz1-inv-ran.json"
+   ],
+   "start": "2026-11-12T06:18:10Z",
+   "rc": 0,
+   "end": "2026-11-12T06:18:28Z"
+  },
+  {
+   "name": "build-G-m3n10k6-ordA-ran-pla",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m3n10k6-ordA-ran-pla.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:18:28Z",
+   "rc": 0,
+   "end": "2026-11-12T06:18:28Z"
+  },
+  {
+   "name": "G-m3n10k6-ordA-ran-pla",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m3n10k6-ordA-ran-pla.json",
+    "--max-degree",
+    "9",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m3n10k6-ordA-ran-pla.status.json",
+    "--out",
+    "/workspace/bin/out/G-m3n10k6-ordA-ran-pla.json"
+   ],
+   "start": "2026-11-12T06:18:28Z",
+   "rc": 0,
+   "end": "2026-11-12T06:18:43Z"
+  },
+  {
+   "name": "build-G-m4n10k5-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m4n10k5-koblitz0-ran-ord.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:18:43Z",
+   "rc": 0,
+   "end": "2026-11-12T06:19:26Z"
+  },
+  {
+   "name": "G-m4n10k5-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m4n10k5-koblitz0-ran-ord.json",
+    "--max-degree",
+    "11",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m4n10k5-koblitz0-ran-ord.status.json",
+    "--out",
+    "/workspace/bin/out/G-m4n10k5-koblitz0-ran-ord.json"
+   ],
+   "start": "2026-11-12T06:19:26Z",
+   "rc": 0,
+   "end": "2026-11-12T06:40:10Z"
+  },
+  {
+   "name": "build-G-m3n11k7-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m3n11k7-koblitz0-ran-ord.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:40:10Z",
+   "rc": 0,
+   "end": "2026-11-12T06:40:15Z"
+  },
+  {
+   "name": "G-m3n11k7-koblitz0-ran-ord",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m3n11k7-koblitz0-ran-ord.json",
+    "--max-degree",
+    "9",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m3n11k7-koblitz0-ran-ord.status.json",
+    "--out",
+    "/workspace/bin/out/G-m3n11k7-koblitz0-ran-ord.json"
+   ],
+   "start": "2026-11-12T06:40:15Z",
+   "rc": 0,
+   "end": "2026-11-12T06:50:00Z"
+  },
+  {
+   "name": "build-G-m3n11k7-koblitz1-inv-ran",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m3n11k7-koblitz1-inv-ran.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:50:00Z",
+   "rc": 0,
+   "end": "2026-11-12T06:50:05Z"
+  },
+  {
+   "name": "G-m3n11k7-koblitz1-inv-ran",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m3n11k7-koblitz1-inv-ran.json",
+    "--max-degree",
+    "9",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m3n11k7-koblitz1-inv-ran.status.json",
+    "--out",
+    "/workspace/bin/out/G-m3n11k7-koblitz1-inv-ran.json"
+   ],
+   "start": "2026-11-12T06:50:05Z",
+   "rc": 0,
+   "end": "2026-11-12T06:52:40Z"
+  },
+  {
+   "name": "build-G-m3n11k7-ordA-ran-pla",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/G-m3n11k7-ordA-ran-pla.json",
+    "--outdir",
+    "/workspace/bin/in"
+   ],
+   "start": "2026-11-12T06:52:40Z",
+   "rc": 0,
+   "end": "2026-11-12T06:52:45Z"
+  },
+  {
+   "name": "G-m3n11k7-ordA-ran-pla",
+   "cmd": [
+    "python3",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/bin/in/G-m3n11k7-ordA-ran-pla.json",
+    "--max-degree",
+    "9",
+    "--device",
+    "gpu",
+    "--batch",
+    "1024",
+    "--work-gb",
+    "20.0",
+    "--tile-mb",
+    "1024.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/bin/out/G-m3n11k7-ordA-ran-pla.status.json",
+    "--out",
+    "/workspace/bin/out/G-m3n11k7-ordA-ran-pla.json"
+   ],
+   "start": "2026-11-12T06:52:45Z",
+   "rc": 0,
+   "end": "2026-11-12T06:55:20Z"
+  }
+ ],
+ "cells": {
+  "gpu-msum": {
+   "purpose": "cells not run locally",
+   "systems": {
+    "G-m4n9k4-koblitz0-ran-ord": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 9,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      9
+     ],
+     "seconds": 17.47,
+     "end": "2026-11-12T06:17:18Z"
+    },
+    "G-m4n9k4-koblitz1-inv-ran": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 13,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      13
+     ],
+     "seconds": 15.88,
+     "end": "2026-11-12T06:17:37Z"
+    },
+    "G-m4n9k4-ordA-ran-pla": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 13,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      13
+     ],
+     "seconds": 15.96,
+     "end": "2026-11-12T06:17:56Z"
+    },
+    "G-m3n10k6-koblitz0-ran-ord": {
+     "status": "failed rc 3",
+     "rc": 3,
+     "exact_lfd": null,
+     "engine_status": "capped",
+     "strict_falls": [
+      4,
+      5
+     ],
+     "seconds": 11.98,
+     "end": "2026-11-12T06:18:09Z"
+    },
+    "G-m3n10k6-koblitz1-inv-ran": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 7,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      7
+     ],
+     "seconds": 17.01,
+     "end": "2026-11-12T06:18:28Z"
+    },
+    "G-m3n10k6-ordA-ran-pla": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 7,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      7
+     ],
+     "seconds": 14.28,
+     "end": "2026-11-12T06:18:43Z"
+    },
+    "G-m4n10k5-koblitz0-ran-ord": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 9,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      9
+     ],
+     "seconds": 1244.46,
+     "end": "2026-11-12T06:40:10Z"
+    },
+    "G-m3n11k7-koblitz0-ran-ord": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 6,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "seconds": 584.9,
+     "end": "2026-11-12T06:50:00Z"
+    },
+    "G-m3n11k7-koblitz1-inv-ran": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 7,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      7
+     ],
+     "seconds": 154.17,
+     "end": "2026-11-12T06:52:40Z"
+    },
+    "G-m3n11k7-ordA-ran-pla": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 7,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      7
+     ],
+     "seconds": 154.83,
+     "end": "2026-11-12T06:55:20Z"
+    }
+   }
+  }
+ },
+ "finished": true,
+ "elapsed_s": 2325,
+ "ended": "2026-11-12T06:55:20Z"
+}

@@ -1,0 +1,52 @@
+{
+ "case": "B-m3n8k3-ordB-inv-ran",
+ "family": "binary",
+ "m": 3,
+ "n": 8,
+ "k": 3,
+ "variables": 9,
+ "curve": "ordB",
+ "a": 221,
+ "b": 126,
+ "basis": [
+  188,
+  92,
+  1
+ ],
+ "target": [
+  117,
+  193
+ ],
+ "target_class": "random",
+ "base_kind": "invariant",
+ "frobenius_invariant": true,
+ "input_degree": 6,
+ "equations": 8,
+ "const_equation": false,
+ "system_hash": "6210cdebb6001ef8e9b7a1b3c862d448682555ceb686e39213d23e1de76540c7",
+ "instance_hash": "fa63c028b0e0f1c182a0c21d0f8149f0960201e27d6a26c8e86918b51bf9734a",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "status": "exact-unit",
+ "exact_lfd": 6,
+ "strict_falls": [
+  6
+ ],
+ "certificate_degree": 6,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  466
+ ],
+ "local_checks": [],
+ "kernel_upper_bound": 10,
+ "cap_reason": null,
+ "engine": "csd.ic_local_certificate.local_profile",
+ "seconds": 0.06,
+ "max_rss_gb": 0.04
+}

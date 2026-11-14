@@ -1,0 +1,139 @@
+{
+ "started": "2026-11-12T06:23:24Z",
+ "device": "cpu",
+ "steps": [
+  {
+   "name": "build-GP-m4k4-p97-pl",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/GP-m4k4-p97-pl.json",
+    "--outdir",
+    "/workspace/p2/pm4-a/in"
+   ],
+   "start": "2026-11-12T06:23:24Z",
+   "rc": 0,
+   "end": "2026-11-12T06:23:29Z"
+  },
+  {
+   "name": "GP-m4k4-p97-pl",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "lfd-file",
+    "--instance",
+    "/workspace/p2/pm4-a/in/GP-m4k4-p97-pl.json",
+    "--out",
+    "/workspace/p2/pm4-a/out/GP-m4k4-p97-pl.json"
+   ],
+   "start": "2026-11-12T06:23:29Z",
+   "rc": 0,
+   "end": "2026-11-12T07:15:07Z"
+  },
+  {
+   "name": "build-GP-m4k4-p193-r",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/GP-m4k4-p193-r.json",
+    "--outdir",
+    "/workspace/p2/pm4-a/in"
+   ],
+   "start": "2026-11-12T07:15:07Z",
+   "rc": 0,
+   "end": "2026-11-12T07:15:13Z"
+  },
+  {
+   "name": "GP-m4k4-p193-r",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "lfd-file",
+    "--instance",
+    "/workspace/p2/pm4-a/in/GP-m4k4-p193-r.json",
+    "--out",
+    "/workspace/p2/pm4-a/out/GP-m4k4-p193-r.json"
+   ],
+   "start": "2026-11-12T07:15:13Z",
+   "rc": 0,
+   "end": "2026-11-12T08:05:23Z"
+  },
+  {
+   "name": "build-GP-m4k4-p257-pl",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/GP-m4k4-p257-pl.json",
+    "--outdir",
+    "/workspace/p2/pm4-a/in"
+   ],
+   "start": "2026-11-12T08:05:23Z",
+   "rc": 0,
+   "end": "2026-11-12T08:05:29Z"
+  },
+  {
+   "name": "GP-m4k4-p257-pl",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "lfd-file",
+    "--instance",
+    "/workspace/p2/pm4-a/in/GP-m4k4-p257-pl.json",
+    "--out",
+    "/workspace/p2/pm4-a/out/GP-m4k4-p257-pl.json"
+   ],
+   "start": "2026-11-12T08:05:29Z",
+   "rc": 0,
+   "end": "2026-11-12T08:58:36Z"
+  }
+ ],
+ "cells": {
+  "gpu-msum": {
+   "purpose": "cells not run locally",
+   "systems": {
+    "GP-m4k4-p97-pl": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 13,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      13
+     ],
+     "seconds": 3097.9,
+     "end": "2026-11-12T07:15:07Z"
+    },
+    "GP-m4k4-p193-r": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 13,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      13
+     ],
+     "seconds": 3010.0,
+     "end": "2026-11-12T08:05:23Z"
+    },
+    "GP-m4k4-p257-pl": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 13,
+     "engine_status": "exact-proper-local",
+     "strict_falls": [
+      13
+     ],
+     "seconds": 3187.1,
+     "end": "2026-11-12T08:58:36Z"
+    }
+   }
+  }
+ },
+ "finished": true,
+ "elapsed_s": 9312,
+ "ended": "2026-11-12T08:58:36Z"
+}

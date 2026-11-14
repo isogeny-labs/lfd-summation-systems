@@ -1,0 +1,352 @@
+{
+ "device": "gpu",
+ "started": "2026-11-12T03:38:28Z",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "kernels": {
+  "unpack_equals_integer_bits": true,
+  "pack_inverse": true,
+  "xor_apply_equals_integers": true,
+  "float32_count_exact_200000": true,
+  "rref_block_equals_host_gauss": true
+ },
+ "cpu_cases": [
+  {
+   "name": "v12",
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "cert": 4,
+   "dims": [
+    0,
+    0,
+    15,
+    123,
+    366
+   ],
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "hashes": [
+    "18f98f4d96352a3931e6bc3e6e341b7176ab3ddccfc1b0012f123e2fc3083db8",
+    "7ac980f3dd425e16270979b4185f0859ea547406c9d29876987c9a90cc7498e6",
+    "5a9022f2d98d81b3e28969c1f244594aa6039640a4597892aa9a0af812533215",
+    "4e9ce0586d20a552f41e11532fc68f78ab49db55875ff931e3a76842dca84f88",
+    "1518969a0b5f10c0c513fc7f23127e1ee1c56bb5ee10daab3fe7cb217de76bea"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v24",
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "cert": 3,
+   "dims": [
+    0,
+    0,
+    21,
+    293
+   ],
+   "falls": [
+    2,
+    3
+   ],
+   "hashes": [
+    "dfaca609fcf755d09dd92159cbb7a15988260fb4b787a898c07290450ee738cc",
+    "2de571b44229474d92842ce29d25fff79c39221cc55ed0d61f1cdaa7937d94c1",
+    "7a43a7d5b55ee7e6b9157e9beeba5202c0c4d435f963591cbbfe3fb37b0a0e9d",
+    "8f54a022919a5e0c2223758f380663cd3b71b489c64417f794cde69699f1c4de"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v13",
+   "status": "exact-unit",
+   "lfd": 3,
+   "cert": 3,
+   "dims": [
+    0,
+    0,
+    21,
+    176
+   ],
+   "falls": [
+    2,
+    3
+   ],
+   "hashes": [
+    "18f98f4d96352a3931e6bc3e6e341b7176ab3ddccfc1b0012f123e2fc3083db8",
+    "7ac980f3dd425e16270979b4185f0859ea547406c9d29876987c9a90cc7498e6",
+    "19328638b6cc261a96a33aea17f31b924e21e27606348f85c41c68df359e5af2",
+    "f5462d9fd3381b8bbc38c949d5b0b6d3f5cd0a4c613ec9160950e79820d600bb"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v19",
+   "status": "exact-unit",
+   "lfd": 2,
+   "cert": 2,
+   "dims": [
+    0,
+    0,
+    56
+   ],
+   "falls": [
+    2
+   ],
+   "hashes": [
+    "18f98f4d96352a3931e6bc3e6e341b7176ab3ddccfc1b0012f123e2fc3083db8",
+    "7ac980f3dd425e16270979b4185f0859ea547406c9d29876987c9a90cc7498e6",
+    "c906e75dd27c25c2ce102b6f803e95769656d304d6cba5f0a0f567340ea5cebc"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v26",
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "cert": 3,
+   "dims": [
+    0,
+    0,
+    7,
+    267
+   ],
+   "falls": [
+    3
+   ],
+   "hashes": [
+    "dfaca609fcf755d09dd92159cbb7a15988260fb4b787a898c07290450ee738cc",
+    "2de571b44229474d92842ce29d25fff79c39221cc55ed0d61f1cdaa7937d94c1",
+    "6fd09f5b3c0db5991ea46d41748d93ecfea7e507d0db06b3aa2aa990b9bafa23",
+    "b92e64b84805b13576ae70b9a64820d4c4db103e4859e94a38cb390ec020fa3a"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v37",
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "cert": 4,
+   "dims": [
+    0,
+    0,
+    23,
+    309,
+    1455
+   ],
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "hashes": [
+    "a4a9138490254945e7017befb660f805e8d95fab87e21eb0d4f1584aa2f0f4cb",
+    "66d6e11ff5a1b1f47e0f37993df34ea970cb255a328b1a4c99aa2df019e210fa",
+    "fc05fca8037975ca98cec579c064f35e21d2c05da611b5e334a82de0fb58e6ad",
+    "4e70bef1c70c74bd5818d559ff03268e524d1c8047664c30b64f59ded0e4a184",
+    "f26cbb30d20e006a9f877107fa1ff4a6e8bb4380d81bd9887ad83df2a1581c83"
+   ],
+   "ok": true
+  },
+  {
+   "name": "sf12_6_a0",
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "cert": 4,
+   "dims": [
+    0,
+    0,
+    6,
+    234,
+    731
+   ],
+   "falls": [
+    3,
+    4
+   ],
+   "hashes": [
+    "dfaca609fcf755d09dd92159cbb7a15988260fb4b787a898c07290450ee738cc",
+    "2de571b44229474d92842ce29d25fff79c39221cc55ed0d61f1cdaa7937d94c1",
+    "da40a4b17f527a7f3e5520da10322f7c338b3f985c96afef953c33ab162759bd",
+    "01e7d852076db06a09b93a74ee3623e6d9d51c8134d54dd909ec341f0853f74d",
+    "5dd7e0953b4776a5ac9a84e50b1d17ce70bfaf6300dc9413d87f340404e6d73a"
+   ],
+   "ok": true
+  }
+ ],
+ "device_cases": [
+  {
+   "name": "v12",
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "cert": 4,
+   "dims": [
+    0,
+    0,
+    15,
+    123,
+    366
+   ],
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "hashes": [
+    "18f98f4d96352a3931e6bc3e6e341b7176ab3ddccfc1b0012f123e2fc3083db8",
+    "7ac980f3dd425e16270979b4185f0859ea547406c9d29876987c9a90cc7498e6",
+    "5a9022f2d98d81b3e28969c1f244594aa6039640a4597892aa9a0af812533215",
+    "4e9ce0586d20a552f41e11532fc68f78ab49db55875ff931e3a76842dca84f88",
+    "1518969a0b5f10c0c513fc7f23127e1ee1c56bb5ee10daab3fe7cb217de76bea"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v24",
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "cert": 3,
+   "dims": [
+    0,
+    0,
+    21,
+    293
+   ],
+   "falls": [
+    2,
+    3
+   ],
+   "hashes": [
+    "dfaca609fcf755d09dd92159cbb7a15988260fb4b787a898c07290450ee738cc",
+    "2de571b44229474d92842ce29d25fff79c39221cc55ed0d61f1cdaa7937d94c1",
+    "7a43a7d5b55ee7e6b9157e9beeba5202c0c4d435f963591cbbfe3fb37b0a0e9d",
+    "8f54a022919a5e0c2223758f380663cd3b71b489c64417f794cde69699f1c4de"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v13",
+   "status": "exact-unit",
+   "lfd": 3,
+   "cert": 3,
+   "dims": [
+    0,
+    0,
+    21,
+    176
+   ],
+   "falls": [
+    2,
+    3
+   ],
+   "hashes": [
+    "18f98f4d96352a3931e6bc3e6e341b7176ab3ddccfc1b0012f123e2fc3083db8",
+    "7ac980f3dd425e16270979b4185f0859ea547406c9d29876987c9a90cc7498e6",
+    "19328638b6cc261a96a33aea17f31b924e21e27606348f85c41c68df359e5af2",
+    "f5462d9fd3381b8bbc38c949d5b0b6d3f5cd0a4c613ec9160950e79820d600bb"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v19",
+   "status": "exact-unit",
+   "lfd": 2,
+   "cert": 2,
+   "dims": [
+    0,
+    0,
+    56
+   ],
+   "falls": [
+    2
+   ],
+   "hashes": [
+    "18f98f4d96352a3931e6bc3e6e341b7176ab3ddccfc1b0012f123e2fc3083db8",
+    "7ac980f3dd425e16270979b4185f0859ea547406c9d29876987c9a90cc7498e6",
+    "c906e75dd27c25c2ce102b6f803e95769656d304d6cba5f0a0f567340ea5cebc"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v26",
+   "status": "exact-proper-local",
+   "lfd": 3,
+   "cert": 3,
+   "dims": [
+    0,
+    0,
+    7,
+    267
+   ],
+   "falls": [
+    3
+   ],
+   "hashes": [
+    "dfaca609fcf755d09dd92159cbb7a15988260fb4b787a898c07290450ee738cc",
+    "2de571b44229474d92842ce29d25fff79c39221cc55ed0d61f1cdaa7937d94c1",
+    "6fd09f5b3c0db5991ea46d41748d93ecfea7e507d0db06b3aa2aa990b9bafa23",
+    "b92e64b84805b13576ae70b9a64820d4c4db103e4859e94a38cb390ec020fa3a"
+   ],
+   "ok": true
+  },
+  {
+   "name": "v37",
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "cert": 4,
+   "dims": [
+    0,
+    0,
+    23,
+    309,
+    1455
+   ],
+   "falls": [
+    2,
+    3,
+    4
+   ],
+   "hashes": [
+    "a4a9138490254945e7017befb660f805e8d95fab87e21eb0d4f1584aa2f0f4cb",
+    "66d6e11ff5a1b1f47e0f37993df34ea970cb255a328b1a4c99aa2df019e210fa",
+    "fc05fca8037975ca98cec579c064f35e21d2c05da611b5e334a82de0fb58e6ad",
+    "4e70bef1c70c74bd5818d559ff03268e524d1c8047664c30b64f59ded0e4a184",
+    "f26cbb30d20e006a9f877107fa1ff4a6e8bb4380d81bd9887ad83df2a1581c83"
+   ],
+   "ok": true
+  },
+  {
+   "name": "sf12_6_a0",
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "cert": 4,
+   "dims": [
+    0,
+    0,
+    6,
+    234,
+    731
+   ],
+   "falls": [
+    3,
+    4
+   ],
+   "hashes": [
+    "dfaca609fcf755d09dd92159cbb7a15988260fb4b787a898c07290450ee738cc",
+    "2de571b44229474d92842ce29d25fff79c39221cc55ed0d61f1cdaa7937d94c1",
+    "da40a4b17f527a7f3e5520da10322f7c338b3f985c96afef953c33ab162759bd",
+    "01e7d852076db06a09b93a74ee3623e6d9d51c8134d54dd909ec341f0853f74d",
+    "5dd7e0953b4776a5ac9a84e50b1d17ce70bfaf6300dc9413d87f340404e6d73a"
+   ],
+   "ok": true
+  }
+ ],
+ "device_memory": {
+  "used_bytes": 627900416,
+  "total_bytes": 150111977472
+ },
+ "ok": true
+}

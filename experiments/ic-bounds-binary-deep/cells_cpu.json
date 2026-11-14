@@ -1,0 +1,432 @@
+{
+ "order": [
+  {
+   "cell": "C1",
+   "purpose": "discriminating cell (n,k)=(14,11): e=8, k+e=19: law B 5, post-hoc 4",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C1_rand_ordinary_ran_0",
+     "instance": "C1_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C1_rand_ordinary_ran_1",
+     "instance": "C1_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C1_rand_ordinary_ran_2",
+     "instance": "C1_rand_ordinary_ran_2.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C1_rand_koblitz0_ran_0",
+     "instance": "C1_rand_koblitz0_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C1_rand_koblitz1_ran_0",
+     "instance": "C1_rand_koblitz1_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C1_inva_koblitz0_ran_0",
+     "instance": "C1_inva_koblitz0_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C1_inva_koblitz0_ran_1",
+     "instance": "C1_inva_koblitz0_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C1_rand_ordinary_ord_0",
+     "instance": "C1_rand_ordinary_ord_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 616
+  },
+  {
+   "cell": "C2a",
+   "purpose": "trace-zero hyperplane n=k+1, k=11 (e=11)",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C2a_trac_koblitz0_ran_0",
+     "instance": "C2a_trac_koblitz0_ran_0.json",
+     "max_degree": 5,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C2a_trac_koblitz0_ran_1",
+     "instance": "C2a_trac_koblitz0_ran_1.json",
+     "max_degree": 5,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 231
+  },
+  {
+   "cell": "C3a",
+   "purpose": "small |Z| n=2k-1, k=11 (e=1): does the floor rise to 5?",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C3a_rand_ordinary_ran_0",
+     "instance": "C3a_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C3a_rand_ordinary_ran_1",
+     "instance": "C3a_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C3a_rand_koblitz0_ran_0",
+     "instance": "C3a_rand_koblitz0_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 183
+  },
+  {
+   "cell": "C3b",
+   "purpose": "small |Z| n=2k-1, k=12",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C3b_rand_ordinary_ran_0",
+     "instance": "C3b_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C3b_rand_ordinary_ran_1",
+     "instance": "C3b_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 124
+  },
+  {
+   "cell": "C6a",
+   "purpose": "discriminating (16,12): e=8, k+e=20: law B 5, post-hoc 4",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C6a_rand_ordinary_ran_0",
+     "instance": "C6a_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C6a_rand_ordinary_ran_1",
+     "instance": "C6a_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C6a_rand_ordinary_ran_2",
+     "instance": "C6a_rand_ordinary_ran_2.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C6a_rand_koblitz0_ran_0",
+     "instance": "C6a_rand_koblitz0_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 592
+  },
+  {
+   "cell": "C3c",
+   "purpose": "small |Z| n=2k-1, k=13",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C3c_rand_ordinary_ran_0",
+     "instance": "C3c_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C3c_rand_ordinary_ran_1",
+     "instance": "C3c_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 136
+  },
+  {
+   "cell": "C4a",
+   "purpose": "Koblitz (15,11): random and Frobenius-invariant bases (e=7)",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C4a_rand_koblitz0_ran_0",
+     "instance": "C4a_rand_koblitz0_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C4a_rand_koblitz0_ran_1",
+     "instance": "C4a_rand_koblitz0_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C4a_inva_koblitz0_ran_0",
+     "instance": "C4a_inva_koblitz0_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C4a_inva_koblitz0_ran_1",
+     "instance": "C4a_inva_koblitz0_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 244
+  },
+  {
+   "cell": "C4b",
+   "purpose": "Koblitz (21,12): random and Frobenius-invariant bases (e=3..4)",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C4b_rand_koblitz1_ran_0",
+     "instance": "C4b_rand_koblitz1_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C4b_rand_koblitz1_ran_1",
+     "instance": "C4b_rand_koblitz1_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C4b_inva_koblitz1_ran_0",
+     "instance": "C4b_inva_koblitz1_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C4b_inva_koblitz1_ran_1",
+     "instance": "C4b_inva_koblitz1_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 248
+  },
+  {
+   "cell": "C3d",
+   "purpose": "small |Z| n=2k-1, k=14",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C3d_rand_ordinary_ran_0",
+     "instance": "C3d_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "C3d_rand_ordinary_ran_1",
+     "instance": "C3d_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 168
+  },
+  {
+   "cell": "C3e",
+   "purpose": "small |Z| n=2k-1, k=15 (D=6 is 768,212 columns: cap 5 unless budget remains)",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C3e_rand_ordinary_ran_0",
+     "instance": "C3e_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 128
+  },
+  {
+   "cell": "C3f",
+   "purpose": "small |Z| n=2k-1, k=16 (D=6 is 1,149,017 columns: cap 5)",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "C3f_rand_ordinary_ran_0",
+     "instance": "C3f_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 244
+  },
+  {
+   "cell": "R1",
+   "purpose": "reserve: more systems at the discriminating cell (14,11) (within-cell variation)",
+   "reserve": true,
+   "systems": [
+    {
+     "name": "R1_rand_ordinary_ran_0",
+     "instance": "R1_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_ordinary_ran_1",
+     "instance": "R1_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_ordinary_ran_2",
+     "instance": "R1_rand_ordinary_ran_2.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_ordinary_ran_3",
+     "instance": "R1_rand_ordinary_ran_3.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_ordinary_ran_4",
+     "instance": "R1_rand_ordinary_ran_4.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_ordinary_ran_5",
+     "instance": "R1_rand_ordinary_ran_5.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_koblitz0_ran_0",
+     "instance": "R1_rand_koblitz0_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_koblitz0_ran_1",
+     "instance": "R1_rand_koblitz0_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R1_rand_koblitz0_ran_2",
+     "instance": "R1_rand_koblitz0_ran_2.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 693
+  },
+  {
+   "cell": "R2",
+   "purpose": "reserve: (17,12): e=7, k+e=19: law B 5, post-hoc 4",
+   "reserve": true,
+   "systems": [
+    {
+     "name": "R2_rand_ordinary_ran_0",
+     "instance": "R2_rand_ordinary_ran_0.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R2_rand_ordinary_ran_1",
+     "instance": "R2_rand_ordinary_ran_1.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R2_rand_ordinary_ran_2",
+     "instance": "R2_rand_ordinary_ran_2.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    },
+    {
+     "name": "R2_rand_ordinary_ran_3",
+     "instance": "R2_rand_ordinary_ran_3.json",
+     "max_degree": 4,
+     "est_seconds": 0,
+     "time_limit_s": 3600
+    }
+   ],
+   "est_seconds": 592
+  }
+ ],
+ "rate_flops_per_s": 25000000000000.0,
+ "flops_over_N3": 0.28
+}

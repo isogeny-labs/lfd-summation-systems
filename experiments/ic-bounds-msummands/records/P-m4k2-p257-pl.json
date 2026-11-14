@@ -1,0 +1,240 @@
+{
+ "case": "P-m4k2-p257-pl",
+ "family": "prime",
+ "m": 4,
+ "k": 2,
+ "p": 257,
+ "a": 152,
+ "b": 57,
+ "t": 58,
+ "target_class": "planted-H4",
+ "generator_degree": 8,
+ "generator_terms": 256,
+ "generator_hash": "b39498bb03deb1ed0b8cb597c5680a7bed39e3c547992fa5d2990364a146adcb",
+ "instance_hash": "6282c48e01fce5ccc8915e84d8ba071907fc8a305873a9b114c72e9e09a1382e",
+ "points_sha256": "4e69d6462bde71f48972d019b6c5a9f0c81cd801986a1db82cd504cfe0e9bbb5",
+ "solutions": 19,
+ "ideal_class": "proper",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-proper-local",
+ "exact_lfd": 9,
+ "lfd_lower_bound": 9,
+ "kernel_upper_bound": 9,
+ "strict_falls": [
+  9
+ ],
+ "certificate": {
+  "kind": "local-to-global",
+  "degree": 9,
+  "solutions": 19
+ },
+ "certificate_degree": 9,
+ "prop1_variables": 8,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 9,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 1,
+   "evaluation_rank_le_D": 9,
+   "ideal_dim_le_D": 0,
+   "codim": 9
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 37,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 9,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 18,
+   "codim": 37
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 93,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 19,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 74,
+   "codim": 93
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 163,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 19,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 144,
+   "codim": 163
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 219,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 19,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 200,
+   "codim": 219
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 247,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 19,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 228,
+   "codim": 247
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 255,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 19,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 236,
+   "codim": 255
+  },
+  {
+   "D": 8,
+   "monomials_le_D": 256,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 19,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 237,
+   "codim": 255
+  },
+  {
+   "D": 9,
+   "monomials_le_D": 256,
+   "quotient_rank": 237,
+   "profile": [
+    0,
+    0,
+    18,
+    74,
+    144,
+    200,
+    228,
+    236,
+    237,
+    237
+   ],
+   "contains_one": false,
+   "strict_fall": true,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.12,
+   "evaluation_rank_lt_D": 19,
+   "evaluation_rank_le_D": 19,
+   "ideal_dim_le_D": 237,
+   "codim": 19
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 0.14,
+ "max_rss_gb": 0.22
+}

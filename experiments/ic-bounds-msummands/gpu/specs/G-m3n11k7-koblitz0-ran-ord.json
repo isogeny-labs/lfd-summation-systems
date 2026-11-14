@@ -1,0 +1,39 @@
+{
+ "spec": {
+  "family": "binary",
+  "m": 3,
+  "n": 11,
+  "k": 7,
+  "curve": "koblitz0",
+  "a": 0,
+  "b": 1,
+  "base": "random",
+  "target": "order-two",
+  "seed": 20261112,
+  "idx": 0,
+  "tag": "r21",
+  "name": "G-m3n11k7-koblitz0-ran-ord"
+ },
+ "build": {
+  "name": "G-m3n11k7-koblitz0-ran-ord",
+  "m": 3,
+  "n": 11,
+  "k": 7,
+  "r": 21,
+  "built": false,
+  "input_degree": 6,
+  "input_degree_source": "bound, not computed",
+  "solutions": null,
+  "system_hash": null,
+  "points_sha256": null,
+  "instance_hash": null,
+  "cap_degree": 8,
+  "columns": 401930,
+  "basis_worst_gb": 5.88,
+  "predicted_device_peak_gb": 30.3,
+  "fits_device_141gb": true,
+  "seconds_model": 606.0,
+  "seconds_pessimistic": 2424,
+  "frozen_prediction_c": null
+ }
+}

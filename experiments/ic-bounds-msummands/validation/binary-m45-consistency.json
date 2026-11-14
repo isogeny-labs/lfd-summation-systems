@@ -1,0 +1,123 @@
+{
+ "name": "binary-m45-consistency",
+ "rows": [
+  {
+   "m": 4,
+   "n": 6,
+   "k": 2,
+   "a": 0,
+   "b": 1,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 19,
+   "rational_multisets": 2,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 4,
+   "n": 6,
+   "k": 2,
+   "a": 33,
+   "b": 20,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 44,
+   "rational_multisets": 5,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 4,
+   "n": 7,
+   "k": 2,
+   "a": 0,
+   "b": 1,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 19,
+   "rational_multisets": 2,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 4,
+   "n": 7,
+   "k": 2,
+   "a": 124,
+   "b": 116,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 6,
+   "rational_multisets": 1,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 4,
+   "n": 8,
+   "k": 3,
+   "a": 0,
+   "b": 1,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 28,
+   "rational_multisets": 2,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 4,
+   "n": 8,
+   "k": 3,
+   "a": 129,
+   "b": 97,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 96,
+   "rational_multisets": 8,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 5,
+   "n": 6,
+   "k": 2,
+   "a": 0,
+   "b": 1,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 136,
+   "rational_multisets": 3,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 5,
+   "n": 6,
+   "k": 2,
+   "a": 18,
+   "b": 33,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 95,
+   "rational_multisets": 4,
+   "rational_subset_of_Z": true
+  },
+  {
+   "m": 5,
+   "n": 7,
+   "k": 2,
+   "a": 57,
+   "b": 23,
+   "split_equal": true,
+   "fast_vs_sylvester_equal": true,
+   "planted_in_Z": true,
+   "Z": 156,
+   "rational_multisets": 7,
+   "rational_subset_of_Z": true
+  }
+ ],
+ "ok": true
+}

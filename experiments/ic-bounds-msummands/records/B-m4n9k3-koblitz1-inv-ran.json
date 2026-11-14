@@ -1,0 +1,59 @@
+{
+ "case": "B-m4n9k3-koblitz1-inv-ran",
+ "family": "binary",
+ "m": 4,
+ "n": 9,
+ "k": 3,
+ "variables": 12,
+ "curve": "koblitz1",
+ "a": 1,
+ "b": 1,
+ "basis": [
+  302,
+  252,
+  1
+ ],
+ "target": [
+  135,
+  123
+ ],
+ "target_class": "random",
+ "base_kind": "invariant",
+ "frobenius_invariant": true,
+ "input_degree": 12,
+ "equations": 9,
+ "const_equation": false,
+ "system_hash": "c93c7b60c47134e301f4cf73cf6af395d3c3ed38cc1199a62c0f407c6f74f2fe",
+ "instance_hash": "71b064e068eb222738577fb485ee0f9d29fb9fedd6776ec2c43b7f0290170b89",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "status": "exact-unit",
+ "exact_lfd": 12,
+ "strict_falls": [
+  11,
+  12
+ ],
+ "certificate_degree": 12,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  3,
+  3902,
+  4096
+ ],
+ "local_checks": [],
+ "kernel_upper_bound": 13,
+ "cap_reason": null,
+ "engine": "csd.ic_local_certificate.local_profile",
+ "seconds": 23.75,
+ "max_rss_gb": 1.24
+}

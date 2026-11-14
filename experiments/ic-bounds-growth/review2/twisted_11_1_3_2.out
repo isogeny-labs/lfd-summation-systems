@@ -1,0 +1,173 @@
+{
+ "p": 11,
+ "a": 1,
+ "b": 3,
+ "t": 2,
+ "alpha": 1,
+ "beta": 3,
+ "exponents_m_e": {
+  "(0, 0)": [
+   0,
+   0
+  ],
+  "(0, 1)": [
+   33,
+   1
+  ],
+  "(0, 2)": [
+   0,
+   57
+  ],
+  "(1, 0)": [
+   78,
+   22
+  ],
+  "(1, 1)": [
+   12,
+   12
+  ],
+  "(1, 2)": [
+   1,
+   101
+  ],
+  "(2, 0)": [
+   68,
+   66
+  ],
+  "(2, 1)": [
+   24,
+   89
+  ],
+  "(2, 2)": [
+   101,
+   2
+  ]
+ },
+ "S_size": 6,
+ "relation_vanishes_at_every_place": true,
+ "ord_phi_not_divisible_by_p": [],
+ "zeros_poles_of_h_outside_S": {
+  "(1,4)": 1,
+  "(1,7)": 1,
+  "(8,0+5w)": -2
+ },
+ "deg0_each_v_e": true,
+ "H_v": 8,
+ "n0_times_S": 168,
+ "H_le_bound": true,
+ "pairwise_orders_le_2H": true,
+ "orders_at_O_R_congruent_to_minus_2_delta_mod_p": true,
+ "thm33_mod_p_max_spread": 8,
+ "integer_max_spread": 398,
+ "thm33_bound_6_8_7": 336,
+ "Fp_dependent_nine_Wronskian_zero_at_10_points": true,
+ "every_eight_independent": true,
+ "rank_over_constants_at_40_points": 9,
+ "local_wronskian_inequality": [
+  {
+   "place": "O",
+   "in_S": true,
+   "ord_W": -124,
+   "lower_bound": -134,
+   "ord_dx": -3,
+   "holds": true
+  },
+  {
+   "place": "(2+8w,3+1w)",
+   "in_S": true,
+   "ord_W": 0,
+   "lower_bound": -19,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(0,6)",
+   "in_S": true,
+   "ord_W": 0,
+   "lower_bound": -19,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(2+3w,8+1w)",
+   "in_S": true,
+   "ord_W": 0,
+   "lower_bound": -19,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(0,5)",
+   "in_S": true,
+   "ord_W": 0,
+   "lower_bound": -19,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(2,0+1w)",
+   "in_S": true,
+   "ord_W": 144,
+   "lower_bound": 134,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(1,4)",
+   "in_S": false,
+   "ord_W": 88,
+   "lower_bound": 88,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(1,7)",
+   "in_S": false,
+   "ord_W": 88,
+   "lower_bound": 88,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(8,0+5w)",
+   "in_S": false,
+   "ord_W": -176,
+   "lower_bound": -176,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(3,0)",
+   "in_S": false,
+   "ord_W": -28,
+   "lower_bound": -28,
+   "ord_dx": 1,
+   "holds": true
+  },
+  {
+   "place": "(4+5w,0)",
+   "in_S": false,
+   "ord_W": -28,
+   "lower_bound": -28,
+   "ord_dx": 1,
+   "holds": true
+  },
+  {
+   "place": "(10+8w,0+1w)",
+   "in_S": false,
+   "ord_W": 0,
+   "lower_bound": 0,
+   "ord_dx": 0,
+   "holds": true
+  },
+  {
+   "place": "(10+7w,7+7w)",
+   "in_S": false,
+   "ord_W": 1,
+   "lower_bound": 0,
+   "ord_dx": 0,
+   "holds": true
+  }
+ ]
+}
+TWISTED-RELATION CHECKS PASS

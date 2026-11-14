@@ -1,0 +1,240 @@
+{
+ "case": "P-m4k2-p97-pl",
+ "family": "prime",
+ "m": 4,
+ "k": 2,
+ "p": 97,
+ "a": 27,
+ "b": 64,
+ "t": 0,
+ "target_class": "planted-H4",
+ "generator_degree": 8,
+ "generator_terms": 256,
+ "generator_hash": "7723069ff52b0c95660b20728f0ee3bd9476c2bc62ebdd713e5e863c593b6321",
+ "instance_hash": "a439125df559643c4eef73092149a7c48b32a39cf97a972270358b793c351ca2",
+ "points_sha256": "223e3ef9543ccbd3f43c7e14e482eb43b8694d135e6ce5daadeb907cd41a6bac",
+ "solutions": 4,
+ "ideal_class": "proper",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-proper-local",
+ "exact_lfd": 9,
+ "lfd_lower_bound": 9,
+ "kernel_upper_bound": 9,
+ "strict_falls": [
+  9
+ ],
+ "certificate": {
+  "kind": "local-to-global",
+  "degree": 9,
+  "solutions": 4
+ },
+ "certificate_degree": 9,
+ "prop1_variables": 8,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 9,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 1,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 5,
+   "codim": 9
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 37,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 33,
+   "codim": 37
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 93,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 89,
+   "codim": 93
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 163,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 159,
+   "codim": 163
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 219,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 215,
+   "codim": 219
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 247,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 243,
+   "codim": 247
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 255,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 251,
+   "codim": 255
+  },
+  {
+   "D": 8,
+   "monomials_le_D": 256,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 252,
+   "codim": 255
+  },
+  {
+   "D": 9,
+   "monomials_le_D": 256,
+   "quotient_rank": 252,
+   "profile": [
+    0,
+    5,
+    33,
+    89,
+    159,
+    215,
+    243,
+    251,
+    252,
+    252
+   ],
+   "contains_one": false,
+   "strict_fall": true,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.14,
+   "evaluation_rank_lt_D": 4,
+   "evaluation_rank_le_D": 4,
+   "ideal_dim_le_D": 252,
+   "codim": 4
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 0.16,
+ "max_rss_gb": 0.22
+}

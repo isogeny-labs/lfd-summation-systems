@@ -1,18 +1,23 @@
 {
   "status": "passed: PDF built; no unresolved citations or references; not a proof or novelty certificate",
-  "tex_engine": "pdflatex",
+  "tex_engine": "tectonic",
   "latex_warnings": [],
   "overfull_boxes": 0,
   "source_sha256": {
-    "scripts/build_ic_curve_paper.py": "1ec8a1819c3a4df669424aa6352c55e6a6936f44b1528374faa65ad1f632043d",
-    "paper/curve-lfd-bounds.tex": "e408d359469a055f586c74f9a7974683c4ffa6b56a8a867fd847f9191e5a624e",
-    "paper/curve-sweep-data.tex": "2f1ef586fd6d5a78ebd49c811e34f516740def253296b2abcd3187cea89d82a0",
+    "scripts/build_ic_curve_paper.py": "037ab40d8dfe62a87dcb87ca1be728c4baa5e377a5ca7798f861573b0bcb7b03",
+    "scripts/make_paper_figures.py": "06c2c487ebc061994960372e612820924d4cae3d19c4cd27302c23fd7cef6cf5",
+    "paper/curve-lfd-bounds.tex": "a80f17441e61d474000f088e97213eadec522dd51c18ef6f48c98dff912c1d6a",
+    "paper/curve-sweep-data.tex": "b4157b566cd70f2aec9c9639163e0f673772b0aff8e240503ad631c6b1bc56fc",
     "experiments/ic-curve-sweep/summary.json": "4722c5d0f3c407f9b97979d722b62541cf3c2fb6b215f9ac15c23d9ca600a404",
-    "experiments/ic-lean/verification.json": "67e94a265bb0d61ef12b192b1946619dd1b0130765991487bcf4102247e83753"
+    "experiments/ic-lean/verification.json": "37e06ce33bfb1e6893d44d5efd5aa098b17594e39cdb420e03e56075ce3964bf"
   },
   "data_sha256": {
-    "paper/curve-lfd-bounds.pdf": "75519ea9061f770f68e2f3a30be4fbf0e709bd4171f42b5c3fc35e1d42a146ae",
-    "paper/figures/curve-sweep.pdf": "8b838caf9bf53077bb209eb2263f9fbda773abb1ee04ba5bb7cc3cba8d46dff4",
-    "paper/figures/curve-sweep.png": "8af7d4b271f79495518219a9ffdc120ae24ce61ac8a34eb392858f4973b2340c"
+    "paper/curve-lfd-bounds.pdf": "b6cf9639f73662791742c69c007e4a24c12f663b7d652182bc3de5937a938876",
+    "paper/figures/curve-sweep.pdf": "51da968f2ecad0c750efb263008a556dcc19f638fe4f8ff0529d47d0d821b7fb",
+    "paper/figures/curve-sweep.png": "1d5897b3d0854e69d945f7f6109e2b648a0e2fdd976d55d4e3946d793a0581a5",
+    "paper/figures/lfd-depth.pdf": "34401e1cfadd236af81be0d35c0385a0e9a18fb2829528fc00c6983a91a42f73",
+    "paper/figures/closure-dims.pdf": "9a31abb43a8c78d594e6a4ce5a201e1f6d22d581be2862a9abe0e52b4bbe4fdd",
+    "paper/figures/msummands.pdf": "1a4c90d7c915e7afe6e41d24e811d5ac70e1a802b01b92f5a2f578ec23301703",
+    "paper/figures/binary-deep.pdf": "61fe91a901c083afb344419dfa6a1f3d4129e6258fd84800192d95061c4ed960"
   }
 }

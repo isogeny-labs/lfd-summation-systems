@@ -1,0 +1,363 @@
+{
+ "status": "exact-unit",
+ "exact_lfd": 16,
+ "lfd_lower_bound": 16,
+ "kernel_upper_bound": 16,
+ "strict_falls": [
+  16
+ ],
+ "certificate": {
+  "kind": "unit",
+  "degree": 16
+ },
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 16,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 121,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 576,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 1941,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 4944,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.02
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 9949,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.04
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 16384,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.07
+  },
+  {
+   "D": 8,
+   "monomials_le_D": 22819,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.13
+  },
+  {
+   "D": 9,
+   "monomials_le_D": 27824,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.16
+  },
+  {
+   "D": 10,
+   "monomials_le_D": 30827,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.2
+  },
+  {
+   "D": 11,
+   "monomials_le_D": 32192,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.21
+  },
+  {
+   "D": 12,
+   "monomials_le_D": 32647,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.22
+  },
+  {
+   "D": 13,
+   "monomials_le_D": 32752,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.23
+  },
+  {
+   "D": 14,
+   "monomials_le_D": 32767,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.23
+  },
+  {
+   "D": 15,
+   "monomials_le_D": 32768,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "closed-sweep",
+   "seconds": 0.47
+  },
+  {
+   "D": 16,
+   "monomials_le_D": 32768,
+   "quotient_rank": 32768,
+   "profile": [
+    1,
+    16,
+    121,
+    576,
+    1941,
+    4944,
+    9949,
+    16384,
+    22819,
+    27824,
+    30827,
+    32192,
+    32647,
+    32752,
+    32767,
+    32768,
+    32768
+   ],
+   "contains_one": true,
+   "strict_fall": true,
+   "closure_check": "unit",
+   "seconds": 703.54
+  }
+ ],
+ "solutions": 0,
+ "generator_degree": 15,
+ "generator_terms": 32738,
+ "cap_reason": null,
+ "name": "GP-m5k3-p449-r",
+ "generator_hash": "9a19591c7fb18bcc070f85128aaf6a2bd841f1d51da445546b9cef2df4157d80",
+ "seconds": 705.6,
+ "max_rss_gb": 3.32
+}

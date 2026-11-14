@@ -1,0 +1,945 @@
+{
+ "name": "control-m3-prime",
+ "ok": true,
+ "n": 36,
+ "rows": [
+  {
+   "instance": "p97-r",
+   "k": 2,
+   "p": 97,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p97-r",
+   "k": 3,
+   "p": 97,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.4,
+   "equal": true
+  },
+  {
+   "instance": "p97-r",
+   "k": 4,
+   "p": 97,
+   "Z": 45,
+   "Z_recorded": 45,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.8,
+   "equal": true
+  },
+  {
+   "instance": "p193-r",
+   "k": 2,
+   "p": 193,
+   "Z": 6,
+   "Z_recorded": 6,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p193-r",
+   "k": 3,
+   "p": 193,
+   "Z": 12,
+   "Z_recorded": 12,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p193-r",
+   "k": 4,
+   "p": 193,
+   "Z": 69,
+   "Z_recorded": 69,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.9,
+   "equal": true
+  },
+  {
+   "instance": "p257-r",
+   "k": 2,
+   "p": 257,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p257-r",
+   "k": 3,
+   "p": 257,
+   "Z": 6,
+   "Z_recorded": 6,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p257-r",
+   "k": 4,
+   "p": 257,
+   "Z": 24,
+   "Z_recorded": 24,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 5.1,
+   "equal": true
+  },
+  {
+   "instance": "p7681-r",
+   "k": 2,
+   "p": 7681,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p7681-r",
+   "k": 3,
+   "p": 7681,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p7681-r",
+   "k": 4,
+   "p": 7681,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.8,
+   "equal": true
+  },
+  {
+   "instance": "p97-pl",
+   "k": 2,
+   "p": 97,
+   "Z": 1,
+   "Z_recorded": 1,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p97-pl",
+   "k": 3,
+   "p": 97,
+   "Z": 11,
+   "Z_recorded": 11,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.6,
+   "equal": true
+  },
+  {
+   "instance": "p97-pl",
+   "k": 4,
+   "p": 97,
+   "Z": 83,
+   "Z_recorded": 83,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 5.7,
+   "equal": true
+  },
+  {
+   "instance": "p193-pl",
+   "k": 2,
+   "p": 193,
+   "Z": 3,
+   "Z_recorded": 3,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p193-pl",
+   "k": 3,
+   "p": 193,
+   "Z": 15,
+   "Z_recorded": 15,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p193-pl",
+   "k": 4,
+   "p": 193,
+   "Z": 52,
+   "Z_recorded": 52,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.6,
+   "equal": true
+  },
+  {
+   "instance": "p257-pl",
+   "k": 2,
+   "p": 257,
+   "Z": 10,
+   "Z_recorded": 10,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p257-pl",
+   "k": 3,
+   "p": 257,
+   "Z": 22,
+   "Z_recorded": 22,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p257-pl",
+   "k": 4,
+   "p": 257,
+   "Z": 58,
+   "Z_recorded": 58,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 5.2,
+   "equal": true
+  },
+  {
+   "instance": "p7681-pl",
+   "k": 2,
+   "p": 7681,
+   "Z": 10,
+   "Z_recorded": 10,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p7681-pl",
+   "k": 3,
+   "p": 7681,
+   "Z": 22,
+   "Z_recorded": 22,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p7681-pl",
+   "k": 4,
+   "p": 7681,
+   "Z": 46,
+   "Z_recorded": 46,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.9,
+   "equal": true
+  },
+  {
+   "instance": "p353-r",
+   "k": 2,
+   "p": 353,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p353-r",
+   "k": 3,
+   "p": 353,
+   "Z": 3,
+   "Z_recorded": 3,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.6,
+   "equal": true
+  },
+  {
+   "instance": "p353-r",
+   "k": 4,
+   "p": 353,
+   "Z": 15,
+   "Z_recorded": 15,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.6,
+   "equal": true
+  },
+  {
+   "instance": "p449-pl",
+   "k": 2,
+   "p": 449,
+   "Z": 10,
+   "Z_recorded": 10,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p449-pl",
+   "k": 3,
+   "p": 449,
+   "Z": 22,
+   "Z_recorded": 22,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p449-pl",
+   "k": 4,
+   "p": 449,
+   "Z": 79,
+   "Z_recorded": 79,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 5.1,
+   "equal": true
+  },
+  {
+   "instance": "p577-r",
+   "k": 2,
+   "p": 577,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p577-r",
+   "k": 3,
+   "p": 577,
+   "Z": 0,
+   "Z_recorded": 0,
+   "lfd": 7,
+   "status": "exact-unit",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.4,
+   "equal": true
+  },
+  {
+   "instance": "p577-r",
+   "k": 4,
+   "p": 577,
+   "Z": 6,
+   "Z_recorded": 6,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.8,
+   "equal": true
+  },
+  {
+   "instance": "p641-pl",
+   "k": 2,
+   "p": 641,
+   "Z": 6,
+   "Z_recorded": 6,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.0,
+   "equal": true
+  },
+  {
+   "instance": "p641-pl",
+   "k": 3,
+   "p": 641,
+   "Z": 6,
+   "Z_recorded": 6,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 0.5,
+   "equal": true
+  },
+  {
+   "instance": "p641-pl",
+   "k": 4,
+   "p": 641,
+   "Z": 36,
+   "Z_recorded": 36,
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "falls": [
+    7
+   ],
+   "compared": [
+    {
+     "D": 6,
+     "profile_equal": true,
+     "rank_equal": true
+    },
+    {
+     "D": 7,
+     "profile_equal": true,
+     "rank_equal": true
+    }
+   ],
+   "seconds": 4.5,
+   "equal": true
+  }
+ ],
+ "statement": "LFD 7, |Z|, V_D profile and rank at every recorded D >= 6 equal to experiments/ic-bounds-m3-depth/closures.jsonl",
+ "seconds": 65.2
+}

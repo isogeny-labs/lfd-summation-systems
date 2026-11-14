@@ -1,0 +1,164 @@
+{
+ "name": "G-m3n10k6-ordA-ran-pla",
+ "system_hash": "69d358882914be0b62ee6840cd27ae759565c70751e56af74b8422eca3d6e66d",
+ "n": 10,
+ "k": 6,
+ "n_points": 375,
+ "points_sha256": "b5d845cdcb481595c9f770bfafb52555dce53328aeb2796731692771a790eaef",
+ "cls": "proper",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "device": "gpu",
+ "status": "exact-proper-local",
+ "exact_lfd": 7,
+ "certificate_degree": 7,
+ "strict_falls": [
+  7
+ ],
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  10,
+  62629
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 19
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 18,
+   "codimension": 172
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 154,
+   "codimension": 988
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 375,
+   "codimension": 4048
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 375,
+   "codimension": 12616
+  },
+  {
+   "degree": 6,
+   "evaluation_rank": 375,
+   "codimension": 31170
+  },
+  {
+   "degree": 7,
+   "evaluation_rank": 375,
+   "codimension": 375
+  }
+ ],
+ "profiles": [
+  [
+   0
+  ],
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   10
+  ],
+  [
+   0,
+   1,
+   18,
+   613,
+   3673,
+   12241,
+   30805,
+   62629
+  ]
+ ],
+ "rref_sha256": [
+  "7606e2efa12665b1ba371a012f794a0d72cec09496c8e9b16e49be6d79be56e6",
+  "29b882d1fc7a6ecd6a02bc4f37b58314f6cacbc82d7503a9e0947b2038ef1c04",
+  "b887cd7161da793e0de3385c61394d6958b16f27d090a063a99612f5a0e5dad6",
+  "9bb4dcbab55cb00a916713d7af64f82fe14c00561ec75ba6105479a0fd5ceb1a",
+  "0db000d3179edd2661e5b53f36c937fac0870883187b56ecbe6ef7f201f111c7",
+  "efad1a821e0c66ecd8788b8da1511d7bcb9f5ae03fab2b83d739787ad00731c7",
+  "20a7d5289f285836fbe44d6cc90d305be01a9f5a4151d39ddab3428b9d0366c0",
+  "a6e7b428235f48fb0d3de4a069d7527de9a1530f9768a58a93f5ec436becf64b"
+ ],
+ "columns": [
+  1,
+  19,
+  172,
+  988,
+  4048,
+  12616,
+  31180,
+  63004
+ ],
+ "per_degree_seconds": [
+  0.006,
+  0.006,
+  0.006,
+  0.008,
+  0.006,
+  0.006,
+  0.076,
+  13.179
+ ],
+ "per_degree_flops": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  12492800.0,
+  129275018455168.0
+ ],
+ "closed_all": true,
+ "repairs": 0,
+ "seconds": 14.28,
+ "peak_rss_mb": 608,
+ "device_peak_bytes": 110230665728
+}

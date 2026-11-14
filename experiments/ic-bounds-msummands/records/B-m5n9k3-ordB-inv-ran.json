@@ -1,0 +1,62 @@
+{
+ "case": "B-m5n9k3-ordB-inv-ran",
+ "family": "binary",
+ "m": 5,
+ "n": 9,
+ "k": 3,
+ "variables": 15,
+ "curve": "ordB",
+ "a": 382,
+ "b": 10,
+ "basis": [
+  302,
+  252,
+  1
+ ],
+ "target": [
+  201,
+  353
+ ],
+ "target_class": "random",
+ "base_kind": "invariant",
+ "frobenius_invariant": true,
+ "input_degree": 15,
+ "equations": 9,
+ "const_equation": false,
+ "system_hash": "96e6de5d7d8ebf28a5711e236966b19ca27199fd5131cde60384b3c9923bf2a0",
+ "instance_hash": "52e3b460e015de6331d3721a8e3b616196382bf51a09a44725bb96beefac7c93",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "status": "exact-unit",
+ "exact_lfd": 15,
+ "strict_falls": [
+  14,
+  15
+ ],
+ "certificate_degree": 15,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  31767,
+  32768
+ ],
+ "local_checks": [],
+ "kernel_upper_bound": 16,
+ "cap_reason": null,
+ "engine": "csd.ic_bounds_bin_big.local_profile_bin(cpu)",
+ "seconds": 689.63,
+ "max_rss_gb": 1.89
+}

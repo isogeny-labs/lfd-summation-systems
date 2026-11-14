@@ -1,0 +1,219 @@
+{
+ "name": "engines-prime",
+ "ok": true,
+ "n": 14,
+ "rows": [
+  {
+   "m": 2,
+   "k": 3,
+   "p": 97,
+   "planted": true,
+   "Z": 2,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 4,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 2,
+   "k": 3,
+   "p": 97,
+   "planted": false,
+   "Z": 0,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 4,
+   "status": "exact-unit",
+   "equal": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 97,
+   "planted": true,
+   "Z": 1,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 97,
+   "planted": false,
+   "Z": 0,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 7,
+   "status": "exact-unit",
+   "equal": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 7681,
+   "planted": true,
+   "Z": 3,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 7681,
+   "planted": false,
+   "Z": 0,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 7,
+   "status": "exact-unit",
+   "equal": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 257,
+   "planted": true,
+   "Z": 3,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 7,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 257,
+   "planted": false,
+   "Z": 0,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 7,
+   "status": "exact-unit",
+   "equal": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 97,
+   "planted": true,
+   "Z": 19,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 9,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 97,
+   "planted": false,
+   "Z": 32,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 9,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 257,
+   "planted": true,
+   "Z": 19,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 9,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 257,
+   "planted": false,
+   "Z": 0,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 9,
+   "status": "exact-unit",
+   "equal": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 641,
+   "planted": true,
+   "Z": 120,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 11,
+   "status": "exact-proper-local",
+   "equal": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 641,
+   "planted": false,
+   "Z": 0,
+   "engines": [
+    "dense/sandwich=False",
+    "compact/sandwich=False",
+    "compact/sandwich=True"
+   ],
+   "lfd": 11,
+   "status": "exact-unit",
+   "equal": true
+  }
+ ],
+ "statement": "per-D quotient rank and low profile identical between chain_degree_closure (dense), CompactClosure without and with the sandwich",
+ "seconds": 20.1
+}

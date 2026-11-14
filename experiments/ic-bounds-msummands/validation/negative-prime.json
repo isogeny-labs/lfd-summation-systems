@@ -1,0 +1,379 @@
+{
+ "name": "negative-prime",
+ "rows": [
+  {
+   "m": 3,
+   "k": 2,
+   "p": 97,
+   "Z": 1,
+   "kind": "zero-to-nonzero",
+   "grid_index": 21,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "assertion": "unit ideal with a nonempty zero set"
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 0,
+    "status": "exact-unit",
+    "lfd": 7
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 97,
+   "Z": 1,
+   "kind": "nonzero-to-zero",
+   "grid_index": 0,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 2,
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 97,
+   "Z": 1,
+   "kind": "nonzero-shifted",
+   "grid_index": 1,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 7,
+    "inclusion_failures": []
+   },
+   "detected": false,
+   "consistent_altered": {
+    "Z": 1,
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "consistent_changes_result": false
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 257,
+   "Z": 3,
+   "kind": "zero-to-nonzero",
+   "grid_index": 182,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": [
+     10
+    ]
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 2,
+    "status": "exact-proper-local",
+    "lfd": 10
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 257,
+   "Z": 3,
+   "kind": "nonzero-to-zero",
+   "grid_index": 0,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 4,
+    "status": "exact-proper-local",
+    "lfd": 10
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 257,
+   "Z": 3,
+   "kind": "nonzero-shifted",
+   "grid_index": 1,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 10,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 3,
+    "status": "exact-proper-local",
+    "lfd": 10
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 257,
+   "Z": 19,
+   "kind": "zero-to-nonzero",
+   "grid_index": 5,
+   "original_lfd": 9,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": [
+     9
+    ]
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 18,
+    "status": "exact-proper-local",
+    "lfd": 9
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 257,
+   "Z": 19,
+   "kind": "nonzero-to-zero",
+   "grid_index": 0,
+   "original_lfd": 9,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 20,
+    "status": "exact-proper-local",
+    "lfd": 9
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 257,
+   "Z": 19,
+   "kind": "nonzero-shifted",
+   "grid_index": 1,
+   "original_lfd": 9,
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 9,
+    "inclusion_failures": []
+   },
+   "detected": false,
+   "consistent_altered": {
+    "Z": 19,
+    "status": "exact-proper-local",
+    "lfd": 9
+   },
+   "consistent_changes_result": false
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 97,
+   "Z": 64,
+   "kind": "zero-to-nonzero",
+   "grid_index": 1,
+   "original_lfd": 9,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": [
+     9
+    ]
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 63,
+    "status": "exact-proper-local",
+    "lfd": 9
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 97,
+   "Z": 64,
+   "kind": "nonzero-to-zero",
+   "grid_index": 0,
+   "original_lfd": 9,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 65,
+    "status": "exact-proper-local",
+    "lfd": 9
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 97,
+   "Z": 64,
+   "kind": "nonzero-shifted",
+   "grid_index": 3,
+   "original_lfd": 9,
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 9,
+    "inclusion_failures": []
+   },
+   "detected": false,
+   "consistent_altered": {
+    "Z": 64,
+    "status": "exact-proper-local",
+    "lfd": 9
+   },
+   "consistent_changes_result": false
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 641,
+   "Z": 120,
+   "kind": "zero-to-nonzero",
+   "grid_index": 7,
+   "original_lfd": 11,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": [
+     11
+    ]
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 119,
+    "status": "exact-proper-local",
+    "lfd": 11
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 641,
+   "Z": 120,
+   "kind": "nonzero-to-zero",
+   "grid_index": 0,
+   "original_lfd": 11,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 121,
+    "status": "exact-proper-local",
+    "lfd": 11
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 641,
+   "Z": 120,
+   "kind": "nonzero-shifted",
+   "grid_index": 1,
+   "original_lfd": 11,
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 11,
+    "inclusion_failures": []
+   },
+   "detected": false,
+   "consistent_altered": {
+    "Z": 120,
+    "status": "exact-proper-local",
+    "lfd": 11
+   },
+   "consistent_changes_result": false
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 193,
+   "Z": 0,
+   "kind": "nonzero-to-zero",
+   "grid_index": 0,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "status": "capped",
+    "lfd": null,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 1,
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "consistent_changes_result": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 193,
+   "Z": 0,
+   "kind": "nonzero-shifted",
+   "grid_index": 1,
+   "original_lfd": 7,
+   "wrong_vs_true_Z": {
+    "status": "exact-unit",
+    "lfd": 7,
+    "inclusion_failures": []
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 0,
+    "status": "exact-unit",
+    "lfd": 7
+   },
+   "consistent_changes_result": false
+  }
+ ],
+ "n": 17,
+ "detected_wrong_vs_true_Z": 13,
+ "zero_to_nonzero_detected": [
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "ok": true,
+ "seconds": 58.0
+}

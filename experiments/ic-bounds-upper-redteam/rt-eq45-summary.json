@@ -1,0 +1,161 @@
+{
+ "job": "eq45",
+ "total": 1724,
+ "violations": [],
+ "uncertified": [],
+ "seconds": 1866.9,
+ "families": {
+  "k4-special p=17 k=(4,4) s=(1,1) raw=False": {
+   "instances": 500,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 500
+   },
+   "seconds": 450.1
+  },
+  "k4-special p=97 k=(4,4) s=(1,1) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 70.3
+  },
+  "k4-special p=97 k=(4,4) s=(1,2) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 69.1
+  },
+  "k4-special p=113 k=(4,4) s=(1,1) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 69.3
+  },
+  "k4-special p=113 k=(4,4) s=(1,2) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 71.3
+  },
+  "k4-special p=193 k=(4,4) s=(1,1) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 80.9
+  },
+  "k4-special p=193 k=(4,4) s=(1,2) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 79.7
+  },
+  "k4-special p=241 k=(4,4) s=(1,1) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 72.9
+  },
+  "k4-special p=241 k=(4,4) s=(1,2) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 74.0
+  },
+  "k4-special p=257 k=(4,4) s=(1,1) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 73.4
+  },
+  "k4-special p=257 k=(4,4) s=(1,3) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 72.0
+  },
+  "k4-special p=12289 k=(4,4) s=(1,1) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 76.0
+  },
+  "k4-special p=12289 k=(4,4) s=(1,2) raw=False": {
+   "instances": 90,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 90
+   },
+   "seconds": 73.7
+  },
+  "k5-special p=97 k=(5,5) s=(1,1) raw=False": {
+   "instances": 24,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 24
+   },
+   "seconds": 92.2
+  },
+  "k5-special p=97 k=(5,5) s=(1,2) raw=False": {
+   "instances": 24,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 24
+   },
+   "seconds": 86.8
+  },
+  "k5-special p=193 k=(5,5) s=(1,1) raw=False": {
+   "instances": 24,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 24
+   },
+   "seconds": 88.6
+  },
+  "k5-special p=193 k=(5,5) s=(1,2) raw=False": {
+   "instances": 24,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 24
+   },
+   "seconds": 88.9
+  },
+  "k5-special p=257 k=(5,5) s=(1,1) raw=False": {
+   "instances": 24,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 24
+   },
+   "seconds": 88.3
+  },
+  "k5-special p=257 k=(5,5) s=(1,3) raw=False": {
+   "instances": 24,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 24
+   },
+   "seconds": 89.3
+  }
+ }
+}

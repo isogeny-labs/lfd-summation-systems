@@ -1,0 +1,44 @@
+{
+ "bound_k_plus_2_violations": 0,
+ "first_equal_below_generation": 0,
+ "instances": 14538,
+ "lfd_histogram": {
+  "k=1": {
+   "2": 252,
+   "3": 2170
+  },
+  "k=2": {
+   "3": 416,
+   "4": 6336
+  },
+  "k=3": {
+   "4": 4924
+  },
+  "k=4": {
+   "4": 360
+  },
+  "k=5": {
+   "4": 80
+  }
+ },
+ "proper_first_equal_vs_generation": {
+  "k=1": {
+   "first_equal=2,gen_degree=2": 94,
+   "first_equal=3,gen_degree=2": 474
+  },
+  "k=2": {
+   "first_equal=3,gen_degree=2": 184,
+   "first_equal=4,gen_degree=2": 3160
+  },
+  "k=3": {
+   "first_equal=4,gen_degree=2": 4311
+  },
+  "k=4": {
+   "first_equal=4,gen_degree=2": 316
+  },
+  "k=5": {
+   "first_equal=4,gen_degree=2": 79
+  }
+ },
+ "seconds": 745.6
+}

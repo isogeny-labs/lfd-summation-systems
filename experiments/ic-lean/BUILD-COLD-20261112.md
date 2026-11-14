@@ -10,3 +10,6 @@ every project module from scratch (4 cores, 15 GB RAM).
   then `lake build` of everything: "Build completed successfully".
 - `audit-20261112.log`: `scripts/verify_lean_fall_degrees.py`: 513 audited declarations,
   no project axioms, no placeholders.
+
+This build predates the `Growth*`, `Selector*`, `UnitInstance` and `DepthFourteen` modules; the
+582-declaration audit in `axioms.log` is a warm-tree run (see `README.md`).

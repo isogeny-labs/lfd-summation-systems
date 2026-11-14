@@ -1,0 +1,191 @@
+{
+ "case": "P-m3k2-p641-pl",
+ "family": "prime",
+ "m": 3,
+ "k": 2,
+ "p": 641,
+ "a": 395,
+ "b": 254,
+ "t": 537,
+ "target_class": "planted-H4",
+ "generator_degree": 6,
+ "generator_terms": 64,
+ "generator_hash": "41eedc78f25e08175f18d7cc52645b0f6f987e1e537644c92f243f56cd149a73",
+ "instance_hash": "39368aa1f0b770c30836c321bdea0afc25a238f79872c4d5bd1a14e029fe6e41",
+ "points_sha256": "fc9201aee37b61d3bb08431779ef519cb8434c59663d5e3c0a869aec28155b22",
+ "solutions": 3,
+ "ideal_class": "proper",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-proper-local",
+ "exact_lfd": 7,
+ "lfd_lower_bound": 7,
+ "kernel_upper_bound": 7,
+ "strict_falls": [
+  7
+ ],
+ "certificate": {
+  "kind": "local-to-global",
+  "degree": 7,
+  "solutions": 3
+ },
+ "certificate_degree": 7,
+ "prop1_variables": 6,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 7,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 1,
+   "evaluation_rank_le_D": 3,
+   "ideal_dim_le_D": 4,
+   "codim": 7
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 22,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 3,
+   "evaluation_rank_le_D": 3,
+   "ideal_dim_le_D": 19,
+   "codim": 22
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 42,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 3,
+   "evaluation_rank_le_D": 3,
+   "ideal_dim_le_D": 39,
+   "codim": 42
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 57,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 3,
+   "evaluation_rank_le_D": 3,
+   "ideal_dim_le_D": 54,
+   "codim": 57
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 63,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 3,
+   "evaluation_rank_le_D": 3,
+   "ideal_dim_le_D": 60,
+   "codim": 63
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 64,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 3,
+   "evaluation_rank_le_D": 3,
+   "ideal_dim_le_D": 61,
+   "codim": 63
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 64,
+   "quotient_rank": 61,
+   "profile": [
+    0,
+    4,
+    19,
+    39,
+    54,
+    60,
+    61,
+    61
+   ],
+   "contains_one": false,
+   "strict_fall": true,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.01,
+   "evaluation_rank_lt_D": 3,
+   "evaluation_rank_le_D": 3,
+   "ideal_dim_le_D": 61,
+   "codim": 3
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 0.02,
+ "max_rss_gb": 0.04
+}
