@@ -1,0 +1,273 @@
+{
+  "disproved_universal_claims": [
+    "Normalized prime-field PKM FFD equals LFD for every instance.",
+    "Normalized prime-field PKM LFD is always at most FFD.",
+    "Normalized two-summand PKM LFD is always at most 4."
+  ],
+  "counterexamples": [
+    {
+      "name": "generic-prime-order",
+      "p": 2689,
+      "a": 1739,
+      "b": 1574,
+      "target": [
+        797,
+        1184
+      ],
+      "m": 2,
+      "k": 6,
+      "exact_lfd": 5,
+      "exact_ffd": 4,
+      "group_order": 2614,
+      "target_order": 1307,
+      "target_order_factorization": {
+        "1307": 1
+      },
+      "target_has_prime_order": true,
+      "target_outside_factor_base": true,
+      "subgroup_grid_size": 4096,
+      "subgroup_grid_zeros": 0,
+      "derivative": 865,
+      "generator": {
+        "0": 1447,
+        "1": 2164,
+        "2": 605,
+        "64": 2164,
+        "65": 690,
+        "66": 1095,
+        "128": 605,
+        "129": 1095,
+        "130": 1
+      },
+      "exact_affine_first_strict_fall": 4,
+      "affine_strict_falls": [
+        4,
+        5
+      ],
+      "degree_closures": [
+        {
+          "degree": 0,
+          "standard_columns": 1,
+          "quotient_rank": 0,
+          "ordinary_rank": 0,
+          "lower_degree_dimension": 0,
+          "contains_one": false,
+          "rank_history": [
+            0
+          ]
+        },
+        {
+          "degree": 1,
+          "standard_columns": 13,
+          "quotient_rank": 0,
+          "ordinary_rank": 0,
+          "lower_degree_dimension": 0,
+          "contains_one": false,
+          "rank_history": [
+            0
+          ]
+        },
+        {
+          "degree": 2,
+          "standard_columns": 79,
+          "quotient_rank": 1,
+          "ordinary_rank": 13,
+          "lower_degree_dimension": 0,
+          "contains_one": false,
+          "rank_history": [
+            1
+          ]
+        },
+        {
+          "degree": 3,
+          "standard_columns": 299,
+          "quotient_rank": 13,
+          "ordinary_rank": 169,
+          "lower_degree_dimension": 13,
+          "contains_one": false,
+          "rank_history": [
+            1,
+            13
+          ]
+        },
+        {
+          "degree": 4,
+          "standard_columns": 794,
+          "quotient_rank": 605,
+          "ordinary_rank": 1631,
+          "lower_degree_dimension": 267,
+          "contains_one": false,
+          "rank_history": [
+            1,
+            13,
+            79,
+            123,
+            212,
+            272,
+            363,
+            422,
+            491,
+            557,
+            598,
+            605,
+            605
+          ]
+        },
+        {
+          "degree": 5,
+          "standard_columns": 1586,
+          "quotient_rank": 1586,
+          "ordinary_rank": 6188,
+          "lower_degree_dimension": 1820,
+          "contains_one": true,
+          "rank_history": [
+            1,
+            13,
+            79,
+            299,
+            472,
+            732,
+            940,
+            1168,
+            1349,
+            1503,
+            1573,
+            1585,
+            1586
+          ]
+        }
+      ],
+      "exclusion_certificate": "generic-prime-order-lower-bound.npz",
+      "exclusion_certificate_sha256": "d8e7fa3888bf529ce788317571c4e62b848079b7358c0f352befa06c99dc4593"
+    },
+    {
+      "name": "derivative-zero",
+      "p": 257,
+      "a": 105,
+      "b": 196,
+      "target": [
+        42,
+        56
+      ],
+      "m": 2,
+      "k": 3,
+      "exact_lfd": 4,
+      "exact_ffd": 3,
+      "group_order": 236,
+      "target_order": 118,
+      "target_order_factorization": {
+        "2": 1,
+        "59": 1
+      },
+      "target_has_prime_order": false,
+      "target_outside_factor_base": true,
+      "subgroup_grid_size": 64,
+      "subgroup_grid_zeros": 0,
+      "derivative": 0,
+      "generator": {
+        "0": 199,
+        "1": 162,
+        "2": 222,
+        "8": 162,
+        "9": 117,
+        "10": 173,
+        "16": 222,
+        "17": 173,
+        "18": 1
+      },
+      "exact_affine_first_strict_fall": 3,
+      "affine_strict_falls": [
+        3,
+        4
+      ],
+      "degree_closures": [
+        {
+          "degree": 0,
+          "standard_columns": 1,
+          "quotient_rank": 0,
+          "ordinary_rank": 0,
+          "lower_degree_dimension": 0,
+          "contains_one": false,
+          "rank_history": [
+            0
+          ]
+        },
+        {
+          "degree": 1,
+          "standard_columns": 7,
+          "quotient_rank": 0,
+          "ordinary_rank": 0,
+          "lower_degree_dimension": 0,
+          "contains_one": false,
+          "rank_history": [
+            0
+          ]
+        },
+        {
+          "degree": 2,
+          "standard_columns": 22,
+          "quotient_rank": 1,
+          "ordinary_rank": 7,
+          "lower_degree_dimension": 0,
+          "contains_one": false,
+          "rank_history": [
+            1
+          ]
+        },
+        {
+          "degree": 3,
+          "standard_columns": 42,
+          "quotient_rank": 16,
+          "ordinary_rank": 58,
+          "lower_degree_dimension": 9,
+          "contains_one": false,
+          "rank_history": [
+            1,
+            7,
+            16
+          ]
+        },
+        {
+          "degree": 4,
+          "standard_columns": 57,
+          "quotient_rank": 57,
+          "ordinary_rank": 210,
+          "lower_degree_dimension": 84,
+          "contains_one": true,
+          "rank_history": [
+            1,
+            7,
+            22,
+            38,
+            50,
+            56,
+            57
+          ]
+        }
+      ],
+      "exclusion_certificate": "derivative-zero-lower-bound.npz",
+      "exclusion_certificate_sha256": "5b12a80a77f0b790bcf28b16aced8742678c2eb06e48e0a0b5038e541f7461f9"
+    }
+  ],
+  "source_sha256": {
+    "docs/IC_FALL_COUNTEREXAMPLES.md": "879ea2d3e4d23bca43ba0b7518b7fc89dc05e58c431fee491e8c6ba8202bee5d",
+    "docs/IC_FALL_PROOFS.md": "4e5f62a6f405ca0b1f2ffe7f2d56d805d562ba3c81cc86215e532ae8b29baaf3",
+    "csd/ic_fall_certificates.py": "3069f1c0a9cd7dfd5a56cf562fff5af171b6291969fff6af140cfe5a7dac8366",
+    "scripts/verify_ic_fall_counterexamples.py": "926e2bdd53fe74e3178235881aedd086ac9f0b6ccc0dc7c315540ebfc1f6afae",
+    "tests/test_ic_fall_certificates.py": "34c2086b0b6ebf6473a06ebe2040e4efa0c4bc5cd0bc0a105f86d30486c17fd4",
+    "csd/ic_fall_proofs.py": "71b1b7bb8f030d96f7933199b90d624c0ce00e226f3da69cc7022437a6b1eb01",
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+    "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+    "csd/_elim.c": "1269131384fc5f110b90b70a1c8f174a60ca7fe968388f6e13f96eba56959290",
+    "csd/field.py": "af3f1d2c22f76396d92bef3b4f1824c88f4706d07ae1f92b0335c12f739160c3"
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "sympy": "1.14.0"
+  },
+  "limitations": [
+    "Finite exact counterexamples disprove universal statements; they do not prove an unbounded LFD family.",
+    "No claim about a high-probability asymptotic heuristic, other encodings, binary curves, or cryptographic speedup.",
+    "This report checks exact Python arithmetic. A separate Lean audit verifies F257 ordinary Koszul FFD3, affine first strict fall3, and LFD4; the F2689 gap remains outside that audit."
+  ]
+}
