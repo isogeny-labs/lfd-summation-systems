@@ -1,5 +1,8 @@
 # Publication review for IACR ePrint, 14 November 2026
 
+**Build follow-up:** the clean-build gap described in this original review is
+now closed. See the successful fresh-run evidence and the follow-up below.
+
 ## Scope and verdict
 
 Reviewed the manuscript update at commit `548ec4e` (PR #4), rather than the
@@ -188,3 +191,20 @@ introduces no new mechanism, experiment or performance claim.
 
 A stronger assertion that every theorem has been independently rebuilt or
 that every computed value is independently certified is not supported.
+
+## Follow-up: clean build completed
+
+[GitHub run 43648104843](https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43648104843)
+succeeded on commit `f13c9ed385f0dfb41a982c8494da3b05064c07fd`. All 120 project
+modules compiled from an initially absent project build directory using Lean
+4.19.0 and the pinned Mathlib dependency cache, then the full verifier and
+582-declaration axiom audit passed. All 124 reviewed source hashes and every
+axiom-dependency entry match the earlier report. Per-module logs, the fresh
+report and the receipt are retained in
+`experiments/ic-lean/clean-20261114/`, with a checksum manifest.
+
+This closes remaining item 1 and the original review's build-reproduction
+reservation. The written growth input, the depth-14 certificate limit,
+same-engine binary replication and author submission decisions retain the
+scope stated above. No theorem or experiment result changed. The revised
+PDF remains byte-identical to the reviewed 38-page candidate.

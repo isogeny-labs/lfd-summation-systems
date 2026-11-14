@@ -43,6 +43,26 @@ def main():
     allowed = {'propext', 'Classical.choice', 'Quot.sound'}
     check('saved audit has only foundational axioms',
           all(set(axioms) <= allowed for axioms in dependencies.values()))
+    clean = root / 'experiments/ic-lean/clean-20261114'
+    if clean.is_dir():
+        from clean_lean_audit import module_order
+        receipt = json.loads((clean / 'receipt.json').read_text())
+        fresh = json.loads((clean / 'verification.json').read_text())
+        check('clean build passed from empty project directory',
+              receipt['status'] == 'passed' and receipt['project_build_directory_absent'] is True)
+        order = module_order(root / 'formal')
+        check('clean build compiled every project module', receipt['module_order'] == order and
+              [s['name'] for s in receipt['stages']] ==
+              [f'{i:03d}-{name}' for i, name in enumerate(order)] + ['verifier'] and
+              all(s['exit_code'] == 0 for s in receipt['stages']))
+        check('clean build source hashes match reviewed sources',
+              fresh['source_sha256'] == receipt['source_sha256'] == reports['ic-lean']['source_sha256'])
+        check('fresh declaration audit matches reviewed audit',
+              fresh['audited_declarations'] == dependencies)
+        check('fresh audit log matches original audit log',
+              (clean / 'axioms.log').read_bytes() == (root / 'experiments/ic-lean/axioms.log').read_bytes())
+        for name, digest in json.loads((clean / 'artifact-manifest.json').read_text()).items():
+            check(f'clean build artifact:{name}', hashlib.sha256((clean / name).read_bytes()).hexdigest() == digest)
     check('paper build has no warnings or overfull boxes',
           reports['ic-curve-paper']['latex_warnings'] == [] and
           reports['ic-curve-paper']['overfull_boxes'] == 0)
@@ -78,7 +98,7 @@ def main():
     check('author and contact on first page', 'Adam Buran' in first_page and
           'a.buran28@gmail.com' in first_page)
     print(json.dumps(dict(status='failed' if failures else 'passed',
-                         scope='artifact consistency only; not a fresh Lean build or closure replay',
+                         scope='read-only artifact consistency; no new proof or closure replay',
                          checks=len(checks), audited_declarations=len(dependencies),
                          sweep_systems=len(systems), failures=failures), indent=2))
     raise SystemExit(bool(failures))

@@ -31,6 +31,9 @@ ORCID and ROR identifiers are optional.
 - PDF builds without LaTeX warnings, unresolved references or overfull boxes.
 - A4, author email on page 1, PDF metadata title matches the manuscript.
 - Abstract agrees with the LaTeX source.
+- Fresh clean Linux build: all 120 project modules compiled and the
+  582-declaration audit passed, matching all 124 source digests. Evidence is
+  retained in `../../experiments/ic-lean/clean-20261114/`.
 - Mathematical and reproducibility limits: see `../README.md` and
   `../../docs/reviews-publication-20261114.md`.
 - Publication information and license require the author’s confirmation at submission;

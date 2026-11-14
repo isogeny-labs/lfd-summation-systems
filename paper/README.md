@@ -1,6 +1,6 @@
 # Main manuscript: ePrint preparation
 
-**Status, 14 November 2026:** corrected candidate for author review. No ePrint
+**Status, 14 November 2026:** corrected ePrint candidate with a fresh clean Lean build and full axiom audit passed; ready for author submission review. No ePrint
 submission or editorial acceptance is recorded by this review. This is a
 technical and artifact review, not independent certification of every proof.
 
@@ -23,12 +23,14 @@ uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
-The saved audit covers 582 declarations and matches all 124 recorded source
-digests. A clean build of the complete current project has not been performed
-in this review. The archived cold build covers the earlier 513 declarations.
-The Python CI cited in the upstream PR does not build Lean. Obtain a fresh
-clean build and axiom audit before treating the current formalization as
-independently rebuilt.
+The [fresh clean Linux build](../experiments/ic-lean/clean-20261114/README.md)
+compiled all 120 project modules from an empty project build directory and
+passed the full 582-declaration axiom audit. All 124 reviewed source digests
+and all audited axiom dependencies match the saved audit. Lean 4.19.0 and
+the committed Mathlib revision were used; only the Mathlib dependency cache
+was reused. The earlier 513-declaration cold build and warm audit remain
+archived with their original scope. The new dedicated Lean CI supplies the
+current clean-build evidence; the older upstream Python CI did not build Lean.
 
 ## Build and checks
 
@@ -52,8 +54,9 @@ retain its logs rather than overwriting the archived audit.
 
 ## Before submission
 
-- Obtain and retain a clean build/audit of the 582-declaration version, or
-  explicitly accept the saved warm-build evidence as the publication limit.
+- Completed: the clean build and 582-declaration audit are retained under
+  `experiments/ic-lean/clean-20261114/`; the read-only publication checker
+  validates their source binding and per-module success.
 - Make the reviewed source, PDF and evidence snapshot publicly addressable;
   this review starts from the update in PR #4, not the older public `main`.
 - Read the review's remaining limits, particularly the depth-14 lift and the

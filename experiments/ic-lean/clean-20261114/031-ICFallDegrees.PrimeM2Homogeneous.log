@@ -1,0 +1,57 @@
+⚠ [1152/1328] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1326/1328] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1327/1328] Replayed ICFallDegrees.QuadraticHomogeneousFamily
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:28:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.coefficient_pivots':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:36:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.q_homogeneous':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:60:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.witness_homogeneous':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:76:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.origin_values':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:79:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.origin_derivatives':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1328/1328] Built ICFallDegrees.PrimeM2Homogeneous
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:28:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.PrimeM2Homogeneous.raw_normalization_identity':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:34:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.PrimeM2Homogeneous.tail_small':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:46:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.PrimeM2Homogeneous.derivative_zero_family_identity':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:56:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully.
