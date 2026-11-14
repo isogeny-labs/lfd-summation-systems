@@ -245,5 +245,5 @@ python3 scripts/lean_check_all.py --out /tmp/lean-check
 On a machine where the `cache` executable does not start (seen on macOS with Darwin 27, where dyld rejects
 the binary linked by the Lean 4.19 toolchain), fetch the Mathlib cache with
 `lake env lean --run .lake/packages/mathlib/Cache/Main.lean get` instead. The workflow
-`.github/workflows/lean-all-modules.yml` runs the same script on Linux. The files `N8*Audit.lean` are the audit
+`.github/workflows/ci.yml` runs the same script on Linux. The files `N8*Audit.lean` are the audit
 files of the individual upstream steps and are kept as they were.

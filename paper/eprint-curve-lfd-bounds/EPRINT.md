@@ -13,7 +13,7 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <a.buran28@gmail.com> |
 | Affiliation / contact (on page 1) | a.buran28@gmail.com |
-| Abstract | paste `eprint-abstract.txt` (2115 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (2288 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |

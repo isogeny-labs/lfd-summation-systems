@@ -18,17 +18,22 @@ The manuscript gives bounds on specified polynomial presentations, exact
 finite-instance closure results, and a conjectural depth profile. Its chain,
 selector and carry bounds have a saved source-bound Lean audit. The growth
 theorem has a written proof; its Lean reduction retains the curve-model
-hypothesis. At depth 14 the lower bound is certified, and the upper bound
+hypothesis, except for one curve with a target of order two, where the
+bound is kernel-checked without it (over the complex numbers and along an
+increasing sequence of primes that is not explicit). At depth 14 the lower bound is certified, and the upper bound
 uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
-The saved audit covers 582 declarations and matches all 124 recorded source
-digests. A clean build of the complete current project has not been performed
-in this review. The archived cold build covers the earlier 513 declarations.
-The Python CI cited in the upstream PR does not build Lean. Obtain a fresh
-clean build and axiom audit before treating the current formalization as
-independently rebuilt.
+The saved audit covers 628 declarations of `Audit.lean` and matches every
+recorded source digest. After the review of 14 November the complete project
+was built from an empty build directory (macOS, Lean 4.19.0, pinned Mathlib):
+all 217 modules build, and the 840 declarations over all files that print
+axioms use only `propext`, `Classical.choice` and `Quot.sound`
+(`../experiments/ic-lean/BUILD-COLD-20261114.md`). The workflow
+`.github/workflows/ci.yml` repeats the build and audit on Linux for every
+pull request. The archived cold build of 12 November covers the earlier 513
+declarations.
 
 ## Build and checks
 
@@ -52,10 +57,13 @@ retain its logs rather than overwriting the archived audit.
 
 ## Before submission
 
-- Obtain and retain a clean build/audit of the 582-declaration version, or
-  explicitly accept the saved warm-build evidence as the publication limit.
-- Make the reviewed source, PDF and evidence snapshot publicly addressable;
-  this review starts from the update in PR #4, not the older public `main`.
+- Done on 14 November: a clean build and audit of the current Lean project
+  (see above). Check that the same run is green in CI on the commit that is
+  submitted.
+- Make the reviewed source, PDF and evidence snapshot publicly addressable:
+  merge the pull requests into `main`. The data appendix of the manuscript
+  cites a fixed snapshot commit; it must stay reachable (merge with a merge
+  commit, or update the citation and rebuild).
 - Read the review's remaining limits, particularly the depth-14 lift and the
   written growth proof. An independent depth-14 certificate would strengthen
   the result; the qualified preprint does not claim to have one.

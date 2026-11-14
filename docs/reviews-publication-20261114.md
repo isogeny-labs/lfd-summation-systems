@@ -1,5 +1,17 @@
 # Publication review for IACR ePrint, 14 November 2026
 
+> **Note added when this review was combined with two other changes (14 November 2026).** The review below
+> is unchanged and describes commit `548ec4e`. Since then:
+> - item 1 of "Remaining decisions" is done: the Lean project was built from an empty build directory and
+>   audited (`experiments/ic-lean/BUILD-COLD-20261114.md`; 628 declarations of `Audit.lean`, 840 over all
+>   files), and CI now repeats that build;
+> - item 3 changed in part: for one curve with a target of order two the growth bound is kernel-checked
+>   without the curve-model hypothesis (Theorem "Growth on a fixed curve" of the manuscript, added after
+>   this review and not covered by it); the general theorem is as described below;
+> - item 5: the repository licence is set (`LICENSE`, `LICENSE-CC-BY-4.0.txt`);
+> - the manuscript has 39 pages, and the records in `experiments/publication-review-20261114/` are those of
+>   the reviewed 38-page version.
+
 ## Scope and verdict
 
 Reviewed the manuscript update at commit `548ec4e` (PR #4), rather than the

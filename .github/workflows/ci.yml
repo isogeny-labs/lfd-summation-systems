@@ -24,6 +24,19 @@ jobs:
         run: python -m compileall -q csd scripts experiments tests
       - name: Unit tests of the certificate code
         run: python -m pytest -q tests
+      - name: Saved hashes, audit report, sweep counts, submission abstract and PDF metadata
+        # Before the steps below, which rewrite a timing field and redraw figures in the checkout.
+        run: |
+          sudo apt-get install -y -qq poppler-utils
+          python scripts/check_publication_artifacts.py
+      - name: Fixed-curve growth theorem, 33 exact regressions
+        run: |
+          set -euo pipefail
+          for script in scripts/check_n8_*.py; do
+            echo "::group::$script"
+            python "$script"
+            echo "::endgroup::"
+          done
       - name: Three to eight summands (second implementation against the records)
         run: python scripts/ic_bounds_msum.py selftest
       - name: Fall counterexamples (recomputed against the record and its source hashes)
@@ -76,6 +89,12 @@ jobs:
         # SparseDemo.lean, and fails on any axiom beyond propext, Classical.choice and Quot.sound.
         working-directory: .
         run: python3 scripts/verify_lean_fall_degrees.py
+      - name: Every module and every printed axiom list
+        # `lake build` covers the modules the root file imports. This builds the remaining ones and
+        # elaborates every file with `#print axioms` (Audit.lean, the N8*Audit.lean files, and the
+        # modules that print their own); it fails on any axiom beyond the three above.
+        working-directory: .
+        run: python3 scripts/lean_check_all.py --out "$RUNNER_TEMP/lean-check"
       - name: Keep the audit
         if: always()
         uses: actions/upload-artifact@v4
@@ -85,3 +104,4 @@ jobs:
             experiments/ic-lean/verification.json
             experiments/ic-lean/build.log
             experiments/ic-lean/axioms.log
+            ${{ runner.temp }}/lean-check

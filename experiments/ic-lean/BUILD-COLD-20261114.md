@@ -27,4 +27,4 @@ The same run then executed `scripts/verify_lean_fall_degrees.py`, which wrote `b
 
 The build covers the modules added after the cold build of 2026-11-12 (`Growth*`, `Selector*`, `UnitInstance`,
 `DepthFourteen`) and the fixed-curve growth modules; for the latter it is the first build in this repository.
-The workflow `.github/workflows/lean-all-modules.yml` repeats it on Linux for every change under `formal/`.
+The workflow `.github/workflows/ci.yml` repeats it on Linux on every pull request.

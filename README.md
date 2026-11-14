@@ -79,7 +79,7 @@ Python self-tests, on every pull request and every push to `main`. Three sources
 `replay_with_current_sources.py` keeps the data hashes, reports the changed sources and replays every system
 with the current code. `python3 scripts/lean_check_all.py --out <dir>` goes further than the first command: it
 builds every module under `formal/ICFallDegrees/`, including those the root file does not import, and audits
-every `#print axioms` in the project (`formal/README.md`); the workflow `lean-all-modules.yml` runs it. The
+every `#print axioms` in the project (`formal/README.md`); the workflow runs it too. The
 depth-ten runs take about two hours each and the degree-six closure about five hours. The commands for the GPU
 runs and for the degree lift are in `experiments/ic-bounds-k14/README.md` and `LIFT.md`.
 
@@ -127,3 +127,8 @@ papers, figures, written proofs, notes and data records are under the Creative C
 International licence (`LICENSE-CC-BY-4.0.txt`). In detail: MIT covers `csd/`, `scripts/`, `tests/`, `formal/`
 and the code inside `experiments/`; CC BY 4.0 covers `paper/`, `docs/`, the Markdown files in `experiments/` and
 the data records (the JSON, JSONL, CSV, NPZ and log files in `experiments/`).
+
+Three Lean files contain portions adapted from Apache-2.0 sources and keep those notices in their headers:
+`formal/ICFallDegrees/GrowthComplexRatFuncDerivative.lean` (JacobianTwo; licence text in
+`formal/third_party/JacobianTwo-APACHE-2.0-LICENSE`), `GrowthPolynomialWronskianBasis.lean` and
+`GrowthPolynomialWronskianDistinctDegree.lean` (ArkLib). The adapted portions remain under Apache-2.0.
