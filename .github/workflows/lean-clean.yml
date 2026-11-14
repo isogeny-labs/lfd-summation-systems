@@ -1,0 +1,54 @@
+name: Clean Lean build and axiom audit
+
+on:
+  push:
+    branches: [codex/publication-review-20261114]
+    paths: [formal/**, scripts/verify_lean_fall_degrees.py, scripts/clean_lean_audit.py, .github/workflows/lean-clean.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  clean-lean:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    env:
+      MATHLIB_NO_CACHE_ON_UPDATE: '1'
+      LEAN_NUM_THREADS: '2'
+      AUDIT_OUT: experiments/ic-lean/clean-20261114
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$AUDIT_OUT"
+          curl -sSfL https://elan.lean-lang.org/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
+          sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain none --no-modify-path
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install "$(cat formal/lean-toolchain)"
+      - name: Fetch pinned dependencies and Mathlib cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd formal
+          lake update > "../$AUDIT_OUT/dependency-setup.log" 2>&1
+          git diff --exit-code -- lake-manifest.json
+          lake exe cache get > "../$AUDIT_OUT/mathlib-cache.log" 2>&1
+          test ! -d .lake/build
+      - name: Rebuild all project modules and audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/clean_lean_audit.py --out "$AUDIT_OUT" 2>&1 | tee "$AUDIT_OUT/driver.log"
+      - name: Retain logs and receipt even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-clean-${{ github.sha }}
+          path: experiments/ic-lean/clean-20261114
+          if-no-files-found: error
+          retention-days: 30
