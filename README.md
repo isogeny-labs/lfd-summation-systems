@@ -15,8 +15,8 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `formal/` | Lean 4 project `ICFallDegrees` (Lean 4.19.0, Mathlib pinned in `lake-manifest.json`) |
 | `csd/` | closure engines and certificate code (Python) |
 | `scripts/` | drivers: one script per experiment, the figure script and the paper build |
-| `docs/proofs/` | written proofs that are not formalized (the `k+2` bound, the depth reduction, genericity) |
-| `docs/reviews-*.md` | reviews of the written proofs |
+| `docs/proofs/` | written proofs that are not formalized (the depth reduction, genericity, the growth theorem `N8-growth.md`, the block-of-four lemmas `N9-block-four.md`) and the plans of the Lean formalizations |
+| `docs/reviews-*.md` | reviews of the written proofs, the red-team reviews of the growth proof and the audit of the paper |
 | `experiments/ic-lean/` | audit of the Lean development (declarations and their axioms) |
 | `experiments/ic-curve-sweep/` | the sweep of Sections 5 and 6 |
 | `experiments/ic-chain-depth8/`, `-depth9/`, `-depth10/` | two-summand systems at depths 8, 9 and 10 |
@@ -25,8 +25,13 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `experiments/ic-bounds-freeext/` | free extension, and the predictions written before the depth-14 runs |
 | `experiments/ic-bounds-m3/`, `ic-bounds-m3-depth/` | three summands |
 | `experiments/ic-bounds-msum/` | three to eight summands |
+| `experiments/ic-bounds-msummands/` | three to five summands with the second implementation (`csd/ic_bounds_msum.py`), local and pod records, predictions |
+| `experiments/ic-bounds-upper/`, `ic-bounds-upper-redteam/` | the upper bound `k+2` for two summands, and its independent red-team checks |
+| `experiments/ic-bounds-growth/`, `ic-bounds-block4/` | records behind the growth theorem and the block-of-four lemmas |
+| `experiments/ic-bounds-genericity/` | genericity of the depth-7 base |
 | `experiments/ic-bounds-locus/` | exceptional locus at depth 6 |
 | `experiments/ic-bounds-binary/`, `ic-bounds-binary-law/` | binary and Koblitz curves |
+| `experiments/ic-bounds-binary-deep/` | deeper binary and Koblitz descents, with two independent replications |
 | `experiments/ic-bounds-cert/`, `ic-bounds-exact-k6/` | data of the certificates checked in Lean |
 | `experiments/ic-curve-validation/` | independent implementation of the closure in the ordinary ring |
 

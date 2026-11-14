@@ -1,0 +1,1037 @@
+{
+ "job": "uneqdeep",
+ "total": 4764,
+ "violations": [],
+ "uncertified": [],
+ "seconds": 2238.7,
+ "families": {
+  "uneq-deep p=97 k=(1,5) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 0.9
+  },
+  "uneq-deep p=97 k=(1,5) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.4
+  },
+  "uneq-deep p=97 k=(2,5) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 4,
+    "4": 36
+   },
+   "seconds": 11.0
+  },
+  "uneq-deep p=97 k=(2,5) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 3,
+    "4": 37
+   },
+   "seconds": 11.7
+  },
+  "uneq-deep p=97 k=(3,5) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.7
+  },
+  "uneq-deep p=97 k=(3,5) s=(1,2) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.9
+  },
+  "uneq-deep p=193 k=(1,5) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.2
+  },
+  "uneq-deep p=193 k=(1,5) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.1
+  },
+  "uneq-deep p=193 k=(2,5) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 3,
+    "4": 37
+   },
+   "seconds": 11.8
+  },
+  "uneq-deep p=193 k=(2,5) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 1,
+    "4": 39
+   },
+   "seconds": 11.7
+  },
+  "uneq-deep p=193 k=(3,5) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.4
+  },
+  "uneq-deep p=193 k=(3,5) s=(1,2) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.7
+  },
+  "uneq-deep p=193 k=(1,6) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.8
+  },
+  "uneq-deep p=193 k=(1,6) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.7
+  },
+  "uneq-deep p=193 k=(2,6) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 37,
+    "3": 3
+   },
+   "seconds": 31.5
+  },
+  "uneq-deep p=193 k=(2,6) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 5,
+    "4": 35
+   },
+   "seconds": 30.2
+  },
+  "uneq-deep p=193 k=(3,6) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 8.5
+  },
+  "uneq-deep p=193 k=(3,6) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 8.1
+  },
+  "uneq-deep p=257 k=(1,5) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 0.9
+  },
+  "uneq-deep p=257 k=(1,5) s=(1,3) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.0
+  },
+  "uneq-deep p=257 k=(2,5) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 40
+   },
+   "seconds": 12.0
+  },
+  "uneq-deep p=257 k=(2,5) s=(1,3) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 38,
+    "3": 2
+   },
+   "seconds": 12.1
+  },
+  "uneq-deep p=257 k=(3,5) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.4
+  },
+  "uneq-deep p=257 k=(3,5) s=(1,3) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.5
+  },
+  "uneq-deep p=257 k=(1,6) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.7
+  },
+  "uneq-deep p=257 k=(1,6) s=(1,3) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.4
+  },
+  "uneq-deep p=257 k=(2,6) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 39,
+    "3": 1
+   },
+   "seconds": 30.6
+  },
+  "uneq-deep p=257 k=(2,6) s=(1,3) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 37,
+    "3": 3
+   },
+   "seconds": 26.6
+  },
+  "uneq-deep p=257 k=(3,6) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 6.8
+  },
+  "uneq-deep p=257 k=(3,6) s=(1,3) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 7.1
+  },
+  "uneq-deep p=257 k=(1,7) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 3.8
+  },
+  "uneq-deep p=257 k=(1,7) s=(1,3) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 4.3
+  },
+  "uneq-deep p=257 k=(2,7) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 1,
+    "4": 15
+   },
+   "seconds": 26.5
+  },
+  "uneq-deep p=257 k=(2,7) s=(1,3) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 15,
+    "3": 1
+   },
+   "seconds": 27.0
+  },
+  "uneq-deep p=257 k=(3,7) s=(1,1) raw=False": {
+   "instances": 1,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 1
+   },
+   "seconds": 4.1
+  },
+  "uneq-deep p=257 k=(3,7) s=(1,3) raw=False": {
+   "instances": 1,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 1
+   },
+   "seconds": 4.5
+  },
+  "uneq-deep p=257 k=(1,8) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 8.0
+  },
+  "uneq-deep p=257 k=(2,8) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 16
+   },
+   "seconds": 82.4
+  },
+  "uneq-deep p=769 k=(1,5) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.6
+  },
+  "uneq-deep p=769 k=(1,5) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.6
+  },
+  "uneq-deep p=769 k=(2,5) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 2,
+    "4": 38
+   },
+   "seconds": 15.2
+  },
+  "uneq-deep p=769 k=(2,5) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 36,
+    "3": 4
+   },
+   "seconds": 14.0
+  },
+  "uneq-deep p=769 k=(3,5) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 7.8
+  },
+  "uneq-deep p=769 k=(3,5) s=(1,2) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 7.3
+  },
+  "uneq-deep p=769 k=(1,6) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.9
+  },
+  "uneq-deep p=769 k=(1,6) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.9
+  },
+  "uneq-deep p=769 k=(2,6) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 38,
+    "3": 2
+   },
+   "seconds": 35.5
+  },
+  "uneq-deep p=769 k=(2,6) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 2,
+    "4": 38
+   },
+   "seconds": 39.6
+  },
+  "uneq-deep p=769 k=(3,6) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 9.7
+  },
+  "uneq-deep p=769 k=(3,6) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 9.7
+  },
+  "uneq-deep p=769 k=(1,7) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 5.4
+  },
+  "uneq-deep p=769 k=(1,7) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 5.0
+  },
+  "uneq-deep p=769 k=(2,7) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 15,
+    "3": 1
+   },
+   "seconds": 37.2
+  },
+  "uneq-deep p=769 k=(2,7) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 13,
+    "3": 3
+   },
+   "seconds": 38.1
+  },
+  "uneq-deep p=769 k=(1,8) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 14.6
+  },
+  "uneq-deep p=769 k=(1,8) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 14.2
+  },
+  "uneq-deep p=769 k=(2,8) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 16
+   },
+   "seconds": 84.8
+  },
+  "uneq-deep p=769 k=(2,8) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 2,
+    "4": 14
+   },
+   "seconds": 68.6
+  },
+  "uneq-deep p=12289 k=(1,5) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.3
+  },
+  "uneq-deep p=12289 k=(1,5) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 1.7
+  },
+  "uneq-deep p=12289 k=(2,5) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 36,
+    "3": 4
+   },
+   "seconds": 12.2
+  },
+  "uneq-deep p=12289 k=(2,5) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 40
+   },
+   "seconds": 13.2
+  },
+  "uneq-deep p=12289 k=(3,5) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.4
+  },
+  "uneq-deep p=12289 k=(3,5) s=(1,2) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.5
+  },
+  "uneq-deep p=12289 k=(1,6) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.9
+  },
+  "uneq-deep p=12289 k=(1,6) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 3.2
+  },
+  "uneq-deep p=12289 k=(2,6) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 37,
+    "3": 3
+   },
+   "seconds": 31.8
+  },
+  "uneq-deep p=12289 k=(2,6) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 2,
+    "4": 38
+   },
+   "seconds": 32.6
+  },
+  "uneq-deep p=12289 k=(3,6) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 7.8
+  },
+  "uneq-deep p=12289 k=(3,6) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 9.0
+  },
+  "uneq-deep p=12289 k=(1,7) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 5.7
+  },
+  "uneq-deep p=12289 k=(1,7) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 5.1
+  },
+  "uneq-deep p=12289 k=(2,7) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 14,
+    "3": 2
+   },
+   "seconds": 30.8
+  },
+  "uneq-deep p=12289 k=(2,7) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 15,
+    "3": 1
+   },
+   "seconds": 34.2
+  },
+  "uneq-deep p=12289 k=(3,7) s=(1,1) raw=False": {
+   "instances": 1,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 1
+   },
+   "seconds": 4.3
+  },
+  "uneq-deep p=12289 k=(3,7) s=(1,2) raw=False": {
+   "instances": 1,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 1
+   },
+   "seconds": 5.0
+  },
+  "uneq-deep p=12289 k=(1,8) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 10.3
+  },
+  "uneq-deep p=12289 k=(1,8) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 10.6
+  },
+  "uneq-deep p=12289 k=(2,8) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 13,
+    "3": 3
+   },
+   "seconds": 74.5
+  },
+  "uneq-deep p=12289 k=(2,8) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 1,
+    "4": 15
+   },
+   "seconds": 83.6
+  },
+  "uneq-deep p=12289 k=(1,9) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 19.4
+  },
+  "uneq-deep p=12289 k=(1,9) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 19.5
+  },
+  "uneq-deep p=12289 k=(2,9) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 46.8
+  },
+  "uneq-deep p=12289 k=(2,9) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 44.9
+  },
+  "uneq-deep p=12289 k=(1,10) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 7.7
+  },
+  "uneq-deep p=12289 k=(1,10) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 7.9
+  },
+  "uneq-deep p=12289 k=(2,10) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 3,
+    "3": 1
+   },
+   "seconds": 71.3
+  },
+  "uneq-deep p=12289 k=(2,10) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 91.8
+  },
+  "uneq-deep p=12289 k=(1,11) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 12.4
+  },
+  "uneq-deep p=12289 k=(1,11) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 13.4
+  },
+  "uneq-deep p=12289 k=(1,12) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 21.7
+  },
+  "uneq-deep p=12289 k=(1,12) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 21.2
+  },
+  "uneq-deep p=40961 k=(1,5) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.2
+  },
+  "uneq-deep p=40961 k=(1,5) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 2.1
+  },
+  "uneq-deep p=40961 k=(2,5) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 1,
+    "4": 39
+   },
+   "seconds": 12.5
+  },
+  "uneq-deep p=40961 k=(2,5) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 3,
+    "4": 37
+   },
+   "seconds": 11.9
+  },
+  "uneq-deep p=40961 k=(3,5) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 7.1
+  },
+  "uneq-deep p=40961 k=(3,5) s=(1,2) raw=False": {
+   "instances": 8,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 6.4
+  },
+  "uneq-deep p=40961 k=(1,6) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 3.3
+  },
+  "uneq-deep p=40961 k=(1,6) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 3.6
+  },
+  "uneq-deep p=40961 k=(2,6) s=(1,1) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 38,
+    "3": 2
+   },
+   "seconds": 31.0
+  },
+  "uneq-deep p=40961 k=(2,6) s=(1,2) raw=False": {
+   "instances": 40,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 2,
+    "4": 38
+   },
+   "seconds": 32.6
+  },
+  "uneq-deep p=40961 k=(3,6) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 6.2
+  },
+  "uneq-deep p=40961 k=(3,6) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 6.7
+  },
+  "uneq-deep p=40961 k=(1,7) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 5.6
+  },
+  "uneq-deep p=40961 k=(1,7) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 4.9
+  },
+  "uneq-deep p=40961 k=(2,7) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 15,
+    "3": 1
+   },
+   "seconds": 26.3
+  },
+  "uneq-deep p=40961 k=(2,7) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 1,
+    "4": 15
+   },
+   "seconds": 27.9
+  },
+  "uneq-deep p=40961 k=(1,8) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 10.1
+  },
+  "uneq-deep p=40961 k=(1,8) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 9.4
+  },
+  "uneq-deep p=40961 k=(2,8) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 15,
+    "3": 1
+   },
+   "seconds": 61.3
+  },
+  "uneq-deep p=40961 k=(2,8) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 15,
+    "3": 1
+   },
+   "seconds": 61.8
+  },
+  "uneq-deep p=40961 k=(1,9) s=(1,1) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 17.9
+  },
+  "uneq-deep p=40961 k=(1,9) s=(1,2) raw=False": {
+   "instances": 80,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 80
+   },
+   "seconds": 17.5
+  },
+  "uneq-deep p=40961 k=(2,9) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 36.3
+  },
+  "uneq-deep p=40961 k=(2,9) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 1,
+    "4": 3
+   },
+   "seconds": 27.6
+  },
+  "uneq-deep p=40961 k=(1,10) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 6.0
+  },
+  "uneq-deep p=40961 k=(1,10) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 6.2
+  },
+  "uneq-deep p=40961 k=(2,10) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 74.2
+  },
+  "uneq-deep p=40961 k=(2,10) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 2,
+    "4": 2
+   },
+   "seconds": 38.2
+  },
+  "uneq-deep p=40961 k=(1,11) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 10.6
+  },
+  "uneq-deep p=40961 k=(1,11) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 10.7
+  },
+  "uneq-deep p=40961 k=(1,12) s=(1,1) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 17.0
+  },
+  "uneq-deep p=40961 k=(1,12) s=(1,2) raw=False": {
+   "instances": 16,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 16
+   },
+   "seconds": 16.7
+  }
+ }
+}

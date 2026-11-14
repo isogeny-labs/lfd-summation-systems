@@ -1,0 +1,124 @@
+{
+ "job": "uneq17",
+ "total": 53820,
+ "violations": [],
+ "uncertified": [],
+ "seconds": 1106.9,
+ "families": {
+  "uneq-plane p=17 k=(1,2) s=(1,1) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 8.2
+  },
+  "uneq-plane p=17 k=(1,2) s=(1,2) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 7.9
+  },
+  "uneq-plane p=17 k=(1,2) s=(1,3) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 7.4
+  },
+  "uneq-plane p=17 k=(1,2) s=(1,6) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 7.4
+  },
+  "uneq-plane p=17 k=(1,3) s=(1,1) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 13.7
+  },
+  "uneq-plane p=17 k=(1,3) s=(1,3) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 14.1
+  },
+  "uneq-plane p=17 k=(1,4) s=(1,1) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 32.9
+  },
+  "uneq-plane p=17 k=(2,3) s=(1,1) raw=False": {
+   "instances": 4624,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 256,
+    "4": 4368
+   },
+   "seconds": 164.4
+  },
+  "uneq-plane p=17 k=(2,3) s=(1,3) raw=False": {
+   "instances": 4624,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 256,
+    "4": 4368
+   },
+   "seconds": 139.9
+  },
+  "uneq-plane p=17 k=(2,4) s=(1,1) raw=False": {
+   "instances": 4624,
+   "bound": 4,
+   "lfd_hist": {
+    "3": 256,
+    "4": 4368
+   },
+   "seconds": 450.6
+  },
+  "uneq-plane p=17 k=(2,1) s=(1,1) raw=False": {
+   "instances": 4624,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 4624
+   },
+   "seconds": 8.1
+  },
+  "uneq-plane p=13 k=(1,2) s=(1,1) raw=False": {
+   "instances": 2028,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 2028
+   },
+   "seconds": 3.4
+  },
+  "uneq-plane p=5 k=(1,2) s=(1,1) raw=False": {
+   "instances": 100,
+   "bound": 3,
+   "lfd_hist": {
+    "3": 100
+   },
+   "seconds": 0.2
+  },
+  "uneq-special p=17 k=(3,4) s=(1,1) raw=False": {
+   "instances": 828,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 828
+   },
+   "seconds": 248.6
+  }
+ }
+}

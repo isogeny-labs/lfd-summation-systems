@@ -1,0 +1,67 @@
+{
+ "chains": [
+  {
+   "name": "pm4-a",
+   "threads": 8,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m4k4-p97-pl",
+    "GP-m4k4-p193-r",
+    "GP-m4k4-p257-pl"
+   ]
+  },
+  {
+   "name": "pm4-b",
+   "threads": 8,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m4k4-p449-r",
+    "GP-m4k4-p641-pl",
+    "GP-m4k4-p7681-r"
+   ]
+  },
+  {
+   "name": "pm5",
+   "threads": 3,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m5k3-p97-pl",
+    "GP-m5k3-p193-r",
+    "GP-m5k3-p257-pl",
+    "GP-m5k3-p449-r",
+    "GP-m5k3-p641-pl",
+    "GP-m5k3-p7681-r"
+   ]
+  },
+  {
+   "name": "pm3k6",
+   "threads": 3,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m3k6-p7681-r",
+    "GP-m3k6-p7681-pl"
+   ]
+  }
+ ],
+ "note": "prime rerun after the missing csd/_elim.c; same systems and threads as the first job"
+}

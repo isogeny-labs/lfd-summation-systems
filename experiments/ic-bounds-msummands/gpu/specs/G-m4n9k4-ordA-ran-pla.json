@@ -1,0 +1,42 @@
+{
+ "spec": {
+  "family": "binary",
+  "m": 4,
+  "n": 9,
+  "k": 4,
+  "curve": "ordA",
+  "a": null,
+  "b": null,
+  "base": "random",
+  "target": "planted",
+  "seed": 20261112,
+  "idx": 2,
+  "tag": "r16",
+  "name": "G-m4n9k4-ordA-ran-pla"
+ },
+ "build": {
+  "name": "G-m4n9k4-ordA-ran-pla",
+  "m": 4,
+  "n": 9,
+  "k": 4,
+  "r": 16,
+  "built": true,
+  "input_degree": 12,
+  "input_degree_source": "built",
+  "solutions": 312,
+  "system_hash": "6b74715ce50de187a059b5308609666443766b419c706f96579c43a2b7ebcda5",
+  "points_sha256": "0e97b139159fcac98047aa5168205ea1da4317e770bd1cba6009a9906187cdfc",
+  "instance_hash": "e760148d3b01ed2ee69e25332c4c4eb12251a56956800c30aa0c751d4e7b18de",
+  "cap_degree": 14,
+  "columns": 65519,
+  "basis_worst_gb": 0.16,
+  "predicted_device_peak_gb": 20.0,
+  "fits_device_141gb": true,
+  "seconds_model": 2.6,
+  "seconds_pessimistic": 10,
+  "frozen_prediction_c": {
+   "upper": 14,
+   "point": 13
+  }
+ }
+}

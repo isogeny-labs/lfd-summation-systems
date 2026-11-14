@@ -1,0 +1,55 @@
+{
+ "spec": {
+  "family": "prime",
+  "m": 4,
+  "k": 4,
+  "p": 7681,
+  "planted": false,
+  "seed": 15,
+  "Ds": [
+   12,
+   13
+  ],
+  "note": "discriminating cell: d = 12 < m k = 16; (a) 17 vs (b) 13",
+  "name": "GP-m4k4-p7681-r"
+ },
+ "build": {
+  "name": "GP-m4k4-p7681-r",
+  "m": 4,
+  "k": 4,
+  "p": 7681,
+  "Ds": [
+   12,
+   13
+  ],
+  "note": "discriminating cell: d = 12 < m k = 16; (a) 17 vs (b) 13",
+  "generator_degree": 12,
+  "generator_terms": 6561,
+  "generator_hash": "72bf2a321c99aaaf3978b5c6ff84029808cf307f3deaf89f47cb28c06f6a843f",
+  "solutions": 0,
+  "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "instance_hash": "8a04564834aed44d7a851d1f6a3736fb387cbff29dfa91b43e547df20db9b2f9",
+  "prop1_variables": 12,
+  "built": true,
+  "cost_by_D": [
+   {
+    "D": 12,
+    "columns": 64839,
+    "madds": 726905001124584.0,
+    "seconds_model": 72.7,
+    "seconds_pessimistic": 290.8,
+    "stored_peak_gb_float32": 3.92,
+    "stored_peak_gb_uint16": 1.96
+   },
+   {
+    "D": 13,
+    "columns": 65399,
+    "madds": 745902487243197.4,
+    "seconds_model": 74.6,
+    "seconds_pessimistic": 298.4,
+    "stored_peak_gb_float32": 3.98,
+    "stored_peak_gb_uint16": 1.99
+   }
+  ]
+ }
+}

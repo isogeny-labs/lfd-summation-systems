@@ -1,0 +1,128 @@
+{
+ "name": "C6b_rand_ordinary_ran_1",
+ "system_hash": "9d901a51d0deec799643f84a20b0b54a847863b7884b751a815be020af9f18a6",
+ "n": 18,
+ "k": 13,
+ "n_points": 226,
+ "points_sha256": "521a67b756106fe4a8a3e86bacfaa2aca456b881b57bd45ab49b445ebd84c513",
+ "cls": "affine",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "device": "gpu",
+ "status": "exact-proper-local",
+ "exact_lfd": 5,
+ "certificate_degree": 5,
+ "strict_falls": [
+  2,
+  3,
+  4,
+  5
+ ],
+ "quotient_ranks": [
+  0,
+  0,
+  43,
+  1043,
+  15957,
+  83456
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 27
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 26,
+   "codimension": 309
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 226,
+   "codimension": 1909
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 226,
+   "codimension": 1945
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 226,
+   "codimension": 226
+  }
+ ],
+ "profiles": [
+  [
+   0
+  ],
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   43
+  ],
+  [
+   0,
+   1,
+   54,
+   1043
+  ],
+  [
+   0,
+   1,
+   54,
+   1458,
+   15957
+  ],
+  [
+   0,
+   1,
+   126,
+   2726,
+   17676,
+   83456
+  ]
+ ],
+ "rref_sha256": [
+  "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+  "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+  "1aa0cb3c1d193a7ccce993377b5fc53772b1cbdaa5cef6a0c034e38fa7065343",
+  "27a182236e1451414df87670d7216a6d6d5aeaf72e766833755be57a0d14c168",
+  "b6f53054a964634836f5fc3e84d9a82d63b7e06ca245b2b9d5fd83fc32ec0b84",
+  "4ceed38d4bbd0685e6222849791790a983132e1d063be5270939c0a71c4cff33"
+ ],
+ "columns": [
+  1,
+  27,
+  352,
+  2952,
+  17902,
+  83682
+ ],
+ "per_degree_seconds": [
+  0.001,
+  0.0,
+  0.159,
+  1.314,
+  10.837,
+  67.676
+ ],
+ "per_degree_flops": [
+  0.0,
+  0.0,
+  743680.0,
+  2533240448.0,
+  2661364763008.0,
+  181164809623168.0
+ ],
+ "closed_all": true,
+ "repairs": 0,
+ "seconds": 80.57,
+ "peak_rss_mb": 606,
+ "device_peak_bytes": 0
+}

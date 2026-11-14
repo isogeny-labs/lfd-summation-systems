@@ -1,0 +1,68 @@
+{
+ "name": "summation-prime",
+ "p17_fast_vs_sylvester_mismatches": 0,
+ "p97_fast_vs_sylvester_mismatches": 0,
+ "p1000003_fast_vs_sylvester_mismatches": 0,
+ "ratio_to_s4_value_by_prime": {
+  "17": [
+   1
+  ],
+  "97": [
+   1
+  ],
+  "1000003": [
+   1
+  ]
+ },
+ "points_tested": 1200,
+ "degenerate_points": 759,
+ "permutation_mismatches_n4to7": 0,
+ "split_mismatches_n4to7": 0,
+ "degree_in_each_variable_by_n": {
+  "3": [
+   2,
+   2,
+   2
+  ],
+  "4": [
+   4,
+   4,
+   4,
+   4
+  ],
+  "5": [
+   8,
+   8,
+   8,
+   8,
+   8
+  ],
+  "6": [
+   16,
+   16,
+   16,
+   16,
+   16,
+   16
+  ]
+ },
+ "vanishing_at_decompositions": {
+  "2": {
+   "tested": 240,
+   "nonzero": 0
+  },
+  "3": {
+   "tested": 239,
+   "nonzero": 0
+  },
+  "4": {
+   "tested": 240,
+   "nonzero": 0
+  },
+  "5": {
+   "tested": 240,
+   "nonzero": 0
+  }
+ },
+ "ok": true
+}

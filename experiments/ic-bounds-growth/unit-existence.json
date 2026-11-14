@@ -1,0 +1,65 @@
+{
+ "ok": true,
+ "rows": [
+  {
+   "p": 17,
+   "depths": [
+    2,
+    3
+   ],
+   "instances_times_depths": 128,
+   "hypotheses_hold": true,
+   "zeros_found": 0
+  },
+  {
+   "p": 97,
+   "depths": [
+    2,
+    3,
+    4
+   ],
+   "instances_times_depths": 1728,
+   "hypotheses_hold": true,
+   "zeros_found": 0
+  },
+  {
+   "p": 193,
+   "depths": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "instances_times_depths": 4608,
+   "hypotheses_hold": true,
+   "zeros_found": 0
+  },
+  {
+   "p": 257,
+   "depths": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "instances_times_depths": 9984,
+   "hypotheses_hold": true,
+   "zeros_found": 0
+  },
+  {
+   "p": 641,
+   "depths": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "instances_times_depths": 20800,
+   "hypotheses_hold": true,
+   "zeros_found": 0
+  }
+ ]
+}

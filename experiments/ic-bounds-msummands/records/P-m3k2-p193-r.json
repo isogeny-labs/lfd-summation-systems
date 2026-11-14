@@ -1,0 +1,162 @@
+{
+ "case": "P-m3k2-p193-r",
+ "family": "prime",
+ "m": 3,
+ "k": 2,
+ "p": 193,
+ "a": 130,
+ "b": 167,
+ "t": 186,
+ "target_class": "random-rational",
+ "generator_degree": 6,
+ "generator_terms": 61,
+ "generator_hash": "fa5c0f4cfa1399a5258723aff3ca9b4b87b632dc3f79005a51dadb8cbbad13e8",
+ "instance_hash": "91f1036aaf320edbf1f4cf51ce4c7ae9e613875cb6b5255852bac1863aeacd61",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-unit",
+ "exact_lfd": 7,
+ "lfd_lower_bound": 7,
+ "kernel_upper_bound": 7,
+ "strict_falls": [
+  7
+ ],
+ "certificate": {
+  "kind": "unit",
+  "degree": 7
+ },
+ "certificate_degree": 7,
+ "prop1_variables": 6,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 7,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 22,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 42,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 57,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 63,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 64,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.0
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 64,
+   "quotient_rank": 64,
+   "profile": [
+    1,
+    7,
+    22,
+    42,
+    57,
+    63,
+    64,
+    64
+   ],
+   "contains_one": true,
+   "strict_fall": true,
+   "closure_check": "unit",
+   "seconds": 0.01
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 0.01,
+ "max_rss_gb": 0.04
+}

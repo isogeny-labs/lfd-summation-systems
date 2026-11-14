@@ -1,0 +1,191 @@
+{
+ "case": "P-m3k4-p641-pl",
+ "family": "prime",
+ "m": 3,
+ "k": 4,
+ "p": 641,
+ "a": 334,
+ "b": 307,
+ "t": 308,
+ "target_class": "planted-H4",
+ "generator_degree": 6,
+ "generator_terms": 125,
+ "generator_hash": "df05be19bfc40f951a700be94ea71a49dfe3f0438a919bfa8789bbc4498a0d51",
+ "instance_hash": "4d775387fec9fa06a643b0c3d25bd600aeec40bcf9ff59bd3badd68ed489889b",
+ "points_sha256": "084cf2bb3450f4ec6120eb91d20458bab9c08b78f5488d81564e77e4af6a0085",
+ "solutions": 7,
+ "ideal_class": "proper",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-proper-local",
+ "exact_lfd": 7,
+ "lfd_lower_bound": 7,
+ "kernel_upper_bound": 13,
+ "strict_falls": [
+  7
+ ],
+ "certificate": {
+  "kind": "local-to-global",
+  "degree": 7,
+  "solutions": 7
+ },
+ "certificate_degree": 7,
+ "prop1_variables": 6,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 13,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 1,
+   "evaluation_rank_le_D": 7,
+   "ideal_dim_le_D": 6,
+   "codim": 13
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 79,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 7,
+   "evaluation_rank_le_D": 7,
+   "ideal_dim_le_D": 72,
+   "codim": 79
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 299,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 7,
+   "evaluation_rank_le_D": 7,
+   "ideal_dim_le_D": 292,
+   "codim": 299
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 794,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 7,
+   "evaluation_rank_le_D": 7,
+   "ideal_dim_le_D": 787,
+   "codim": 794
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 1586,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.01,
+   "evaluation_rank_lt_D": 7,
+   "evaluation_rank_le_D": 7,
+   "ideal_dim_le_D": 1579,
+   "codim": 1586
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 2510,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "closed-sweep",
+   "seconds": 0.02,
+   "evaluation_rank_lt_D": 7,
+   "evaluation_rank_le_D": 7,
+   "ideal_dim_le_D": 2503,
+   "codim": 2509
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 3302,
+   "quotient_rank": 3295,
+   "profile": [
+    0,
+    6,
+    72,
+    292,
+    787,
+    1579,
+    2503,
+    3295
+   ],
+   "contains_one": false,
+   "strict_fall": true,
+   "closure_check": "rank=dim(I cap M_<=D)",
+   "seconds": 4.2,
+   "evaluation_rank_lt_D": 7,
+   "evaluation_rank_le_D": 7,
+   "ideal_dim_le_D": 3295,
+   "codim": 7
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 4.25,
+ "max_rss_gb": 0.22
+}

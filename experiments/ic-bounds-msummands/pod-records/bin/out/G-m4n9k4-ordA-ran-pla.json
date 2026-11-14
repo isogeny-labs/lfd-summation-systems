@@ -1,0 +1,305 @@
+{
+ "name": "G-m4n9k4-ordA-ran-pla",
+ "system_hash": "eb884d4b6fa084a62941d35cd5004216681b92152342ba5ed0f5687e433b7153",
+ "n": 9,
+ "k": 4,
+ "n_points": 312,
+ "points_sha256": "0e97b139159fcac98047aa5168205ea1da4317e770bd1cba6009a9906187cdfc",
+ "cls": "proper",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "device": "gpu",
+ "status": "exact-proper-local",
+ "exact_lfd": 13,
+ "certificate_degree": 13,
+ "strict_falls": [
+  13
+ ],
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  9,
+  65087
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 17
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 16,
+   "codimension": 137
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 116,
+   "codimension": 697
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 303,
+   "codimension": 2517
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 312,
+   "codimension": 6885
+  },
+  {
+   "degree": 6,
+   "evaluation_rank": 312,
+   "codimension": 14893
+  },
+  {
+   "degree": 7,
+   "evaluation_rank": 312,
+   "codimension": 26333
+  },
+  {
+   "degree": 8,
+   "evaluation_rank": 312,
+   "codimension": 39203
+  },
+  {
+   "degree": 9,
+   "evaluation_rank": 312,
+   "codimension": 50643
+  },
+  {
+   "degree": 10,
+   "evaluation_rank": 312,
+   "codimension": 58651
+  },
+  {
+   "degree": 11,
+   "evaluation_rank": 312,
+   "codimension": 63019
+  },
+  {
+   "degree": 12,
+   "evaluation_rank": 312,
+   "codimension": 64830
+  },
+  {
+   "degree": 13,
+   "evaluation_rank": 312,
+   "codimension": 312
+  }
+ ],
+ "profiles": [
+  [
+   0
+  ],
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   9
+  ],
+  [
+   0,
+   1,
+   21,
+   394,
+   2205,
+   6573,
+   14581,
+   26021,
+   38891,
+   50331,
+   58339,
+   62707,
+   64527,
+   65087
+  ]
+ ],
+ "rref_sha256": [
+  "907cd7d5662b5d477a0db6f9b55867be1fbd33fa61d9504e5eba616611825409",
+  "97710526c0215af1bf2fa563885df64de041fb9e136f0db9b1482d142c1b22a8",
+  "9fe9f8111a0de551a99bbeca9c391545230c89b36dfeaf9500b5913ff4eddd1e",
+  "1d1756bc17ce8f1282fb2303081ed636f32c1ca5dc80b28d834e0ebb83b59478",
+  "9764221553c819f9cb540b4a48a06d8c55dfce7562032c058107fe9ff021a714",
+  "9786ca5ef9296e1d1fb7e1bbbecffa520ce6e1930668cd3d2405e8f002059505",
+  "07ce4cf5eab64c6e81966a3da71eeecfc9edac02425173dee5c8cc6917ff44cb",
+  "cb2bda08850495574f8e90d0c795fe49a180fbfce52864bcc0601b1c13c35964",
+  "a8f828a1edfbea9b70b9f033553aff53bf492a75b634bfdd9afc8871dce73627",
+  "1ce94cac62d3c10dc5bf89a4fcd9b1712ee8ddb07a2ad9f18a1455acdc08d16f",
+  "c028cfc8b84ce5fc253eedfdc54c43ad286b66915af49362cae0175ac44a5101",
+  "9309c27c1b1e80151288c1b7731a2d8d79df1fbe1ccf55bfccfff930f52acc15",
+  "7315e56da7e04226874f4ae75c24f71e1a7f63badad98bc29efc1bc52b0905bd",
+  "67c5a23d647ce5754cf66fcb52829f488ce41312626937424fbc632ebd511090"
+ ],
+ "columns": [
+  1,
+  17,
+  137,
+  697,
+  2517,
+  6885,
+  14893,
+  26333,
+  39203,
+  50643,
+  58651,
+  63019,
+  64839,
+  65399
+ ],
+ "per_degree_seconds": [
+  0.022,
+  0.022,
+  0.022,
+  0.022,
+  0.022,
+  0.022,
+  0.022,
+  0.023,
+  0.023,
+  0.023,
+  0.023,
+  0.023,
+  0.122,
+  13.515
+ ],
+ "per_degree_flops": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  21026304.0,
+  148800486959616.0
+ ],
+ "closed_all": true,
+ "repairs": 0,
+ "seconds": 15.96,
+ "peak_rss_mb": 611,
+ "device_peak_bytes": 45645417472
+}

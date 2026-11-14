@@ -1,0 +1,278 @@
+{
+ "name": "prime-Z-vs-group-law",
+ "ok": true,
+ "n": 30,
+ "rows": [
+  {
+   "m": 3,
+   "k": 2,
+   "p": 97,
+   "planted": true,
+   "Z": 10,
+   "rational_ordered": 1,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 193,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 257,
+   "planted": true,
+   "Z": 1,
+   "rational_ordered": 1,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 449,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 641,
+   "planted": true,
+   "Z": 3,
+   "rational_ordered": 3,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 7681,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 97,
+   "planted": true,
+   "Z": 3,
+   "rational_ordered": 3,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 193,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 257,
+   "planted": true,
+   "Z": 22,
+   "rational_ordered": 16,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 449,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 641,
+   "planted": true,
+   "Z": 6,
+   "rational_ordered": 6,
+   "subset": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 7681,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 97,
+   "planted": true,
+   "Z": 4,
+   "rational_ordered": 4,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 193,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 257,
+   "planted": true,
+   "Z": 19,
+   "rational_ordered": 1,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 449,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 641,
+   "planted": true,
+   "Z": 32,
+   "rational_ordered": 32,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 3,
+   "p": 97,
+   "planted": true,
+   "Z": 152,
+   "rational_ordered": 128,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 3,
+   "p": 193,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 3,
+   "p": 257,
+   "planted": true,
+   "Z": 92,
+   "rational_ordered": 56,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 3,
+   "p": 449,
+   "planted": false,
+   "Z": 6,
+   "rational_ordered": 6,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 3,
+   "p": 641,
+   "planted": true,
+   "Z": 43,
+   "rational_ordered": 7,
+   "subset": true
+  },
+  {
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 97,
+   "planted": true,
+   "Z": 136,
+   "rational_ordered": 16,
+   "subset": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 193,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 257,
+   "planted": true,
+   "Z": 136,
+   "rational_ordered": 1,
+   "subset": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 449,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 641,
+   "planted": true,
+   "Z": 75,
+   "rational_ordered": 45,
+   "subset": true
+  },
+  {
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "planted": false,
+   "Z": 0,
+   "rational_ordered": 0,
+   "subset": true
+  }
+ ],
+ "statement": "for every instance of the m = 3, 4, 5 prime cells: rational decompositions (group law, signed lifts) subset of Z"
+}

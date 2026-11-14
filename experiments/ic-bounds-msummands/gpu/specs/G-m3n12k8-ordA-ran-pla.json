@@ -1,0 +1,39 @@
+{
+ "spec": {
+  "family": "binary",
+  "m": 3,
+  "n": 12,
+  "k": 8,
+  "curve": "ordA",
+  "a": null,
+  "b": null,
+  "base": "random",
+  "target": "planted",
+  "seed": 20261112,
+  "idx": 2,
+  "tag": "r24",
+  "name": "G-m3n12k8-ordA-ran-pla"
+ },
+ "build": {
+  "name": "G-m3n12k8-ordA-ran-pla",
+  "m": 3,
+  "n": 12,
+  "k": 8,
+  "r": 24,
+  "built": false,
+  "input_degree": 6,
+  "input_degree_source": "bound, not computed",
+  "solutions": null,
+  "system_hash": null,
+  "points_sha256": null,
+  "instance_hash": null,
+  "cap_degree": 8,
+  "columns": 1271626,
+  "basis_worst_gb": 58.84,
+  "predicted_device_peak_gb": 86.1,
+  "fits_device_141gb": true,
+  "seconds_model": 19191.8,
+  "seconds_pessimistic": 76767,
+  "frozen_prediction_c": null
+ }
+}

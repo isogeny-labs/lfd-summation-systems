@@ -30,8 +30,11 @@ Label of every row: **exact** (closure run to the end, deterministic full sweep 
   fall degree of this unit-ideal system is exactly 6 at k = 10, 11, 12, 13.
 - **exact** V_6(14) is closed, has dimension 448,922 < 499,178 (codimension 50,256) and does not contain 1
   (prediction `d6-falls-at-14`): the last fall degree at k = 14 is at least 7. With the kernel
-  depth-restriction theorem, 1 is not in V_6(k) for every k >= 14 on this instance (given 2^k | p - 1, i.e.
-  k <= 16 over this prime; the formal statement is in `DepthRestrictionM2.not_one_of_le`).
+  depth-restriction theorem, 1 is not in V_6(k) for every k >= 14 on this instance, with no condition on
+  the prime (`DepthRestrictionM2.not_one_of_le`; corrected 2026-11-12, an earlier version attached the
+  condition 2^k | p - 1 to this sentence). A lower bound LFD >= 7 at depth k needs in addition that 1 lies
+  in the ideal there: that is kernel-checked for k <= 15 over this prime, where 2^(k+1) | p - 1
+  (`UnitInstance.unit_p65537`, `DepthFourteen.p65537_lfd_gt_six`).
 - Codimension of V_D in M_<=D at the first deficient depth 4D - 10: 10, 189, 3131, 50,256 for D = 3, 4, 5, 6.
 - The low profile of V_6(14) is (0, 0, 2, 154, 4451, 73587): it agrees with V_5(14) through weight 3 and is
   larger at weights 4 and 5 (4451 against 4323; 73,587 against 47,849).

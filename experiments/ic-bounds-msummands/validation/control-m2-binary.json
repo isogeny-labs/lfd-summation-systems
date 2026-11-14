@@ -1,0 +1,717 @@
+{
+ "name": "control-m2-binary",
+ "ok": true,
+ "n": 32,
+ "rows": [
+  {
+   "k": 4,
+   "n": 5,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 9,
+   "Z_recorded": 9,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 4,
+   "n": 5,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 13,
+   "Z_recorded": 13,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 4,
+   "n": 6,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 3,
+   "Z_recorded": 3,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    2,
+    3
+   ],
+   "recorded_falls": [
+    2,
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 4,
+   "n": 5,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 10,
+   "Z_recorded": 10,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 4,
+   "n": 5,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 20,
+   "Z_recorded": 20,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 4,
+   "n": 5,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 20,
+   "Z_recorded": 20,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 4,
+   "n": 8,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 2,
+   "recorded_lfd": 2,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    2
+   ],
+   "recorded_falls": [
+    2
+   ],
+   "equal": true
+  },
+  {
+   "k": 4,
+   "n": 5,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 2,
+   "recorded_lfd": 2,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    2
+   ],
+   "recorded_falls": [
+    2
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 6,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 15,
+   "Z_recorded": 15,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 6,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 30,
+   "Z_recorded": 30,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 6,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 30,
+   "Z_recorded": 30,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 6,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 13,
+   "Z_recorded": 13,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 6,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 26,
+   "Z_recorded": 26,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 6,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 26,
+   "Z_recorded": 26,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 10,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 2,
+   "recorded_lfd": 2,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    2
+   ],
+   "recorded_falls": [
+    2
+   ],
+   "equal": true
+  },
+  {
+   "k": 5,
+   "n": 6,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 2,
+   "recorded_lfd": 2,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    2
+   ],
+   "recorded_falls": [
+    2
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 7,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 28,
+   "Z_recorded": 28,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 7,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 56,
+   "Z_recorded": 56,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 7,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 56,
+   "Z_recorded": 56,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 7,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 28,
+   "Z_recorded": 28,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 7,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 56,
+   "Z_recorded": 56,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 7,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 56,
+   "Z_recorded": 56,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 9,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 6,
+   "n": 7,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 2,
+   "recorded_lfd": 2,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    2
+   ],
+   "recorded_falls": [
+    2
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 8,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 63,
+   "Z_recorded": 63,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 8,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 126,
+   "Z_recorded": 126,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 8,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 126,
+   "Z_recorded": 126,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 8,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 71,
+   "Z_recorded": 71,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 8,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "planted-rational-decomposition",
+   "hash_equal": true,
+   "Z": 142,
+   "Z_recorded": 142,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 8,
+   "kind": "koblitz",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 142,
+   "Z_recorded": 142,
+   "new_lfd": 4,
+   "recorded_lfd": 4,
+   "new_status": "exact-proper-local",
+   "recorded_status": "exact-proper-local",
+   "new_falls": [
+    3,
+    4
+   ],
+   "recorded_falls": [
+    3,
+    4
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 12,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "order-two",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 3,
+   "recorded_lfd": 3,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    3
+   ],
+   "recorded_falls": [
+    3
+   ],
+   "equal": true
+  },
+  {
+   "k": 7,
+   "n": 8,
+   "kind": "binary",
+   "base": "frobenius-invariant",
+   "target_class": "random-rational",
+   "hash_equal": true,
+   "Z": 0,
+   "Z_recorded": 0,
+   "new_lfd": 2,
+   "recorded_lfd": 2,
+   "new_status": "exact-unit",
+   "recorded_status": "exact-unit",
+   "new_falls": [
+    2
+   ],
+   "recorded_falls": [
+    2
+   ],
+   "equal": true
+  }
+ ],
+ "statement": "system_hash, |Z|, exact LFD, status, strict falls equal to experiments/ic-curve-sweep rows",
+ "seconds": 3.2
+}

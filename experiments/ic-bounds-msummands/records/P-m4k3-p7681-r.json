@@ -1,0 +1,297 @@
+{
+ "case": "P-m4k3-p7681-r",
+ "family": "prime",
+ "m": 4,
+ "k": 3,
+ "p": 7681,
+ "a": 208,
+ "b": 6911,
+ "t": 1265,
+ "target_class": "random-rational",
+ "generator_degree": 12,
+ "generator_terms": 4096,
+ "generator_hash": "4857148cff38d766c99c2cc438c3206ebcd24c14c9f6a3f9482582d15ab7bf17",
+ "instance_hash": "b4612e1683ff455774d7fe26cddababb5daa800e6cf46db133d29acb4c7a7162",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-unit",
+ "exact_lfd": 13,
+ "lfd_lower_bound": 13,
+ "kernel_upper_bound": 13,
+ "strict_falls": [
+  13
+ ],
+ "certificate": {
+  "kind": "unit",
+  "degree": 13
+ },
+ "certificate_degree": 13,
+ "prop1_variables": 12,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 13,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 79,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 299,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 794,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 1586,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.01
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 2510,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.02
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 3302,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.03
+  },
+  {
+   "D": 8,
+   "monomials_le_D": 3797,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.03
+  },
+  {
+   "D": 9,
+   "monomials_le_D": 4017,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.03
+  },
+  {
+   "D": 10,
+   "monomials_le_D": 4083,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.03
+  },
+  {
+   "D": 11,
+   "monomials_le_D": 4095,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.03
+  },
+  {
+   "D": 12,
+   "monomials_le_D": 4096,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "closed-sweep",
+   "seconds": 0.08
+  },
+  {
+   "D": 13,
+   "monomials_le_D": 4096,
+   "quotient_rank": 4096,
+   "profile": [
+    1,
+    13,
+    79,
+    299,
+    794,
+    1586,
+    2510,
+    3302,
+    3797,
+    4017,
+    4083,
+    4095,
+    4096,
+    4096
+   ],
+   "contains_one": true,
+   "strict_fall": true,
+   "closure_check": "unit",
+   "seconds": 14.7
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 14.97,
+ "max_rss_gb": 0.27
+}

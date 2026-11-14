@@ -1,0 +1,106 @@
+{
+ "case": "B-m5n6k2-ordA-ran-pla",
+ "family": "binary",
+ "m": 5,
+ "n": 6,
+ "k": 2,
+ "variables": 10,
+ "curve": "ordA",
+ "a": 2,
+ "b": 60,
+ "basis": [
+  38,
+  8
+ ],
+ "target": [
+  8,
+  50
+ ],
+ "target_class": "planted",
+ "base_kind": "random",
+ "frobenius_invariant": false,
+ "input_degree": 10,
+ "equations": 6,
+ "const_equation": false,
+ "system_hash": "9ed6ff44bc5329d6d9dbc78a20de307756da6d28bbafa4e8b21af3f6cfc01394",
+ "instance_hash": "1186d529c06023d7992df7d1c6c5324833856647c040e1cf78d15a7d9ff3dc24",
+ "points_sha256": "9c65328b4ef5844955ffc23ddfe973c6a2820df7cb9c90c338dffcd93d6208a2",
+ "solutions": 136,
+ "ideal_class": "proper",
+ "status": "exact-proper-local",
+ "exact_lfd": 10,
+ "strict_falls": [
+  10
+ ],
+ "certificate_degree": 10,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  888
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 11
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 9,
+   "codimension": 56
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 36,
+   "codimension": 176
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 84,
+   "codimension": 386
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 127,
+   "codimension": 638
+  },
+  {
+   "degree": 6,
+   "evaluation_rank": 135,
+   "codimension": 848
+  },
+  {
+   "degree": 7,
+   "evaluation_rank": 136,
+   "codimension": 968
+  },
+  {
+   "degree": 8,
+   "evaluation_rank": 136,
+   "codimension": 1013
+  },
+  {
+   "degree": 9,
+   "evaluation_rank": 136,
+   "codimension": 1022
+  },
+  {
+   "degree": 10,
+   "evaluation_rank": 136,
+   "codimension": 136
+  }
+ ],
+ "kernel_upper_bound": 11,
+ "cap_reason": null,
+ "engine": "csd.ic_local_certificate.local_profile",
+ "seconds": 0.89,
+ "max_rss_gb": 1.24
+}

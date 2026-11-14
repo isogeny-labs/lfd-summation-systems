@@ -1,0 +1,203 @@
+{
+ "case": "P-m4k2-p7681-r",
+ "family": "prime",
+ "m": 4,
+ "k": 2,
+ "p": 7681,
+ "a": 5088,
+ "b": 5212,
+ "t": 2788,
+ "target_class": "random-rational",
+ "generator_degree": 8,
+ "generator_terms": 256,
+ "generator_hash": "85e5e95ff9b44841a29cead659cab1ef5d79506cb192f49a63ff068bae33293f",
+ "instance_hash": "990e356e569e85496f459e22626b8c4f66c80f036b2a4e738dda3671086ac59f",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-unit",
+ "exact_lfd": 9,
+ "lfd_lower_bound": 9,
+ "kernel_upper_bound": 9,
+ "strict_falls": [
+  9
+ ],
+ "certificate": {
+  "kind": "unit",
+  "degree": 9
+ },
+ "certificate_degree": 9,
+ "prop1_variables": 8,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 9,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 37,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 93,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 163,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 219,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 247,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 255,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 8,
+   "monomials_le_D": 256,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.0
+  },
+  {
+   "D": 9,
+   "monomials_le_D": 256,
+   "quotient_rank": 256,
+   "profile": [
+    1,
+    9,
+    37,
+    93,
+    163,
+    219,
+    247,
+    255,
+    256,
+    256
+   ],
+   "contains_one": true,
+   "strict_fall": true,
+   "closure_check": "unit",
+   "seconds": 0.06
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 0.07,
+ "max_rss_gb": 0.22
+}

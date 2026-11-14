@@ -1,0 +1,57 @@
+{
+ "job": "raw",
+ "total": 9107,
+ "violations": [],
+ "uncertified": [],
+ "seconds": 82.0,
+ "families": {
+  "raw-plane p=5 k=(1,1) s=(1,1) raw=True": {
+   "instances": 100,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 100
+   },
+   "seconds": 0.2
+  },
+  "raw-plane p=5 k=(2,2) s=(1,1) raw=True": {
+   "instances": 100,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 100
+   },
+   "seconds": 1.1
+  },
+  "raw-plane p=13 k=(1,1) s=(1,1) raw=True": {
+   "instances": 2028,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 2028
+   },
+   "seconds": 4.0
+  },
+  "raw-plane p=13 k=(2,2) s=(1,1) raw=True": {
+   "instances": 2028,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 2028
+   },
+   "seconds": 25.2
+  },
+  "raw-plane p=17 k=(1,2) s=(1,1) raw=True": {
+   "instances": 4624,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4624
+   },
+   "seconds": 20.9
+  },
+  "raw-special p=17 k=(3,3) s=(1,1) raw=True": {
+   "instances": 227,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 227
+   },
+   "seconds": 30.7
+  }
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "job": "uneqmid",
+ "total": 136,
+ "violations": [],
+ "uncertified": [],
+ "seconds": 625.0,
+ "families": {
+  "uneq-mid p=97 k=(4,5) s=(1,1) raw=False": {
+   "instances": 12,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 12
+   },
+   "seconds": 28.7
+  },
+  "uneq-mid p=97 k=(4,5) s=(1,2) raw=False": {
+   "instances": 12,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 12
+   },
+   "seconds": 28.3
+  },
+  "uneq-mid p=193 k=(4,5) s=(1,1) raw=False": {
+   "instances": 12,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 12
+   },
+   "seconds": 28.3
+  },
+  "uneq-mid p=193 k=(4,5) s=(1,2) raw=False": {
+   "instances": 12,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 12
+   },
+   "seconds": 25.8
+  },
+  "uneq-mid p=257 k=(4,5) s=(1,1) raw=False": {
+   "instances": 12,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 12
+   },
+   "seconds": 23.3
+  },
+  "uneq-mid p=257 k=(4,5) s=(1,3) raw=False": {
+   "instances": 12,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 12
+   },
+   "seconds": 23.8
+  },
+  "uneq-mid p=193 k=(4,6) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 35.3
+  },
+  "uneq-mid p=193 k=(4,6) s=(1,2) raw=False": {
+   "instances": 8,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 35.8
+  },
+  "uneq-mid p=257 k=(4,6) s=(1,1) raw=False": {
+   "instances": 8,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 36.8
+  },
+  "uneq-mid p=257 k=(4,6) s=(1,3) raw=False": {
+   "instances": 8,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 8
+   },
+   "seconds": 38.3
+  },
+  "uneq-mid p=193 k=(5,6) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 42.2
+  },
+  "uneq-mid p=193 k=(5,6) s=(1,2) raw=False": {
+   "instances": 4,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 40.6
+  },
+  "uneq-mid p=257 k=(5,6) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 39.1
+  },
+  "uneq-mid p=257 k=(5,6) s=(1,3) raw=False": {
+   "instances": 4,
+   "bound": 7,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 39.8
+  },
+  "uneq-mid p=257 k=(4,7) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 39.9
+  },
+  "uneq-mid p=257 k=(4,7) s=(1,3) raw=False": {
+   "instances": 4,
+   "bound": 6,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 38.0
+  },
+  "uneq-mid p=257 k=(3,8) s=(1,1) raw=False": {
+   "instances": 4,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 4
+   },
+   "seconds": 40.9
+  },
+  "uneq-mid p=12289 k=(3,8) s=(1,1) raw=False": {
+   "instances": 2,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 2
+   },
+   "seconds": 19.6
+  },
+  "uneq-mid p=12289 k=(3,8) s=(1,2) raw=False": {
+   "instances": 2,
+   "bound": 5,
+   "lfd_hist": {
+    "4": 2
+   },
+   "seconds": 20.5
+  }
+ }
+}

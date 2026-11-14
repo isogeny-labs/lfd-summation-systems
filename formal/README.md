@@ -44,7 +44,7 @@ python scripts/verify_lean_fall_degrees.py
 
 The verifier writes [the report](../experiments/ic-lean/verification.json),
 [build log](../experiments/ic-lean/build.log), and
-[axiom log](../experiments/ic-lean/axioms.log). The checked run covers 513
+[axiom log](../experiments/ic-lean/axioms.log). The checked run covers 582
 public declarations, whose proof
 dependencies are subsets of mathlib's standard foundational axioms
 `propext`, `Classical.choice`, and `Quot.sound`. No project axioms,

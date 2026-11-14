@@ -1,0 +1,109 @@
+{
+ "name": "R1_rand_koblitz0_ran_1",
+ "system_hash": "d0a8b84d3bc0a3969b17469f4fdede363796ae14dad5358ff901984267eb7a66",
+ "n": 14,
+ "k": 11,
+ "n_points": 254,
+ "points_sha256": "a48d4706ea4f2d934a3349e20ce4c8d037cdc51458fc323e0537362fbdc2323a",
+ "cls": "affine",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "device": "gpu",
+ "status": "exact-proper-local",
+ "exact_lfd": 4,
+ "certificate_degree": 4,
+ "strict_falls": [
+  2,
+  3,
+  4
+ ],
+ "quotient_ranks": [
+  0,
+  0,
+  35,
+  665,
+  8855
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 23
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 22,
+   "codimension": 219
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 212,
+   "codimension": 1129
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 254,
+   "codimension": 254
+  }
+ ],
+ "profiles": [
+  [
+   0
+  ],
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   35
+  ],
+  [
+   0,
+   1,
+   42,
+   665
+  ],
+  [
+   0,
+   1,
+   42,
+   1540,
+   8855
+  ]
+ ],
+ "rref_sha256": [
+  "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+  "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+  "8817df3abb915f995e1570383c43ed49e5929cdc86652ade3bad8d1919e2fa71",
+  "0b1ce03a707654bbc5a6d22e3845ec6396499ed502d46eab300b2439563c4061",
+  "e1b6200adc74245a22b58b76423241cf1bf018c6799d5f8ffcaa09f8144a0653"
+ ],
+ "columns": [
+  1,
+  23,
+  254,
+  1794,
+  9109
+ ],
+ "per_degree_seconds": [
+  0.0,
+  0.0,
+  0.132,
+  0.791,
+  4.509
+ ],
+ "per_degree_flops": [
+  0.0,
+  0.0,
+  322944.0,
+  631979136.0,
+  373826092288.0
+ ],
+ "closed_all": true,
+ "repairs": 0,
+ "seconds": 5.99,
+ "peak_rss_mb": 564,
+ "device_peak_bytes": 0
+}

@@ -1,0 +1,92 @@
+{
+ "ok": true,
+ "rows": [
+  {
+   "test": "controls",
+   "p": 131,
+   "a": 5,
+   "b": 9,
+   "t": 2,
+   "points_Fp2": 17372,
+   "S3_terms": 9,
+   "S3_dependent": true,
+   "every_8_subset_independent": true,
+   "twisted_dependent_over_Fp": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "twisted_rank_over_constants": [
+    9,
+    9,
+    9,
+    9
+   ],
+   "pair_e_e_plus_pu_dependent": true,
+   "pair_generic_independent": true
+  },
+  {
+   "test": "three",
+   "p": 61,
+   "a": 3,
+   "b": 7,
+   "t": 5,
+   "residues": 3720,
+   "surviving_groups": 0,
+   "surviving_residues": [],
+   "dependent_triples": 0,
+   "violations_of_theorem_3_3": 0
+  },
+  {
+   "test": "three",
+   "p": 131,
+   "a": 5,
+   "b": 9,
+   "t": 2,
+   "residues": 17160,
+   "surviving_groups": 0,
+   "surviving_residues": [],
+   "dependent_triples": 0,
+   "violations_of_theorem_3_3": 0
+  },
+  {
+   "test": "three",
+   "p": 103,
+   "a": 1,
+   "b": 0,
+   "t": 11,
+   "residues": 10608,
+   "surviving_groups": 0,
+   "surviving_residues": [],
+   "dependent_triples": 0,
+   "violations_of_theorem_3_3": 0
+  },
+  {
+   "test": "far",
+   "p": 131,
+   "a": 5,
+   "b": 9,
+   "t": 2,
+   "m": 5,
+   "threshold": 72,
+   "sets": 40,
+   "residues_scanned": 686316,
+   "sets_B_not_shown_independent": 0,
+   "sets_with_a_dependent_extension": 0
+  },
+  {
+   "test": "far",
+   "p": 311,
+   "a": 3,
+   "b": 7,
+   "t": 5,
+   "m": 6,
+   "threshold": 120,
+   "sets": 6,
+   "residues_scanned": 580302,
+   "sets_B_not_shown_independent": 0,
+   "sets_with_a_dependent_extension": 0
+  }
+ ]
+}

@@ -1,0 +1,173 @@
+{
+ "name": "negative-binary",
+ "rows": [
+  {
+   "m": 3,
+   "n": 7,
+   "k": 2,
+   "kind": "flip-at-zero",
+   "Z": 10,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 6
+   },
+   "wrong_vs_true_Z": {
+    "error": "A supplied point does not vanish on the inputs."
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 9,
+    "status": "exact-proper-local",
+    "lfd": 5
+   }
+  },
+  {
+   "m": 3,
+   "n": 7,
+   "k": 2,
+   "kind": "flip-at-nonzero",
+   "Z": 10,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 6
+   },
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 5
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 10,
+    "status": "exact-proper-local",
+    "lfd": 5
+   }
+  },
+  {
+   "m": 3,
+   "n": 8,
+   "k": 3,
+   "kind": "flip-at-zero",
+   "Z": 12,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "wrong_vs_true_Z": {
+    "error": "A supplied point does not vanish on the inputs."
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 11,
+    "status": "exact-proper-local",
+    "lfd": 9
+   }
+  },
+  {
+   "m": 3,
+   "n": 8,
+   "k": 3,
+   "kind": "flip-at-nonzero",
+   "Z": 12,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "detected": false,
+   "consistent_altered": {
+    "Z": 12,
+    "status": "exact-proper-local",
+    "lfd": 7
+   }
+  },
+  {
+   "m": 4,
+   "n": 6,
+   "k": 2,
+   "kind": "flip-at-zero",
+   "Z": 19,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "wrong_vs_true_Z": {
+    "error": "A supplied point does not vanish on the inputs."
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 18,
+    "status": "exact-proper-local",
+    "lfd": 7
+   }
+  },
+  {
+   "m": 4,
+   "n": 6,
+   "k": 2,
+   "kind": "flip-at-nonzero",
+   "Z": 19,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 7
+   },
+   "detected": false,
+   "consistent_altered": {
+    "Z": 19,
+    "status": "exact-proper-local",
+    "lfd": 7
+   }
+  },
+  {
+   "m": 5,
+   "n": 6,
+   "k": 2,
+   "kind": "flip-at-zero",
+   "Z": 146,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 10
+   },
+   "wrong_vs_true_Z": {
+    "error": "A supplied point does not vanish on the inputs."
+   },
+   "detected": true,
+   "consistent_altered": {
+    "Z": 145,
+    "status": "exact-proper-local",
+    "lfd": 10
+   }
+  },
+  {
+   "m": 5,
+   "n": 6,
+   "k": 2,
+   "kind": "flip-at-nonzero",
+   "Z": 146,
+   "original": {
+    "status": "exact-proper-local",
+    "lfd": 10
+   },
+   "wrong_vs_true_Z": {
+    "status": "exact-proper-local",
+    "lfd": 10
+   },
+   "detected": false,
+   "consistent_altered": {
+    "Z": 146,
+    "status": "exact-proper-local",
+    "lfd": 10
+   }
+  }
+ ],
+ "n": 8,
+ "detected": 5,
+ "ok": true,
+ "seconds": 5.0
+}

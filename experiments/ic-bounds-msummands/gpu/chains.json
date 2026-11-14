@@ -1,0 +1,103 @@
+{
+ "chains": [
+  {
+   "name": "bin",
+   "threads": 2,
+   "args": [
+    "--family",
+    "binary",
+    "--device",
+    "gpu",
+    "--only",
+    "G-m4n9k4-koblitz0-ran-ord",
+    "G-m4n9k4-koblitz1-inv-ran",
+    "G-m4n9k4-ordA-ran-pla",
+    "G-m3n10k6-koblitz0-ran-ord",
+    "G-m3n10k6-koblitz1-inv-ran",
+    "G-m3n10k6-ordA-ran-pla",
+    "G-m3n11k7-koblitz0-ran-ord",
+    "G-m3n11k7-koblitz1-inv-ran",
+    "G-m3n11k7-ordA-ran-pla",
+    "G-m4n10k5-koblitz0-ran-ord"
+   ]
+  },
+  {
+   "name": "pm4-a",
+   "threads": 8,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m4k4-p97-pl",
+    "GP-m4k4-p193-r",
+    "GP-m4k4-p257-pl"
+   ]
+  },
+  {
+   "name": "pm4-b",
+   "threads": 8,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m4k4-p449-r",
+    "GP-m4k4-p641-pl",
+    "GP-m4k4-p7681-r"
+   ]
+  },
+  {
+   "name": "pm5",
+   "threads": 3,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m5k3-p97-pl",
+    "GP-m5k3-p193-r",
+    "GP-m5k3-p257-pl",
+    "GP-m5k3-p449-r",
+    "GP-m5k3-p641-pl",
+    "GP-m5k3-p7681-r"
+   ]
+  },
+  {
+   "name": "pm3k6",
+   "threads": 3,
+   "args": [
+    "--family",
+    "prime",
+    "--device",
+    "cpu",
+    "--skip-selftest",
+    "--only",
+    "GP-m3k6-p7681-r",
+    "GP-m3k6-p7681-pl"
+   ]
+  }
+ ],
+ "not_run": [
+  "G-m4n10k5-koblitz1-inv-ran",
+  "G-m4n10k5-ordA-ran-pla",
+  "G-m5n10k4-koblitz0-ran-ord",
+  "G-m5n10k4-koblitz1-inv-ran",
+  "G-m5n10k4-ordA-ran-pla",
+  "G-m3n12k8-koblitz0-ran-ord",
+  "G-m3n12k8-koblitz1-inv-ran",
+  "G-m3n12k8-ordA-ran-pla",
+  "G-m4n12k6-koblitz0-ran-ord",
+  "G-m4n12k6-koblitz1-inv-ran",
+  "G-m4n12k6-ordA-ran-pla",
+  "GP-m3k7-p7681-r",
+  "GP-m3k7-p7681-pl"
+ ],
+ "note": "pods of this account had 24 vCPU per H200; threads sum to 24"
+}

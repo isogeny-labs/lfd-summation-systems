@@ -1,0 +1,3104 @@
+{
+ "started": "2026-11-12T03:38:28Z",
+ "device": "gpu",
+ "steps": [
+  {
+   "name": "selftest",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "selftest",
+    "--device",
+    "gpu",
+    "--out",
+    "/workspace/r2/out/selftest-gpu.json"
+   ],
+   "start": "2026-11-12T03:38:28Z",
+   "rc": 0,
+   "end": "2026-11-12T03:38:53Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C1_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:38:53Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:03Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C1_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:39:03Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:10Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r2/out/C1_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T03:39:10Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:17Z"
+  },
+  {
+   "name": "C1_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C1_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:39:17Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:23Z"
+  },
+  {
+   "name": "C1_rand_koblitz1_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_rand_koblitz1_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_rand_koblitz1_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C1_rand_koblitz1_ran_0.json"
+   ],
+   "start": "2026-11-12T03:39:23Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:30Z"
+  },
+  {
+   "name": "C1_inva_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_inva_koblitz0_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_inva_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C1_inva_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:39:30Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:37Z"
+  },
+  {
+   "name": "C1_inva_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_inva_koblitz0_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_inva_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C1_inva_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:39:37Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:45Z"
+  },
+  {
+   "name": "C1_rand_ordinary_ord_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C1_rand_ordinary_ord_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C1_rand_ordinary_ord_0.status.json",
+    "--out",
+    "/workspace/r2/out/C1_rand_ordinary_ord_0.json"
+   ],
+   "start": "2026-11-12T03:39:45Z",
+   "rc": 0,
+   "end": "2026-11-12T03:39:51Z"
+  },
+  {
+   "name": "C2a_trac_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C2a_trac_koblitz0_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C2a_trac_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C2a_trac_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:39:51Z",
+   "rc": 0,
+   "end": "2026-11-12T03:40:24Z"
+  },
+  {
+   "name": "C2a_trac_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C2a_trac_koblitz0_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C2a_trac_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C2a_trac_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:40:24Z",
+   "rc": 0,
+   "end": "2026-11-12T03:40:54Z"
+  },
+  {
+   "name": "C2a_trac_koblitz1_ord_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C2a_trac_koblitz1_ord_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C2a_trac_koblitz1_ord_0.status.json",
+    "--out",
+    "/workspace/r2/out/C2a_trac_koblitz1_ord_0.json"
+   ],
+   "start": "2026-11-12T03:40:54Z",
+   "rc": 0,
+   "end": "2026-11-12T03:43:38Z"
+  },
+  {
+   "name": "C3a_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3a_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3a_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C3a_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:43:38Z",
+   "rc": 0,
+   "end": "2026-11-12T03:43:43Z"
+  },
+  {
+   "name": "C3a_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3a_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3a_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C3a_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:43:43Z",
+   "rc": 0,
+   "end": "2026-11-12T03:43:49Z"
+  },
+  {
+   "name": "C3a_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3a_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3a_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C3a_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:43:49Z",
+   "rc": 0,
+   "end": "2026-11-12T03:43:55Z"
+  },
+  {
+   "name": "C3b_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3b_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3b_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C3b_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:43:55Z",
+   "rc": 0,
+   "end": "2026-11-12T03:44:04Z"
+  },
+  {
+   "name": "C3b_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3b_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3b_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C3b_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:44:04Z",
+   "rc": 0,
+   "end": "2026-11-12T03:44:11Z"
+  },
+  {
+   "name": "C2b_trac_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C2b_trac_koblitz0_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C2b_trac_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C2b_trac_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:44:11Z",
+   "rc": 0,
+   "end": "2026-11-12T03:49:24Z"
+  },
+  {
+   "name": "C2b_trac_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C2b_trac_koblitz0_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C2b_trac_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C2b_trac_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:49:24Z",
+   "rc": 0,
+   "end": "2026-11-12T03:54:38Z"
+  },
+  {
+   "name": "C5a_subf_koblitz0_ord_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C5a_subf_koblitz0_ord_0.json",
+    "--max-degree",
+    "7",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C5a_subf_koblitz0_ord_0.status.json",
+    "--out",
+    "/workspace/r2/out/C5a_subf_koblitz0_ord_0.json"
+   ],
+   "start": "2026-11-12T03:54:38Z",
+   "rc": 0,
+   "end": "2026-11-12T03:55:36Z"
+  },
+  {
+   "name": "C5a_subf_koblitz1_ord_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C5a_subf_koblitz1_ord_0.json",
+    "--max-degree",
+    "7",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C5a_subf_koblitz1_ord_0.status.json",
+    "--out",
+    "/workspace/r2/out/C5a_subf_koblitz1_ord_0.json"
+   ],
+   "start": "2026-11-12T03:55:36Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:37Z"
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C6a_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C6a_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C6a_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:56:37Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:46Z"
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C6a_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C6a_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C6a_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:56:46Z",
+   "rc": 0,
+   "end": "2026-11-12T03:56:55Z"
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C6a_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C6a_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r2/out/C6a_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T03:56:55Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:04Z"
+  },
+  {
+   "name": "C6a_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C6a_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C6a_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C6a_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:57:04Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:13Z"
+  },
+  {
+   "name": "C3c_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3c_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3c_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C3c_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T03:57:13Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:24Z"
+  },
+  {
+   "name": "C3c_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3c_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3c_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C3c_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T03:57:24Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:35Z"
+  },
+  {
+   "name": "C4a_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4a_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4a_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C4a_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:57:35Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:41Z"
+  },
+  {
+   "name": "C4a_rand_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4a_rand_koblitz0_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4a_rand_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C4a_rand_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:57:41Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:47Z"
+  },
+  {
+   "name": "C4a_inva_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4a_inva_koblitz0_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4a_inva_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C4a_inva_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T03:57:47Z",
+   "rc": 0,
+   "end": "2026-11-12T03:57:54Z"
+  },
+  {
+   "name": "C4a_inva_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4a_inva_koblitz0_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4a_inva_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C4a_inva_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T03:57:54Z",
+   "rc": 0,
+   "end": "2026-11-12T03:58:00Z"
+  },
+  {
+   "name": "C2c_trac_koblitz1_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C2c_trac_koblitz1_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C2c_trac_koblitz1_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C2c_trac_koblitz1_ran_0.json"
+   ],
+   "start": "2026-11-12T03:58:00Z",
+   "rc": 0,
+   "end": "2026-11-12T04:12:25Z"
+  },
+  {
+   "name": "C2c_trac_koblitz1_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C2c_trac_koblitz1_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C2c_trac_koblitz1_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C2c_trac_koblitz1_ran_1.json"
+   ],
+   "start": "2026-11-12T04:12:25Z",
+   "rc": 0,
+   "end": "2026-11-12T04:26:05Z"
+  },
+  {
+   "name": "C4b_rand_koblitz1_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4b_rand_koblitz1_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4b_rand_koblitz1_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C4b_rand_koblitz1_ran_0.json"
+   ],
+   "start": "2026-11-12T04:26:05Z",
+   "rc": 0,
+   "end": "2026-11-12T04:26:13Z"
+  },
+  {
+   "name": "C4b_rand_koblitz1_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4b_rand_koblitz1_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4b_rand_koblitz1_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C4b_rand_koblitz1_ran_1.json"
+   ],
+   "start": "2026-11-12T04:26:13Z",
+   "rc": 0,
+   "end": "2026-11-12T04:26:22Z"
+  },
+  {
+   "name": "C4b_inva_koblitz1_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4b_inva_koblitz1_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4b_inva_koblitz1_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C4b_inva_koblitz1_ran_0.json"
+   ],
+   "start": "2026-11-12T04:26:22Z",
+   "rc": 0,
+   "end": "2026-11-12T04:26:30Z"
+  },
+  {
+   "name": "C4b_inva_koblitz1_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C4b_inva_koblitz1_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C4b_inva_koblitz1_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C4b_inva_koblitz1_ran_1.json"
+   ],
+   "start": "2026-11-12T04:26:30Z",
+   "rc": 0,
+   "end": "2026-11-12T04:26:39Z"
+  },
+  {
+   "name": "C6b_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C6b_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C6b_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C6b_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T04:26:39Z",
+   "rc": 0,
+   "end": "2026-11-12T04:28:01Z"
+  },
+  {
+   "name": "C6b_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C6b_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C6b_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C6b_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T04:28:01Z",
+   "rc": 0,
+   "end": "2026-11-12T04:29:22Z"
+  },
+  {
+   "name": "C6b_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C6b_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C6b_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r2/out/C6b_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T04:29:22Z",
+   "rc": 0,
+   "end": "2026-11-12T04:30:49Z"
+  },
+  {
+   "name": "C3d_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3d_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3d_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C3d_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T04:30:49Z",
+   "rc": 0,
+   "end": "2026-11-12T04:31:04Z"
+  },
+  {
+   "name": "C3d_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3d_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3d_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/C3d_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T04:31:04Z",
+   "rc": 0,
+   "end": "2026-11-12T04:31:20Z"
+  },
+  {
+   "name": "C5b_subf_koblitz0_ord_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C5b_subf_koblitz0_ord_0.json",
+    "--max-degree",
+    "7",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C5b_subf_koblitz0_ord_0.status.json",
+    "--out",
+    "/workspace/r2/out/C5b_subf_koblitz0_ord_0.json"
+   ],
+   "start": "2026-11-12T04:31:20Z",
+   "rc": 0,
+   "end": "2026-11-12T05:14:15Z"
+  },
+  {
+   "name": "C3e_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3e_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3e_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C3e_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T05:14:15Z",
+   "rc": 0,
+   "end": "2026-11-12T05:14:37Z"
+  },
+  {
+   "name": "C3f_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/C3f_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "5",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/C3f_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/C3f_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T05:14:37Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:03Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T05:15:03Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:12Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T05:15:12Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:18Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T05:15:18Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:25Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_3",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_ordinary_ran_3.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_ordinary_ran_3.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_ordinary_ran_3.json"
+   ],
+   "start": "2026-11-12T05:15:25Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:31Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_4",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_ordinary_ran_4.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_ordinary_ran_4.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_ordinary_ran_4.json"
+   ],
+   "start": "2026-11-12T05:15:31Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:38Z"
+  },
+  {
+   "name": "R1_rand_ordinary_ran_5",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_ordinary_ran_5.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_ordinary_ran_5.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_ordinary_ran_5.json"
+   ],
+   "start": "2026-11-12T05:15:38Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:44Z"
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_koblitz0_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_koblitz0_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_koblitz0_ran_0.json"
+   ],
+   "start": "2026-11-12T05:15:44Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:51Z"
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_koblitz0_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_koblitz0_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_koblitz0_ran_1.json"
+   ],
+   "start": "2026-11-12T05:15:51Z",
+   "rc": 0,
+   "end": "2026-11-12T05:15:57Z"
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_2",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R1_rand_koblitz0_ran_2.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R1_rand_koblitz0_ran_2.status.json",
+    "--out",
+    "/workspace/r2/out/R1_rand_koblitz0_ran_2.json"
+   ],
+   "start": "2026-11-12T05:15:57Z",
+   "rc": 0,
+   "end": "2026-11-12T05:16:04Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_0",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R2_rand_ordinary_ran_0.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R2_rand_ordinary_ran_0.status.json",
+    "--out",
+    "/workspace/r2/out/R2_rand_ordinary_ran_0.json"
+   ],
+   "start": "2026-11-12T05:16:04Z",
+   "rc": 0,
+   "end": "2026-11-12T05:16:12Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_1",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R2_rand_ordinary_ran_1.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R2_rand_ordinary_ran_1.status.json",
+    "--out",
+    "/workspace/r2/out/R2_rand_ordinary_ran_1.json"
+   ],
+   "start": "2026-11-12T05:16:12Z",
+   "rc": 0,
+   "end": "2026-11-12T05:16:20Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_2",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R2_rand_ordinary_ran_2.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R2_rand_ordinary_ran_2.status.json",
+    "--out",
+    "/workspace/r2/out/R2_rand_ordinary_ran_2.json"
+   ],
+   "start": "2026-11-12T05:16:20Z",
+   "rc": 0,
+   "end": "2026-11-12T05:16:28Z"
+  },
+  {
+   "name": "R2_rand_ordinary_ran_3",
+   "cmd": [
+    "python3",
+    "nopool_run.py",
+    "ic_bounds_bin_big_run.py",
+    "ladder",
+    "--instance",
+    "/workspace/r2/in/R2_rand_ordinary_ran_3.json",
+    "--max-degree",
+    "6",
+    "--device",
+    "gpu",
+    "--batch",
+    "768",
+    "--work-gb",
+    "12.0",
+    "--tile-mb",
+    "512.0",
+    "--tiles-on",
+    "device",
+    "--status",
+    "/workspace/r2/out/R2_rand_ordinary_ran_3.status.json",
+    "--out",
+    "/workspace/r2/out/R2_rand_ordinary_ran_3.json"
+   ],
+   "start": "2026-11-12T05:16:28Z",
+   "rc": 0,
+   "end": "2026-11-12T05:16:37Z"
+  }
+ ],
+ "cells": {
+  "C1": {
+   "purpose": "discriminating cell (n,k)=(14,11): e=8, k+e=19: law B 5, post-hoc 4",
+   "systems": {
+    "C1_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 280,
+     "seconds": 9.12,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8829
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:03Z"
+    },
+    "C1_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 210,
+     "seconds": 6.37,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8899
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:10Z"
+    },
+    "C1_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 260,
+     "seconds": 6.32,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8849
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:17Z"
+    },
+    "C1_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 243,
+     "seconds": 6.08,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8866
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:23Z"
+    },
+    "C1_rand_koblitz1_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 258,
+     "seconds": 6.29,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8851
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:30Z"
+    },
+    "C1_inva_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 270,
+     "seconds": 6.37,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8839
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:37Z"
+    },
+    "C1_inva_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 335,
+     "seconds": 6.78,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8774
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:45Z"
+    },
+    "C1_rand_ordinary_ord_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 268,
+     "seconds": 6.31,
+     "quotient_ranks": [
+      0,
+      0,
+      14,
+      1246,
+      8841
+     ],
+     "strict_falls": [
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:39:51Z"
+    }
+   }
+  },
+  "C2a": {
+   "purpose": "trace-zero hyperplane n=k+1, k=11 (e=11)",
+   "systems": {
+    "C2a_trac_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 5,
+     "engine_status": "exact-proper-local",
+     "n_points": 2070,
+     "seconds": 32.19,
+     "quotient_ranks": [
+      0,
+      0,
+      11,
+      297,
+      6468,
+      33373
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5
+     ],
+     "end": "2026-11-12T03:40:24Z"
+    },
+    "C2a_trac_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 5,
+     "engine_status": "exact-proper-local",
+     "n_points": 2070,
+     "seconds": 29.26,
+     "quotient_ranks": [
+      0,
+      0,
+      11,
+      297,
+      6468,
+      33373
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5
+     ],
+     "end": "2026-11-12T03:40:54Z"
+    },
+    "C2a_trac_koblitz1_ord_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 6,
+     "engine_status": "exact-proper-local",
+     "n_points": 1035,
+     "seconds": 162.91,
+     "quotient_ranks": [
+      0,
+      0,
+      12,
+      1068,
+      7938,
+      34408,
+      109021
+     ],
+     "strict_falls": [
+      3,
+      5
+     ],
+     "end": "2026-11-12T03:43:38Z"
+    }
+   }
+  },
+  "C3a": {
+   "purpose": "small |Z| n=2k-1, k=11 (e=1): does the floor rise to 5?",
+   "systems": {
+    "C3a_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 5.27,
+     "quotient_ranks": [
+      0,
+      0,
+      42,
+      1113,
+      9109
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:43:43Z"
+    },
+    "C3a_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 5.44,
+     "quotient_ranks": [
+      0,
+      0,
+      42,
+      1113,
+      9109
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:43:49Z"
+    },
+    "C3a_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 5.28,
+     "quotient_ranks": [
+      0,
+      0,
+      42,
+      1113,
+      9109
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:43:55Z"
+    }
+   }
+  },
+  "C3b": {
+   "purpose": "small |Z| n=2k-1, k=12",
+   "systems": {
+    "C3b_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 4,
+     "seconds": 7.88,
+     "quotient_ranks": [
+      0,
+      0,
+      46,
+      1334,
+      12947
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:44:04Z"
+    },
+    "C3b_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 7.38,
+     "quotient_ranks": [
+      0,
+      0,
+      46,
+      1334,
+      12951
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:44:11Z"
+    }
+   }
+  },
+  "C2b": {
+   "purpose": "trace-zero hyperplane n=k+1, k=12 (e=12)",
+   "systems": {
+    "C2b_trac_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 6,
+     "cert": 6,
+     "engine_status": "exact-proper-local",
+     "n_points": 4004,
+     "seconds": 311.71,
+     "quotient_ranks": [
+      0,
+      0,
+      12,
+      348,
+      8478,
+      51061,
+      186047
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "end": "2026-11-12T03:49:24Z"
+    },
+    "C2b_trac_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 6,
+     "cert": 6,
+     "engine_status": "exact-proper-local",
+     "n_points": 4004,
+     "seconds": 313.55,
+     "quotient_ranks": [
+      0,
+      0,
+      12,
+      348,
+      8478,
+      51061,
+      186047
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "end": "2026-11-12T03:54:38Z"
+    }
+   }
+  },
+  "C5a": {
+   "purpose": "subfield F_(2^10) in F_(2^20), order-two, written value k/2+1 = 6",
+   "systems": {
+    "C5a_subf_koblitz0_ord_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 6,
+     "cert": 6,
+     "engine_status": "exact-proper-local",
+     "n_points": 1023,
+     "seconds": 58.0,
+     "quotient_ranks": [
+      0,
+      0,
+      10,
+      790,
+      5235,
+      20675,
+      59437
+     ],
+     "strict_falls": [
+      3,
+      6
+     ],
+     "end": "2026-11-12T03:55:36Z"
+    },
+    "C5a_subf_koblitz1_ord_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 6,
+     "cert": 6,
+     "engine_status": "exact-proper-local",
+     "n_points": 1023,
+     "seconds": 60.16,
+     "quotient_ranks": [
+      0,
+      0,
+      10,
+      790,
+      5235,
+      20675,
+      59437
+     ],
+     "strict_falls": [
+      3,
+      6
+     ],
+     "end": "2026-11-12T03:56:37Z"
+    }
+   }
+  },
+  "C6a": {
+   "purpose": "discriminating (16,12): e=8, k+e=20: law B 5, post-hoc 4",
+   "systems": {
+    "C6a_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 258,
+     "seconds": 8.8,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12693
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:56:46Z"
+    },
+    "C6a_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 238,
+     "seconds": 8.51,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12713
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:56:55Z"
+    },
+    "C6a_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 284,
+     "seconds": 8.41,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12667
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:04Z"
+    },
+    "C6a_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 248,
+     "seconds": 8.69,
+     "quotient_ranks": [
+      0,
+      0,
+      39,
+      844,
+      12703
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:13Z"
+    }
+   }
+  },
+  "C3c": {
+   "purpose": "small |Z| n=2k-1, k=13",
+   "systems": {
+    "C3c_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 9.99,
+     "quotient_ranks": [
+      0,
+      0,
+      50,
+      1575,
+      17902
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:24Z"
+    },
+    "C3c_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 2,
+     "seconds": 10.62,
+     "quotient_ranks": [
+      0,
+      0,
+      50,
+      1575,
+      17900
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:35Z"
+    }
+   }
+  },
+  "C4a": {
+   "purpose": "Koblitz (15,11): random and Frobenius-invariant bases (e=7)",
+   "systems": {
+    "C4a_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 118,
+     "seconds": 5.64,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      8991
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:41Z"
+    },
+    "C4a_rand_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 124,
+     "seconds": 5.47,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      8985
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:47Z"
+    },
+    "C4a_inva_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 116,
+     "seconds": 5.88,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      8993
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:57:54Z"
+    },
+    "C4a_inva_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 88,
+     "seconds": 6.31,
+     "quotient_ranks": [
+      0,
+      0,
+      36,
+      729,
+      9021
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T03:58:00Z"
+    }
+   }
+  },
+  "C2c": {
+   "purpose": "trace-zero hyperplane n=k+1, k=13 (e=13)",
+   "systems": {
+    "C2c_trac_koblitz1_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 6,
+     "cert": 6,
+     "engine_status": "exact-proper-local",
+     "n_points": 8234,
+     "seconds": 864.46,
+     "quotient_ranks": [
+      0,
+      0,
+      13,
+      403,
+      10845,
+      73854,
+      305678
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "end": "2026-11-12T04:12:25Z"
+    },
+    "C2c_trac_koblitz1_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 6,
+     "cert": 6,
+     "engine_status": "exact-proper-local",
+     "n_points": 8234,
+     "seconds": 819.28,
+     "quotient_ranks": [
+      0,
+      0,
+      13,
+      403,
+      10845,
+      73854,
+      305678
+     ],
+     "strict_falls": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "end": "2026-11-12T04:26:05Z"
+    }
+   }
+  },
+  "C4b": {
+   "purpose": "Koblitz (21,12): random and Frobenius-invariant bases (e=3..4)",
+   "systems": {
+    "C4b_rand_koblitz1_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 8,
+     "seconds": 7.44,
+     "quotient_ranks": [
+      0,
+      0,
+      44,
+      1194,
+      12943
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:26:13Z"
+    },
+    "C4b_rand_koblitz1_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 4,
+     "seconds": 8.49,
+     "quotient_ranks": [
+      0,
+      0,
+      44,
+      1194,
+      12947
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:26:22Z"
+    },
+    "C4b_inva_koblitz1_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 20,
+     "seconds": 7.11,
+     "quotient_ranks": [
+      0,
+      0,
+      20,
+      932,
+      12931
+     ],
+     "strict_falls": [
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:26:30Z"
+    },
+    "C4b_inva_koblitz1_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 2,
+     "seconds": 8.64,
+     "quotient_ranks": [
+      0,
+      0,
+      44,
+      1320,
+      12949
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:26:39Z"
+    }
+   }
+  },
+  "C6b": {
+   "purpose": "discriminating (18,13): e=8, k+e=21: law B 5, post-hoc 4",
+   "systems": {
+    "C6b_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 5,
+     "engine_status": "exact-proper-local",
+     "n_points": 276,
+     "seconds": 82.0,
+     "quotient_ranks": [
+      0,
+      0,
+      43,
+      1043,
+      15957,
+      83406
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "end": "2026-11-12T04:28:01Z"
+    },
+    "C6b_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 5,
+     "engine_status": "exact-proper-local",
+     "n_points": 226,
+     "seconds": 80.57,
+     "quotient_ranks": [
+      0,
+      0,
+      43,
+      1043,
+      15957,
+      83456
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "end": "2026-11-12T04:29:22Z"
+    },
+    "C6b_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 5,
+     "cert": 5,
+     "engine_status": "exact-proper-local",
+     "n_points": 286,
+     "seconds": 85.58,
+     "quotient_ranks": [
+      0,
+      0,
+      43,
+      1043,
+      15957,
+      83396
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "end": "2026-11-12T04:30:49Z"
+    }
+   }
+  },
+  "C3d": {
+   "purpose": "small |Z| n=2k-1, k=14",
+   "systems": {
+    "C3d_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 4,
+     "seconds": 15.11,
+     "quotient_ranks": [
+      0,
+      0,
+      54,
+      1836,
+      24154
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:31:04Z"
+    },
+    "C3d_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 2,
+     "seconds": 15.51,
+     "quotient_ranks": [
+      0,
+      0,
+      54,
+      1836,
+      24156
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T04:31:20Z"
+    }
+   }
+  },
+  "C5b": {
+   "purpose": "subfield F_(2^12) in F_(2^24), order-two, written value 7 (needs D = 7: 536,155 columns)",
+   "systems": {
+    "C5b_subf_koblitz0_ord_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 7,
+     "cert": 7,
+     "engine_status": "exact-proper-local",
+     "n_points": 4095,
+     "seconds": 2574.64,
+     "quotient_ranks": [
+      0,
+      0,
+      12,
+      1188,
+      10134,
+      51486,
+      185954,
+      532060
+     ],
+     "strict_falls": [
+      3,
+      7
+     ],
+     "end": "2026-11-12T05:14:15Z"
+    }
+   }
+  },
+  "C3e": {
+   "purpose": "small |Z| n=2k-1, k=15 (D=6 is 768,212 columns: cap 5 unless budget remains)",
+   "systems": {
+    "C3e_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 21.45,
+     "quotient_ranks": [
+      0,
+      0,
+      58,
+      2117,
+      31931
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:14:37Z"
+    }
+   }
+  },
+  "C3f": {
+   "purpose": "small |Z| n=2k-1, k=16 (D=6 is 1,149,017 columns: cap 5)",
+   "systems": {
+    "C3f_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-unit",
+     "n_points": 0,
+     "seconds": 25.04,
+     "quotient_ranks": [
+      0,
+      0,
+      62,
+      2418,
+      41449
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:03Z"
+    }
+   }
+  },
+  "R1": {
+   "purpose": "reserve: more systems at the discriminating cell (14,11) (within-cell variation)",
+   "systems": {
+    "R1_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 260,
+     "seconds": 8.89,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8849
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:12Z"
+    },
+    "R1_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 292,
+     "seconds": 5.74,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8817
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:18Z"
+    },
+    "R1_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 234,
+     "seconds": 5.9,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8875
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:25Z"
+    },
+    "R1_rand_ordinary_ran_3": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 270,
+     "seconds": 6.18,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8839
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:31Z"
+    },
+    "R1_rand_ordinary_ran_4": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 251,
+     "seconds": 5.86,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8858
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:38Z"
+    },
+    "R1_rand_ordinary_ran_5": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 241,
+     "seconds": 5.81,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8868
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:44Z"
+    },
+    "R1_rand_koblitz0_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 250,
+     "seconds": 6.0,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8859
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:51Z"
+    },
+    "R1_rand_koblitz0_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 254,
+     "seconds": 5.99,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8855
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:15:57Z"
+    },
+    "R1_rand_koblitz0_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 254,
+     "seconds": 6.13,
+     "quotient_ranks": [
+      0,
+      0,
+      35,
+      665,
+      8855
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:16:04Z"
+    }
+   }
+  },
+  "R2": {
+   "purpose": "reserve: (17,12): e=7, k+e=19: law B 5, post-hoc 4",
+   "systems": {
+    "R2_rand_ordinary_ran_0": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 126,
+     "seconds": 7.75,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12825
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:16:12Z"
+    },
+    "R2_rand_ordinary_ran_1": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 122,
+     "seconds": 7.6,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12829
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:16:20Z"
+    },
+    "R2_rand_ordinary_ran_2": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 140,
+     "seconds": 7.67,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12811
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:16:28Z"
+    },
+    "R2_rand_ordinary_ran_3": {
+     "status": "done",
+     "rc": 0,
+     "exact_lfd": 4,
+     "cert": 4,
+     "engine_status": "exact-proper-local",
+     "n_points": 104,
+     "seconds": 7.86,
+     "quotient_ranks": [
+      0,
+      0,
+      40,
+      914,
+      12847
+     ],
+     "strict_falls": [
+      2,
+      3,
+      4
+     ],
+     "end": "2026-11-12T05:16:37Z"
+    }
+   }
+  }
+ },
+ "finished": true,
+ "elapsed_s": 5889,
+ "ended": "2026-11-12T05:16:37Z"
+}

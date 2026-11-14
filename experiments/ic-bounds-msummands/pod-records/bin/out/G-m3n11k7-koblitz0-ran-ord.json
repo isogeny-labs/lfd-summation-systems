@@ -1,0 +1,188 @@
+{
+ "name": "G-m3n11k7-koblitz0-ran-ord",
+ "system_hash": "1cfdecab2f6b6b2914a6e0e9b6640b8944ca3fb452709784d4c0430710a3b719",
+ "n": 11,
+ "k": 7,
+ "n_points": 1348,
+ "points_sha256": "99c7bad3df3ac4c5504c95a2bc786d2d392597bad058acc38d866b0501b4fc10",
+ "cls": "proper",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "device": "gpu",
+ "status": "exact-proper-local",
+ "exact_lfd": 6,
+ "certificate_degree": 8,
+ "strict_falls": [
+  3,
+  4,
+  5,
+  6
+ ],
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  221,
+  1821,
+  16697,
+  80815,
+  197092,
+  400582
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 22
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 21,
+   "codimension": 232
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 211,
+   "codimension": 1341
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 1124,
+   "codimension": 5726
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 1261,
+   "codimension": 11199
+  },
+  {
+   "degree": 6,
+   "evaluation_rank": 1324,
+   "codimension": 1345
+  },
+  {
+   "degree": 7,
+   "evaluation_rank": 1345,
+   "codimension": 1348
+  },
+  {
+   "degree": 8,
+   "evaluation_rank": 1348,
+   "codimension": 1348
+  }
+ ],
+ "profiles": [
+  [
+   0
+  ],
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   21,
+   221
+  ],
+  [
+   0,
+   1,
+   21,
+   234,
+   1821
+  ],
+  [
+   0,
+   1,
+   21,
+   234,
+   2294,
+   16697
+  ],
+  [
+   0,
+   1,
+   21,
+   438,
+   6286,
+   26572,
+   80815
+  ],
+  [
+   0,
+   1,
+   21,
+   438,
+   6286,
+   26572,
+   80815,
+   197092
+  ],
+  [
+   0,
+   1,
+   21,
+   438,
+   6286,
+   26572,
+   80815,
+   197092,
+   400582
+  ]
+ ],
+ "rref_sha256": [
+  "8747ffbc4b8d2ce01bc28a97f55beeeb0963f06dc981f12c67bc085bfe34a7c7",
+  "bba130aeaddad6553e1b4eda48a9e135a2ef1a0c08312486612fdec584854b1c",
+  "05cd4ca8f767425f7c48752029a67338db9bc5706b8fb84f57a03bfc8d1515c9",
+  "137d9a36a1f57c6f6431fead645af8eddadbb5868447f2ddd4071b52896e4e34",
+  "0c4fee69d586a81106651470e8640a78a178d29dfa7107d4f28eb819e79583bb",
+  "b76e0c90eb7c81f2d6c5cce3743a3b3e72747946aeb6452a344f1300e69551f4",
+  "717acffef8748106cd47c6f471c1a5146b9c20c4ec819c84ce28dcda85b08911",
+  "6b58a7c9a2fc69287d3f138cc001c7f76ef7ff4eac8733573991718c50f71329",
+  "192fdda0d935b3bb41b4ad3cd3262f271f3a0e5a054bcaa4f04655aa013ac2f0"
+ ],
+ "columns": [
+  1,
+  22,
+  232,
+  1562,
+  7547,
+  27896,
+  82160,
+  198440,
+  401930
+ ],
+ "per_degree_seconds": [
+  0.001,
+  0.0,
+  0.0,
+  0.295,
+  0.994,
+  6.403,
+  23.461,
+  130.238,
+  418.33
+ ],
+ "per_degree_flops": [
+  0.0,
+  0.0,
+  0.0,
+  69025280.0,
+  45663304960.0,
+  10041175400960.0,
+  217683892401152.0,
+  1967545187597440.0,
+  4393611964917376.0
+ ],
+ "closed_all": true,
+ "repairs": 0,
+ "seconds": 584.9,
+ "peak_rss_mb": 918,
+ "device_peak_bytes": 91097364992
+}

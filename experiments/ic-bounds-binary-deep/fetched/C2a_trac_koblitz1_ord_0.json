@@ -1,0 +1,145 @@
+{
+ "name": "C2a_trac_koblitz1_ord_0",
+ "system_hash": "3b6cdf1048ad8963613790483cbb900c2c2311990c16b388b2f8e6092e5c62cb",
+ "n": 12,
+ "k": 11,
+ "n_points": 1035,
+ "points_sha256": "73de283c3f1460574dde9f51a0809923abe58704c3574857ec35b83f348691c4",
+ "cls": "order-two",
+ "engine": "ic_bounds_bin_big/1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "device": "gpu",
+ "status": "exact-proper-local",
+ "exact_lfd": 5,
+ "certificate_degree": 6,
+ "strict_falls": [
+  3,
+  5
+ ],
+ "quotient_ranks": [
+  0,
+  0,
+  12,
+  1068,
+  7938,
+  34408,
+  109021
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 23
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 23,
+   "codimension": 242
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 194,
+   "codimension": 726
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 726,
+   "codimension": 1171
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 1033,
+   "codimension": 1035
+  },
+  {
+   "degree": 6,
+   "evaluation_rank": 1035,
+   "codimension": 1035
+  }
+ ],
+ "profiles": [
+  [
+   0
+  ],
+  [
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   12
+  ],
+  [
+   0,
+   0,
+   60,
+   1068
+  ],
+  [
+   0,
+   0,
+   60,
+   1068,
+   7938
+  ],
+  [
+   0,
+   0,
+   60,
+   1068,
+   8076,
+   34408
+  ],
+  [
+   0,
+   0,
+   60,
+   1068,
+   8076,
+   34408,
+   109021
+  ]
+ ],
+ "rref_sha256": [
+  "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+  "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+  "5c53a9ce116178fe93c8e36474a1fc47165b2dd9b2c02295f1fc5bec395b3c10",
+  "c5bf11d605183407d42d45e7324c556794b28f33a9e3c7a29e24f582ad9ffdc5",
+  "215ec54c25ce1ef9f02cf6f8654b31c811681fe0c35b1c15d5a4deeca7afd50b",
+  "036dc795e6999df8109abe04f3e4c0439685a496f8352db886c122583831653e",
+  "59f64a1992bb84182f9952dd92c8f7be39bb80f1869d4f617a3b98a79a2d2d5a"
+ ],
+ "columns": [
+  1,
+  23,
+  254,
+  1794,
+  9109,
+  35443,
+  110056
+ ],
+ "per_degree_seconds": [
+  0.0,
+  0.0,
+  0.022,
+  0.708,
+  4.7,
+  24.94,
+  111.694
+ ],
+ "per_degree_flops": [
+  0.0,
+  0.0,
+  147456.0,
+  1084261632.0,
+  375323647872.0,
+  15165454959744.0,
+  131712952274560.0
+ ],
+ "closed_all": true,
+ "repairs": 0,
+ "seconds": 143.62,
+ "peak_rss_mb": 880,
+ "device_peak_bytes": 0
+}

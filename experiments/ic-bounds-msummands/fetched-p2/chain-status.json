@@ -1,0 +1,48 @@
+{
+ "started": "2026-11-12T06:23:24Z",
+ "time": "2026-11-12T09:05:25Z",
+ "elapsed_s": 9721,
+ "chains": {
+  "pm4-a": {
+   "rc": 0,
+   "progress": {
+    "systems_seen": 3,
+    "systems_done": 3,
+    "other": [],
+    "chain_ended": "2026-11-12T08:58:36Z"
+   }
+  },
+  "pm4-b": {
+   "rc": 0,
+   "progress": {
+    "systems_seen": 3,
+    "systems_done": 3,
+    "other": [],
+    "chain_ended": "2026-11-12T08:49:02Z"
+   }
+  },
+  "pm5": {
+   "rc": 0,
+   "progress": {
+    "systems_seen": 6,
+    "systems_done": 6,
+    "other": [],
+    "chain_ended": "2026-11-12T07:44:29Z"
+   }
+  },
+  "pm3k6": {
+   "rc": null,
+   "progress": {
+    "systems_seen": 2,
+    "systems_done": 0,
+    "other": [
+     "timeout"
+    ],
+    "chain_ended": null
+   }
+  }
+ },
+ "own_chains_done": false,
+ "first_job_finished": true,
+ "finished": false
+}

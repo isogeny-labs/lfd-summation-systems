@@ -1,0 +1,37 @@
+{
+ "started": "2026-11-12T03:38:28Z",
+ "time": "2026-11-12T05:18:33Z",
+ "elapsed_s": 6005,
+ "runs": {
+  "r2": {
+   "rc": 0,
+   "args": "--batch 768 --tile-mb 512 --work-gb 12",
+   "cells": "cells.json",
+   "threads": 6,
+   "progress": {
+    "steps": 58,
+    "systems_seen": 57,
+    "systems_done": 57,
+    "not_done": [],
+    "chain_ended": "2026-11-12T05:16:37Z",
+    "chain_aborted": null
+   }
+  },
+  "r3": {
+   "rc": 0,
+   "args": "--device cpu",
+   "cells": "cells_cpu.json",
+   "threads": 16,
+   "progress": {
+    "steps": 47,
+    "systems_seen": 46,
+    "systems_done": 46,
+    "not_done": [],
+    "chain_ended": "2026-11-12T04:21:02Z",
+    "chain_aborted": null
+   }
+  }
+ },
+ "aborted": null,
+ "finished": true
+}

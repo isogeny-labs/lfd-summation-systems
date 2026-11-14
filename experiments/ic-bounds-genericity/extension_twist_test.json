@@ -1,0 +1,383 @@
+{
+ "depth8_twisted_free_extension": {
+  "predicted_dim": 1061,
+  "rows": [
+   {
+    "c": 1,
+    "dim_W8": 1061,
+    "W8_closed_twisted": true,
+    "dim_V8c": 1061,
+    "profile_V8c": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "V8c_equals_W8": true,
+    "one_in_W8": false,
+    "seconds": 3.4
+   },
+   {
+    "c": 0,
+    "dim_W8": 1061,
+    "W8_closed_twisted": true,
+    "dim_V8c": 1061,
+    "profile_V8c": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "V8c_equals_W8": true,
+    "one_in_W8": false,
+    "seconds": 3.3
+   },
+   {
+    "c": 2,
+    "dim_W8": 1061,
+    "W8_closed_twisted": true,
+    "dim_V8c": 1061,
+    "profile_V8c": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "V8c_equals_W8": true,
+    "one_in_W8": false,
+    "seconds": 3.4
+   },
+   {
+    "c": 777,
+    "dim_W8": 1061,
+    "W8_closed_twisted": true,
+    "dim_V8c": 1061,
+    "profile_V8c": [
+     0,
+     0,
+     2,
+     119,
+     1061
+    ],
+    "V8c_equals_W8": true,
+    "one_in_W8": false,
+    "seconds": 3.3
+   }
+  ]
+ },
+ "pivots_across_primes": [
+  {
+   "k": 6,
+   "prime": 193,
+   "A": 89,
+   "B": 191,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 6,
+   "prime": 193,
+   "A": 101,
+   "B": 71,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 6,
+   "prime": 12289,
+   "A": 2233,
+   "B": 7485,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 6,
+   "prime": 12289,
+   "A": 486,
+   "B": 4001,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 6,
+   "prime": 40961,
+   "A": 5146,
+   "B": 19278,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 6,
+   "prime": 40961,
+   "A": 1708,
+   "B": 33764,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 6,
+   "prime": 33554393,
+   "A": 1535695,
+   "B": 9048055,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 6,
+   "prime": 33554393,
+   "A": 4923280,
+   "B": 1703374,
+   "dim": 605,
+   "profile": [
+    0,
+    0,
+    2,
+    111,
+    605
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 193,
+   "A": 12,
+   "B": 53,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 193,
+   "A": 189,
+   "B": 182,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 12289,
+   "A": 5634,
+   "B": 4845,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 12289,
+   "A": 8546,
+   "B": 10178,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 40961,
+   "A": 14882,
+   "B": 22540,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 40961,
+   "A": 37310,
+   "B": 26676,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 33554393,
+   "A": 20564981,
+   "B": 26325433,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  },
+  {
+   "k": 7,
+   "prime": 33554393,
+   "A": 12120150,
+   "B": 11766219,
+   "dim": 829,
+   "profile": [
+    0,
+    0,
+    2,
+    115,
+    829
+   ],
+   "pivots_equal_reference": true,
+   "symmetric_difference": 0
+  }
+ ],
+ "density": [
+  {
+   "k": 6,
+   "prime": 40961,
+   "shape": [
+    605,
+    794
+   ],
+   "nonzero": 68803,
+   "density": 0.1432,
+   "nonzero_low_rows": 8841,
+   "low_rows": 111,
+   "weight_le3_columns": 299
+  },
+  {
+   "k": 7,
+   "prime": 40961,
+   "shape": [
+    829,
+    1471
+   ],
+   "nonzero": 93011,
+   "density": 0.0763,
+   "nonzero_low_rows": 8893,
+   "low_rows": 115,
+   "weight_le3_columns": 470
+  },
+  {
+   "k": 6,
+   "prime": 33554393,
+   "shape": [
+    605,
+    794
+   ],
+   "nonzero": 68803,
+   "density": 0.1432,
+   "nonzero_low_rows": 8841,
+   "low_rows": 111,
+   "weight_le3_columns": 299
+  },
+  {
+   "k": 7,
+   "prime": 33554393,
+   "shape": [
+    829,
+    1471
+   ],
+   "nonzero": 93011,
+   "density": 0.0763,
+   "nonzero_low_rows": 8893,
+   "low_rows": 115,
+   "weight_le3_columns": 470
+  }
+ ]
+}

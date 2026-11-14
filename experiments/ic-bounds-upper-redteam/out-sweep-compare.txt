@@ -1,0 +1,33 @@
+== ic-curve-sweep cases 3163 results 3005
+ kinds {('prime', 2, 'subgroup'): 422, ('prime', 2, 'random-coset'): 840, ('koblitz', 2, 'random-subspace'): 652, ('binary', 2, 'random-subspace'): 654, ('koblitz', 2, 'frobenius-invariant'): 299, ('binary', 2, 'frobenius-invariant'): 296}
+ statuses {'exact-unit': 1310, 'exact-proper-local': 1695}
+ prime m=2 cases without result: 0
+  ('random-coset', 2) k+2 = 4 {('exact-unit', 4, 4, 4): 114, ('exact-proper-local', 4, 4, 4): 28, ('exact-unit', 3, 3, 3): 2, ('exact-proper-local', 3, 3, 3): 1}
+  ('random-coset', 3) k+2 = 5 {('exact-unit', 4, 4, 4): 106, ('exact-proper-local', 4, 4, 4): 51}
+  ('random-coset', 4) k+2 = 6 {('exact-proper-local', 4, 4, 4): 76, ('exact-unit', 4, 4, 4): 82}
+  ('random-coset', 5) k+2 = 7 {('exact-proper-local', 4, 4, 4): 107, ('exact-unit', 4, 4, 4): 51}
+  ('random-coset', 6) k+2 = 8 {('exact-proper-local', 5, 5, 5): 95, ('exact-unit', 4, 4, 4): 8, ('exact-unit', 5, 5, 5): 23}
+  ('random-coset', 7) k+2 = 9 {('exact-proper-local', 5, 5, 5): 79, ('exact-proper-local', 4, 4, 4): 2, ('exact-unit', 5, 5, 5): 11, ('exact-unit', 4, 4, 4): 4}
+  ('subgroup', 2) k+2 = 4 {('exact-unit', 4, 4, 4): 50, ('exact-proper-local', 4, 4, 4): 25}
+  ('subgroup', 3) k+2 = 5 {('exact-proper-local', 4, 4, 4): 28, ('exact-unit', 4, 4, 4): 50}
+  ('subgroup', 4) k+2 = 6 {('exact-proper-local', 4, 4, 4): 46, ('exact-unit', 4, 4, 4): 33}
+  ('subgroup', 5) k+2 = 7 {('exact-proper-local', 4, 4, 4): 62, ('exact-unit', 4, 4, 4): 17}
+  ('subgroup', 6) k+2 = 8 {('exact-proper-local', 5, 5, 5): 50, ('exact-proper-local', 4, 4, 4): 4, ('exact-unit', 5, 5, 5): 9}
+  ('subgroup', 7) k+2 = 9 {('exact-proper-local', 5, 5, 5): 43, ('exact-proper-local', 4, 4, 4): 3, ('exact-unit', 5, 5, 5): 2}
+ VIOLATIONS of LFD <= k+2: []
+== ic-chain-depth8 cases 22 results 22
+ kinds {('prime', 2, 'subgroup'): 14, ('prime', 2, 'random-coset'): 8}
+ statuses {'exact-proper-shift': 20, 'exact-unit-shift': 2}
+ prime m=2 cases without result: 0
+  ('random-coset', 8) k+2 = 10 {('exact-proper-shift', 5, 5, 5): 7, ('exact-unit-shift', 5, 5, 5): 1}
+  ('subgroup', 7) k+2 = 9 {('exact-proper-shift', 5, 5, 5): 1, ('exact-unit-shift', 5, 5, 5): 1}
+  ('subgroup', 8) k+2 = 10 {('exact-proper-shift', 5, 5, 5): 12}
+ VIOLATIONS of LFD <= k+2: []
+== ic-chain-depth9 cases 10 results 10
+ kinds {('prime', 2, 'subgroup'): 6, ('prime', 2, 'random-coset'): 4}
+ statuses {'exact-proper-shift': 9, 'exact-unit-shift': 1}
+ prime m=2 cases without result: 0
+  ('random-coset', 9) k+2 = 11 {('exact-proper-shift', 5, 5, 5): 4}
+  ('subgroup', 7) k+2 = 9 {('exact-unit-shift', 5, 5, 5): 1, ('exact-proper-shift', 5, 5, 5): 1}
+  ('subgroup', 9) k+2 = 11 {('exact-proper-shift', 5, 5, 5): 4}
+ VIOLATIONS of LFD <= k+2: []

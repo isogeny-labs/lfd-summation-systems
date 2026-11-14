@@ -1,0 +1,10 @@
+{"name": "G-m4n9k4-koblitz0-ran-ord", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 9, "engine_status": "exact-proper-local", "strict_falls": [9], "seconds": 17.47, "end": "2026-11-12T06:17:18Z"}
+{"name": "G-m4n9k4-koblitz1-inv-ran", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 13, "engine_status": "exact-proper-local", "strict_falls": [13], "seconds": 15.88, "end": "2026-11-12T06:17:37Z"}
+{"name": "G-m4n9k4-ordA-ran-pla", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 13, "engine_status": "exact-proper-local", "strict_falls": [13], "seconds": 15.96, "end": "2026-11-12T06:17:56Z"}
+{"name": "G-m3n10k6-koblitz0-ran-ord", "cell": "gpu-msum", "status": "failed rc 3", "rc": 3, "exact_lfd": null, "engine_status": "capped", "strict_falls": [4, 5], "seconds": 11.98, "end": "2026-11-12T06:18:09Z"}
+{"name": "G-m3n10k6-koblitz1-inv-ran", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 7, "engine_status": "exact-proper-local", "strict_falls": [7], "seconds": 17.01, "end": "2026-11-12T06:18:28Z"}
+{"name": "G-m3n10k6-ordA-ran-pla", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 7, "engine_status": "exact-proper-local", "strict_falls": [7], "seconds": 14.28, "end": "2026-11-12T06:18:43Z"}
+{"name": "G-m4n10k5-koblitz0-ran-ord", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 9, "engine_status": "exact-proper-local", "strict_falls": [9], "seconds": 1244.46, "end": "2026-11-12T06:40:10Z"}
+{"name": "G-m3n11k7-koblitz0-ran-ord", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 6, "engine_status": "exact-proper-local", "strict_falls": [3, 4, 5, 6], "seconds": 584.9, "end": "2026-11-12T06:50:00Z"}
+{"name": "G-m3n11k7-koblitz1-inv-ran", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 7, "engine_status": "exact-proper-local", "strict_falls": [7], "seconds": 154.17, "end": "2026-11-12T06:52:40Z"}
+{"name": "G-m3n11k7-ordA-ran-pla", "cell": "gpu-msum", "status": "done", "rc": 0, "exact_lfd": 7, "engine_status": "exact-proper-local", "strict_falls": [7], "seconds": 154.83, "end": "2026-11-12T06:55:20Z"}

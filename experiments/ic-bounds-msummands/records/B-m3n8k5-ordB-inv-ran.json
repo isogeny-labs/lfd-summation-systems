@@ -1,0 +1,91 @@
+{
+ "case": "B-m3n8k5-ordB-inv-ran",
+ "family": "binary",
+ "m": 3,
+ "n": 8,
+ "k": 5,
+ "variables": 15,
+ "curve": "ordB",
+ "a": 65,
+ "b": 189,
+ "basis": [
+  162,
+  66,
+  18,
+  12,
+  1
+ ],
+ "target": [
+  67,
+  60
+ ],
+ "target_class": "random",
+ "base_kind": "invariant",
+ "frobenius_invariant": true,
+ "input_degree": 6,
+ "equations": 8,
+ "const_equation": false,
+ "system_hash": "b2e82a7e205f7d9f2af58842cb8d66bc0d6182789ab0a906cda57c297d253925",
+ "instance_hash": "17130b39104160b3cbd1c646571180e9699f0b70dc37245dd9da730b6f424d21",
+ "points_sha256": "6a59a1fc8ac635eaaa8580138689a5da20b6e55c169d03e02505a22e70df150d",
+ "solutions": 482,
+ "ideal_class": "proper",
+ "status": "exact-proper-local",
+ "exact_lfd": 7,
+ "strict_falls": [
+  7
+ ],
+ "certificate_degree": 7,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  8,
+  15902
+ ],
+ "local_checks": [
+  {
+   "degree": 1,
+   "evaluation_rank": 1,
+   "codimension": 16
+  },
+  {
+   "degree": 2,
+   "evaluation_rank": 16,
+   "codimension": 121
+  },
+  {
+   "degree": 3,
+   "evaluation_rank": 119,
+   "codimension": 576
+  },
+  {
+   "degree": 4,
+   "evaluation_rank": 448,
+   "codimension": 1941
+  },
+  {
+   "degree": 5,
+   "evaluation_rank": 479,
+   "codimension": 4944
+  },
+  {
+   "degree": 6,
+   "evaluation_rank": 482,
+   "codimension": 9941
+  },
+  {
+   "degree": 7,
+   "evaluation_rank": 482,
+   "codimension": 482
+  }
+ ],
+ "kernel_upper_bound": 16,
+ "cap_reason": null,
+ "engine": "csd.ic_bounds_bin_big.local_profile_bin(cpu)",
+ "seconds": 66.38,
+ "max_rss_gb": 1.24
+}

@@ -1,0 +1,375 @@
+{
+ "order": [
+  {
+   "cell": "gpu-msum",
+   "purpose": "cells not run locally",
+   "reserve": false,
+   "systems": [
+    {
+     "name": "G-m4n9k4-koblitz0-ran-ord",
+     "family": "binary",
+     "spec": "specs/G-m4n9k4-koblitz0-ran-ord.json",
+     "max_degree": 11,
+     "est_seconds": 1.9,
+     "time_limit_s": 3600,
+     "max_degree_frozen": 10
+    },
+    {
+     "name": "G-m4n9k4-koblitz1-inv-ran",
+     "family": "binary",
+     "spec": "specs/G-m4n9k4-koblitz1-inv-ran.json",
+     "max_degree": 15,
+     "est_seconds": 2.6,
+     "time_limit_s": 3600,
+     "max_degree_frozen": 14
+    },
+    {
+     "name": "G-m4n9k4-ordA-ran-pla",
+     "family": "binary",
+     "spec": "specs/G-m4n9k4-ordA-ran-pla.json",
+     "max_degree": 15,
+     "est_seconds": 2.6,
+     "time_limit_s": 3600,
+     "max_degree_frozen": 14
+    },
+    {
+     "name": "G-m3n10k6-koblitz0-ran-ord",
+     "family": "binary",
+     "spec": "specs/G-m3n10k6-koblitz0-ran-ord.json",
+     "max_degree": 6,
+     "est_seconds": 0.0,
+     "time_limit_s": 3600,
+     "max_degree_frozen": 5
+    },
+    {
+     "name": "G-m3n10k6-koblitz1-inv-ran",
+     "family": "binary",
+     "spec": "specs/G-m3n10k6-koblitz1-inv-ran.json",
+     "max_degree": 9,
+     "est_seconds": 11.4,
+     "time_limit_s": 3600,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m3n10k6-ordA-ran-pla",
+     "family": "binary",
+     "spec": "specs/G-m3n10k6-ordA-ran-pla.json",
+     "max_degree": 9,
+     "est_seconds": 11.4,
+     "time_limit_s": 3600,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m4n10k5-koblitz0-ran-ord",
+     "family": "binary",
+     "spec": "specs/G-m4n10k5-koblitz0-ran-ord.json",
+     "max_degree": 11,
+     "est_seconds": 2188.7,
+     "time_limit_s": 13132,
+     "max_degree_frozen": 10
+    },
+    {
+     "name": "G-m4n10k5-koblitz1-inv-ran",
+     "family": "binary",
+     "spec": "specs/G-m4n10k5-koblitz1-inv-ran.json",
+     "max_degree": 15,
+     "est_seconds": 10106.3,
+     "time_limit_s": 60637,
+     "max_degree_frozen": 14
+    },
+    {
+     "name": "G-m4n10k5-ordA-ran-pla",
+     "family": "binary",
+     "spec": "specs/G-m4n10k5-ordA-ran-pla.json",
+     "max_degree": 15,
+     "est_seconds": 10106.3,
+     "time_limit_s": 60637,
+     "max_degree_frozen": 14
+    },
+    {
+     "name": "G-m5n10k4-koblitz0-ran-ord",
+     "family": "binary",
+     "spec": "specs/G-m5n10k4-koblitz0-ran-ord.json",
+     "max_degree": 18,
+     "est_seconds": 10754.1,
+     "time_limit_s": 64524,
+     "max_degree_frozen": 17
+    },
+    {
+     "name": "G-m5n10k4-koblitz1-inv-ran",
+     "family": "binary",
+     "spec": "specs/G-m5n10k4-koblitz1-inv-ran.json",
+     "max_degree": 20,
+     "est_seconds": 10760.6,
+     "time_limit_s": 64563,
+     "max_degree_frozen": 20
+    },
+    {
+     "name": "G-m5n10k4-ordA-ran-pla",
+     "family": "binary",
+     "spec": "specs/G-m5n10k4-ordA-ran-pla.json",
+     "max_degree": 20,
+     "est_seconds": 10760.6,
+     "time_limit_s": 64563,
+     "max_degree_frozen": 20
+    },
+    {
+     "name": "G-m3n11k7-koblitz0-ran-ord",
+     "family": "binary",
+     "spec": "specs/G-m3n11k7-koblitz0-ran-ord.json",
+     "max_degree": 9,
+     "est_seconds": 606.0,
+     "time_limit_s": 3636,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m3n11k7-koblitz1-inv-ran",
+     "family": "binary",
+     "spec": "specs/G-m3n11k7-koblitz1-inv-ran.json",
+     "max_degree": 9,
+     "est_seconds": 606.0,
+     "time_limit_s": 3636,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m3n11k7-ordA-ran-pla",
+     "family": "binary",
+     "spec": "specs/G-m3n11k7-ordA-ran-pla.json",
+     "max_degree": 9,
+     "est_seconds": 606.0,
+     "time_limit_s": 3636,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m3n12k8-koblitz0-ran-ord",
+     "family": "binary",
+     "spec": "specs/G-m3n12k8-koblitz0-ran-ord.json",
+     "max_degree": 9,
+     "est_seconds": 19191.8,
+     "time_limit_s": 115150,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m3n12k8-koblitz1-inv-ran",
+     "family": "binary",
+     "spec": "specs/G-m3n12k8-koblitz1-inv-ran.json",
+     "max_degree": 9,
+     "est_seconds": 19191.8,
+     "time_limit_s": 115150,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m3n12k8-ordA-ran-pla",
+     "family": "binary",
+     "spec": "specs/G-m3n12k8-ordA-ran-pla.json",
+     "max_degree": 9,
+     "est_seconds": 19191.8,
+     "time_limit_s": 115150,
+     "max_degree_frozen": 8
+    },
+    {
+     "name": "G-m4n12k6-koblitz0-ran-ord",
+     "family": "binary",
+     "spec": "specs/G-m4n12k6-koblitz0-ran-ord.json",
+     "max_degree": 15,
+     "est_seconds": 26713216.5,
+     "time_limit_s": 160279299,
+     "max_degree_frozen": 14
+    },
+    {
+     "name": "G-m4n12k6-koblitz1-inv-ran",
+     "family": "binary",
+     "spec": "specs/G-m4n12k6-koblitz1-inv-ran.json",
+     "max_degree": 15,
+     "est_seconds": 26713216.5,
+     "time_limit_s": 160279299,
+     "max_degree_frozen": 14
+    },
+    {
+     "name": "G-m4n12k6-ordA-ran-pla",
+     "family": "binary",
+     "spec": "specs/G-m4n12k6-ordA-ran-pla.json",
+     "max_degree": 15,
+     "est_seconds": 26713216.5,
+     "time_limit_s": 160279299,
+     "max_degree_frozen": 14
+    },
+    {
+     "name": "GP-m4k4-p97-pl",
+     "family": "prime",
+     "spec": "specs/GP-m4k4-p97-pl.json",
+     "Ds": [
+      12,
+      13
+     ],
+     "est_seconds": 74.6,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m4k4-p193-r",
+     "family": "prime",
+     "spec": "specs/GP-m4k4-p193-r.json",
+     "Ds": [
+      12,
+      13
+     ],
+     "est_seconds": 74.6,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m4k4-p257-pl",
+     "family": "prime",
+     "spec": "specs/GP-m4k4-p257-pl.json",
+     "Ds": [
+      12,
+      13
+     ],
+     "est_seconds": 74.6,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m4k4-p449-r",
+     "family": "prime",
+     "spec": "specs/GP-m4k4-p449-r.json",
+     "Ds": [
+      12,
+      13
+     ],
+     "est_seconds": 74.6,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m4k4-p641-pl",
+     "family": "prime",
+     "spec": "specs/GP-m4k4-p641-pl.json",
+     "Ds": [
+      12,
+      13
+     ],
+     "est_seconds": 74.6,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m4k4-p7681-r",
+     "family": "prime",
+     "spec": "specs/GP-m4k4-p7681-r.json",
+     "Ds": [
+      12,
+      13
+     ],
+     "est_seconds": 74.6,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m5k3-p97-pl",
+     "family": "prime",
+     "spec": "specs/GP-m5k3-p97-pl.json",
+     "Ds": [
+      15,
+      16
+     ],
+     "est_seconds": 8.8,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m5k3-p193-r",
+     "family": "prime",
+     "spec": "specs/GP-m5k3-p193-r.json",
+     "Ds": [
+      15,
+      16
+     ],
+     "est_seconds": 8.8,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m5k3-p257-pl",
+     "family": "prime",
+     "spec": "specs/GP-m5k3-p257-pl.json",
+     "Ds": [
+      15,
+      16
+     ],
+     "est_seconds": 8.8,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m5k3-p449-r",
+     "family": "prime",
+     "spec": "specs/GP-m5k3-p449-r.json",
+     "Ds": [
+      15,
+      16
+     ],
+     "est_seconds": 8.8,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m5k3-p641-pl",
+     "family": "prime",
+     "spec": "specs/GP-m5k3-p641-pl.json",
+     "Ds": [
+      15,
+      16
+     ],
+     "est_seconds": 8.8,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m5k3-p7681-r",
+     "family": "prime",
+     "spec": "specs/GP-m5k3-p7681-r.json",
+     "Ds": [
+      15,
+      16
+     ],
+     "est_seconds": 8.8,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m3k6-p7681-r",
+     "family": "prime",
+     "spec": "specs/GP-m3k6-p7681-r.json",
+     "Ds": [
+      8
+     ],
+     "est_seconds": 365.1,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m3k6-p7681-pl",
+     "family": "prime",
+     "spec": "specs/GP-m3k6-p7681-pl.json",
+     "Ds": [
+      8
+     ],
+     "est_seconds": 365.1,
+     "time_limit_s": 7200
+    },
+    {
+     "name": "GP-m3k7-p7681-r",
+     "family": "prime",
+     "spec": "specs/GP-m3k7-p7681-r.json",
+     "Ds": [
+      7,
+      8
+     ],
+     "est_seconds": 22725.8,
+     "time_limit_s": 136354
+    },
+    {
+     "name": "GP-m3k7-p7681-pl",
+     "family": "prime",
+     "spec": "specs/GP-m3k7-p7681-pl.json",
+     "Ds": [
+      7,
+      8
+     ],
+     "est_seconds": 22725.8,
+     "time_limit_s": 136354
+    }
+   ]
+  }
+ ],
+ "cap_note": "2026-11-12: binary degree caps raised by one (at most r) after a local smoke test of G-m3n10k6-koblitz0-ran-ord ended capped at the frozen cap 5 (strict falls 4, 5); the cap is a run parameter, not a prediction; the frozen value is kept as max_degree_frozen."
+}

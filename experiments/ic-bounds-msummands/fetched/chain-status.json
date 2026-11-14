@@ -1,0 +1,69 @@
+{
+ "started": "2026-11-12T06:16:35Z",
+ "time": "2026-11-12T06:20:36Z",
+ "elapsed_s": 240,
+ "chains": {
+  "bin": {
+   "rc": null,
+   "progress": {
+    "systems_seen": 7,
+    "systems_done": 5,
+    "other": [
+     "failed rc 3"
+    ],
+    "chain_ended": null,
+    "chain_aborted": null
+   }
+  },
+  "pm4-a": {
+   "rc": 0,
+   "progress": {
+    "systems_seen": 3,
+    "systems_done": 0,
+    "other": [
+     "failed rc 1"
+    ],
+    "chain_ended": "2026-11-12T06:16:52Z",
+    "chain_aborted": null
+   }
+  },
+  "pm4-b": {
+   "rc": 0,
+   "progress": {
+    "systems_seen": 3,
+    "systems_done": 0,
+    "other": [
+     "failed rc 1"
+    ],
+    "chain_ended": "2026-11-12T06:16:57Z",
+    "chain_aborted": null
+   }
+  },
+  "pm5": {
+   "rc": 0,
+   "progress": {
+    "systems_seen": 6,
+    "systems_done": 0,
+    "other": [
+     "failed rc 1"
+    ],
+    "chain_ended": "2026-11-12T06:17:05Z",
+    "chain_aborted": null
+   }
+  },
+  "pm3k6": {
+   "rc": 0,
+   "progress": {
+    "systems_seen": 2,
+    "systems_done": 0,
+    "other": [
+     "failed rc 1"
+    ],
+    "chain_ended": "2026-11-12T06:19:17Z",
+    "chain_aborted": null
+   }
+  }
+ },
+ "aborted": null,
+ "finished": false
+}

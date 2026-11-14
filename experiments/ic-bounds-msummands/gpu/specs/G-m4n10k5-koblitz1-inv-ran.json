@@ -1,0 +1,39 @@
+{
+ "spec": {
+  "family": "binary",
+  "m": 4,
+  "n": 10,
+  "k": 5,
+  "curve": "koblitz1",
+  "a": 1,
+  "b": 1,
+  "base": "invariant",
+  "target": "random",
+  "seed": 20261112,
+  "idx": 1,
+  "tag": "r20",
+  "name": "G-m4n10k5-koblitz1-inv-ran"
+ },
+ "build": {
+  "name": "G-m4n10k5-koblitz1-inv-ran",
+  "m": 4,
+  "n": 10,
+  "k": 5,
+  "r": 20,
+  "built": false,
+  "input_degree": 12,
+  "input_degree_source": "evaluated (equations not built)",
+  "solutions": 25016,
+  "system_hash": null,
+  "points_sha256": null,
+  "instance_hash": null,
+  "cap_degree": 14,
+  "columns": 1026876,
+  "basis_worst_gb": 38.37,
+  "predicted_device_peak_gb": 66.3,
+  "fits_device_141gb": true,
+  "seconds_model": 10106.3,
+  "seconds_pessimistic": 40425,
+  "frozen_prediction_c": null
+ }
+}

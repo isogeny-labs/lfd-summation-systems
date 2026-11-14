@@ -1,0 +1,55 @@
+{
+ "spec": {
+  "family": "prime",
+  "m": 5,
+  "k": 3,
+  "p": 97,
+  "planted": true,
+  "seed": 10,
+  "Ds": [
+   15,
+   16
+  ],
+  "note": "d = 15 = m k: LFD = 16 forced by Proposition 1",
+  "name": "GP-m5k3-p97-pl"
+ },
+ "build": {
+  "name": "GP-m5k3-p97-pl",
+  "m": 5,
+  "k": 3,
+  "p": 97,
+  "Ds": [
+   15,
+   16
+  ],
+  "note": "d = 15 = m k: LFD = 16 forced by Proposition 1",
+  "generator_degree": 15,
+  "generator_terms": 32558,
+  "generator_hash": "b9e58c261a7b82dff7820755f19e8931cbcb21e508a0981acb735fff9c933046",
+  "solutions": 96,
+  "points_sha256": "3b92861dc67b0079220f076078e08566cf67f253bb60a887a595c9f717f8585b",
+  "instance_hash": "3d2c0949f2a3ca61a8b5367a0a5954ba4b4acd5242cc7b06581c88d662e07584",
+  "prop1_variables": 15,
+  "built": true,
+  "cost_by_D": [
+   {
+    "D": 15,
+    "columns": 32768,
+    "madds": 87960930222080.0,
+    "seconds_model": 8.8,
+    "seconds_pessimistic": 35.2,
+    "stored_peak_gb_float32": 1.0,
+    "stored_peak_gb_uint16": 0.5
+   },
+   {
+    "D": 16,
+    "columns": 32768,
+    "madds": 87960930222080.0,
+    "seconds_model": 8.8,
+    "seconds_pessimistic": 35.2,
+    "stored_peak_gb_float32": 1.0,
+    "stored_peak_gb_uint16": 0.5
+   }
+  ]
+ }
+}

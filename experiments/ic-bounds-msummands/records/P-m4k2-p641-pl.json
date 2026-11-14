@@ -1,0 +1,240 @@
+{
+ "case": "P-m4k2-p641-pl",
+ "family": "prime",
+ "m": 4,
+ "k": 2,
+ "p": 641,
+ "a": 599,
+ "b": 578,
+ "t": 197,
+ "target_class": "planted-H4",
+ "generator_degree": 8,
+ "generator_terms": 256,
+ "generator_hash": "a7cc0666c127d53dfb200d03e6b86d17c740009a1d64c31e797c89130ab2c368",
+ "instance_hash": "af3dcd5fba046e135791a09360241217cf1d2f34530635d70296f20ad0f1738a",
+ "points_sha256": "0cfe006803abbf10088e49ae59fc4d17dc4fb017c697d13fbe235d74d59310e4",
+ "solutions": 32,
+ "ideal_class": "proper",
+ "engine": "dense",
+ "sandwich": "auto",
+ "status": "exact-proper-local",
+ "exact_lfd": 9,
+ "lfd_lower_bound": 9,
+ "kernel_upper_bound": 9,
+ "strict_falls": [
+  9
+ ],
+ "certificate": {
+  "kind": "local-to-global",
+  "degree": 9,
+  "solutions": 32
+ },
+ "certificate_degree": 9,
+ "prop1_variables": 8,
+ "profile": [
+  {
+   "D": 0,
+   "monomials_le_D": 1,
+   "quotient_rank": 0,
+   "profile": [
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "monomials_le_D": 9,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 1,
+   "evaluation_rank_le_D": 9,
+   "ideal_dim_le_D": 0,
+   "codim": 9
+  },
+  {
+   "D": 2,
+   "monomials_le_D": 37,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 9,
+   "evaluation_rank_le_D": 26,
+   "ideal_dim_le_D": 11,
+   "codim": 37
+  },
+  {
+   "D": 3,
+   "monomials_le_D": 93,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 26,
+   "evaluation_rank_le_D": 32,
+   "ideal_dim_le_D": 61,
+   "codim": 93
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 163,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 32,
+   "evaluation_rank_le_D": 32,
+   "ideal_dim_le_D": 131,
+   "codim": 163
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 219,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 32,
+   "evaluation_rank_le_D": 32,
+   "ideal_dim_le_D": 187,
+   "codim": 219
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 247,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 32,
+   "evaluation_rank_le_D": 32,
+   "ideal_dim_le_D": 215,
+   "codim": 247
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 255,
+   "quotient_rank": 0,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "no-input",
+   "seconds": 0.0,
+   "evaluation_rank_lt_D": 32,
+   "evaluation_rank_le_D": 32,
+   "ideal_dim_le_D": 223,
+   "codim": 255
+  },
+  {
+   "D": 8,
+   "monomials_le_D": 256,
+   "quotient_rank": 1,
+   "profile": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "contains_one": false,
+   "strict_fall": false,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.01,
+   "evaluation_rank_lt_D": 32,
+   "evaluation_rank_le_D": 32,
+   "ideal_dim_le_D": 224,
+   "codim": 255
+  },
+  {
+   "D": 9,
+   "monomials_le_D": 256,
+   "quotient_rank": 224,
+   "profile": [
+    0,
+    0,
+    11,
+    61,
+    131,
+    187,
+    215,
+    223,
+    224,
+    224
+   ],
+   "contains_one": false,
+   "strict_fall": true,
+   "closure_check": "check_closed_exclusion_certificate",
+   "seconds": 0.13,
+   "evaluation_rank_lt_D": 32,
+   "evaluation_rank_le_D": 32,
+   "ideal_dim_le_D": 224,
+   "codim": 32
+  }
+ ],
+ "cap_reason": null,
+ "seconds": 0.15,
+ "max_rss_gb": 0.22
+}

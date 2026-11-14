@@ -1,0 +1,66 @@
+{
+ "r3-k6": {
+  "cosets": 192,
+  "base_dim": 605,
+  "base_profile": [
+   0,
+   0,
+   2,
+   111,
+   605
+  ],
+  "histogram": {
+   "(605, (0, 0, 2, 111, 605), True, True)": 192
+  },
+  "deviating": [],
+  "seconds": 128.0
+ },
+ "r3-k7": {
+  "cosets": 96,
+  "base_dim": 829,
+  "base_profile": [
+   0,
+   0,
+   2,
+   115,
+   829
+  ],
+  "histogram": {
+   "(829, (0, 0, 2, 115, 829), True, True)": 96
+  },
+  "deviating": [],
+  "seconds": 141.0
+ },
+ "j1728-k6": {
+  "cosets": 192,
+  "base_dim": 605,
+  "base_profile": [
+   0,
+   0,
+   2,
+   111,
+   605
+  ],
+  "histogram": {
+   "(605, (0, 0, 2, 111, 605), True, True)": 192
+  },
+  "deviating": [],
+  "seconds": 128.1
+ },
+ "j1728-k7": {
+  "cosets": 96,
+  "base_dim": 829,
+  "base_profile": [
+   0,
+   0,
+   2,
+   115,
+   829
+  ],
+  "histogram": {
+   "(829, (0, 0, 2, 115, 829), True, True)": 96
+  },
+  "deviating": [],
+  "seconds": 141.3
+ }
+}

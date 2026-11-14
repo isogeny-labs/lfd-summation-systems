@@ -1,0 +1,2597 @@
+{
+ "first": "fetched",
+ "runs": [
+  {
+   "run": "r2-gpu",
+   "directory": "fetched-repl/r2/out",
+   "systems": 57,
+   "equal": 57,
+   "degrees": 307,
+   "degrees_equal": 307,
+   "hashes_equal": 307,
+   "proper_degrees": 186,
+   "proper_hashes_equal": 186,
+   "with_different_settings": 57,
+   "problems": [],
+   "rows": [
+    {
+     "system": "C1_inva_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "2a1e8cb2964de1c746691c88612b56e81ea98740e7af9dcffdf943e417bad93d",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.96,
+      "replication": 6.37
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_inva_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "c335b22ea15969477c9446e4755ed53145418bf465126c82522c1a65aa0a76ae",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.84,
+      "replication": 6.78
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "a4e23e438cbf96c11d39885ee3a8436c0410986c7d1e95a65ae616fe9b6d6d20",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.88,
+      "replication": 6.08
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_koblitz1_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "b86b678fa8aa21fdba0b33bd7c4ad2a2f7fb9848a8b7708c10aa9cb16043e63b",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.25,
+      "replication": 6.29
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ord_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "f3ffce6a2dbec3b59dd74777df4e1f4212a2a9da73ea1329d1bcc7aaf2fb5d15",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.34,
+      "replication": 6.31
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "73dae6eaaa52040491378b68c0343d65d56c4e0b58e792da9ef9f0490fc772ed",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 8.81,
+      "replication": 9.12
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "c85b94ae80237b97a10c10f31995707e21854ff484ab0e1f50dc977e9c25a3ad",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.95,
+      "replication": 6.37
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "35ff15c23b3667f1d89c0f159d3397de09eff13d9b9e34a6c7fefce7e55feedf",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.92,
+      "replication": 6.32
+     },
+     "equal": true
+    },
+    {
+     "system": "C2a_trac_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 6,
+     "degrees_equal": 6,
+     "hashes_equal": 6,
+     "proper_hashes_equal": 4,
+     "proper_degrees": 4,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "86148f2ee9bdf7dbb8112d507b967f95f4f1be99d5708804cf578713a6dfb29e",
+     "columns_at_certificate": 35443,
+     "seconds": {
+      "first": 30.16,
+      "replication": 32.19
+     },
+     "equal": true
+    },
+    {
+     "system": "C2a_trac_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 6,
+     "degrees_equal": 6,
+     "hashes_equal": 6,
+     "proper_hashes_equal": 4,
+     "proper_degrees": 4,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "d21352783704b24c9af117ba152e13e4247c71061fb37ef05556952f886c5386",
+     "columns_at_certificate": 35443,
+     "seconds": {
+      "first": 27.19,
+      "replication": 29.26
+     },
+     "equal": true
+    },
+    {
+     "system": "C2a_trac_koblitz1_ord_0",
+     "final_equal": true,
+     "degrees": 7,
+     "degrees_equal": 7,
+     "hashes_equal": 7,
+     "proper_hashes_equal": 5,
+     "proper_degrees": 5,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 78033,
+       "replication": 39016
+      },
+      {
+       "key": "tiles",
+       "first": 2,
+       "replication": 3
+      }
+     ],
+     "rref_sha256_at_certificate": "59f64a1992bb84182f9952dd92c8f7be39bb80f1869d4f617a3b98a79a2d2d5a",
+     "columns_at_certificate": 110056,
+     "seconds": {
+      "first": 143.62,
+      "replication": 162.91
+     },
+     "equal": true
+    },
+    {
+     "system": "C2b_trac_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 7,
+     "degrees_equal": 7,
+     "hashes_equal": 7,
+     "proper_hashes_equal": 5,
+     "proper_degrees": 5,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 45191,
+       "replication": 22595
+      },
+      {
+       "key": "tiles",
+       "first": 5,
+       "replication": 9
+      }
+     ],
+     "rref_sha256_at_certificate": "0a24d4f1fd6aab3717eef49104133916aeeda57fb07ce616c751d7e3838c4d7c",
+     "columns_at_certificate": 190051,
+     "seconds": {
+      "first": 258.72,
+      "replication": 311.71
+     },
+     "equal": true
+    },
+    {
+     "system": "C2b_trac_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 7,
+     "degrees_equal": 7,
+     "hashes_equal": 7,
+     "proper_hashes_equal": 5,
+     "proper_degrees": 5,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 45191,
+       "replication": 22595
+      },
+      {
+       "key": "tiles",
+       "first": 5,
+       "replication": 9
+      }
+     ],
+     "rref_sha256_at_certificate": "fee010967549454b2cef2377d65875f30f69440f552ee9514c06e906d4c5a03a",
+     "columns_at_certificate": 190051,
+     "seconds": {
+      "first": 265.56,
+      "replication": 313.55
+     },
+     "equal": true
+    },
+    {
+     "system": "C2c_trac_koblitz1_ran_0",
+     "final_equal": true,
+     "degrees": 7,
+     "degrees_equal": 7,
+     "hashes_equal": 7,
+     "proper_hashes_equal": 5,
+     "proper_degrees": 5,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 27363,
+       "replication": 13681
+      },
+      {
+       "key": "tiles",
+       "first": 12,
+       "replication": 23
+      }
+     ],
+     "rref_sha256_at_certificate": "78299836ccb3aeb669dd6a2bf30946718d549d07cdb0547c1bdd767e50f45dec",
+     "columns_at_certificate": 313912,
+     "seconds": {
+      "first": 665.61,
+      "replication": 864.46
+     },
+     "equal": true
+    },
+    {
+     "system": "C2c_trac_koblitz1_ran_1",
+     "final_equal": true,
+     "degrees": 7,
+     "degrees_equal": 7,
+     "hashes_equal": 7,
+     "proper_hashes_equal": 5,
+     "proper_degrees": 5,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 27363,
+       "replication": 13681
+      },
+      {
+       "key": "tiles",
+       "first": 12,
+       "replication": 23
+      }
+     ],
+     "rref_sha256_at_certificate": "b9ca7c416cf691f57bbc9a4902a2055b15e0537dbe91b4a35068596a7849c509",
+     "columns_at_certificate": 313912,
+     "seconds": {
+      "first": 656.86,
+      "replication": 819.28
+     },
+     "equal": true
+    },
+    {
+     "system": "C3a_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.16,
+      "replication": 5.28
+     },
+     "equal": true
+    },
+    {
+     "system": "C3a_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.28,
+      "replication": 5.27
+     },
+     "equal": true
+    },
+    {
+     "system": "C3a_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.4,
+      "replication": 5.44
+     },
+     "equal": true
+    },
+    {
+     "system": "C3b_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "e60756315808a14f168b047a5813a7834f1884a5b3442b1e8a917cedbbe32f89",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.41,
+      "replication": 7.88
+     },
+     "equal": true
+    },
+    {
+     "system": "C3b_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "7a2af80ec378337f60520fb46d2c7d24d08bf05cee4a1d4d59344824e1243a65",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.12,
+      "replication": 7.38
+     },
+     "equal": true
+    },
+    {
+     "system": "C3c_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "7d03c8fc165393bb1b70734873e588ccfbd620b6927060a4297a7166fbf4c915",
+     "columns_at_certificate": 17902,
+     "seconds": {
+      "first": 10.43,
+      "replication": 9.99
+     },
+     "equal": true
+    },
+    {
+     "system": "C3c_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "857553122f5dfc3385cc38c4521f8fb9c5b960dd9481d9472d9f8ca1110aebbb",
+     "columns_at_certificate": 17902,
+     "seconds": {
+      "first": 10.85,
+      "replication": 10.62
+     },
+     "equal": true
+    },
+    {
+     "system": "C3d_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "9539afd5050bd48527db9a0b66a9e3cb0456e0d99706c36cb95b1c4e27fe1e1d",
+     "columns_at_certificate": 24158,
+     "seconds": {
+      "first": 14.91,
+      "replication": 15.11
+     },
+     "equal": true
+    },
+    {
+     "system": "C3d_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "1426f908189f2fa592d932e7c7162adcf96e3449538f0389116e44540e995a54",
+     "columns_at_certificate": 24158,
+     "seconds": {
+      "first": 15.2,
+      "replication": 15.51
+     },
+     "equal": true
+    },
+    {
+     "system": "C3e_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "86ef094c1d3a5cefb14214531b95edbe904da746571b92cce1c1c0bc55bb6526",
+     "columns_at_certificate": 31931,
+     "seconds": {
+      "first": 20.32,
+      "replication": 21.45
+     },
+     "equal": true
+    },
+    {
+     "system": "C3f_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "9ec337f0dc94809dd36485c4138e98a3119e3ec5ced97b82101cac2d85bdc2a6",
+     "columns_at_certificate": 41449,
+     "seconds": {
+      "first": 28.7,
+      "replication": 25.04
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_inva_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "c69e11eb9e2103383044d08cbd977eadbb20918a052671107c22b5d30786ad6a",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.73,
+      "replication": 5.88
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_inva_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "78266cd4afab132f3bc4f673c6c7e00f857666387c1a560940e8667b2f323102",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.41,
+      "replication": 6.31
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "fa42bd41709584293461c2533809fa893642836e79abc21fdb5b502b0a7c22e5",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.38,
+      "replication": 5.64
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_rand_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "4b540ccec5efe5d62a39d9974c9538db7b6ff7482b81b358e77647b9441868d0",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.54,
+      "replication": 5.47
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_inva_koblitz1_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "45501d428915bd054b3793e9bf9353d424e85ec2eaea59e3566bbd32913d1a4c",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.93,
+      "replication": 7.11
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_inva_koblitz1_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "fd512403209c934c002d8aed69052ff0f1576f61969810a523fc043483a544b6",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 11.24,
+      "replication": 8.64
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_rand_koblitz1_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "af213ca8419d56a8169bdd2ef425d61c956194fa920a043b090b05e65b06131b",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.98,
+      "replication": 7.44
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_rand_koblitz1_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "959d4a306877b807a8380971b94b45290de9de6a008a2ea2854b28c4750d7267",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.03,
+      "replication": 8.49
+     },
+     "equal": true
+    },
+    {
+     "system": "C5a_subf_koblitz0_ord_0",
+     "final_equal": true,
+     "degrees": 7,
+     "degrees_equal": 7,
+     "hashes_equal": 7,
+     "proper_hashes_equal": 5,
+     "proper_degrees": 5,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "80aa731ce63e7f29060f28fd484a6fcd24b9667507c44e1855ddca7cffd0fd10",
+     "columns_at_certificate": 60460,
+     "seconds": {
+      "first": 56.34,
+      "replication": 58.0
+     },
+     "equal": true
+    },
+    {
+     "system": "C5a_subf_koblitz1_ord_0",
+     "final_equal": true,
+     "degrees": 7,
+     "degrees_equal": 7,
+     "hashes_equal": 7,
+     "proper_hashes_equal": 5,
+     "proper_degrees": 5,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "80aa731ce63e7f29060f28fd484a6fcd24b9667507c44e1855ddca7cffd0fd10",
+     "columns_at_certificate": 60460,
+     "seconds": {
+      "first": 59.67,
+      "replication": 60.16
+     },
+     "equal": true
+    },
+    {
+     "system": "C5b_subf_koblitz0_ord_0",
+     "final_equal": true,
+     "degrees": 8,
+     "degrees_equal": 8,
+     "hashes_equal": 8,
+     "proper_hashes_equal": 6,
+     "proper_degrees": 6,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 16020,
+       "replication": 8010
+      },
+      {
+       "key": "tiles",
+       "first": 34,
+       "replication": 67
+      }
+     ],
+     "rref_sha256_at_certificate": "3212ad4976d3851f2d6b65b814d54f3b246701818ea2b1862f2fc5460d5d93e0",
+     "columns_at_certificate": 536155,
+     "seconds": {
+      "first": 1861.44,
+      "replication": 2574.64
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "4d2ec7e2f18650578ce2708ffb8111319b3e1d69c09830036eee66d9b15e9651",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.57,
+      "replication": 8.69
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "908d013a8aad96fcb3fc8c0651c67774209431b732cfcf847a6d4df32d3e78c5",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.37,
+      "replication": 8.8
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "806e89bbaddf342592d2f5070b323e18d998fed831f67ce4233f14b21e4791ca",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.34,
+      "replication": 8.51
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "69604826fdbc658bf79e0a8ed936af0959db9078bfa4426cf4bf9cf05024940f",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.42,
+      "replication": 8.41
+     },
+     "equal": true
+    },
+    {
+     "system": "C6b_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 6,
+     "degrees_equal": 6,
+     "hashes_equal": 6,
+     "proper_hashes_equal": 4,
+     "proper_degrees": 4,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 83682,
+       "replication": 51306
+      },
+      {
+       "key": "tiles",
+       "first": 1,
+       "replication": 2
+      }
+     ],
+     "rref_sha256_at_certificate": "1eb477db5ad8b076cdff2c48189e0cef90a4f0f30ac1063b8357ecb2d9029e99",
+     "columns_at_certificate": 83682,
+     "seconds": {
+      "first": 73.3,
+      "replication": 82.0
+     },
+     "equal": true
+    },
+    {
+     "system": "C6b_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 6,
+     "degrees_equal": 6,
+     "hashes_equal": 6,
+     "proper_hashes_equal": 4,
+     "proper_degrees": 4,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 83682,
+       "replication": 51306
+      },
+      {
+       "key": "tiles",
+       "first": 1,
+       "replication": 2
+      }
+     ],
+     "rref_sha256_at_certificate": "4ceed38d4bbd0685e6222849791790a983132e1d063be5270939c0a71c4cff33",
+     "columns_at_certificate": 83682,
+     "seconds": {
+      "first": 71.82,
+      "replication": 80.57
+     },
+     "equal": true
+    },
+    {
+     "system": "C6b_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 6,
+     "degrees_equal": 6,
+     "hashes_equal": 6,
+     "proper_hashes_equal": 4,
+     "proper_degrees": 4,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      },
+      {
+       "key": "tile_rows",
+       "first": 83682,
+       "replication": 51306
+      },
+      {
+       "key": "tiles",
+       "first": 1,
+       "replication": 2
+      }
+     ],
+     "rref_sha256_at_certificate": "303d83c5228da891f25492d828c07f8e8cfe4b8f27d6bfb54198fbf7bcfb098b",
+     "columns_at_certificate": 83682,
+     "seconds": {
+      "first": 71.59,
+      "replication": 85.58
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "e880f96259194b359c608f140cdcab60457d48a284a8774a73b5810523921488",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.0,
+      "replication": 6.0
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "e1b6200adc74245a22b58b76423241cf1bf018c6799d5f8ffcaa09f8144a0653",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.34,
+      "replication": 5.99
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_koblitz0_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "150b1813839e1676333843624f798021f071bceab38b6331cced167f554d1b7f",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.15,
+      "replication": 6.13
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "2412341ce107baac152ae2d9e58a109565a360e8b86edfeb13084bf74ae97709",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.17,
+      "replication": 8.89
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "d3e6c9c05181be2cf9686171f345a75cdf604977dc9dbba67885f92bd669e51b",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.95,
+      "replication": 5.74
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "ffb2b04fea48b5fc454be9378b1121c843c7564fdc4b202863ada71bfe34e902",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.46,
+      "replication": 5.9
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_3",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "9d4990aaa625d45fd5747cf89a251ef25cef1c5dbbdb8f7f5694f9926d4e3ffa",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.32,
+      "replication": 6.18
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_4",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "0fe315e81e706453a6970bb4788df77681eefb1ec33e1eca04ecc690f910be10",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.25,
+      "replication": 5.86
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_5",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "d185fd6e5231b45f78c1bbc61427615b533327248455908ec57e4fe215c0524d",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.03,
+      "replication": 5.81
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "ba4067555eb39f35cd531ab24ab09c8d580bd987479639b3c99f61d7a13ef21a",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.69,
+      "replication": 7.75
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "b2d449da2920758dbc262678f5654b36a47fcffe8f1523bd59ecd97aa6e86f58",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.84,
+      "replication": 7.6
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "2634c1503a29a9dbf550e45c4960b98c314aa7c308c3c121c7ab59bdab1b9c42",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.83,
+      "replication": 7.67
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_3",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "batch",
+       "first": 1024,
+       "replication": 768
+      }
+     ],
+     "rref_sha256_at_certificate": "2cfd66804d0b18cff85ab8d81bc0e1d612eb708d149db4042ef2922227a7373d",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.71,
+      "replication": 7.86
+     },
+     "equal": true
+    }
+   ]
+  },
+  {
+   "run": "r3-cpu",
+   "directory": "fetched-repl/r3/out",
+   "systems": 46,
+   "equal": 46,
+   "degrees": 232,
+   "degrees_equal": 232,
+   "hashes_equal": 232,
+   "proper_degrees": 133,
+   "proper_hashes_equal": 133,
+   "with_different_settings": 46,
+   "problems": [],
+   "rows": [
+    {
+     "system": "C1_inva_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "2a1e8cb2964de1c746691c88612b56e81ea98740e7af9dcffdf943e417bad93d",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.96,
+      "replication": 13.65
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_inva_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "c335b22ea15969477c9446e4755ed53145418bf465126c82522c1a65aa0a76ae",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.84,
+      "replication": 12.92
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "a4e23e438cbf96c11d39885ee3a8436c0410986c7d1e95a65ae616fe9b6d6d20",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.88,
+      "replication": 12.28
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_koblitz1_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "b86b678fa8aa21fdba0b33bd7c4ad2a2f7fb9848a8b7708c10aa9cb16043e63b",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.25,
+      "replication": 12.11
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ord_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "f3ffce6a2dbec3b59dd74777df4e1f4212a2a9da73ea1329d1bcc7aaf2fb5d15",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.34,
+      "replication": 10.92
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "73dae6eaaa52040491378b68c0343d65d56c4e0b58e792da9ef9f0490fc772ed",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 8.81,
+      "replication": 14.15
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "c85b94ae80237b97a10c10f31995707e21854ff484ab0e1f50dc977e9c25a3ad",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.95,
+      "replication": 12.75
+     },
+     "equal": true
+    },
+    {
+     "system": "C1_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "35ff15c23b3667f1d89c0f159d3397de09eff13d9b9e34a6c7fefce7e55feedf",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.92,
+      "replication": 12.35
+     },
+     "equal": true
+    },
+    {
+     "system": "C2a_trac_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 6,
+     "degrees_equal": 6,
+     "hashes_equal": 6,
+     "proper_hashes_equal": 4,
+     "proper_degrees": 4,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "86148f2ee9bdf7dbb8112d507b967f95f4f1be99d5708804cf578713a6dfb29e",
+     "columns_at_certificate": 35443,
+     "seconds": {
+      "first": 30.16,
+      "replication": 322.23
+     },
+     "equal": true
+    },
+    {
+     "system": "C2a_trac_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 6,
+     "degrees_equal": 6,
+     "hashes_equal": 6,
+     "proper_hashes_equal": 4,
+     "proper_degrees": 4,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "d21352783704b24c9af117ba152e13e4247c71061fb37ef05556952f886c5386",
+     "columns_at_certificate": 35443,
+     "seconds": {
+      "first": 27.19,
+      "replication": 310.54
+     },
+     "equal": true
+    },
+    {
+     "system": "C3a_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.16,
+      "replication": 10.81
+     },
+     "equal": true
+    },
+    {
+     "system": "C3a_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.28,
+      "replication": 10.88
+     },
+     "equal": true
+    },
+    {
+     "system": "C3a_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.4,
+      "replication": 10.74
+     },
+     "equal": true
+    },
+    {
+     "system": "C3b_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "e60756315808a14f168b047a5813a7834f1884a5b3442b1e8a917cedbbe32f89",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.41,
+      "replication": 26.74
+     },
+     "equal": true
+    },
+    {
+     "system": "C3b_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "7a2af80ec378337f60520fb46d2c7d24d08bf05cee4a1d4d59344824e1243a65",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.12,
+      "replication": 26.38
+     },
+     "equal": true
+    },
+    {
+     "system": "C3c_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "7d03c8fc165393bb1b70734873e588ccfbd620b6927060a4297a7166fbf4c915",
+     "columns_at_certificate": 17902,
+     "seconds": {
+      "first": 10.43,
+      "replication": 61.0
+     },
+     "equal": true
+    },
+    {
+     "system": "C3c_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "857553122f5dfc3385cc38c4521f8fb9c5b960dd9481d9472d9f8ca1110aebbb",
+     "columns_at_certificate": 17902,
+     "seconds": {
+      "first": 10.85,
+      "replication": 62.04
+     },
+     "equal": true
+    },
+    {
+     "system": "C3d_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "9539afd5050bd48527db9a0b66a9e3cb0456e0d99706c36cb95b1c4e27fe1e1d",
+     "columns_at_certificate": 24158,
+     "seconds": {
+      "first": 14.91,
+      "replication": 130.71
+     },
+     "equal": true
+    },
+    {
+     "system": "C3d_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "1426f908189f2fa592d932e7c7162adcf96e3449538f0389116e44540e995a54",
+     "columns_at_certificate": 24158,
+     "seconds": {
+      "first": 15.2,
+      "replication": 129.47
+     },
+     "equal": true
+    },
+    {
+     "system": "C3e_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "86ef094c1d3a5cefb14214531b95edbe904da746571b92cce1c1c0bc55bb6526",
+     "columns_at_certificate": 31931,
+     "seconds": {
+      "first": 20.32,
+      "replication": 283.26
+     },
+     "equal": true
+    },
+    {
+     "system": "C3f_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 2,
+     "proper_degrees": 2,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "9ec337f0dc94809dd36485c4138e98a3119e3ec5ced97b82101cac2d85bdc2a6",
+     "columns_at_certificate": 41449,
+     "seconds": {
+      "first": 28.7,
+      "replication": 570.35
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_inva_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "c69e11eb9e2103383044d08cbd977eadbb20918a052671107c22b5d30786ad6a",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.73,
+      "replication": 11.69
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_inva_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "78266cd4afab132f3bc4f673c6c7e00f857666387c1a560940e8667b2f323102",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.41,
+      "replication": 12.44
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "fa42bd41709584293461c2533809fa893642836e79abc21fdb5b502b0a7c22e5",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.38,
+      "replication": 11.59
+     },
+     "equal": true
+    },
+    {
+     "system": "C4a_rand_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "4b540ccec5efe5d62a39d9974c9538db7b6ff7482b81b358e77647b9441868d0",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.54,
+      "replication": 11.32
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_inva_koblitz1_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "45501d428915bd054b3793e9bf9353d424e85ec2eaea59e3566bbd32913d1a4c",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.93,
+      "replication": 26.24
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_inva_koblitz1_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "fd512403209c934c002d8aed69052ff0f1576f61969810a523fc043483a544b6",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 11.24,
+      "replication": 27.51
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_rand_koblitz1_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "af213ca8419d56a8169bdd2ef425d61c956194fa920a043b090b05e65b06131b",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.98,
+      "replication": 26.51
+     },
+     "equal": true
+    },
+    {
+     "system": "C4b_rand_koblitz1_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "959d4a306877b807a8380971b94b45290de9de6a008a2ea2854b28c4750d7267",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.03,
+      "replication": 26.86
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "4d2ec7e2f18650578ce2708ffb8111319b3e1d69c09830036eee66d9b15e9651",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.57,
+      "replication": 29.43
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "908d013a8aad96fcb3fc8c0651c67774209431b732cfcf847a6d4df32d3e78c5",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.37,
+      "replication": 29.36
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "806e89bbaddf342592d2f5070b323e18d998fed831f67ce4233f14b21e4791ca",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.34,
+      "replication": 29.72
+     },
+     "equal": true
+    },
+    {
+     "system": "C6a_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "69604826fdbc658bf79e0a8ed936af0959db9078bfa4426cf4bf9cf05024940f",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 8.42,
+      "replication": 28.97
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_koblitz0_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "e880f96259194b359c608f140cdcab60457d48a284a8774a73b5810523921488",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.0,
+      "replication": 11.95
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_koblitz0_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "e1b6200adc74245a22b58b76423241cf1bf018c6799d5f8ffcaa09f8144a0653",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.34,
+      "replication": 11.71
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_koblitz0_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "150b1813839e1676333843624f798021f071bceab38b6331cced167f554d1b7f",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.15,
+      "replication": 11.86
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "2412341ce107baac152ae2d9e58a109565a360e8b86edfeb13084bf74ae97709",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.17,
+      "replication": 11.87
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "d3e6c9c05181be2cf9686171f345a75cdf604977dc9dbba67885f92bd669e51b",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 5.95,
+      "replication": 12.08
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "ffb2b04fea48b5fc454be9378b1121c843c7564fdc4b202863ada71bfe34e902",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.46,
+      "replication": 11.8
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_3",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "9d4990aaa625d45fd5747cf89a251ef25cef1c5dbbdb8f7f5694f9926d4e3ffa",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.32,
+      "replication": 11.74
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_4",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "0fe315e81e706453a6970bb4788df77681eefb1ec33e1eca04ecc690f910be10",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.25,
+      "replication": 11.73
+     },
+     "equal": true
+    },
+    {
+     "system": "R1_rand_ordinary_ran_5",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "d185fd6e5231b45f78c1bbc61427615b533327248455908ec57e4fe215c0524d",
+     "columns_at_certificate": 9109,
+     "seconds": {
+      "first": 6.03,
+      "replication": 11.93
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_0",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "ba4067555eb39f35cd531ab24ab09c8d580bd987479639b3c99f61d7a13ef21a",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.69,
+      "replication": 28.28
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_1",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "b2d449da2920758dbc262678f5654b36a47fcffe8f1523bd59ecd97aa6e86f58",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.84,
+      "replication": 27.65
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_2",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "2634c1503a29a9dbf550e45c4960b98c314aa7c308c3c121c7ab59bdab1b9c42",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.83,
+      "replication": 27.96
+     },
+     "equal": true
+    },
+    {
+     "system": "R2_rand_ordinary_ran_3",
+     "final_equal": true,
+     "degrees": 5,
+     "degrees_equal": 5,
+     "hashes_equal": 5,
+     "proper_hashes_equal": 3,
+     "proper_degrees": 3,
+     "differing": [],
+     "settings": [
+      {
+       "key": "device",
+       "first": "gpu",
+       "replication": "cpu"
+      }
+     ],
+     "rref_sha256_at_certificate": "2cfd66804d0b18cff85ab8d81bc0e1d612eb708d149db4042ef2922227a7373d",
+     "columns_at_certificate": 12951,
+     "seconds": {
+      "first": 7.71,
+      "replication": 28.2
+     },
+     "equal": true
+    }
+   ]
+  }
+ ]
+}

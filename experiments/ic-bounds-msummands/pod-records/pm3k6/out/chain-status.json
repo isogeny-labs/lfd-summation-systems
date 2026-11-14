@@ -1,0 +1,87 @@
+{
+ "started": "2026-11-12T06:23:24Z",
+ "device": "cpu",
+ "steps": [
+  {
+   "name": "build-GP-m3k6-p7681-r",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/GP-m3k6-p7681-r.json",
+    "--outdir",
+    "/workspace/p2/pm3k6/in"
+   ],
+   "start": "2026-11-12T06:23:24Z",
+   "rc": 0,
+   "end": "2026-11-12T06:24:45Z"
+  },
+  {
+   "name": "GP-m3k6-p7681-r",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "lfd-file",
+    "--instance",
+    "/workspace/p2/pm3k6/in/GP-m3k6-p7681-r.json",
+    "--out",
+    "/workspace/p2/pm3k6/out/GP-m3k6-p7681-r.json"
+   ],
+   "start": "2026-11-12T06:24:45Z",
+   "rc": "timeout",
+   "end": "2026-11-12T08:24:45Z"
+  },
+  {
+   "name": "build-GP-m3k6-p7681-pl",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "instance",
+    "--spec",
+    "/workspace/code/gpu/specs/GP-m3k6-p7681-pl.json",
+    "--outdir",
+    "/workspace/p2/pm3k6/in"
+   ],
+   "start": "2026-11-12T08:24:45Z",
+   "rc": 0,
+   "end": "2026-11-12T08:26:07Z"
+  },
+  {
+   "name": "GP-m3k6-p7681-pl",
+   "cmd": [
+    "python3",
+    "ic_bounds_msum_run.py",
+    "lfd-file",
+    "--instance",
+    "/workspace/p2/pm3k6/in/GP-m3k6-p7681-pl.json",
+    "--out",
+    "/workspace/p2/pm3k6/out/GP-m3k6-p7681-pl.json"
+   ],
+   "start": "2026-11-12T08:26:07Z",
+   "rc": null
+  }
+ ],
+ "cells": {
+  "gpu-msum": {
+   "purpose": "cells not run locally",
+   "systems": {
+    "GP-m3k6-p7681-r": {
+     "status": "timeout",
+     "rc": "timeout",
+     "exact_lfd": null,
+     "engine_status": null,
+     "strict_falls": null,
+     "seconds": null,
+     "end": "2026-11-12T08:24:45Z"
+    },
+    "GP-m3k6-p7681-pl": {
+     "status": "running",
+     "start": "2026-11-12T08:26:07Z"
+    }
+   }
+  }
+ },
+ "finished": false,
+ "elapsed_s": 7364
+}

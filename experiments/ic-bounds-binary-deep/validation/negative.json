@@ -1,0 +1,182 @@
+[
+ {
+  "name": "v12",
+  "k": 5,
+  "D": 4,
+  "clean_hash": "1518969a0b5f10c0c513fc7f23127e1ee1c56bb5ee10daab3fe7cb217de76bea",
+  "clean_rank": 366,
+  "withhold": {
+   "0": {
+    "no_repair_closed": true,
+    "no_repair_rank": 366,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "1": {
+    "no_repair_closed": true,
+    "no_repair_rank": 366,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "2": {
+    "no_repair_closed": true,
+    "no_repair_rank": 366,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "5": {
+    "no_repair_closed": true,
+    "no_repair_rank": 366,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   }
+  },
+  "deleted_row": {
+   "victim": 156,
+   "sweep_clean_after_corruption": false
+  }
+ },
+ {
+  "name": "v16",
+  "k": 5,
+  "D": 3,
+  "clean_hash": "ca9cecb51ccdb642ae2c52b54e83830cdd46ef2efe2bba165c4805872b35f685",
+  "clean_rank": 170,
+  "withhold": {
+   "0": {
+    "no_repair_closed": true,
+    "no_repair_rank": 170,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "1": {
+    "no_repair_closed": true,
+    "no_repair_rank": 170,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "2": {
+    "no_repair_closed": true,
+    "no_repair_rank": 170,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "5": {
+    "no_repair_closed": false,
+    "no_repair_rank": 119,
+    "rank_deficit": 51,
+    "repaired_closed": true,
+    "repairs": 18,
+    "repaired_hash_equal": true
+   }
+  },
+  "deleted_row": {
+   "victim": 132,
+   "sweep_clean_after_corruption": false
+  }
+ },
+ {
+  "name": "v20",
+  "k": 5,
+  "D": 3,
+  "clean_hash": "e32d73768b6480784f6484176daf6731cd3891b02cd8ef449ba2f03990cc6bd7",
+  "clean_rank": 172,
+  "withhold": {
+   "0": {
+    "no_repair_closed": true,
+    "no_repair_rank": 172,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "1": {
+    "no_repair_closed": true,
+    "no_repair_rank": 172,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "2": {
+    "no_repair_closed": true,
+    "no_repair_rank": 172,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   },
+   "5": {
+    "no_repair_closed": true,
+    "no_repair_rank": 172,
+    "rank_deficit": 0,
+    "repaired_closed": true,
+    "repairs": 0,
+    "repaired_hash_equal": true
+   }
+  },
+  "deleted_row": {
+   "victim": 99,
+   "sweep_clean_after_corruption": false
+  }
+ },
+ {
+  "name": "v26",
+  "k": 6,
+  "D": 3,
+  "clean_hash": "b92e64b84805b13576ae70b9a64820d4c4db103e4859e94a38cb390ec020fa3a",
+  "clean_rank": 267,
+  "withhold": {
+   "0": {
+    "no_repair_closed": false,
+    "no_repair_rank": 103,
+    "rank_deficit": 164,
+    "repaired_closed": true,
+    "repairs": 24,
+    "repaired_hash_equal": true
+   },
+   "1": {
+    "no_repair_closed": false,
+    "no_repair_rank": 103,
+    "rank_deficit": 164,
+    "repaired_closed": true,
+    "repairs": 24,
+    "repaired_hash_equal": true
+   },
+   "2": {
+    "no_repair_closed": false,
+    "no_repair_rank": 103,
+    "rank_deficit": 164,
+    "repaired_closed": true,
+    "repairs": 24,
+    "repaired_hash_equal": true
+   },
+   "5": {
+    "no_repair_closed": false,
+    "no_repair_rank": 103,
+    "rank_deficit": 164,
+    "repaired_closed": true,
+    "repairs": 12,
+    "repaired_hash_equal": true
+   }
+  },
+  "deleted_row": {
+   "victim": 141,
+   "sweep_clean_after_corruption": false
+  }
+ }
+]

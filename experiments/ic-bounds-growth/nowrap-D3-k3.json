@@ -1,0 +1,122 @@
+{
+ "p": 12289,
+ "a": 4021,
+ "b": 9917,
+ "t": 4408,
+ "D": 3,
+ "k": 3,
+ "dim_V_k": 7,
+ "profile_V_k": [
+  0,
+  0,
+  1,
+  7
+ ],
+ "rows": [
+  {
+   "L": 4,
+   "shifts_levels": 2,
+   "dim_Tminus": 5,
+   "profile_Tminus": [
+    0,
+    0,
+    1,
+    5
+   ],
+   "dim_low_part": 5,
+   "low_part_inside_V": true,
+   "equal": false,
+   "profile_low_part": [
+    0,
+    0,
+    1,
+    5
+   ],
+   "seconds": 0.0
+  },
+  {
+   "L": 5,
+   "shifts_levels": 3,
+   "dim_Tminus": 7,
+   "profile_Tminus": [
+    0,
+    0,
+    1,
+    7
+   ],
+   "dim_low_part": 7,
+   "low_part_inside_V": true,
+   "equal": true,
+   "profile_low_part": [
+    0,
+    0,
+    1,
+    7
+   ],
+   "seconds": 0.0
+  },
+  {
+   "L": 6,
+   "shifts_levels": 4,
+   "dim_Tminus": 9,
+   "profile_Tminus": [
+    0,
+    0,
+    1,
+    9
+   ],
+   "dim_low_part": 7,
+   "low_part_inside_V": true,
+   "equal": true,
+   "profile_low_part": [
+    0,
+    0,
+    1,
+    7
+   ],
+   "seconds": 0.0
+  },
+  {
+   "L": 7,
+   "shifts_levels": 5,
+   "dim_Tminus": 11,
+   "profile_Tminus": [
+    0,
+    0,
+    1,
+    11
+   ],
+   "dim_low_part": 7,
+   "low_part_inside_V": true,
+   "equal": true,
+   "profile_low_part": [
+    0,
+    0,
+    1,
+    7
+   ],
+   "seconds": 0.0
+  },
+  {
+   "L": 8,
+   "shifts_levels": 6,
+   "dim_Tminus": 13,
+   "profile_Tminus": [
+    0,
+    0,
+    1,
+    13
+   ],
+   "dim_low_part": 7,
+   "low_part_inside_V": true,
+   "equal": true,
+   "profile_low_part": [
+    0,
+    0,
+    1,
+    7
+   ],
+   "seconds": 0.0
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "name": "summation-binary",
+ "rows": {
+  "n5_a0_b1": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 156,
+   "decomposition_nonzero": 0
+  },
+  "n5_a1_b1": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 150,
+   "decomposition_nonzero": 0
+  },
+  "n5_a3_b4": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 158,
+   "decomposition_nonzero": 0
+  },
+  "n6_a0_b1": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 159,
+   "decomposition_nonzero": 0
+  },
+  "n6_a1_b1": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 155,
+   "decomposition_nonzero": 0
+  },
+  "n6_a9_b60": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 158,
+   "decomposition_nonzero": 0
+  },
+  "n8_a0_b1": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 160,
+   "decomposition_nonzero": 0
+  },
+  "n8_a1_b1": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 159,
+   "decomposition_nonzero": 0
+  },
+  "n8_a173_b185": {
+   "s4_mismatches": 0,
+   "sym_split_mismatches": 0,
+   "decomposition_tested": 159,
+   "decomposition_nonzero": 0
+  }
+ },
+ "statement": "exact equality (characteristic 2, no constant) of the recursion with csd.ic_dreg.s4_binary_value at 900 random points incl. equal coordinates and zeros; permutation and split independence of S_5, S_6; vanishing at x-coordinates of random decompositions m = 2..5",
+ "ok": true
+}

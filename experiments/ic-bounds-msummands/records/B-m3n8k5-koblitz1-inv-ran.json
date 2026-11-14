@@ -1,0 +1,55 @@
+{
+ "case": "B-m3n8k5-koblitz1-inv-ran",
+ "family": "binary",
+ "m": 3,
+ "n": 8,
+ "k": 5,
+ "variables": 15,
+ "curve": "koblitz1",
+ "a": 1,
+ "b": 1,
+ "basis": [
+  162,
+  66,
+  18,
+  12,
+  1
+ ],
+ "target": [
+  110,
+  238
+ ],
+ "target_class": "random",
+ "base_kind": "invariant",
+ "frobenius_invariant": true,
+ "input_degree": 6,
+ "equations": 8,
+ "const_equation": false,
+ "system_hash": "65fb7f6ecd50604696619062ce49254cf1e0353b62942baf466119a5266c3cda",
+ "instance_hash": "75e106a30cf189b2226c88388b51f4a5b2f9fc7a593293a921ef9d14189ba84c",
+ "points_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+ "solutions": 0,
+ "ideal_class": "unit",
+ "status": "exact-unit",
+ "exact_lfd": 7,
+ "strict_falls": [
+  7
+ ],
+ "certificate_degree": 7,
+ "quotient_ranks": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  8,
+  16384
+ ],
+ "local_checks": [],
+ "kernel_upper_bound": 16,
+ "cap_reason": null,
+ "engine": "csd.ic_bounds_bin_big.local_profile_bin(cpu)",
+ "seconds": 57.89,
+ "max_rss_gb": 1.23
+}
