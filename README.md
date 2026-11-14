@@ -5,7 +5,7 @@ Companion repository of the paper
 > Adam Buran, *Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values*.
 
 It holds the Lean development, the closure engines, the independent checker, the written proofs and every
-record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf`.
+record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf`. See [publication status and build instructions](paper/README.md) before using a submission package.
 
 ## Layout
 
@@ -35,8 +35,8 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `experiments/ic-bounds-cert/`, `ic-bounds-exact-k6/` | data of the certificates checked in Lean |
 | `experiments/ic-curve-validation/` | independent implementation of the closure in the ordinary ring |
 
-Each experiment directory has a `README.md` (or `RESULTS.md`, `VERIFY.md`) that names the command behind every
-record.
+Most experiment directories have a `README.md`, `RESULTS.md`, `VERIFY.md` or `REPORT.md`; others retain
+summary and verification records. Appendix C of the manuscript identifies the evidence used.
 
 ## Requirements
 
@@ -48,7 +48,8 @@ builds with pdfLaTeX or Tectonic. The Lean project needs Lean 4.19.0 (see `forma
 
     python3 scripts/ic_bounds_msum.py selftest      # three to eight summands: must print SELFTEST PASSED
     python3 scripts/plot_ic_lfd_figures.py          # regenerates three figures from the records
-    python3 scripts/build_ic_curve_paper.py         # regenerates the sweep tables, one figure and the PDF
+    python3 scripts/build_ic_curve_paper.py         # regenerates tables, all manuscript figures and PDF
+    python3 scripts/check_publication_artifacts.py  # checks saved hashes, audit, sweep and submission abstract
 
 ## Reproducing the main computations
 

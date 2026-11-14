@@ -1,0 +1,18 @@
+{"check": "S3,S4 values and NF(S4)", "p": 97, "k": 3, "s3": true, "s4": true, "nf": true}
+{"check": "S3,S4 values and NF(S4)", "p": 193, "k": 2, "s3": true, "s4": true, "nf": true}
+{"check": "S3,S4 values and NF(S4)", "p": 257, "k": 3, "s3": true, "s4": true, "nf": true}
+{"check": "top coefficient of NF(S_4), k = 2", "p": 97, "ok": true}
+{"check": "top coefficient of NF(S_4), k = 2", "p": 193, "ok": true}
+{"check": "top coefficient of NF(S_4), k = 2", "p": 7681, "ok": true}
+{"check": "planted sum and symmetry", "m": 2, "zero_at_sum": true, "value_off_sum": 6058, "symmetric": true}
+{"check": "planted sum and symmetry", "m": 3, "zero_at_sum": true, "value_off_sum": 117, "symmetric": true}
+{"check": "planted sum and symmetry", "m": 4, "zero_at_sum": true, "value_off_sum": 5231, "symmetric": true}
+{"check": "planted sum and symmetry", "m": 5, "zero_at_sum": true, "value_off_sum": 4463, "symmetric": true}
+{"check": "planted sum and symmetry", "m": 6, "zero_at_sum": true, "value_off_sum": 6, "symmetric": true}
+{"check": "planted sum and symmetry", "m": 7, "zero_at_sum": true, "value_off_sum": 5463, "symmetric": true}
+{"check": "planted sum and symmetry", "m": 8, "zero_at_sum": true, "value_off_sum": 3243, "symmetric": true}
+{"check": "grid against scalar reference", "m": 4, "k": 2, "ok": true}
+{"check": "grid against scalar reference", "m": 5, "k": 2, "ok": true}
+{"check": "grid against scalar reference", "m": 4, "k": 3, "ok": true}
+{"check": "three-summand records", "compared": 344, "inconsistent": 0, "exact_from_degree": 205}
+SELFTEST PASSED
