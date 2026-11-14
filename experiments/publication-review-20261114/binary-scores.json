@@ -1,0 +1,3390 @@
+{
+ "predictions_sha256": "7feee5dbafbde72b4b8ddf94b310ee4b8b56a45446b886bf61b8f98c038e33e1",
+ "engine_sha256": "3ba6e423cbe04c8cfb70fef59d3584dd52d4fb92363cc4b94811525a19f1aa4b",
+ "cases": 57,
+ "records": 57,
+ "problems": [],
+ "score": {
+  "affine, all": {
+   "systems": 52,
+   "B": 24,
+   "posthoc": 45,
+   "A": 31,
+   "A_Z": 45
+  },
+  "affine, |Z| > 0": {
+   "systems": 45,
+   "B": 17,
+   "posthoc": 38,
+   "A": 31,
+   "A_Z": 38
+  },
+  "affine, |Z| = 0 (units)": {
+   "systems": 7,
+   "B": 7,
+   "posthoc": 7,
+   "A": 0,
+   "A_Z": 7
+  },
+  "scaled subfield, inverse-family value": {
+   "systems": 3,
+   "hits": 3
+  }
+ },
+ "rows": [
+  {
+   "name": "C1_rand_ordinary_ran_0",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 280,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 8.81,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "ca2dd87ef17caf1f09d134839eea43eb630a827b2098b974a604c9d3e514168d",
+    "eb85110313333824dee6562d92642bd7e840d1bc8053aebe5b09d111a0943ab9",
+    "73dae6eaaa52040491378b68c0343d65d56c4e0b58e792da9ef9f0490fc772ed"
+   ],
+   "record_sha256": "472be2996e4c0e67defb5ea8046743aaa176a6362033576583895b606b87cb11",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C1_rand_ordinary_ran_1",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 210,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.95,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "a2f3ad334678e96d1f647f3fc4fffe294fc63cb35897ed6f2a74b5a784ea6b0c",
+    "965bf79713c5bce0650a1d6c4388952c0aa95e92c5b5d12593b03305c5b8f473",
+    "c85b94ae80237b97a10c10f31995707e21854ff484ab0e1f50dc977e9c25a3ad"
+   ],
+   "record_sha256": "c06562e248e2799b74b3e0694b8111e10ec9fa17bc00723bb2feacfb8ae7a5cb",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C1_rand_ordinary_ran_2",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 260,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.92,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "e745bbc4b51dc8d0c84a807000508941a59001484fdbf12b9154878b10721dd3",
+    "1e6747dbdeb99b30b0b3dec16bcdb9d1d434d8149bc32edee2c2c2dafeed3dee",
+    "35ff15c23b3667f1d89c0f159d3397de09eff13d9b9e34a6c7fefce7e55feedf"
+   ],
+   "record_sha256": "cf56973f36c5c11f626339947e28ca4e6ee1de5d605ca070f5ef999ed3540e91",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C1_rand_koblitz0_ran_0",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 243,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.88,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "39f6a692d0a4bb3cbb8ded39aff081830771a25b5dbdbfb42d1e8cfd3b9398c9",
+    "de711bbe4a8a7e66aa27563c9de235022eeae597a0c52d3aca657ef336b97cdd",
+    "a4e23e438cbf96c11d39885ee3a8436c0410986c7d1e95a65ae616fe9b6d6d20"
+   ],
+   "record_sha256": "7afcc24b2cdf3c82fb5e7c5f3a5c5c223674707df49deb4d50476c7ca2ce2062",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C1_rand_koblitz1_ran_0",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 258,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.25,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "2faa50f7d695e3b4f033e4443e39b48d3120cd6797760eb4ed336cd510d76a02",
+    "a8963fc990ba5f091892dd50816f39bf6fd6aaf0cf350ebaa608a30b84dc3998",
+    "b86b678fa8aa21fdba0b33bd7c4ad2a2f7fb9848a8b7708c10aa9cb16043e63b"
+   ],
+   "record_sha256": "9c07d173053a904b68c6bbbe4e61edea2928524aa78ab3952f96b7c79f93f24c",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C1_inva_koblitz0_ran_0",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 270,
+   "cls": "affine",
+   "base": "invariant",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.96,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "c3d9772d6dfdf65f6cf48fdaf0ed9778ddce9c14f77b109b071e7d92da677be1",
+    "4c1518e39e0b311b5e6f1697774509c66c76cac8ce4687c6a19e4f9e6d86dfcc",
+    "2a1e8cb2964de1c746691c88612b56e81ea98740e7af9dcffdf943e417bad93d"
+   ],
+   "record_sha256": "5caa04d48ce292b6aded42ed26e35ded451bd21d4c4a751925b8f5b6ee334bb2",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C1_inva_koblitz0_ran_1",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 335,
+   "cls": "affine",
+   "base": "invariant",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.84,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "918f5bc705dbf88cf1b6ca6c90da19e2748767c390ce0fbe899c69703750c6ef",
+    "6d2860971085aac45363a8056b52a67e257943ef15174ec03465e9b382d98584",
+    "c335b22ea15969477c9446e4755ed53145418bf465126c82522c1a65aa0a76ae"
+   ],
+   "record_sha256": "c9a9758967b78e54682f76088cb5d7b20f74e9b1e35e2a0cd1d1f18d04acfe3d",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C1_rand_ordinary_ord_0",
+   "cell": "C1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 268,
+   "cls": "order-two",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.34,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "56bab65d78601567737fffbcb43332732ecc586fb81cfbc5670ce6dfb74677e0",
+    "819ebcd6f89f187440547795222f1cc7ddc985b5fe0670f581ef80cc0fd425fb",
+    "f3ffce6a2dbec3b59dd74777df4e1f4212a2a9da73ea1329d1bcc7aaf2fb5d15"
+   ],
+   "record_sha256": "46d3c2ae767715790da8704aaf586e8ae6d3bf7906edee81e30b06d66de261f3",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   }
+  },
+  {
+   "name": "C2a_trac_koblitz0_ran_0",
+   "cell": "C2a",
+   "n": 12,
+   "k": 11,
+   "e": 11,
+   "k_plus_e": 22,
+   "Z": 2070,
+   "cls": "affine",
+   "base": "trace-zero",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 5,
+   "certificate_degree": 5,
+   "strict_falls": [
+    3,
+    4,
+    5
+   ],
+   "repairs": 0,
+   "seconds": 30.16,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109,
+    35443
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "74b7e4477c9fc41bfdbc951ab55630f05e6748f6d18569a537b39ea5c48a229a",
+    "fece5e6f026fd555301c434abab897d2d409800027ac9d4ff5f389564d536710",
+    "8f9c976014b8ffe21fc14c3d623750c711dc5b4f9fee923c3f9a0e5794498e35",
+    "86148f2ee9bdf7dbb8112d507b967f95f4f1be99d5708804cf578713a6dfb29e"
+   ],
+   "record_sha256": "90d7a9fb0e0f8078bfe9ac60be41428d45e60ad5f4a380da097b2d8dad86ea1b",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 5,
+    "A": 5,
+    "A_Z": 5
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C2a_trac_koblitz0_ran_1",
+   "cell": "C2a",
+   "n": 12,
+   "k": 11,
+   "e": 11,
+   "k_plus_e": 22,
+   "Z": 2070,
+   "cls": "affine",
+   "base": "trace-zero",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 5,
+   "certificate_degree": 5,
+   "strict_falls": [
+    3,
+    4,
+    5
+   ],
+   "repairs": 0,
+   "seconds": 27.19,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109,
+    35443
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "3a0d3c5b271791da43aac7ad6182dd736a83b186083ebaf81cf3ba651e595a19",
+    "c0bb00dee17e282505036645cbcd5ab428444dd0ce56537029ec29ba1019c66b",
+    "d285ce27e145e6f8cc01b13be0f9bbad49ee3c9df36e64475248f538bb30ba82",
+    "d21352783704b24c9af117ba152e13e4247c71061fb37ef05556952f886c5386"
+   ],
+   "record_sha256": "08385845487dc3dfcff8eced27569bba0e41119ba51ccf84b4db9d90068b516b",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 5,
+    "A": 5,
+    "A_Z": 5
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C2a_trac_koblitz1_ord_0",
+   "cell": "C2a",
+   "n": 12,
+   "k": 11,
+   "e": 10,
+   "k_plus_e": 21,
+   "Z": 1035,
+   "cls": "order-two",
+   "base": "trace-zero",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 5,
+   "certificate_degree": 6,
+   "strict_falls": [
+    3,
+    5
+   ],
+   "repairs": 0,
+   "seconds": 143.62,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109,
+    35443,
+    110056
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "5c53a9ce116178fe93c8e36474a1fc47165b2dd9b2c02295f1fc5bec395b3c10",
+    "c5bf11d605183407d42d45e7324c556794b28f33a9e3c7a29e24f582ad9ffdc5",
+    "215ec54c25ce1ef9f02cf6f8654b31c811681fe0c35b1c15d5a4deeca7afd50b",
+    "036dc795e6999df8109abe04f3e4c0439685a496f8352db886c122583831653e",
+    "59f64a1992bb84182f9952dd92c8f7be39bb80f1869d4f617a3b98a79a2d2d5a"
+   ],
+   "record_sha256": "860563b850a0d9f14739aa87af387085a47a77fcdd421e79c9c14a03acce4d38",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   }
+  },
+  {
+   "name": "C3a_rand_ordinary_ran_0",
+   "cell": "C3a",
+   "n": 21,
+   "k": 11,
+   "e": 1,
+   "k_plus_e": 12,
+   "Z": 0,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-unit",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.28,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "1c9df3ea74066839cb10e30ca07ff528cfe6e91fb981c57d3435d3b5f31a67fe",
+    "ac11ea770154fc011a73b8966012a17fb2e895d99f246a01e972765bf165c462",
+    "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2"
+   ],
+   "record_sha256": "31b48b61ef96b39a9cba9902f64fe02bb364ca6fd4194debe09a056224acb92e",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3a_rand_ordinary_ran_1",
+   "cell": "C3a",
+   "n": 21,
+   "k": 11,
+   "e": 1,
+   "k_plus_e": 12,
+   "Z": 0,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-unit",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.4,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "4f236d1c527a18984e11d6dd7cf2141b2b687f555a61c370de16c5fceb3a6428",
+    "60c82337f8545488b43cac1de764f5fedc80654f097939ad70ec37cfbe3c67a8",
+    "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2"
+   ],
+   "record_sha256": "0ca2aa4a0990281724dd6399787f7a59456339b63d4d61566e82ca6e89c9bf31",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3a_rand_koblitz0_ran_0",
+   "cell": "C3a",
+   "n": 21,
+   "k": 11,
+   "e": 1,
+   "k_plus_e": 12,
+   "Z": 0,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-unit",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.16,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "d98a1bded94d69ff62881ac06b827ffab0053a65ea910d2d246da03492ad774f",
+    "33ccd49dec288d5b0f7df11fea33d527b6505415d58f6995def52d86142a548d",
+    "9d8613ff8616304d54baa8e4a5f7b890701ee728f226776c928bfe16cf7bfeb2"
+   ],
+   "record_sha256": "c9dc883a5dbc1e532a9555d1d9e4df96a3cc3188782ad5d96ebcc83dd56dea89",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3b_rand_ordinary_ran_0",
+   "cell": "C3b",
+   "n": 23,
+   "k": 12,
+   "e": 1,
+   "k_plus_e": 13,
+   "Z": 4,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.41,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "5d91df882198b7d76313d1ec71690d936294cc1fe5e3fb79f1be138d3d1d7230",
+    "a6ee954f5630a3ca2953bf8fecc589b2c75637ed492317588a88246bb39ae250",
+    "e60756315808a14f168b047a5813a7834f1884a5b3442b1e8a917cedbbe32f89"
+   ],
+   "record_sha256": "5e62b0634c7e3fda5abe12adddd465e5f30eaacb7447f414c850806624b142c4",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3b_rand_ordinary_ran_1",
+   "cell": "C3b",
+   "n": 23,
+   "k": 12,
+   "e": 1,
+   "k_plus_e": 13,
+   "Z": 0,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-unit",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.12,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "f886187d7b6a725d6713b38ed2a1724e94c773d0b17c83fa67a0d738156161ac",
+    "0be0e415ab1451ecc3200c6bb40b4417e5252e1a751c9daba8134816bd3ee526",
+    "7a2af80ec378337f60520fb46d2c7d24d08bf05cee4a1d4d59344824e1243a65"
+   ],
+   "record_sha256": "8be6e43df0b09244eed75d55ef7268c00416c8d51c7cfbffccc5b8cc1061fb6b",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C2b_trac_koblitz0_ran_0",
+   "cell": "C2b",
+   "n": 13,
+   "k": 12,
+   "e": 12,
+   "k_plus_e": 24,
+   "Z": 4004,
+   "cls": "affine",
+   "base": "trace-zero",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 6,
+   "certificate_degree": 6,
+   "strict_falls": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "repairs": 0,
+   "seconds": 258.72,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951,
+    55455,
+    190051
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "f3e1ec708d9f070615c615173ed3cb8f4a90a2cce762724b276d08949d4a75fd",
+    "cfb51ce1f8a809d16bcc523c256c8add015db23c3252af7ff1b031ad6d5b8627",
+    "709415a6753f2579d11f272897f90faafe8d709bd1c07c839817f95039297854",
+    "f0628c2959d9c7b8711b424faeed3eece319e5edb9b01cacaa9ad7ea48cb64eb",
+    "0a24d4f1fd6aab3717eef49104133916aeeda57fb07ce616c751d7e3838c4d7c"
+   ],
+   "record_sha256": "c99fe4801ef5ebbeb2d2e01b2004844a268e4670c5b1a9755a51dc5d42c7d5eb",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 5,
+    "A": 5,
+    "A_Z": 5
+   },
+   "hit": {
+    "B": false,
+    "posthoc": false,
+    "A": false,
+    "A_Z": false
+   }
+  },
+  {
+   "name": "C2b_trac_koblitz0_ran_1",
+   "cell": "C2b",
+   "n": 13,
+   "k": 12,
+   "e": 12,
+   "k_plus_e": 24,
+   "Z": 4004,
+   "cls": "affine",
+   "base": "trace-zero",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 6,
+   "certificate_degree": 6,
+   "strict_falls": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "repairs": 0,
+   "seconds": 265.56,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951,
+    55455,
+    190051
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "a2e52062aa8c59853b3d342902acc706cb85ff45806d8c1db585f4b810720561",
+    "8f3c1256fbf15ef6e9300640564de4894524bc60f896a2b67a965084c04a8c60",
+    "c175638f36136f3da9f69477f2a85588208115b0efdc065ab6ea343c74a28246",
+    "bdf62b2cbb72133b330881c19279eb07c1269a2baf755d0750b639942d4fe62f",
+    "fee010967549454b2cef2377d65875f30f69440f552ee9514c06e906d4c5a03a"
+   ],
+   "record_sha256": "79ffc7fc502b8e8e2861847ed187d6343da153e1d44dd42bfa06153b1f570cf2",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 5,
+    "A": 5,
+    "A_Z": 5
+   },
+   "hit": {
+    "B": false,
+    "posthoc": false,
+    "A": false,
+    "A_Z": false
+   }
+  },
+  {
+   "name": "C5a_subf_koblitz0_ord_0",
+   "cell": "C5a",
+   "n": 20,
+   "k": 10,
+   "e": 10,
+   "k_plus_e": 20,
+   "Z": 1023,
+   "cls": "order-two",
+   "base": "subfield",
+   "curve": "koblitz0",
+   "subfield": true,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 6,
+   "certificate_degree": 6,
+   "strict_falls": [
+    3,
+    6
+   ],
+   "repairs": 0,
+   "seconds": 56.34,
+   "columns": [
+    1,
+    21,
+    211,
+    1351,
+    6196,
+    21700,
+    60460
+   ],
+   "rref_sha256": [
+    "9875b3a10ca38670f939641b92067ec68fbf58988b97339cf7bd9c5a04b5c317",
+    "f34230acb74387a2c0b2a16fc48355a8bd3582772a77e6f12b90e6bc0a2b3da0",
+    "bee534347e5c45950a233bca1593bf5981a621ce8e47a2438d006ede68250b92",
+    "ac805d2ce2ee977831901411ba3e0d85191dc0a46cfd37a023538a973ecde9a7",
+    "b379f81bb705986d734d83fd0b44fd1d97b0698c322fa8334004522c181e6a6a",
+    "858e480044f5b974a7ca0bc12a45b3a3d35238e42bf427cae67113c1b468f563",
+    "80aa731ce63e7f29060f28fd484a6fcd24b9667507c44e1855ddca7cffd0fd10"
+   ],
+   "record_sha256": "6d0b79e80568387808d276ae9e54da3665fd6386479e8dc800cbb7d6aa2b9572",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred_inverse_family": 6,
+   "hit_inverse_family": true
+  },
+  {
+   "name": "C5a_subf_koblitz1_ord_0",
+   "cell": "C5a",
+   "n": 20,
+   "k": 10,
+   "e": 10,
+   "k_plus_e": 20,
+   "Z": 1023,
+   "cls": "order-two",
+   "base": "subfield",
+   "curve": "koblitz1",
+   "subfield": true,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 6,
+   "certificate_degree": 6,
+   "strict_falls": [
+    3,
+    6
+   ],
+   "repairs": 0,
+   "seconds": 59.67,
+   "columns": [
+    1,
+    21,
+    211,
+    1351,
+    6196,
+    21700,
+    60460
+   ],
+   "rref_sha256": [
+    "9875b3a10ca38670f939641b92067ec68fbf58988b97339cf7bd9c5a04b5c317",
+    "f34230acb74387a2c0b2a16fc48355a8bd3582772a77e6f12b90e6bc0a2b3da0",
+    "bee534347e5c45950a233bca1593bf5981a621ce8e47a2438d006ede68250b92",
+    "ac805d2ce2ee977831901411ba3e0d85191dc0a46cfd37a023538a973ecde9a7",
+    "b379f81bb705986d734d83fd0b44fd1d97b0698c322fa8334004522c181e6a6a",
+    "858e480044f5b974a7ca0bc12a45b3a3d35238e42bf427cae67113c1b468f563",
+    "80aa731ce63e7f29060f28fd484a6fcd24b9667507c44e1855ddca7cffd0fd10"
+   ],
+   "record_sha256": "5a560c30ea7144990e0ca66ed8f321301617ecc3a6bf3b75e4accb84d1b96f35",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred_inverse_family": 6,
+   "hit_inverse_family": true
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_0",
+   "cell": "C6a",
+   "n": 16,
+   "k": 12,
+   "e": 8,
+   "k_plus_e": 20,
+   "Z": 258,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 8.37,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "981145cbb2b62bb8316767dee394efd87f0fc29301847353b721c605f6ac1810",
+    "05fce6ed77c582438e56111603a75456ae05ed7c42729483ecc38ef16fa87fe1",
+    "908d013a8aad96fcb3fc8c0651c67774209431b732cfcf847a6d4df32d3e78c5"
+   ],
+   "record_sha256": "2fa8f6320720504eedc0179183df471878855efa91dcfc26356823caa6f5939b",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_1",
+   "cell": "C6a",
+   "n": 16,
+   "k": 12,
+   "e": 8,
+   "k_plus_e": 20,
+   "Z": 238,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 8.34,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "463d35a71d9d1ca0849d5ce9407632502c73429976732d7e9f2a681fec0e28c8",
+    "39361c5c31709e10e9648da197b9da955cb1b5543e59a2c9433009de59fd72a9",
+    "806e89bbaddf342592d2f5070b323e18d998fed831f67ce4233f14b21e4791ca"
+   ],
+   "record_sha256": "bd7b0d4dfb659400622a3ae66105efe54270ba51951e31db4df759e2c3a2c166",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C6a_rand_ordinary_ran_2",
+   "cell": "C6a",
+   "n": 16,
+   "k": 12,
+   "e": 8,
+   "k_plus_e": 20,
+   "Z": 284,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 8.42,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "51ab4c8dc2de3f04bfb4e0ceb5e7635d769407ef701a61977790b356dcd35bed",
+    "d50d93ae3fc34d0a8c91aa5676152e426f1f741bc179d569bfdee0b6b87c9084",
+    "69604826fdbc658bf79e0a8ed936af0959db9078bfa4426cf4bf9cf05024940f"
+   ],
+   "record_sha256": "7ceee72a7272563bfb0708cee91e40abe3db0f699d21c5af144b438a51ac7e9e",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C6a_rand_koblitz0_ran_0",
+   "cell": "C6a",
+   "n": 16,
+   "k": 12,
+   "e": 8,
+   "k_plus_e": 20,
+   "Z": 248,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 8.57,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "86acc278d8a189a891fc7d31e2f45f6b03664b909edf97957d2e3fa54c619778",
+    "cb6952f5360671279e8b9b4b7971b07eef833dd4fc03829aa060d3627ed713c0",
+    "4d2ec7e2f18650578ce2708ffb8111319b3e1d69c09830036eee66d9b15e9651"
+   ],
+   "record_sha256": "9037d9d45d5f068eb89ef6623cf9bc2d098b2edb2ecd0b09b811016401c1b191",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3c_rand_ordinary_ran_0",
+   "cell": "C3c",
+   "n": 25,
+   "k": 13,
+   "e": 1,
+   "k_plus_e": 14,
+   "Z": 0,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-unit",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 10.43,
+   "columns": [
+    1,
+    27,
+    352,
+    2952,
+    17902
+   ],
+   "rref_sha256": [
+    "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+    "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+    "6a47134fdd7068173ef15c4a6a01c166cb178c11d48d8355331ccb2fbea22653",
+    "237f9904f991d63222f2ac318e858ff857022b446b8ce9a3a2a6fb7030a2ca03",
+    "7d03c8fc165393bb1b70734873e588ccfbd620b6927060a4297a7166fbf4c915"
+   ],
+   "record_sha256": "cc258d36eb513b5ce42c9e0460be40edebe8f756914a070c2925201c9a3df5a5",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3c_rand_ordinary_ran_1",
+   "cell": "C3c",
+   "n": 25,
+   "k": 13,
+   "e": 1,
+   "k_plus_e": 14,
+   "Z": 2,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 10.85,
+   "columns": [
+    1,
+    27,
+    352,
+    2952,
+    17902
+   ],
+   "rref_sha256": [
+    "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+    "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+    "1e323459cc17abf27e112d33e7210c7f96f03cd282092a138e7c514c5a72e278",
+    "24957a530890c77a7afc2241bde737864a52133d66d076abb8edb201c2046cb8",
+    "857553122f5dfc3385cc38c4521f8fb9c5b960dd9481d9472d9f8ca1110aebbb"
+   ],
+   "record_sha256": "36431a196fba23019beb6370773966f165410c89c164ac22ed0d85ab17e5155e",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C4a_rand_koblitz0_ran_0",
+   "cell": "C4a",
+   "n": 15,
+   "k": 11,
+   "e": 7,
+   "k_plus_e": 18,
+   "Z": 118,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.38,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "a71e396769e02a69af780a27accf3653293a67928903bdc1d56872130f384698",
+    "78544b83897fa80377de4b6453d03c672fa88449cfc0fd416c40bb78abb36170",
+    "fa42bd41709584293461c2533809fa893642836e79abc21fdb5b502b0a7c22e5"
+   ],
+   "record_sha256": "bca4bdabf631946be24d3ccc6db6c77f8df0887a63f8d193a3479bfa34c851d7",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C4a_rand_koblitz0_ran_1",
+   "cell": "C4a",
+   "n": 15,
+   "k": 11,
+   "e": 7,
+   "k_plus_e": 18,
+   "Z": 124,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.54,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "a8dda1e7c2ff7007332a2fac2db226e125e1a1cfc54958fdf2b87b15221638c7",
+    "3ad629f2e8b1c6a7e6e4f8807a16fb2c14ce489d123b33b8a9d5627c6fac631a",
+    "4b540ccec5efe5d62a39d9974c9538db7b6ff7482b81b358e77647b9441868d0"
+   ],
+   "record_sha256": "db53718cb94aa06e6477d5044939ac2144a51e17a213c6b1df65ad1cf51b3d7f",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C4a_inva_koblitz0_ran_0",
+   "cell": "C4a",
+   "n": 15,
+   "k": 11,
+   "e": 7,
+   "k_plus_e": 18,
+   "Z": 116,
+   "cls": "affine",
+   "base": "invariant",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.73,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "e3583b4f7b5a4a243518360493935d16f51e75eca84707c40fee038ef78227c6",
+    "5b577cb1618bac1dbc73c31c33fec1c6eca05fad1977c600b0fd1f72efab23ce",
+    "c69e11eb9e2103383044d08cbd977eadbb20918a052671107c22b5d30786ad6a"
+   ],
+   "record_sha256": "429d0384a60ffdd0f942f05ef2b7309bfe6c61ee12e85c80b906c18c74760b6b",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C4a_inva_koblitz0_ran_1",
+   "cell": "C4a",
+   "n": 15,
+   "k": 11,
+   "e": 7,
+   "k_plus_e": 18,
+   "Z": 88,
+   "cls": "affine",
+   "base": "invariant",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.41,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "87e8a6c25593d8c92d8e0ecb26f683cc67bffb053c3545d18c0964609ed8cfca",
+    "d7aac36a433717f0a1117940bcd1a9f9e090b4af935753eb5935490302260e3f",
+    "78266cd4afab132f3bc4f673c6c7e00f857666387c1a560940e8667b2f323102"
+   ],
+   "record_sha256": "3ebd7ec926b8b491c4cdffba66e90e7be89d72675fcc115e2298986fe298f73d",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C2c_trac_koblitz1_ran_0",
+   "cell": "C2c",
+   "n": 14,
+   "k": 13,
+   "e": 13,
+   "k_plus_e": 26,
+   "Z": 8234,
+   "cls": "affine",
+   "base": "trace-zero",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 6,
+   "certificate_degree": 6,
+   "strict_falls": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "repairs": 0,
+   "seconds": 665.61,
+   "columns": [
+    1,
+    27,
+    352,
+    2952,
+    17902,
+    83682,
+    313912
+   ],
+   "rref_sha256": [
+    "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+    "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+    "1f9a337355eb406899662efe2ba614258fb860de02842899e46a550067fe4a93",
+    "a9fb32c5382062db7db87f2bf98c6d4c43a8c7a3b932512c69a16371f4001de8",
+    "5d69483eae2c3b498f6dea1a297bd98690292f02729be9c19fa08f5ef3819d7b",
+    "d6b0681cf00c5f839ec59cfef7b7d9172494ea6a2c4b77ba79b6ca87f9256c07",
+    "78299836ccb3aeb669dd6a2bf30946718d549d07cdb0547c1bdd767e50f45dec"
+   ],
+   "record_sha256": "a34e0be5632841f9626b2c784ce69f4476c80b9fed5bca94498c3200b45c87ea",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 5,
+    "A": 5,
+    "A_Z": 5
+   },
+   "hit": {
+    "B": false,
+    "posthoc": false,
+    "A": false,
+    "A_Z": false
+   }
+  },
+  {
+   "name": "C2c_trac_koblitz1_ran_1",
+   "cell": "C2c",
+   "n": 14,
+   "k": 13,
+   "e": 13,
+   "k_plus_e": 26,
+   "Z": 8234,
+   "cls": "affine",
+   "base": "trace-zero",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 6,
+   "certificate_degree": 6,
+   "strict_falls": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "repairs": 0,
+   "seconds": 656.86,
+   "columns": [
+    1,
+    27,
+    352,
+    2952,
+    17902,
+    83682,
+    313912
+   ],
+   "rref_sha256": [
+    "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+    "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+    "009d08f5a91fcc95c1ec75444897585bc4259bcd51732f6092425aa90cd73ac5",
+    "0d0a0c1892188fee94ecee94b7e432904453f33e3e14bf6b1c38e8099ed5a865",
+    "dac9a72f897094e3838f041cde715080d87866964fbe3511021595582228296f",
+    "acbbd44a789b4c5040e28dec61843120b7bcae2ecf529da89035f1a3463efb03",
+    "b9ca7c416cf691f57bbc9a4902a2055b15e0537dbe91b4a35068596a7849c509"
+   ],
+   "record_sha256": "451956874bd453188631a5eca8599e24a5c896ecbe49bab052d06367cae37563",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 5,
+    "A": 5,
+    "A_Z": 5
+   },
+   "hit": {
+    "B": false,
+    "posthoc": false,
+    "A": false,
+    "A_Z": false
+   }
+  },
+  {
+   "name": "C4b_rand_koblitz1_ran_0",
+   "cell": "C4b",
+   "n": 21,
+   "k": 12,
+   "e": 3,
+   "k_plus_e": 15,
+   "Z": 8,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.98,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "b7deaa5eae04df9228d5047ab4462a1b73a7d095ff78eb1c82c8e0ed733bf482",
+    "6f9f0e17ad54c02c7460fb4e7ea54b8239a48e6803478ea62dfad86a90f0e384",
+    "af213ca8419d56a8169bdd2ef425d61c956194fa920a043b090b05e65b06131b"
+   ],
+   "record_sha256": "31900c8119d27ae700587b2db6fea854c9fb687435cef3a9a75cb4463e8f742d",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C4b_rand_koblitz1_ran_1",
+   "cell": "C4b",
+   "n": 21,
+   "k": 12,
+   "e": 3,
+   "k_plus_e": 15,
+   "Z": 4,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 8.03,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "68910507553c4f755b831301fc3ea21999bcc67b6fd115f887ab6aee99c6af31",
+    "d08805938979daa23ed944d984a4fd077fb8b17f0c17896db1d60e9f89fab27a",
+    "959d4a306877b807a8380971b94b45290de9de6a008a2ea2854b28c4750d7267"
+   ],
+   "record_sha256": "c455cc37bf7ad20573a4b82e84d15f4f3b89017e9bfad3ef6e51508ed45fe445",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C4b_inva_koblitz1_ran_0",
+   "cell": "C4b",
+   "n": 21,
+   "k": 12,
+   "e": 4,
+   "k_plus_e": 16,
+   "Z": 20,
+   "cls": "affine",
+   "base": "invariant",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.93,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "085177afc7a835b12dbef62afba39412e93a26929936ffab407e5c7343729f4d",
+    "32737b7c679b57b2259a7521bba5cbd75976a3e380d04901bd952476bd04ec07",
+    "45501d428915bd054b3793e9bf9353d424e85ec2eaea59e3566bbd32913d1a4c"
+   ],
+   "record_sha256": "e9677bab6569c60dc327b87917d675f310ffb06f58c81f17410798ece1325195",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C4b_inva_koblitz1_ran_1",
+   "cell": "C4b",
+   "n": 21,
+   "k": 12,
+   "e": 3,
+   "k_plus_e": 15,
+   "Z": 2,
+   "cls": "affine",
+   "base": "invariant",
+   "curve": "koblitz1",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 11.24,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "399c7923ef562d8f378b95c54b05786aff4b22f297e1ff7df3d5344affcbf953",
+    "7e136bcaeac97032f64b2f3228636133144a4f48e92cc6b03a8d31f59fb227af",
+    "fd512403209c934c002d8aed69052ff0f1576f61969810a523fc043483a544b6"
+   ],
+   "record_sha256": "11c0c3444d9af2dc88a3a96e071665e1109ef0a41c191243b6005abb1ee8f957",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C6b_rand_ordinary_ran_0",
+   "cell": "C6b",
+   "n": 18,
+   "k": 13,
+   "e": 8,
+   "k_plus_e": 21,
+   "Z": 276,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 5,
+   "certificate_degree": 5,
+   "strict_falls": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "repairs": 0,
+   "seconds": 73.3,
+   "columns": [
+    1,
+    27,
+    352,
+    2952,
+    17902,
+    83682
+   ],
+   "rref_sha256": [
+    "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+    "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+    "6abd77d9a8ce7b6cfdda09dc53fdda39f3f93c95315197fc290422821d753378",
+    "208d7ae41b031e0f887117b255fb783efe5fab05c860df0da9a93b53775747bf",
+    "203f42f80e9fad2bde7ae40514cd7031f30c551ca4eab5ed969c039edd029517",
+    "1eb477db5ad8b076cdff2c48189e0cef90a4f0f30ac1063b8357ecb2d9029e99"
+   ],
+   "record_sha256": "d93517f33a4c6ec751de04cd8e87c52c91b3a9b7b5b5e642b4c1cd853961c2b0",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": false,
+    "A": false,
+    "A_Z": false
+   }
+  },
+  {
+   "name": "C6b_rand_ordinary_ran_1",
+   "cell": "C6b",
+   "n": 18,
+   "k": 13,
+   "e": 8,
+   "k_plus_e": 21,
+   "Z": 226,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 5,
+   "certificate_degree": 5,
+   "strict_falls": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "repairs": 0,
+   "seconds": 71.82,
+   "columns": [
+    1,
+    27,
+    352,
+    2952,
+    17902,
+    83682
+   ],
+   "rref_sha256": [
+    "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+    "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+    "1aa0cb3c1d193a7ccce993377b5fc53772b1cbdaa5cef6a0c034e38fa7065343",
+    "27a182236e1451414df87670d7216a6d6d5aeaf72e766833755be57a0d14c168",
+    "b6f53054a964634836f5fc3e84d9a82d63b7e06ca245b2b9d5fd83fc32ec0b84",
+    "4ceed38d4bbd0685e6222849791790a983132e1d063be5270939c0a71c4cff33"
+   ],
+   "record_sha256": "ff38c1b58406de0f6f8bc36bde68d966775c512110abaeac30f5cad027d9412f",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": false,
+    "A": false,
+    "A_Z": false
+   }
+  },
+  {
+   "name": "C6b_rand_ordinary_ran_2",
+   "cell": "C6b",
+   "n": 18,
+   "k": 13,
+   "e": 8,
+   "k_plus_e": 21,
+   "Z": 286,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 5,
+   "certificate_degree": 5,
+   "strict_falls": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "repairs": 0,
+   "seconds": 71.59,
+   "columns": [
+    1,
+    27,
+    352,
+    2952,
+    17902,
+    83682
+   ],
+   "rref_sha256": [
+    "77d1fe7779a4430cffc1887b7e14bb33858d0276a43bc60c90676d61da7a30a3",
+    "892956318842cdfa48b88e16783d969f790ae8d916ecdc35376267adc2e5a6c4",
+    "625ea048a68f4452543506808f17e05d7e33bdf0d27839ed015aa9d5795255be",
+    "78b1f50ebda7589a63fb78227099e07600a0612c11a0a233fe6ad92f6ec19990",
+    "a5b79c759b8d2065a332963c3656e3b78fedf73917abe1b4c52f4943ec2cbdb5",
+    "303d83c5228da891f25492d828c07f8e8cfe4b8f27d6bfb54198fbf7bcfb098b"
+   ],
+   "record_sha256": "6b821fbb1f852cd3278266e2b3f15c81f1e577ea383a6f1ee3c5a7d95231f71e",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": false,
+    "A": false,
+    "A_Z": false
+   }
+  },
+  {
+   "name": "C3d_rand_ordinary_ran_0",
+   "cell": "C3d",
+   "n": 27,
+   "k": 14,
+   "e": 1,
+   "k_plus_e": 15,
+   "Z": 4,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 14.91,
+   "columns": [
+    1,
+    29,
+    407,
+    3683,
+    24158
+   ],
+   "rref_sha256": [
+    "50fd06595534949908aa57ba54c626a3e2bc77b9874261226bc90fdca84ed931",
+    "8f32666f6680b52cc76e25ca0e47a646447a777ca6ec37fa2ab432611bd5ea45",
+    "37e8cb82df14c26989427da242993ef2d44529093b9e7dfef5a11f99cc79661a",
+    "3e3deaa30e599e6e859aeb7c7d6044c5db83d7f7a68bc81efc5fe60ac7d56223",
+    "9539afd5050bd48527db9a0b66a9e3cb0456e0d99706c36cb95b1c4e27fe1e1d"
+   ],
+   "record_sha256": "df080a6c2ebf1e173ff09b9d1fb4aad64c67a01ff082515a6e9d2ef6cede69da",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3d_rand_ordinary_ran_1",
+   "cell": "C3d",
+   "n": 27,
+   "k": 14,
+   "e": 1,
+   "k_plus_e": 15,
+   "Z": 2,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 15.2,
+   "columns": [
+    1,
+    29,
+    407,
+    3683,
+    24158
+   ],
+   "rref_sha256": [
+    "50fd06595534949908aa57ba54c626a3e2bc77b9874261226bc90fdca84ed931",
+    "8f32666f6680b52cc76e25ca0e47a646447a777ca6ec37fa2ab432611bd5ea45",
+    "f731e5abc0179a4859cadeaa1b5e2b44bb274623f4bee988394429333092e747",
+    "1f7b4552eca694b32f39fb5f6eb5da2ffa4c58e4a56f915fa0b8ba31a4417f15",
+    "1426f908189f2fa592d932e7c7162adcf96e3449538f0389116e44540e995a54"
+   ],
+   "record_sha256": "98709772d999efe04b286e0de7cdbbfd6f7dfe20639aaefe3a1aa2a36c3cdb1f",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C5b_subf_koblitz0_ord_0",
+   "cell": "C5b",
+   "n": 24,
+   "k": 12,
+   "e": 12,
+   "k_plus_e": 24,
+   "Z": 4095,
+   "cls": "order-two",
+   "base": "subfield",
+   "curve": "koblitz0",
+   "subfield": true,
+   "trace_zero": true,
+   "status": "exact-proper-local",
+   "lfd": 7,
+   "certificate_degree": 7,
+   "strict_falls": [
+    3,
+    7
+   ],
+   "repairs": 0,
+   "seconds": 1861.44,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951,
+    55455,
+    190051,
+    536155
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "a3f8e26d1a116148c35ed24f0d46988af3cb4a2b6052da9242a53568527e7909",
+    "d4157f4cdf083661efd1093057d204708c138648dc053e1db268adba5a73f650",
+    "0424c704cb8ad00b1ae1f5dc6cafa125f4d0cd987d8cf89dd2be43bcd8b525ae",
+    "77d59fa8e3f7ba8b3e46a97a8eff101e2dbc534c880eb98efdf4c372d9c9b6f3",
+    "c33fba9f5599ac9aade9ff9fc01595db06a4399900be95ae4b250bf0c4f08019",
+    "3212ad4976d3851f2d6b65b814d54f3b246701818ea2b1862f2fc5460d5d93e0"
+   ],
+   "record_sha256": "d8377b14ca769aaf36a2126be61592375a22591eb13d07f43ec36681edf5b2ed",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred_inverse_family": 7,
+   "hit_inverse_family": true
+  },
+  {
+   "name": "C3e_rand_ordinary_ran_0",
+   "cell": "C3e",
+   "n": 29,
+   "k": 15,
+   "e": 1,
+   "k_plus_e": 16,
+   "Z": 0,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-unit",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 20.32,
+   "columns": [
+    1,
+    31,
+    466,
+    4526,
+    31931
+   ],
+   "rref_sha256": [
+    "716f21f1ca0675b00c9c5bf8de2cad5cfd774a3da2d7e94cbbe3f744563fb501",
+    "7ce90bbb87cfebd71a87e054cb00bd947478826d53c84c2351c62b9c2f5c455f",
+    "2ab83f6bd6c0295dbadfbd083d88a5c0c0911a2802481bc51487ad89b2b263e6",
+    "684b78888471c4ef10539024dca7b40fc7ca02ea4f893aba9991e2ab7ecac901",
+    "86ef094c1d3a5cefb14214531b95edbe904da746571b92cce1c1c0bc55bb6526"
+   ],
+   "record_sha256": "973e0eabe5dfc9240e39dc419b51e66f202219e5a75f7b4eac630d455fa93db3",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "C3f_rand_ordinary_ran_0",
+   "cell": "C3f",
+   "n": 31,
+   "k": 16,
+   "e": 1,
+   "k_plus_e": 17,
+   "Z": 0,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-unit",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 28.7,
+   "columns": [
+    1,
+    33,
+    529,
+    5489,
+    41449
+   ],
+   "rref_sha256": [
+    "1c6037f015604a04ce5472aca0da6f395cc0a69243984b97abbb719b6fccb7a4",
+    "79d02b259c89389035c763348efc5fa359d379061fd0175fccede4d7ab730f27",
+    "06dcd0edd292a03533639b7ae5e0da45144d74e34c19434e8c5f55eefb0fc3e7",
+    "c4316d8201d468bbdb2984a1fb39515c8453546c4984fbc83b0fa102fa11b944",
+    "9ec337f0dc94809dd36485c4138e98a3119e3ec5ced97b82101cac2d85bdc2a6"
+   ],
+   "record_sha256": "1504af2bc5f4ba9e5091cddf83629f130790cf45191662239870baacb31a7a1e",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 4,
+    "posthoc": 4,
+    "A": 3,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": true,
+    "posthoc": true,
+    "A": false,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_ordinary_ran_0",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 260,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.17,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "f4fa8c7f3bb38642a164bb09b02f359cbd231c951f59e7080cf5f1f898bf870b",
+    "d8e4b753c2544a34d81424e64797383baedf5f3f0de3c97756d350306ab75e57",
+    "2412341ce107baac152ae2d9e58a109565a360e8b86edfeb13084bf74ae97709"
+   ],
+   "record_sha256": "a7423fb4b5acfe0111fcc75b8f7f5cd92044fbf10d449663ad7e07b065b0b879",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_ordinary_ran_1",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 292,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 5.95,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "474d7da7cdaa1ff375f8dbeb7a72e1db3f555ba22c6e8263bf8c904df18f7421",
+    "36268d3f2fa77edcab69dd28d0fd88a7d2a446ed9ea46528ffab9e2cd5e7c4b4",
+    "d3e6c9c05181be2cf9686171f345a75cdf604977dc9dbba67885f92bd669e51b"
+   ],
+   "record_sha256": "df71c44afac9d6d3b1777736796a21786c40e15b4a8b4b2ec379e342c3ab58e5",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_ordinary_ran_2",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 234,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.46,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "46215c4e99e1f136bdf5a4c9699a931b829e50df5d8ed39b224f3ce86d3ac811",
+    "5950b570283bd8487e3d7494279556c5ebe87dec2e0a63de19033f4fa98c46e4",
+    "ffb2b04fea48b5fc454be9378b1121c843c7564fdc4b202863ada71bfe34e902"
+   ],
+   "record_sha256": "bb27f49635745d29ad40c9a4fe3b5156b8bcb926481262427c57cc0ea860bf3d",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_ordinary_ran_3",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 270,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.32,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "74c2ef774dc8fd696ab8df4aa90465bacf55f1519dc2957ee11fbe0d1b173360",
+    "0c9875b6fa458f58b2559a1be9c512c0605808010bce29be221a711667e251f3",
+    "9d4990aaa625d45fd5747cf89a251ef25cef1c5dbbdb8f7f5694f9926d4e3ffa"
+   ],
+   "record_sha256": "114b71cade38e3c5f077e38163cc475c0d5c0de1889b6957745f953e4001cf6f",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_ordinary_ran_4",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 251,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.25,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "a0644a0d6aa9503c6a30657bf2f331a91edf56b9ae43f1c04a22c2557d082924",
+    "b1534e578ec0e90742bd36efcbc36d968f3f67d32d074fe1936d4566e4a3a973",
+    "0fe315e81e706453a6970bb4788df77681eefb1ec33e1eca04ecc690f910be10"
+   ],
+   "record_sha256": "b4018e3ec6b3a4bd9a5f68c97b158fda7c389ae62ab793a928722348681e94a5",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_ordinary_ran_5",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 241,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.03,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "f894da1637c812eca2bddaed2f4ff4230de5848c5942e1031fbb5808a28a4f5f",
+    "4585841c972d1e7583e864469d152b0f5962faa0cb8849360971d2ec99544549",
+    "d185fd6e5231b45f78c1bbc61427615b533327248455908ec57e4fe215c0524d"
+   ],
+   "record_sha256": "1b4354b80e0bd3e4c160875878a7ca186a8ce110940382895080953fe9d34728",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_0",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 250,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.0,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "b05c1a4e852fe32fe6ff00705ba71291f60c61e56a95235581f1afe0d9524e3d",
+    "91d3c4d7b1155427987ab1488fc6a6d53100589cc428fe43a7c12dc5a0e3efef",
+    "e880f96259194b359c608f140cdcab60457d48a284a8774a73b5810523921488"
+   ],
+   "record_sha256": "63b35f2619ca0fb9e58bf5968d62b390263536966f81f6ec7fa304955a6fc75f",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_1",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 254,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.34,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "8817df3abb915f995e1570383c43ed49e5929cdc86652ade3bad8d1919e2fa71",
+    "0b1ce03a707654bbc5a6d22e3845ec6396499ed502d46eab300b2439563c4061",
+    "e1b6200adc74245a22b58b76423241cf1bf018c6799d5f8ffcaa09f8144a0653"
+   ],
+   "record_sha256": "96716eb36f73c5042fc023e5eba46eaf6e1d66a951d31602ee3373f6648e081b",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R1_rand_koblitz0_ran_2",
+   "cell": "R1",
+   "n": 14,
+   "k": 11,
+   "e": 8,
+   "k_plus_e": 19,
+   "Z": 254,
+   "cls": "affine",
+   "base": "random",
+   "curve": "koblitz0",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 6.15,
+   "columns": [
+    1,
+    23,
+    254,
+    1794,
+    9109
+   ],
+   "rref_sha256": [
+    "31784c8f889a72dbab78c6e18cf36c4bdcbbc75372cd19062c4993fcf19d891b",
+    "4a3d51890b8f54bfdea865dcfa0fb822c7f3fd3cc19d5c1d3e5bbdc082ef08f4",
+    "f566d4734c87e9b71f40ff5860d6fedecba2194a43f8f487086d68644cbf7bb6",
+    "3be1e3ab243543d7a77b275d1459836c24301ff36006804f826a4a6511a4d246",
+    "150b1813839e1676333843624f798021f071bceab38b6331cced167f554d1b7f"
+   ],
+   "record_sha256": "cb7baeaa275e59f4c560dad1eb5affac32871acda9e5ba7b7fb6d3ed57e81097",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R2_rand_ordinary_ran_0",
+   "cell": "R2",
+   "n": 17,
+   "k": 12,
+   "e": 7,
+   "k_plus_e": 19,
+   "Z": 126,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.69,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "133f380c4718477b9be58dd8cf8a3f19dd36f91f2a07f59a1cec02eaeeb6b9fb",
+    "2e217a7d569c85dbd270998678ea908bb592a5501754fd92abfee551b5a4b5ee",
+    "ba4067555eb39f35cd531ab24ab09c8d580bd987479639b3c99f61d7a13ef21a"
+   ],
+   "record_sha256": "43573c2091e5214eb2f47c89d0de8222df936bdf7d5de8abb4fbe11f57def5d8",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R2_rand_ordinary_ran_1",
+   "cell": "R2",
+   "n": 17,
+   "k": 12,
+   "e": 7,
+   "k_plus_e": 19,
+   "Z": 122,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.84,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "646881fab3db184daf615cfc9604522b63151a5d3fea1ad0bb42c5ce1fef3b83",
+    "eff522d6732b0793becbf88fb15e314d6059b038f93b7a6f74835e3c73d3c889",
+    "b2d449da2920758dbc262678f5654b36a47fcffe8f1523bd59ecd97aa6e86f58"
+   ],
+   "record_sha256": "11d3da59a905a68152f20ef94285ef2ea16f4530559c57562ca8af0c82ab99d0",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R2_rand_ordinary_ran_2",
+   "cell": "R2",
+   "n": 17,
+   "k": 12,
+   "e": 7,
+   "k_plus_e": 19,
+   "Z": 140,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.83,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "6967f6d3b2a7507e1377893f2f2b017854831f21f6152b2a769146f722253091",
+    "be0f4e422abae59fe3ec1a7e635310b23dab111c553f14f4002ea38af867ae90",
+    "2634c1503a29a9dbf550e45c4960b98c314aa7c308c3c121c7ab59bdab1b9c42"
+   ],
+   "record_sha256": "2cd9c9e3404004cf69280a3a964b8e2755cbd0a390a6873fe5fab728db7ca4b9",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  },
+  {
+   "name": "R2_rand_ordinary_ran_3",
+   "cell": "R2",
+   "n": 17,
+   "k": 12,
+   "e": 7,
+   "k_plus_e": 19,
+   "Z": 104,
+   "cls": "affine",
+   "base": "random",
+   "curve": "ordinary",
+   "subfield": false,
+   "trace_zero": false,
+   "status": "exact-proper-local",
+   "lfd": 4,
+   "certificate_degree": 4,
+   "strict_falls": [
+    2,
+    3,
+    4
+   ],
+   "repairs": 0,
+   "seconds": 7.71,
+   "columns": [
+    1,
+    25,
+    301,
+    2325,
+    12951
+   ],
+   "rref_sha256": [
+    "1714e8757e4146904298034fccf5c9a4d738afac83caf34578ed66c605e95482",
+    "aab6f4df13e8fdafb3c08dd5d5ad5f0d7f63e848300cc9425e68b70875828eb5",
+    "4bbc53653a4e5e16a4b76720702e5b7884013675559089903aaee3f802c20b48",
+    "3826bdcac25c31301cc7f4b4faad327dcd2f8cfa4815f4349e70feea1a9282bc",
+    "2cfd66804d0b18cff85ab8d81bc0e1d612eb708d149db4042ef2922227a7373d"
+   ],
+   "record_sha256": "f78239dbcd912663b8b21160cf2f98d136096bf1c75f4dd88c7f3903aa0b9621",
+   "checks": {
+    "system_hash": true,
+    "points_sha256": true,
+    "n_k": true,
+    "n_points": true,
+    "engine_sha256": true,
+    "certified": true
+   },
+   "pred": {
+    "B": 5,
+    "posthoc": 4,
+    "A": 4,
+    "A_Z": 4
+   },
+   "hit": {
+    "B": false,
+    "posthoc": true,
+    "A": true,
+    "A_Z": true
+   }
+  }
+ ]
+}

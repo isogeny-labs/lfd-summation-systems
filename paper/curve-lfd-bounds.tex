@@ -10,7 +10,7 @@
 \definecolor{oiorange}{HTML}{E69F00}
 \definecolor{oigreen}{HTML}{009E73}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdfauthor={Adam Buran},pdftitle={Kernel-checked last fall degree bounds for prime, binary and Koblitz summation systems}}
+\hypersetup{pdfauthor={Adam Buran},pdftitle={Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values}}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
@@ -30,7 +30,7 @@
 \setlength{\emergencystretch}{3em}
 \title{Last fall degrees of elliptic curve summation systems:\\ machine-checked bounds and exact values}
 \author{Adam Buran\\ \texttt{a.buran28@gmail.com}}
-\date{12 November 2026}
+\date{14 November 2026}
 \input{curve-sweep-data}
 \begin{document}
 \maketitle
@@ -829,14 +829,15 @@ $\dim V_3\ne2k+1$ are consistent with it.
 \begin{theorem}[Carry lower bound; kernel-checked]\label{thm:carry}
 Let $G$ be a reduced-ideal-trivial set with $0\notin G$, $g$ a reduced polynomial of degree
 $d$, and $h$ a reduced polynomial of degree at most $d$ with
-$h-\lambda g\in\langle G\rangle$ for some $\lambda\in K$ and $h\ne c\,g$ for every constant
+$h-A g\in\langle G\rangle$ for some polynomial $A$ and $h\ne c\,g$ for every constant
 $c$. Then $\lfd(G\cup\{g\})\ge d+1$. For three summands, every field with
 $2\ne0$, every depth $k\ge3$ and $5t^3+3at+6b\ne0$, the direct system
 $G_{3,k}\cup\{\NF(S_4)\}$ has $\lfd\ge7$.
 \end{theorem}
 \begin{proof}
-The closure $V_d$ lies in $(\langle G\rangle\cap M_{\le d})+K g$; if $h$
-were there, the reduced element $h-cg$ would lie in $\langle G\rangle$ and
+The congruence $h-A g\in\langle G\rangle$ puts $h$ in the ideal
+$\langle G\cup\{g\}\rangle$. The closure $V_d$ lies in
+$(\langle G\rangle\cap M_{\le d})+K g$; if $h$ were there, the reduced element $h-cg$ would lie in $\langle G\rangle$ and
 vanish. For $m=3$ take $g=\NF(S_4)$, of degree exactly $6$ because
 $(3,3,3)$ is its only possible weight-$6$ chain mask, and
 $h=\NF(u_{1,0}\,g)$, of degree at most $6$. For $k\ge3$ every exponent of
@@ -1613,8 +1614,8 @@ alone, and as a function of $k+e$. Both are refuted ($11$ hits against $36$
 misses, and $36$ against $11$, on the $47$ systems chosen to separate them):
 a trace-zero hyperplane at $k=9$ with about $490$ solutions has value $5$ in
 $11$ of $11$ systems, and unit ideals have value $4$ (already at $k=7$ on
-the earlier grid, and at $k=9,10$ in the preregistered test). There is no bound
-in the solution count alone, and the subfield $\F_{2^8}\subset\F_{2^{16}}$
+the earlier grid, and at $k=9,10$ in the preregistered test). These data refute the tested solution-count law; they do not rule out
+other bounds in the solution count. The subfield $\F_{2^8}\subset\F_{2^{16}}$
 with $255$ solutions has value $5$ at $k=8$, the inverse-family value
 $k/2+1$. A two-term rule (a floor that grows with $k$ and a term that grows
 with the solution count) fits the old and new data but was chosen after the
@@ -1642,9 +1643,9 @@ records at every degree, including the canonical basis hashes, and a third
 execution reproduces the $46$ smaller ones; all use the same engine. On the grids
 through $k=10$ the pre-certificate closure dimensions depend only on
 $(n,k)$, the target class and two effective-dimension fields of the record
-in $1678$ of $1775$ systems. A tight bound
-must therefore depend on the coordinate space and on $k$, not only on the
-solution count or the dimension (Figure~\ref{fig:binarydeep}).
+in $1678$ of $1775$ systems. The measured profiles vary with the coordinate-space class, and the tested
+solution-count and dimension rules do not determine them
+(Figure~\ref{fig:binarydeep}).
 
 % Figure binary-deep: the 57 certified systems at k = 10..16 of
 % experiments/ic-bounds-binary-deep/outcomes-2026-11-12.json (fields k, n, lfd, base, Z); classes by the field
@@ -1657,7 +1658,8 @@ LFD of the $57$ certified systems of Section~\ref{sec:binarydeep} by
 coordinate-space class (points jittered; replicated with the same engine).
 The value is $4$ on the random spaces with $n=2k-1$ at every $k$, $6$ on
 the trace-zero hyperplanes at $k=12$, $13$, and $k/2+1$ on the scaled
-subfields. A tight bound must depend on the coordinate space and on $k$.}
+subfields. These observations distinguish coordinate-space classes on the
+computed instances; they do not exclude other universal upper bounds.}
 \label{fig:binarydeep}
 \end{figure}
 
@@ -2345,11 +2347,13 @@ $k=10$ for $D=6$ (hashes are not comparable across primes); the
 cross-checks in the other direction are in Appendix~\ref{app:engines}.
 
 \section{Data and artifacts}\label{app:data}
-Every result is stored with its records and verification reports in the
-companion repository
+The companion repository holds the records and verification reports:
 \begin{center}
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
+The computational and formal evidence reviewed here is available in the
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/548ec4e}{commit \code{548ec4e}}.
+Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);
 Table~\ref{tab:data} gives the locations, relative to its root. Most directories

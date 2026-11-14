@@ -5,7 +5,7 @@ Companion repository of the paper
 > Adam Buran, *Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values*.
 
 It holds the Lean development, the closure engines, the independent checker, the written proofs and every
-record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf`.
+record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf`. See [publication status and build instructions](paper/README.md) before using a submission package.
 
 ## Layout
 
@@ -40,7 +40,8 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `experiments/ic-curve-validation/` | independent implementation of the closure in the ordinary ring |
 
 Each experiment directory has a `README.md` (or `RESULTS.md`, `VERIFY.md`, `NOTES.md`, `REPORT.md`) that names the
-command behind every record.
+command behind every record; `experiments/publication-review-20261114/` holds the check records of
+`docs/reviews-publication-20261114.md`. Appendix C of the manuscript identifies the evidence used.
 
 ## Requirements
 
@@ -52,7 +53,8 @@ and `binary-lfd.tex` build with pdfLaTeX or Tectonic. The Lean project needs Lea
 
     python3 scripts/ic_bounds_msum.py selftest      # three to eight summands: must print SELFTEST PASSED
     python3 scripts/plot_ic_lfd_figures.py          # regenerates three figures from the records
-    python3 scripts/build_ic_curve_paper.py         # regenerates the sweep tables, one figure and the PDF
+    python3 scripts/build_ic_curve_paper.py         # regenerates tables, all manuscript figures and PDF
+    python3 scripts/check_publication_artifacts.py  # checks saved hashes, audit, sweep and submission abstract
     for s in scripts/check_n8_*.py; do python3 $s; done   # 33 exact regressions behind the fixed-curve growth theorem
 
 ## Reproducing the main computations

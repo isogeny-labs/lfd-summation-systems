@@ -65,3 +65,4 @@ audit coverage and three finite closure regressions.
 `UnitInstance` and `DepthFourteen` modules and the fixed-curve growth theorem: 628 declarations of `Audit.lean`
 and 840 declarations over all files that print axioms, foundational axioms only. It ran on macOS; the workflow
 `.github/workflows/lean-all-modules.yml` repeats it on Linux.
+The source digests in `verification.json` bind the saved audit to the source files in this checkout.

@@ -177,9 +177,11 @@ def main():
         log = (Path(temporary) / 'curve-lfd-bounds.log').read_text(errors='replace')
         if re.search(r'undefined|Rerun to get cross-references right|multiply defined', log, re.I):
             raise SystemExit('Unresolved TeX references/citations; inspect manuscript.')
-        (paper / 'curve-lfd-bounds.pdf').write_bytes((Path(temporary) / 'curve-lfd-bounds.pdf').read_bytes())
         warnings = re.findall(r'(?:LaTeX|Package [^\n]+) Warning:[^\n]*', log)
-        overfull = len(re.findall(r'Overfull \\hbox', log))
+        overfull = len(re.findall(r'Overfull \\[hv]box', log))
+        if warnings or overfull:
+            raise SystemExit(f'Publication build rejected: {len(warnings)} warnings, {overfull} overfull boxes.')
+        (paper / 'curve-lfd-bounds.pdf').write_bytes((Path(temporary) / 'curve-lfd-bounds.pdf').read_bytes())
     sources = ['scripts/build_ic_curve_paper.py', 'scripts/make_paper_figures.py', 'paper/curve-lfd-bounds.tex', 'paper/curve-sweep-data.tex',
                'experiments/ic-curve-sweep/summary.json', 'experiments/ic-lean/verification.json']
     outputs = ['paper/curve-lfd-bounds.pdf', 'paper/figures/curve-sweep.pdf', 'paper/figures/curve-sweep.png'] + extra_figures
