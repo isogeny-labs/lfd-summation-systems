@@ -52,7 +52,10 @@ theorem generic_s3_ne_zero (a b t Y : K)
     (z : RatFunc K) :
     s3 (RatFunc.C a) (RatFunc.C b) RatFunc.X z (RatFunc.C t) ≠ 0 := by
   have h2' : (2 : RatFunc K) ≠ 0 := by
-    simpa using (RatFunc.C : K →+* RatFunc K).injective.ne h2
+    intro hz
+    apply h2
+    apply (RatFunc.C : K →+* RatFunc K).injective
+    simpa only [map_ofNat, map_zero] using hz
   have hY' : RatFunc.C Y ≠ 0 := by
     simpa using (RatFunc.C : K →+* RatFunc K).injective.ne hY
   have hR' : (RatFunc.C Y) ^ 2 = cubic (RatFunc.C a) (RatFunc.C b) (RatFunc.C t) := by
