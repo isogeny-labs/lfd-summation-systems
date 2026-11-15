@@ -10,6 +10,7 @@ The engine is `scripts/ic_bounds_growth_lib.py` (exact linear algebra mod p, num
 | `ideal-D3-*.json`, `ideal-D4-*.json` | `scripts/ic_bounds_growth_ideal.py p a b t D kmin kmax` | Propositions 2.1 and 2.2: dim V_D(k), dim S_D(k), V_D(k) ⊂ S_D(k), closedness of S_D(k) against FEI_k(D−1) |
 | `lowpart-D3-*.json`, `lowpart-D4-*.json` | `scripts/ic_bounds_growth_lowpart.py` | Section 7: the low part V_D(k) ∩ M_<D against S_{D−1}(k) |
 | `fei-w4-k*-p40961.json` | `scripts/ic_bounds_growth_fei.py 40961 21223 9887 4748 4 k` | the splitting property FEI_k(4) alone at k = 8, ..., 12 |
+| `fei-w2-k*-p40961.json`, `fei-w3-k*-p40961.json` | `scripts/ic_bounds_growth_fei.py 40961 21223 9887 4748 w k` | FEI_k(w) for (w, k) = (2, 10..12) and (3, 10..11), run for the review of 12 November (`docs/proofs/N8-growth-review.md`) |
 | `nowrap-D3-k3.json`, `nowrap-D4-k7.json` | `scripts/ic_bounds_growth_nowrap.py` | Section 7: V_D(k) as the low part of a wrap-free closure |
 | `circuits-w2-p12289.json`, `circuits-w3-p12289.json` | `scripts/ic_bounds_growth_circuits.py` | Theorem 3.3 over the constants, on computed circuits |
 | `charp.json` | `scripts/ic_bounds_growth_charp.py` | Theorem 3.3 in characteristic p, dependence over the constants only, with a control |

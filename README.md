@@ -17,7 +17,7 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `scripts/` | drivers: one script per experiment, the figure script and the paper build |
 | `tests/` | unit tests of the certificate code (`pytest tests`) |
 | `docs/proofs/` | written proofs that are not formalized (the depth reduction, genericity, the growth theorem `N8-growth.md`, the block-of-four lemmas `N9-block-four.md`), the plans of the Lean formalizations, and the notes behind the kernel-checked fixed-curve growth theorem (the other `N8-*.md`; start with `N8-two-torsion-rational-route.md`) |
-| `docs/reviews-*.md`, `docs/reviews-20261112/` | reviews of the written proofs, the red-team reviews of the growth proof and the audit of the paper (see *Working material* below) |
+| `docs/reviews-*.md`, `docs/reviews-20261112/`, `docs/proofs/N8-growth-review*.md` | reviews of the written proofs, the red-team reviews of the growth proof and the audit of the paper (see *Working material* below) |
 | `docs/IC_FALL_COUNTEREXAMPLES.md`, `docs/IC_FALL_PROOFS.md` | notes on the fall counterexamples, checked by `scripts/verify_ic_fall_counterexamples.py` against `experiments/ic-fall-counterexamples/` |
 | `experiments/ic-lean/` | audit of the Lean development (declarations and their axioms) |
 | `experiments/ic-curve-sweep/` | the sweep of Sections 5 and 6 |
@@ -96,7 +96,7 @@ has no independent certificate.
 Besides the paper, its proofs and its records, the repository keeps the working material of the project, so
 that readers can see how the results were checked:
 
-- `docs/reviews-*.md` and `docs/reviews-20261112/` are internal reviews: red-team reviews of the written proofs,
+- `docs/reviews-*.md`, `docs/reviews-20261112/` and `docs/proofs/N8-growth-review*.md` are internal reviews: red-team reviews of the written proofs,
   referee-style reports and an audit of the paper. They record findings and how each was resolved. They are not
   part of the paper and have not been externally refereed.
 - `experiments/ic-bounds-k14/POD.md`, `RELAUNCH.md` and `relaunch/`, `experiments/ic-bounds-binary-deep/pod/` and
