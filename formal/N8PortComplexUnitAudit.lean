@@ -1,0 +1,8 @@
+import ICFallDegrees.GrowthCharZeroSeparatedFamily
+import ICFallDegrees.GrowthActualCircuitSpread
+import ICFallDegrees.GrowthMain
+
+#print axioms ICFallDegrees.GrowthCharZeroSeparatedFamily.unit_complex_of_norm_gt
+#print axioms ICFallDegrees.GrowthCharZeroSeparatedFamily.nonsingular_of_norm_gt
+#print axioms ICFallDegrees.GrowthActualCircuitSpread.fixed_E6_spread_bound
+#print axioms ICFallDegrees.GrowthMain.growth_lfd_gt_linear

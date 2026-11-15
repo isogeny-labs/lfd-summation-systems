@@ -1,0 +1,33 @@
+import ICFallDegrees.GrowthMain
+import ICFallDegrees.GrowthWronskianTightDegree
+import ICFallDegrees.GrowthWronskianCofactor
+import ICFallDegrees.GrowthWronskianDeterminant
+import ICFallDegrees.GrowthWronskianDegree
+import ICFallDegrees.GrowthRationalLogNumerator
+import ICFallDegrees.GrowthRationalWronskianRec
+import ICFallDegrees.GrowthRationalChainUnit
+import ICFallDegrees.GrowthSecant
+import ICFallDegrees.GrowthPoleArithmetic
+
+#print axioms ICFallDegrees.GrowthWronskianTightDegree.numeratorRec_natDegree_le_two
+#print axioms ICFallDegrees.GrowthWronskianTightDegree.cofactor_natDegree_le_two
+#print axioms ICFallDegrees.GrowthWronskianCofactor.cofactor_natDegree_le
+#print axioms ICFallDegrees.GrowthWronskianDeterminant.natDegree_det_le
+#print axioms ICFallDegrees.GrowthWronskianDegree.natDegree_prod_le
+#print axioms ICFallDegrees.GrowthWronskianDegree.natDegree_sum_le
+#print axioms ICFallDegrees.GrowthRationalLogNumerator.denominator_natDegree_le
+#print axioms ICFallDegrees.GrowthRationalLogNumerator.concrete_numeratorRec_natDegree_le
+#print axioms ICFallDegrees.GrowthRationalLogNumerator.logNumerator_eq
+#print axioms ICFallDegrees.GrowthRationalLogNumerator.logNumerator_natDegree_le
+#print axioms ICFallDegrees.GrowthRationalWronskianRec.numeratorRec_zero
+#print axioms ICFallDegrees.GrowthRationalWronskianRec.numeratorRec_one
+#print axioms ICFallDegrees.GrowthRationalWronskianRec.numeratorRec_natDegree_le
+#print axioms ICFallDegrees.GrowthRationalChainUnit.unit_of_primitiveRoot_frobenius
+#print axioms ICFallDegrees.GrowthSecant.secant_on_curve
+#print axioms ICFallDegrees.GrowthPoleArithmetic.spread_from_two_pole_orders
+
+-- Independent logical bridge audits (conditional statements, NOT CurveModel)
+#print axioms ICFallDegrees.GrowthSpread.split_of_no_crossing
+#print axioms ICFallDegrees.GrowthCounting.lambdaBound_Lam
+#print axioms ICFallDegrees.GrowthReduction.not_one_of_fei
+#print axioms ICFallDegrees.GrowthMain.growth_theorem

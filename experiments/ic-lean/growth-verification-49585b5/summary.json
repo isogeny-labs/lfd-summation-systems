@@ -1,0 +1,4607 @@
+{
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "build": "passed",
+  "modules_built": 220,
+  "library_files": 219,
+  "top_level_files": 48,
+  "files_with_print_axioms": {
+    "formal/ICFallDegrees/Audit.lean": 636,
+    "formal/ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean": 3,
+    "formal/ICFallDegrees/GrowthBoxSpread.lean": 2,
+    "formal/ICFallDegrees/GrowthConcreteClosureEquivalence.lean": 4,
+    "formal/ICFallDegrees/GrowthConcreteClosureStages.lean": 4,
+    "formal/ICFallDegrees/GrowthConcreteClosureStep.lean": 4,
+    "formal/ICFallDegrees/GrowthFermatDiagonalObstruction.lean": 4,
+    "formal/ICFallDegrees/GrowthFieldCoefficientRetraction.lean": 3,
+    "formal/ICFallDegrees/GrowthFiniteStabilization.lean": 2,
+    "formal/ICFallDegrees/GrowthFixedE6IntegralBezout.lean": 2,
+    "formal/ICFallDegrees/GrowthFixedE6IntegralInputs.lean": 3,
+    "formal/ICFallDegrees/GrowthFixedE6NativeUnit.lean": 5,
+    "formal/ICFallDegrees/GrowthFixedE6PrimeSequence.lean": 1,
+    "formal/ICFallDegrees/GrowthFixedE6PrimeTheta.lean": 1,
+    "formal/ICFallDegrees/GrowthIntegralBezoutTransfer.lean": 2,
+    "formal/ICFallDegrees/GrowthPolynomialWronskianBasis.lean": 2,
+    "formal/ICFallDegrees/GrowthPrimeAdmissible.lean": 1,
+    "formal/ICFallDegrees/GrowthPrimeBoundedRationalWronskian.lean": 2,
+    "formal/ICFallDegrees/GrowthPrimeBoxCircuitTransfer.lean": 1,
+    "formal/ICFallDegrees/GrowthPrimeBoxNonmembership.lean": 2,
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCircuitPair.lean": 1,
+    "formal/ICFallDegrees/GrowthPrimeE6BoxClearing.lean": 6,
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCofactor.lean": 2,
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCofactorRatio.lean": 1,
+    "formal/ICFallDegrees/GrowthPrimeE6BoxReplacementGap.lean": 1,
+    "formal/ICFallDegrees/GrowthPrimeE6NativeBoxSpread.lean": 1,
+    "formal/ICFallDegrees/GrowthPrimeE6NativeNonmembership.lean": 2,
+    "formal/ICFallDegrees/GrowthPrimeIntegralUnit.lean": 2,
+    "formal/ICFallDegrees/GrowthPrimeNativeWindow.lean": 4,
+    "formal/ICFallDegrees/GrowthPrimeRationalSeed.lean": 2,
+    "formal/ICFallDegrees/GrowthRationalBezoutCertificate.lean": 1,
+    "formal/ICFallDegrees/GrowthRationalBezoutIntegerLift.lean": 2,
+    "formal/ICFallDegrees/GrowthRationalE6Unit.lean": 3,
+    "formal/ICFallDegrees/GrowthRationalPolynomialDenominators.lean": 1,
+    "formal/ICFallDegrees/GrowthTwoTorsionFamily.lean": 4,
+    "formal/N8ActualCircuitSpreadAudit.lean": 3,
+    "formal/N8ActualCofactorCrossAudit.lean": 3,
+    "formal/N8ActualCofactorNonzeroAudit.lean": 2,
+    "formal/N8ActualCofactorQuotientAudit.lean": 2,
+    "formal/N8ActualMinorReplacementAudit.lean": 4,
+    "formal/N8ActualReplacementSpreadAudit.lean": 1,
+    "formal/N8CircuitErasedBasisAudit.lean": 3,
+    "formal/N8CircuitFullSupportAudit.lean": 3,
+    "formal/N8CircuitInterfaceAudit.lean": 2,
+    "formal/N8CircuitPairBoundAudit.lean": 1,
+    "formal/N8CircuitReplacementFinAudit.lean": 2,
+    "formal/N8CircuitReplacementSumAudit.lean": 1,
+    "formal/N8ComplexCofactorAudit.lean": 3,
+    "formal/N8ExplicitWronskianRecAudit.lean": 20,
+    "formal/N8FiniteCofactorGapAudit.lean": 5,
+    "formal/N8FiniteCofactorMultiplicityAudit.lean": 4,
+    "formal/N8FixedE6ExistenceAudit.lean": 2,
+    "formal/N8FixedE6GrowthAudit.lean": 4,
+    "formal/N8GeneralRationalWronskianAudit.lean": 2,
+    "formal/N8InfinityCofactorDegreeAudit.lean": 2,
+    "formal/N8PolynomialQuotientBridgeAudit.lean": 5,
+    "formal/N8PolynomialWronskianBasisAudit.lean": 2,
+    "formal/N8PolynomialWronskianDistinctDegreeAudit.lean": 1,
+    "formal/N8PolynomialWronskianMonomialsAudit.lean": 4,
+    "formal/N8PortComplexUnitAudit.lean": 4,
+    "formal/N8PrimeSpecializationInheritedAudit.lean": 2,
+    "formal/N8RatFuncCofactorDegreeAudit.lean": 6,
+    "formal/N8RatFuncCofactorReplacementAudit.lean": 1,
+    "formal/N8RatFuncCommonDenominatorAudit.lean": 4,
+    "formal/N8RatFuncCommonScalarAudit.lean": 3,
+    "formal/N8RatFuncDenominatorIndependenceAudit.lean": 2,
+    "formal/N8RatFuncDerivativeAudit.lean": 6,
+    "formal/N8RatFuncDerivativeRulesAudit.lean": 5,
+    "formal/N8RatFuncHigherLeibnizAudit.lean": 3,
+    "formal/N8RatFuncInfinityDegreeAudit.lean": 6,
+    "formal/N8RatFuncIteratedLinearAudit.lean": 6,
+    "formal/N8RatFuncLogDerivativeAudit.lean": 3,
+    "formal/N8RatFuncPolynomialRecurrenceAudit.lean": 3,
+    "formal/N8RatFuncPolynomialWronskianMapAudit.lean": 4,
+    "formal/N8RatFuncRootMultiplicityCrossAudit.lean": 2,
+    "formal/N8RatFuncScalarJetAudit.lean": 3,
+    "formal/N8RatFuncScaledRecurrenceAudit.lean": 2,
+    "formal/N8RatFuncWronskianLinearChangeAudit.lean": 3,
+    "formal/N8RatFuncWronskianNormalizationAudit.lean": 3,
+    "formal/N8RatFuncWronskianTwoAudit.lean": 2,
+    "formal/N8RationalCoordinateAudit.lean": 19,
+    "formal/N8RationalMobiusAudit.lean": 10
+  },
+  "audited_declarations": 848,
+  "allowed_foundational_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "other_axioms": [],
+  "headline": {
+    "ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "axioms_by_declaration": {
+    "ICFallDegrees.AffineTransport.degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.AffineTransport.map_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDescent.component_of_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDescent.component_scaled_map": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDescent.normalization_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDescent.s3_squared_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.basis16_coord_power": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.basis8_coord_power": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_base_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_coefficient_descent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_curve_b_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_descended_input_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_factor_base_dimension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_normalized_coefficients": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_not_frobenius_invariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_square_not_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.koblitz_target_on_curve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_base_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_coefficient_descent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_curve_b_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_descended_input_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_factor_base_dimension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_normalized_coefficients": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_not_frobenius_invariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_square_not_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoCurves.ordinary_target_on_curve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoSystems.field_equations_boolean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoSystems.koblitz_exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoSystems.koblitz_input_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoSystems.ordinary_exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoSystems.ordinary_input_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryDimensionTwoSystems.toExponent_exponent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.alpha16_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.alpha8_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.basis16_eq_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.basis8_eq_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.card16": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.card8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.modulus16_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.modulus16_irreducible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.modulus16_monic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.modulus8_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.modulus8_irreducible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryExtensionFields.modulus8_monic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.coefficientMap_scaled_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.coefficientMap_scaled_normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.coefficientMap_scaled_raw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.curve_b_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.frobenius_invariant_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.koblitz_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.koblitz_raw_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.nonzero_coordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.normalization_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.normalized_descent_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.normalized_first_strict_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.normalized_ideal_proper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.normalized_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.presentations_same_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.raw_descent_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.raw_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.raw_s3_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFamily.target_on_curve": [
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFiber.coefficients_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFiber.quadratic_roots": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFiber.s3_fiber_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryFiber.s3_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.boolean_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.component_reconstruction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.conjugate_cycle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.conjugate_reconstruction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.conjugate_square_at_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.form_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.form_frobenius": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.inverse_conjugate_at_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.inverse_conjugate_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.mapped_component_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.prime_field_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.raw_inverse_at_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.raw_inverse_correction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.square_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.square_form_at_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryInverseCoordinates.target_zero_s3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.affine_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.affine_square_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.component_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.normalization_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.normalized_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.normalized_split_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.raw_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryS3Bounds.raw_split_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryTriple.exact_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryTriple.h_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryTriple.h_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryTriple.h_reduced": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryTriple.parity_mem_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryTriple.parity_not_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryTriple.upper_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BinaryWeight.carry_wt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanPair.closure_two_no_low": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanPair.exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanPair.first_strict_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanPair.proper_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanPair.raw_exact_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanPair.same_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.cubeProduct_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.exact_lfd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.field_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.h_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.h_degreeOf": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.h_reduced": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.proper_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.upper_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.variable_mem_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.BooleanSharp.variable_not_at_r": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryLower.chain_carry_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryLower.not_hasLFDBound_of_carry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainClosureBridge.chain_mem_closure_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainClosureBridge.mem_closure_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainClosureBridge.not_one_of_witness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainClosureBridge.one_mem_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainClosureBridge.prime_m2_lfd_gt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainClosureBridge.prime_m2_not_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainModelMap.encode_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainModelMap.modelMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainModelMap.n5_lfd_ge_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainModelMap.not_one_of_base": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainModelMap.prime_field_n5_lfd_ge_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.binary_sum_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.bitExp_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.bitExp_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.bitExp_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.chainInputs_two_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.chainPolynomial_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.chainPolynomial_totalDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.chain_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.expand_chainPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.expand_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.leading_chainPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.normalized_chain_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.prime_field_m2_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.prime_m2_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.reduced_chain_ideal_trivial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.reduced_inputs_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.reduced_totalDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.standard_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainQuotient.standard_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ChainTranslation.normalForm_X_mul_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CurveBounds.binary_descent_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CurveBounds.koblitz_descent_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CurveBounds.prime_chain_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CurveBounds.prime_m2_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CurveBounds.prime_reduced_inputs_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicCarryWindow.exists_bounded_carries": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicCarryWindow.odd_unique_of_modEq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicCarryWindow.rigidity_of_modEq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicInverseRewrite.adjacent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicInverseRewrite.carry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicInverseRewrite.multiply_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicNAF.carry_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicNAF.digit_rigidity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicNAF.odd_uniqueness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicNAF.zero_forward": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicProductBridge.conveyor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicProductBridge.endpoint_bridge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CyclicProductBridge.even_alternating_bridge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.lfd_eq_seven": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.lfd_eq_six": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.lfd_gt_six_of_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.lfd_gt_six_zmod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.not_one_five_of_ge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.not_one_six_of_ge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.one_of_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.one_six_of_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p163841_lfd_eq_six": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p163841_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p65537_lfd_eq_seven": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p65537_lfd_eq_six": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p65537_lfd_gt_six": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p65537_not_one_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p65537_not_one_six": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p65537_one_six": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthFourteen.p65537_summary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthReduction.W_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthReduction.pwt_step_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthReduction.single_zero_mem_W_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthReductionBridge.not_one_of_base": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestriction.lfd_bound_of_deeper_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestriction.not_one_deeper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestriction.one_of_deeper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestriction.restrict_chainPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestriction.restrict_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestrictionM2.lfd_gt_of_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestrictionM2.not_one_deeper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestrictionM2.not_one_of_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestrictionM2.one_of_deeper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestrictionM2.restrict_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.DepthRestrictionM2.restrict_normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6Deeper.lfd_ge_five_of_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6Deeper.not_one_in_closure_four_of_ge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6InstanceP1153.exact_lfd_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6InstanceP1153.not_one_in_closure_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6InstanceP1153.one_in_closure_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6KernelLowerP1153.valid": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6KernelUpperP1153.urows_all": [
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6Lower.not_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ExactK6Upper.derivation_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FilteredSpan.closure_le_rowSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FilteredSpan.coefficient_rowMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FilteredSpan.one_not_in_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FilteredSpan.one_not_mem_rowSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FilteredSpan.rowSpace_variable_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.closure_le_quotient_span": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.exists_reduced_remainder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.finite_quotient_lfd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.finite_quotient_lfd_of_reduced_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.low_quotient_span_mem_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.reduced_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.reduced_unique_of_reduced_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.remainder_degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.FiniteQuotient.totalDegree_mul_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticClassification.degree_three_syzygy_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticClassification.first_fall_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticClassification.first_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticClassification.linear_witness_not_koszul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticClassification.linear_witness_syzygy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticClassification.quadratic_witness_not_koszul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticClassification.quadratic_witness_syzygy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.coefficient_pivots": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.coefficient_unused": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.coefficient_uvw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.coefficient_uvz": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.coefficient_uwz": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.coefficient_vwz": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.homogeneous_q": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.homogeneous_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.other_in_squares": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.top_cross_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.top_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneralQuadraticTop.top_square_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryKoblitz.all_steps": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryKoblitz.exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryKoblitz.lower_checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryKoblitz.one_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryKoblitz.one_not_at_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryKoblitz.upper_checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryOrdinary.all_steps": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryOrdinary.exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryOrdinary.lower_checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryOrdinary.one_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryOrdinary.one_not_at_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedBinaryOrdinary.upper_checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.actual_curve_first_strict_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.affine_first_strict_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.basis_coefficient_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.checked_fall": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.checked_space": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.pivot_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.witness_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.witness_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeFirstFall.witness_not_at_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeLower.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeLower.excludes_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeUpper.all_steps": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeUpper.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeUpper.exact_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GeneratedPrimeUpper.one_at_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.boolean_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.gridInputs_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.gridPolynomial_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.grid_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.leading_gridPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.normalized_boolean_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.reduced_grid_ideal_trivial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.standard_coordinate_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GridQuotient.standard_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCircuitSpread.actual_spread_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCircuitSpread.fixed_E6_spread_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCircuitSpread.sum_twice_fin_eq_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCofactorCross.cofactor_cross_of_const_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCofactorCross.monomialProduct_replace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCofactorCross.other_monomials_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCofactorNonzero.polynomial_cofactor_ne_zero_of_linearIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCofactorNonzero.polynomial_cofactor_nonzero_and_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCofactorQuotient.cofactorValue_eq_map_det": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualCofactorQuotient.cofactor_ratio_of_independent_replacement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualMinorReplacement.cofactor_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualMinorReplacement.cofactor_replacement_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualMinorReplacement.derivativeMatrix_replace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualMinorReplacement.determinant_replace_of_const_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthActualReplacementSpread.replacement_l1_le_four_cofactor_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthBoundedDegreeLeastClosure.degreeWindow_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthBoundedDegreeLeastClosure.exists_least_bounded_degree_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthBoundedDegreeLeastClosure.exists_least_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthBoxSpread.circuit_sigma_lt_box": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthBoxSpread.fei_of_box_spread": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCharZeroSeparatedFamily.nonsingular_of_norm_gt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCharZeroSeparatedFamily.unit_complex_of_norm_gt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitErasedBasis.erase_reindex_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitErasedBasis.erase_reindex_contains": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitErasedBasis.erase_reindex_linearIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitFullSupport.exists_full_support_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitFullSupport.relation_coeff_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitFullSupport.relation_support_eq_circuit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitInterface.exponentPair_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitInterface.mono_xi_eq_monomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitPairBound.distinct_circuit_pair_le_four_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitReplacementFin.erase_sum_equivFin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitReplacementFin.exists_replacement_fin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCircuitReplacementSum.exists_replacement_coeff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexCofactorArithmetic.doubled_l1_le_circuit_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexCofactorArithmetic.doubled_l1_le_four_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexCofactorArithmetic.doubled_l1_le_required_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivativeDerivation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_algebraMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthComplexRatFuncDerivative.rationalDerivative_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureEquivalence.actual_le_of_step_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureEquivalence.actual_least_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureEquivalence.exists_finite_exact_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureEquivalence.mem_embedded_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStages.inClosure_iff_finite_stage": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStages.stages_exact_by_finrank": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStages.stages_increasing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStages.stages_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStep.exists_concrete_least_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStep.least_stable_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStep.step_actual": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthConcreteClosureStep.step_monotone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCounting.Lam_greatest": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCounting.card_le_of_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCounting.lambdaBound_Lam": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCounting.lambdaBound_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCounting.straddle_contra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCriterion.closed_iff_fei": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCriterion.closure_normalForm_mem_sharpSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCriterion.crit_of_fei": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCriterion.not_one_of_crit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExistence.fermat_factor_dvd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExistence.growth_instance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExistence.growth_instance_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExistence.unit_instance": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFermatDiagonalObstruction.e6_diagonal_grid_root": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat_factor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFermatDiagonalObstruction.exists_bad_admissible_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFieldCoefficientRetraction.coefficientProjection_mul_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFieldCoefficientRetraction.rationalRetraction_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFieldCoefficientRetraction.scalarRetraction_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorGap.exponent_pair_gap_l1_le_four_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorGap.mk_div_mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorGap.monomial_ratio_as_mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorGap.second_exponent_gap_abs_le_cofactor_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorGap.second_exponent_gap_eq_cofactor_root_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorMultiplicity.denominator_rootMultiplicity_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorMultiplicity.numerator_rootMultiplicity_one_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorMultiplicity.rootMultiplicity_gap_abs_le_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteCofactorMultiplicity.rootMultiplicity_one_le_natDegree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteStabilization.eventual_stabilization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFiniteStabilization.exists_stationary_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.exists_lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.exists_lfd_theta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.lfd_gt_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.model": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6IntegralBezout.exists_e6_unit_specialization_scalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6IntegralBezout.exists_integer_e6_bezout": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6IntegralInputs.map_chain_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6IntegralInputs.map_e6_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6IntegralInputs.map_normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6NativeUnit.exists_native_e6_unit_scalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6NativeUnit.map_chain_tail_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6NativeUnit.map_e6_inputs_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6NativeUnit.map_normalized_field": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthGeneralRationalWronskian.polynomial_wronskian_ne_zero_of_linearIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthGeneralRationalWronskian.rational_wronskian_ne_zero_of_linearIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthInfinityCofactorDegree.exponent_gap_abs_le_cofactor_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthInfinityCofactorDegree.exponent_gap_eq_cofactor_degree_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthIntegralBezoutTransfer.field_image_ideal_of_bezout": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthIntegralBezoutTransfer.unit_image_ideal_of_bezout": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.Lam_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.Lam_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.Lam_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.Lam_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.Lam_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_closure_vanishes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_lfd_gt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_lfd_gt_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_lfd_gt_zmod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_lfd_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_not_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_theorem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_theorem_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthMain.growth_theorem_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPoleArithmetic.spread_from_genus_one_height": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPoleArithmetic.spread_from_two_pole_orders": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialQuotientBridge.cleared_quotient_rule": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialQuotientBridge.concrete_cleared_log_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialQuotientBridge.mul_derivative_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianBasis.classicalWronskian_of_linearComb": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianBasis.polynomial_wronskian_ne_zero_of_basis": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianBasis.polynomial_wronskian_ne_zero_of_basis_char_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianDistinctDegree.polynomial_wronskian_ne_zero_of_degree_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianMonomials.derivativeMatrix_monomials_diag": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianMonomials.derivativeMatrix_monomials_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianMonomials.monomial_wronskian_det": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPolynomialWronskianMonomials.monomial_wronskian_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeAdmissible.exists_admissible_prime_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeBoundedRationalWronskian.polynomial_wronskian_ne_zero_of_independent_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeBoundedRationalWronskian.rational_wronskian_ne_zero_of_bounded_polynomial_representatives": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeBoxCircuitTransfer.fixed_e6_box_spread_of_circuit_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeBoxNonmembership.e6_not_one_of_bounded_circuit_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeBoxNonmembership.e6_not_one_of_box_spread": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxCircuitPair.e6_bounded_circuit_pair_le_four_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxClearing.boxDenominator_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxClearing.boxNumerator_linearIndependent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxClearing.boxNumerator_natDegree_lt_two_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxClearing.box_monomial_cleared": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxClearing.box_wronskian_ne_zero_of_box_char_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxClearing.box_wronskian_ne_zero_of_degree_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxCofactor.e6_cofactor_ne_zero_of_box": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxCofactor.e6_cofactor_nonzero_and_degree_of_box": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxCofactorRatio.e6_cofactor_ratio_of_box_replacement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6BoxReplacementGap.e6_box_replacement_l1_le_four_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6NativeBoxSpread.e6_native_box_spread": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_native_box_spread_large_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeIntegralUnit.eliminant_mod_two_eq_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeIntegralUnit.square_diff_char_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeNativeWindow.exists_lfd_theta_of_native_certificates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeNativeWindow.exists_lfd_window_of_native_certificates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_good_characteristic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_prime_theta_of_native_certificates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeRationalSeed.rational_e6_not_one_at_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeRationalSeed.rational_e6_not_one_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCofactorDegree.concrete_cofactor_natDegree_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCofactorDegree.denominator_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCofactorDegree.embedded_cofactor_ne_zero_of_wronskian_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCofactorDegree.polynomialMatrix_transpose_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCofactorDegree.rational_denominator_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCofactorReplacement.determinant_replaced_column_of_const_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCommonDenominator.commonDenominator_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCommonDenominator.denom_dvd_commonDenominator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCommonDenominator.exists_polynomial_numerators": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncCommonDenominator.exists_polynomial_wronskian_scale": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncDenominatorIndependence.exists_independent_polynomial_representatives": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncDenominatorIndependence.polynomial_linearIndependent_of_clear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncDerivativeRules.rationalDerivative_div": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncDerivativeRules.rationalDerivative_inv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncDerivativeRules.rationalDerivative_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncHigherLeibniz.iterDerivative_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncHigherLeibniz.rationalDerivative_nsmul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncHigherLeibniz.rationalDerivative_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncInfinityDegree.intDegree_inv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncInfinityDegree.intDegree_mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_intDegree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_polynomials_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_ratio_intDegree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_const_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_smul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncIteratedLinear.iterDerivative_zero_fun": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncIteratedLinear.relation_in_every_row": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncLogDerivative.concrete_rational_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncLogDerivative.derivative_mk_mul_of_cleared": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncModel.X_ne_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncModel.numerator_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncModel.ratFunc_algebraic_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncPolynomialRecurrence.concrete_higher_derivative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncPolynomialRecurrence.concrete_higher_derivative_numerator_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncPolynomialRecurrence.rationalNumeratorRec_algebraMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncPolynomialWronskianMap.derivativeMatrix_polynomialMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncPolynomialWronskianMap.determinant_polynomialMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncPolynomialWronskianMap.determinant_polynomialMap_ne_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncPolynomialWronskianMap.iterDerivative_algebraMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncRootMultiplicityCross.rootMultiplicity_balance_of_mk_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncRootMultiplicityCross.rootMultiplicity_gap_of_scaled_mk_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncScalarJetTriangular.scalarJet_blockTriangular": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncScalarJetTriangular.scalarJet_det": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncScalarJetTriangular.scalarJet_diag": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncScaledRecurrence.iterDerivative_scaled": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncScaledRecurrence.scaled_derivative_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianCommonScalar.derivativeMatrix_mul_scalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianCommonScalar.determinant_mul_scalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianCommonScalar.determinant_mul_scalar_ne_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianLinearChange.derivativeMatrix_linear_change": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianLinearChange.determinant_linear_change": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianLinearChange.determinant_linear_change_zero_of_singular": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianNormalization.concrete_determinant_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianNormalization.det_scaled": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianTwo.wronskianTwo_eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRatFuncWronskianTwo.wronskianTwo_ne_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalBezoutCertificate.integer_multiple_of_rational_bezout": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalBezoutIntegerLift.clear_denominators_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalBezoutIntegerLift.clear_denominators_on_finset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalChainUnit.eval_rawS3_rational": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalChainUnit.unit_of_primitiveRoot_frobenius": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalCoordinates.rationalZ_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalCoordinates.rational_algebraic_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalCoordinates.rational_s3_on_curve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalE6Unit.finite_span_explicit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalE6Unit.rational_e6_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalE6Unit.unit_descends_from_field_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalFrobenius.pow_fixed_of_root": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalFrobenius.q_frobenius_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalGridExclusion.s3_ne_zero_on_root_grid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalGridUnit.square_unit_of_grid_roots": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalLogNumerator.concrete_numeratorRec_natDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalLogNumerator.denominator_natDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalLogNumerator.logNumerator_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalLogNumerator.logNumerator_natDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalMobius.mul_rationalZ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalMobius.ratFunc_xi2_involutive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalMobius.rationalZ_involutive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalMobius.rationalZ_ne_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalMobius.rationalZ_sub_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPoleArithmetic.spread_from_simple_poles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPolynomialDenominators.clear_denominator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.discriminant_factor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.nonsingular_of_parameter_conditions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.parameter_of_s3_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.s3_ne_zero_of_parameter_not_in_subfield": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.s3_square_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.target_is_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalWronskianRec.numeratorRec_natDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalWronskianRec.numeratorRec_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalWronskianRec.numeratorRec_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthReduction.closure_normalForm_mem_idealSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthReduction.idealSpace_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthReduction.lfd_gt_of_fei": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthReduction.lift_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthReduction.not_one_of_fei": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSchema.growth_schema": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.companion_discriminant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.s3_eq_S3at": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.s3_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.secant_numerator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.secant_on_curve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.secant_s3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_perfect_square_of_target_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_square_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_square_of_target_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_zero_of_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.square_of_s3_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.two_torsion_derivative_ne_of_nonsingular": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSpread.circuit_sigma_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSpread.fei_of_spread": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSpread.split_of_no_crossing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.fixed_curve_nonsingular": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.fixed_curve_s3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.fixed_curve_target_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_involutive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_ne_target": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_on_S3at": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_on_s3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_target_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mul_mobius": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsionFamily.exists_lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsionFamily.lfd_gt_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsionFamily.lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsionFamily.model": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthUnitCertificate.power_difference_unit_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthUnitCertificate.square_power_difference_unit_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthUnitCertificate.square_unit_of_frobenius_mismatch": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthWronskianCofactor.cofactor_natDegree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthWronskianDegree.natDegree_prod_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthWronskianDegree.natDegree_sum_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthWronskianDeterminant.natDegree_det_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthWronskianTightDegree.cofactor_natDegree_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthWronskianTightDegree.numeratorRec_natDegree_le_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.HomogeneousFirstFall.koszulSpan_jet_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.HomogeneousFirstFall.koszulSpan_syzygy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.HomogeneousFirstFall.low_syzygy_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.HomogeneousFirstFall.no_low_fall": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.InClosure.degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.InClosure.mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.InClosure.sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.InClosure.transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LocalReductionBound.global_reduction_of_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LocalReductionBound.lfd_bound_of_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_mul_power_absent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_pair_absent_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_pair_absent_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_pair_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_square_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_square_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_triple_12": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_triple_13": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.coefficient_triple_23": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.degree_one_single": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.homogeneous_linear_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.pair_polynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.pair_squarefree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowDegreeCoefficients.triple_squarefree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowerCertificateSupport.checked_closure_containment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowerCertificateSupport.checked_rref": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowerCertificateSupport.rowSpace_coefficient_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.LowerCertificateSupport.rowSpace_no_low": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.M3CarryLower.S4_expand": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.M3CarryLower.carry_not_multiple": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.M3CarryLower.chainS4_normal_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.M3CarryLower.chainS4_totalDegree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.M3CarryLower.coeff_s4_333": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.M3CarryLower.m3_lfd_ge_seven": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.M3CarryLower.prime_field_m3_lfd_ge_seven": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.MooreMatrix.determinant_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.MooreMatrix.inverse_identities": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.MooreMatrix.isUnit_matrix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.MooreMatrix.rows_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertInstanceP11.lfd_ge_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertInstanceP11.not_one_in_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertInstanceP40961.lfd_ge_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertInstanceP40961.not_one_in_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertKernelP11.valid": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertKernelP40961.valid": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertSound.closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertSound.one_not_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertSound.toLo_mem_of_member": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertWitness.not_mem_of_outsideOK": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertWitnessInstanceP11.lfd_ge_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.N5CertWitnessInstanceP40961.lfd_ge_five": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PowerIdeals.coefficient_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PowerIdeals.degree_lt_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PowerIdeals.koszul_coordinate_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PowerIdeals.mem_powerIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PowerIdeals.powerIdeal_antitone": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PowerIdeals.squarefree_coefficient_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.affine_bound_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.affine_closure_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.affine_degree_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.affine_exact_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.affine_ideal_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.ideal_map_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.replace_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.replace_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.same_budget_bound_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.same_budget_closure_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PresentationTransport.same_budget_exact_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.affine_first_three_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.derivative_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.exact_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.g_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.homogeneous_ffd_three_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.homogeneous_first_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.indexed_inputs_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.input_list_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.input_set_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.nonsingular_discriminant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.one_not_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.parametric_input_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.raw_reduction_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.target_on_curve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.target_outside_coordinate_base": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.target_y_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.Prime257System.toExponent_exponent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeCounterexample.lfd_is_not_ideal_invariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeCounterexample.nonsingular_discriminant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeCounterexample.normalized_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeCounterexample.presentations_same_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeCounterexample.raw_is_curveS3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeCounterexample.raw_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeCounterexample.target_on_curve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.ordinary_ffd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.prime17_depth2_lfd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.prime17_depth3_lfd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.prime97_depth4_lfd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.sharp_curve_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.sharp_lfd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.truncated_ffd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeFieldConclusions.two_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2General.active_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2General.chain_tail_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2General.degree_and_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2General.exact_ordinary_ffd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2General.raw_normalization_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2General.tail_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Homogeneous.derivative_zero_family_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Homogeneous.derivative_zero_ffd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Homogeneous.raw_normalization_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Homogeneous.tail_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Lower.lfd_ge_four_of_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Lower.no_one_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Lower.nondegenerate_identity": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Lower.prime_field_lfd_ge_four_of_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.chain_at_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.chain_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.exact_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.initial_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.no_one_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.one_at_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.product_defect": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.product_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Sharp.value_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Truncated.exact_truncated_ffd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.PrimeM2Truncated.frobenius_rows_are_syzygies": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticFamily.exact_lfd_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticFamily.first_strict_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticFamily.raw_exact_lfd_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticFamily.same_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.coefficient_pivots": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.degree_and_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.exact_first_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.origin_derivatives": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.origin_values": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.q_homogeneous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.q_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.witness_homogeneous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticHomogeneousFamily.witness_not_koszul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticNoLow.no_low_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.QuadraticNoLow.no_one_at_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.bound_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.closure_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.component_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.component_mul_X": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.component_mul_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.component_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.exact_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.ideal_has_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.map_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.map_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.project_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.project_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ScalarExtensionTransport.reconstruct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorAssembly.lfd_bound_of_projector": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorBound.lfd_le_depth_add_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorBound.prime_field_lfd_le_depth_add_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorExtension.exact_lfd_four_at_depth_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorExtension.lfd_le_depth_add_two_of_two_ne": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorExtension.lfd_le_of_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorExtension.prime_field_lfd_le_depth_add_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorFibre.fibre": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorFibre.fibre_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorGrid.grid_mem_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SelectorUnivariate.fibre_rows": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ShiftWitness.lfd_gt_of_lowIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.ShiftWitness.lfd_gt_of_witness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseCertificate.check_ideal_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseCertificate.check_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseCertificate.checked_one_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseCertificate.meaning_oneData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.checkClaimedUnit_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.checkEntriesFrom_of_each": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.checkEntriesFrom_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.checkEntry_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.checkUnit_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.evalLinear_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.evalStep_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.meaning_eq_of_empty_sub": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseDAG.runFrom_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseLowerCertificate.check_excludes_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseLowerCertificate.contains_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseLowerCertificate.meaning_project": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseLowerCertificate.rowCheck_spec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseLowerCertificate.weight_toExponent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_append": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_degree_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_insert": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_normalize": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_scale": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_term_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.meaning_variable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.sameExponent_eq_true": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.toExponent_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePolynomial.toExponent_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.cancellation_lowers_computed_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.invalid_input_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.meaning_cx": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.meaning_cy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.meaning_h": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.meaning_raw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.meaning_raw_is_curveS3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.normalized_accepted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.normalized_exact_lfd_from_checker": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.normalized_input_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.normalized_lower_budget_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.normalized_one_from_checker": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.raw_accepted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.raw_degree_is_charged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.raw_exact_lfd_from_checker": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.raw_input_semantics": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.raw_lower_budget_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.raw_one_from_checker": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparsePrimeCertificate.toExponent_exponent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.dag_accepted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.excessive_budget_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.forward_reference_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.lower_accepted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.missing_input_span_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.tampered_row_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.wrong_coefficient_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SparseTrustChecks.zero_pivot_rejected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SplitChainLower.all_lengths_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SplitChainLower.all_lengths_no_small_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SplitChainLower.normalized_s3_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SplitChainLower.target_one_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SplitChainLower.target_zero_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SquareChainRefutation.multiplier_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SquareChainRefutation.one_at_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SquareChainRefutation.propagation_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.SquareChainRefutation.row_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.first_fall_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.first_fall_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.frobenius_row_syzygy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.image_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.last_of_trivial_in_squares": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.lift_syzygy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.linear_nontrivial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.ordinary_to_quotient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.quadratic_nontrivial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.quotient_charP": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.top_cube_mem_squares": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.top_power_mem_squares": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.TruncatedFirstFall.trivial_coordinate_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.UnitInstance.S3_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.UnitInstance.one_mem_of_no_grid_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.UnitInstance.unit_of_primitiveRoot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.UnitInstance.unit_p163841": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.UnitInstance.unit_p65537": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.UnitInstance.unit_zmod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.bounded_normal_form_lfd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.checkCertificate_ideal_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.checkCertificate_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.closure_le_top_span": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.closure_minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.closure_minimal_by_variables": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.eval_zero_of_closure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.exactLFD_of_first_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.point_ideal_eq_ker": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.point_ideal_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.point_reduction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.strictFall_le_lfd_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.variable_closed_mul_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_sha256": {
+    "formal/ICFallDegrees/AffineTransport.lean": "1c0ab711a9c71e406278fcdd178c18b5f6674e22f57ddd1c3d7e4fc4c2b42698",
+    "formal/ICFallDegrees/Audit.lean": "2ddd95c29cf1bb0943c08c2849bb23990a1b88aa9fea00200396b63439dc32af",
+    "formal/ICFallDegrees/BinaryDescent.lean": "c7314353211179ca0b8c26c38232eca258be0bef99794c36a60f05b02f0e4aeb",
+    "formal/ICFallDegrees/BinaryDimensionTwoBases.lean": "9e634c9166e5cdbe37da6af2771964f4bd406495a0e36053df5ebe5c98c76212",
+    "formal/ICFallDegrees/BinaryDimensionTwoCurves.lean": "1f1470946768011ab5537f5587da16b2b7f7b59fa701dba7f6415c214b670ff0",
+    "formal/ICFallDegrees/BinaryDimensionTwoSystems.lean": "c74f33f9f288040aaca40df7598f577a26ef4be041cadde9f81c826f66d0b37d",
+    "formal/ICFallDegrees/BinaryExtensionFields.lean": "42bd88f7cc86eacb5ea1c88b24905e5e39cefb9dcfb0fbd52cf6d549f2f83abb",
+    "formal/ICFallDegrees/BinaryFamily.lean": "03baaf3da2fa7b04ea8bd9838add304577c355d99342ff161c7c41f02b7507fe",
+    "formal/ICFallDegrees/BinaryFiber.lean": "b467a91a9e3c53c75cb1275bf9d49742d63b24c6e96137681561ad6222132e2b",
+    "formal/ICFallDegrees/BinaryInverseCoordinates.lean": "af36299211df646b5f5d60eaf8171c6a04a2e5cb75020796a5d74f2d3e42f3e9",
+    "formal/ICFallDegrees/BinaryS3Bounds.lean": "bc9af60341839cf4786c28097a27c0d82c826cbec90ed9dcedcee1fe8e2692fc",
+    "formal/ICFallDegrees/BinaryTriple.lean": "559b4bfe1cc71302688285ec405bb3cbc3badabd57703a7a3e0f63f21567cd36",
+    "formal/ICFallDegrees/BinaryWeight.lean": "7bd59a41a8c147e8f0182a45290381754187d86e5337ff436bfed67b15bf5eea",
+    "formal/ICFallDegrees/BooleanPair.lean": "1b43cc894be78a1d7944096257868dc2392fc63f25c9bfb8cca6a03f9fb1ab03",
+    "formal/ICFallDegrees/BooleanRaw.lean": "83c99d55ba5d58aad2759854da8d839d075806ab7996a9697c5e213f6270a5f8",
+    "formal/ICFallDegrees/BooleanSharp.lean": "eb079c0aff2e19495aa885277c499d699c8e5647523d7591a07c411fe72e4b90",
+    "formal/ICFallDegrees/CarryLower.lean": "5d8cac6e51c0d9aa02b488f79b55b05493a777ebf1bf863d78913666dd5bc08c",
+    "formal/ICFallDegrees/Certificate.lean": "b4ce9b32c96bd023feb413c281ecf71532a9b3fd823c01edcbaca74d653eaac5",
+    "formal/ICFallDegrees/ChainClosureBridge.lean": "691f5c51695e43132722a05c03d2730e5dd14e4edd39a8ed59b8a9f5a4577a74",
+    "formal/ICFallDegrees/ChainModelMap.lean": "7559cbe54d697299a44f0834385ca5291e95cafb5083e3bf3a4d3893481c0b1b",
+    "formal/ICFallDegrees/ChainQuotient.lean": "846e01c4829278804bc14b07b92b2d5d5edd3af5f20554ade89b90ce4bf03a20",
+    "formal/ICFallDegrees/ChainTranslation.lean": "5421df69deaba806effe51ee0f38aceaf990b485f097afb121c86621b0faf63d",
+    "formal/ICFallDegrees/Closure.lean": "f43ef3c085a363f292ce6802d7e24e48fa5c634e0b403ff5b12488257f057614",
+    "formal/ICFallDegrees/CurveBounds.lean": "73359b7ed804555870986b96efc4494f7ffa8d197e157e0429b73c6cd1cce6dc",
+    "formal/ICFallDegrees/CyclicCarryWindow.lean": "ec7904bfefea5ae0c02118431e8d156b26b07e5a10db2294dcc150d49252e0b7",
+    "formal/ICFallDegrees/CyclicInverseRewrite.lean": "6abdd7bf794c99681041d10abe46f36f3c5d6d3aadb91bbd4e7b514ea207390e",
+    "formal/ICFallDegrees/CyclicNAF.lean": "30b2d7a4e1bd815a7b2c92fdce3f5b53168ccf7c8ebd178d39e565d536fe6174",
+    "formal/ICFallDegrees/CyclicProductBridge.lean": "fe2c163d4d308cea52536156c201dd39511098388375a29cb6db357d2b478876",
+    "formal/ICFallDegrees/DepthFourteen.lean": "e5b18ede25e24779df3974c91a9faefcffd779a0f319cb8322f6564d482d882a",
+    "formal/ICFallDegrees/DepthReduction.lean": "1bd915888e37d8ce8cbc28a05848c2028539f835ad95cfd14de33563ca592e22",
+    "formal/ICFallDegrees/DepthReductionBridge.lean": "bdb7ee7b1a3a5d3432542785dd01563e1bc39f606ebd28e850d1ea264d78fb88",
+    "formal/ICFallDegrees/DepthRestriction.lean": "24512a550db22ab40bbc731e48d41826f4dc629d871201959f5b148ef2900a22",
+    "formal/ICFallDegrees/DepthRestrictionM2.lean": "42586e3cc05ee7b573def6b19f23924d3b8b2d51c2cf7b5ce83208414733f5ef",
+    "formal/ICFallDegrees/ExactK6Cert.lean": "63a05ae91ed1de339dedc3b0afec6f41a82f1547bbfc0dea3c52bbb5ab0e6104",
+    "formal/ICFallDegrees/ExactK6DataP1153.lean": "5508fd6c5e407f106cdc364ad207682aa2722e75f3d16b09b2544d8dffe9089d",
+    "formal/ICFallDegrees/ExactK6Deeper.lean": "4d7c588f52820a0b47d4cd72a7871b60c230d3d73859b90162604c243f57ccbb",
+    "formal/ICFallDegrees/ExactK6InstanceP1153.lean": "3102ee5ce30d9dda652084f76132bf39ec931453fe66c9b5c2ce1f2e0bebcb70",
+    "formal/ICFallDegrees/ExactK6KernelLowerP1153.lean": "7187e33bec0407175874962e2a7b990838ee43596b5754ca6199d4d66fb0b6d3",
+    "formal/ICFallDegrees/ExactK6KernelUpperP1153.lean": "fda50a36d859b8ba3e1c4f740e01537e074323d9d8ad60f954e48015ba359a86",
+    "formal/ICFallDegrees/ExactK6LowerSound.lean": "77ac4aad4175db2cf4e1cfb8e7794c5b15fe7c8e8bcc38f9173be3480989ee8a",
+    "formal/ICFallDegrees/ExactK6UpperSound.lean": "24f55a10973c0e16192d48e4a3d518bc24c6edafbd9c9d1c873b8953a8a7d2aa",
+    "formal/ICFallDegrees/FilteredSpan.lean": "36f601a9562642ae812bfaea6954d2b18978452c1de4faf731337020c599f570",
+    "formal/ICFallDegrees/FiniteQuotient.lean": "64cd12dedad27c12589bb16c3ed40b44225412926b0e17e149b92c5d59aa1c3d",
+    "formal/ICFallDegrees/FirstFall.lean": "08316e11f33443b1f04db9c2cbcb69e82713c4b95f70b868e9f38d4d6aa90176",
+    "formal/ICFallDegrees/GeneralQuadraticClassification.lean": "2694ecda2209e35625adf4c47b828e9beb4dda8cf91cf6fcf112fe5eff9aae68",
+    "formal/ICFallDegrees/GeneralQuadraticTop.lean": "7e0e7c44e77322722d4af26934b6a9485f6b0a01766d4c7bd9fe0f2bec398435",
+    "formal/ICFallDegrees/GeneratedBinaryKoblitz.lean": "8bebc4d21724b8e7e11d197bc121aa1f9c8addaff5d918ae0c908c55e58ceda8",
+    "formal/ICFallDegrees/GeneratedBinaryOrdinary.lean": "521ee60a011468703e6e5bd18b6320fb46bb4d3510e096e4042466b14f6dcc9e",
+    "formal/ICFallDegrees/GeneratedPrimeFirstFall.lean": "930fbdf520b683cc5a7b37d55f5027f3d8562a5d50d34713c7e40e81d1a43c94",
+    "formal/ICFallDegrees/GeneratedPrimeLower.lean": "9cf12ed71814f0ab4c35c5fb1385933b95a80aac40bf0df05aa04dc49610be71",
+    "formal/ICFallDegrees/GeneratedPrimeUpper.lean": "b9c8a618586450e3b66d51bc50b40a2ed9c5389f26a710d4f6d3330602a3db6d",
+    "formal/ICFallDegrees/GridQuotient.lean": "175589aab8aa131159dc93607097c2c0ff9c42445cc2cb358e0c4ec0646ca829",
+    "formal/ICFallDegrees/GrowthActualCircuitSpread.lean": "4a2644cd926d8a7a3052469cef13658d6000a4995282746fa6887263bfae7244",
+    "formal/ICFallDegrees/GrowthActualCofactorCross.lean": "bb96d7b7b0e7ae7bc112796a940a756e33058b9e659104c516afc6ed99385699",
+    "formal/ICFallDegrees/GrowthActualCofactorNonzero.lean": "710611084fb5a1d98ecfce77f0eee912db488d4628578f847efd27570d2fdf03",
+    "formal/ICFallDegrees/GrowthActualCofactorQuotient.lean": "6ed6e7adab84cd6c8939dd57335951285768034a0ed8356601c9257cc3c17b97",
+    "formal/ICFallDegrees/GrowthActualMinorReplacement.lean": "32816ad9020fd955fd172af0fab322a29be0294f0bb0ff1a20cdc35e008c1738",
+    "formal/ICFallDegrees/GrowthActualReplacementSpread.lean": "85848263e74e7421d43f8aa0c04c80edf18573b25f28c0b90a352af2ca2eeaea",
+    "formal/ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean": "ae6522dd4002e822e347fb5308c0a03c9e72c593230a95f3b3ab780a202ed3f0",
+    "formal/ICFallDegrees/GrowthBoxSpread.lean": "2231bb01c5e34aaa523bf6d76fb7b8119bd4358c59b0b275f4eb91c16342dd35",
+    "formal/ICFallDegrees/GrowthCharZeroComplexUnit.lean": "25d076df8c8dd2b252bb1bfffb6e40b33b7a9b599b37eaddd4094789ee4b6d8e",
+    "formal/ICFallDegrees/GrowthCharZeroDeterminant.lean": "efc6f27aa846fa03b1d6515ce03ab878594e6e63a3b16af44f6b1c528857efbf",
+    "formal/ICFallDegrees/GrowthCharZeroSeparatedFamily.lean": "ec512efb528ce0fcaaf0a58cf7dd8de57f7cb0e4dc1774a01e121524ec8032f2",
+    "formal/ICFallDegrees/GrowthCircuitErasedBasis.lean": "4caf84d5c6a6352613bfa73eeccb6e9f050e3d11fa394bdd57de3619e540d6d6",
+    "formal/ICFallDegrees/GrowthCircuitFullSupport.lean": "f5e1fe3adc44cdaaace8018678b54651c9d34ac96accc7d7088970cfa14e74dc",
+    "formal/ICFallDegrees/GrowthCircuitInterface.lean": "f49f7b1145ba08e29241725d2ad004ab9d20419264bfccfed6952b625b64aba1",
+    "formal/ICFallDegrees/GrowthCircuitPairBound.lean": "2932b19292693688ca55cb8e337a83afd6faab18235568ff10efe1bd8b674e13",
+    "formal/ICFallDegrees/GrowthCircuitReplacementFin.lean": "fdc3cc92db783b5aa44ed09dabd5fb37f6da87d320787e80fb8feb48dad81c48",
+    "formal/ICFallDegrees/GrowthCircuitReplacementSum.lean": "91fa01d1c9dbcabdc3710a6cd27432ca8629b3a594813e040c4669e5afdd05f1",
+    "formal/ICFallDegrees/GrowthComplexCofactorArithmetic.lean": "f5be3bf52dc2df1702991a5154b0e6abb6f0ea154acbf700d5fd64f7797ff8c0",
+    "formal/ICFallDegrees/GrowthComplexRatFuncDerivative.lean": "312d49db938bc161faf081386fa14ada93ffdbb2bccbff6114475ad0c33058ef",
+    "formal/ICFallDegrees/GrowthConcreteClosureEquivalence.lean": "0e2b39b298bdcaa4938c47637c98c1d5a0a271990d87cc163eb7d9d2b8f3ce46",
+    "formal/ICFallDegrees/GrowthConcreteClosureStages.lean": "a381fed0d7eefbf355b773d87f65f800f4cfdb92cb8cded20730e902e1c701e0",
+    "formal/ICFallDegrees/GrowthConcreteClosureStep.lean": "b9f58851b8aca2595ec6ed1ac54f1671dd6aeffe687028d73f89122b6366561a",
+    "formal/ICFallDegrees/GrowthCounting.lean": "84dab8039d5377a5cc5ff54f88430945e44733fecc6dd047c4a40861ff1ab7cc",
+    "formal/ICFallDegrees/GrowthCriterion.lean": "0e19bb24709fa825d1b663e728cbb124563d6f1a2a1c197d7b641836acfdc5bd",
+    "formal/ICFallDegrees/GrowthExistence.lean": "c9ac869f0a19e63d0d874cd0821951002abf17503dd37430e0143a867ea9b6dc",
+    "formal/ICFallDegrees/GrowthFermatDiagonalObstruction.lean": "9808bd231fca5944de5c98ab4eb85c0d30ba0e4e67de508ef685c23873c55c09",
+    "formal/ICFallDegrees/GrowthFieldCoefficientRetraction.lean": "5191ea17545e2dd5d82adf84e72f3503034f05a5210af458dc1ef931e196b5be",
+    "formal/ICFallDegrees/GrowthFiniteCofactorGap.lean": "4929f9e5927d8a07f7f69590e8712507b98cbae0c1bfd2dcfa08b773504c1ed8",
+    "formal/ICFallDegrees/GrowthFiniteCofactorMultiplicity.lean": "8dba6b320c0f308fadab5c08c46e85cf44423236a322284dc720585e7ea415ad",
+    "formal/ICFallDegrees/GrowthFiniteStabilization.lean": "d8fcedb264d1e2260d8caaba02914bd4a9f6de41c18e126ba66630aacf3b9314",
+    "formal/ICFallDegrees/GrowthFixedE6.lean": "27191ca1676341467f6f8ebd1da91cf81de0270317729cd965556813324e452b",
+    "formal/ICFallDegrees/GrowthFixedE6Existence.lean": "02ba4eb01a2fb3218ec4befd3ad5202f3f6914d320c6ce7cec39bf6691b88c42",
+    "formal/ICFallDegrees/GrowthFixedE6IntegralBezout.lean": "20d2aa5f56e5ae335ca7fc67903b5d536ffe33617c344f6aa988c82a1e590c4f",
+    "formal/ICFallDegrees/GrowthFixedE6IntegralInputs.lean": "1e1e06b7365ba35a007e5720b399b7c52927470621df144fac4b61cd43051cf7",
+    "formal/ICFallDegrees/GrowthFixedE6NativeUnit.lean": "3b38141b1ff45fe8ee8bb30db5baa231cec7a5108839cc7c1e5d2c7720d50c5c",
+    "formal/ICFallDegrees/GrowthFixedE6PrimeSequence.lean": "b537e7719c82df3030402b12e44e488ee7c121f3936322a113e32c5f8a30957e",
+    "formal/ICFallDegrees/GrowthFixedE6PrimeTheta.lean": "260e80db2cd19b0ecfcb97b39b74b019a0d915b8bf64afe9137e9c656384e7aa",
+    "formal/ICFallDegrees/GrowthGeneralRationalWronskian.lean": "9e50f5c751e33e136991ab4914dbbfc8a82f9d9c4bbf92007558341c68fbe204",
+    "formal/ICFallDegrees/GrowthInfinityCofactorDegree.lean": "bd1c34187117f526b83faa7414e00e09b820ccd544589a9eb1ae00ea70a86b75",
+    "formal/ICFallDegrees/GrowthIntegralBezoutSpecialization.lean": "debdf741edb98f4eca7157b7730c89ada7aa35c26f4d14fa286ef2a4123195f2",
+    "formal/ICFallDegrees/GrowthIntegralBezoutTransfer.lean": "115056b4e73f87206f5ac087badf180041b63edce041817d4c3189ec2adf840b",
+    "formal/ICFallDegrees/GrowthMain.lean": "60f076a7c00b8d1424a8293d3893aa8cdd393984181a6f50b16959ed4241f46f",
+    "formal/ICFallDegrees/GrowthPoleArithmetic.lean": "2e266bcc965ab1a76dfd83ba75ea61f4bab2e412991e314de0d5c2196f3835b7",
+    "formal/ICFallDegrees/GrowthPolynomialQuotientBridge.lean": "4780355481ddf594aee24cf4d83ec866e10415251352fe0d9f9509c87157d8ad",
+    "formal/ICFallDegrees/GrowthPolynomialWronskianBasis.lean": "2702600607364232c162fe50868dd1c9b6215d0f3d42f3fabd2cd3e46967c08e",
+    "formal/ICFallDegrees/GrowthPolynomialWronskianDistinctDegree.lean": "84bff2263c89e6236508fc8a2a848a4811ce18216f168a6acc947399a27cb40a",
+    "formal/ICFallDegrees/GrowthPolynomialWronskianMonomials.lean": "6f63c8ee4e150749518b2505ba79a44c01a6903e8cb427d78d7c7cfad3c6d31a",
+    "formal/ICFallDegrees/GrowthPrimeAdmissible.lean": "09d89586cd5ad5d1ac10fcaa07d01d901959c6fcbb1267cc0659197406d23173",
+    "formal/ICFallDegrees/GrowthPrimeBoundedRationalWronskian.lean": "5078de954e1b2d857df9105213e78d46d0b5ce5e2f1850ae57fc00a83d93e613",
+    "formal/ICFallDegrees/GrowthPrimeBoxCircuitTransfer.lean": "f7efee7b61322e5ff2233cf4e3e214a974436d7dfd0f98859252ec1484fcc021",
+    "formal/ICFallDegrees/GrowthPrimeBoxNonmembership.lean": "2a05da75bcaf8a8063c9f52b221acf3a88026b5e5bc24c9094926fd917b4c333",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCircuitPair.lean": "edd265b86e7f065a5734fdd115d4a7206018f1e258c71fae7f86c8f600f818c2",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxClearing.lean": "a7ea2901d1a6be5016a2aecc5305f1164716de2539ea0179471c4a2d0b8918a0",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCofactor.lean": "d8ba14f854e490cbe6d341e05fe2783565998db4d4f3243c12ab00c91eb2745b",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCofactorRatio.lean": "6ede83d668770485b77bb9f85d9a5d5d6d9607dc62ae1a4d299d82fd0ae14541",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxReplacementGap.lean": "31e783d3f864a880672617bea069ac23d0936120071d4bb5d27cadd110551453",
+    "formal/ICFallDegrees/GrowthPrimeE6NativeBoxSpread.lean": "c1844164427f1abefe296cad18dac58f6f52c2d0d512af160463cd8e136a8e5b",
+    "formal/ICFallDegrees/GrowthPrimeE6NativeNonmembership.lean": "08f6f9e68e82a42a08ffd891cbee82796d233ce0b4ff00a005a22753fc1e50ab",
+    "formal/ICFallDegrees/GrowthPrimeIntegralUnit.lean": "5fc5c64d29840a263d6c94c0ecba7d0b423264adf680674b40e476313d301328",
+    "formal/ICFallDegrees/GrowthPrimeNativeWindow.lean": "afd37d3dde4265a9f3d33be00f40f54239ac1a9820a07989ed3d67e4d54e5e35",
+    "formal/ICFallDegrees/GrowthPrimeRationalSeed.lean": "170a76a28c42fb7658473614d7f2721114598ac858678326f96570bed2db2a67",
+    "formal/ICFallDegrees/GrowthRatFuncCofactorDegree.lean": "8d9834abf0099ff02cb8adc8fa57fbe0689a382e873e7217bdbab83ad599c39c",
+    "formal/ICFallDegrees/GrowthRatFuncCofactorReplacement.lean": "38948bab2dff5ebfb3027e7d0770ce0e2aef2d3636058b6691846d26be64447c",
+    "formal/ICFallDegrees/GrowthRatFuncCommonDenominator.lean": "5b8a49f7c815d7fa6094ba64648b429f90687ab9a5eb2ff3ee3327b2b9c70bf7",
+    "formal/ICFallDegrees/GrowthRatFuncDenominatorIndependence.lean": "5de156b329ee58cb9874cb577ee13843a66d5afbc3a4912248f2843965e92d6b",
+    "formal/ICFallDegrees/GrowthRatFuncDerivativeRules.lean": "5eb0303da89274309d56643f28a812f1ff01a30d1c601d12f1d3f4f1f59cf73b",
+    "formal/ICFallDegrees/GrowthRatFuncHigherLeibniz.lean": "c358d78e550b44f0ce6d8b8be745fa7de5e207bf97e1434c2a8115df8b7085f9",
+    "formal/ICFallDegrees/GrowthRatFuncInfinityDegree.lean": "6680aeb78bd629ded40191e65ac4a3a034e7c2713be955695a40f7de884e47a7",
+    "formal/ICFallDegrees/GrowthRatFuncIteratedLinear.lean": "9d91d4178efa0ab1bb36d7dbd40db3516b36726951400adbe49b0ba2660bac60",
+    "formal/ICFallDegrees/GrowthRatFuncLogDerivative.lean": "c9979b2a3e94dadac653a8a4c1f0a990a551ca2c90f81da786e91a6bc84ceaab",
+    "formal/ICFallDegrees/GrowthRatFuncModel.lean": "ae54fba13e3a66e59511fa6b8e9e37d29ebb4e417a8625441ce957bf2543b70e",
+    "formal/ICFallDegrees/GrowthRatFuncPolynomialRecurrence.lean": "0f13e268b9faaa809beff2c393a9047822c43dad06f7849219fc9ee070ff62f3",
+    "formal/ICFallDegrees/GrowthRatFuncPolynomialWronskianMap.lean": "c9277d535e547c5c85d737e437d6c9c85d958f15b303f73c84abb405b9d0d53c",
+    "formal/ICFallDegrees/GrowthRatFuncRootMultiplicityCross.lean": "368aba3ceb9afc10f52436df0e812229f30ad61043c658dc5950383dafafd0e8",
+    "formal/ICFallDegrees/GrowthRatFuncScalarJetTriangular.lean": "6069b191d54ee7294c26d12905b3fa635ccfdd512debdfdef2ceb68bb244b862",
+    "formal/ICFallDegrees/GrowthRatFuncScaledRecurrence.lean": "b810f857df9f7e75b58d79bbee030fd0c1cfedd20b745ee493f4cbc2e0d7a9c8",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianCommonScalar.lean": "d56b36c682c74d80b4e120ccc22b78d9641b2108ad00888631ba6cc7e3950694",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianLinearChange.lean": "d1781867ad337c0001c3678a36e76a81e69f744495ba83bea160d8ee957f470f",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianNormalization.lean": "3359075cf1e8defaaa6a706665a0d046209031877dab27d8ac60de5e10435a6d",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianTwo.lean": "9c1d64d06bca4973e50aad0a65d21caacdc51300e29cc6913a13a98ec7004f1e",
+    "formal/ICFallDegrees/GrowthRationalBezoutCertificate.lean": "e529a3252e59d70c1b3e5acd49179287ec7b2e93c4e9af7bdb4812d225ea5fbd",
+    "formal/ICFallDegrees/GrowthRationalBezoutIntegerLift.lean": "42f5661d020df381fe277c00fd4f7b687c8ae1a949e51b7ebf531b94b81e923b",
+    "formal/ICFallDegrees/GrowthRationalBoundary.lean": "d46ef0e61e7ea78c82177c0842aadaee4859c259f47e78ca413d2c29b216fa0e",
+    "formal/ICFallDegrees/GrowthRationalChainUnit.lean": "f4d055f3e7723abb210e734e8254db3ab88d2a36f3ba5c6d1bb65349fdb27649",
+    "formal/ICFallDegrees/GrowthRationalCoordinates.lean": "6baa9427f5f2bfeda51a5a49e386f87ab5d217eefa680d31a65b328058dc7be4",
+    "formal/ICFallDegrees/GrowthRationalE6Unit.lean": "4bd363a74e018e3eab6156c4dac3a5d371d4be439b792a1052b9a84f62406a9d",
+    "formal/ICFallDegrees/GrowthRationalFrobenius.lean": "2d4d89b00d682edf81757d2032d9c2d852059bf65ba2f042437d9cbf824a6169",
+    "formal/ICFallDegrees/GrowthRationalGridExclusion.lean": "56aa92323a452d755165694fe13b8293c01895409274e8d52b94062b4b6a9256",
+    "formal/ICFallDegrees/GrowthRationalGridUnit.lean": "61b5dba7548e71bec831c0f9f2680d5616bbcdd31babcc8471a6ba40598b9c08",
+    "formal/ICFallDegrees/GrowthRationalLogNumerator.lean": "73d786072c39bd6e01d5d41132ec74a16fa0d0c7e096a4a2ed6f83d404a702cf",
+    "formal/ICFallDegrees/GrowthRationalMobius.lean": "7964828b8c680a9ed570bdb1b19bdbd73316291d35f149c038f15a2ae15bcc47",
+    "formal/ICFallDegrees/GrowthRationalPoleArithmetic.lean": "6a4f3a6f11cf642a8ce90ab4b347a260ef4de748f5bbdec1b17ede07225a5d0a",
+    "formal/ICFallDegrees/GrowthRationalPolynomialDenominators.lean": "74c938d4eabea4fbddbcba6895826a119785efa41909630dcab3ed541162f14a",
+    "formal/ICFallDegrees/GrowthRationalUnit.lean": "abcaff3b4c20877decf5f426fdb13975e2f06fe2ceff2596e04d3883fad5ed7a",
+    "formal/ICFallDegrees/GrowthRationalWronskianRec.lean": "5938a2fac969eff13ef91adbd0b90a2f66165aca46d67d93673c9c4a4a5132fe",
+    "formal/ICFallDegrees/GrowthReduction.lean": "a93ccd9768f134337bb2ce6ed43e08c618e96d9d2de3e504b04f6f0301ed498e",
+    "formal/ICFallDegrees/GrowthSchema.lean": "052b5f6956aad3adf6d686e809553d8660ba29a400c3e91b86790c0177c301bf",
+    "formal/ICFallDegrees/GrowthSecant.lean": "a0dfc8454179798d3bbd6033ec152bf87c1d1f5a8a5ed4b1a8d90da8b03eec00",
+    "formal/ICFallDegrees/GrowthSecantFactorization.lean": "046b6b94f175cd2ff5aa1921f2b94d25a4054417cff3609cde4e7922dda2ebe1",
+    "formal/ICFallDegrees/GrowthSpread.lean": "33a35cd316f8f202b51c6775deb3ea2ea97ad47fbf0dbdc99c3d448471e93725",
+    "formal/ICFallDegrees/GrowthTwoTorsion.lean": "ce799ecc2e7b8bff8e506669b4201a4b85c99a57d80fce5c56ef11972d2ed36b",
+    "formal/ICFallDegrees/GrowthTwoTorsionFamily.lean": "b10c4a1bca9877537685ab7ed4bf641bcf10711a483bf8fbe268b7d6035d2ba3",
+    "formal/ICFallDegrees/GrowthUnitCertificate.lean": "850a2870d7a98a34a720bad1edf075b1bf39c59278445f853a545e6c9e6a5d07",
+    "formal/ICFallDegrees/GrowthWronskianCofactor.lean": "334267292e99557e413ed350333ed28d2003d1c6248d6a42f8a42edea21e06cd",
+    "formal/ICFallDegrees/GrowthWronskianDegree.lean": "31ef297d3cab593d785c2e85e0c2105b5074a406da2c6a266cdd7e5509cf068f",
+    "formal/ICFallDegrees/GrowthWronskianDeterminant.lean": "8923d6050b41017d142a042a90cce7f1db1aef7a312820e71c57cdd78767f005",
+    "formal/ICFallDegrees/GrowthWronskianTightDegree.lean": "da487de2acfc8c30ab9ef8d06e53c1a7e0a76fd607ff0684de1e036de1125a53",
+    "formal/ICFallDegrees/HomogeneousFirstFall.lean": "f45d13d993547d2b67f290b993e38e6c114a757be32c45985c155efd0d9a9718",
+    "formal/ICFallDegrees/LocalReductionBound.lean": "fd4ce056280a247cd8003323ee3c5600c72cd8d1324045d9ee688de94b56bb7e",
+    "formal/ICFallDegrees/LowDegreeCoefficients.lean": "8cd19097006bb0211b73ade48c8382aaa9cad5510fad8bbd83ab25e59d91dc30",
+    "formal/ICFallDegrees/LowerBounds.lean": "e4c6d180eb1e0d63190542c2b86626477888388b5b63956d52dd6abe353871d3",
+    "formal/ICFallDegrees/LowerCertificateSupport.lean": "ecefe8d484e700752b9a85c3c4af5346363120bfeaffe301322a63d60cbe550f",
+    "formal/ICFallDegrees/M3CarryLower.lean": "763fca15bbbdbf8a1fb00857f0e42c4078956c768790d5b4f9ca0a1362a0cdd0",
+    "formal/ICFallDegrees/MooreMatrix.lean": "b672934dcf95bb0330a4455f7701427a82a8880c5c5a0ef1ba297843e6d024d5",
+    "formal/ICFallDegrees/N5Cert.lean": "b2628ae0d390f5ca80e4675bd74a8fba714164c0119f4b1837bd259e02a4aabd",
+    "formal/ICFallDegrees/N5CertDataP11.lean": "bac3a780ca1364f4bcf7936141d188b5be715200760c8f2880cc9198767a5584",
+    "formal/ICFallDegrees/N5CertDataP40961.lean": "dd27c51e520d958ad2758a6060a069a69b964a5ed101177cc6e2e3e6410a4e76",
+    "formal/ICFallDegrees/N5CertInstanceP11.lean": "5b6edfb1aaee226cf46e0e796089810312eb2e770ca1a0d7f3e6eaf2c18050ad",
+    "formal/ICFallDegrees/N5CertInstanceP40961.lean": "e134b541872ede71154e70e8ca1a87bed147c1b7b340227e3e78108cafea7f30",
+    "formal/ICFallDegrees/N5CertKernelP11.lean": "c2c20f8b8b134f4d710a87d933bc5f356cb9310e1b1841108bac5ac753a5f35b",
+    "formal/ICFallDegrees/N5CertKernelP40961.lean": "aadf660d738d4422dc1827520528852cc115c3ad114a568812a6fb4545b30c66",
+    "formal/ICFallDegrees/N5CertSound.lean": "bef687095b5f2c6094fc3de61f5438c11186f88792d6ae9cd3986ca20bd1018e",
+    "formal/ICFallDegrees/N5CertWitness.lean": "71f3619578cdd12e20629d6228a04ee5fcbab215f56f621f8a4a867a92644943",
+    "formal/ICFallDegrees/N5CertWitnessDataP11.lean": "6f8535ae039232e1d4cf727d7a6a155e36f358d4e33eab140320850029af00fa",
+    "formal/ICFallDegrees/N5CertWitnessDataP40961.lean": "8216f00e5e9aea36b1506dde54d96ce57cd0e78dd4a05ace745e746d885a7b6b",
+    "formal/ICFallDegrees/N5CertWitnessInstanceP11.lean": "f11e4b255dbe36df95cc7b84fb4b9f9b0e5d9cebd8aa5c6ce7232ca1df5dd16e",
+    "formal/ICFallDegrees/N5CertWitnessInstanceP40961.lean": "c254cbbd5d7ac064d21e5c4ede6b5d43f45f0db758e282718d4339ee0aeec55e",
+    "formal/ICFallDegrees/NormalFormBound.lean": "dc0dd6b452b590a1b37fb198a473fdc9dc1fdbec2239d6470c8de6477936054d",
+    "formal/ICFallDegrees/PointIdeal.lean": "15ffc327d6de4830fac09625a9c217ddb232caaff2562d3e8561633c861f6002",
+    "formal/ICFallDegrees/PowerIdeals.lean": "a31e80050508539ebae65219e86a293cd757cd440705be1c0362b1d882a0bd27",
+    "formal/ICFallDegrees/PresentationTransport.lean": "bab249ea4a348f6ac824996f08eb71a8eda7ac58039f93f90014cd01e65fe9e5",
+    "formal/ICFallDegrees/Prime257Counterexample.lean": "e747f665e250e2e3a0f37b3a78a6aa1f5404cbc0623746081b25e8e10a172ab0",
+    "formal/ICFallDegrees/Prime257Homogeneous.lean": "9a447ab393145c35be077ed093229885b6336191d4cb62437fee3f11df6214c7",
+    "formal/ICFallDegrees/Prime257System.lean": "c028bca763d98b053763e107bd06c955fe0737ca55e566e76ad553187302206a",
+    "formal/ICFallDegrees/PrimeCounterexample.lean": "8a51dc3e1c3b25675cd932c0a0e7abe8a80965b3d144635aecfcb55c3a8be769",
+    "formal/ICFallDegrees/PrimeFieldConclusions.lean": "8145b9223c107042102b14a7a06a2b07eecf75e9333316ad1595c50343003380",
+    "formal/ICFallDegrees/PrimeM2General.lean": "941820f25a42c7179360cafceb205246b6f0ed039a2508ad34366a1bb51297f1",
+    "formal/ICFallDegrees/PrimeM2Homogeneous.lean": "22e6b614708e2a8721415714924978d02cc1de7208be7e0330df5b29349da2b3",
+    "formal/ICFallDegrees/PrimeM2Lower.lean": "c2d0a65e5d5b9f8fb12fecf4363bab85af0768c02f81e0a8cc9a48fde02f6b78",
+    "formal/ICFallDegrees/PrimeM2Sharp.lean": "42b461cdc3d387692422ceae2cef3eac1c328632183fcb0c637914e4913b3634",
+    "formal/ICFallDegrees/PrimeM2Truncated.lean": "32343008758a6153530e4bb4c93d571b45eedc2bf0ac58d926d7d6b3e5999f79",
+    "formal/ICFallDegrees/QuadraticFamily.lean": "5cf4656f2be33e058b952ee9501450f87b09635bdd3994bf3e699c054eac39fc",
+    "formal/ICFallDegrees/QuadraticHomogeneousFamily.lean": "17d74abb82a64273d1246097b266ac324b951105ab4331571b45a12783025702",
+    "formal/ICFallDegrees/QuadraticNoLow.lean": "2c1d2bd448c1ac73c013306fdae8f90d8f119bbce745631c202351583019ffb5",
+    "formal/ICFallDegrees/QuotientLowerBound.lean": "321cb778b7089adbdef9364ea54152ca0a5fc7c49cea292e2ba3ae4a9ce802ef",
+    "formal/ICFallDegrees/RawPresentation.lean": "bfef572ef09c03e2008e3b8ccec1ac1ce52a56498cc4a1b0ff44d9a5efbb8938",
+    "formal/ICFallDegrees/ScalarExtensionTransport.lean": "10f927d81916289ae9b0194a7a1b76c35c2e3e59988b02dba8adbaa08e6922eb",
+    "formal/ICFallDegrees/SelectorAssembly.lean": "3f278947fcc2319615b29bdb89944147bde39f2da319dc68311db87a3576be28",
+    "formal/ICFallDegrees/SelectorBound.lean": "1c962240e9882b91a7c4b4442a3176b9c815a8b552f2888bdcbdbf92fff36b13",
+    "formal/ICFallDegrees/SelectorExtension.lean": "22006407e5f314ed6e1524ac4357039395fbc0b2d486e12746f562f438d7f3e7",
+    "formal/ICFallDegrees/SelectorFibre.lean": "c05a3fef4e8fc0034ba457081287956a8e2244e546483ebec3a6c18831504c02",
+    "formal/ICFallDegrees/SelectorGrid.lean": "3104bbc2455b0bfc4c61397b61a4652e9dd4974f2ab5dd2e6b888332b52847ff",
+    "formal/ICFallDegrees/SelectorUnivariate.lean": "977fabe1eff0b4643f47e4c73ce2623e4d12fd4c3046b528bb4833a288852900",
+    "formal/ICFallDegrees/ShiftWitness.lean": "e38436d17737403ea65a1ecc09889734fe65599e7bb70ba1fe188ce8ede33a4c",
+    "formal/ICFallDegrees/SparseCertificate.lean": "84d593fab6394c6eebcf91f494e7e07a0c1938475289e215ae951e0f58c70bb0",
+    "formal/ICFallDegrees/SparseCoefficient.lean": "ea6e25cb43b0eefca5b88161fa9272703d900b386001ac067e6fe5bd5af05c4d",
+    "formal/ICFallDegrees/SparseDAG.lean": "6fede3a722d964f3f9d9a50a68cf3f4f36be18b6d319fd1c8ff843b50224fc3a",
+    "formal/ICFallDegrees/SparseDemo.lean": "a0975fbe49b40b57c00404408edb8389e22a8438489c60c780e907f46d3a873d",
+    "formal/ICFallDegrees/SparseLowerCertificate.lean": "5cc0a0395303c9f49baafa953ec8d0f320c82ff7670543547ca8ec7666046fa5",
+    "formal/ICFallDegrees/SparsePolynomial.lean": "18eb5e1758a315e9e95a4283b061d565e65160c7b3627937f476eed2c631c120",
+    "formal/ICFallDegrees/SparsePrimeCertificate.lean": "52810a19a26bb35263951dd4f0a67f3dca3aef0bccb8acdb00e0c3a67cb3ae66",
+    "formal/ICFallDegrees/SparseTrustChecks.lean": "95fea4086d98215fb0cafb0e4101886c317a5dacfeb87d733d6bb3d54fba5594",
+    "formal/ICFallDegrees/SplitChainLower.lean": "bfa323b1e5ffbc917136b35af266a60e7abbdfa007e3963077c8176cabd56b7b",
+    "formal/ICFallDegrees/SquareChainRefutation.lean": "9787e3dca5d04d8d2e25ae3541efe9e3adbbcfbb9fd1dcfbb5e1d1579a4f4d58",
+    "formal/ICFallDegrees/TruncatedFirstFall.lean": "1952e0d9afeaed2864a16d69fd02d66acbbf8bfd3219224703f04b07a2188bc8",
+    "formal/ICFallDegrees/UnitInstance.lean": "7f3f799aa01a3fd1fe3c1f9cbdd1b873403692efc2f9eaeeed470d8f04bd067b",
+    "formal/ICFallDegrees/VariableClosure.lean": "f07aa209c215186c0a4bc5e6345c2b914109c1712c0b2ecea3a27e8c4891dbb3",
+    "formal/ICFallDegrees.lean": "abf1375b26acfd6f0c5bc26f5c0da4edb642115fad51b35217c0a7a66d8546dd",
+    "formal/N8ActualCircuitSpreadAudit.lean": "1de48da30f3a0f1f40888cfc04d305a641f4341833ce7f03bfca43fd23b9de15",
+    "formal/N8ActualCofactorCrossAudit.lean": "c719879862b7a7f488eebdce8ee9f31afafad3e7d5734741199e0314e82c73ef",
+    "formal/N8ActualCofactorNonzeroAudit.lean": "ade9264de4c0a358052f11409a285ec66bb1ce4d1748f0bd48b812f4b5408f1d",
+    "formal/N8ActualCofactorQuotientAudit.lean": "267ad75ff848f5def22f16a94cad20354c9a623cf2027bb199b2bb549cd89583",
+    "formal/N8ActualMinorReplacementAudit.lean": "e075d74793bcfd40b4ad7dfc99894eac9db6c0340a6ad7cc6b2e841db2d85da0",
+    "formal/N8ActualReplacementSpreadAudit.lean": "3dd2912b77b8c05d2bcd2a83083b0afb77feeba5a16456bd4f88d3fc7be05a64",
+    "formal/N8CircuitErasedBasisAudit.lean": "fac7dc2e4f3cd5275bad68949f1ebdbfb3e22d1e1bb3254a0aa6a88008427057",
+    "formal/N8CircuitFullSupportAudit.lean": "36f06af9eec2c410d2afc39e9323eb07cd56aae11de9f32557c7e1a227b28344",
+    "formal/N8CircuitInterfaceAudit.lean": "5bf1c0ab28b45c0299b53b2fe397d742e0ba624c0e56d282cf6606a1fac14cb9",
+    "formal/N8CircuitPairBoundAudit.lean": "f71c2dcbf72d4d45872d78c310e90912992602cb429307a231712e9b9b28d10a",
+    "formal/N8CircuitReplacementFinAudit.lean": "18373af51cd76db223e5992bd22c45ee1859d1302f9957364bf14750f8fa1a54",
+    "formal/N8CircuitReplacementSumAudit.lean": "d0677df63054d05613e1fcbfabfd69cdc1dcf79bcc51f38a659d81760e078315",
+    "formal/N8ComplexCofactorAudit.lean": "1224e6416629bd9306e346a0c9f00993b77f4cbc03b47402bcbd07a36319cc5f",
+    "formal/N8ExplicitWronskianRecAudit.lean": "f3a15abf1a169626f5d7e8504554ee4d75cd0861b692378965b1d730776f5184",
+    "formal/N8FiniteCofactorGapAudit.lean": "ea92221c7bd76efbee4cbde711b611f39c9ae0ffd108bd01bcaaa4110f642d4c",
+    "formal/N8FiniteCofactorMultiplicityAudit.lean": "5921b4fe117d46b6faa1706ff23a5e630a034a39f9d3086f1be0eb59a35da7a0",
+    "formal/N8FixedE6ExistenceAudit.lean": "1286cecb4374472a724e4f18c09d15de86a6622313e794f28d0c7b49201cfbf6",
+    "formal/N8FixedE6GrowthAudit.lean": "79086149fb40e6cbeb1029417e119a3930001c1b27025840361dbd38286d8ed9",
+    "formal/N8GeneralRationalWronskianAudit.lean": "4eab905516765434fedee1bd617b67b35dac62c7836e580b0ca5fc63a093739a",
+    "formal/N8InfinityCofactorDegreeAudit.lean": "d9f91549ea30d81913ac16186e55ee1e083d51ccbd27f023f05cf35d4b76d2da",
+    "formal/N8PolynomialQuotientBridgeAudit.lean": "08b52fdfc2112c99b86fc01d96513738973a57277600f3efd3e4b971e94070a4",
+    "formal/N8PolynomialWronskianBasisAudit.lean": "b5a9ea690f0da64fd71355b32a973e424d4191034659c54633b0b9f9e5130357",
+    "formal/N8PolynomialWronskianDistinctDegreeAudit.lean": "70177f0e02fbca5f04cf75d3e9f5dacdc8c898ac9cf8235e477f3fa5169e8f60",
+    "formal/N8PolynomialWronskianMonomialsAudit.lean": "4c81376e48cb54fb39dedaf54138a007a921ce997edb864818b32e3dd2cf8725",
+    "formal/N8PortComplexUnitAudit.lean": "532a182887689e41e50c3a99c384e79e2d4c2a6ee30706f9df6d50f9c503bdb5",
+    "formal/N8PrimeSpecializationInheritedAudit.lean": "c907a94ee2785546e35aa013e499e573f74bbdd959dafa70f80be5a39fbc8628",
+    "formal/N8RatFuncCofactorDegreeAudit.lean": "5ab46fd816da0e0d4acd6d3a84198eee9e793ffd90a3bc22adada2cc1cd7d623",
+    "formal/N8RatFuncCofactorReplacementAudit.lean": "522cba64c512d93d5c1b12b50d7916e0d7bfa3a3fa7e022b470b2a7725ef06c8",
+    "formal/N8RatFuncCommonDenominatorAudit.lean": "81661197c9c0071c7a08f577ab776f8adadecfc45cfdb8ba97ba605d85df8353",
+    "formal/N8RatFuncCommonScalarAudit.lean": "6908025832bb6bacb386b0e3d98694b0a4ac3feaeaf9789178a4e73d9a28352d",
+    "formal/N8RatFuncDenominatorIndependenceAudit.lean": "a45c72425d3601b778d56ed93182b965cd51ef9b9743ef710d43756e8da5b1ad",
+    "formal/N8RatFuncDerivativeAudit.lean": "e775a2e97a631f5f16dcc0fe11fa4811700cc36e561a4dff2ca6756c3f340830",
+    "formal/N8RatFuncDerivativeRulesAudit.lean": "c41057b8488c2efa434b3d171406151f81502be30eecb7462a5918eddf721e85",
+    "formal/N8RatFuncHigherLeibnizAudit.lean": "a16b63d4f992083077d726bd881dee7bcbaf14f868f8d01031b2f8a6fcd80c4e",
+    "formal/N8RatFuncInfinityDegreeAudit.lean": "f6f13f2ab437c1fe2e2b70dee98e75f4afd41d41dfcb1d2b51eb82ded47641c0",
+    "formal/N8RatFuncIteratedLinearAudit.lean": "8322d655e8b607346b34ad9eeaa4568d5cec15aae2de9585288cf6f4325db71c",
+    "formal/N8RatFuncLogDerivativeAudit.lean": "5e1cb2b88983c8472bffc6b7ee6069c47915c3c9060a5aef1f1a402b762eadea",
+    "formal/N8RatFuncPolynomialRecurrenceAudit.lean": "ea98bd362520ae1be20d96a24ccee9659fcf1599e61c810ef23ec038162b371f",
+    "formal/N8RatFuncPolynomialWronskianMapAudit.lean": "86b8438740f5b31e420ac844aa75472613c24dc4d984a6f911b4fe75625427aa",
+    "formal/N8RatFuncRootMultiplicityCrossAudit.lean": "847b3b51e3a7ad2c01c757fbd4d8167e2b9d664529d198a1376747595ffc4d64",
+    "formal/N8RatFuncScalarJetAudit.lean": "60d09a05f9cde9e4321ad0f5da1fb65128f20bc29c8a6cb5d476bf16b43fb896",
+    "formal/N8RatFuncScaledRecurrenceAudit.lean": "eb24b61e02ce7ae826c0035897d6b515fa528273983b5f77f994665d07f726e3",
+    "formal/N8RatFuncWronskianLinearChangeAudit.lean": "66190989a3ccd1ecf34e59da1ca90107afff914b4233d3a54d9fb55cd3452ce3",
+    "formal/N8RatFuncWronskianNormalizationAudit.lean": "43f3cb601b00ee6369fb2ab9e98b6cc9fcd2961e9397ee80af467fe22b24661e",
+    "formal/N8RatFuncWronskianTwoAudit.lean": "ac883ddb070a156c7207f9d4eb793d127386e72a1b6ace33b34b0838724b360e",
+    "formal/N8RationalCoordinateAudit.lean": "ff74e46e2b2ac6b9e020cb1449f0bfa0d752b8d1e053ee3572dbc002b834e4d1",
+    "formal/N8RationalMobiusAudit.lean": "fcdd8ea9656a110bf99d0bb969f4bf900f352f8b0fcc54e3e9bb6b6d59259b30",
+    "formal/lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "formal/lakefile.toml": "fb31f690e72083a4c426f1074e733a57bbba3cba77e57c3d3b26769fe0b8703a",
+    "formal/lake-manifest.json": "98e57d45224a5d6b50996badf5fa6485cb52820f41e815f7c05d49f21eca4547"
+  }
+}

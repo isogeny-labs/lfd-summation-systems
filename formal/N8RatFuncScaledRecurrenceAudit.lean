@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthRatFuncScaledRecurrence
+#print axioms ICFallDegrees.GrowthRatFuncScaledRecurrence.scaled_derivative_step
+#print axioms ICFallDegrees.GrowthRatFuncScaledRecurrence.iterDerivative_scaled

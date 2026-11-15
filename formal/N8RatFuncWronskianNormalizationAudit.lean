@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthRatFuncWronskianNormalization
+
+#print axioms ICFallDegrees.GrowthRatFuncWronskianNormalization.det_scaled
+#print axioms ICFallDegrees.GrowthRatFuncWronskianNormalization.concrete_determinant_factorization
+#print axioms ICFallDegrees.GrowthRatFuncPolynomialRecurrence.concrete_higher_derivative

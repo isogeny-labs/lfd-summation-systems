@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthActualCofactorNonzero
+
+#print axioms ICFallDegrees.GrowthActualCofactorNonzero.polynomial_cofactor_ne_zero_of_linearIndependent
+#print axioms ICFallDegrees.GrowthActualCofactorNonzero.polynomial_cofactor_nonzero_and_degree

@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthRatFuncRootMultiplicityCross
+
+#print axioms ICFallDegrees.GrowthRatFuncRootMultiplicityCross.rootMultiplicity_balance_of_mk_eq
+#print axioms ICFallDegrees.GrowthRatFuncRootMultiplicityCross.rootMultiplicity_gap_of_scaled_mk_eq

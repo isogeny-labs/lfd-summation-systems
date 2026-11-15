@@ -1,0 +1,20 @@
+{
+  "ci_run": "https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43679167384",
+  "ci_commit": "49585b5ff70add29f0a805fd496f01caf66379e8",
+  "ci_conclusion": "success",
+  "library_modules": 219,
+  "audited_declarations": 848,
+  "audit_files": 82,
+  "checked_source_hashes": 270,
+  "changed_sources": [
+    {
+      "path": "formal/ICFallDegrees/GrowthFermatDiagonalObstruction.lean",
+      "ci_sha256": "9808bd231fca5944de5c98ab4eb85c0d30ba0e4e67de508ef685c23873c55c09",
+      "current_sha256": "bc2f0b45897c3557ae9971c99c60e5ef7f5c503078652b4e1046f2b6a2da25a9",
+      "lean_code_unchanged": true
+    }
+  ],
+  "local_audit_report": "experiments/ic-lean/verification.json",
+  "local_audited_declarations": 636,
+  "scope": "Linux full build and axiom audit at the named commit; local audit of corrected sources. Only comments changed in the sole differing Lean source. This does not independently verify the written genus-one argument."
+}

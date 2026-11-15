@@ -5,8 +5,8 @@
 The [verification report](verification.json) records a successful Lean 4.19.0
 build with pinned mathlib revision
 `c44e0c8ee63ca166450922a373c7409c5d26b00b`. The
-[build log](build.log) and [axiom log](axioms.log) are retained. The 582 audited (339 when this README was first written, 513 at
-the cold build of 2026-11-12) declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no
+[build log](build.log) and [axiom log](axioms.log) are retained. The 636 audited (339 when this README was first written, 513 at
+the cold build of 2026-11-12, 582 before the fixed-curve growth theorem was added on 2026-11-14, 628 before the curve family and the Fermat-factor statement were added later that day) declarations use only `propext`, `Classical.choice`, and `Quot.sound`, with no
 project axioms or proof placeholders. The verifier also checks source tokens,
 toolchain version, source hashes, and the mathlib revision.
 
@@ -60,6 +60,17 @@ for a growing-depth order-two-target curve family. Its separate
 audit coverage and three finite closure regressions.
 
 **Cold build coverage.** The cold build of 2026-11-12 (`BUILD-COLD-20261112.md`) covers the
-513 declarations on `main` at that date. The 69 declarations added since (the `Growth*`, `Selector*`,
-`UnitInstance` and `DepthFourteen` modules) are covered by the warm audit in `axioms.log` and by CI,
-not yet by a cold build log.
+513 declarations on `main` at that date. The cold build of 2026-11-14 (`BUILD-COLD-20261114.md`, records in
+`all-modules-20261114/`) covers every module of `formal/ICFallDegrees/`, including the `Growth*`, `Selector*`,
+`UnitInstance` and `DepthFourteen` modules and the fixed-curve growth theorem: 628 declarations of `Audit.lean`
+and 840 declarations over all files that print axioms, foundational axioms only. Two growth modules were added
+later that day; `verification.json` now has 636 declarations and all 219 modules build (addendum of that file). It ran on macOS; the workflow
+`.github/workflows/ci.yml` repeats it on Linux.
+The source digests in `verification.json` bind the saved audit to the source files in this checkout.
+
+**Completed growth-theorem verification.** The Linux run at `49585b5` passed the
+full build and audit (219 library modules, 848 declarations in 82 files).
+The original logs are in `growth-verification-49585b5/`; its reconciliation record
+shows that the subsequent proper-ideal clarification changes Lean comments only.
+The current `verification.json` records the local 636-declaration audit of those
+corrected sources. Properness alone does not refute a numerical LFD lower bound.

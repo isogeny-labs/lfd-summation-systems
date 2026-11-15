@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthCircuitErasedBasis
+
+#print axioms ICFallDegrees.GrowthCircuitErasedBasis.erase_reindex_linearIndependent
+#print axioms ICFallDegrees.GrowthCircuitErasedBasis.erase_reindex_contains
+#print axioms ICFallDegrees.GrowthCircuitErasedBasis.erase_reindex_card

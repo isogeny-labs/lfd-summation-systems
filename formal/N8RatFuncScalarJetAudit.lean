@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthRatFuncScalarJetTriangular
+
+#print axioms ICFallDegrees.GrowthRatFuncScalarJetTriangular.scalarJet_blockTriangular
+#print axioms ICFallDegrees.GrowthRatFuncScalarJetTriangular.scalarJet_diag
+#print axioms ICFallDegrees.GrowthRatFuncScalarJetTriangular.scalarJet_det

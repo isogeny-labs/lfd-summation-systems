@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthRatFuncCofactorReplacement
+
+#print axioms ICFallDegrees.GrowthRatFuncCofactorReplacement.determinant_replaced_column_of_const_sum

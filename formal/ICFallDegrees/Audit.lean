@@ -588,3 +588,72 @@ import ICFallDegrees
 #print axioms ICFallDegrees.GrowthExistence.unit_instance
 #print axioms ICFallDegrees.GrowthExistence.growth_instance
 #print axioms ICFallDegrees.GrowthExistence.growth_instance_window
+#print axioms ICFallDegrees.GrowthSecant.s3_quadratic
+#print axioms ICFallDegrees.GrowthSecant.companion_discriminant
+#print axioms ICFallDegrees.GrowthSecant.secant_numerator
+#print axioms ICFallDegrees.GrowthSecant.secant_s3
+#print axioms ICFallDegrees.GrowthPoleArithmetic.spread_from_two_pole_orders
+#print axioms ICFallDegrees.GrowthPoleArithmetic.spread_from_genus_one_height
+#print axioms ICFallDegrees.GrowthSecant.s3_eq_S3at
+#print axioms ICFallDegrees.GrowthSecant.secant_on_curve
+
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_square_factorization
+#print axioms ICFallDegrees.GrowthSecantFactorization.square_of_s3_zero
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_zero_of_square
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_square_of_target_root
+
+#print axioms ICFallDegrees.GrowthSecantFactorization.s3_perfect_square_of_target_root
+
+#print axioms ICFallDegrees.GrowthSecantFactorization.two_torsion_derivative_ne_of_nonsingular
+
+#print axioms ICFallDegrees.GrowthTwoTorsion.mul_mobius
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_on_s3
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_on_S3at
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_target_difference
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_ne_target
+#print axioms ICFallDegrees.GrowthTwoTorsion.mobius_involutive
+#print axioms ICFallDegrees.GrowthTwoTorsion.fixed_curve_target_root
+#print axioms ICFallDegrees.GrowthTwoTorsion.fixed_curve_nonsingular
+#print axioms ICFallDegrees.GrowthTwoTorsion.fixed_curve_s3
+
+#print axioms ICFallDegrees.GrowthRationalPoleArithmetic.spread_from_simple_poles
+
+-- Rational 2-torsion unit-family algebra (requires pinned CI verification).
+#print axioms ICFallDegrees.GrowthRationalUnit.target_is_root
+#print axioms ICFallDegrees.GrowthRationalUnit.s3_square_family
+#print axioms ICFallDegrees.GrowthRationalUnit.parameter_of_s3_zero
+#print axioms ICFallDegrees.GrowthRationalUnit.s3_ne_zero_of_parameter_not_in_subfield
+#print axioms ICFallDegrees.GrowthRationalUnit.discriminant_factor
+#print axioms ICFallDegrees.GrowthRationalUnit.nonsingular_of_parameter_conditions
+
+-- Explicit algebraic unit-certificate bridge (requires pinned CI).
+#print axioms ICFallDegrees.GrowthUnitCertificate.power_difference_unit_certificate
+#print axioms ICFallDegrees.GrowthUnitCertificate.square_power_difference_unit_certificate
+#print axioms ICFallDegrees.GrowthUnitCertificate.square_unit_of_frobenius_mismatch
+
+-- Fixed-curve growth, y^2 = x^3 + 6x - 7 with the target of order two (paper: "Growth on a fixed curve").
+#print axioms ICFallDegrees.GrowthFixedE6.model
+#print axioms ICFallDegrees.GrowthFixedE6.unit
+#print axioms ICFallDegrees.GrowthFixedE6.lfd_gt_linear
+#print axioms ICFallDegrees.GrowthFixedE6.lfd_linear_window
+#print axioms ICFallDegrees.GrowthFixedE6.exists_lfd_linear_window
+#print axioms ICFallDegrees.GrowthFixedE6.exists_lfd_theta
+#print axioms ICFallDegrees.GrowthPrimeE6NativeBoxSpread.e6_native_box_spread
+#print axioms ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime
+#print axioms ICFallDegrees.GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound
+#print axioms ICFallDegrees.GrowthPrimeAdmissible.exists_admissible_prime_above
+#print axioms ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_prime_theta_of_native_certificates
+#print axioms ICFallDegrees.GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above
+#print axioms ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence
+
+-- The same window over C for every curve y^2 = x^3 + a x - (1 + a) with |a| > 5 and target abscissa 1.
+#print axioms ICFallDegrees.GrowthCharZeroSeparatedFamily.unit_complex_of_norm_gt
+#print axioms ICFallDegrees.GrowthCharZeroSeparatedFamily.nonsingular_of_norm_gt
+#print axioms ICFallDegrees.GrowthTwoTorsionFamily.model
+#print axioms ICFallDegrees.GrowthTwoTorsionFamily.lfd_linear_window
+#print axioms ICFallDegrees.GrowthTwoTorsionFamily.exists_lfd_linear_window
+
+-- Prime factors of the Fermat number 2^(2^k) + 1: admissible primes over which the fixed system is a proper ideal.
+#print axioms ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat
+#print axioms ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat_factor
+#print axioms ICFallDegrees.GrowthFermatDiagonalObstruction.exists_bad_admissible_prime

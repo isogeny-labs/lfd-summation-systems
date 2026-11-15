@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthRatFuncWronskianTwo
+#print axioms ICFallDegrees.GrowthRatFuncWronskianTwo.wronskianTwo_eq_zero_iff
+#print axioms ICFallDegrees.GrowthRatFuncWronskianTwo.wronskianTwo_ne_zero_iff

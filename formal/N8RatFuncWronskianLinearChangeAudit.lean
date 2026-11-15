@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthRatFuncWronskianLinearChange
+
+#print axioms ICFallDegrees.GrowthRatFuncWronskianLinearChange.derivativeMatrix_linear_change
+#print axioms ICFallDegrees.GrowthRatFuncWronskianLinearChange.determinant_linear_change
+#print axioms ICFallDegrees.GrowthRatFuncWronskianLinearChange.determinant_linear_change_zero_of_singular

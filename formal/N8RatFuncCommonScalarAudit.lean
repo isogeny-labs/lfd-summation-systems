@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthRatFuncWronskianCommonScalar
+#print axioms ICFallDegrees.GrowthRatFuncWronskianCommonScalar.derivativeMatrix_mul_scalar
+#print axioms ICFallDegrees.GrowthRatFuncWronskianCommonScalar.determinant_mul_scalar
+#print axioms ICFallDegrees.GrowthRatFuncWronskianCommonScalar.determinant_mul_scalar_ne_zero_iff

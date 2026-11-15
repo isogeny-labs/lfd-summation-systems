@@ -1,0 +1,8 @@
+import ICFallDegrees.GrowthRatFuncInfinityDegree
+
+#print axioms ICFallDegrees.GrowthRatFuncInfinityDegree.intDegree_inv
+#print axioms ICFallDegrees.GrowthRatFuncInfinityDegree.intDegree_mk
+#print axioms ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_polynomials_ne_zero
+#print axioms ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_ne_zero
+#print axioms ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_intDegree
+#print axioms ICFallDegrees.GrowthRatFuncInfinityDegree.monomial_ratio_intDegree

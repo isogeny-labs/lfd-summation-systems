@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthPolynomialWronskianDistinctDegree
+
+#print axioms ICFallDegrees.GrowthPolynomialWronskianDistinctDegree.polynomial_wronskian_ne_zero_of_degree_injective

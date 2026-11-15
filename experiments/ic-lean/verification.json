@@ -1,5 +1,5 @@
 {
-  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
   "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
   "build": "passed",
   "audited_declarations": {
@@ -2903,6 +2903,274 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.s3_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.companion_discriminant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.secant_numerator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.secant_s3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPoleArithmetic.spread_from_two_pole_orders": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPoleArithmetic.spread_from_genus_one_height": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.s3_eq_S3at": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecant.secant_on_curve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_square_factorization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.square_of_s3_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_zero_of_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_square_of_target_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.s3_perfect_square_of_target_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthSecantFactorization.two_torsion_derivative_ne_of_nonsingular": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mul_mobius": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_on_s3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_on_S3at": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_target_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_ne_target": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.mobius_involutive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.fixed_curve_target_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.fixed_curve_nonsingular": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsion.fixed_curve_s3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPoleArithmetic.spread_from_simple_poles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.target_is_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.s3_square_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.parameter_of_s3_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.s3_ne_zero_of_parameter_not_in_subfield": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.discriminant_factor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalUnit.nonsingular_of_parameter_conditions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthUnitCertificate.power_difference_unit_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthUnitCertificate.square_power_difference_unit_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthUnitCertificate.square_unit_of_frobenius_mismatch": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.model": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.lfd_gt_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.exists_lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6.exists_lfd_theta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6NativeBoxSpread.e6_native_box_spread": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeAdmissible.exists_admissible_prime_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_prime_theta_of_native_certificates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCharZeroSeparatedFamily.unit_complex_of_norm_gt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthCharZeroSeparatedFamily.nonsingular_of_norm_gt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsionFamily.model": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsionFamily.lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthTwoTorsionFamily.exists_lfd_linear_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat_factor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthFermatDiagonalObstruction.exists_bad_admissible_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "allowed_foundational_axioms": [
@@ -3033,9 +3301,56 @@
     "split_lower": "Every base-F2 normalized split chain with m>=4 and either target bit has LFD>=4; upper4 remains written"
   },
   "source_sha256": {
-    "formal/ICFallDegrees.lean": "b43254ebc56818a52740b1dde9735b716227f138a17938969f975b3400025073",
+    "formal/ICFallDegrees.lean": "abf1375b26acfd6f0c5bc26f5c0da4edb642115fad51b35217c0a7a66d8546dd",
+    "formal/N8ActualCircuitSpreadAudit.lean": "1de48da30f3a0f1f40888cfc04d305a641f4341833ce7f03bfca43fd23b9de15",
+    "formal/N8ActualCofactorCrossAudit.lean": "c719879862b7a7f488eebdce8ee9f31afafad3e7d5734741199e0314e82c73ef",
+    "formal/N8ActualCofactorNonzeroAudit.lean": "ade9264de4c0a358052f11409a285ec66bb1ce4d1748f0bd48b812f4b5408f1d",
+    "formal/N8ActualCofactorQuotientAudit.lean": "267ad75ff848f5def22f16a94cad20354c9a623cf2027bb199b2bb549cd89583",
+    "formal/N8ActualMinorReplacementAudit.lean": "e075d74793bcfd40b4ad7dfc99894eac9db6c0340a6ad7cc6b2e841db2d85da0",
+    "formal/N8ActualReplacementSpreadAudit.lean": "3dd2912b77b8c05d2bcd2a83083b0afb77feeba5a16456bd4f88d3fc7be05a64",
+    "formal/N8CircuitErasedBasisAudit.lean": "fac7dc2e4f3cd5275bad68949f1ebdbfb3e22d1e1bb3254a0aa6a88008427057",
+    "formal/N8CircuitFullSupportAudit.lean": "36f06af9eec2c410d2afc39e9323eb07cd56aae11de9f32557c7e1a227b28344",
+    "formal/N8CircuitInterfaceAudit.lean": "5bf1c0ab28b45c0299b53b2fe397d742e0ba624c0e56d282cf6606a1fac14cb9",
+    "formal/N8CircuitPairBoundAudit.lean": "f71c2dcbf72d4d45872d78c310e90912992602cb429307a231712e9b9b28d10a",
+    "formal/N8CircuitReplacementFinAudit.lean": "18373af51cd76db223e5992bd22c45ee1859d1302f9957364bf14750f8fa1a54",
+    "formal/N8CircuitReplacementSumAudit.lean": "d0677df63054d05613e1fcbfabfd69cdc1dcf79bcc51f38a659d81760e078315",
+    "formal/N8ComplexCofactorAudit.lean": "1224e6416629bd9306e346a0c9f00993b77f4cbc03b47402bcbd07a36319cc5f",
+    "formal/N8ExplicitWronskianRecAudit.lean": "f3a15abf1a169626f5d7e8504554ee4d75cd0861b692378965b1d730776f5184",
+    "formal/N8FiniteCofactorGapAudit.lean": "ea92221c7bd76efbee4cbde711b611f39c9ae0ffd108bd01bcaaa4110f642d4c",
+    "formal/N8FiniteCofactorMultiplicityAudit.lean": "5921b4fe117d46b6faa1706ff23a5e630a034a39f9d3086f1be0eb59a35da7a0",
+    "formal/N8FixedE6ExistenceAudit.lean": "1286cecb4374472a724e4f18c09d15de86a6622313e794f28d0c7b49201cfbf6",
+    "formal/N8FixedE6GrowthAudit.lean": "79086149fb40e6cbeb1029417e119a3930001c1b27025840361dbd38286d8ed9",
+    "formal/N8GeneralRationalWronskianAudit.lean": "4eab905516765434fedee1bd617b67b35dac62c7836e580b0ca5fc63a093739a",
+    "formal/N8InfinityCofactorDegreeAudit.lean": "d9f91549ea30d81913ac16186e55ee1e083d51ccbd27f023f05cf35d4b76d2da",
+    "formal/N8PolynomialQuotientBridgeAudit.lean": "08b52fdfc2112c99b86fc01d96513738973a57277600f3efd3e4b971e94070a4",
+    "formal/N8PolynomialWronskianBasisAudit.lean": "b5a9ea690f0da64fd71355b32a973e424d4191034659c54633b0b9f9e5130357",
+    "formal/N8PolynomialWronskianDistinctDegreeAudit.lean": "70177f0e02fbca5f04cf75d3e9f5dacdc8c898ac9cf8235e477f3fa5169e8f60",
+    "formal/N8PolynomialWronskianMonomialsAudit.lean": "4c81376e48cb54fb39dedaf54138a007a921ce997edb864818b32e3dd2cf8725",
+    "formal/N8PortComplexUnitAudit.lean": "532a182887689e41e50c3a99c384e79e2d4c2a6ee30706f9df6d50f9c503bdb5",
+    "formal/N8PrimeSpecializationInheritedAudit.lean": "c907a94ee2785546e35aa013e499e573f74bbdd959dafa70f80be5a39fbc8628",
+    "formal/N8RatFuncCofactorDegreeAudit.lean": "5ab46fd816da0e0d4acd6d3a84198eee9e793ffd90a3bc22adada2cc1cd7d623",
+    "formal/N8RatFuncCofactorReplacementAudit.lean": "522cba64c512d93d5c1b12b50d7916e0d7bfa3a3fa7e022b470b2a7725ef06c8",
+    "formal/N8RatFuncCommonDenominatorAudit.lean": "81661197c9c0071c7a08f577ab776f8adadecfc45cfdb8ba97ba605d85df8353",
+    "formal/N8RatFuncCommonScalarAudit.lean": "6908025832bb6bacb386b0e3d98694b0a4ac3feaeaf9789178a4e73d9a28352d",
+    "formal/N8RatFuncDenominatorIndependenceAudit.lean": "a45c72425d3601b778d56ed93182b965cd51ef9b9743ef710d43756e8da5b1ad",
+    "formal/N8RatFuncDerivativeAudit.lean": "e775a2e97a631f5f16dcc0fe11fa4811700cc36e561a4dff2ca6756c3f340830",
+    "formal/N8RatFuncDerivativeRulesAudit.lean": "c41057b8488c2efa434b3d171406151f81502be30eecb7462a5918eddf721e85",
+    "formal/N8RatFuncHigherLeibnizAudit.lean": "a16b63d4f992083077d726bd881dee7bcbaf14f868f8d01031b2f8a6fcd80c4e",
+    "formal/N8RatFuncInfinityDegreeAudit.lean": "f6f13f2ab437c1fe2e2b70dee98e75f4afd41d41dfcb1d2b51eb82ded47641c0",
+    "formal/N8RatFuncIteratedLinearAudit.lean": "8322d655e8b607346b34ad9eeaa4568d5cec15aae2de9585288cf6f4325db71c",
+    "formal/N8RatFuncLogDerivativeAudit.lean": "5e1cb2b88983c8472bffc6b7ee6069c47915c3c9060a5aef1f1a402b762eadea",
+    "formal/N8RatFuncPolynomialRecurrenceAudit.lean": "ea98bd362520ae1be20d96a24ccee9659fcf1599e61c810ef23ec038162b371f",
+    "formal/N8RatFuncPolynomialWronskianMapAudit.lean": "86b8438740f5b31e420ac844aa75472613c24dc4d984a6f911b4fe75625427aa",
+    "formal/N8RatFuncRootMultiplicityCrossAudit.lean": "847b3b51e3a7ad2c01c757fbd4d8167e2b9d664529d198a1376747595ffc4d64",
+    "formal/N8RatFuncScalarJetAudit.lean": "60d09a05f9cde9e4321ad0f5da1fb65128f20bc29c8a6cb5d476bf16b43fb896",
+    "formal/N8RatFuncScaledRecurrenceAudit.lean": "eb24b61e02ce7ae826c0035897d6b515fa528273983b5f77f994665d07f726e3",
+    "formal/N8RatFuncWronskianLinearChangeAudit.lean": "66190989a3ccd1ecf34e59da1ca90107afff914b4233d3a54d9fb55cd3452ce3",
+    "formal/N8RatFuncWronskianNormalizationAudit.lean": "43f3cb601b00ee6369fb2ab9e98b6cc9fcd2961e9397ee80af467fe22b24661e",
+    "formal/N8RatFuncWronskianTwoAudit.lean": "ac883ddb070a156c7207f9d4eb793d127386e72a1b6ace33b34b0838724b360e",
+    "formal/N8RationalCoordinateAudit.lean": "ff74e46e2b2ac6b9e020cb1449f0bfa0d752b8d1e053ee3572dbc002b834e4d1",
+    "formal/N8RationalMobiusAudit.lean": "fcdd8ea9656a110bf99d0bb969f4bf900f352f8b0fcc54e3e9bb6b6d59259b30",
     "formal/ICFallDegrees/AffineTransport.lean": "1c0ab711a9c71e406278fcdd178c18b5f6674e22f57ddd1c3d7e4fc4c2b42698",
-    "formal/ICFallDegrees/Audit.lean": "8fcd20a5effe11715a91cfa4c870236745ec0274e95d06560e1ec09cb7b42beb",
+    "formal/ICFallDegrees/Audit.lean": "2ddd95c29cf1bb0943c08c2849bb23990a1b88aa9fea00200396b63439dc32af",
     "formal/ICFallDegrees/BinaryDescent.lean": "c7314353211179ca0b8c26c38232eca258be0bef99794c36a60f05b02f0e4aeb",
     "formal/ICFallDegrees/BinaryDimensionTwoBases.lean": "9e634c9166e5cdbe37da6af2771964f4bd406495a0e36053df5ebe5c98c76212",
     "formal/ICFallDegrees/BinaryDimensionTwoCurves.lean": "1f1470946768011ab5537f5587da16b2b7f7b59fa701dba7f6415c214b670ff0",
@@ -3086,13 +3401,113 @@
     "formal/ICFallDegrees/GeneratedPrimeLower.lean": "9cf12ed71814f0ab4c35c5fb1385933b95a80aac40bf0df05aa04dc49610be71",
     "formal/ICFallDegrees/GeneratedPrimeUpper.lean": "b9c8a618586450e3b66d51bc50b40a2ed9c5389f26a710d4f6d3330602a3db6d",
     "formal/ICFallDegrees/GridQuotient.lean": "175589aab8aa131159dc93607097c2c0ff9c42445cc2cb358e0c4ec0646ca829",
+    "formal/ICFallDegrees/GrowthActualCircuitSpread.lean": "4a2644cd926d8a7a3052469cef13658d6000a4995282746fa6887263bfae7244",
+    "formal/ICFallDegrees/GrowthActualCofactorCross.lean": "bb96d7b7b0e7ae7bc112796a940a756e33058b9e659104c516afc6ed99385699",
+    "formal/ICFallDegrees/GrowthActualCofactorNonzero.lean": "710611084fb5a1d98ecfce77f0eee912db488d4628578f847efd27570d2fdf03",
+    "formal/ICFallDegrees/GrowthActualCofactorQuotient.lean": "6ed6e7adab84cd6c8939dd57335951285768034a0ed8356601c9257cc3c17b97",
+    "formal/ICFallDegrees/GrowthActualMinorReplacement.lean": "32816ad9020fd955fd172af0fab322a29be0294f0bb0ff1a20cdc35e008c1738",
+    "formal/ICFallDegrees/GrowthActualReplacementSpread.lean": "85848263e74e7421d43f8aa0c04c80edf18573b25f28c0b90a352af2ca2eeaea",
+    "formal/ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean": "ae6522dd4002e822e347fb5308c0a03c9e72c593230a95f3b3ab780a202ed3f0",
+    "formal/ICFallDegrees/GrowthBoxSpread.lean": "2231bb01c5e34aaa523bf6d76fb7b8119bd4358c59b0b275f4eb91c16342dd35",
+    "formal/ICFallDegrees/GrowthCharZeroComplexUnit.lean": "25d076df8c8dd2b252bb1bfffb6e40b33b7a9b599b37eaddd4094789ee4b6d8e",
+    "formal/ICFallDegrees/GrowthCharZeroDeterminant.lean": "efc6f27aa846fa03b1d6515ce03ab878594e6e63a3b16af44f6b1c528857efbf",
+    "formal/ICFallDegrees/GrowthCharZeroSeparatedFamily.lean": "ec512efb528ce0fcaaf0a58cf7dd8de57f7cb0e4dc1774a01e121524ec8032f2",
+    "formal/ICFallDegrees/GrowthCircuitErasedBasis.lean": "4caf84d5c6a6352613bfa73eeccb6e9f050e3d11fa394bdd57de3619e540d6d6",
+    "formal/ICFallDegrees/GrowthCircuitFullSupport.lean": "f5e1fe3adc44cdaaace8018678b54651c9d34ac96accc7d7088970cfa14e74dc",
+    "formal/ICFallDegrees/GrowthCircuitInterface.lean": "f49f7b1145ba08e29241725d2ad004ab9d20419264bfccfed6952b625b64aba1",
+    "formal/ICFallDegrees/GrowthCircuitPairBound.lean": "2932b19292693688ca55cb8e337a83afd6faab18235568ff10efe1bd8b674e13",
+    "formal/ICFallDegrees/GrowthCircuitReplacementFin.lean": "fdc3cc92db783b5aa44ed09dabd5fb37f6da87d320787e80fb8feb48dad81c48",
+    "formal/ICFallDegrees/GrowthCircuitReplacementSum.lean": "91fa01d1c9dbcabdc3710a6cd27432ca8629b3a594813e040c4669e5afdd05f1",
+    "formal/ICFallDegrees/GrowthComplexCofactorArithmetic.lean": "f5be3bf52dc2df1702991a5154b0e6abb6f0ea154acbf700d5fd64f7797ff8c0",
+    "formal/ICFallDegrees/GrowthComplexRatFuncDerivative.lean": "312d49db938bc161faf081386fa14ada93ffdbb2bccbff6114475ad0c33058ef",
+    "formal/ICFallDegrees/GrowthConcreteClosureEquivalence.lean": "0e2b39b298bdcaa4938c47637c98c1d5a0a271990d87cc163eb7d9d2b8f3ce46",
+    "formal/ICFallDegrees/GrowthConcreteClosureStages.lean": "a381fed0d7eefbf355b773d87f65f800f4cfdb92cb8cded20730e902e1c701e0",
+    "formal/ICFallDegrees/GrowthConcreteClosureStep.lean": "b9f58851b8aca2595ec6ed1ac54f1671dd6aeffe687028d73f89122b6366561a",
     "formal/ICFallDegrees/GrowthCounting.lean": "84dab8039d5377a5cc5ff54f88430945e44733fecc6dd047c4a40861ff1ab7cc",
     "formal/ICFallDegrees/GrowthCriterion.lean": "0e19bb24709fa825d1b663e728cbb124563d6f1a2a1c197d7b641836acfdc5bd",
     "formal/ICFallDegrees/GrowthExistence.lean": "c9ac869f0a19e63d0d874cd0821951002abf17503dd37430e0143a867ea9b6dc",
+    "formal/ICFallDegrees/GrowthFermatDiagonalObstruction.lean": "bc2f0b45897c3557ae9971c99c60e5ef7f5c503078652b4e1046f2b6a2da25a9",
+    "formal/ICFallDegrees/GrowthFieldCoefficientRetraction.lean": "5191ea17545e2dd5d82adf84e72f3503034f05a5210af458dc1ef931e196b5be",
+    "formal/ICFallDegrees/GrowthFiniteCofactorGap.lean": "4929f9e5927d8a07f7f69590e8712507b98cbae0c1bfd2dcfa08b773504c1ed8",
+    "formal/ICFallDegrees/GrowthFiniteCofactorMultiplicity.lean": "8dba6b320c0f308fadab5c08c46e85cf44423236a322284dc720585e7ea415ad",
+    "formal/ICFallDegrees/GrowthFiniteStabilization.lean": "d8fcedb264d1e2260d8caaba02914bd4a9f6de41c18e126ba66630aacf3b9314",
+    "formal/ICFallDegrees/GrowthFixedE6.lean": "27191ca1676341467f6f8ebd1da91cf81de0270317729cd965556813324e452b",
+    "formal/ICFallDegrees/GrowthFixedE6Existence.lean": "02ba4eb01a2fb3218ec4befd3ad5202f3f6914d320c6ce7cec39bf6691b88c42",
+    "formal/ICFallDegrees/GrowthFixedE6IntegralBezout.lean": "20d2aa5f56e5ae335ca7fc67903b5d536ffe33617c344f6aa988c82a1e590c4f",
+    "formal/ICFallDegrees/GrowthFixedE6IntegralInputs.lean": "1e1e06b7365ba35a007e5720b399b7c52927470621df144fac4b61cd43051cf7",
+    "formal/ICFallDegrees/GrowthFixedE6NativeUnit.lean": "3b38141b1ff45fe8ee8bb30db5baa231cec7a5108839cc7c1e5d2c7720d50c5c",
+    "formal/ICFallDegrees/GrowthFixedE6PrimeSequence.lean": "b537e7719c82df3030402b12e44e488ee7c121f3936322a113e32c5f8a30957e",
+    "formal/ICFallDegrees/GrowthFixedE6PrimeTheta.lean": "260e80db2cd19b0ecfcb97b39b74b019a0d915b8bf64afe9137e9c656384e7aa",
+    "formal/ICFallDegrees/GrowthGeneralRationalWronskian.lean": "9e50f5c751e33e136991ab4914dbbfc8a82f9d9c4bbf92007558341c68fbe204",
+    "formal/ICFallDegrees/GrowthInfinityCofactorDegree.lean": "bd1c34187117f526b83faa7414e00e09b820ccd544589a9eb1ae00ea70a86b75",
+    "formal/ICFallDegrees/GrowthIntegralBezoutSpecialization.lean": "debdf741edb98f4eca7157b7730c89ada7aa35c26f4d14fa286ef2a4123195f2",
+    "formal/ICFallDegrees/GrowthIntegralBezoutTransfer.lean": "115056b4e73f87206f5ac087badf180041b63edce041817d4c3189ec2adf840b",
     "formal/ICFallDegrees/GrowthMain.lean": "60f076a7c00b8d1424a8293d3893aa8cdd393984181a6f50b16959ed4241f46f",
+    "formal/ICFallDegrees/GrowthPoleArithmetic.lean": "2e266bcc965ab1a76dfd83ba75ea61f4bab2e412991e314de0d5c2196f3835b7",
+    "formal/ICFallDegrees/GrowthPolynomialQuotientBridge.lean": "4780355481ddf594aee24cf4d83ec866e10415251352fe0d9f9509c87157d8ad",
+    "formal/ICFallDegrees/GrowthPolynomialWronskianBasis.lean": "2702600607364232c162fe50868dd1c9b6215d0f3d42f3fabd2cd3e46967c08e",
+    "formal/ICFallDegrees/GrowthPolynomialWronskianDistinctDegree.lean": "84bff2263c89e6236508fc8a2a848a4811ce18216f168a6acc947399a27cb40a",
+    "formal/ICFallDegrees/GrowthPolynomialWronskianMonomials.lean": "6f63c8ee4e150749518b2505ba79a44c01a6903e8cb427d78d7c7cfad3c6d31a",
+    "formal/ICFallDegrees/GrowthPrimeAdmissible.lean": "09d89586cd5ad5d1ac10fcaa07d01d901959c6fcbb1267cc0659197406d23173",
+    "formal/ICFallDegrees/GrowthPrimeBoundedRationalWronskian.lean": "5078de954e1b2d857df9105213e78d46d0b5ce5e2f1850ae57fc00a83d93e613",
+    "formal/ICFallDegrees/GrowthPrimeBoxCircuitTransfer.lean": "f7efee7b61322e5ff2233cf4e3e214a974436d7dfd0f98859252ec1484fcc021",
+    "formal/ICFallDegrees/GrowthPrimeBoxNonmembership.lean": "2a05da75bcaf8a8063c9f52b221acf3a88026b5e5bc24c9094926fd917b4c333",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCircuitPair.lean": "edd265b86e7f065a5734fdd115d4a7206018f1e258c71fae7f86c8f600f818c2",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxClearing.lean": "a7ea2901d1a6be5016a2aecc5305f1164716de2539ea0179471c4a2d0b8918a0",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCofactor.lean": "d8ba14f854e490cbe6d341e05fe2783565998db4d4f3243c12ab00c91eb2745b",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxCofactorRatio.lean": "6ede83d668770485b77bb9f85d9a5d5d6d9607dc62ae1a4d299d82fd0ae14541",
+    "formal/ICFallDegrees/GrowthPrimeE6BoxReplacementGap.lean": "31e783d3f864a880672617bea069ac23d0936120071d4bb5d27cadd110551453",
+    "formal/ICFallDegrees/GrowthPrimeE6NativeBoxSpread.lean": "c1844164427f1abefe296cad18dac58f6f52c2d0d512af160463cd8e136a8e5b",
+    "formal/ICFallDegrees/GrowthPrimeE6NativeNonmembership.lean": "08f6f9e68e82a42a08ffd891cbee82796d233ce0b4ff00a005a22753fc1e50ab",
+    "formal/ICFallDegrees/GrowthPrimeIntegralUnit.lean": "5fc5c64d29840a263d6c94c0ecba7d0b423264adf680674b40e476313d301328",
+    "formal/ICFallDegrees/GrowthPrimeNativeWindow.lean": "afd37d3dde4265a9f3d33be00f40f54239ac1a9820a07989ed3d67e4d54e5e35",
+    "formal/ICFallDegrees/GrowthPrimeRationalSeed.lean": "170a76a28c42fb7658473614d7f2721114598ac858678326f96570bed2db2a67",
+    "formal/ICFallDegrees/GrowthRatFuncCofactorDegree.lean": "8d9834abf0099ff02cb8adc8fa57fbe0689a382e873e7217bdbab83ad599c39c",
+    "formal/ICFallDegrees/GrowthRatFuncCofactorReplacement.lean": "38948bab2dff5ebfb3027e7d0770ce0e2aef2d3636058b6691846d26be64447c",
+    "formal/ICFallDegrees/GrowthRatFuncCommonDenominator.lean": "5b8a49f7c815d7fa6094ba64648b429f90687ab9a5eb2ff3ee3327b2b9c70bf7",
+    "formal/ICFallDegrees/GrowthRatFuncDenominatorIndependence.lean": "5de156b329ee58cb9874cb577ee13843a66d5afbc3a4912248f2843965e92d6b",
+    "formal/ICFallDegrees/GrowthRatFuncDerivativeRules.lean": "5eb0303da89274309d56643f28a812f1ff01a30d1c601d12f1d3f4f1f59cf73b",
+    "formal/ICFallDegrees/GrowthRatFuncHigherLeibniz.lean": "c358d78e550b44f0ce6d8b8be745fa7de5e207bf97e1434c2a8115df8b7085f9",
+    "formal/ICFallDegrees/GrowthRatFuncInfinityDegree.lean": "6680aeb78bd629ded40191e65ac4a3a034e7c2713be955695a40f7de884e47a7",
+    "formal/ICFallDegrees/GrowthRatFuncIteratedLinear.lean": "9d91d4178efa0ab1bb36d7dbd40db3516b36726951400adbe49b0ba2660bac60",
+    "formal/ICFallDegrees/GrowthRatFuncLogDerivative.lean": "c9979b2a3e94dadac653a8a4c1f0a990a551ca2c90f81da786e91a6bc84ceaab",
+    "formal/ICFallDegrees/GrowthRatFuncModel.lean": "ae54fba13e3a66e59511fa6b8e9e37d29ebb4e417a8625441ce957bf2543b70e",
+    "formal/ICFallDegrees/GrowthRatFuncPolynomialRecurrence.lean": "0f13e268b9faaa809beff2c393a9047822c43dad06f7849219fc9ee070ff62f3",
+    "formal/ICFallDegrees/GrowthRatFuncPolynomialWronskianMap.lean": "c9277d535e547c5c85d737e437d6c9c85d958f15b303f73c84abb405b9d0d53c",
+    "formal/ICFallDegrees/GrowthRatFuncRootMultiplicityCross.lean": "368aba3ceb9afc10f52436df0e812229f30ad61043c658dc5950383dafafd0e8",
+    "formal/ICFallDegrees/GrowthRatFuncScalarJetTriangular.lean": "6069b191d54ee7294c26d12905b3fa635ccfdd512debdfdef2ceb68bb244b862",
+    "formal/ICFallDegrees/GrowthRatFuncScaledRecurrence.lean": "b810f857df9f7e75b58d79bbee030fd0c1cfedd20b745ee493f4cbc2e0d7a9c8",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianCommonScalar.lean": "d56b36c682c74d80b4e120ccc22b78d9641b2108ad00888631ba6cc7e3950694",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianLinearChange.lean": "d1781867ad337c0001c3678a36e76a81e69f744495ba83bea160d8ee957f470f",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianNormalization.lean": "3359075cf1e8defaaa6a706665a0d046209031877dab27d8ac60de5e10435a6d",
+    "formal/ICFallDegrees/GrowthRatFuncWronskianTwo.lean": "9c1d64d06bca4973e50aad0a65d21caacdc51300e29cc6913a13a98ec7004f1e",
+    "formal/ICFallDegrees/GrowthRationalBezoutCertificate.lean": "e529a3252e59d70c1b3e5acd49179287ec7b2e93c4e9af7bdb4812d225ea5fbd",
+    "formal/ICFallDegrees/GrowthRationalBezoutIntegerLift.lean": "42f5661d020df381fe277c00fd4f7b687c8ae1a949e51b7ebf531b94b81e923b",
+    "formal/ICFallDegrees/GrowthRationalBoundary.lean": "d46ef0e61e7ea78c82177c0842aadaee4859c259f47e78ca413d2c29b216fa0e",
+    "formal/ICFallDegrees/GrowthRationalChainUnit.lean": "f4d055f3e7723abb210e734e8254db3ab88d2a36f3ba5c6d1bb65349fdb27649",
+    "formal/ICFallDegrees/GrowthRationalCoordinates.lean": "6baa9427f5f2bfeda51a5a49e386f87ab5d217eefa680d31a65b328058dc7be4",
+    "formal/ICFallDegrees/GrowthRationalE6Unit.lean": "4bd363a74e018e3eab6156c4dac3a5d371d4be439b792a1052b9a84f62406a9d",
+    "formal/ICFallDegrees/GrowthRationalFrobenius.lean": "2d4d89b00d682edf81757d2032d9c2d852059bf65ba2f042437d9cbf824a6169",
+    "formal/ICFallDegrees/GrowthRationalGridExclusion.lean": "56aa92323a452d755165694fe13b8293c01895409274e8d52b94062b4b6a9256",
+    "formal/ICFallDegrees/GrowthRationalGridUnit.lean": "61b5dba7548e71bec831c0f9f2680d5616bbcdd31babcc8471a6ba40598b9c08",
+    "formal/ICFallDegrees/GrowthRationalLogNumerator.lean": "73d786072c39bd6e01d5d41132ec74a16fa0d0c7e096a4a2ed6f83d404a702cf",
+    "formal/ICFallDegrees/GrowthRationalMobius.lean": "7964828b8c680a9ed570bdb1b19bdbd73316291d35f149c038f15a2ae15bcc47",
+    "formal/ICFallDegrees/GrowthRationalPoleArithmetic.lean": "6a4f3a6f11cf642a8ce90ab4b347a260ef4de748f5bbdec1b17ede07225a5d0a",
+    "formal/ICFallDegrees/GrowthRationalPolynomialDenominators.lean": "74c938d4eabea4fbddbcba6895826a119785efa41909630dcab3ed541162f14a",
+    "formal/ICFallDegrees/GrowthRationalUnit.lean": "abcaff3b4c20877decf5f426fdb13975e2f06fe2ceff2596e04d3883fad5ed7a",
+    "formal/ICFallDegrees/GrowthRationalWronskianRec.lean": "5938a2fac969eff13ef91adbd0b90a2f66165aca46d67d93673c9c4a4a5132fe",
     "formal/ICFallDegrees/GrowthReduction.lean": "a93ccd9768f134337bb2ce6ed43e08c618e96d9d2de3e504b04f6f0301ed498e",
     "formal/ICFallDegrees/GrowthSchema.lean": "052b5f6956aad3adf6d686e809553d8660ba29a400c3e91b86790c0177c301bf",
+    "formal/ICFallDegrees/GrowthSecant.lean": "a0dfc8454179798d3bbd6033ec152bf87c1d1f5a8a5ed4b1a8d90da8b03eec00",
+    "formal/ICFallDegrees/GrowthSecantFactorization.lean": "046b6b94f175cd2ff5aa1921f2b94d25a4054417cff3609cde4e7922dda2ebe1",
     "formal/ICFallDegrees/GrowthSpread.lean": "33a35cd316f8f202b51c6775deb3ea2ea97ad47fbf0dbdc99c3d448471e93725",
+    "formal/ICFallDegrees/GrowthTwoTorsion.lean": "ce799ecc2e7b8bff8e506669b4201a4b85c99a57d80fce5c56ef11972d2ed36b",
+    "formal/ICFallDegrees/GrowthTwoTorsionFamily.lean": "b10c4a1bca9877537685ab7ed4bf641bcf10711a483bf8fbe268b7d6035d2ba3",
+    "formal/ICFallDegrees/GrowthUnitCertificate.lean": "850a2870d7a98a34a720bad1edf075b1bf39c59278445f853a545e6c9e6a5d07",
+    "formal/ICFallDegrees/GrowthWronskianCofactor.lean": "334267292e99557e413ed350333ed28d2003d1c6248d6a42f8a42edea21e06cd",
+    "formal/ICFallDegrees/GrowthWronskianDegree.lean": "31ef297d3cab593d785c2e85e0c2105b5074a406da2c6a266cdd7e5509cf068f",
+    "formal/ICFallDegrees/GrowthWronskianDeterminant.lean": "8923d6050b41017d142a042a90cce7f1db1aef7a312820e71c57cdd78767f005",
+    "formal/ICFallDegrees/GrowthWronskianTightDegree.lean": "da487de2acfc8c30ab9ef8d06e53c1a7e0a76fd607ff0684de1e036de1125a53",
     "formal/ICFallDegrees/HomogeneousFirstFall.lean": "f45d13d993547d2b67f290b993e38e6c114a757be32c45985c155efd0d9a9718",
     "formal/ICFallDegrees/LocalReductionBound.lean": "fd4ce056280a247cd8003323ee3c5600c72cd8d1324045d9ee688de94b56bb7e",
     "formal/ICFallDegrees/LowDegreeCoefficients.lean": "8cd19097006bb0211b73ade48c8382aaa9cad5510fad8bbd83ab25e59d91dc30",

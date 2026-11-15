@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthInfinityCofactorDegree
+
+#print axioms ICFallDegrees.GrowthInfinityCofactorDegree.exponent_gap_eq_cofactor_degree_gap
+#print axioms ICFallDegrees.GrowthInfinityCofactorDegree.exponent_gap_abs_le_cofactor_budget

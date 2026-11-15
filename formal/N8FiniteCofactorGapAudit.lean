@@ -1,0 +1,7 @@
+import ICFallDegrees.GrowthFiniteCofactorGap
+
+#print axioms ICFallDegrees.GrowthFiniteCofactorGap.mk_div_mk
+#print axioms ICFallDegrees.GrowthFiniteCofactorGap.monomial_ratio_as_mk
+#print axioms ICFallDegrees.GrowthFiniteCofactorGap.second_exponent_gap_eq_cofactor_root_gap
+#print axioms ICFallDegrees.GrowthFiniteCofactorGap.second_exponent_gap_abs_le_cofactor_budget
+#print axioms ICFallDegrees.GrowthFiniteCofactorGap.exponent_pair_gap_l1_le_four_budget

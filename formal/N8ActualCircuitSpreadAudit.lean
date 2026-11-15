@@ -1,0 +1,4 @@
+import ICFallDegrees.GrowthActualCircuitSpread
+#print axioms ICFallDegrees.GrowthActualCircuitSpread.sum_twice_fin_eq_budget
+#print axioms ICFallDegrees.GrowthActualCircuitSpread.actual_spread_bound
+#print axioms ICFallDegrees.GrowthActualCircuitSpread.fixed_E6_spread_bound

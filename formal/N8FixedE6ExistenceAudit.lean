@@ -1,0 +1,3 @@
+import ICFallDegrees.GrowthFixedE6Existence
+#print axioms ICFallDegrees.GrowthFixedE6.exists_lfd_linear_window
+#print axioms ICFallDegrees.GrowthFixedE6.exists_lfd_theta

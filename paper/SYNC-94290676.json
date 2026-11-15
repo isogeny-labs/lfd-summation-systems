@@ -1,0 +1,38 @@
+{
+  "source_repository": "https://github.com/isogeny-labs/ml-cryptanalysis",
+  "source_commit": "94290676ce5fca967f7383546efc9b4158175091",
+  "companion_base": "41c98577cc54dfb2c1bc79167a8059fd3e7c53e1",
+  "scope": "Reconciled revised prose and both author emails; preserved later companion corrections, fixed-curve growth theorem, current Lean audit and publication checks. Artifacts regenerated with companion sources rather than replacing them with the older PDF.",
+  "author_contacts": [
+    "adam@isogenylabs.io",
+    "a.buran28@gmail.com"
+  ],
+  "artifact_sha256": {
+    "paper/curve-lfd-bounds.tex": "57c29df7da07ee809b1f92009be67d7ec34d5d0a4ededac4bc4627adef5ca8b3",
+    "paper/curve-lfd-bounds.pdf": "c6d10103428c0bcb5efd1a599557a75e9074cf01a3453aee11ace6299071ed81",
+    "paper/curve-sweep-data.tex": "ec8e5de69b789147bee546f120284a4272307cea73da48ad93f89ffafec8ad1a",
+    "paper/eprint-curve-lfd-bounds/EPRINT.md": "59e1ff412c6d543e41dfdfbe76556eae4451be9c6ff91dc033c0c34e92c962c0",
+    "paper/eprint-curve-lfd-bounds/eprint-abstract.txt": "3e73357c02dc04cb12291c20f85765b40ee3e20b5462a70b499b585f93902011",
+    "experiments/ic-curve-paper/verification.json": "6632427022fb239a028721b6f2994c38d460803dc807d1fe6a41a21cb08a7d60",
+    "paper/figures/arbitrary-bases.pdf": "8684698a83f5c116256a494775e82a420377598b01ee4d8a81606dad8c51eb16",
+    "paper/figures/arbitrary-bases.png": "64a88ab69d9f08941f6cf49cac82b4d38f2522bdfeea7ced00722d7a41b512e4",
+    "paper/figures/binary-deep.pdf": "b7bffa5fcb4641425b2d3d9d14330ff10384b875c66e5a632f6b8d55129ede54",
+    "paper/figures/closure-dims.pdf": "86cb54cd3afa197acdf19695cbfc4dc4f441d4a236a37fe8fa506a38b2651c81",
+    "paper/figures/curve-sweep.pdf": "b685b14333fe9552d6882c0098b051eec5a3f1ca12d09e5824a5371c7ecb94bb",
+    "paper/figures/curve-sweep.png": "1d5897b3d0854e69d945f7f6109e2b648a0e2fdd976d55d4e3946d793a0581a5",
+    "paper/figures/lfd-closure-share.pdf": "13b760e02da96d4799806fe9e4742f0c43bb207afe7ef4323a3cb7e9b5adfd91",
+    "paper/figures/lfd-closure-share.png": "cb86c10ab4bb8671c067c55374dcbdd3071483e4f351a61427e8cfd2bc67dec3",
+    "paper/figures/lfd-depth-profile.pdf": "ffaa05c2c10e73fdc698bc4d38c69073f632a2c02776fdb4b45c8262c27f2b10",
+    "paper/figures/lfd-depth-profile.png": "d544a174be0224a663618510a3ceb852aec60b62ef8271ed4d335a09c7a494c4",
+    "paper/figures/lfd-depth.pdf": "7660b11ddec519682ee62a0d29f2ba35365a891d27484e878124617c88236615",
+    "paper/figures/lfd-variables.pdf": "3136699365c2dc68048688f264941babd2453235f6468f6e79420608a5c24c0d",
+    "paper/figures/lfd-variables.png": "c4e3eaca856c2a0a16f97902adc18e7a3ee4700f8b85188bae1651e23861223b",
+    "paper/figures/msummands.pdf": "454e4cdfb07ba125ec1ee5e2ebd3d68a4ab57f3f8daed784108d420bc254b771"
+  },
+  "validation": {
+    "build": "passed; zero warnings and overfull boxes",
+    "publication_checks": 295,
+    "audited_declarations_in_saved_report": 628,
+    "fresh_lean_build": false
+  }
+}

@@ -1,0 +1,5 @@
+import ICFallDegrees.GrowthRatFuncHigherLeibniz
+
+#print axioms ICFallDegrees.GrowthRatFuncHigherLeibniz.rationalDerivative_sum
+#print axioms ICFallDegrees.GrowthRatFuncHigherLeibniz.rationalDerivative_nsmul
+#print axioms ICFallDegrees.GrowthRatFuncHigherLeibniz.iterDerivative_mul
