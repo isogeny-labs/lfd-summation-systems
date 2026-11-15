@@ -1857,9 +1857,9 @@ $E_a$ and $t=1$.
  $k/28\le d_k\le k+2$.
 \item For $E_6$ and every $k\ge2$, every prime factor $p$ of $2^{2^k}+1$
  satisfies $p\equiv1\pmod{2^{k+1}}$ and $p>2^{k+1}$, and over $\F_p$ the
- ideal at depth $k$ is a proper ideal. So the unit ideal, and with it the
- lower bound of (3), fails for some prime of that progression at every
- depth.
+ ideal at depth $k$ is a proper ideal. At these primes the unit-ideal
+ argument does not establish the numerical lower bound of (3); whether
+ that bound holds remains undecided.
 \end{enumerate}
 \end{theorem}
 \begin{proof}[Proof sketch]
@@ -1899,12 +1899,13 @@ Item (1) covers a one-parameter family of curves; items (2) to (4) are
 proved for $a=6$ only, because the prime-field part of the development is
 written for that curve. The integer $N_k$ is not computed, so the primes of
 (3) are not explicit and the statement is not claimed for one prime at all
-depths; by (4) it does not hold for every prime $p\equiv1\pmod{2^{k+1}}$
-(Remark~\ref{rem:fermatbad}). Item (2) holds for every prime $p>2^{k+1}$,
+depths. By (4), the unit-ideal hypothesis fails for some primes
+$p\equiv1\pmod{2^{k+1}}$ at every depth (Remark~\ref{rem:fermatbad});
+this does not decide whether their LFD satisfies the numerical bound of (3). Item (2) holds for every prime $p>2^{k+1}$,
 and on the primes of (4) it carries no information, the ideal being proper
-there. Since $3t^2+a=3+a\ne0$, Theorem~\ref{thm:three} already gives
-$\lfd\ge4$ on these instances, and the lower bound of (1) and (3) exceeds it
-from $k=66$ on. As elsewhere in the development, no elliptic curve appears
+there. On the unit-ideal instances of (1) and (3), $3t^2+a=3+a\ne0$,
+so Theorem~\ref{thm:three} already gives $\lfd\ge4$; the lower bound of
+(1) and (3) exceeds it from $k=66$ on. As elsewhere in the development, no elliptic curve appears
 in Lean: the statements concern the explicit polynomial system with
 coefficients $a$, $b=-1-a$ and $t=1$ (Appendix~\ref{app:lean}).
 

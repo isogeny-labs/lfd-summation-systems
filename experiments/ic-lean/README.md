@@ -67,3 +67,10 @@ and 840 declarations over all files that print axioms, foundational axioms only.
 later that day; `verification.json` now has 636 declarations and all 219 modules build (addendum of that file). It ran on macOS; the workflow
 `.github/workflows/ci.yml` repeats it on Linux.
 The source digests in `verification.json` bind the saved audit to the source files in this checkout.
+
+**Completed growth-theorem verification.** The Linux run at `49585b5` passed the
+full build and audit (219 library modules, 848 declarations in 82 files).
+The original logs are in `growth-verification-49585b5/`; its reconciliation record
+shows that the subsequent proper-ideal clarification changes Lean comments only.
+The current `verification.json` records the local 636-declaration audit of those
+corrected sources. Properness alone does not refute a numerical LFD lower bound.

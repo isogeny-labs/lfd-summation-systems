@@ -8,8 +8,8 @@ import Mathlib.Tactic
 The prime-field half of the fixed-curve growth theorem
 (`GrowthFixedE6PrimeTheta`, `GrowthFixedE6PrimeSequence`) is stated for
 primes `p ≡ 1 (mod 2^(k+1))` beyond a bound that depends on the depth `k`
-and is not computed. This file shows that such a restriction cannot be
-dropped: for every depth `k ≥ 2`, every prime factor `p` of the Fermat
+and is not computed. This file shows that the unit-ideal hypothesis
+is not automatic for admissible primes: for every depth `k ≥ 2`, every prime factor `p` of the Fermat
 number `2^(2^k) + 1` satisfies `p ≡ 1 (mod 2^(k+1))`, and over `F_p` the
 system of `y² = x³ + 6x - 7` with target abscissa `1` has the common zero
 `x₁ = x₂ = 4`, so it is a proper ideal.
@@ -147,8 +147,9 @@ theorem e6_not_unit_of_fermat_factor (p : ℕ) [Fact p.Prime] (k : ℕ) (depth :
 
 /-- **Bad admissible primes exist at every depth.** For every `k ≥ 2` there is
 a prime `p ≡ 1 (mod 2^(k+1))`, `p > 2^(k+1)`, over which the fixed E6 system
-at depth `k` is a proper ideal. So the prime-field statements of
-`GrowthFixedE6PrimeTheta` do not hold for all primes in that progression. -/
+at depth `k` is a proper ideal. At these primes the unit-ideal argument
+cannot establish the numerical LFD lower bound. Whether that numerical
+bound holds for these proper ideals is not decided by this theorem. -/
 theorem exists_bad_admissible_prime (k : ℕ) (depth : 2 ≤ k) :
     ∃ p : ℕ, Nat.Prime p ∧ p ≡ 1 [MOD 2 ^ (k + 1)] ∧ 2 ^ (k + 1) < p ∧
       ∀ [Fact p.Prime],

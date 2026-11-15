@@ -193,7 +193,8 @@ theorem of the paper for one instance without any hypothesis: the normalized two
 The last two rows were added in this repository on 2026-11-14 (`GrowthTwoTorsionFamily.lean` composes
 statements that were already parametric in `a`; `GrowthFermatDiagonalObstruction.lean` extends the upstream file
 of ml-cryptanalysis `0712c0d5`, which has the grid point only, to the polynomial system). The second shows that
-the prime-field rows cannot hold for every prime `p = 1 mod 2^(k+1)`.
+the unit-ideal hypothesis fails for some primes `p = 1 mod 2^(k+1)` at every depth.
+It does not decide whether the numerical LFD lower bound holds for those proper ideals.
 
 Not proved: the prime-field statements for one prime at all depths, for an explicit prime, or for a curve other
 than `a = 6`; any statement for a target that is not of order two. The general growth theorem (`GrowthMain.growth_theorem`) still takes a `CurveModel` as a
