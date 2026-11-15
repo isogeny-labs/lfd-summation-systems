@@ -21,14 +21,14 @@ theorem has a written proof; its Lean reduction retains the curve-model
 hypothesis, except for curves with a target of order two, where the
 bound is kernel-checked without it (over the complex numbers for a
 one-parameter family of curves, and for one of them along an increasing
-sequence of primes that is not explicit). For prime factors of Fermat numbers,
+sequence of primes with the explicit sufficient cutoff B_k=2^(2^k)*9^(4^k)). For prime factors of Fermat numbers,
 the ideal is proper (also kernel-checked), so the unit-ideal argument does not
 establish the LFD lower bound; the numerical bound there remains undecided. At depth 14 the lower bound is certified, and the upper bound
 uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
-The saved audit covers 644 declarations of `Audit.lean` and matches every
+The saved audit covers 653 declarations of `Audit.lean` and matches every
 recorded source digest. After the review of 14 November the complete project
 was built from an empty build directory (macOS, Lean 4.19.0, pinned Mathlib):
 all 217 modules build, and the 840 declarations over all files that print
