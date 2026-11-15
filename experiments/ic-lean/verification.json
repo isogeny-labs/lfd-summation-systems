@@ -3296,6 +3296,56 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeNative.parameter_native_box_spread": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeNative.not_one_of_large_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.value_ne_zero_complex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_mod_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.unit_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.denominator_and_parameter_guards": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.prime_lfd_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthRationalPrimeCutoff.rational_prime_growth": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "allowed_foundational_axioms": [
@@ -3426,7 +3476,7 @@
     "split_lower": "Every base-F2 normalized split chain with m>=4 and either target bit has LFD>=4; upper4 remains written"
   },
   "source_sha256": {
-    "formal/ICFallDegrees.lean": "84e12d91bd5f58137fa0b8d0bee55514260312a0fe87f0b195df8ea42922acc9",
+    "formal/ICFallDegrees.lean": "4c838b4d5369f52301eaf7e452ff9ffc92f607aeb4f90c737c40f06de002bf17",
     "formal/N8ActualCircuitSpreadAudit.lean": "1de48da30f3a0f1f40888cfc04d305a641f4341833ce7f03bfca43fd23b9de15",
     "formal/N8ActualCofactorCrossAudit.lean": "c719879862b7a7f488eebdce8ee9f31afafad3e7d5734741199e0314e82c73ef",
     "formal/N8ActualCofactorNonzeroAudit.lean": "ade9264de4c0a358052f11409a285ec66bb1ce4d1748f0bd48b812f4b5408f1d",
@@ -3475,7 +3525,7 @@
     "formal/N8RationalCoordinateAudit.lean": "ff74e46e2b2ac6b9e020cb1449f0bfa0d752b8d1e053ee3572dbc002b834e4d1",
     "formal/N8RationalMobiusAudit.lean": "fcdd8ea9656a110bf99d0bb969f4bf900f352f8b0fcc54e3e9bb6b6d59259b30",
     "formal/ICFallDegrees/AffineTransport.lean": "1c0ab711a9c71e406278fcdd178c18b5f6674e22f57ddd1c3d7e4fc4c2b42698",
-    "formal/ICFallDegrees/Audit.lean": "9503476f1439016c1cc37828cd75fbc580d583c2ac29a9a691c9e777ce948fe3",
+    "formal/ICFallDegrees/Audit.lean": "8c36b30e3eded567368c9a31472327ac4ffd64157aa88e72a8cd43b4d4b7c3a7",
     "formal/ICFallDegrees/BinaryDescent.lean": "c7314353211179ca0b8c26c38232eca258be0bef99794c36a60f05b02f0e4aeb",
     "formal/ICFallDegrees/BinaryDimensionTwoBases.lean": "9e634c9166e5cdbe37da6af2771964f4bd406495a0e36053df5ebe5c98c76212",
     "formal/ICFallDegrees/BinaryDimensionTwoCurves.lean": "1f1470946768011ab5537f5587da16b2b7f7b59fa701dba7f6415c214b670ff0",
@@ -3621,6 +3671,8 @@
     "formal/ICFallDegrees/GrowthRationalParameterClassification.lean": "ba0e62e9732e0ce57311cb7ab76f2e661cacfd25c85d64e83eecfac70f85efb3",
     "formal/ICFallDegrees/GrowthRationalPoleArithmetic.lean": "6a4f3a6f11cf642a8ce90ab4b347a260ef4de748f5bbdec1b17ede07225a5d0a",
     "formal/ICFallDegrees/GrowthRationalPolynomialDenominators.lean": "74c938d4eabea4fbddbcba6895826a119785efa41909630dcab3ed541162f14a",
+    "formal/ICFallDegrees/GrowthRationalPrimeCutoff.lean": "8e1c6e8f6fa7d9a3c0ac9c9666ac04d0af43dc2ae07359a6307643e0ec5bdcba",
+    "formal/ICFallDegrees/GrowthRationalPrimeNative.lean": "e8fcb4e90bfec81c072f594dee9338a4db59001295eb0c484fbb663fd33389b4",
     "formal/ICFallDegrees/GrowthRationalUnit.lean": "abcaff3b4c20877decf5f426fdb13975e2f06fe2ceff2596e04d3883fad5ed7a",
     "formal/ICFallDegrees/GrowthRationalWronskianRec.lean": "5938a2fac969eff13ef91adbd0b90a2f66165aca46d67d93673c9c4a4a5132fe",
     "formal/ICFallDegrees/GrowthReduction.lean": "a93ccd9768f134337bb2ce6ed43e08c618e96d9d2de3e504b04f6f0301ed498e",
