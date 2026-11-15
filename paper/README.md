@@ -72,3 +72,13 @@ retain its logs rather than overwriting the archived audit.
 
 The existing `paper/` layout is retained to preserve this companion repository's
 published paths; this change adds no separate research manuscript.
+
+## Revised-paper synchronization
+
+The prose and author contacts from `ml-cryptanalysis` commit `94290676` are
+reconciled into this version. Both `adam@isogenylabs.io` and
+`a.buran28@gmail.com` appear on page 1 and in the submission sheet. This
+version retains the later companion corrections and fixed-curve growth
+theorem. The PDF, figures, verification report and ePrint abstract were
+regenerated from these sources; the build and all 295 publication checks
+pass. `SYNC-94290676.json` records the artifact hashes and source commits.

@@ -11,7 +11,7 @@ author must agree.
 | field | value |
 |---|---|
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
-| Authors (in order, UTF-8) | Adam Buran <a.buran28@gmail.com> |
+| Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io; a.buran28@gmail.com |
 | Abstract | paste `eprint-abstract.txt` (2443 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
