@@ -1,0 +1,542 @@
+{
+ "statement": "primes p = 1 mod 2^(k+1), p < 64*4^k, over which the depth-k system of y^2 = x^3 + 6x - 7 with target abscissa 1 has a common zero (proper ideal)",
+ "method": "exhaustive over the 2^k-th roots of unity x1: is (x1+8)/(x1-1) a 2^k-th root of unity",
+ "depths": [
+  {
+   "k": 2,
+   "modulus": 8,
+   "bound": 1024,
+   "primes": 38,
+   "exceptional": 1,
+   "smallest_exceptional": [
+    17
+   ],
+   "largest_exceptional": 17,
+   "smallest_good": 41,
+   "fermat_factors_in_range": [
+    17
+   ],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 0,
+     "exceptional": 0,
+     "heuristic_expected": 0
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 2,
+     "exceptional": 1,
+     "heuristic_expected": 0.6
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 8,
+     "exceptional": 0,
+     "heuristic_expected": 0.5
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 28,
+     "exceptional": 0,
+     "heuristic_expected": 0.4
+    }
+   ]
+  },
+  {
+   "k": 3,
+   "modulus": 16,
+   "bound": 4096,
+   "primes": 66,
+   "exceptional": 4,
+   "smallest_exceptional": [
+    17,
+    97,
+    257,
+    2417
+   ],
+   "largest_exceptional": 2417,
+   "smallest_good": 113,
+   "fermat_factors_in_range": [
+    257
+   ],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 1,
+     "exceptional": 1,
+     "heuristic_expected": 0.8
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 4,
+     "exceptional": 1,
+     "heuristic_expected": 0.8
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 15,
+     "exceptional": 1,
+     "heuristic_expected": 0.9
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 46,
+     "exceptional": 1,
+     "heuristic_expected": 0.7
+    }
+   ]
+  },
+  {
+   "k": 4,
+   "modulus": 32,
+   "bound": 16384,
+   "primes": 123,
+   "exceptional": 3,
+   "smallest_exceptional": [
+    97,
+    257,
+    4481
+   ],
+   "largest_exceptional": 4481,
+   "smallest_good": 193,
+   "fermat_factors_in_range": [],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 2,
+     "exceptional": 1,
+     "heuristic_expected": 1.2
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 8,
+     "exceptional": 1,
+     "heuristic_expected": 1.8
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 23,
+     "exceptional": 0,
+     "heuristic_expected": 1.3
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 90,
+     "exceptional": 1,
+     "heuristic_expected": 1.3
+    }
+   ]
+  },
+  {
+   "k": 5,
+   "modulus": 64,
+   "bound": 65536,
+   "primes": 209,
+   "exceptional": 13,
+   "smallest_exceptional": [
+    257,
+    449,
+    577,
+    641,
+    769
+   ],
+   "largest_exceptional": 26881,
+   "smallest_good": 193,
+   "fermat_factors_in_range": [
+    641
+   ],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 6,
+     "exceptional": 5,
+     "heuristic_expected": 4.1
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 10,
+     "exceptional": 1,
+     "heuristic_expected": 2.3
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 49,
+     "exceptional": 6,
+     "heuristic_expected": 2.7
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 144,
+     "exceptional": 1,
+     "heuristic_expected": 2.1
+    }
+   ]
+  },
+  {
+   "k": 6,
+   "modulus": 128,
+   "bound": 262144,
+   "primes": 353,
+   "exceptional": 22,
+   "smallest_exceptional": [
+    257,
+    641,
+    769,
+    1153,
+    1409
+   ],
+   "largest_exceptional": 170369,
+   "smallest_good": 2689,
+   "fermat_factors_in_range": [],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 8,
+     "exceptional": 6,
+     "heuristic_expected": 5.9
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 23,
+     "exceptional": 8,
+     "heuristic_expected": 4.3
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 68,
+     "exceptional": 5,
+     "heuristic_expected": 3.8
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 254,
+     "exceptional": 3,
+     "heuristic_expected": 3.7
+    }
+   ]
+  },
+  {
+   "k": 7,
+   "modulus": 256,
+   "bound": 1048576,
+   "primes": 630,
+   "exceptional": 32,
+   "smallest_exceptional": [
+    257,
+    769,
+    3329,
+    9473,
+    10753
+   ],
+   "largest_exceptional": 775937,
+   "smallest_good": 7681,
+   "fermat_factors_in_range": [],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 13,
+     "exceptional": 10,
+     "heuristic_expected": 8.1
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 34,
+     "exceptional": 8,
+     "heuristic_expected": 7.0
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 133,
+     "exceptional": 9,
+     "heuristic_expected": 7.6
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 450,
+     "exceptional": 5,
+     "heuristic_expected": 6.5
+    }
+   ]
+  },
+  {
+   "k": 8,
+   "modulus": 512,
+   "bound": 4194304,
+   "primes": 1152,
+   "exceptional": 59,
+   "smallest_exceptional": [
+    7681,
+    10753,
+    11777,
+    12289,
+    13313
+   ],
+   "largest_exceptional": 3786241,
+   "smallest_good": 17921,
+   "fermat_factors_in_range": [],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 24,
+     "exceptional": 19,
+     "heuristic_expected": 16.3
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 64,
+     "exceptional": 13,
+     "heuristic_expected": 13.9
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 221,
+     "exceptional": 11,
+     "heuristic_expected": 12.5
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 843,
+     "exceptional": 16,
+     "heuristic_expected": 12.4
+    }
+   ]
+  },
+  {
+   "k": 9,
+   "modulus": 1024,
+   "bound": 16777216,
+   "primes": 2134,
+   "exceptional": 101,
+   "smallest_exceptional": [
+    12289,
+    13313,
+    15361,
+    18433,
+    19457
+   ],
+   "largest_exceptional": 14307329,
+   "smallest_good": 76801,
+   "fermat_factors_in_range": [
+    2424833
+   ],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 44,
+     "exceptional": 36,
+     "heuristic_expected": 31.9
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 105,
+     "exceptional": 22,
+     "heuristic_expected": 21.4
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 430,
+     "exceptional": 27,
+     "heuristic_expected": 24.8
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 1555,
+     "exceptional": 16,
+     "heuristic_expected": 22.6
+    }
+   ]
+  },
+  {
+   "k": 10,
+   "modulus": 2048,
+   "bound": 67108864,
+   "primes": 3862,
+   "exceptional": 170,
+   "smallest_exceptional": [
+    12289,
+    18433,
+    40961,
+    59393,
+    61441
+   ],
+   "largest_exceptional": 65579009,
+   "smallest_good": 319489,
+   "fermat_factors_in_range": [
+    45592577
+   ],
+   "classes": [
+    {
+     "range_over_4k": [
+      0,
+      1
+     ],
+     "primes": 76,
+     "exceptional": 46,
+     "heuristic_expected": 51.4
+    },
+    {
+     "range_over_4k": [
+      1,
+      4
+     ],
+     "primes": 214,
+     "exceptional": 43,
+     "heuristic_expected": 44.4
+    },
+    {
+     "range_over_4k": [
+      4,
+      16
+     ],
+     "primes": 757,
+     "exceptional": 38,
+     "heuristic_expected": 43.2
+    },
+    {
+     "range_over_4k": [
+      16,
+      64
+     ],
+     "primes": 2815,
+     "exceptional": 43,
+     "heuristic_expected": 40.3
+    }
+   ]
+  }
+ ],
+ "totals_by_class": [
+  {
+   "range_over_4k": [
+    0,
+    1
+   ],
+   "primes": 174,
+   "exceptional": 124,
+   "heuristic_expected": 119.7
+  },
+  {
+   "range_over_4k": [
+    1,
+    4
+   ],
+   "primes": 464,
+   "exceptional": 98,
+   "heuristic_expected": 96.5
+  },
+  {
+   "range_over_4k": [
+    4,
+    16
+   ],
+   "primes": 1704,
+   "exceptional": 97,
+   "heuristic_expected": 97.3
+  },
+  {
+   "range_over_4k": [
+    16,
+    64
+   ],
+   "primes": 6225,
+   "exceptional": 86,
+   "heuristic_expected": 90.0
+  }
+ ]
+}

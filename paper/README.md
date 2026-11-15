@@ -18,19 +18,22 @@ The manuscript gives bounds on specified polynomial presentations, exact
 finite-instance closure results, and a conjectural depth profile. Its chain,
 selector and carry bounds have a saved source-bound Lean audit. The growth
 theorem has a written proof; its Lean reduction retains the curve-model
-hypothesis, except for one curve with a target of order two, where the
-bound is kernel-checked without it (over the complex numbers and along an
-increasing sequence of primes that is not explicit). At depth 14 the lower bound is certified, and the upper bound
+hypothesis, except for curves with a target of order two, where the
+bound is kernel-checked without it (over the complex numbers for a
+one-parameter family of curves, and for one of them along an increasing
+sequence of primes that is not explicit; it fails for the prime factors of
+Fermat numbers, also kernel-checked). At depth 14 the lower bound is certified, and the upper bound
 uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
-The saved audit covers 628 declarations of `Audit.lean` and matches every
+The saved audit covers 636 declarations of `Audit.lean` and matches every
 recorded source digest. After the review of 14 November the complete project
 was built from an empty build directory (macOS, Lean 4.19.0, pinned Mathlib):
 all 217 modules build, and the 840 declarations over all files that print
 axioms use only `propext`, `Classical.choice` and `Quot.sound`
-(`../experiments/ic-lean/BUILD-COLD-20261114.md`). The workflow
+(`../experiments/ic-lean/BUILD-COLD-20261114.md`). Two modules were added
+afterwards (219 modules; incremental build, addendum of the same file). The workflow
 `.github/workflows/ci.yml` repeats the build and audit on Linux for every
 pull request. The archived cold build of 12 November covers the earlier 513
 declarations.
@@ -82,3 +85,12 @@ version retains the later companion corrections and fixed-curve growth
 theorem. The PDF, figures, verification report and ePrint abstract were
 regenerated from these sources; the build and all 295 publication checks
 pass. `SYNC-94290676.json` records the artifact hashes and source commits.
+
+After that synchronization the growth section of the manuscript was extended
+(the kernel-checked theorem now covers a family of curves over the complex
+numbers and states the failure at Fermat-factor primes; Theorem "Growth for a
+target of order two"). The abstract, the author block and the figures did not
+change. `SYNC-94290676.json` is the record of the synchronized version and
+its hashes of the manuscript source, PDF and build report describe that
+version, not the current one; the current hashes are in
+`../experiments/ic-curve-paper/verification.json`.

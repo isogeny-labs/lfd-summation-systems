@@ -124,3 +124,5 @@ import ICFallDegrees.GrowthRationalUnit
 
 import ICFallDegrees.GrowthUnitCertificate
 import ICFallDegrees.GrowthFixedE6PrimeSequence
+import ICFallDegrees.GrowthTwoTorsionFamily
+import ICFallDegrees.GrowthFermatDiagonalObstruction

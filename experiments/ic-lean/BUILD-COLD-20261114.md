@@ -25,6 +25,15 @@ Records in `all-modules-20261114/`:
 The same run then executed `scripts/verify_lean_fall_degrees.py`, which wrote `build.log`, `axioms.log` and
 `verification.json` in this directory: 628 declarations of `Audit.lean`, foundational axioms only.
 
+**Addendum, later on 2026-11-14.** Two modules were added after the cold build
+(`GrowthTwoTorsionFamily`, `GrowthFermatDiagonalObstruction`), and eight lines to `Audit.lean`. The build step of
+the same command was rerun on the same machine on the existing build directory, so it is incremental, not cold:
+`all-modules-20261114b/build.log` has "Build completed successfully" for the root and all 219 modules (413 s).
+`scripts/verify_lean_fall_degrees.py` then rewrote `build.log`, `axioms.log` and `verification.json` in this
+directory: 636 declarations of `Audit.lean`, foundational axioms only; the two new modules print their own axiom
+lists with the same result. The audit of every file that prints axioms (`summary.json` above: 840 declarations)
+was not regenerated here for the two new modules; the CI run on Linux does it, from an empty build directory.
+
 The build covers the modules added after the cold build of 2026-11-12 (`Growth*`, `Selector*`, `UnitInstance`,
 `DepthFourteen`) and the fixed-curve growth modules; for the latter it is the first build in this repository.
 The workflow `.github/workflows/ci.yml` repeats it on Linux on every pull request.

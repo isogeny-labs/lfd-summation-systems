@@ -55,7 +55,7 @@ and `binary-lfd.tex` build with pdfLaTeX or Tectonic. The Lean project needs Lea
     python3 scripts/plot_ic_lfd_figures.py          # regenerates three figures from the records
     python3 scripts/build_ic_curve_paper.py         # regenerates tables, all manuscript figures and PDF
     python3 scripts/check_publication_artifacts.py  # checks saved hashes, audit, sweep and submission abstract
-    for s in scripts/check_n8_*.py; do python3 $s; done   # 33 exact regressions behind the fixed-curve growth theorem
+    for s in scripts/check_n8_*.py; do python3 $s; done   # 35 exact regressions behind the kernel-checked growth theorem
 
 ## Reproducing the main computations
 

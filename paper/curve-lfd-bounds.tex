@@ -138,9 +138,10 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
 \item \emph{Growth} (written proof; conditional in Lean;
  Section~\ref{sec:growth}): the LFD of unit-ideal instances is unbounded in
  the depth, with a linear lower bound of slope $1/14$
- (Theorem~\ref{thm:growth}). For one fixed curve with a target of order two
- the same bound is kernel-checked without hypotheses, over $\mathbb{C}$ and
- along an increasing sequence of primes (Theorem~\ref{thm:growthfixed}).
+ (Theorem~\ref{thm:growth}). For targets of order two the same bound is
+ kernel-checked without hypotheses: over $\mathbb{C}$ for a one-parameter
+ family of curves, and for one of them along an increasing sequence of
+ primes (Theorem~\ref{thm:growthfixed}).
 \item \emph{A conjecture} (Section~\ref{sec:conjecture}):
  $\lfd(k)=\lfloor(k+14)/4\rfloor$ for generic two-summand prime chain
  systems; six predictions were recorded before the computations: three
@@ -406,7 +407,7 @@ of~\cite{ggmp21}. The dimension bound $mk+1$ is the generic finite-quotient
 bound and is not new as a bound. New are its kernel-checked form for every
 input list containing the chains, the two-summand bound $k+2$ at every
 depth, the conditional formalization of the growth theorem and its
-unconditional kernel-checked instance (Theorem~\ref{thm:growthfixed}).
+unconditional kernel-checked instances (Theorem~\ref{thm:growthfixed}).
 
 \section{Systems and notation}\label{sec:systems}
 Figure~\ref{fig:pipeline}(a) shows how the objects of this section fit
@@ -1782,15 +1783,19 @@ $x_i^{2^j}$ leaves $\mathfrak p$ except for the monomials whose exponent
 passes $2^k$ and wraps around, so $S_D$ is closed under the degree-$D$ rule
 if and only if, for every element of $\mathfrak p$ of weight at most $D-1$,
 its part on the wrapping monomials is again in $\mathfrak p$. By the
-theorem of Brownawell and Masser on vanishing sums in function
-fields~\cite{bm86} (genus one, at most six zeros and poles; the poles of the
+bound for vanishing sums in function fields of characteristic $0$, due to
+Mason, Voloch~\cite[Theorem~4]{voloch85} and Brownawell and
+Masser~\cite{bm86} (genus one, at most six zeros and poles; the poles of the
 two coordinate functions are at $O$ and at $R$, and $t\ne0$ makes each of
 them a unit at the other's pole), a minimal linear relation among $m$
 monomials $x(P)^{a}x(R-P)^{b}$ has exponent differences $\Delta a,\Delta b$
 with $|2\Delta a|+|2\Delta b|\le6(m-1)(m-2)$; in characteristic $p$ the same bound holds for relations
 with coefficients that are $p$-th powers, for twice the differences measured
-modulo $p$ (a statement of the type of Voloch~\cite{voloch85}; the full
-written proof contains a self-contained proof). A dyadic window of length
+modulo $p$. This form is not quoted from the literature: it is the same
+Wronskian argument with the independence criterion over $F^p$ of Garcia and
+Voloch~\cite{gv87} (for the function-field $abc$ theorem in positive
+characteristic see Wang~\cite{wang99}), and the full written proof
+contains a self-contained proof. A dyadic window of length
 $2^\ell$ contains at most $\binom{2\ell}{\le w}$ monomials of weight at most
 $w$, so for $k>w+\Lambda(w)$ no minimal relation of weight at most $w$ joins
 a wrapping monomial to a non-wrapping one, and the splitting holds. Hence
@@ -1814,58 +1819,74 @@ $\lfloor(k-10)/14\rfloor<d\le k+2$ for $k\ge24$ (for $24\le k\le37$ the
 lower half says only $d\ge2$, which is why the theorem is stated from
 $k=38$); the splitting criterion is proved as an equivalence. Not formalized: the function field of a
 curve of genus one and the vanishing-sum bound for it; the kernel has a
-curve model only for the instance of Theorem~\ref{thm:growthfixed}, where
+curve model only for the instances of Theorem~\ref{thm:growthfixed}, where
 the function field is rational. The hypothesis ``$t\ne0$'' is used only
 there, to produce a curve model, so it does not appear in the Lean
 statements; ``nonsingular'' appears only where the upper bound $k+2$ is
 combined in. Two adversarial reviews checked the written proof
-(Appendix~\ref{app:checks}); neither could consult the original statements
-of Brownawell--Masser and Voloch.
+(Appendix~\ref{app:checks}); neither could consult the cited sources. They
+were compared afterwards. In characteristic $0$ the bound used is
+Theorem~4 of~\cite{voloch85}, read in the original, with the same constant;
+\cite{bm86} was read only through quotations of it. Neither paper has a
+statement in positive characteristic, so there the bound rests on the
+self-contained proof, whose Wronskian criterion is Theorem~1
+of~\cite{gv87} (read in the original).
 
-\subsection{A fixed curve in the kernel}\label{sec:growthfixed}
-For one curve the hypothesis of the Lean statement is discharged in Lean.
-Let $E_6\colon y^2=x^3+6x-7$, nonsingular away from characteristic $3$
-($4\cdot6^3+27\cdot7^2=3^7$), and $t=1$, the abscissa of the point $(1,0)$
-of order two.
+\subsection{Targets of order two in the kernel}\label{sec:growthfixed}
+For curves with a target of order two the hypothesis of the Lean statement
+is discharged in Lean. Let $E_a\colon y^2=x^3+ax-(1+a)$, which contains the
+point $(1,0)$ of order two, and $t=1$, the abscissa of that point. Since
+$4a^3+27(1+a)^2=(a+3)^2(4a+3)$, the curve is nonsingular for $a\ne-3,-3/4$;
+$E_6\colon y^2=x^3+6x-7$ is nonsingular away from characteristic $3$
+($4\cdot6^3+27\cdot7^2=3^7$).
 
-\begin{theorem}[Growth on a fixed curve; kernel-checked]\label{thm:growthfixed}
+\begin{theorem}[Growth for a target of order two; kernel-checked]\label{thm:growthfixed}
 Consider the normalized two-summand chain presentation at depth $k$ for
-$E_6$ and $t=1$.
+$E_a$ and $t=1$.
 \begin{enumerate}
-\item Over $\mathbb{C}$ the ideal is the unit ideal at every depth
- $k\ge2$, and for every $k\ge24$ the last fall degree $d$ satisfies
- $\lfloor(k-10)/14\rfloor<d\le k+2$.
-\item Over $\F_p$, for every $D\ge1$, every $k\ge14D+10$ and every prime
- $p>2^{k+1}$, $1\notin V_D$.
-\item For every $k\ge24$ and every $B$ there is a prime $p>B$ with
+\item Over $\mathbb{C}$, for every $a$ with $|a|>5$, the ideal is the unit
+ ideal at every depth $k\ge2$, and for every $k\ge24$ the last fall degree
+ $d$ satisfies $\lfloor(k-10)/14\rfloor<d\le k+2$.
+\item For $E_6$ over $\F_p$, for every $D\ge1$, every $k\ge14D+10$ and every
+ prime $p>2^{k+1}$, $1\notin V_D$.
+\item For $E_6$, every $k\ge24$ and every $B$ there is a prime $p>B$ with
  $p\equiv1\pmod{2^{k+1}}$ such that the last fall degree $d$ of the system
  over $\F_p$ satisfies $\lfloor(k-10)/14\rfloor<d\le k+2$. Hence there are
  primes $p_{24}<p_{25}<\cdots$ with $p_k\equiv1\pmod{2^{k+1}}$ such that
  the last fall degree $d_k$ at depth $k$ over $\F_{p_k}$ satisfies
  $k/28\le d_k\le k+2$.
+\item For $E_6$ and every $k\ge2$, every prime factor $p$ of $2^{2^k}+1$
+ satisfies $p\equiv1\pmod{2^{k+1}}$ and $p>2^{k+1}$, and over $\F_p$ the
+ ideal at depth $k$ is a proper ideal. So the unit ideal, and with it the
+ lower bound of (3), fails for some prime of that progression at every
+ depth.
 \end{enumerate}
 \end{theorem}
 \begin{proof}[Proof sketch]
 For a target of order two the summation polynomial is a square,
 \[
- S_3(x_1,x_2,1)=\bigl((x_1-1)x_2-x_1-8\bigr)^2 ,
+ S_3(x_1,x_2,1)=\bigl((x_1-1)x_2-x_1-(a+2)\bigr)^2 ,
 \]
-whose root $x_2=T(x_1)$, $T(x)=(x+8)/(x-1)$, is the action of the
+whose root $x_2=T(x_1)$, $T(x)=(x+a+2)/(x-1)$, is the action of the
 translation by $(1,0)$ on abscissas. So $\xi_1=X$ and $\xi_2=T(X)$ in the
 rational function field $K(X)$ satisfy $S_3(\xi_1,\xi_2,1)=0$, and the
 vanishing-sum bound of a curve model becomes a statement about Wronskians
-of the rational functions $X^aT(X)^b$, with zeros and poles at the four
-places $0$, $-8$, $1$, $\infty$. The kernel proves it in characteristic
-$0$, and in characteristic $p>2^{k+1}$ for the monomials with exponents in
-$[0,2^k)^2$, which are the ones the reduction of
-Theorem~\ref{thm:growth} uses; this gives (2) and the lower half of (1).
-The ideal is the unit ideal over $\mathbb{C}$ because on the grid
-$x_1^{2^k}=x_2^{2^k}=1$ one has $|(x_1-1)x_2-x_1|\le3<8$. The identity
+of the rational functions $X^iT(X)^j$, with zeros and poles among the four
+places $0$, $-(a+2)$, $1$, $\infty$. The kernel proves it in
+characteristic $0$ for every $a\ne-3$, and for $a=6$ in characteristic
+$p>2^{k+1}$ for the monomials with exponents in $[0,2^k)^2$, which are the
+ones the reduction of Theorem~\ref{thm:growth} uses; this gives (2) and the
+lower half of (1). The ideal is the unit ideal over $\mathbb{C}$ because on
+the grid $x_1^{2^k}=x_2^{2^k}=1$ one has
+$|(x_1-1)x_2-x_1|\le3<|a|-2\le|a+2|$. For $a=6$ the identity
 $1\in\langle F\rangle$ descends to an identity over $\mathbb{Z}$ with a
 nonzero integer $N_k$ in place of $1$, so the ideal is the unit ideal over
 every field in which $N_k\ne0$; primes $p\equiv1\pmod{2^{k+1}}$ above any
 bound exist by the elementary cyclotomic argument, and the upper bounds
-are Theorem~\ref{thm:selector}.
+are Theorem~\ref{thm:selector}. For (4), $2$ has order $2^{k+1}$ modulo a
+prime factor $p$ of $2^{2^k}+1$, so $4$ has order $2^k$; setting
+$x_1=x_2=4$ and every chain variable to the corresponding power $4^{2^j}$
+solves the chain equations, and there $(x_1-1)x_2-x_1-8=12-4-8=0$.
 \end{proof}
 
 The theorem is weaker than Theorem~\ref{thm:growth} in its range and
@@ -1873,28 +1894,38 @@ stronger in its status. The target has order two, a case in which the
 closure dimensions are exceptional (Section~\ref{sec:blockfour}); the
 function field in the proof has genus zero, so nothing here formalizes
 the genus-one bound that Theorem~\ref{thm:growth} needs for general
-targets, and that theorem stays a written proof, conditional in Lean. The
-integer $N_k$ is not computed, so the primes of (3) are not explicit and
-the statement is not claimed for one prime at all depths; it cannot hold
-for every prime $p\equiv1\pmod{2^{k+1}}$ (Remark~\ref{rem:fermatbad}). Item (2) holds for every prime
-$p>2^{k+1}$. Since
-$3t^2+a=9$, Theorem~\ref{thm:three} already gives $\lfd\ge4$ on these
-instances, and the lower bound of (1) and (3) exceeds it from $k=66$ on.
-As elsewhere in the development, no elliptic curve appears in Lean: the
-statements concern the explicit polynomial system with $a=6$, $b=-7$ and
-$t=1$ (Appendix~\ref{app:lean}).
+targets, and that theorem stays a written proof, conditional in Lean.
+Item (1) covers a one-parameter family of curves; items (2) to (4) are
+proved for $a=6$ only, because the prime-field part of the development is
+written for that curve. The integer $N_k$ is not computed, so the primes of
+(3) are not explicit and the statement is not claimed for one prime at all
+depths; by (4) it does not hold for every prime $p\equiv1\pmod{2^{k+1}}$
+(Remark~\ref{rem:fermatbad}). Item (2) holds for every prime $p>2^{k+1}$,
+and on the primes of (4) it carries no information, the ideal being proper
+there. Since $3t^2+a=3+a\ne0$, Theorem~\ref{thm:three} already gives
+$\lfd\ge4$ on these instances, and the lower bound of (1) and (3) exceeds it
+from $k=66$ on. As elsewhere in the development, no elliptic curve appears
+in Lean: the statements concern the explicit polynomial system with
+coefficients $a$, $b=-1-a$ and $t=1$ (Appendix~\ref{app:lean}).
 
 \begin{remark}[Bad admissible primes]\label{rem:fermatbad}
-Let $k\ge2$ and let $p$ be a prime factor of the Fermat number
-$2^{2^k}+1$. Then $2$ has order $2^{k+1}$ modulo $p$, so
-$p\equiv1\pmod{2^{k+1}}$, $p\ne3$ and $E_6$ is nonsingular over $\F_p$;
-and $4$ has order $2^k$. Setting $x_1=x_2=4$ and every chain variable to the
-corresponding power $4^{2^j}$ solves the chain equations, and there
-$(x_1-1)x_2-x_1-8=12-4-8=0$. So the system has a common zero over $\F_p$ and
-is not the unit ideal, at every depth $k\ge2$; the smallest case is $p=17$,
-$k=2$. Since $2^{2^k}+1$ has finitely many prime factors, this is consistent
-with (3). The argument is written and is not part of the kernel-checked
-development.
+The primes of (4) are the prime factors of the Fermat numbers
+$2^{2^k}+1$; they are different from $3$, so $E_6$ is nonsingular over
+them. The smallest case is $p=17$, $k=2$, and the known factors give
+$p=257$ at $k=3$, $p=65537$ at $k=4$ and $p=641$, $6700417$ at $k=5$.
+This is consistent with (3): at a fixed depth the ideal is the unit ideal
+over $\F_p$ for every prime above a bound (kernel-checked, the bound being
+the one that is not computed), so the exceptional primes are finitely
+many. The primes of (4) are not the only ones. A common zero is a pair
+$(x_1,T(x_1))$ of $2^k$-th roots of unity, that is, a decomposition of the
+target, and the usual count predicts about $4^k/(2p)$ unordered pairs.
+Exhaustive enumeration at $k=2,\ldots,10$ over all primes
+$p\equiv1\pmod{2^{k+1}}$ below $64\cdot4^k$ agrees with it: the ideal is
+proper for $124$ of the $174$ primes below $4^k$, and for $98$ of $464$,
+$97$ of $1704$ and $86$ of $6225$ primes in the three ranges
+$[4^{k+i},4^{k+i+1})$, $i=0,1,2$ (predicted: $120$, $97$, $97$, $90$).
+So exceptional primes are frequent up to $4^k$ and thin out beyond it, as
+the count predicts; the enumeration is exact and is not kernel-checked.
 \end{remark}
 
 \paragraph{Scope.} The range of the theorems ($k\ge24$) is beyond every
@@ -1905,7 +1936,12 @@ linear form $\lfloor(k-10)/14\rfloor+1$; it is far from the measured values
 ($7$ at $k=14$, upper half lifted). It establishes that the last
 fall degree is unbounded and grows at least linearly in the depth, with
 slope at least $1/14$ against the upper slope $1$ and the conjectured slope
-$1/4$ (Figure~\ref{fig:lfddepth}(b)). The case $t=0$ is not covered.
+$1/4$ (Figure~\ref{fig:lfddepth}(b)). Over a fixed prime field the depth
+is at most the $2$-adic valuation of $p-1$, so the prime-field statements
+are about pairs $(p,k)$ with $p$ growing with the depth; a statement about
+one system at every depth is available only in characteristic $0$, and in
+the kernel only as item (1) of Theorem~\ref{thm:growthfixed}. The case
+$t=0$ is not covered.
 
 \subsection{Blocks of four: conjectural remarks}\label{sec:blockfour}
 The measured profile climbs by one every four depths. This subsection
@@ -1996,12 +2032,14 @@ This is not proved.
  three of these instances.
 \item \emph{The growth theorem} is a written proof, conditional in Lean on
  the curve-model hypothesis (scope in Section~\ref{sec:growth}).
- Brownawell--Masser and Voloch enter only through a self-contained proof,
- not checked against the original statements. The kernel-checked instance
- (Theorem~\ref{thm:growthfixed}), $y^2=x^3+6x-7$ with $t=1$, is one curve
- with a target of order two and a rational function field; over prime
- fields it holds along a sequence of primes that are not explicit, and not
- for every admissible prime (Remark~\ref{rem:fermatbad}).
+ In characteristic $0$ its analytic input is a published
+ bound~\cite{voloch85,bm86}; in characteristic $p$ it is a self-contained
+ proof of a variant that we did not find stated in the literature. The kernel-checked instances
+ (Theorem~\ref{thm:growthfixed}) all have a target of order two and a
+ rational function field: the curves $y^2=x^3+ax-(1+a)$ with $|a|>5$ and
+ $t=1$ over $\mathbb{C}$, and $y^2=x^3+6x-7$ over prime fields, where the
+ bound holds along a sequence of primes that are not explicit, and not for
+ every admissible prime (item (4) of the theorem).
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
  is one instance and one engine, with no computation at $k\ge7$ and no
  prediction beyond $k=6$. The value $\deg g+1$ for four and five summands is
@@ -2073,7 +2111,8 @@ below, followed by computations that could test the proposed explanations.
  kernel proof of it would settle its status. A second implementation reaching $k\ge11$ would replicate
  Section~\ref{sec:binarydeep} independently.
 \item \emph{The growth theorem in the kernel.} The kernel has a curve model
- for one curve with a target of order two
+ only for curves with a target of order two, in characteristic $0$ for a
+ one-parameter family and over prime fields for one curve
  (Theorem~\ref{thm:growthfixed}). Missing for general targets are the
  function field of a curve of genus one and the vanishing-sum bound for
  its two coordinate functions; missing over prime fields are an explicit
@@ -2107,7 +2146,7 @@ their last depth $11$ and extend the profile to depth $14$; their unreduced
 presentation has the same LFD at these values.
 
 The written growth proof establishes a lower slope of $1/14$, and the
-kernel checks it for one curve with a target of order two. The data
+kernel checks it for curves with a target of order two. The data
 suggest the larger slope $1/4$ and the law
 $\lfd(k)=\lfloor(k+14)/4\rfloor$. None of the six predictions recorded in
 advance for this prime-field law has failed on the values computed;
@@ -2167,7 +2206,7 @@ $1\in V_4$ on the $(0,0)$ family & \code{PrimeM2Sharp.one\_at\_four}\\
 Local-to-global criterion & \code{LocalReductionBound.lfd\_bound\_of\_local}\\
 Quotient exclusion principle & module \code{QuotientLowerBound}\\
 Theorem~\ref{thm:growth} (conditional) & \code{GrowthMain.CurveModel}, \code{growth\_theorem}, \code{growth\_theorem\_linear}, \code{growth\_lfd\_window}, \code{GrowthExistence.growth\_instance\_window}, \code{GrowthCriterion.closed\_iff\_fei}\\
-Theorem~\ref{thm:growthfixed} & (1) \code{GrowthFixedE6.model}, \code{unit}, \code{exists\_lfd\_linear\_window}; (2) \code{GrowthPrimeE6NativeNonmembership.\allowbreak{}e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthFixedE6NativeUnit.\allowbreak{}exists\_actual\_e6\_prime\_unit\_bound}, \code{GrowthFixedE6PrimeTheta.\allowbreak{}exists\_actual\_prime\_theta\_above}, \code{GrowthFixedE6PrimeSequence.\allowbreak{}exists\_actual\_growing\_prime\_theta\_sequence}\\
+Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.\allowbreak{}unit\_complex\_of\_norm\_gt}, \code{GrowthTwoTorsionFamily.model}, \code{exists\_lfd\_linear\_window} (for $a=6$: \code{GrowthFixedE6.model}, \code{unit}, \code{exists\_lfd\_linear\_window}); (2) \code{GrowthPrimeE6NativeNonmembership.\allowbreak{}e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthFixedE6NativeUnit.\allowbreak{}exists\_actual\_e6\_prime\_unit\_bound}, \code{GrowthFixedE6PrimeTheta.\allowbreak{}exists\_actual\_prime\_theta\_above}, \code{GrowthFixedE6PrimeSequence.\allowbreak{}exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.\allowbreak{}e6\_not\_unit\_of\_fermat\_factor}, \code{exists\_bad\_admissible\_prime}\\
 \bottomrule
 \end{tabular}
 \caption{Statements and Lean declarations.}
@@ -2394,7 +2433,7 @@ Result & Location\\
 \midrule
 Lean development and audit & \code{formal/ICFallDegrees/}; audit report \code{experiments/\allowbreak{}ic-lean/}\\
 Depth-$7$ and depth-$6$ kernel certificates & \code{experiments/\allowbreak{}ic-bounds-cert/}, \code{experiments/\allowbreak{}ic-bounds-exact-k6/}\\
-Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on the fixed curve of Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md} and the other \code{N8-*.md}\\
+Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md}, \code{N8-fermat-diagonal-obstruction-20261114.md} and the other \code{N8-*.md}; reviews of the written growth proof: \code{N8-growth-review.md}, \code{N8-growth-review-redteam.md}\\
 Selector-bound test (summaries) & \code{experiments/\allowbreak{}ic-bounds-upper/}, \code{experiments/\allowbreak{}ic-bounds-upper-redteam/}\\
 Genericity denominator, twists & \code{experiments/\allowbreak{}ic-bounds-genericity/}\\
 Reviews & \code{docs/reviews-papers-proofs-20261112.md} and \code{docs/reviews-20261112/} (referee reports), \code{docs/reviews-paper-audit-20261112.md}, \code{docs/reviews-curve-lfd-redteam-20261105.md}, \code{docs/reviews-curve-lfd-novelty-20261105.md}, \code{docs/reviews-U1-upper-bound-redteam-20261110.md}, \code{docs/reviews-N8-growth-redteam-20261112.md}, \code{docs/reviews-N8-growth-redteam2-20261112.md}\\
@@ -2504,6 +2543,13 @@ Math. Proc. Cambridge Philos. Soc. 100 (1986), 427--434.
 \bibitem{voloch85} J. F. Voloch.
 \emph{Diagonal equations over function fields}.
 Bol. Soc. Brasil. Mat. 16 (1985), 29--39.
+\bibitem{gv87} A. Garcia and J. F. Voloch.
+\emph{Wronskians and linear independence in fields of prime characteristic}.
+Manuscripta Math. 59 (1987), 457--469.
+\bibitem{wang99} J. T.-Y. Wang.
+\emph{A note on Wronskians and the ABC theorem in function fields of prime
+characteristic}.
+Manuscripta Math. 98 (1999), 255--264.
 \bibitem{guo26} J. Guo, H. Shen, J. Liu and L. Zhi.
 \emph{Formalizing Gr\"obner basis theory in Lean}.
 \href{https://arxiv.org/abs/2602.12772}{arXiv:2602.12772} (2026).

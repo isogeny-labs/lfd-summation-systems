@@ -645,3 +645,15 @@ import ICFallDegrees
 #print axioms ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_prime_theta_of_native_certificates
 #print axioms ICFallDegrees.GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above
 #print axioms ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence
+
+-- The same window over C for every curve y^2 = x^3 + a x - (1 + a) with |a| > 5 and target abscissa 1.
+#print axioms ICFallDegrees.GrowthCharZeroSeparatedFamily.unit_complex_of_norm_gt
+#print axioms ICFallDegrees.GrowthCharZeroSeparatedFamily.nonsingular_of_norm_gt
+#print axioms ICFallDegrees.GrowthTwoTorsionFamily.model
+#print axioms ICFallDegrees.GrowthTwoTorsionFamily.lfd_linear_window
+#print axioms ICFallDegrees.GrowthTwoTorsionFamily.exists_lfd_linear_window
+
+-- Prime factors of the Fermat number 2^(2^k) + 1: admissible primes over which the fixed system is a proper ideal.
+#print axioms ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat
+#print axioms ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat_factor
+#print axioms ICFallDegrees.GrowthFermatDiagonalObstruction.exists_bad_admissible_prime

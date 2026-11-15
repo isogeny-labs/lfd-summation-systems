@@ -29,7 +29,7 @@ jobs:
         run: |
           sudo apt-get install -y -qq poppler-utils
           python scripts/check_publication_artifacts.py
-      - name: Fixed-curve growth theorem, 33 exact regressions
+      - name: Kernel-checked growth theorem, 35 exact regressions
         run: |
           set -euo pipefail
           for script in scripts/check_n8_*.py; do

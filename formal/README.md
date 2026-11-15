@@ -44,7 +44,7 @@ python scripts/verify_lean_fall_degrees.py
 
 The verifier writes [the report](../experiments/ic-lean/verification.json),
 [build log](../experiments/ic-lean/build.log), and
-[axiom log](../experiments/ic-lean/axioms.log). The checked run covers 628
+[axiom log](../experiments/ic-lean/axioms.log). The checked run covers 636
 public declarations, whose proof
 dependencies are subsets of mathlib's standard foundational axioms
 `propext`, `Classical.choice`, and `Quot.sound`. No project axioms,
@@ -187,9 +187,16 @@ theorem of the paper for one instance without any hypothesis: the normalized two
 | `GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound` | for each `k` there is `B` such that the ideal over `F_p` is the unit ideal for every prime `p > B` (`B` is not computed) |
 | `GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above` | for `k >= 24` and every `B` there is a prime `p > B`, `p = 1 mod 2^(k+1)`, such that the system over `F_p` has a last fall degree `d` with `floor((k-10)/14) < d <= k+2` |
 | `GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence` | a strictly increasing sequence of such primes, one for each depth `k = n + 24` |
+| `GrowthTwoTorsionFamily.model`, `exists_lfd_linear_window` | the first three rows for every curve `y^2 = x^3 + a x - (1 + a)` with complex `a`, `|a| > 5`, and target abscissa `1`: curve model (for `a != -3`), and for `k >= 24` a last fall degree `d` with `floor((k-10)/14) < d <= k+2` |
+| `GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat_factor`, `exists_bad_admissible_prime` | for `k >= 2` and every prime factor `p` of `2^(2^k) + 1`: `p = 1 mod 2^(k+1)`, `p > 2^(k+1)`, and over `F_p` the ideal at depth `k` is proper (common zero `x_1 = x_2 = 4`); such a prime exists at every depth |
 
-Not proved: the statement for every prime `p = 1 mod 2^(k+1)`, for one prime at all depths, or for another
-curve or target. The general growth theorem (`GrowthMain.growth_theorem`) still takes a `CurveModel` as a
+The last two rows were added in this repository on 2026-11-14 (`GrowthTwoTorsionFamily.lean` composes
+statements that were already parametric in `a`; `GrowthFermatDiagonalObstruction.lean` extends the upstream file
+of ml-cryptanalysis `0712c0d5`, which has the grid point only, to the polynomial system). The second shows that
+the prime-field rows cannot hold for every prime `p = 1 mod 2^(k+1)`.
+
+Not proved: the prime-field statements for one prime at all depths, for an explicit prime, or for a curve other
+than `a = 6`; any statement for a target that is not of order two. The general growth theorem (`GrowthMain.growth_theorem`) still takes a `CurveModel` as a
 hypothesis; for a target that is not of order two this needs a function field of genus one, which is not
 formalized.
 
@@ -230,7 +237,7 @@ proof.
 
 ### Building every module
 
-`ICFallDegrees.lean` imports the final theorem, so `lake build` covers its 132 modules. Seven of the 217
+`ICFallDegrees.lean` imports the final theorem, so `lake build` covers its 132 modules. Seven of the 219
 modules are outside the default target: `Audit`, `SparseDemo` and the five side results
 `GrowthComplexCofactorArithmetic`, `GrowthRatFuncWronskianTwo`, `GrowthRationalBoundary`,
 `GrowthRationalGridUnit` and `GrowthRationalMobius`. To build all of them and audit every `#print axioms` of the project (the file

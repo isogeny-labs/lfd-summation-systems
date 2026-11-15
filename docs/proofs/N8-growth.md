@@ -19,7 +19,7 @@ kernel; C1 (c), existence of unit instances: kernel, unconditional (`GrowthExist
 |---|---|---|
 | T1 | **Growth theorem.** Let K be a field of characteristic 0 or p > 2^(k+1), E: y² = x³ + ax + b nonsingular over K, t ∈ K, **t ≠ 0**. Let D ≥ 2 and k ≥ k_D := D + Λ(D−1) (Λ in Section 4; k_3 = 39, k_4 = 52, k_5 = 64, k_6 = 77; **k_D ≤ 14D + 10** for all D). Then 1 ∉ V_D(k). More precisely every element of V_D(k), read as a polynomial with exponents in [0, 2^k)², has its lift in the prime ideal 𝔭 of Section 1 (the kernel of x_i ↦ ξ_i into the function field of the curve; the form the Lean statement uses). | **proof** (Sections 2–5) |
 | C1 | Let K have characteristic 0 or p > 2^(k+1), E nonsingular, t ≠ 0. (a) For D ≥ 2 and k ≥ k_D, 1 is not in the ordinary degree-D closure of the chain presentation (bridge: needs only 2 ≠ 0 in K). (b) If moreover the presentation generates the unit ideal, no e ≤ D is a last fall degree bound; with the kernel upper bound, **⌊(k − 10)/14⌋ + 1 ≤ LFD(k) ≤ k + 2 for k ≥ 38** (and 1 + max{D : k_D ≤ k} ≤ LFD(k) ≤ k + 2 for k ≥ 27). (c) Such unit-ideal instances exist at every depth k ≥ 2 (over F_p, p a prime factor of 2^(2^k) + 1, curves y² = x³ + ax; kernel lemma `UnitInstance.unit_zmod`), so the last fall degree of the two-summand chain systems is unbounded, with lower slope ≥ 1/14 (→ 1/13 asymptotically with the exact Λ). The condition 2^k ∣ p − 1 of the repository is the natural setting but is not used. | **proof** (Corollary 5.2), given T1; the bridge, the upper bound and the unit lemma are **kernel** |
-| T2 | Vanishing sums on a curve (function-field abc): Theorem 3.1. Not new: in characteristic 0 it gives the same pairwise bound as Brownawell–Masser (1986), Theorem B; the characteristic-p form with independence over F^p goes back to Voloch (1985). A self-contained proof is written out in Section 3 because neither statement was retrieved in the original (Section 3.1). | **proof** (Section 3) |
+| T2 | Vanishing sums on a curve (function-field abc): Theorem 3.1. Not new: in characteristic 0 it gives the same pairwise bound as Brownawell–Masser (1986), Theorem B; in characteristic 0 it is also Theorem 4 of Voloch (1985), read in the original on 2026-11-14. The characteristic-p form with independence over F^p is **not** in Voloch (1985), which is over ℂ only (correction of 2026-11-14; Sections 3.1 and 12): its Wronskian criterion is Garcia–Voloch (1987), Theorem 1, and the variant with orders divisible by p was not found in the literature. A self-contained proof is written out in Section 3. | **proof** (Section 3) |
 | T3 | Reduction: S_D(k) is closed under the degree-D rule of A_k if and only if the splitting property FEI_k(D−1) holds (every instance), and then V_D(k) ⊂ S_D(k), 1 ∉ V_D(k). | **proof** (Propositions 2.1, 2.2); also recomputed both ways on 33 cases (Section 6) |
 | T4 | The spaces S_D(k) are free extensions in the depth: S_D(k+1) = ⊕_q x^(2^k q)·(S_D(k) ∩ M_≤D−wt q) for k ≥ D + Λ(D) (char 0 or p > 2^(k+2)). | **proof** (Corollary 5.3) |
 | E1 | S_D(k) is closed (equivalently FEI_k(D−1)) first at k = 4, 8, 12 for D = 3, 4, 5, and at every larger depth computed (D = 3, 4: up to k = 9; D = 5: k = 12 only): on the data FEI_k(w) ⇔ k ≥ 4w − 4. The case D = 5, k = 12 is a certificate of 1 ∉ V_5(12) from 12,951 monomials on the curve, without a closure. | **exact** (Section 6.2); the pattern is a **conjecture** |
@@ -147,6 +147,24 @@ Then H(v₁, …, v_m) ≤ ((m−1)(m−2)/2)·(2γ − 2 + |𝒮|).
   Bol. Soc. Brasil. Mat. 16 (1985)). **The exact statement and constants of Voloch's paper were not
   retrieved**, neither by the author nor by the reviewer. Hypothesis 3 (orders divisible by p
   outside 𝒮, instead of units) is a harmless variant needed for coefficients in F^p.
+* *Sources consulted on 2026-11-14 (this corrects the bullet above).* Voloch's paper was read in full
+  (author's scan, https://web.ma.utexas.edu/users/voloch/Preprints/Diagonal_Equations.pdf). It is over ℂ
+  throughout and has no statement in positive characteristic. Its Theorem 4: S a finite set of places of a
+  function field K/ℂ of genus g, u₁, …, u_m S-units linearly independent over ℂ with Σ u_i = 1; then
+  max_i deg u_i ≤ (m(m−1)/2)(2g − 2 + |S|) (Voloch attributes it to Mason and gives a new proof; his
+  inequality (17) is the projective-height form). With his m equal to our m − 1 this is the characteristic-0
+  case of Theorem 3.1 exactly, hypothesis and constant. Brownawell–Masser was still not read in the original
+  (paywalled); by Zannier, Acta Arith. 64 (1993), 87–98, their Corollary 1 to Theorem A is the same bound
+  C(n−1, 2)(#S + 2g − 2) under "no proper subset linearly dependent", and Theorem B has the weaker hypothesis
+  "no proper vanishing subsum". For characteristic p the references are: Garcia–Voloch, Wronskians and linear
+  independence in fields of prime characteristic, Manuscripta Math. 59 (1987), 457–469, Theorem 1 (read in the
+  original): x₀, …, x_n are independent over K^p·k if and only if some determinant of Hasse derivatives
+  D^(ε_i)(x_j) with orders 0 = ε₀ < … < ε_n < p is nonzero, which is step (a) of the proof below; and for the
+  bound itself J. T.-Y. Wang, J. Number Theory 58 (1996) and Manuscripta Math. 98 (1999), 255–264 (preprint
+  of the latter read), whose truncated second main theorem gives the bound for S-units with a factor
+  max{0, 2g − 2 + |S|}. Hypothesis 3 in the form "orders divisible by p outside 𝒮" was not found in any source
+  read; it is proved here (step (3.3)). So in characteristic p Theorem 3.1 stands on the proof in this
+  file, not on a citation.
 
 No novelty is claimed for Theorem 3.1. The proof below is kept so that the file is
 self-contained; it is the usual Wronskian argument.
@@ -750,3 +768,41 @@ statements (R2-8). Also applied in this file (2026-11-12): the scope of E2 is re
 D = 4, k ≤ 8, where it is **exact**, and the general equivalence is labelled **empirical** (row E2 and Section 7.1;
 R2-9); T1 now says that the lifts lie in the prime ideal 𝔭, the form the Lean statement uses, instead of "vanish on
 the curve" (R2-10); Remark 1 on unequal depths states the condition p > 2^(max(k₁,k₂)+1) (R2-11).
+
+## 12. Status on 2026-11-14 (companion repository)
+
+Nothing in Sections 1 to 7 changed on this date except the two corrections of the first review listed below.
+
+* **First review and its reruns.** `docs/proofs/N8-growth-review.md` (main-session read of the draft, with the
+  reconciliation against the blind red-team read `docs/proofs/N8-growth-review-redteam.md`) is now in this
+  repository. Of its seven required changes, items 3 and 6 were already covered by Sections 10 and 11 (F1, F7); item 2
+  (references) is settled below; item 1
+  (ker d/dz = F^p, by the prime-degree argument) and the record name of item 5 (`ideal-D4-p12289-s12.json`) are
+  applied in Sections 3.1 and 6.1 (ml-cryptanalysis `aa3da347`); item 7 (the asymptotic slope) is covered by F10.
+  Item 4 (growth over a prime field is a statement about pairs (p, k) with 2^(k+1) ∣ p − 1, not about one prime)
+  is stated in the paper's scope paragraph; Corollary 5.2 (c) above already quantifies over the prime per depth.
+  The reviewer's FEI records at (w, k) = (2, 10..12), (3, 10..11) are `experiments/ic-bounds-growth/fei-w{2,3}-*`;
+  they were recomputed on 2026-11-14 with equal results.
+* **Sources of Theorem 3.1.** Compared with the originals on this date (Section 3.1, last bullet). The
+  attribution of the characteristic-p form to Voloch (1985) was wrong and is corrected in row T2, in Section 3.1
+  and in the paper, which now cites Garcia–Voloch (1987) and Wang (1999) for characteristic p; this settles item 2
+  of the first review. No statement of this file changes. The first review's knowledge-base check was also run:
+  no published lower bound for a last fall degree (or first fall degree, degree of regularity, solving degree)
+  of summation or Weil-descent systems that grows with the depth or the number of variables was found; the
+  corpus records the question as open.
+* **Theorem 3.3 in the kernel, for targets of order two.** The hypothesis `GrowthMain.CurveModel` is no longer
+  unsatisfied in Lean. For the curves y² = x³ + ax − (1 + a) with target abscissa 1 (the point (1, 0) of order
+  two) the function field generated by the two coordinates is rational, ξ₂ = (ξ₁ + a + 2)/(ξ₁ − 1), and the
+  spread bound is proved in Lean: over ℂ for every a ≠ −3 (`GrowthTwoTorsionFamily.model`), giving
+  ⌊(k − 10)/14⌋ < LFD ≤ k + 2 for |a| > 5 and k ≥ 24 (`exists_lfd_linear_window`), and for a = 6 over F_p,
+  p > 2^(k+1), for the exponents below 2^k (`GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime`).
+  This is the genus-zero case and says nothing about Theorem 3.3 for a general target, which remains **proof**.
+  The hypothesis t ≠ 0 of T1 holds there (t = 1); the case differs from T1 in that R is a point of order two,
+  which Lemma 3.2 allows ("coincidences inside 𝒮 only shrink 𝒮").
+* **Unit instances are a condition on the prime.** For a = 6 the ideal is proper over every prime factor of
+  2^(2^k) + 1 at depth k (`GrowthFermatDiagonalObstruction.exists_bad_admissible_prime`, **kernel**), and by
+  exact enumeration at k ≤ 10 over all primes p ≡ 1 mod 2^(k+1) below 64·4^k it is proper for 124 of the 174
+  primes below 4^k (`experiments/ic-bounds-growth/prime-grid-exceptions.json`, **exact**): a common zero is a
+  decomposition of the target, expected about 4^k/(2p) times. Theorem 5.1 (1 ∉ V_D) holds there too but gives
+  no bound on the last fall degree (Section 7.4, proper ideals).
+

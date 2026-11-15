@@ -4,12 +4,16 @@
 > is unchanged and describes commit `548ec4e`. Since then:
 > - item 1 of "Remaining decisions" is done: the Lean project was built from an empty build directory and
 >   audited (`experiments/ic-lean/BUILD-COLD-20261114.md`; 628 declarations of `Audit.lean`, 840 over all
->   files), and CI now repeats that build;
-> - item 3 changed in part: for one curve with a target of order two the growth bound is kernel-checked
->   without the curve-model hypothesis (Theorem "Growth on a fixed curve" of the manuscript, added after
->   this review and not covered by it); the general theorem is as described below;
+>   files; 636 declarations of `Audit.lean` after the two modules added later that day), and CI now repeats
+>   that build;
+> - item 3 changed in part: for curves with a target of order two the growth bound is kernel-checked
+>   without the curve-model hypothesis (Theorem "Growth for a target of order two" of the manuscript, added
+>   after this review and not covered by it: a family of curves over the complex numbers, one curve over
+>   prime fields); the general theorem is as described below, except that its attribution of the
+>   characteristic-p vanishing-sum bound to Voloch (1985) was wrong and is corrected (Garcia–Voloch 1987,
+>   Wang 1999, and the self-contained proof);
 > - item 5: the repository licence is set (`LICENSE`, `LICENSE-CC-BY-4.0.txt`);
-> - the manuscript has 39 pages, and the records in `experiments/publication-review-20261114/` are those of
+> - the manuscript has 40 pages (39 before the growth section was extended), and the records in `experiments/publication-review-20261114/` are those of
 >   the reviewed 38-page version.
 
 ## Scope and verdict
