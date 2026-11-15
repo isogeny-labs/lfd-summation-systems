@@ -8,6 +8,7 @@ The subgroup scan imports no project generator or closure implementation.
 import argparse
 import hashlib
 import json
+import math
 from fractions import Fraction
 from pathlib import Path
 
@@ -63,7 +64,12 @@ def compute():
                 assert pairs == brute, (k, p)
                 raw_checks += n*n
                 mutant_disagreements += graph_pairs(p, h, offset=7) != brute
-            cells.append(dict(p=int(p), solutions=len(pairs), witness=pairs[:1]))
+            diagonal = sum(pow(a, n, p) == 1 for a in (4, p-2))
+            assert sum(x == z for x, z in pairs) == diagonal
+            assert (len(pairs)-diagonal) % 2 == 0
+            cells.append(dict(p=int(p), solutions=len(pairs),
+                diagonal_solutions=diagonal, offdiagonal_solutions=len(pairs)-diagonal,
+                witness=pairs[:1]))
         bad = [c for c in cells if c['solutions']]
         good = [c for c in cells if not c['solutions']]
         rows.append(dict(k=k, N=n, cells=cells, checked=len(cells),
@@ -80,6 +86,10 @@ def compute():
         g = sp.Poly((X+8)**n-(X-1)**n, X)
         r = int(sp.resultant(f, g))
         assert r != 0 and abs(r) <= 2**n * 9**(n*n)
+        diagonal_factor = (4**n-1)*(2**n-1)
+        assert r % diagonal_factor == 0
+        offdiagonal_factor = math.isqrt(r // diagonal_factor)
+        assert r == diagonal_factor * offdiagonal_factor**2
         remainder, factors = abs(r), {}
         # Bounded trial division: never launch an unbounded factorization.
         for p in sp.primerange(2, 20001):
@@ -97,6 +107,8 @@ def compute():
                                              sp.Poly(g, X, modulus=p))))
                 assert degree == cell['solutions'], (k, p, degree)
         resultants.append(dict(k=k, resultant=str(r), small_factors=factors,
+                               diagonal_factor=str(diagonal_factor),
+                               offdiagonal_factor=str(offdiagonal_factor),
                                unfactored_cofactor=str(remainder),
                                factorization_complete=remainder == 1))
     assert resultants[0]['factorization_complete']

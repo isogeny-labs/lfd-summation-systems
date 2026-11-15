@@ -111,6 +111,29 @@ For example k=3,p=97 has the ordered zero (75,47), separate from the
 Fermat-factor construction. This is consistent with the theorem's stated
 prime dependence.
 
+### Diagonal versus off-diagonal obstructions
+
+There is a useful written factorization, checked exactly at k=2,3,4:
+
+    R_N = (4^N-1)(2^N-1) * S_N^2,   S_N in Z.
+
+Indeed R_N is the determinant of multiplication by q in the grid algebra,
+and over C it is the product of q(x,z) over all ordered pairs of N-th roots.
+The diagonal part is the product of
+`q(x,x)=(x-4)(x+2)`, giving `(4^N-1)(2^N-1)` since N is even. Each unordered
+off-diagonal pair contributes the square of q(x,z), by symmetry of q.
+The product S_N over unordered pairs is Galois invariant and an algebraic
+integer, hence an integer. This is an all-depth written argument, not a
+formalized determinant decomposition.
+
+Over each scanned prime, the diagonal roots can only be 4 and -2; they
+are distinct because p>8. The replay counts their membership in the subgroup
+separately and verifies that the number of off-diagonal ordered solutions
+is even. Among the 123 proper cells, 107 have no diagonal solution and 117
+have an off-diagonal solution. The record stores both counts. Fermat-factor obstructions are
+diagonal; the S_N factor is where further off-diagonal obstructions can
+occur. The two integer factors need not have disjoint prime support.
+
 ## 2. Rational parameters: an exact complex unit criterion
 
 **Written argument.** For rational a, target t=1, and
