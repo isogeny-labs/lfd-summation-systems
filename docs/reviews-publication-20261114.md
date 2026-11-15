@@ -12,7 +12,10 @@
 >   prime fields); the general theorem is as described below, except that its attribution of the
 >   characteristic-p vanishing-sum bound to Voloch (1985) was wrong and is corrected (Garcia–Voloch 1987,
 >   Wang 1999, and the self-contained proof);
-> - item 5: the repository licence is set (`LICENSE`, `LICENSE-CC-BY-4.0.txt`);
+> - item 5: the repository licence is set (`LICENSE`, `LICENSE-CC-BY-4.0.txt`); on 15 November 2026 the
+>   reviewed changes were merged into `main` (`e16cfb8`) and the submission package was regenerated from
+>   that commit (`paper/eprint-curve-lfd-bounds/EPRINT.md`); the author's confirmations and the
+>   submission itself remain open;
 > - the manuscript has 40 pages (39 before the growth section was extended), and the records in `experiments/publication-review-20261114/` are those of
 >   the reviewed 38-page version.
 

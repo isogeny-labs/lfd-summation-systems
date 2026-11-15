@@ -1,6 +1,8 @@
 # Main manuscript: ePrint preparation
 
-**Status, 14 November 2026:** corrected candidate for author review. No ePrint
+**Status, 15 November 2026:** corrected candidate for author review, merged
+into `main`; the submission package was regenerated from `main` at `e16cfb8`
+and the rebuilt PDF is identical to the committed one. No ePrint
 submission or editorial acceptance is recorded by this review. This is a
 technical and artifact review, not independent certification of every proof.
 
@@ -69,12 +71,14 @@ retain its logs rather than overwriting the archived audit.
 ## Before submission
 
 - Done on 14 November: a clean build and audit of the current Lean project
-  (see above). Check that the same run is green in CI on the commit that is
-  submitted.
-- Make the reviewed source, PDF and evidence snapshot publicly addressable:
-  merge the pull requests into `main`. The data appendix of the manuscript
-  cites a fixed snapshot commit; it must stay reachable (merge with a merge
-  commit, or update the citation and rebuild).
+  (see above). Done on 15 November: the same build and audit are green in CI
+  on `main` at `e16cfb8`, the commit the submission package is taken from
+  (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
+- Done on 15 November: the reviewed source, PDF and evidence snapshot are
+  publicly addressable. The pull requests are merged into `main` with a merge
+  commit, so the fixed snapshot commit cited in the data appendix of the
+  manuscript is reachable from `main`. If history is ever rewritten, update
+  the citation and rebuild.
 - Read the review's remaining limits, particularly the depth-14 lift and the
   written growth proof. An independent depth-14 certificate would strengthen
   the result; the qualified preprint does not claim to have one.
