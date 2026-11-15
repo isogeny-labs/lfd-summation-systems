@@ -1,0 +1,175 @@
+{'label': 'S3norm a=1 b=0 t=1', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 2, 'charsum': 2, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3norm a=2 b=2 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3norm a=2 b=0 t=1', 'unit': True, 'sd': 0, 'pred': 0, 'maxwt': 0, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3norm a=1 b=2 t=0', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3norm a=2 b=0 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3norm a=2 b=1 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3raw a=2 b=2 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3raw a=1 b=1 t=0', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 2, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3raw a=1 b=1 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3raw a=2 b=0 t=2', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 0, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'random delta=2', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'random delta=2', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 1, 'p': 3}
+{'label': 'S3norm a=0 b=3 t=0', 'unit': True, 'sd': 3, 'pred': 3, 'maxwt': 2, 'ctop': 6, 'charsum': 6, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=2 b=1 t=6', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 4, 'charsum': 4, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=3 b=0 t=5', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=5 b=6 t=0', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=4 b=0 t=4', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 6, 'charsum': 6, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=1 b=6 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=1 b=4 t=0', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 6, 'charsum': 6, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=2 b=1 t=3', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 3, 'charsum': 3, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=3 b=6 t=2', 'unit': True, 'sd': 3, 'pred': 3, 'maxwt': 2, 'ctop': 5, 'charsum': 5, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=3 b=0 t=1', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 3, 'charsum': 3, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=3 b=4 t=3', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 2, 'charsum': 2, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=0 b=2 t=1', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 6, 'charsum': 6, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3raw a=0 b=5 t=6', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 2, 'ctop': 6, 'charsum': 6, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3raw a=0 b=4 t=0', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 2, 'ctop': 6, 'charsum': 6, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3raw a=3 b=2 t=5', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 2, 'ctop': 3, 'charsum': 3, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3raw a=1 b=4 t=5', 'unit': True, 'sd': 5, 'pred': 5, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'random delta=1', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'random delta=1', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'random delta=1', 'unit': True, 'sd': 3, 'pred': 3, 'maxwt': 2, 'ctop': 5, 'charsum': 5, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'random delta=2', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 2, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 1, 'p': 7}
+{'label': 'S3norm a=3 b=0 t=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=2 b=0 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=2 b=1 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=1 b=0 t=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=2 b=0 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=1 b=1 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=0 b=1 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=4 b=2 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=1 b=1 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=3 b=3 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=0 b=1 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=2 b=1 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=0 b=4 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=3 b=3 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=1 b=4 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=0 b=1 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=3 b=3 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=4 b=1 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=3 b=0 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=0 b=2 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=3 b=3 t=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=2 b=1 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=2 b=0 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3raw a=3 b=0 t=4', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3raw a=2 b=4 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3raw a=2 b=4 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3raw a=1 b=1 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3raw a=4 b=0 t=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3raw a=2 b=0 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 2, 'p': 5}
+{'label': 'S3norm a=10 b=12 t=7', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 12, 'charsum': 12, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=7 b=5 t=0', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 3, 'charsum': 3, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=10 b=9 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=4 b=3 t=8', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 11, 'charsum': 11, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=12 b=3 t=7', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=5 b=0 t=7', 'unit': True, 'sd': 5, 'pred': 5, 'maxwt': 3, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=10 b=5 t=11', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=8 b=1 t=7', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=12 b=3 t=11', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=8 b=7 t=9', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 4, 'charsum': 4, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=2 b=0 t=2', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 4, 'charsum': 4, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=12 b=10 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=10 b=4 t=5', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 10, 'charsum': 10, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=7 b=5 t=11', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=2 b=1 t=3', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 8, 'charsum': 8, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=11 b=12 t=8', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 3, 'charsum': 3, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=6 b=7 t=1', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=1 b=2 t=8', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 9, 'charsum': 9, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=6 b=6 t=4', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 7, 'charsum': 7, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3raw a=2 b=7 t=9', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 4, 'ctop': 10, 'charsum': 10, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3raw a=5 b=9 t=6', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3raw a=10 b=4 t=9', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 4, 'ctop': 1, 'charsum': 1, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3raw a=9 b=9 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=1', 'unit': True, 'sd': 4, 'pred': 4, 'maxwt': 3, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=1', 'unit': True, 'sd': 3, 'pred': 3, 'maxwt': 2, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'random delta=1', 'unit': True, 'sd': 5, 'pred': 5, 'maxwt': 4, 'ctop': 5, 'charsum': 5, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 2, 'p': 13}
+{'label': 'S3norm a=9 b=6 t=12', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 15, 'charsum': 15, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=11 b=6 t=0', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=4 b=16 t=14', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=0 b=3 t=16', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=6 b=0 t=9', 'unit': True, 'sd': 6, 'pred': 6, 'maxwt': 4, 'ctop': 11, 'charsum': 11, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=2 b=12 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=2 b=7 t=5', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=15 b=7 t=12', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=0 b=7 t=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=1 b=13 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=1 b=10 t=14', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=6 b=8 t=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'random delta=3', 'unit': True, 'sd': 7, 'pred': 7, 'maxwt': 4, 'ctop': 16, 'charsum': 16, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'random delta=1', 'unit': True, 'sd': 5, 'pred': 5, 'maxwt': 4, 'ctop': 5, 'charsum': 5, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'random delta=1', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 2, 'p': 17}
+{'label': 'S3norm a=13 b=16 t=13', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 17}
+{'label': 'S3norm a=3 b=4 t=16', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 17}
+{'label': 'S3norm a=6 b=10 t=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 17}
+{'label': 'S3norm a=15 b=2 t=7', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 6, 'charsum': 6, 'ok': True, 'm': 2, 'k': 3, 'p': 17}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 17}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 17}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 3, 'p': 17}
+{'label': 'S3norm a=14 b=8 t=28', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 24, 'charsum': 24, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=40 b=40 t=7', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=25 b=9 t=13', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=4 b=11 t=34', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=1 b=15 t=6', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 26, 'charsum': 26, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=4 b=22 t=10', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=16 b=16 t=27', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 29, 'charsum': 29, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=1 b=24 t=31', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 22, 'charsum': 22, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=22 b=4 t=19', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=21 b=28 t=18', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 23, 'charsum': 23, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3raw a=39 b=19 t=38', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3raw a=2 b=3 t=12', 'unit': True, 'sd': 10, 'pred': 10, 'maxwt': 6, 'ctop': 29, 'charsum': 29, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'random delta=3', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 3, 'p': 41}
+{'label': 'S3norm a=66 b=52 t=65', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'S3norm a=61 b=43 t=12', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'S3norm a=19 b=37 t=34', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'S3norm a=60 b=12 t=27', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'S3norm a=12 b=64 t=63', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 12, 'charsum': 12, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'S3norm a=31 b=55 t=14', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'S3norm a=10 b=30 t=33', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 68, 'charsum': 68, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'S3norm a=13 b=19 t=26', 'unit': True, 'sd': 8, 'pred': 8, 'maxwt': 6, 'ctop': 51, 'charsum': 51, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'random delta=1', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'random delta=3', 'unit': True, 'sd': 9, 'pred': 9, 'maxwt': 6, 'ctop': 67, 'charsum': 67, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 2, 'k': 3, 'p': 73}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 3, 'k': 1, 'p': 5}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 3, 'k': 1, 'p': 5}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 3, 'k': 1, 'p': 5}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 3, 'k': 1, 'p': 5}
+{'label': 'random delta=2', 'unit': False, 'sd': None, 'pred': None, 'ok': True, 'm': 3, 'k': 1, 'p': 5}
+{'label': 'random delta=1', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 3, 'k': 1, 'p': 5}
+{'label': 'ghat=u_{1,k-1}', 'unit': True, 'sd': 2, 'pred': 2, 'maxwt': 1, 'ctop': 0, 'charsum': 0, 'ok': True, 'm': 3, 'k': 1, 'p': 5}
+SUMMARY cases=174 unit=68 nonunit=106 mismatches=0

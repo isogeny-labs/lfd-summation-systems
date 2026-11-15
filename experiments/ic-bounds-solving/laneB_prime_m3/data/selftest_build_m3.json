@@ -1,0 +1,60 @@
+{
+ "p97_k2": {
+  "a": 32,
+  "b": 15,
+  "t": 63,
+  "coeffs_equal_repo": true,
+  "delta": 6,
+  "repo_delta": 6,
+  "vanishing_mismatches": 0,
+  "n_zero": 9,
+  "unit": false,
+  "inverse_ok": null
+ },
+ "p97_k3": {
+  "a": 48,
+  "b": 26,
+  "t": 12,
+  "coeffs_equal_repo": true,
+  "delta": 6,
+  "repo_delta": 6,
+  "vanishing_mismatches": 0,
+  "n_zero": 7,
+  "unit": false,
+  "inverse_ok": null
+ },
+ "p257_k4": {
+  "a": 136,
+  "b": 117,
+  "t": 52,
+  "coeffs_equal_repo": true,
+  "delta": 6,
+  "repo_delta": 6,
+  "vanishing_mismatches": 0,
+  "n_zero": 18,
+  "unit": false,
+  "inverse_ok": null
+ },
+ "p193_k3": {
+  "a": 81,
+  "b": 7,
+  "t": 5,
+  "coeffs_equal_repo": true,
+  "delta": 6,
+  "repo_delta": 6,
+  "vanishing_mismatches": 0,
+  "n_zero": 3,
+  "unit": false,
+  "inverse_ok": null
+ },
+ "unit_instance": {
+  "p": 4013,
+  "k": 2,
+  "abt": [
+   1561,
+   2811,
+   887
+  ],
+  "brute_zero_count": 0
+ }
+}

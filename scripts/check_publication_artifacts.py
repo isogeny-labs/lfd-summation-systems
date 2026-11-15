@@ -63,6 +63,12 @@ def main():
     tex = (paper / 'curve-lfd-bounds.tex').read_text()
     abstract = re.search(r'\\begin\{abstract\}(.*?)\\end\{abstract\}', tex, re.S).group(1)
     abstract = abstract.replace(r'\SWEEPSYSTEMS{}', str(summary['unique_systems']))
+    solving = json.loads((root / 'experiments/ic-solving-degree/summary.json').read_text())
+    check('solving-degree macros match summary', '\\newcommand{\\SDSYSTEMS}{%s}' %
+          f"{solving['exact_lfd_systems']:,}".replace(',', '{,}') in
+          (paper / 'solving-degree-data.tex').read_text())
+    abstract = abstract.replace(r'\SDSYSTEMS{}', str(solving['exact_lfd_systems']))
+    abstract = abstract.replace(r'\"o', 'ö')
     abstract = ' '.join(abstract.replace('~', ' ').split()) + '\n'
     check('submission abstract matches manuscript', abstract ==
           (paper / 'eprint-curve-lfd-bounds/eprint-abstract.txt').read_text())
