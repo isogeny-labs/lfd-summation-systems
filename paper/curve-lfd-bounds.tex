@@ -1844,9 +1844,10 @@ $E_6\colon y^2=x^3+6x-7$ is nonsingular away from characteristic $3$
 Consider the normalized two-summand chain presentation at depth $k$ for
 $E_a$ and $t=1$.
 \begin{enumerate}
-\item Over $\mathbb{C}$, for every $a$ with $|a|>5$, the ideal is the unit
- ideal at every depth $k\ge2$, and for every $k\ge24$ the last fall degree
- $d$ satisfies $\lfloor(k-10)/14\rfloor<d\le k+2$.
+\item Over $\mathbb{C}$, for every $a$ with $|a|>5$, and for every rational
+ $a\notin\{-3,-3/4,-1,1\}$, the ideal is the unit ideal at every depth
+ $k\ge2$, and for every $k\ge24$ the last fall degree $d$ satisfies
+ $\lfloor(k-10)/14\rfloor<d\le k+2$.
 \item For $E_6$ over $\F_p$, for every $D\ge1$, every $k\ge14D+10$ and every
  prime $p>2^{k+1}$, $1\notin V_D$.
 \item For $E_6$, every $k\ge24$ and every $B$ there is a prime $p>B$ with
@@ -1878,7 +1879,16 @@ $p>2^{k+1}$ for the monomials with exponents in $[0,2^k)^2$, which are the
 ones the reduction of Theorem~\ref{thm:growth} uses; this gives (2) and the
 lower half of (1). The ideal is the unit ideal over $\mathbb{C}$ because on
 the grid $x_1^{2^k}=x_2^{2^k}=1$ one has
-$|(x_1-1)x_2-x_1|\le3<|a|-2\le|a+2|$. For $a=6$ the identity
+$|(x_1-1)x_2-x_1|\le3<|a|-2\le|a+2|$ when $|a|>5$.
+For rational $a$, the kernel proves the exact grid-zero criterion
+$a\in\{-3,-1,1\}$. Indeed a zero with $a\ne-3$ gives
+$x_1+\overline{x_1}=-a-1$, a rational algebraic integer between $-2$ and
+$2$; the two-power order condition excludes the integer values $-1$ and $1$.
+The remaining parameters have the explicit grid zeros $(1,1)$, $(i,-i)$
+and $(-1,-1)$, respectively. The singular parameters are $-3$ and $-3/4$,
+so the stated rational family has both a unit ideal and the selector upper
+bound. This extends (1), for example, to $a=0,2,-2$, with no norm-five
+assumption. For $a=6$ the identity
 $1\in\langle F\rangle$ descends to an identity over $\mathbb{Z}$ with a
 nonzero integer $N_k$ in place of $1$, so the ideal is the unit ideal over
 every field in which $N_k\ne0$; primes $p\equiv1\pmod{2^{k+1}}$ above any
@@ -2414,7 +2424,7 @@ The companion repository holds the records and verification reports:
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
 The computational and formal evidence reviewed here is available in the
-fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/5a98043}{commit \code{5a98043}}.
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/9ff398b}{commit \code{9ff398b}}.
 Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);

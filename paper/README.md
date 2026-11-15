@@ -28,7 +28,7 @@ uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
-The saved audit covers 636 declarations of `Audit.lean` and matches every
+The saved audit covers 644 declarations of `Audit.lean` and matches every
 recorded source digest. After the review of 14 November the complete project
 was built from an empty build directory (macOS, Lean 4.19.0, pinned Mathlib):
 all 217 modules build, and the 840 declarations over all files that print
@@ -83,6 +83,15 @@ retain its logs rather than overwriting the archived audit.
 
 The existing `paper/` layout is retained to preserve this companion repository's
 published paths; this change adds no separate research manuscript.
+
+The rational-parameter extension is in
+`formal/ICFallDegrees/GrowthRationalParameterClassification.lean`: the exact
+complex grid-zero classification is a=-3,-1,1, and the growth window now
+also covers every rational a outside {-3,-3/4,-1,1}, including a=0,2,-2.
+The local default build and 644-declaration audit pass with compiled
+dependencies reused; `experiments/rational-parameter-lean-20261114/` records
+the commands and scope. Linux CI on the submitted commit is the independent
+build check for this extension.
 
 ## Revised-paper synchronization
 
