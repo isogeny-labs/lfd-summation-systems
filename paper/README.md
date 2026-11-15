@@ -21,8 +21,9 @@ theorem has a written proof; its Lean reduction retains the curve-model
 hypothesis, except for curves with a target of order two, where the
 bound is kernel-checked without it (over the complex numbers for a
 one-parameter family of curves, and for one of them along an increasing
-sequence of primes that is not explicit; it fails for the prime factors of
-Fermat numbers, also kernel-checked). At depth 14 the lower bound is certified, and the upper bound
+sequence of primes that is not explicit). For prime factors of Fermat numbers,
+the ideal is proper (also kernel-checked), so the unit-ideal argument does not
+establish the LFD lower bound; the numerical bound there remains undecided. At depth 14 the lower bound is certified, and the upper bound
 uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
@@ -37,6 +38,13 @@ afterwards (219 modules; incremental build, addendum of the same file). The work
 `.github/workflows/ci.yml` repeats the build and audit on Linux for every
 pull request. The archived cold build of 12 November covers the earlier 513
 declarations.
+
+The complete Linux audit subsequently passed at commit `49585b5`: 219 library
+modules and 848 declarations across 82 audit files. The proper-ideal wording
+correction changes no Lean declarations or proofs; the corrected sources also
+passed the local 636-declaration audit. Original CI logs and the comparison of
+all 270 source hashes are retained in
+`../experiments/ic-lean/growth-verification-49585b5/`.
 
 ## Build and checks
 
@@ -88,7 +96,7 @@ pass. `SYNC-94290676.json` records the artifact hashes and source commits.
 
 After that synchronization the growth section of the manuscript was extended
 (the kernel-checked theorem now covers a family of curves over the complex
-numbers and states the failure at Fermat-factor primes; Theorem "Growth for a
+numbers and proves properness of the ideal at Fermat-factor primes; Theorem "Growth for a
 target of order two"). The abstract, the author block and the figures did not
 change. `SYNC-94290676.json` is the record of the synchronized version and
 its hashes of the manuscript source, PDF and build report describe that

@@ -37,3 +37,12 @@ was not regenerated here for the two new modules; the CI run on Linux does it, f
 The build covers the modules added after the cold build of 2026-11-12 (`Growth*`, `Selector*`, `UnitInstance`,
 `DepthFourteen`) and the fixed-curve growth modules; for the latter it is the first build in this repository.
 The workflow `.github/workflows/ci.yml` repeats it on Linux on every pull request.
+
+## Completed Linux audit and corrected growth-theorem prose
+
+The Linux CI run 43679167384 at `49585b5` passed: all 219 library modules and
+848 declarations over 82 files that print axioms, foundational axioms only.
+The full logs and original source hashes are retained in `growth-verification-49585b5/`.
+The corrected tree differs in one Lean file's comments only, verified against all
+270 source hashes from the CI report; its 636-declaration audit was rerun locally.
+See that directory's README and `reconciliation.json` for the precise evidence boundary.
