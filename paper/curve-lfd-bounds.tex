@@ -30,7 +30,7 @@
 \setlength{\emergencystretch}{3em}
 \title{Last fall degrees of elliptic curve summation systems:\\ machine-checked bounds and exact values}
 \author{Adam Buran\\ \texttt{adam@isogenylabs.io}\\ \texttt{a.buran28@gmail.com}}
-\date{14 November 2026}
+\date{15 November 2026}
 \input{curve-sweep-data}
 \begin{document}
 \maketitle
@@ -56,9 +56,9 @@ statements take the recorded closures as hypotheses. A written proof,
 checked in two reviews, shows that in characteristic $0$ or
 $p>2^{k+1}$ the LFD of unit-ideal instances with target abscissa $t\ne0$ is
 unbounded, at least $\lfloor(k-10)/14\rfloor+1$ for $k\ge38$ (in Lean,
-conditional on a vanishing-sum bound; for the curve $y^2=x^3+6x-7$ with the
-target of order two the bound is kernel-checked without that hypothesis,
-over $\mathbb{C}$ and along an increasing sequence of primes). The law
+conditional on a vanishing-sum bound; for $y^2=x^3+ax-(1+a)$ with rational
+$a\notin\{-3,-3/4,-1,1\}$ and target $(1,0)$, it is kernel-checked over
+$\mathbb{C}$ and admissible prime fields above an explicit cutoff). The law
 $\mathrm{LFD}(k)=\lfloor(k+14)/4\rfloor$ is a conjecture that agrees with
 every tested prediction recorded in advance. With three to eight summands
 at depth $k\le m-1$ the generator has the full degree $mk$ on $409$ of $412$
@@ -1915,9 +1915,9 @@ closure dimensions are exceptional (Section~\ref{sec:blockfour}); the
 function field in the proof has genus zero, so nothing here formalizes
 the genus-one bound that Theorem~\ref{thm:growth} needs for general
 targets, and that theorem stays a written proof, conditional in Lean.
-Item (1) covers a one-parameter family of curves; items (2) to (4) are
-proved for $a=6$ only, because the prime-field part of the development is
-written for that curve. Item (3) now has the explicit sufficient cutoff
+Item (1) covers a one-parameter family of curves. Items (2) to (4) give
+the sharper fixed-$E_6$ statements; Corollary~\ref{cor:rationalprime}
+below extends prime-field growth to the rational-parameter family. Item (3) now has the explicit sufficient cutoff
 $B_k$, rather than an unspecified integer from a B\'ezout identity. This
 cutoff improves the earlier $2^{2^k}9^{4^k}$ by a factor $2^{2^k}$, but remains loose; no least suitable prime is computed. The statement
 concerns pairs $(p,k)$, with $p$ allowed to grow with $k$. By (4), the unit-ideal hypothesis fails for some primes
@@ -1929,6 +1929,41 @@ so Theorem~\ref{thm:three} already gives $\lfd\ge4$; the lower bound of
 (1) and (3) exceeds it from $k=66$ on. As elsewhere in the development, no elliptic curve appears
 in Lean: the statements concern the explicit polynomial system with
 coefficients $a$, $b=-1-a$ and $t=1$ (Appendix~\ref{app:lean}).
+
+\begin{corollary}[Explicit rational-parameter prime-field growth; kernel-checked]
+\label{cor:rationalprime}
+Let $a=m/q\in\mathbb{Q}\setminus\{-3,-3/4,-1,1\}$, with $m\in\mathbb{Z}$
+and $q\in\mathbb{Z}_{>0}$. Set $N=2^k$, $H=3q+|m+2q|$ and
+\[
+ C_{k,m,q}=2^N H^{N^2}+2N+q+|m+3q|+|4m+3q|.
+\]
+For every $k\ge24$ and every prime $p>C_{k,m,q}$ with $2^k\mid p-1$,
+the denominator $q$ is invertible in $\F_p$. Writing $a_p=mq^{-1}$, the
+normalized chain system for $y^2=x^3+a_px-(1+a_p)$ and $t=1$ has a last
+fall degree $d$ with
+\[
+ \lfloor(k-10)/14\rfloor<d\le k+2.
+\]
+No coprimality assumption on $m,q$ is needed; the canonical numerator and
+positive denominator give a cutoff for each rational parameter.
+\end{corollary}
+\begin{proof}[Proof sketch]
+Use the integer cyclic matrix
+$A=(qS+(m+2q)I)^N-(q(S-I))^N$.
+For each complex $N$th root $x$, its eigenvalue is
+$(qx+m+2q)^N-(q(x-1))^N$. If that were zero, the rational function
+$(x+2+a)/(x-1)$ would be an $N$th root giving an S3 grid zero;
+$x=1$ is excluded by $a\ne-3$. The classification used in Theorem~\ref{thm:growthfixed}(1)
+excludes the other zeros. The Vandermonde matrix of the $N$ distinct
+roots is invertible, so $\det A\ne0$. Both summands have absolute column
+sums at most $H^N$, giving $|\det A|\le2^N H^{N^2}$.
+The cutoff ensures that this determinant, $q$, $m+3q$ and $4m+3q$
+survive modulo $p$, and that $p>2^{k+1}$. Thus the reduced curve is
+nonsingular and the actual chain ideal is the unit ideal. The native
+bounded-box Wronskian and cofactor proof works for $(X,(X+a_p+2)/(X-1))$
+whenever $a_p+3\ne0$, giving $1\notin V_{\lfloor(k-10)/14\rfloor}$.
+The selector bound completes the window.
+\end{proof}
 
 \begin{remark}[Bad admissible primes]\label{rem:fermatbad}
 The primes of (4) are the prime factors of the Fermat numbers
@@ -2059,8 +2094,9 @@ This is not proved.
  (Theorem~\ref{thm:growthfixed}) all have a target of order two and a
  rational function field: the curves $y^2=x^3+ax-(1+a)$ with $|a|>5$,
  and the rational parameters outside $\{-3,-3/4,-1,1\}$, with $t=1$ over
- $\mathbb{C}$; and $y^2=x^3+6x-7$ over admissible prime fields above
- $B_k=9^{4^k}$. The explicit cutoff is conservative. Below it,
+ $\mathbb{C}$; and the same rational-parameter family over admissible prime fields above
+ the explicit cutoff of Corollary~\ref{cor:rationalprime}. For $E_6$ the
+ sharper cutoff $B_k=9^{4^k}$ remains available. The explicit cutoff is conservative. Below it,
  item (4) supplies proper-ideal instances at every depth; their numerical
  LFD lower bound remains undecided.
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
@@ -2436,7 +2472,7 @@ The companion repository holds the records and verification reports:
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
 The computational and formal evidence reviewed here is available in the
-fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/b224f0b}{commit \code{b224f0b}}.
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/41d5c68}{commit \code{41d5c68}}.
 Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);
