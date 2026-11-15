@@ -676,3 +676,12 @@ import ICFallDegrees
 #print axioms ICFallDegrees.GrowthExplicitPrimeBound.proper_prime_le_bound
 #print axioms ICFallDegrees.GrowthExplicitPrimeBound.prime_lfd_window
 #print axioms ICFallDegrees.GrowthExplicitPrimeBound.exists_prime_window_above
+
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.eliminant_nonnegative
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.eliminant_column_sum
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.eliminant_det_bound
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.unit_of_not_dvd
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.proper_prime_le_bound
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window_of_det
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window
+#print axioms ICFallDegrees.GrowthSharpPrimeBound.strict_improvement
