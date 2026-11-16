@@ -77,7 +77,7 @@ def recorded_oracle(name, k, D):
 MODES = {
     'plain': dict(),
     'tiny': dict(batch=7, first_chunk=5, table_gb=2e-5, mi=5),        # many chunks, split products
-    'low': dict(include_low=True),
+    'low': dict(include_low=True, basis_on='device'),
     'seed9': dict(seed=9, first_chunk=64),
 }
 NAIVE_MAX_COLUMNS = 1700
@@ -203,8 +203,10 @@ def do_case(work, name, k, D, xp, modes, md):
     case['oracle_reference_direct'] = ora
     want = dict(contains_one=ora['contains_one'], dim_low=ora['dim_low'], dim_low_parts=ora['dim_low_parts'], dim_VD1=ora['dim'])
     runs, ok = {}, True
-    if erec['columns'] > 800:
+    if erec['columns'] > 1500:                                # the slow settings only on the small cases
         modes = [m for m in modes if m != 'tiny'] or modes
+    if erec['columns'] > 3000:
+        modes = [m for m in modes if m in ('plain', 'low')] or modes
     for mode in modes:
         r = run_lift(ck, k, D, p, g, xp, **MODES[mode])
         if want['dim_low_parts'] is None:                     # the record has no per-part profile

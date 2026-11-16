@@ -56,7 +56,8 @@ the run stops.  Otherwise the result is exact when every chunk has been processe
 
 Arithmetic: float64 holding integers; a product block has inner dimension <= max_inner(p), so every
 partial sum is below 2^53 (exact in any summation order); modp corrects the rounded quotient.
-The stored basis stays on the host as float32 (exact for p < 2^24) in the engine's orbit layout.
+The stored basis is kept as float32 (exact for p < 2^24) in the engine's orbit layout, on the host or
+(``basis_on='device'``) on the device; rows are converted to ordinary coordinates when they are used.
 """
 from __future__ import annotations
 
@@ -76,6 +77,10 @@ class Refuse(Exception):
     """the input fails a check; no result is produced."""
 
 
+class Stop(Exception):
+    """deadline reached or 1 found with stop_on_one: the record holds what is proved so far."""
+
+
 # ------------------------------------------------------------------------------- exact arithmetic
 
 def max_inner(p: int) -> int:
@@ -88,8 +93,8 @@ def modp(X, p: int, xp):
     q = xp.floor(X / p)
     q *= p
     X -= q                      # in [-p, 2p): the rounded quotient is within 1 of the true one
-    X += p * (X < 0)
-    X -= p * (X >= p)
+    X += (X < 0) * float(p)
+    X -= (X >= p) * float(p)
     return X
 
 
@@ -115,7 +120,7 @@ def to_host(a) -> np.ndarray:
 def neg(X, p: int):
     """-X mod p for X in [0, p), in place."""
     X *= -1.0
-    X += p * (X < 0)
+    X += (X < 0) * float(p)
     return X
 
 
@@ -371,12 +376,14 @@ def canonical_sha(piv: np.ndarray, B: np.ndarray, ncols: int, p: int) -> str:
 class Lift:
     def __init__(self, k: int, D: int, p: int, parts, g: dict, xp=np, include_low: bool = False,
                  batch: int = 2048, table_gb: float = 2.0, first_chunk: int = 2048, seed: int = 1,
-                 mi: int | None = None, log=None):
+                 mi: int | None = None, log=None, max_seconds: float | None = None, stop_on_one: bool = False,
+                 basis_on: str = 'host'):
         self.k, self.D, self.p, self.g, self.xp = k, D, p, g, xp
         self.include_low, self.batch, self.table_gb, self.first_chunk = include_low, batch, table_gb, first_chunk
         self.seed, self.mi = seed, mi
         self.log = log or (lambda **kw: None)
         self.t0 = time.time()
+        self.max_seconds, self.stop_on_one, self.stopped = max_seconds, stop_on_one, None
         self.cnt = dict(generator_rows=0, fall_images=0, followers=0, chunks=0, fall_rounds=0, madds_gemm=0, madds_red=0)
         if p >= 1 << 24 or p % 2 == 0:
             raise Refuse('p must be odd and below 2^24')
@@ -407,7 +414,7 @@ class Lift:
             fp[np.setdiff1d(np.arange(nc), piv)] = np.arange(nc - len(piv))
             rows.append(rowof[col])                             # col = -1 reads the padding entry -1
             fpos.append(fp[col])
-            self.Bq.append(B)
+            self.Bq.append(xp.asarray(B) if basis_on == 'device' else B)   # float32 either way
             self.ncol.append(nc)
         self.rP, self.rM = rows
         self.selfp = selfp
@@ -480,8 +487,12 @@ class Lift:
         return tcol, pd, reg
 
     # -- reading the stored basis in ordinary coordinates
+    def _rows(self, q, idx):
+        B = self.Bq[q]
+        return B[idx] if isinstance(B, np.ndarray) else B[self.xp.asarray(idx)]
+
     def _gatherN(self, A, idx, sgn=None):
-        """host rows A on the free columns of a part -> device float64 rows on N."""
+        """rows A (float32) on the free columns of a part -> device float64 rows on N."""
         xp = self.xp
         E = xp.zeros((A.shape[0], A.shape[1] + 1), dtype=xp.float64)
         E[:, :A.shape[1]] = xp.asarray(A)
@@ -496,10 +507,10 @@ class Lift:
         rp, rm = self.rP[mono], self.rM[mono]
         if np.any(rp < 0) or np.any((rm < 0) & ~self.selfp[mono]):
             raise Refuse('phi asked for a monomial outside Pd')
-        out = self._gatherN(self.Bq[0][rp], self.gP)
+        out = self._gatherN(self._rows(0, rp), self.gP)
         pr = np.flatnonzero(rm >= 0)
         if len(pr):
-            M = self._gatherN(self.Bq[1][rm[pr]], self.gM, self.sgnN)
+            M = self._gatherN(self._rows(1, rm[pr]), self.gM, self.sgnN)
             M *= xp.asarray(self.sgnL[mono[pr]])[:, None]
             prd = xp.asarray(pr)
             X = out[prd] + M                           # in (-p, 2p)
@@ -544,7 +555,7 @@ class Lift:
         for q, reps, rw, idx, sgn in ((0, self.singleP, self.rP, self.gP, None), (1, self.singleM, self.rM, self.gM, self.sgnN)):
             if len(reps) == 0:
                 continue
-            E = self._gatherN(self.Bq[q][rw[reps]], idx, sgn)
+            E = self._gatherN(self._rows(q, rw[reps]), idx, sgn)
             ar = xp.arange(len(reps))
             E[ar, xp.asarray(self.nidx[reps])] += 1.0
             E[ar, xp.asarray(self.nidx[self.sig[reps]])] += 1.0 if q == 0 else -1.0
@@ -618,7 +629,16 @@ class Lift:
             return 0
         n = self.K.add(self.embed(V, K0), r0=K0.rank)
         self.saturated = self.K.rank == self.nT
+        self._check_stop()
         return n
+
+    def _check_stop(self):
+        if self.saturated:
+            return
+        if self.stop_on_one and not self.one_in_VD and self.K.rowof[self.nSp + int(self.nidx[self.one])] >= 0:
+            raise Stop('one')
+        if self.max_seconds and time.time() - self.t0 > self.max_seconds:
+            raise Stop('deadline')
 
     # -- steps
     def start(self, closed_check: int = 2):
@@ -639,6 +659,7 @@ class Lift:
         if bool(xp.any(self.K.reduce(self.embedN(self.red_L(gv))) != 0)):
             raise Refuse('the generator g is not in the stored space')
         self.closed_check = None
+        self.log(event='start', n_single=self.n_single, generator_in_VD=True, sec=round(time.time() - self.t0, 1))
         if self.include_low or closed_check <= 0:
             return
         # low rows l_x (x in Pd, weight < D) must be supported on weight < D ...
@@ -669,7 +690,7 @@ class Lift:
         K0 = self.K.snapshot()
         f0 = len(K0.free)
         Ref = xp.zeros((len(tops), f0), dtype=xp.float64)
-        have = np.zeros(len(tops), dtype=bool)
+        have = np.zeros(len(tops) + 1, dtype=bool)                # one spare entry: slot -1 reads entry 0 under a mask
         ta = (self.Tp.a1[tops], self.Tp.a2[tops])
         for s, (i, j) in enumerate(self.shifts):
             slot = np.flatnonzero((ta[i] >> j) & 1)                 # tops divisible by u_s
@@ -711,6 +732,8 @@ class Lift:
                 self._add(xp.concatenate(cand), K0)
                 if self.saturated:
                     return
+            self.log(event='chunk_shift', shift=s, of=2 * self.k, rows=len(xs), rank_K=self.K.rank, nT=self.nT,
+                     sec=round(time.time() - self.t0, 1))
         self.cnt['chunks'] += 1
 
     def fall_rows(self, cols):
@@ -745,6 +768,8 @@ class Lift:
                     new += self._add(img, K0)
                     if self.saturated:
                         return new
+                self.log(event='fall_shift', shift=s, of=2 * self.k, rows=len(cols), rank_K=self.K.rank, nT=self.nT,
+                         verify=verify, sec=round(time.time() - self.t0, 1))
             self.log(event='fall_round', rows=len(cols), rank_K=self.K.rank, nT=self.nT, verify=verify,
                      sec=round(time.time() - self.t0, 1))
             if verify:
@@ -758,27 +783,33 @@ class Lift:
         rng = np.random.RandomState(self.seed)
         tops = self.regular[rng.permutation(len(self.regular))]
         direct = rng.permutation(len(self.dir_x))
-        self.falls()
         done, total, n = 0.0, max(1, len(tops)), self.first_chunk
         at = ad = 0
-        while not self.saturated and (at < len(tops) or ad < len(direct)):
-            cap = int(self.table_gb * 2 ** 30 / (8 * max(1, self.nT - self.K.rank)))
-            n = max(1, min(n, cap))
-            done = min(1.0, done + n / total)
-            bt = len(tops) if done >= 1.0 else int(done * len(tops))
-            bd = len(direct) if done >= 1.0 else int(done * len(direct))
-            self.chunk(tops[at:bt], direct[ad:bd])
-            at, ad = bt, bd
+        complete, verify_new = False, None
+        try:
+            self._check_stop()
             self.falls()
-            self.log(event='chunk', tops_done=at, tops=len(tops), direct_done=ad, direct=len(direct),
-                     rank_K=self.K.rank, nT=self.nT, sec=round(time.time() - self.t0, 1))
-            n *= 2
-        complete = at == len(tops) and ad == len(direct)
-        verify_new = None
-        if not self.saturated:
-            verify_new = self.falls(verify=True)
-            if verify_new:
-                raise Refuse('fixed-point verification failed: a shifted fall row left K')
+            while not self.saturated and (at < len(tops) or ad < len(direct)):
+                cap = int(self.table_gb * 2 ** 30 / (8 * max(1, self.nT - self.K.rank)))
+                n = max(1, min(n, cap))
+                done = min(1.0, done + n / total)
+                bt = len(tops) if done >= 1.0 else int(done * len(tops))
+                bd = len(direct) if done >= 1.0 else int(done * len(direct))
+                self.chunk(tops[at:bt], direct[ad:bd])
+                at, ad = bt, bd
+                self.falls()
+                self.log(event='chunk', tops_done=at, tops=len(tops), direct_done=ad, direct=len(direct),
+                         rank_K=self.K.rank, nT=self.nT, sec=round(time.time() - self.t0, 1))
+                n *= 2
+            complete = at == len(tops) and ad == len(direct)
+            if not self.saturated:
+                self.max_seconds = None                       # the final check is not interrupted
+                self.stop_on_one = False
+                verify_new = self.falls(verify=True)
+                if verify_new:
+                    raise Refuse('fixed-point verification failed: a shifted fall row left K')
+        except Stop as e:
+            self.stopped, complete = str(e), False
         return self.result(complete, verify_new)
 
     def result(self, complete: bool, verify_new) -> dict:
@@ -804,6 +835,7 @@ class Lift:
             version=VERSION, k=self.k, D=self.D, D_target=self.D + 1, p=p,
             contains_one=bool(self.one_in_VD or one_new), one_in_VD=self.one_in_VD,
             fixed_point=fixed, saturated=bool(self.saturated), schedule_complete=bool(complete),
+            stopped=self.stopped, bounds_only=not fixed,       # bounds_only: only contains_one = true is a statement
             verify_new_rows=verify_new,
             sigma_stable=bool(ranks[0] + ranks[1] == nf),
             dim_VD=npd + self.n_single,
@@ -811,7 +843,8 @@ class Lift:
             dim_low_parts=[pd_parts[0] + ranks[0], pd_parts[1] + ranks[1]],
             dim_VD1=npd + len(self.regular) + K.rank,
             columns=dict(L=L.n, top=self.Tp.n, total=L.n + self.Tp.n),
-            n_Pd=npd, n_N=self.nN, n_single=self.n_single, n_special_tops=self.nSp,
+            n_Pd=npd, n_N=self.nN, n_N_weight_D=int(np.sum(L.w[self.Nmono] == self.D)),
+            n_single=self.n_single, n_special_tops=self.nSp,
             n_regular_tops=len(self.regular), n_T=self.nT, rank_K=K.rank, falls=nf,
             falls_new=nf - self.n_single, n_sources=self.n_sources, n_direct=len(self.dir_x),
             include_low=self.include_low, closed_check=self.closed_check,
@@ -819,14 +852,22 @@ class Lift:
             seconds=round(time.time() - self.t0, 1))
 
 
-def plan(nN: int, nSp: int, n_regular: int, rank_parts, free_parts, batch: int, table_gb: float) -> dict:
-    """memory estimate (GB) from the counts; worst case over the rank of K."""
+def plan(nN: int, nSp: int, n_regular: int, rank_parts, free_parts, batch: int, table_gb: float,
+         basis_on: str = 'host') -> dict:
+    """Memory estimate (GB) from the counts, worst case over the rank r of K (f = nT - r free columns).
+    Device arrays are float64: one follower nN x f; K as r x f (three copies while it is updated, one
+    more for the snapshot a chunk works against); the fall rows of the snapshot nf x f; the reference
+    table of a chunk; per batch about three nN-wide and four nT-wide blocks; at the end one echelon
+    form on the nN columns of N for the sigma-parts."""
     nT = nN + nSp
     G = 2.0 ** 30
-    host = sum(r * f * 4 for r, f in zip(rank_parts, free_parts)) / G
-    dev = dict(follower=nN * nT * 8 / G, K_worst=2 * (nT / 2) ** 2 * 8 / G, table=table_gb,
-               fall_cache_worst=(nN / 2) * (nT / 2) * 8 / G,
-               batch=batch * (3 * nN + 4 * nT) * 8 / G)
+    basis = sum(r * f * 4 for r, f in zip(rank_parts, free_parts)) / G
+    dev = dict(follower=nN * nT * 8 / G, K_worst=4 * (nT / 2) ** 2 * 8 / G, fall_rows_worst=(nN / 2) * (nT / 2) * 8 / G,
+               table=table_gb, batch=batch * (3 * nN + 4 * nT + 2 * max(free_parts) + 2) * 8 / G,
+               sigma_parts_at_end=3 * (nN / 2) ** 2 * 8 / G, basis=basis if basis_on == 'device' else 0.0)
     dev['total'] = sum(dev.values())
-    return dict(n_T=nT, host_basis_gb=round(host, 1), device_gb={k: round(v, 1) for k, v in dev.items()},
-                chunk_tops_at_empty_K=int(table_gb * G / (8 * nT)), regular_tops=n_regular)
+    return dict(n_N=nN, n_T=nT, basis_gb=round(basis, 1), basis_on=basis_on,
+                host_gb=round((0.0 if basis_on == 'device' else basis) + 3.0, 1),
+                device_gb={k: round(v, 1) for k, v in dev.items()},
+                first_chunk_cap_tops=int(table_gb * G / (8 * nT)), regular_tops=n_regular,
+                note='sizes are upper bounds; K_worst and fall_rows_worst are at r = f')

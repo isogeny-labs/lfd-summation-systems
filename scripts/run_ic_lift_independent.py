@@ -7,7 +7,8 @@
   plan  --n-free A,B --n-special S --regular R --ranks A,B      memory estimate from counts
   arith [--device cpu|gpu]                                      exact-arithmetic self-test
 
-Exit codes: 0 result written (fixed point reached), 3 result written but not a fixed point,
+Exit codes: 0 result written (fixed point reached), 3 result written but not a fixed point
+(--max-hours or --stop-on-one: then only "contains_one: true" is a statement about V_{D+1}),
 4 refused (an input check failed; the reason is in the record).
 The only repository module imported is csd/ic_bounds_lift_independent.py (found next to this file
 or in ../csd).
@@ -33,20 +34,28 @@ def sha(path):
     return IL._sha256_file(path)
 
 
-def get_xp(device):
+def get_xp(device, no_pool=False):
     if device == 'gpu':
         import cupy
+        if no_pool:                      # device pool only; the pinned-memory pool stays on
+            cupy.cuda.set_allocator(None)
         return cupy
     return np
 
 
+QUIET = set()
+
+
 def log(**kw):
-    print(json.dumps(kw), flush=True)
+    if kw.get('event') not in QUIET:
+        print(json.dumps(kw), flush=True)
 
 
 def cmd_lift(a):
-    xp = get_xp(a.device)
+    xp = get_xp(a.device, a.no_pool)
     t0 = time.time()
+    if not a.verbose:
+        QUIET.update(('chunk_shift', 'fall_shift'))
     rec = dict(command='lift', ckpt=a.ckpt, instance_file=os.path.basename(a.instance), device=a.device,
                source_sha256=dict(lift=sha(IL.__file__), driver=sha(__file__), instance=sha(a.instance)))
     try:
@@ -63,7 +72,9 @@ def cmd_lift(a):
                               manifest_files_id=ck['manifest_files_id'], engine_sha256=ck['engine_sha256']))
         log(event='loaded', k=k, D=ck['D'], p=p, ranks=[len(pv) for pv, _ in ck['parts']], sec=round(time.time() - t0, 1))
         lift = IL.Lift(k, ck['D'], p, ck['parts'], g, xp=xp, include_low=a.include_low, batch=a.batch,
-                       table_gb=a.table_gb, first_chunk=a.first_chunk, seed=a.seed, log=log)
+                       table_gb=a.table_gb, first_chunk=a.first_chunk, seed=a.seed, log=log,
+                       max_seconds=a.max_hours * 3600 if a.max_hours else None, stop_on_one=a.stop_on_one,
+                       basis_on=a.basis_on)
         if a.closure_record:
             cr = json.load(open(a.closure_record))
             mine = [IL.canonical_sha(pv, B, nc, p) for (pv, B), nc in zip(ck['parts'], lift.ncol)]
@@ -76,7 +87,7 @@ def cmd_lift(a):
                 raise IL.Refuse('the closure record does not say closed: true')
         log(event='tables', n_N=lift.nN, n_special=lift.nSp, n_regular=len(lift.regular), n_T=lift.nT,
             plan=IL.plan(lift.nN, lift.nSp, len(lift.regular), [len(pv) for pv, _ in ck['parts']],
-                         [B.shape[1] for _, B in ck['parts']], a.batch, a.table_gb), sec=round(time.time() - t0, 1))
+                         [B.shape[1] for _, B in ck['parts']], a.batch, a.table_gb, a.basis_on), sec=round(time.time() - t0, 1))
         rec.update(lift.run(closed_check=a.closed_check))
         rec['status'] = 'done'
         code = 0 if rec['fixed_point'] else 3
@@ -86,7 +97,9 @@ def cmd_lift(a):
     rec['seconds_total'] = round(time.time() - t0, 1)
     rec['maxrss_mb'] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss // 1024
     if a.device == 'gpu':
-        rec['device_peak_mb'] = int(xp.get_default_memory_pool().total_bytes() // 2 ** 20)
+        free, total = xp.cuda.Device().mem_info
+        rec['device_mb'] = dict(used_at_end=int((total - free) // 2 ** 20), total=int(total // 2 ** 20),
+                                pool_total=int(xp.get_default_memory_pool().total_bytes() // 2 ** 20))
     log(**{key: v for key, v in rec.items() if key != 'counts'}, event='result')
     if a.out:
         tmp = a.out + '.part'
@@ -100,7 +113,7 @@ def cmd_lift(a):
 def cmd_plan(a):
     fr = [int(x) for x in a.n_free.split(',')]
     rk = [int(x) for x in a.ranks.split(',')]
-    print(json.dumps(IL.plan(sum(fr) + a.n_single, a.n_special, a.regular, rk, fr, a.batch, a.table_gb), indent=1))
+    print(json.dumps(IL.plan(sum(fr) + a.n_single, a.n_special, a.regular, rk, fr, a.batch, a.table_gb, a.basis_on), indent=1))
 
 
 def cmd_arith(a):
@@ -149,6 +162,11 @@ def main():
     ap.add_argument('--table-gb', type=float, default=2.0)
     ap.add_argument('--first-chunk', type=int, default=2048)
     ap.add_argument('--seed', type=int, default=1)
+    ap.add_argument('--max-hours', type=float, default=None, help='stop cleanly after this time (record: bounds only)')
+    ap.add_argument('--stop-on-one', action='store_true')
+    ap.add_argument('--verbose', action='store_true', help='one log line per shift')
+    ap.add_argument('--no-pool', action='store_true', help='gpu: disable the cupy device memory pool')
+    ap.add_argument('--basis-on', default='host', choices=['host', 'device'], help='where the float32 basis of V_D lives')
     ap.add_argument('--n-free'); ap.add_argument('--ranks'); ap.add_argument('--n-single', type=int, default=0)
     ap.add_argument('--n-special', type=int); ap.add_argument('--regular', type=int)
     a = ap.parse_args()
