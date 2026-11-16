@@ -175,8 +175,8 @@ k = 7 D = 4 -> 5, unit-163841 k = 6 D = 4 -> 5.
 | control | runs | outcome |
 |---|---|---|
 | generator: coefficient of (0,0) or (1,1) + 1 | 8 | 8 refused: "the generator g is not in the stored space" |
-| one entry + 1 in a stored row of pivot weight < D (in memory, file hashes bypassed) | 21 | 21 refused: 18 "not closed" (12 to 28 of the 24 or 28 shifted random elements leave the space), 3 "generator not in the stored space" |
-| one entry + 1 in a stored row of pivot weight D (same) | 24 | 24 refused: "not closed" (4 to 16 shifted elements leave); the canonical hash also differs from the engine record in all 45 corrupted bases |
+| one entry + 1 in a stored row of pivot weight < D (in memory, file hashes bypassed) | 21 | 21 refused: 18 "not closed" (all 24 or 28 shifted random elements leave the space), 3 "generator not in the stored space" |
+| one entry + 1 in a stored row of pivot weight D (same) | 24 | 24 refused: "not closed" (4 to 16 of the 24 or 28 shifted elements leave); the canonical hash also differs from the engine record in all 45 corrupted bases |
 | one byte of a tile file flipped on disk | 4 | 4 refused by the reader: sha256 differs from the manifest |
 | test hook in the harness: fall rows never shifted | 4 | 4 results changed: `contains_one` flips to false in the 2 cases where 1 enters (dimension 2,844 instead of 3,473; 1,523 instead of 1,586), dimension falls in the other 2 |
 | test hook: direct generators of one shift dropped | 4 | 0 changed |
