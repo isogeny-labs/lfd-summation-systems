@@ -1,0 +1,51 @@
+6f0865c2f28d165225cf9787bd890c19d134d791c0f7b7cb77df606949602ca4  bundle.tar.gz
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+cc (Debian 14.2.0-19) 14.2.0
+16
+MemTotal:       527690096 kB
+/usr/local/lib/python3.13/site-packages/numpy/__config__.py:155: UserWarning: Install `pyyaml` for better output
+  warnings.warn("Install `pyyaml` for better output", stacklevel=1)
+      "name": "gcc",
+      "name": "cython",
+      "name": "gcc",
+compiled elimination: True
+  D=3 cols=765 dim=1 one=False 0.001s
+  D=4 cols=3075 dim=64 one=False 0.011s
+  D=5 cols=9843 dim=995 one=False 0.932s
+  batches=20 rank=4900 queue=2336
+  D=6 cols=26351 dim=7195 one=False 59.923s
+  batches=20 rank=4873 queue=13328
+  batches=40 rank=8965 queue=16944
+  batches=60 rank=12485 queue=15616
+  batches=80 rank=16275 queue=21808
+  batches=100 rank=19342 queue=16064
+  batches=120 rank=22780 queue=13296
+  batches=140 rank=26324 queue=6608
+  batches=160 rank=30930 queue=5264
+  batches=180 rank=36371 queue=4240
+  batches=200 rank=45045 queue=60272
+  batches=220 rank=54801 queue=156928
+  D=7 cols=61183 dim=61183 one=True 4203.516s
+cell m=6 k=2 p=114689 seed=0: exact-unit 7 (4264.71s)
+  D=3 cols=765 dim=1 one=False 0.0s
+  D=4 cols=3075 dim=64 one=False 0.008s
+  D=5 cols=9843 dim=995 one=False 0.875s
+  batches=20 rank=4900 queue=2336
+  D=6 cols=26351 dim=7195 one=False 53.952s
+  batches=20 rank=4873 queue=13328
+  batches=40 rank=8965 queue=16944
+  batches=60 rank=12485 queue=15616
+  batches=80 rank=16275 queue=21808
+  batches=100 rank=19342 queue=16064
+  batches=120 rank=22780 queue=13296
+  batches=140 rank=26324 queue=6608
+  batches=160 rank=30930 queue=5264
+  batches=180 rank=36371 queue=4240
+  batches=200 rank=45045 queue=60272
+  batches=220 rank=54801 queue=156928
+  D=7 cols=61183 dim=61183 one=True 4071.131s
+cell m=6 k=2 p=163841 seed=0: exact-unit 7 (4126.41s)
+job exit 0
