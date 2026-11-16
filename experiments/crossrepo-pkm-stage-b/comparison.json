@@ -1,0 +1,191 @@
+{
+  "status": "passed",
+  "scope": "comparison of recorded values; no closure was run; the stage B readings carry no certificate",
+  "overlap": [
+    {
+      "m": 3,
+      "depth": 2,
+      "certified_unit_histogram": {
+        "5": 63
+      },
+      "certified_proper_cases": 53,
+      "stage_b_draws": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "stage_b_censored": [],
+      "agree": true
+    },
+    {
+      "m": 3,
+      "depth": 3,
+      "certified_unit_histogram": {
+        "6": 51
+      },
+      "certified_proper_cases": 66,
+      "stage_b_draws": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "stage_b_censored": [],
+      "agree": true
+    },
+    {
+      "m": 3,
+      "depth": 4,
+      "certified_unit_histogram": {
+        "6": 27
+      },
+      "certified_proper_cases": 90,
+      "stage_b_draws": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "stage_b_censored": [],
+      "agree": true
+    }
+  ],
+  "stage_b_first_fall_degrees": [
+    "4"
+  ],
+  "stage_b_only": {
+    "m=3,depth=5": [
+      {
+        "p": 786433,
+        "d_F": ">=7 7",
+        "D": "7 7"
+      },
+      {
+        "p": 2013265921,
+        "d_F": "7 7",
+        "D": "7 7"
+      }
+    ],
+    "m=3,depth=6": [
+      {
+        "p": 2013265921,
+        "d_F": ">=7 >=7",
+        "D": ">=7 >=7"
+      }
+    ],
+    "m=4,depth=2": [
+      {
+        "p": 786433,
+        "d_F": "6 6",
+        "D": "6 6"
+      },
+      {
+        "p": 2013265921,
+        "d_F": "6 6",
+        "D": "6 6"
+      }
+    ],
+    "m=4,depth=3": [
+      {
+        "p": 786433,
+        "d_F": "7 7",
+        "D": "7 7"
+      },
+      {
+        "p": 2013265921,
+        "d_F": "7 7",
+        "D": "7 7"
+      }
+    ],
+    "m=4,depth=4": [
+      {
+        "p": 786433,
+        "d_F": ">=7 >=7",
+        "D": "7 7"
+      },
+      {
+        "p": 2013265921,
+        "d_F": ">=7 >=7",
+        "D": "7 7"
+      }
+    ],
+    "m=5,depth=2": [
+      {
+        "p": 786433,
+        "d_F": "6 6",
+        "D": "6 6"
+      },
+      {
+        "p": 2013265921,
+        "d_F": "6 6",
+        "D": "6 6"
+      }
+    ],
+    "m=5,depth=3": [
+      {
+        "p": 786433,
+        "d_F": ">8 >8",
+        "D": "8 8"
+      },
+      {
+        "p": 2013265921,
+        "d_F": ">8 >8",
+        "D": "8 8"
+      }
+    ],
+    "m=5,depth=4": [
+      {
+        "p": 2013265921,
+        "d_F": ">8 >8",
+        "D": ">=8 >=8"
+      }
+    ],
+    "m=5,depth=5": [
+      {
+        "p": 2013265921,
+        "d_F": ">=7 >=7",
+        "D": ""
+      }
+    ],
+    "m=6,depth=2": [
+      {
+        "p": 786433,
+        "d_F": ">=7 >=7",
+        "D": "7 7"
+      },
+      {
+        "p": 2013265921,
+        "d_F": ">=7 >=7",
+        "D": "7 7"
+      }
+    ]
+  },
+  "four_summands_depth_four": [
+    {
+      "file": "M4-t4-k0-c7.jsonl",
+      "m": 4,
+      "depth": 4,
+      "first_degree_with_one": 7,
+      "closures_without_one": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "file": "M4-t4-k1-c7.jsonl",
+      "m": 4,
+      "depth": 4,
+      "first_degree_with_one": 7,
+      "closures_without_one": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "failures": []
+}

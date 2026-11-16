@@ -1479,7 +1479,53 @@ $7=\deg g+2$ at $k=3$ and $4$ ($10$ and $11$ cases). At $k=3,4$ the
 generator has degree $6<mk$, so these cells, unlike $k=2$, test the upper
 side: the value $7$ lies below the bounds $10$ and $13$. The split presentation with a free
 auxiliary variable has LFD $6$ at $k=4$ and in $111$ of $117$ cases at
-$k=3$ ($5$ in the other six).
+$k=3$ ($5$ in the other six), and $5$ in all $116$ cases at $k=2$.
+
+\paragraph{The split presentation on a second instrument (empirical).}
+The split presentation generalizes to $m$ summands: $m$ chains, $m-2$ free
+auxiliary abscissae $u_j$ of the partial sums, and the left chain
+$S_3(x_1,x_2,u_1)$, $S_3(u_j,x_{j+2},u_{j+1})$, $S_3(u_{m-2},x_m,t)$. A
+preregistered study in another repository measured it with a closure engine
+and an F4 implementation written in Rust, which share no code with the
+engines of this paper, on coset bases $g\mu_{2^k}$ and random targets (unit
+ideals) over $p=786433$ and $p=2013265921$, two draws per cell and prime. On
+the cells that both have, the values agree: for three summands its four
+draws read $5$, $6$, $6$ at $k=2,3,4$, the certified value on all $63$,
+$51$ and $27$ unit instances of our sweep at these depths. Its further
+readings are in Table~\ref{tab:splitm}. They carry no certificate of the
+kind of Appendix~\ref{app:certs} and were not recomputed here, so we report
+them as readings of one instrument and claim no exact value from them.
+
+\begin{table}[!ht]
+\centering\small
+\begin{tabular}{crrrrr}
+\toprule
+$m$ & $k=2$ & $k=3$ & $k=4$ & $k=5$ & $k=6$\\
+\midrule
+$3$ & $5^{*}$ & $6^{*}$ & $6^{*}$ & $7$ & $\ge7$\\
+$4$ & $6$ & $7$ & $7$ & $\ge7$ & \\
+$5$ & $6$ & $8$ & $\ge8$ & & \\
+$6$ & $7$ & & & & \\
+\bottomrule
+\end{tabular}
+\caption{Last fall degree of the split presentation with $m$ summands and
+$m-2$ free auxiliaries, as read by the second instrument (not certified
+here). Starred entries equal the certified values of this paper. An entry
+$\ge d$ is a closure stopped by a resource limit after degree $d-1$. At
+$m=3$, $k=5$, $p=786433$ one of the two draws stopped at $\ge7$. The entries
+$8$ ($m=5$) and $7$ ($m=6$) combine a closure without $1$ one degree below
+with the degree at which F4 ends. For $m=5,6$ at $k=2$ the base has four
+points, fewer than $m$.}
+\label{tab:splitm}
+\end{table}
+
+On every cell of that study the operational first fall degree is $4$, while
+the readings rise with both $m$ and $k$; with the certified values at
+$m=3$, $k\le4$ this is the pattern of the two-summand profile, in which the
+first fall degree does not predict the last. The direct and the split
+presentations differ at equal $(m,k)$, $7$ against $5$ or $6$ for three
+summands at $k\le4$, in line with the dependence of the LFD on the
+presentation (Section~\ref{sec:related}).
 
 On twelve further instances (eight primes with $32\mid p-1$, random curves, random and
 planted generic targets, the same curve and target at every depth) the
@@ -2475,6 +2521,10 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  Proposition~\ref{prop:nontorsion} is the kernel-checked part: it gives no
  lower bound on any last fall degree, and its two presentations of the
  function field are not identified in Lean.
+\item \emph{The split presentation beyond three summands}
+ (Table~\ref{tab:splitm}) is read by one instrument, with two draws per
+ cell and prime, and has no certificate; only its three-summand entries at
+ $k\le4$ are certified here.
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
  is one instance and one engine, with no computation at $k\ge7$ and no
  prediction beyond $k=6$. The value $\deg g+1$ for four and five summands is
@@ -2870,6 +2920,17 @@ coordinate functions on two curves, tested the characteristic-$p$ bound
 with relations whose coefficients are non-constant $p$-th powers, and
 confirmed that the Lean bridge is applied with the space $S_D$ of the text.
 
+\paragraph{A second instrument for the split presentation.} The readings
+of Table~\ref{tab:splitm} come from the repository
+\code{isogeny-labs/crypto} (preregistered study
+\code{research/prime\_fall\_degree\_20261027}, stage B). Its scored table,
+the two closure records behind the entry $m=4$, $k=4$, and their digests
+are copied to \code{experiments/crossrepo-pkm-stage-b/};
+\code{scripts/check\_crossrepo\_stage\_b.py} rebuilds the comparison with
+the certified three-summand values from the records of both sides and
+fails on any difference. The check compares recorded values and runs no
+closure.
+
 \paragraph{Replays.} The sweep was replayed in full. The depth-ten probe was
 rerun from scratch on the same instance and reproduces the verified $V_5$
 bit for bit (same $17$ rounds, rank $18{,}569$, basis hash
@@ -2940,7 +3001,7 @@ Result & Location\\
 \midrule
 Lean development and audit & \code{formal/ICFallDegrees/}; audit report \code{experiments/\allowbreak{}ic-lean/}\\
 Explicit prime cutoffs and rational-family replay & \code{experiments/explicit-prime-bound-20261115/}, \code{experiments/sharp-prime-bound-20261115/}, \code{experiments/rational-prime-growth-20261115/}; scripts \code{check\_n8\_explicit\_prime\_bound.py}, \code{check\_n8\_sharp\_prime\_bound.py}, \code{check\_n8\_rational\_prime\_growth.py} in \code{scripts/}\\
-Function field and pole orders for $Y\ne0$ (Proposition~\ref{prop:nontorsion}) & \code{formal/ICFallDegrees/GrowthNonTorsion*.lean}, \code{formal/N8NonTwoTorsionPolesAudit.lean}; notes \code{docs/proofs/N8-non-torsion-bridge-20261115.md}, \code{N8-non-two-torsion-field-20261116.md}, \code{N8-non-two-torsion-poles-20261116.md}; local kernel receipts \code{experiments/non-two-torsion-bridge-20261115/}, \code{experiments/non-two-torsion-field-20261116/}, \code{experiments/non-two-torsion-poles-20261116/}\\
+Function field and pole orders for $Y\ne0$ (Proposition~\ref{prop:nontorsion}) & \code{formal/ICFallDegrees/GrowthNonTorsion*.lean}, \code{formal/N8NonTwoTorsionPolesAudit.lean}; notes \code{docs/proofs/N8-non-t*.md}; local kernel receipts \code{experiments/non-two-torsion-*/}\\
 Depth-$7$ and depth-$6$ kernel certificates & \code{experiments/\allowbreak{}ic-bounds-cert/}, \code{experiments/\allowbreak{}ic-bounds-exact-k6/}\\
 Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md}, \code{N8-fermat-diagonal-obstruction-20261114.md} and the other \code{N8-*.md}; reviews of the written growth proof: \code{N8-growth-review.md}, \code{N8-growth-review-redteam.md}\\
 Selector-bound test (summaries) & \code{experiments/\allowbreak{}ic-bounds-upper/}, \code{experiments/\allowbreak{}ic-bounds-upper-redteam/}\\
@@ -2954,7 +3015,7 @@ Depth ten & \code{experiments/\allowbreak{}ic-chain-depth10/} (\code{degree6.jso
 Reference engine, depths $10$--$13$ & \code{experiments/\allowbreak{}ic-bounds-d5/} (\code{VERIFY.md}; \code{verify/k10-p12289-s10-D6.json})\\
 Third engine, depths $10$--$16$; lift & \code{experiments/\allowbreak{}ic-bounds-k14/} (\code{RESULTS.md}, \code{README.md}, \code{LIFT.md}, \code{CERTCHECK.md}; \code{runs/lift-unit-p65537-k14-D6to7.json}, \code{runs/lift-unit-p163841-k14-D6to7.json}, \code{runs/lift-proper-p114689-k14-D6to7.json}, \code{runs/reference-engine-unit-p65537-k14-D5.json} with \code{-k10-D6.json} and \code{-k11-D6.json}, \code{validation/lift-k10d5-proper.json}; instances in \code{instances/})\\
 Free extension, predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/} (\code{records/}; \code{predictions-2026-11-10.json}, ids \code{d5-14}, \code{d6-full-through-13}, \code{d6-falls-at-14}; \code{outcomes-2026-11-10.json})\\
-Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r})\\
+Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r}); Table~\ref{tab:splitm}: \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/}\\
 Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experiments/\allowbreak{}ic-bounds-msum/}\\
 Four and five summands (exact closures) & \code{experiments/\allowbreak{}ic-bounds-msummands/}\\
 Binary grids and laws & \code{experiments/\allowbreak{}ic-bounds-binary/}, \code{experiments/\allowbreak{}ic-bounds-binary-law/}, \code{experiments/\allowbreak{}ic-bounds-binary-deep/}\\
