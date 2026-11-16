@@ -65,3 +65,14 @@ audit coverage and three finite closure regressions.
 The upstream Python CI does not build Lean; it supplies no additional
 Lean build evidence. The source digests in `verification.json` bind the
 saved warm audit to the source files in this checkout.
+
+## Fresh complete build, 14 November 2026
+
+[clean-20261114/README.md](clean-20261114/README.md) supersedes the earlier
+clean-build coverage limit: all 120 current project modules compiled on a
+fresh GitHub Linux runner, and all 582 declarations passed the axiom audit.
+The 124 source digests and declaration dependencies match the saved report.
+The linked one-shot workflow supplied this fresh Linux evidence; the
+canonical workflow remains `.github/workflows/ci.yml`. The earlier upstream
+Python CI described above did not build Lean. The earlier logs and
+reports are retained unchanged.

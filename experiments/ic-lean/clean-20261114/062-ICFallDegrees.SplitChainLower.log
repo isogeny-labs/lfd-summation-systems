@@ -1,0 +1,43 @@
+⚠ [1396/1449] Replayed ICFallDegrees.BinaryTriple
+warning: ././././ICFallDegrees/BinaryTriple.lean:123:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1448/1449] Replayed ICFallDegrees.BinaryS3Bounds
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:31:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryS3Bounds.affine_degree':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:40:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryS3Bounds.affine_square_identity':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:58:8: automatically included section variable(s) unused in theorem '_private.ICFallDegrees.BinaryS3Bounds.0.ICFallDegrees.BinaryS3Bounds.product_degree':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:62:8: automatically included section variable(s) unused in theorem '_private.ICFallDegrees.BinaryS3Bounds.0.ICFallDegrees.BinaryS3Bounds.add_degree':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryS3Bounds.lean:91:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryS3Bounds.normalization_identity':
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1449/1449] Built ICFallDegrees.SplitChainLower
+warning: ././././ICFallDegrees/SplitChainLower.lean:34:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:37:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:53:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:109:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:117:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:225:16: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully.

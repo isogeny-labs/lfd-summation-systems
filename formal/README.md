@@ -51,6 +51,12 @@ dependencies are subsets of mathlib's standard foundational axioms
 `sorry`/`admit`, unsafe implementation overrides, or `native_decide` occur.
 Finite computations use kernel-checked reduction, `decide`, or proved `norm_num` steps.
 
+The [fresh Linux build of 14 November 2026](../experiments/ic-lean/clean-20261114/README.md)
+compiled all 120 project modules from an empty project build directory and
+reproduced the 582-declaration audit with identical source hashes and axiom
+dependencies. Its module logs, receipt and fresh verifier outputs are retained
+separately from the earlier records.
+
 ## What is formalized
 
 | Module | Mathematical content |
