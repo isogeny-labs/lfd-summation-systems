@@ -1,0 +1,1440 @@
+FAILED OR INTERRUPTED DRAFT ELABORATIONS; NOT KERNEL EVIDENCE.
+Draft source snapshots were edited in place and are not reproduced by this log.
+
+===== non-two-infinity-build-20261116.txt =====
+✔ [1685/1704] Built Mathlib.Tactic.ArithMult.Init
+✔ [1686/1704] Built Mathlib.CategoryTheory.Category.Init
+✔ [1687/1708] Built Mathlib.Tactic.CancelDenoms
+✔ [1688/1710] Built Mathlib.Data.Opposite
+✔ [1689/1727] Built Mathlib.Tactic.ArithMult
+✔ [1690/1729] Built Mathlib.Util.AddRelatedDecl
+✔ [1691/1729] Built Mathlib.Combinatorics.Quiver.Basic
+✔ [1692/1772] Built Mathlib.Tactic.Bound
+✔ [1693/1772] Built Mathlib.CategoryTheory.ConcreteCategory.Bundled
+✔ [1694/1772] Built Mathlib.Tactic.CategoryTheory.Coherence.Datatypes
+✔ [1695/1772] Built Mathlib.Logic.Lemmas
+✔ [1696/1772] Built Mathlib.Tactic.Change
+✔ [1697/1793] Built Mathlib.Tactic.Clean
+✔ [1709/1795] Built Mathlib.Combinatorics.Quiver.Prefunctor
+✔ [1712/1795] Built Mathlib.CategoryTheory.Category.Basic
+✔ [1713/1795] Built Mathlib.Combinatorics.Quiver.Push
+✔ [1715/1797] Built Mathlib.Tactic.DeriveCountable
+✔ [1716/1797] Built Mathlib.Combinatorics.Quiver.Path
+✔ [1717/1797] Built Mathlib.Tactic.DeriveEncodable
+✔ [1718/1799] Built Mathlib.Tactic.ProxyType
+✔ [1719/1799] Built Mathlib.Tactic.CategoryTheory.CheckCompositions
+✔ [1722/1799] Built Mathlib.Control.Traversable.Lemmas
+✔ [1723/1799] Built Mathlib.Tactic.CategoryTheory.Slice
+✔ [1724/1799] Built Mathlib.Combinatorics.Quiver.Symmetric
+✔ [1725/1800] Built Mathlib.Tactic.ENatToNat
+✔ [1727/1802] Built Mathlib.Tactic.Eval
+✔ [1728/1803] Built Mathlib.Tactic.DeriveFintype
+✔ [1730/1804] Built Mathlib.Tactic.Explode.Datatypes
+✔ [1731/1804] Built Mathlib.CategoryTheory.Functor.Basic
+✔ [1732/1804] Built Mathlib.Tactic.CategoryTheory.Coherence.PureCoherence
+✔ [1733/1804] Built Mathlib.Tactic.FindSyntax
+✔ [1734/1804] Built Mathlib.Tactic.Explode.Pretty
+✔ [1735/1804] Built Mathlib.Tactic.CategoryTheory.Reassoc
+✔ [1736/1804] Built Mathlib.Tactic.ContinuousFunctionalCalculus
+✔ [1737/1804] Built Mathlib.Tactic.Finiteness
+✔ [1738/1805] Built Mathlib.CategoryTheory.NatTrans
+✔ [1739/1808] Built Mathlib.Tactic.Explode
+✔ [1740/1808] Built Mathlib.Tactic.DeriveTraversable
+✔ [1741/1809] Built Mathlib.Algebra.Order.Ring.Synonym
+✔ [1742/1809] Built Mathlib.Algebra.Ring.Action.Pointwise.Set
+✔ [1743/1809] Built Mathlib.CategoryTheory.Iso
+✔ [1744/1820] Built Mathlib.GroupTheory.GroupAction.Pointwise
+✔ [1745/1820] Built Mathlib.Algebra.Order.Module.Synonym
+✔ [1751/1825] Built Mathlib.Algebra.Module.LinearMap.Prod
+✔ [1752/1825] Built Mathlib.LinearAlgebra.AffineSpace.Defs
+✔ [1753/1828] Built Mathlib.CategoryTheory.ObjectProperty.Basic
+✔ [1755/1828] Built Mathlib.CategoryTheory.ObjectProperty.ClosedUnderIsomorphisms
+✔ [1756/1829] Built Mathlib.Algebra.AddTorsor.Basic
+✔ [1758/1829] Built Mathlib.Algebra.Order.Module.Algebra
+✔ [1760/1829] Built Mathlib.CategoryTheory.Functor.Category
+✔ [1761/1829] Built Mathlib.LinearAlgebra.Ray
+✔ [1762/1834] Built Mathlib.LinearAlgebra.AffineSpace.AffineSubspace.Defs
+✔ [1770/1849] Built Mathlib.Tactic.CategoryTheory.Coherence.Normalize
+✔ [1772/1849] Built Mathlib.Algebra.Order.Group.Pointwise.Bounds
+✔ [1773/1849] Built Mathlib.CategoryTheory.NatIso
+✔ [1775/1849] Built Mathlib.Tactic.CategoryTheory.Coherence.Basic
+✔ [1776/1849] Built Mathlib.Order.ConditionallyCompleteLattice.Group
+✔ [1777/1853] Built Mathlib.LinearAlgebra.AffineSpace.AffineMap
+✔ [1780/1856] Built Mathlib.CategoryTheory.Functor.FullyFaithful
+✔ [1783/1856] Built Mathlib.Algebra.Order.Nonneg.Floor
+✔ [1784/1856] Built Mathlib.Algebra.Order.CauSeq.Basic
+✔ [1785/1857] Built Mathlib.CategoryTheory.InducedCategory
+
+===== non-two-infinity-build-pass2-20261116.txt =====
+✔ [1759/1760] Built Mathlib.RingTheory.Norm.Basic
+✖ [1760/1760] Building ICFallDegrees.GrowthNonTorsionInfinity
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionInfinity.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinity.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinity.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionInfinity.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:73:44: unknown constant 'Multiplicative.ofAdd_add'
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:65:75: unsolved goals
+case neg
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+u v : W.CoordinateRing
+hu : ¬u = 0
+hv : ¬v = 0
+⊢ Multiplicative.ofAdd ↑((Algebra.norm K[X]) (u * v)).natDegree =
+    Multiplicative.ofAdd ↑((Algebra.norm K[X]) u).natDegree * Multiplicative.ofAdd ↑((Algebra.norm K[X]) v).natDegree
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:92:4: mod_cast has type
+  ↑((Algebra.norm K[X]) (u + v)).natDegree ≤
+    max ↑((Algebra.norm K[X]) u).natDegree ↑((Algebra.norm K[X]) v).natDegree : Prop
+but is expected to have type
+  ((Algebra.norm K[X]) (u + v)).natDegree ≤
+    max ((Algebra.norm K[X]) u).natDegree ((Algebra.norm K[X]) v).natDegree : Prop
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:123:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:124:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:125:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:126:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:127:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionInfinity
+error: build failed
+
+===== non-two-infinity-build-selective-20261116.txt =====
+✖ [1686/1686] Building ICFallDegrees.GrowthNonTorsionInfinity
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionInfinity.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinity.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinity.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionInfinity.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:33:34: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:33:34: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:55:25: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:57:50: application type mismatch
+  Multiplicative.ofAdd ?m.10909
+argument
+  ?m.10909
+has type
+  ℤ : Type
+but is expected to have type
+  Option (Multiplicative ℤ) : Type
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:55:52: unsolved goals
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve K
+u : sorry
+⊢ ℤₘ₀
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:59:34: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:61:3: unknown constant 'Algebra.norm_ne_zero_iff_of_basis'
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:63:35: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:63:35: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:76:38: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:76:38: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:97:36: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:104:37: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:105:31: unsolved goals
+u : sorry
+hu : u ≠ sorry
+⊢ ¬sorry () = 0
+warning: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:107:2: declaration uses 'sorry'
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:109:34: invalid field 'FunctionField', the environment does not contain 'WeierstrassCurve.FunctionField'
+  W
+has type
+  WeierstrassCurve K
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:117:35: invalid field 'CoordinateRing', the environment does not contain 'WeierstrassCurve.CoordinateRing'
+  W
+has type
+  WeierstrassCurve K
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:122:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:123:14: unknown constant 'coordinateValue_mul'
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:124:14: unknown constant 'coordinateValue_add_le'
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:125:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [sorryAx]
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:126:14: unknown constant 'infinityValuation_map'
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionInfinity
+error: build failed
+
+===== non-two-infinity-coordinates-20261116.txt =====
+✖ [1760/1760] Building ICFallDegrees.GrowthNonTorsionInfinity
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionInfinity.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinity.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinity.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionInfinity.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:149:37: unsolved goals
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+hx : coordinateX W ≠ 0
+⊢ ↑(Multiplicative.ofAdd ↑2) = ↑(Multiplicative.ofAdd 2)
+error: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:158:37: unsolved goals
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+hy : coordinateY W ≠ 0
+⊢ ↑(Multiplicative.ofAdd ↑3) = ↑(Multiplicative.ofAdd 3)
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:187:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:188:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:189:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:190:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:192:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:193:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:194:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionInfinity
+error: build failed
+
+===== non-two-infinity-secant-20261116.txt =====
+ℹ [1760/1827] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1786/1827] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1791/1827] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1826/1827] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+✖ [1827/1827] Building ICFallDegrees.GrowthNonTorsionInfinitySecant
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinitySecant.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinitySecant.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionInfinitySecant.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:32:32: unsolved goals
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+a b t Y : K
+ht : t ≠ 0
+v : Valuation W.FunctionField ℤₘ₀ := infinityValuation W
+c : K →+* W.FunctionField := constants W
+x : W.FunctionField := fieldX W
+y : W.FunctionField := fieldY W
+hx : v x = ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 2
+hy : v y = ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+hct : v (c t) = 1
+h23 : ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 2 ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+⊢ 1 ≤ Multiplicative.ofAdd 3
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:64:30: unsolved goals
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+a b t Y : K
+ht : t ≠ 0
+v : Valuation W.FunctionField ℤₘ₀ := infinityValuation W
+c : K →+* W.FunctionField := constants W
+x : W.FunctionField := fieldX W
+y : W.FunctionField := fieldY W
+hx : v x = ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 2
+hy : v y = ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+hct : v (c t) = 1
+h23 : ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 2 ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+h13 : 1 ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+h34 : ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3 < ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 4
+hx2 : v (x ^ 2) = ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 4
+hlead : v (c t * x ^ 2) = ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 4
+hlowx : v (c (t ^ 2 + a) * x) ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+hlowc : v (c (a * t + 2 * b)) ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+hlowy : v (c (2 * Y) * y) ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+rest : W.FunctionField := c (t ^ 2 + a) * x + c (a * t + 2 * b) + c (2 * Y) * y
+hrest : v rest ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+he : secantNumerator (c a) (c b) x (c t) y (c Y) = c t * x ^ 2 + rest
+hn : v (secantNumerator (c a) (c b) x (c t) y (c Y)) = ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 4
+⊢ 1 < Multiplicative.ofAdd 2
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:79:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:80:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionInfinitySecant
+error: build failed
+
+===== non-two-infinity-secant-pass2-20261116.txt =====
+ℹ [1760/1827] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1786/1827] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1791/1827] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1826/1827] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+✖ [1827/1827] Building ICFallDegrees.GrowthNonTorsionInfinitySecant
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinitySecant.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinitySecant.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionInfinitySecant.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:32:35: 'change' tactic failed, pattern
+  (0 : ℤ) ≤ 3
+is not definitionally equal to target
+  (1 : ℤₘ₀) ≤ ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 3
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:64:46: 'change' tactic failed, pattern
+  (0 : ℤ) < 2
+is not definitionally equal to target
+  (1 : ℤₘ₀) < ICFallDegrees.GrowthNonTorsionInfinitySecant.exp 2
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:83:2: 'change' tactic failed, pattern
+  2 ≤ 0
+is not definitionally equal to target
+  ↑(Multiplicative.ofAdd 2) ≤ 1
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:94:7: unknown identifier 'CoordinateRing.mk'
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:95:8: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  (AdjoinRoot.mk ?m.3276) ?m.3276
+K : Type u_1
+inst✝ : Field K
+a b : K
+W : WeierstrassCurve.Affine K := shortCurve a b
+⊢ (algebraMap W.CoordinateRing W.FunctionField) sorry = 0
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:109:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:110:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:111:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:112:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:113:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionInfinitySecant
+error: build failed
+
+===== non-two-infinity-secant-pass3-20261116.txt =====
+ℹ [1759/1807] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/1807] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/1807] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1826/1827] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+✖ [1827/1827] Building ICFallDegrees.GrowthNonTorsionInfinitySecant
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinitySecant.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionInfinitySecant.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionInfinitySecant.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:105:25: failed to synthesize
+  HAdd (FunctionField { a₁ := 0, a₂ := 0, a₃ := 0, a₄ := a, a₆ := b }) W.FunctionField
+    (FunctionField { a₁ := 0, a₂ := 0, a₃ := 0, a₄ := a, a₆ := b })
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:105:25: failed to synthesize
+  HAdd (FunctionField { a₁ := 0, a₂ := 0, a₃ := 0, a₄ := a, a₆ := b }) W.FunctionField
+    (FunctionField { a₁ := 0, a₂ := 0, a₃ := 0, a₄ := a, a₆ := b })
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:116:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:117:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:118:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:119:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:120:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionInfinitySecant
+error: build failed
+
+===== non-two-target-local-20261116.txt =====
+ℹ [1759/1856] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/1856] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/1856] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/1856] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/1856] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [1844/1858] Built Mathlib.Data.SetLike.Fintype
+✔ [1845/1858] Built Mathlib.RingTheory.Valuation.PrimeMultiplicity
+✔ [1847/1858] Built Mathlib.GroupTheory.PGroup
+✔ [1848/1860] Built Mathlib.Order.Atoms.Finite
+✔ [1849/1860] Built Mathlib.RingTheory.Coprime.Ideal
+✔ [1850/1863] Built Mathlib.Order.CompactlyGenerated.Intervals
+✔ [1851/1863] Built Mathlib.RingTheory.Ideal.Quotient.PowTransition
+✔ [1852/1867] Built Mathlib.Control.Bifunctor
+✔ [1853/1867] Built Mathlib.Data.Rel
+✔ [1855/1867] Built Mathlib.Logic.Equiv.Functor
+✔ [1856/1867] Built Mathlib.GroupTheory.Torsion
+✔ [1857/1871] Built Mathlib.GroupTheory.Sylow
+✔ [1858/1874] Built Mathlib.LinearAlgebra.Finsupp.Span
+✔ [1859/1874] Built Mathlib.RingTheory.Ideal.Colon
+✔ [1860/1876] Built Mathlib.Algebra.Module.ZMod
+✔ [1861/1879] Built Mathlib.RingTheory.Finiteness.Nakayama
+✔ [1864/1879] Built Mathlib.Order.Sublattice
+✔ [1865/1885] Built Mathlib.Order.RelSeries
+✔ [1866/1885] Built Mathlib.RingTheory.ReesAlgebra
+✔ [2046/2058] Built Mathlib.Algebra.Module.Submodule.Invariant
+✔ [2047/2058] Built Mathlib.RingTheory.Nakayama
+✔ [2048/2058] Built Mathlib.Order.JordanHolder
+✔ [2049/2058] Built Mathlib.RingTheory.AdicCompletion.Basic
+✔ [2050/2058] Built Mathlib.RingTheory.DiscreteValuationRing.Basic
+✔ [2051/2058] Built Mathlib.RingTheory.SimpleModule.Basic
+✔ [2052/2058] Built Mathlib.Algebra.Polynomial.Module.AEval
+✔ [2053/2058] Built Mathlib.Algebra.Module.Torsion
+✔ [2054/2058] Built Mathlib.Algebra.Polynomial.Module.Basic
+✔ [2055/2058] Built Mathlib.RingTheory.Filtration
+✔ [2056/2058] Built Mathlib.RingTheory.Ideal.Cotangent
+✔ [2057/2058] Built Mathlib.RingTheory.DiscreteValuationRing.TFAE
+✖ [2058/2058] Building ICFallDegrees.GrowthNonTorsionTargetLocal
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetLocal.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:44:4: application type mismatch
+  Ideal.Quotient.maximal_of_isField (pointIdeal W t Y) fun hB =>
+    MulEquiv.isField K hB (CoordinateRing.quotientXYIdealEquiv W hR).toRingEquiv.toMulEquiv
+argument
+  fun hB => MulEquiv.isField K hB (CoordinateRing.quotientXYIdealEquiv W hR).toRingEquiv.toMulEquiv
+has type
+  IsField K → IsField (W.CoordinateRing ⧸ CoordinateRing.XYIdeal W t (C Y)) : Prop
+but is expected to have type
+  IsField (W.CoordinateRing ⧸ pointIdeal W t Y) : Prop
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetLocal
+error: build failed
+
+===== non-two-target-local-pass2-20261116.txt =====
+ℹ [1759/1897] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/1897] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/1897] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/1897] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/1897] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2058/2058] Building ICFallDegrees.GrowthNonTorsionTargetLocal
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetLocal.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:52:68: application type mismatch
+  @MulEquiv.isField ?m.4690 (Field.toIsField K)
+argument
+  Field.toIsField K
+has type
+  IsField K : Prop
+but is expected to have type
+  Type ?u.4682 : Type (?u.4682 + 1)
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:92:4: tactic 'apply' failed, failed to unify
+  ?m.12520 = ⊤
+with
+  Ideal.map f (CoordinateRing.XYIdeal W t (C (W.negY t Y))) = ⊤
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+t Y : K
+hR : W.Equation t Y
+hns : W.Nonsingular t Y
+hY : Y ≠ W.negY t Y
+f : W.CoordinateRing →+* PointLocalRing W t Y hR := algebraMap W.CoordinateRing (PointLocalRing W t Y hR)
+⊢ Ideal.map f (CoordinateRing.XYIdeal W t (C (W.negY t Y))) = ⊤
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:93:6: application type mismatch
+  @Ideal.eq_top_of_isUnit_mem ?m.12213 ?m.12214
+    (Ideal.mem_map_of_mem f (Ideal.subset_span (Set.mem_insert_of_mem ?m.12466 (Set.mem_singleton ?m.12471))))
+argument
+  Ideal.mem_map_of_mem f (Ideal.subset_span (Set.mem_insert_of_mem ?m.12466 (Set.mem_singleton ?m.12471)))
+has type
+  f ?m.12471 ∈ Ideal.map f (Ideal.span {?m.12466, ?m.12471}) : Prop
+but is expected to have type
+  Ideal ?m.12213 : Type ?u.12212
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetLocal
+error: build failed
+
+===== non-two-target-local-pass3-20261116.txt =====
+ℹ [1760/2058] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1786/2058] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1791/2058] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1826/2058] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1827/2058] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2058/2058] Building ICFallDegrees.GrowthNonTorsionTargetLocal
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetLocal.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:98:26: unknown identifier 'top_mul'
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:89:40: unsolved goals
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+t Y : K
+hR : W.Equation t Y
+hns : W.Nonsingular t Y
+hY : Y ≠ W.negY t Y
+f : W.CoordinateRing →+* PointLocalRing W t Y hR := algebraMap W.CoordinateRing (PointLocalRing W t Y hR)
+hunit : Ideal.map f (CoordinateRing.XYIdeal W t (C (W.negY t Y))) = ⊤
+hm : ⊤ * Ideal.map f (CoordinateRing.XYIdeal W t (C Y)) = Ideal.map f (CoordinateRing.XIdeal W t)
+⊢ IsLocalRing.maximalIdeal (PointLocalRing W t Y hR) =
+    Ideal.span {(algebraMap W.CoordinateRing (PointLocalRing W t Y hR)) (CoordinateRing.XClass W t)}
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetLocal
+error: build failed
+
+===== non-two-target-local-pass4-20261116.txt =====
+ℹ [1759/1880] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/1880] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/1880] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/1880] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/1880] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2058/2058] Building ICFallDegrees.GrowthNonTorsionTargetLocal
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetLocal.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:101:6: failed to rewrite using equation theorems for 'ICFallDegrees.GrowthNonTorsionTargetLocal.targetIdeal'.
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:109:2: type mismatch
+  Function.Injective.ne (IsLocalization.injective ?m.12803 (Ideal.primeCompl_le_nonZeroDivisors (targetIdeal W t Y hR)))
+    (CoordinateRing.XClass_ne_zero W t)
+has type
+  (algebraMap W.CoordinateRing ?m.12803) (CoordinateRing.XClass W t) ≠ (algebraMap W.CoordinateRing ?m.12803) 0 : Prop
+but is expected to have type
+  localParameter W t Y hR ≠ 0 : Prop
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetLocal
+error: build failed
+
+===== non-two-target-local-pass5-20261116.txt =====
+ℹ [1760/2058] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1786/2058] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1791/2058] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1826/2058] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1827/2058] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2058/2058] Building ICFallDegrees.GrowthNonTorsionTargetLocal
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetLocal.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetLocal.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetLocal.lean:104:13: unsolved goals
+K : Type u_1
+inst✝ : Field K
+W : WeierstrassCurve.Affine K
+t Y : K
+hR : W.Equation t Y
+hns : W.Nonsingular t Y
+hY : Y ≠ W.negY t Y
+f : W.CoordinateRing →+* PointLocalRing W t Y hR := algebraMap W.CoordinateRing (PointLocalRing W t Y hR)
+hunit : Ideal.map f (CoordinateRing.XYIdeal W t (C (W.negY t Y))) = ⊤
+hm : Ideal.map f (CoordinateRing.XYIdeal W t (C Y)) = Ideal.map f (CoordinateRing.XIdeal W t)
+⊢ Ideal.span {f (CoordinateRing.XClass W t)} =
+    Ideal.span {(algebraMap W.CoordinateRing (PointLocalRing W t Y hR)) (CoordinateRing.XClass W t)}
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetLocal
+error: build failed
+
+===== non-two-target-monomials-20261116.txt =====
+ℹ [1759/2040] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/2040] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/2040] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/2040] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/2040] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2060/2060] Building ICFallDegrees.GrowthNonTorsionTargetSecant
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetSecant.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:88:6: ambiguous, possible interpretations 
+  GrowthNonTorsionInfinitySecant.monomial : (W : WeierstrassCurve.Affine ?m.12339) →
+    ?m.12339 → ?m.12339 → ?m.12339 → ?m.12339 → ℕ → ℕ → W.FunctionField
+  
+  Polynomial.monomial : ℕ → ?m.12373 →ₗ[?m.12373] ?m.12373[X]
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:84:45: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b t Y : K
+hR : Y ^ 2 = cubic a b t
+h2 : 2 ≠ 0
+hY : Y ≠ 0
+ht : t ≠ 0
+i j : ℕ
+hx : (secantTargetValuation a b t Y hR h2 hY) (fieldX (shortCurve a b)) = 1
+⊢ (secantTargetValuation a b t Y hR h2 hY) (GrowthNonTorsionInfinitySecant.monomial (shortCurve a b) a b t Y i j) =
+    ↑(Multiplicative.ofAdd (2 * ↑j))
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetSecant
+error: build failed
+
+===== non-two-target-secant-20261116.txt =====
+ℹ [1759/1841] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/1841] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/1841] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/1841] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/1841] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2059/2060] Built ICFallDegrees.GrowthNonTorsionTargetValuation
+✖ [2060/2060] Building ICFallDegrees.GrowthNonTorsionTargetSecant
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetSecant.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:26:9: function expected at
+  nonsingular_iff ?m.1300 ?m.1301
+term has type
+  Nonsingular ?m.1299 ?m.1300 ?m.1301 ↔
+    Equation ?m.1299 ?m.1300 ?m.1301 ∧
+      (WeierstrassCurve.a₁ ?m.1299 * ?m.1301 ≠
+          3 * ?m.1300 ^ 2 + 2 * WeierstrassCurve.a₂ ?m.1299 * ?m.1300 + WeierstrassCurve.a₄ ?m.1299 ∨
+        ?m.1301 ≠ -?m.1301 - WeierstrassCurve.a₁ ?m.1299 * ?m.1300 - WeierstrassCurve.a₃ ?m.1299)
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:36:2: failed to synthesize
+  Field (shortCurve a b).CoordinateRing
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+info: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:46:53: Try this: ring_nf
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:46:35: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b t Y : K
+hR : Y ^ 2 = cubic a b t
+⊢ (pointEval (shortCurve a b) t Y ⋯) (sorry ()) = t * a * 2 + t ^ 3 * 2 + b * 2 + Y ^ 2 * 2
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:43:2: declaration uses 'sorry'
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetSecant
+error: build failed
+
+===== non-two-target-secant-pass2-20261116.txt =====
+ℹ [1759/1801] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/1801] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/1801] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/2040] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/2040] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2060/2060] Building ICFallDegrees.GrowthNonTorsionTargetSecant
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetSecant.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:26:9: function expected at
+  nonsingular_iff ?m.1300 ?m.1301
+term has type
+  Nonsingular ?m.1299 ?m.1300 ?m.1301 ↔
+    Equation ?m.1299 ?m.1300 ?m.1301 ∧
+      (WeierstrassCurve.a₁ ?m.1299 * ?m.1301 ≠
+          3 * ?m.1300 ^ 2 + 2 * WeierstrassCurve.a₂ ?m.1299 * ?m.1300 + WeierstrassCurve.a₄ ?m.1299 ∨
+        ?m.1301 ≠ -?m.1301 - WeierstrassCurve.a₁ ?m.1299 * ?m.1300 - WeierstrassCurve.a₃ ?m.1299)
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:36:2: failed to synthesize
+  Field (shortCurve a b).CoordinateRing
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+info: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:46:53: Try this: ring_nf
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:46:35: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b t Y : K
+hR : Y ^ 2 = cubic a b t
+⊢ (pointEval (shortCurve a b) t Y ⋯) (sorry ()) = t * a * 2 + t ^ 3 * 2 + b * 2 + Y ^ 2 * 2
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:43:2: declaration uses 'sorry'
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:54:66: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b t Y : K
+⊢ (algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) sorry =
+    ((algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateX (shortCurve a b)) +
+            (algebraMap K[X] (shortCurve a b).FunctionField) (C t)) *
+          ((algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateX (shortCurve a b)) *
+              (algebraMap K[X] (shortCurve a b).FunctionField) (C t) +
+            (algebraMap K[X] (shortCurve a b).FunctionField) (C a)) +
+        2 * (algebraMap K[X] (shortCurve a b).FunctionField) (C b) +
+      2 * (algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateY (shortCurve a b)) *
+        (algebraMap K[X] (shortCurve a b).FunctionField) (C Y)
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:55:2: declaration uses 'sorry'
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:65:44: unsolved goals
+case hu.hR
+K : Type u_1
+inst✝ : Field K
+a b t Y : K
+hR : Y ^ 2 = cubic a b t
+h2 : 2 ≠ 0
+hY : Y ≠ 0
+W : WeierstrassCurve.Affine K := shortCurve a b
+v : Valuation (shortCurve a b).FunctionField ℤₘ₀ := secantTargetValuation a b t Y hR h2 hY
+⊢ Y ^ 2 = cubic a b t
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetSecant
+error: build failed
+
+===== non-two-target-secant-pass3-20261116.txt =====
+ℹ [1759/1982] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/1982] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/1982] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/1982] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/1982] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2060/2060] Building ICFallDegrees.GrowthNonTorsionTargetSecant
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetSecant.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetSecant.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:54:66: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b t Y : K
+⊢ ((algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateX (shortCurve a b)) +
+            (algebraMap K (shortCurve a b).FunctionField) t) *
+          ((algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateX (shortCurve a b)) *
+              (algebraMap K (shortCurve a b).FunctionField) t +
+            (algebraMap K (shortCurve a b).FunctionField) a) +
+        2 * (algebraMap K (shortCurve a b).FunctionField) b +
+      2 * (algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateY (shortCurve a b)) *
+        (algebraMap K (shortCurve a b).FunctionField) Y =
+    ((algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateX (shortCurve a b)) +
+            (algebraMap K[X] (shortCurve a b).FunctionField) (C t)) *
+          ((algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateX (shortCurve a b)) *
+              (algebraMap K[X] (shortCurve a b).FunctionField) (C t) +
+            (algebraMap K[X] (shortCurve a b).FunctionField) (C a)) +
+        2 * (algebraMap K[X] (shortCurve a b).FunctionField) (C b) +
+      2 * (algebraMap (shortCurve a b).CoordinateRing (shortCurve a b).FunctionField) (coordinateY (shortCurve a b)) *
+        (algebraMap K[X] (shortCurve a b).FunctionField) (C Y)
+error: ././././ICFallDegrees/GrowthNonTorsionTargetSecant.lean:67:78: unsolved goals
+case hR
+K : Type u_1
+inst✝ : Field K
+a b t Y : K
+hR : Y ^ 2 = cubic a b t
+h2 : 2 ≠ 0
+hY : Y ≠ 0
+W : WeierstrassCurve.Affine K := shortCurve a b
+v : Valuation (shortCurve a b).FunctionField ℤₘ₀ := secantTargetValuation a b t Y hR h2 hY
+⊢ Y ^ 2 = cubic a b t
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetSecant
+error: build failed
+
+===== non-two-target-valuation-20261116.txt =====
+ℹ [1759/2016] Replayed ICFallDegrees.GrowthNonTorsionInfinity
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:195:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:196:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:197:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:198:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:199:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:201:0: 'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:202:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:203:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:204:0: 'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinity.lean:205:0: 'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [1785/2016] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1790/2016] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1825/2016] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [1826/2016] Replayed ICFallDegrees.GrowthNonTorsionInfinitySecant
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:137:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:138:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:139:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:140:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:141:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:142:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionInfinitySecant.lean:143:0: 'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [2059/2059] Building ICFallDegrees.GrowthNonTorsionTargetValuation
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetValuation.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionTargetValuation.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionTargetValuation.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:17:54: failed to synthesize
+  LinearOrderedCommMonoidWithZero ℤₘ₀
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:21:8: declaration uses 'sorry'
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:34:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:35:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:33:2: 'change p.valuation W.FunctionField _ = _' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:34:2: 'rw [he, p.valuation_of_algebraMap]' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:35:2: 'exact
+  p.intValuation_singleton (localParameter_ne_zero W t Y hR)
+    (pointLocal_maximal_principal W t Y hR hns hY)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:38:8: declaration uses 'sorry'
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:40:28: unused variable `hu`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:48:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:50:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:51:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:52:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:53:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:55:2: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:47:2: 'change p.valuation W.FunctionField _ = _' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:48:2: 'rw [IsScalarTower.algebraMap_apply W.CoordinateRing (PointLocalRing W t Y hR),
+  p.valuation_of_algebraMap]' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:50:2: 'apply le_antisymm (p.intValuation_le_one _)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:51:2: 'apply le_of_not_gt' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:52:2: 'intro hlt' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:53:2: 'have hm : f u ∈ IsLocalRing.maximalIdeal (PointLocalRing W t Y hR) :=
+  Ideal.dvd_span_singleton.mp ((p.intValuation_lt_one_iff_dvd _).mp hlt)' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthNonTorsionTargetValuation.lean:55:2: 'exact (IsLocalRing.not_mem_maximalIdeal.mpr hu') hm' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionTargetValuation
+error: build failed
