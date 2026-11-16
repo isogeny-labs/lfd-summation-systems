@@ -303,7 +303,34 @@
     "--no-pool"
    ],
    "start": "2026-11-16T21:48:40Z",
-   "rc": null
+   "rc": 0,
+   "end": "2026-11-16T22:01:35Z"
+  },
+  {
+   "name": "first-lift-unit-p65537",
+   "cmd": [
+    "/usr/bin/python3",
+    "/workspace/code/nopool_run.py",
+    "ic_bounds_lift_run.py",
+    "lift",
+    "--ckpt",
+    "/workspace/ckpt/unit-p65537-k14-D6",
+    "--instance",
+    "/workspace/in/unit-p65537-a1-s10-k14.json",
+    "--device",
+    "gpu",
+    "--basis-on",
+    "host",
+    "--dev-gb",
+    "130",
+    "--work-gb",
+    "16",
+    "--out",
+    "/workspace/out/lift-unit-p65537-k14-D6to7-again.json"
+   ],
+   "start": "2026-11-16T22:01:35Z",
+   "rc": 0,
+   "end": "2026-11-16T22:14:18Z"
   }
  ],
  "readings": {
@@ -504,8 +531,43 @@
     "all_true": true,
     "certificate_valid": true,
     "one_excluded": true
-   }
+   },
+   "independent_lift": {
+    "got": {
+     "contains_one": true,
+     "dim_low": 499178,
+     "dim_low_parts": [
+      249824,
+      249354
+     ],
+     "dim_VD1": 1683218,
+     "dim_VD": 448922,
+     "n_special_tops": 11038,
+     "n_regular_tops": 1173002,
+     "n_N_weight_D": 1406
+    },
+    "want": {
+     "contains_one": true,
+     "dim_low": 499178,
+     "dim_low_parts": [
+      249824,
+      249354
+     ],
+     "dim_VD1": 1683218,
+     "dim_VD": 448922,
+     "n_special_tops": 11038,
+     "n_regular_tops": 1173002,
+     "n_N_weight_D": 1406
+    },
+    "equal": true,
+    "fixed_point": true,
+    "saturated": true,
+    "seconds": 699.6,
+    "status": "done"
+   },
+   "verdict": "confirm"
   }
  },
- "finished": false
+ "finished": true,
+ "ended": "2026-11-16T22:14:18Z"
 }
