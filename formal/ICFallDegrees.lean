@@ -128,3 +128,4 @@ import ICFallDegrees.GrowthTwoTorsionFamily
 import ICFallDegrees.GrowthFermatDiagonalObstruction
 import ICFallDegrees.GrowthRationalParameterClassification
 import ICFallDegrees.GrowthExplicitPrimeBound
+import ICFallDegrees.GrowthSharpPrimeBound

@@ -853,3 +853,11 @@
 'ICFallDegrees.GrowthExplicitPrimeBound.exists_prime_window_above' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.eliminant_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.eliminant_column_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.eliminant_det_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.unit_of_not_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.proper_prime_le_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window_of_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthSharpPrimeBound.strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]

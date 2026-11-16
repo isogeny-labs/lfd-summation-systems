@@ -1850,7 +1850,7 @@ $E_a$ and $t=1$.
  $\lfloor(k-10)/14\rfloor<d\le k+2$.
 \item For $E_6$ over $\F_p$, for every $D\ge1$, every $k\ge14D+10$ and every
  prime $p>2^{k+1}$, $1\notin V_D$.
-\item Put $B_k=2^{2^k}9^{4^k}$. For $E_6$, every $k\ge24$ and every prime
+\item Put $B_k=9^{4^k}$. For $E_6$, every $k\ge24$ and every prime
  $p>B_k$ with $2^k\mid p-1$, the system over $\F_p$ has a last fall degree
  $d$ satisfying $\lfloor(k-10)/14\rfloor<d\le k+2$. For every $B$ there
  is such a prime above $\max(B,B_k)$ with $p\equiv1\pmod{2^{k+1}}$.
@@ -1893,9 +1893,10 @@ bound. This extends (1), for example, to $a=0,2,-2$, with no norm-five
 assumption. For $a=6$, write $N=2^k$ and let $S$ be the integer cyclic
 shift matrix on $N$ coordinates. The eliminant matrix
 $A_k=(S+8I)^N-(S-I)^N$ reduces to $I$ modulo $2$, so its integer
- determinant $D_k$ is nonzero. The absolute column sums of $A_k$ are at most
-$9^N+2^N$, and the determinant expansion gives
-$|D_k|\le(9^N+2^N)^N\le2^N9^{N^2}=B_k$.
+ determinant $D_k$ is nonzero. The entries of $A_k$ are nonnegative, and each column sums to $9^N$: the
+entrywise absolute values of $(S-I)^N$ are bounded by $(S+8I)^N$,
+and the column sums of the two powers are $9^N$ and $0$, respectively.
+The determinant expansion therefore gives $|D_k|\le9^{N^2}=B_k$.
 A grid zero would give $(x+8)^N=(x-1)^N$, so the nonzero vector
 $(1,x,\ldots,x^{N-1})$ would lie in the kernel of $A_k$ modulo $p$.
 This is impossible when $p>B_k$, because $D_k$ survives reduction. The
@@ -1918,7 +1919,7 @@ Item (1) covers a one-parameter family of curves; items (2) to (4) are
 proved for $a=6$ only, because the prime-field part of the development is
 written for that curve. Item (3) now has the explicit sufficient cutoff
 $B_k$, rather than an unspecified integer from a B\'ezout identity. This
-cutoff is very loose; no least suitable prime is computed. The statement
+cutoff improves the earlier $2^{2^k}9^{4^k}$ by a factor $2^{2^k}$, but remains loose; no least suitable prime is computed. The statement
 concerns pairs $(p,k)$, with $p$ allowed to grow with $k$. By (4), the unit-ideal hypothesis fails for some primes
 $p\equiv1\pmod{2^{k+1}}$ at every depth (Remark~\ref{rem:fermatbad});
 this does not decide whether their LFD satisfies the numerical bound of (3). Item (2) holds for every prime $p>2^{k+1}$,
@@ -2059,7 +2060,7 @@ This is not proved.
  rational function field: the curves $y^2=x^3+ax-(1+a)$ with $|a|>5$,
  and the rational parameters outside $\{-3,-3/4,-1,1\}$, with $t=1$ over
  $\mathbb{C}$; and $y^2=x^3+6x-7$ over admissible prime fields above
- $B_k=2^{2^k}9^{4^k}$. The explicit cutoff is conservative. Below it,
+ $B_k=9^{4^k}$. The explicit cutoff is conservative. Below it,
  item (4) supplies proper-ideal instances at every depth; their numerical
  LFD lower bound remains undecided.
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
@@ -2435,7 +2436,7 @@ The companion repository holds the records and verification reports:
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
 The computational and formal evidence reviewed here is available in the
-fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/fa488e3}{commit \code{fa488e3}}.
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/b224f0b}{commit \code{b224f0b}}.
 Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);

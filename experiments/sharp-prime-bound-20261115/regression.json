@@ -1,0 +1,467 @@
+{
+  "source_sha256": "b4f2897c6f378d7dd9f5fcd8532a2e7df2d027350baa0c2759ef98d328a7f108",
+  "matrices": [
+    {
+      "k": 0,
+      "determinant": "9",
+      "sharp": "9",
+      "old": "18"
+    },
+    {
+      "k": 1,
+      "determinant": "3645",
+      "sharp": "6561",
+      "old": "26244"
+    },
+    {
+      "k": 2,
+      "determinant": "279791370354825",
+      "sharp": "1853020188851841",
+      "old": "29648323021629456"
+    },
+    {
+      "k": 3,
+      "determinant": "6276960852589902792144572677844567380568550753256078220625",
+      "sharp": "11790184577738583171520872861412518665678211592275841109096961",
+      "old": "3018287251901077291909343452521604778413622167622615323928822016"
+    },
+    {
+      "k": 4,
+      "determinant": "1552518091588015881100787380565386524161798228182878503128661997027929897873379536029209249595994088704042634315995834432588798916792067252223973413142808824944550083765140126516195844034977200838315005526844605585654691323396510625",
+      "sharp": "19323349832288915105454068722019581055401465761603328550184537628902466746415537000017939429786029354390082329294586119505153509101332940884098040478728639542560550133727399482778062322407372338121043399668242276591791504658985882995272436541441",
+      "old": "1266375054608886340351037847766275264046790460152435739864893858047752060693088632833175678470457219769308435532649995927889740372464955613780249180813960121061248213563958852503343092361289553551100700240657925838719648049331298827978174401179877376"
+    }
+  ],
+  "rational": [
+    {
+      "a": "-3",
+      "k": 2,
+      "determinant": "0",
+      "prime_cells": 5
+    },
+    {
+      "a": "-3",
+      "k": 3,
+      "determinant": "0",
+      "prime_cells": 5
+    },
+    {
+      "a": "-1",
+      "k": 2,
+      "determinant": "0",
+      "prime_cells": 5
+    },
+    {
+      "a": "-1",
+      "k": 3,
+      "determinant": "0",
+      "prime_cells": 5
+    },
+    {
+      "a": "1",
+      "k": 2,
+      "determinant": "0",
+      "prime_cells": 5
+    },
+    {
+      "a": "1",
+      "k": 3,
+      "determinant": "0",
+      "prime_cells": 5
+    },
+    {
+      "a": "-3/4",
+      "k": 2,
+      "determinant": "-20511164685375",
+      "prime_cells": 5
+    },
+    {
+      "a": "-3/4",
+      "k": 3,
+      "determinant": "-162547781933492462192546259098483474045297553345828741375",
+      "prime_cells": 5
+    },
+    {
+      "a": "-5/2",
+      "k": 2,
+      "determinant": "-669375",
+      "prime_cells": 5
+    },
+    {
+      "a": "-5/2",
+      "k": 3,
+      "determinant": "-743112550209248219109375",
+      "prime_cells": 5
+    },
+    {
+      "a": "-2",
+      "k": 2,
+      "determinant": "-375",
+      "prime_cells": 5
+    },
+    {
+      "a": "-2",
+      "k": 3,
+      "determinant": "-1343091375",
+      "prime_cells": 5
+    },
+    {
+      "a": "-1/2",
+      "k": 2,
+      "determinant": "-2777109375",
+      "prime_cells": 5
+    },
+    {
+      "a": "-1/2",
+      "k": 3,
+      "determinant": "-1198808983180284738454770794769287109375",
+      "prime_cells": 5
+    },
+    {
+      "a": "0",
+      "k": 2,
+      "determinant": "-710775",
+      "prime_cells": 5
+    },
+    {
+      "a": "0",
+      "k": 3,
+      "determinant": "-144581864103800973939375",
+      "prime_cells": 5
+    },
+    {
+      "a": "1/2",
+      "k": 2,
+      "determinant": "-301107909375",
+      "prime_cells": 5
+    },
+    {
+      "a": "1/2",
+      "k": 3,
+      "determinant": "-466530355214414479666069962133119017432709375",
+      "prime_cells": 5
+    },
+    {
+      "a": "2",
+      "k": 2,
+      "determinant": "3446015625",
+      "prime_cells": 5
+    },
+    {
+      "a": "2",
+      "k": 3,
+      "determinant": "326384717708768564930845811187744140625",
+      "prime_cells": 5
+    },
+    {
+      "a": "5/2",
+      "k": 2,
+      "determinant": "1658110277849025",
+      "prime_cells": 5
+    },
+    {
+      "a": "5/2",
+      "k": 3,
+      "determinant": "11662213981196756872282688521523527815068720019079104389210625",
+      "prime_cells": 5
+    },
+    {
+      "a": "6",
+      "k": 2,
+      "determinant": "279791370354825",
+      "prime_cells": 5
+    },
+    {
+      "a": "6",
+      "k": 3,
+      "determinant": "6276960852589902792144572677844567380568550753256078220625",
+      "prime_cells": 5
+    }
+  ],
+  "exceptional": [
+    {
+      "k": 2,
+      "p": 17,
+      "profile": {
+        "status": "exact-proper-local",
+        "exact_lfd": 4,
+        "lfd_lower_bound": 4,
+        "lfd_upper_bound": 4,
+        "strict_falls": [
+          4
+        ],
+        "scanned_through": 4,
+        "local_upper_bound": 4,
+        "point_count": 1,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          5,
+          15
+        ],
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 5
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 1,
+            "codimension": 10
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 1,
+            "codimension": 10
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 1,
+            "codimension": 1
+          }
+        ],
+        "containing_spaces_checked": true
+      }
+    },
+    {
+      "k": 3,
+      "p": 257,
+      "profile": {
+        "status": "exact-proper-local",
+        "exact_lfd": 4,
+        "lfd_lower_bound": 4,
+        "lfd_upper_bound": 4,
+        "strict_falls": [
+          4
+        ],
+        "scanned_through": 4,
+        "local_upper_bound": 4,
+        "point_count": 1,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          7,
+          56
+        ],
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 7
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 1,
+            "codimension": 21
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 1,
+            "codimension": 35
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 1,
+            "codimension": 1
+          }
+        ],
+        "containing_spaces_checked": true
+      }
+    },
+    {
+      "k": 4,
+      "p": 65537,
+      "profile": {
+        "status": "exact-proper-local",
+        "exact_lfd": 4,
+        "lfd_lower_bound": 4,
+        "lfd_upper_bound": 4,
+        "strict_falls": [
+          4
+        ],
+        "scanned_through": 4,
+        "local_upper_bound": 4,
+        "point_count": 1,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          9,
+          162
+        ],
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 9
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 1,
+            "codimension": 36
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 1,
+            "codimension": 84
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 1,
+            "codimension": 1
+          }
+        ],
+        "containing_spaces_checked": true
+      }
+    },
+    {
+      "k": 5,
+      "p": 641,
+      "profile": {
+        "status": "exact-proper-local",
+        "exact_lfd": 4,
+        "lfd_lower_bound": 4,
+        "lfd_upper_bound": 4,
+        "strict_falls": [
+          4
+        ],
+        "scanned_through": 4,
+        "local_upper_bound": 4,
+        "point_count": 3,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          11,
+          383
+        ],
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 11
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 3,
+            "codimension": 55
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 3,
+            "codimension": 165
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 3,
+            "codimension": 3
+          }
+        ],
+        "containing_spaces_checked": true
+      }
+    },
+    {
+      "k": 5,
+      "p": 6700417,
+      "profile": {
+        "status": "exact-proper-local",
+        "exact_lfd": 4,
+        "lfd_lower_bound": 4,
+        "lfd_upper_bound": 4,
+        "strict_falls": [
+          4
+        ],
+        "scanned_through": 4,
+        "local_upper_bound": 4,
+        "point_count": 1,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          11,
+          385
+        ],
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 11
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 1,
+            "codimension": 55
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 1,
+            "codimension": 165
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 1,
+            "codimension": 1
+          }
+        ],
+        "containing_spaces_checked": true
+      }
+    },
+    {
+      "k": 6,
+      "p": 274177,
+      "profile": {
+        "status": "exact-proper-local",
+        "exact_lfd": 5,
+        "lfd_lower_bound": 5,
+        "lfd_upper_bound": 5,
+        "strict_falls": [
+          4,
+          5
+        ],
+        "scanned_through": 5,
+        "local_upper_bound": 5,
+        "point_count": 1,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          13,
+          607,
+          1585
+        ],
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 13
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 1,
+            "codimension": 78
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 1,
+            "codimension": 286
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 1,
+            "codimension": 187
+          },
+          {
+            "degree": 5,
+            "evaluation_rank": 1,
+            "codimension": 1
+          }
+        ],
+        "containing_spaces_checked": true
+      }
+    }
+  ],
+  "scope": "sharp bound is proved in Lean; rational and exceptional profiles are finite regressions only"
+}
