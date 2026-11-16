@@ -40,8 +40,8 @@ carries this sheet.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `d634ffa9315ea009833e957c02ee105509891eefd9019113e14aac3af8928a03` |
-| `paper/curve-lfd-bounds.tex` | `9fd63d0d2a094e7f4095a935db00f21b40682aab84abf489100f09abc5be56e2` |
+| `paper/curve-lfd-bounds.pdf` | `d09e8240e0c201199225c84e0e7ece18f858d2ab620c5c2050d5834c640ffb99` |
+| `paper/curve-lfd-bounds.tex` | `5925cc9dbd3ec891e3e14316e1498b01af0fda3f0d3e325fd0d99abe9d51ff03` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `79e4ddebd3ef19013828a8e5049f4286f154059ca5e30527b12d3cbdc2be25a3` |
 
 The PDF was built with pdfTeX 1.40.25 (TeX Live 2023, Debian) by

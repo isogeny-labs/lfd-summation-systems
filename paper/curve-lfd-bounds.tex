@@ -2481,7 +2481,15 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  independent certificate and rests on the written proof of the lift, the
  assertions of the runs, the comparisons with direct closures and the
  control, and in Lean the depth-$14$ values are kernel-checked only relative
- to the recorded closures as hypotheses.
+ to the recorded closures as hypotheses. The two halves also use the
+ stored degree-$6$ space $W$ differently. The independent check shows that
+ $W$ is closed and contains the generator, hence $W\supseteq V_6$, which is
+ what $1\notin V_6$ needs. The upper bound lifts $W$ and so needs
+ $W\subseteq V_6$, which the check does not show: it holds if the
+ degree-$6$ engine added only the generator and admissible products, and
+ no second engine has computed the degree-$6$ closure at $k=14$. A second
+ implementation of the lift from the same stored basis would test the lift
+ and leave this dependence in place.
 \item \emph{Second engines.} For $D=6$ the reference engine confirms the
  full closure at $k=10$ and $11$ only. The $k=14$ degree-$6$ bases were kept
  for the checker and the lift but not archived; the hashes and the
