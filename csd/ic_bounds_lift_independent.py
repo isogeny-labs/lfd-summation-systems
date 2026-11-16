@@ -393,6 +393,8 @@ class Lift:
         for q, (piv, B) in enumerate(parts):
             reps = np.flatnonzero(L.a1 <= L.a2 if q == 0 else L.a1 < L.a2)
             nc = len(reps)
+            if len(piv) == 0:                                   # an empty part has no tile file
+                B = np.zeros((0, nc), dtype=np.float32)
             if len(np.unique(piv)) != len(piv) or (len(piv) and (piv.min() < 0 or piv.max() >= nc)) \
                     or B.shape != (len(piv), nc - len(piv)):
                 raise Refuse(f'part {q}: shape of the basis does not fit {nc} columns')

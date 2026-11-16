@@ -50,7 +50,30 @@ SETS = {
     'proper': [('proper-65537-X2', k, D) for k in (6, 7, 8) for D in (3, 4)]
               + [('proper-15361', 6, 4), ('proper-15361', 7, 4), ('proper-15361', 7, 3)],
     'k9': [('unit-65537', 9, 4), ('proper-65537-X1424', 9, 4)],
+    'k10d5': [('unit-65537', 10, 5), ('proper-65537-X1424', 10, 5)],     # oracle: recorded direct closures
 }
+K14 = os.path.join(ROOT, 'experiments', 'ic-bounds-k14')
+
+
+def recorded_oracle(name, k, D):
+    """direct closures in degree D + 1 that are too large to recompute here: read from the records."""
+    if (name, k, D) == ('unit-65537', 10, 5):
+        f = os.path.join(K14, 'runs', 'reference-engine-unit-p65537-k10-D6.json')
+        d = json.load(open(f))
+        f2 = os.path.join(K14, 'runs', 'unit-p65537-k10-D6.json')
+        e = json.load(open(f2))
+        assert d['rank'] == e['rank'] and d['profile'] == e['profile'] and d['contains_one'] == e['contains_one']
+        return dict(dim=d['rank'], contains_one=d['contains_one'], profile=d['profile'], dim_low=d['profile'][D],
+                    dim_low_parts=[pp[D] for pp in d['part_profiles']] if 'part_profiles' in d else None,
+                    source=[os.path.relpath(f, ROOT), os.path.relpath(f2, ROOT)],
+                    note='recorded direct closures (reference engine on CPU, big engine on the H200); not recomputed here')
+    if (name, k, D) == ('proper-65537-X1424', 10, 5):
+        f = os.path.join(K14, 'validation', 'lift-k10d5-proper.json')
+        d = json.load(open(f))['rows'][0]['direct']
+        return dict(dim=d['dim'], contains_one=d['contains_one'], profile=d['profile'], dim_low=d['profile'][D],
+                    dim_low_parts=None, source=[os.path.relpath(f, ROOT)],
+                    note='recorded direct closure by the big engine on CPU (' + d['source'] + '); not recomputed here; no per-part profile in the record')
+    return None
 MODES = {
     'plain': dict(),
     'tiny': dict(batch=7, first_chunk=5, table_gb=2e-5, mi=5),        # many chunks, split products
@@ -173,12 +196,19 @@ def do_case(work, name, k, D, xp, modes, md):
                 solutions=solutions(p, a, b, X, k),
                 engine_VD=dict(dim=erec['rank'], closed=erec['closed'], contains_one=erec['contains_one'],
                                basis_sha256=erec['basis_sha256']))
-    ora = oracle_reference(g, k, p, D + 1)
+    ora = recorded_oracle(name, k, D)
+    case['oracle_kind'] = 'recorded' if ora else 'recomputed'
+    if ora is None:
+        ora = oracle_reference(g, k, p, D + 1)
     case['oracle_reference_direct'] = ora
     want = dict(contains_one=ora['contains_one'], dim_low=ora['dim_low'], dim_low_parts=ora['dim_low_parts'], dim_VD1=ora['dim'])
     runs, ok = {}, True
+    if erec['columns'] > 800:
+        modes = [m for m in modes if m != 'tiny'] or modes
     for mode in modes:
         r = run_lift(ck, k, D, p, g, xp, **MODES[mode])
+        if want['dim_low_parts'] is None:                     # the record has no per-part profile
+            want['dim_low_parts'] = r['dim_low_parts'] if sum(r['dim_low_parts']) == want['dim_low'] else None
         if mode == modes[0]:                                  # hashes of what was read = the engine's record
             L0 = IL.Lift(k, D, p, ck['parts'], g, xp=np)
             case['canonical_sha_equal_engine'] = [IL.canonical_sha(pv, B, nc, p) for (pv, B), nc in zip(ck['parts'], L0.ncol)] == erec['basis_sha256']
@@ -320,7 +350,7 @@ def main():
             r0 = case['runs'][a.modes.split(',')[0]]
             print(json.dumps(dict(set=s, case=case['case'], ok=case['ok'], one=r0['contains_one'], dim_low=r0['dim_low'],
                                   parts=r0['dim_low_parts'], dim=r0['dim_VD1'], saturated=r0['saturated'],
-                                  oracle_s=case['oracle_reference_direct']['seconds'],
+                                  oracle_s=case['oracle_reference_direct'].get('seconds'),
                                   lift_s=[case['runs'][m]['seconds'] for m in case['runs']],
                                   first_lift=case.get('first_lift_recorded', {}).get('all_equal'),
                                   naive=case.get('oracle_naive_ordinary', {}).get('agrees'))), flush=True)
