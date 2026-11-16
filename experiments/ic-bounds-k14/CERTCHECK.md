@@ -135,6 +135,8 @@ agree.
 
 ## 4. Validation (all runs under `ulimit -v 1500000`, one thread; records in `validation/certcheck-*.json`)
 
+The records' `harness_sha256` (`02561b89...`) is the test script as it was when they were written. On 2026-11-14 the script's default `--scratch` directory changed from a machine-specific path to `lfd-certcheck` under the system temporary directory; nothing else changed, so a rerun with the current script (`39229bc9...`) gives the same verdicts and differs only in that field (checked for `arith` and `spec`).
+
 ### 4.1 Positive: bases written by `scripts/ic_bounds_big_run.py closure --ckpt` at the end of the closure phase
 
 Checker `--shifts all` (every u_{i,j}), compared with the engine record (`--engine-record`): rank, part ranks, profile, basis hashes, contains_one. `rows / triples` = low rows / (row, shift, target) triples checked; fail = triples leaving W. Same verdicts with `--shifts block1` (half the triples).

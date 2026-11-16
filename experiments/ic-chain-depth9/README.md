@@ -20,3 +20,14 @@ Replay (about 2.5 hours on one core):
     python scripts/run_ic_chain_depth8.py --check-only --depths 9 --primes 7681 \
       --out experiments/ic-chain-depth9 --workers 1 --product-cap 12000 \
       --shift-max-cells 450000000
+
+On macOS this command fails. The driver sets `--product-cap` and `--shift-max-cells` inside `main()`, and worker
+processes started with `spawn`, the macOS default, do not see them: they fall back to 16000 and 200,000,000, and
+the first depth-9 system stops after about 1.5 hours with "Shift-closure matrix budget exceeded". Linux starts
+workers with `fork`, which keeps the values, so there the command runs as written. On macOS, start the driver under `fork` instead (the driver itself is unchanged, since its hash is pinned in
+`verification.json`):
+
+    python -c "import multiprocessing, runpy, sys; multiprocessing.set_start_method('fork'); \
+      sys.argv[0] = 'scripts/run_ic_chain_depth8.py'; runpy.run_path(sys.argv[0], run_name='__main__')" \
+      --check-only --depths 9 --primes 7681 --out experiments/ic-chain-depth9 --workers 1 \
+      --product-cap 12000 --shift-max-cells 450000000

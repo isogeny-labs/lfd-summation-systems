@@ -85,6 +85,17 @@ every `#print axioms` in the project (`formal/README.md`); the workflow runs it 
 depth-ten runs take about two hours each and the degree-six closure about five hours. The commands for the GPU
 runs and for the degree lift are in `experiments/ic-bounds-k14/README.md` and `LIFT.md`.
 
+The depth-9 command above fails on macOS. The driver sets `--product-cap` and `--shift-max-cells` inside `main()`,
+and worker processes started with `spawn`, the macOS default, do not see them: they fall back to 16000 and
+200,000,000, and the first depth-9 system stops after about 1.5 hours with "Shift-closure matrix budget exceeded".
+Linux starts workers with `fork`, which keeps the values, so there the command runs as written. On macOS, start the driver under `fork` instead (the driver itself is unchanged, since its
+hash is pinned in `verification.json`):
+
+    python -c "import multiprocessing, runpy, sys; multiprocessing.set_start_method('fork'); \
+      sys.argv[0] = 'scripts/run_ic_chain_depth8.py'; runpy.run_path(sys.argv[0], run_name='__main__')" \
+      --check-only --depths 9 --primes 7681 --out experiments/ic-chain-depth9 --workers 1 \
+      --product-cap 12000 --shift-max-cells 450000000
+
 ## What kind of evidence each result has
 
 The paper uses three terms. *Kernel-checked*: the proof is verified by the Lean kernel. *Written*: there is a
