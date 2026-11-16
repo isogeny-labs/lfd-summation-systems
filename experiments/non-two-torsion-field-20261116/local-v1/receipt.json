@@ -1,0 +1,27 @@
+{
+  "scope": "targeted producer-local kernel check of eight new function-field lemmas",
+  "source_commit": "04d0721c8f6fbf1648a3f30c181b3ee8e4e2a01d",
+  "recorded_at_utc": "2026-11-16T01:55:32.418270+00:00",
+  "lean": "4.19.0",
+  "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "build_target": "ICFallDegrees.GrowthNonTorsionFunctionField",
+  "build_exit_code": 0,
+  "theorem_count": 8,
+  "allowed_transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_default_library_rebuilt": false,
+  "source_sha256": {
+    "formal/ICFallDegrees/GrowthNonTorsionFunctionField.lean": "376da5d7d0799d38418fe6a322b3c94f63a1c8e5c7bdf3961990f596f8d157fa",
+    "formal/ICFallDegrees/GrowthNonTorsionRationalObstruction.lean": "361a2801033b7f365f313df16a056581dcba82501a0bdd5a9bac44d489afedf3",
+    "formal/ICFallDegrees/GrowthNonTorsionBridge.lean": "1c9964466bba66481ad4e177bb86006f1ddbf5c4a06053d0efa70b5ca09e0568",
+    "formal/ICFallDegrees/GrowthSecant.lean": "a0dfc8454179798d3bbd6033ec152bf87c1d1f5a8a5ed4b1a8d90da8b03eec00",
+    "formal/ICFallDegrees/GrowthSecantFactorization.lean": "046b6b94f175cd2ff5aa1921f2b94d25a4054417cff3609cde4e7922dda2ebe1",
+    "formal/lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "formal/lake-manifest.json": "98e57d45224a5d6b50996badf5fa6485cb52820f41e815f7c05d49f21eca4547",
+    "scripts/check_non_two_field_axioms.py": "95bdd3af1bb5f91f99b3da8b78775e84d3c9a00bae4a4789ba1e2ffa6f92ecf2",
+    "scripts/check_non_torsion_axioms.py": "db945f93f41a2c29623026fc5feedd5c22d15e2c72623667cab67e57895cfe98"
+  }
+}

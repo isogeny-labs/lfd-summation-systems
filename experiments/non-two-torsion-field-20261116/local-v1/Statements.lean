@@ -1,0 +1,10 @@
+import ICFallDegrees.GrowthNonTorsionFunctionField
+
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.equation_irreducible
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.finrank_two
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.y_square
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_zero
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_constant
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.s3_zero
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.companionConstant_ne_zero
+#check @ICFallDegrees.GrowthNonTorsionFunctionField.z_ne_zero
