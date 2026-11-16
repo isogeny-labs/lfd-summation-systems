@@ -76,7 +76,13 @@ def main():
     check('PDF uses A4 or US letter pages', bool(re.search(r'^Page size:.*\((A4|letter)\)', info, re.M)))
     first_page = subprocess.check_output(['pdftotext', '-f', '1', '-l', '1', str(pdf), '-'], text=True)
     check('author and contact on first page', 'Adam Buran' in first_page and
-          'a.buran28@gmail.com' in first_page)
+          set(re.findall(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}', first_page)) ==
+          {'adam@isogenylabs.io'})
+    submission = (paper / 'eprint-curve-lfd-bounds/EPRINT.md').read_text()
+    contact = re.search(r'^\| Affiliation / contact \(on page 1\) \| (.*?) \|$',
+                        submission, re.M)
+    check('submission contact matches manuscript', contact is not None and
+          contact.group(1) == 'adam@isogenylabs.io')
     print(json.dumps(dict(status='failed' if failures else 'passed',
                          scope='artifact consistency only; not a fresh Lean build or closure replay',
                          checks=len(checks), audited_declarations=len(dependencies),
