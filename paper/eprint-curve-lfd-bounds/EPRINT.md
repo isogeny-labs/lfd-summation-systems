@@ -14,7 +14,7 @@ author must agree.
 |---|---|
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
-| Affiliation / contact (on page 1) | adam@isogenylabs.io; a.buran28@gmail.com |
+| Affiliation / contact (on page 1) | adam@isogenylabs.io |
 | Abstract | paste `eprint-abstract.txt` (2818 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
@@ -40,8 +40,8 @@ carries this sheet.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `2b0ffb90358d49ebb40fbeeb8df77f05be0d395be576bbd233d64b4ba9beec50` |
-| `paper/curve-lfd-bounds.tex` | `2876804605a6a4f55fc3a6e544c62770208f30b79763343a89a7cffd3e1c0e0b` |
+| `paper/curve-lfd-bounds.pdf` | `d634ffa9315ea009833e957c02ee105509891eefd9019113e14aac3af8928a03` |
+| `paper/curve-lfd-bounds.tex` | `9fd63d0d2a094e7f4095a935db00f21b40682aab84abf489100f09abc5be56e2` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `79e4ddebd3ef19013828a8e5049f4286f154059ca5e30527b12d3cbdc2be25a3` |
 
 The PDF was built with pdfTeX 1.40.25 (TeX Live 2023, Debian) by

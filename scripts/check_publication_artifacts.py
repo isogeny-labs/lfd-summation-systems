@@ -106,7 +106,7 @@ def main():
           re.search(r'^Pages:\s+(\d+)$', info, re.M).group(1))
     first_page = subprocess.check_output(['pdftotext', '-f', '1', '-l', '1', str(pdf), '-'], text=True)
     check('author and contact on first page', 'Adam Buran' in first_page and
-          'a.buran28@gmail.com' in first_page)
+          'adam@isogenylabs.io' in first_page and '@gmail.com' not in first_page)
     print(json.dumps(dict(status='failed' if failures else 'passed',
                          scope='artifact consistency only; not a fresh Lean build or closure replay',
                          checks=len(checks), audited_declarations=len(dependencies),

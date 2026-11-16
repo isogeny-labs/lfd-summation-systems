@@ -1,0 +1,18 @@
+6f0865c2f28d165225cf9787bd890c19d134d791c0f7b7cb77df606949602ca4  bundle.tar.gz
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+cc (Debian 14.2.0-19) 14.2.0
+16
+MemTotal:       527689936 kB
+/usr/local/lib/python3.13/site-packages/numpy/__config__.py:155: UserWarning: Install `pyyaml` for better output
+  warnings.warn("Install `pyyaml` for better output", stacklevel=1)
+      "name": "gcc",
+      "name": "cython",
+      "name": "gcc",
+compiled elimination: True
+  D=3 cols=714 dim=1 one=False 0.008s
+  D=4 cols=2655 dim=33 one=False 0.147s
+  D=5 cols=7599 dim=462 one=False 10.383s
+  batches=20 rank=6199 queue=1296

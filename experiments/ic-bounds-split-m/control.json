@@ -1,0 +1,228 @@
+{
+ "status": "passed",
+ "date": "2026-11-16",
+ "positive": [
+  {
+   "case_id": "3a95812eb67d31fa",
+   "p": 257,
+   "k": 2,
+   "recorded_lfd": 5,
+   "recomputed_lfd": 5,
+   "generators_equal": true,
+   "dims_compared": 4,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "7b487ac9470d9c5c",
+   "p": 257,
+   "k": 2,
+   "recorded_lfd": 5,
+   "recomputed_lfd": 5,
+   "generators_equal": true,
+   "dims_compared": 4,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "237fecf4249dc817",
+   "p": 7681,
+   "k": 2,
+   "recorded_lfd": 5,
+   "recomputed_lfd": 5,
+   "generators_equal": true,
+   "dims_compared": 4,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "8d1784df9bc469d5",
+   "p": 7681,
+   "k": 2,
+   "recorded_lfd": 5,
+   "recomputed_lfd": 5,
+   "generators_equal": true,
+   "dims_compared": 4,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "17a4765bfc2cfd75",
+   "p": 257,
+   "k": 2,
+   "recorded_lfd": 5,
+   "recomputed_lfd": 5,
+   "generators_equal": true,
+   "dims_compared": 4,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "04faad875ded5a0b",
+   "p": 7681,
+   "k": 2,
+   "recorded_lfd": 5,
+   "recomputed_lfd": 5,
+   "generators_equal": true,
+   "dims_compared": 4,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "c837466741bda6f8",
+   "p": 97,
+   "k": 3,
+   "recorded_lfd": 6,
+   "recomputed_lfd": 6,
+   "generators_equal": true,
+   "dims_compared": 5,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "444f747e51e2fc26",
+   "p": 641,
+   "k": 3,
+   "recorded_lfd": 6,
+   "recomputed_lfd": 6,
+   "generators_equal": true,
+   "dims_compared": 5,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "54d2273824e2d313",
+   "p": 7681,
+   "k": 3,
+   "recorded_lfd": 6,
+   "recomputed_lfd": 6,
+   "generators_equal": true,
+   "dims_compared": 5,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "a1827ac3dddc08eb",
+   "p": 257,
+   "k": 3,
+   "recorded_lfd": 6,
+   "recomputed_lfd": 6,
+   "generators_equal": true,
+   "dims_compared": 5,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "59d92ff9fd441a0a",
+   "p": 257,
+   "k": 3,
+   "recorded_lfd": 6,
+   "recomputed_lfd": 6,
+   "generators_equal": true,
+   "dims_compared": 5,
+   "dims_equal": true,
+   "ok": true
+  },
+  {
+   "case_id": "8f63b129ae13ddce",
+   "p": 257,
+   "k": 3,
+   "recorded_lfd": 6,
+   "recomputed_lfd": 6,
+   "generators_equal": true,
+   "dims_compared": 5,
+   "dims_equal": true,
+   "ok": true
+  }
+ ],
+ "negative": [
+  {
+   "m": 3,
+   "k": 2,
+   "p": 7681,
+   "seed": 1,
+   "target": 1,
+   "closures_without_one": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "status": "lower-bound",
+   "ok": true
+  },
+  {
+   "m": 3,
+   "k": 2,
+   "p": 12289,
+   "seed": 2,
+   "target": 12288,
+   "closures_without_one": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "status": "lower-bound",
+   "ok": true
+  },
+  {
+   "m": 3,
+   "k": 3,
+   "p": 7681,
+   "seed": 1,
+   "target": 3383,
+   "closures_without_one": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "status": "lower-bound",
+   "ok": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "seed": 1,
+   "target": 1762,
+   "closures_without_one": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "status": "lower-bound",
+   "ok": true
+  },
+  {
+   "m": 4,
+   "k": 2,
+   "p": 12289,
+   "seed": 2,
+   "target": 3556,
+   "closures_without_one": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "status": "lower-bound",
+   "ok": true
+  }
+ ],
+ "failures": [],
+ "source_sha256": {
+  "csd/ic_bounds_split_m.py": "8db9f67bb4a98c8cd2e951b070afce20ca77a2d67ba79129dc4acf220e37698d",
+  "csd/ic_bounds_m3_batched.py": "26ced2792b1d253ab6a9a8290c0980828e8152c97143b01ac7f4b2da4512cf3d",
+  "csd/ic_bounds_m3.py": "3293bb1c4d215234165f45c2fb8a230358de2fc5bd334179d485347a9da74481",
+  "csd/elim.py": "a490fdaf88033cb5b430a90f5b8e16bbac6549999c2abd13d8e1f7279f4d08e0",
+  "scripts/run_ic_split_m.py": "8c58eb05837e947435d13a5b44bffb6cd1c7af5c02816596d9838c5819d611d8"
+ }
+}
