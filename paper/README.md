@@ -1,8 +1,13 @@
 # Main manuscript: ePrint preparation
 
-**Status, 15 November 2026:** corrected candidate for author review. No ePrint
+**Status, 16 November 2026:** corrected candidate for author review. No ePrint
 submission or editorial acceptance is recorded by this review. This is a
 technical and artifact review, not independent certification of every proof.
+
+The [16 November prose review](deslop-review-20261116.md) applies the
+requested deslop skill and records the edits and preservation checks. The
+current PDF and submission sheet use `adam@isogenylabs.io` only. The rebuilt
+42-page manuscript passes all 303 publication checks.
 
 Title: *Last fall degrees of elliptic curve summation systems: machine-checked
 bounds and exact values*, Adam Buran.
@@ -105,13 +110,13 @@ build check for this extension.
 
 ## Revised-paper synchronization
 
-The prose and author contacts from `ml-cryptanalysis` commit `94290676` are
-reconciled into this version. Both `adam@isogenylabs.io` and
-`a.buran28@gmail.com` appear on page 1 and in the submission sheet. This
+The prose from `ml-cryptanalysis` commit `94290676` was reconciled into
+this version. The current manuscript and submission sheet use
+`adam@isogenylabs.io` as the sole author contact. This
 version retains the later companion corrections and fixed-curve growth
-theorem. The PDF, figures, verification report and ePrint abstract were
-regenerated from these sources; the build and all 295 publication checks
-pass. `SYNC-94290676.json` records the artifact hashes and source commits.
+theorem. At that synchronization, the PDF, figures, verification report and ePrint
+abstract were regenerated; the build and all 295 checks then in the
+publication checker passed. `SYNC-94290676.json` records the artifact hashes and source commits.
 
 After that synchronization the growth section of the manuscript was extended
 (the kernel-checked theorem now covers a family of curves over the complex
