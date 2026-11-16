@@ -72,6 +72,17 @@ def main():
     abstract = ' '.join(abstract.replace('~', ' ').split()) + '\n'
     check('submission abstract matches manuscript', abstract ==
           (paper / 'eprint-curve-lfd-bounds/eprint-abstract.txt').read_text())
+    sheet = (paper / 'eprint-curve-lfd-bounds/EPRINT.md').read_text()
+    recorded = re.findall(r'^\| `([^`]+)` \| `([0-9a-f]{64})` \|$', sheet, re.M)
+    check('submission sheet records the manuscript digests', {path for path, _ in recorded} == {
+        'paper/curve-lfd-bounds.pdf', 'paper/curve-lfd-bounds.tex',
+        'paper/eprint-curve-lfd-bounds/eprint-abstract.txt'})
+    for path, expected in recorded:
+        file = root / path
+        check(f'submission sheet digest:{path}', file.is_file() and
+              hashlib.sha256(file.read_bytes()).hexdigest() == expected)
+    check('submission sheet abstract length',
+          re.search(r'\((\d+) chars', sheet).group(1) == str(len(abstract) - 1))
     citations = {key for group in re.findall(r'\\cite(?:\[[^\]]*\])?\{([^}]+)\}', tex)
                  for key in group.split(',')}
     check('citation keys resolve', citations <= set(re.findall(r'\\bibitem\{([^}]+)\}', tex)))
@@ -80,6 +91,8 @@ def main():
     title = 'Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values'
     check('PDF title metadata', re.search(r'^Title:\s+(.+)$', info, re.M).group(1) == title)
     check('PDF uses A4 or US letter pages', bool(re.search(r'^Page size:.*\((A4|letter)\)', info, re.M)))
+    check('submission sheet page count', re.search(r'\((\d+) pages\)', sheet).group(1) ==
+          re.search(r'^Pages:\s+(\d+)$', info, re.M).group(1))
     first_page = subprocess.check_output(['pdftotext', '-f', '1', '-l', '1', str(pdf), '-'], text=True)
     check('author and contact on first page', 'Adam Buran' in first_page and
           'a.buran28@gmail.com' in first_page)
