@@ -1,0 +1,14 @@
+ICFallDegrees/GrowthNonTorsionFunctionField.lean:74:2: warning: try 'simp at hc' instead of 'simpa using hc'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+'ICFallDegrees.GrowthNonTorsionFunctionField.equation_irreducible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionFunctionField.finrank_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionFunctionField.y_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionFunctionField.s3_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionFunctionField.companionConstant_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionFunctionField.z_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

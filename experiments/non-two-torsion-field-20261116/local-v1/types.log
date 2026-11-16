@@ -1,0 +1,28 @@
+@ICFallDegrees.GrowthNonTorsionFunctionField.equation_irreducible : ∀ {K : Type u_1} [inst : Field K] (a b : K),
+  Irreducible (ICFallDegrees.GrowthNonTorsionFunctionField.equation a b)
+@ICFallDegrees.GrowthNonTorsionFunctionField.finrank_two : ∀ {K : Type u_1} [inst : Field K] (a b : K),
+  Module.finrank (RatFunc K) (ICFallDegrees.GrowthNonTorsionFunctionField.FunctionField a b) = 2
+@ICFallDegrees.GrowthNonTorsionFunctionField.y_square : ∀ {K : Type u_1} [inst : Field K] (a b : K),
+  ICFallDegrees.GrowthNonTorsionFunctionField.y a b ^ 2 =
+    ICFallDegrees.GrowthSecant.cubic ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) a)
+      ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) b) (ICFallDegrees.GrowthNonTorsionFunctionField.x a b)
+@ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_zero : ∀ {K : Type u_1} [inst : Field K] (a b : K),
+  ICFallDegrees.GrowthNonTorsionFunctionField.x a b ≠ 0
+@ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_constant : ∀ {K : Type u_1} [inst : Field K] (a b t : K),
+  ICFallDegrees.GrowthNonTorsionFunctionField.x a b ≠ (ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) t
+@ICFallDegrees.GrowthNonTorsionFunctionField.s3_zero : ∀ {K : Type u_1} [inst : Field K] (a b t Y : K),
+  Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t →
+    ICFallDegrees.GrowthSecant.s3 ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) a)
+        ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) b)
+        (ICFallDegrees.GrowthNonTorsionFunctionField.x a b) (ICFallDegrees.GrowthNonTorsionFunctionField.z a b t Y)
+        ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) t) =
+      0
+@ICFallDegrees.GrowthNonTorsionFunctionField.companionConstant_ne_zero : ∀ {K : Type u_1} [inst : Field K] (a b t : K),
+  t ≠ 0 →
+    ICFallDegrees.GrowthSecant.companionConstant ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) a)
+        ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) b)
+        (ICFallDegrees.GrowthNonTorsionFunctionField.x a b)
+        ((ICFallDegrees.GrowthNonTorsionFunctionField.constant a b) t) ≠
+      0
+@ICFallDegrees.GrowthNonTorsionFunctionField.z_ne_zero : ∀ {K : Type u_1} [inst : Field K] (a b t Y : K),
+  t ≠ 0 → Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t → ICFallDegrees.GrowthNonTorsionFunctionField.z a b t Y ≠ 0

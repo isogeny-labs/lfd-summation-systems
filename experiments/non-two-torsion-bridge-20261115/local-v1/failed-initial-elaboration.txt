@@ -1,0 +1,22 @@
+✖ [2014/2014] Building ICFallDegrees.GrowthNonTorsionRationalObstruction
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionRationalObstruction.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionRationalObstruction.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionRationalObstruction.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:55:4: type mismatch, term
+  Function.Injective.ne (RingHom.injective RatFunc.C) h2
+after simplification has type
+  ¬(2 : K) = 0 : Prop
+but is expected to have type
+  ¬(2 : RatFunc K) = 0 : Prop
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:66:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_natDegree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:67:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_nonsquare' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:68:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.generic_s3_ne_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionRationalObstruction
+error: build failed

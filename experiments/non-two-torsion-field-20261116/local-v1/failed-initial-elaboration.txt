@@ -1,0 +1,81 @@
+FAILED INITIAL ELABORATION, NOT KERNEL EVIDENCE. Intermediate source was not retained.
+⚠ [1363/1426] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1370/1426] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1722/1835] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [1724/1835] Replayed ICFallDegrees.GrowthNonTorsionBridge
+warning: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:42:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:49:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:73:0: 'ICFallDegrees.GrowthNonTorsionBridge.recoverY_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:74:0: 'ICFallDegrees.GrowthNonTorsionBridge.recoverY_secantX' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:75:0: 'ICFallDegrees.GrowthNonTorsionBridge.secantX_recoverY' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:76:0: 'ICFallDegrees.GrowthNonTorsionBridge.no_section_of_nonsquare' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:77:0: 'ICFallDegrees.GrowthNonTorsionBridge.secantX_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2014/2016] Replayed ICFallDegrees.GrowthNonTorsionRationalObstruction
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:69:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_natDegree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:70:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_nonsquare' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:71:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.generic_s3_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [2015/2016] Built Mathlib.Algebra.Polynomial.SpecificDegree
+✖ [2016/2016] Building ICFallDegrees.GrowthNonTorsionFunctionField
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib/lean:././.lake/packages/batteries/.lake/build/lib/lean:././.lake/packages/Qq/.lake/build/lib/lean:././.lake/packages/aesop/.lake/build/lib/lean:././.lake/packages/proofwidgets/.lake/build/lib/lean:././.lake/packages/importGraph/.lake/build/lib/lean:././.lake/packages/LeanSearchClient/.lake/build/lib/lean:././.lake/packages/plausible/.lake/build/lib/lean:././.lake/packages/mathlib/.lake/build/lib/lean:././.lake/build/lib/lean /workspace/tools/lean-4.19.0-linux/bin/lean ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean -R ./././. -o ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionFunctionField.olean -i ././.lake/build/lib/lean/ICFallDegrees/GrowthNonTorsionFunctionField.ilean -c ././.lake/build/ir/ICFallDegrees/GrowthNonTorsionFunctionField.c --json
+error: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:32:4: type mismatch, term
+  hy
+after simplification has type
+  y ^ 2 - (algebraMap K[X] (RatFunc K)) (cubicPolynomial a b) = 0 : Prop
+but is expected to have type
+  y ^ 2 = (algebraMap K[X] (RatFunc K)) (cubicPolynomial a b) : Prop
+error: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:56:2: type mismatch
+  Function.Injective.ne (RingHom.injective (algebraMap (RatFunc K) (FunctionField a b))) RatFunc.X_ne_zero
+has type
+  (algebraMap (RatFunc K) (FunctionField a b)) RatFunc.X ≠ (algebraMap (RatFunc K) (FunctionField a b)) 0 : Prop
+but is expected to have type
+  x a b ≠ 0 : Prop
+warning: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:66:2: try 'simp at hc' instead of 'simpa using hc'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:78:0: 'ICFallDegrees.GrowthNonTorsionFunctionField.equation_irreducible' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:79:0: 'ICFallDegrees.GrowthNonTorsionFunctionField.y_square' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:80:0: 'ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:81:0: 'ICFallDegrees.GrowthNonTorsionFunctionField.x_ne_constant' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionFunctionField.lean:82:0: 'ICFallDegrees.GrowthNonTorsionFunctionField.s3_zero' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+error: Lean exited with code 1
+Some required builds logged failures:
+- ICFallDegrees.GrowthNonTorsionFunctionField
+error: build failed

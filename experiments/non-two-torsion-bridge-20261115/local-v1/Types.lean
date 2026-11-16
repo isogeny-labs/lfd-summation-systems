@@ -1,0 +1,10 @@
+import ICFallDegrees.GrowthNonTorsionRationalObstruction
+set_option pp.universes true
+#check @ICFallDegrees.GrowthNonTorsionBridge.no_section_of_nonsquare
+#check @ICFallDegrees.GrowthNonTorsionBridge.recoverY_secantX
+#check @ICFallDegrees.GrowthNonTorsionBridge.recoverY_square
+#check @ICFallDegrees.GrowthNonTorsionBridge.secantX_ne_zero
+#check @ICFallDegrees.GrowthNonTorsionBridge.secantX_recoverY
+#check @ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_natDegree
+#check @ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_nonsquare
+#check @ICFallDegrees.GrowthNonTorsionRationalObstruction.generic_s3_ne_zero
