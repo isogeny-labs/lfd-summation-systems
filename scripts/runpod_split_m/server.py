@@ -7,6 +7,7 @@ import http.server, io, json, os, subprocess, tarfile, threading, time
 TOKEN, WORK = os.environ['RUNNER_TOKEN'], '/work'
 MAX_SECONDS = int(os.environ.get('MAX_SECONDS', '3600'))
 os.makedirs(WORK + '/out', exist_ok=True)
+ALLOWED = {n: WORK + '/' + n for n in ('bundle.tar.gz', 'job.sh', 'cell.env')}
 state = dict(state='idle', started=None, ended=None, exit=None)
 proc = None
 
@@ -44,12 +45,13 @@ class H(http.server.BaseHTTPRequestHandler):
         if not self.ok():
             return
         kind, _, name = self.path.strip('/').partition('/')
-        if kind not in ('upload', 'append') or '/' in name or not name:
+        path = ALLOWED.get(name)      # fixed destinations only; the request never forms a path
+        if kind not in ('upload', 'append') or path is None:
             return self.reply(404, b'{}')
         data = self.rfile.read(int(self.headers['Content-Length']))
-        with open(f'{WORK}/{name}', 'wb' if kind == 'upload' else 'ab') as f:
+        with open(path, 'wb' if kind == 'upload' else 'ab') as f:
             f.write(data)
-        self.reply(200, json.dumps(dict(name=name, size=os.path.getsize(f'{WORK}/{name}'))).encode())
+        self.reply(200, json.dumps(dict(name=os.path.basename(path), size=os.path.getsize(path))).encode())
 
     def do_POST(self):
         global proc
