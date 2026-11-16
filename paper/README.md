@@ -1,6 +1,6 @@
 # Main manuscript: ePrint preparation
 
-**Status, 14 November 2026:** corrected candidate for author review. No ePrint
+**Status, 15 November 2026:** corrected candidate for author review. No ePrint
 submission or editorial acceptance is recorded by this review. This is a
 technical and artifact review, not independent certification of every proof.
 
@@ -28,7 +28,17 @@ uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
-The saved audit covers 671 declarations of `Audit.lean` and matches every
+The rational prime-field extension passed Linux CI at `1c929ae`:
+[run 43777495526](https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43777495526).
+The complete build covers 225 modules and audits 883 distinct declarations
+across 87 files; the default audit covers 671 declarations. All 275 recorded
+source hashes match, with only the three allowed foundational axioms and no
+project axioms or placeholders. The paper update preserves those Lean sources.
+The new corollary, its explicit denominator guards, the six exceptional-prime
+profiles and the finite rational-reduction checks are mapped to declarations
+and records in the appendices.
+
+Earlier build history follows. The saved audit covers 671 declarations of `Audit.lean` and matches every
 recorded source digest. After the review of 14 November the complete project
 was built from an empty build directory (macOS, Lean 4.19.0, pinned Mathlib):
 all 217 modules build, and the 840 declarations over all files that print
@@ -84,7 +94,7 @@ retain its logs rather than overwriting the archived audit.
 The existing `paper/` layout is retained to preserve this companion repository's
 published paths; this change adds no separate research manuscript.
 
-The rational-parameter extension is in
+The earlier complex rational-parameter extension is in
 `formal/ICFallDegrees/GrowthRationalParameterClassification.lean`: the exact
 complex grid-zero classification is a=-3,-1,1, and the growth window now
 also covers every rational a outside {-3,-3/4,-1,1}, including a=0,2,-2.
@@ -111,3 +121,10 @@ change. `SYNC-94290676.json` is the record of the synchronized version and
 its hashes of the manuscript source, PDF and build report describe that
 version, not the current one; the current hashes are in
 `../experiments/ic-curve-paper/verification.json`.
+
+The prime-field extension is in `GrowthRationalPrimeNative.lean` and
+`GrowthRationalPrimeCutoff.lean` under `formal/ICFallDegrees/`. For a=m/q
+with q>0 it proves the least-LFD window for every admissible prime above
+C=2^N H^(N*N)+2N+q+|m+3q|+|4m+3q|, with N=2^k and
+H=3q+|m+2q|. The cutoff proves denominator invertibility and nonsingularity;
+no lowest-terms assumption is needed. E6 retains the sharper 9^(4^k) cutoff.

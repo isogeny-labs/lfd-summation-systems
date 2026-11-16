@@ -139,9 +139,12 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
  Section~\ref{sec:growth}): the LFD of unit-ideal instances is unbounded in
  the depth, with a linear lower bound of slope $1/14$
  (Theorem~\ref{thm:growth}). For targets of order two the same bound is
- kernel-checked without hypotheses: over $\mathbb{C}$ for a one-parameter
- family of curves, and for one of them along an increasing sequence of
- primes (Theorem~\ref{thm:growthfixed}).
+ kernel-checked without the curve-model hypothesis: over $\mathbb{C}$ for
+ a one-parameter family, and over admissible prime fields for every
+ rational $a\notin\{-3,-3/4,-1,1\}$ in $y^2=x^3+ax-(1+a)$, above an
+ explicit denominator-sensitive cutoff (Corollary~\ref{cor:rationalprime}).
+ For $E_6$, the sharper sufficient cutoff is $9^{4^k}$
+ (Theorem~\ref{thm:growthfixed}).
 \item \emph{A conjecture} (Section~\ref{sec:conjecture}):
  $\lfd(k)=\lfloor(k+14)/4\rfloor$ for generic two-summand prime chain
  systems; six predictions were recorded before the computations: three
@@ -1984,6 +1987,47 @@ So exceptional primes are frequent up to $4^k$ and thin out beyond it, as
 the count predicts; the enumeration is exact and is not kernel-checked.
 \end{remark}
 
+\paragraph{Exact values at exceptional primes.}
+Table~\ref{tab:fermatlfd} gives exact closure profiles for six proper-ideal
+instances at prime factors of $2^{2^k}+1$. The computation checks closed
+containing spaces and the evaluation-rank/codimension criterion for the
+local-to-global upper bound. It uses the existing closure engine; it is
+not an independent implementation or a Lean replay. The depth-$6$ value
+$5$ rules out extending the smaller cases into a constant LFD-$4$ pattern.
+All six depths are below $24$, so these values neither establish nor
+refute the asymptotic lower bound for proper ideals.
+\begin{table}[htbp]\centering\small
+\begin{tabular}{rrrr}
+\toprule
+Depth $k$ & Prime $p$ & Solutions & Exact LFD\\
+\midrule
+2 & 17 & 1 & 4\\
+3 & 257 & 1 & 4\\
+4 & 65537 & 1 & 4\\
+5 & 641 & 3 & 4\\
+5 & 6700417 & 1 & 4\\
+6 & 274177 & 1 & 5\\
+\bottomrule
+\end{tabular}
+\caption{Exact proper-ideal profiles at exceptional primes. Reproduction:
+\code{scripts/check\_n8\_sharp\_prime\_bound.py}; the complete closure
+profiles are in the corresponding record of Appendix~\ref{app:data}.}
+\label{tab:fermatlfd}
+\end{table}
+
+\paragraph{Finite checks of the rational reduction.}
+The denominator-cleared eliminant was also replayed on $24$ parameter/depth
+cells at depths $2$ and $3$, including excluded parameters and singular
+reductions as polynomial controls. Its integer matrix determinant agrees with an
+independently computed univariate resultant. Across $4720$ raw S3 checks,
+the denominator-cleared linear factor agrees with the actual polynomial;
+two noninvertible-denominator cases are rejected. Seven unit instances
+above their explicit cutoffs were checked at depth $2$, at primes below
+$2^{64}$ where the primality test is deterministic. These checks exercise
+the arithmetic and unit components. The all-depth growth conclusion of
+Corollary~\ref{cor:rationalprime} is a symbolic Lean proof, not an
+extrapolation from these finite cells.
+
 \paragraph{Scope.} The range of the theorems ($k\ge24$) is beyond every
 computation here, so only its lemmas and the reduction were tested on data.
 The bound of Theorem~\ref{thm:growth} exceeds the kernel-checked $\lfd\ge4$ only from $k=52$ on in the
@@ -2169,15 +2213,16 @@ below, followed by computations that could test the proposed explanations.
  unpublished draft (Remark~\ref{rem:binarydraft}) is a candidate, and a
  kernel proof of it would settle its status. A second implementation reaching $k\ge11$ would replicate
  Section~\ref{sec:binarydeep} independently.
-\item \emph{The growth theorem in the kernel.} The kernel has a curve model
- only for curves with a target of order two, in characteristic $0$ for a
- one-parameter family and over prime fields for one curve
- (Theorem~\ref{thm:growthfixed}). Missing for general targets are the
- function field of a curve of genus one and the vanishing-sum bound for
- its two coordinate functions; missing over prime fields are an explicit
- bound for the primes and a statement for every admissible prime. Proofs
- of the case $t=0$ and of an analogue for proper ideals would extend the
- theorem to the remaining instances.
+\item \emph{The growth theorem in the kernel.} The order-two target
+ family now has a kernel proof over $\mathbb{C}$ and, for every allowed
+ rational parameter, over every admissible prime field above the explicit
+ cutoff of Corollary~\ref{cor:rationalprime}. A sharper family cutoff
+ could use the eliminant's factorization rather than its column sums.
+ For general targets, the genus-one function field and the vanishing-sum
+ bound for its two coordinate functions still need formalization. The
+ case $t=0$ and a lower bound for proper ideals remain separate problems;
+ the finite exceptional-prime values in Table~\ref{tab:fermatlfd} do not
+ settle that lower bound.
 \item \emph{Larger computations.} The value at $k=14$ by a second method (a
  direct closure in $M_{\le7}$, beyond the engines used here, or an
  independent lift); degree-$6$ and degree-$7$ closures at $k\ge15$; second
@@ -2204,9 +2249,16 @@ degree-of-regularity breakpoints of Petit, Kosters and Messeng through
 their last depth $11$ and extend the profile to depth $14$; their unreduced
 presentation has the same LFD at these values.
 
-The written growth proof establishes a lower slope of $1/14$, and the
-kernel checks it for curves with a target of order two. The data
-suggest the larger slope $1/4$ and the law
+The written growth proof establishes a lower slope of $1/14$. For targets
+of order two the kernel proves the window
+$\lfloor(k-10)/14\rfloor<d\le k+2$ from depth $24$, over $\mathbb{C}$
+and for every allowed rational parameter over admissible prime fields
+above a closed cutoff that tracks the denominator. The specialized $E_6$
+cutoff is $9^{4^k}$. These are statements about $(p,k)$ pairs, with $p$
+allowed to grow with $k$. The finite exceptional-prime computations give
+LFD $4$ at depths $2$--$5$ and $5$ at depth $6$ on the listed instances;
+the general lower bound for proper ideals remains open. For generic
+prime-field targets the data suggest the larger slope $1/4$ and the law
 $\lfd(k)=\lfloor(k+14)/4\rfloor$. None of the six predictions recorded in
 advance for this prime-field law has failed on the values computed;
 preregistered laws for binary systems have been refuted. With three to
@@ -2230,6 +2282,16 @@ development contains no elliptic curve: $S_3$ and $S_4$ enter as explicit
 polynomials, which are not proved there to be summation polynomials, and the
 binary and Koblitz bounds are one generic Boolean theorem, the second being
 the first with $b=1$.
+The complete Linux build and audit passed at
+\href{https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43777495526}{commit \code{1c929ae}}:
+225 modules, including the root module; 671 declarations in the default
+audit; and 883 distinct declarations across all 87 files that print axiom
+lists. The downloaded audit artifact's 275 source digests match the saved
+sources. The ten headline statements of the rational prime-field extension
+use only the three foundational axioms above. This receipt concerns those
+source files; it does not validate the written genus-one proof or the
+uncertified depth-$14$ lift.
+
 Table~\ref{tab:lean} maps each statement of the paper to its declarations,
 named relative to the root namespace \code{ICFallDegrees}; in each cell a
 name without a namespace prefix lies in the namespace of the preceding name.
@@ -2265,7 +2327,8 @@ $1\in V_4$ on the $(0,0)$ family & \code{PrimeM2Sharp.one\_at\_four}\\
 Local-to-global criterion & \code{LocalReductionBound.lfd\_bound\_of\_local}\\
 Quotient exclusion principle & module \code{QuotientLowerBound}\\
 Theorem~\ref{thm:growth} (conditional) & \code{GrowthMain.CurveModel}, \code{growth\_theorem}, \code{growth\_theorem\_linear}, \code{growth\_lfd\_window}, \code{GrowthExistence.growth\_instance\_window}, \code{GrowthCriterion.closed\_iff\_fei}\\
-Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.\allowbreak{}unit\_complex\_of\_norm\_gt}, \code{GrowthTwoTorsionFamily.model}, \code{exists\_lfd\_linear\_window} (for $a=6$: \code{GrowthFixedE6.model}, \code{unit}, \code{exists\_lfd\_linear\_window}); (2) \code{GrowthPrimeE6NativeNonmembership.\allowbreak{}e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthFixedE6NativeUnit.\allowbreak{}exists\_actual\_e6\_prime\_unit\_bound}, \code{GrowthFixedE6PrimeTheta.\allowbreak{}exists\_actual\_prime\_theta\_above}, \code{GrowthFixedE6PrimeSequence.\allowbreak{}exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.\allowbreak{}e6\_not\_unit\_of\_fermat\_factor}, \code{exists\_bad\_admissible\_prime}\\
+Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.unit\_complex\_of\_norm\_gt}, \code{GrowthRationalParameterClassification.exists\_lfd\_linear\_window}; (2) \code{GrowthPrimeE6NativeNonmembership.e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthSharpPrimeBound.prime\_lfd\_window}, \code{eliminant\_det\_bound}, \code{GrowthFixedE6PrimeSequence.exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.e6\_not\_unit\_of\_fermat\_factor}\\
+Corollary~\ref{cor:rationalprime} & \code{GrowthRationalPrimeCutoff.rational\_prime\_growth}, \code{denominator\_and\_parameter\_guards}, \code{matrix\_det\_ne\_zero}; \code{GrowthRationalPrimeNative.not\_one\_of\_large\_prime}\\
 \bottomrule
 \end{tabular}
 \caption{Statements and Lean declarations.}
@@ -2274,8 +2337,8 @@ Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.\allowbr
 
 \paragraph{What is conditional.} The depth-$14$ summary takes the four
 recorded closures of Section~\ref{sec:depth14} as hypotheses, the growth
-theorem the curve model (constructed in Lean only for
-Theorem~\ref{thm:growthfixed}), and the growth schema one base certificate per
+theorem the curve model (discharged in Lean for
+Theorem~\ref{thm:growthfixed} and Corollary~\ref{cor:rationalprime}), and the growth schema one base certificate per
 degree; the local-to-global step for prime chains is a written
 instantiation of \code{LocalReductionBound.lfd\_bound\_of\_local}.
 
@@ -2472,7 +2535,7 @@ The companion repository holds the records and verification reports:
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
 The computational and formal evidence reviewed here is available in the
-fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/41d5c68}{commit \code{41d5c68}}.
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/1c929ae}{commit \code{1c929ae}}.
 Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);
@@ -2491,6 +2554,7 @@ hashes.
 Result & Location\\
 \midrule
 Lean development and audit & \code{formal/ICFallDegrees/}; audit report \code{experiments/\allowbreak{}ic-lean/}\\
+Explicit prime cutoffs and rational-family replay & \code{experiments/explicit-prime-bound-20261115/}, \code{experiments/sharp-prime-bound-20261115/}, \code{experiments/rational-prime-growth-20261115/}; scripts \code{check\_n8\_explicit\_prime\_bound.py}, \code{check\_n8\_sharp\_prime\_bound.py}, \code{check\_n8\_rational\_prime\_growth.py} in \code{scripts/}\\
 Depth-$7$ and depth-$6$ kernel certificates & \code{experiments/\allowbreak{}ic-bounds-cert/}, \code{experiments/\allowbreak{}ic-bounds-exact-k6/}\\
 Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md}, \code{N8-fermat-diagonal-obstruction-20261114.md} and the other \code{N8-*.md}; reviews of the written growth proof: \code{N8-growth-review.md}, \code{N8-growth-review-redteam.md}\\
 Selector-bound test (summaries) & \code{experiments/\allowbreak{}ic-bounds-upper/}, \code{experiments/\allowbreak{}ic-bounds-upper-redteam/}\\
