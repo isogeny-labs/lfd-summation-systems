@@ -154,7 +154,10 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
  rational $a\notin\{-3,-3/4,-1,1\}$ in $y^2=x^3+ax-(1+a)$, above an
  explicit denominator-sensitive cutoff (Corollary~\ref{cor:rationalprime}).
  For $E_6$, the sharper sufficient cutoff is $9^{4^k}$
- (Theorem~\ref{thm:growthfixed}).
+ (Theorem~\ref{thm:growthfixed}). For targets with nonzero ordinate the
+ kernel has the function field, the two coordinate functions and their
+ pole orders at the two relevant places, and not yet the vanishing-sum
+ bound (Proposition~\ref{prop:nontorsion}).
 \item \emph{Solving degree} (written proof and exact;
  Section~\ref{sec:solving}): with the theorem of Caminata and
  Gorla~\cite{cg}, the reduced Gr\"obner basis of these systems has degree
@@ -1843,10 +1846,12 @@ $k\ge k_D$ and for $k\ge14D+10$, and for the instances of the existence
 statement that every last fall degree $d$ satisfies
 $\lfloor(k-10)/14\rfloor<d\le k+2$ for $k\ge24$ (for $24\le k\le37$ the
 lower half says only $d\ge2$, which is why the theorem is stated from
-$k=38$); the splitting criterion is proved as an equivalence. Not formalized: the function field of a
-curve of genus one and the vanishing-sum bound for it; the kernel has a
+$k=38$); the splitting criterion is proved as an equivalence. Not formalized: the vanishing-sum bound for a
+curve of genus one; the kernel has a
 curve model only for the instances of Theorem~\ref{thm:growthfixed}, where
-the function field is rational. The hypothesis ``$t\ne0$'' is used only
+the function field is rational. For targets with nonzero ordinate the
+function field, the two coordinate functions and their pole orders are
+kernel-checked (Proposition~\ref{prop:nontorsion}), without the bound. The hypothesis ``$t\ne0$'' is used only
 there, to produce a curve model, so it does not appear in the Lean
 statements; ``nonsingular'' appears only where the upper bound $k+2$ is
 combined in. Two adversarial reviews checked the written proof
@@ -1940,7 +1945,9 @@ stronger in its status. The target has order two, a case in which the
 closure dimensions are exceptional (Section~\ref{sec:blockfour}); the
 function field in the proof has genus zero, so nothing here formalizes
 the genus-one bound that Theorem~\ref{thm:growth} needs for general
-targets, and that theorem stays a written proof, conditional in Lean.
+targets, and that theorem stays a written proof, conditional in Lean
+(Section~\ref{sec:growthnontorsion} gives the part of the genus-one
+construction that is kernel-checked).
 Item (1) covers a one-parameter family of curves. Items (2) to (4) give
 the sharper fixed-$E_6$ statements; Corollary~\ref{cor:rationalprime}
 below extends prime-field growth to the rational-parameter family. Item (3) now has the explicit sufficient cutoff
@@ -2066,6 +2073,84 @@ are about pairs $(p,k)$ with $p$ growing with the depth; a statement about
 one system at every depth is available only in characteristic $0$, and in
 the kernel only as item (1) of Theorem~\ref{thm:growthfixed}. The case
 $t=0$ is not covered.
+
+\subsection{Targets with nonzero ordinate: the function field and two places}\label{sec:growthnontorsion}
+For a target $R=(t,Y)$ with $Y\ne0$ the summation polynomial is not a
+square, and the curve model of Theorem~\ref{thm:growth} has to live in the
+function field of the curve. Part of that construction is now
+kernel-checked. The vanishing-sum bound is not, so the status of
+Theorem~\ref{thm:growth} does not change. Write $f=X^3+aX+b$ and, for a
+point $P=(x,y)$ with $x\ne t$,
+\[
+ z=\frac{(x+t)(xt+a)+2b+2yY}{(x-t)^2},
+\]
+the abscissa of $R-P$.
+
+\begin{proposition}[Function field and pole orders; kernel-checked]\label{prop:nontorsion}
+Let $K$ be a field with $2\ne0$ and $a,b,t,Y\in K$ with $Y^2=t^3+at+b$
+and $Y\ne0$.
+\begin{enumerate}
+\item \emph{No rational model.} If $x,z\in K$ satisfy $S_3(x,z,t)=0$, then
+ $y=((x-t)^2z-(x+t)(xt+a)-2b)/(2Y)$ satisfies $y^2=x^3+ax+b$, and for
+ $x\ne t$ this map and the formula for $z$ above are inverse to each other.
+ The cubic $f$ is not a square in $K(X)$, so $S_3(X,z,t)\ne0$ for every
+ $z\in K(X)$.
+\item \emph{The quadratic model.} The polynomial $T^2-f$ is irreducible
+ over $K(X)$, and $L=K(X)[T]/(T^2-f)$ has degree $2$ over $K(X)$. The
+ classes $x$ of $X$ and $y$ of $T$ satisfy $y^2=x^3+ax+b$; $x$ is nonzero
+ and differs from every constant; and $z\in L$, defined by the formula
+ above, satisfies $S_3(x,z,t)=0$. If $t\ne0$, then $z\ne0$.
+\item \emph{Two places.} In the fraction field of the coordinate ring
+ $K[X,T]/(T^2-f)$ there are two distinct discrete valuations, at the point
+ at infinity $O$ and at $R$, with uniformizers $x/y$ and $x-t$. With
+ $t\ne0$, the orders are
+ \[
+ \operatorname{ord}_O(x)=-2,\quad \operatorname{ord}_O(y)=-3,\quad
+ \operatorname{ord}_O(z)=0,\qquad
+ \operatorname{ord}_R(x)=0,\quad \operatorname{ord}_R(z)=-2,
+ \]
+ so that for all exponents
+ \[
+ \operatorname{ord}_O\frac{x^iz^j}{x^{i'}z^{j'}}=-2(i-i'),\qquad
+ \operatorname{ord}_R\frac{x^iz^j}{x^{i'}z^{j'}}=-2(j-j').
+ \]
+\end{enumerate}
+\end{proposition}
+\begin{proof}[Proof sketch]
+(1) $S_3$ is a quadratic in $z$ whose discriminant is $16f(x)f(t)$; this
+gives the square, and the two formulas are inverse by a field identity.
+The degree of $f$ is odd, and the degree of a square in $K(X)$ is even.
+(2) A monic quadratic without a root is irreducible, and a root of $T^2-f$
+in $K(X)$ would make $f$ a square. The constant coefficient of $S_3$ as a
+quadratic in $z$ is $(xt-a)^2-4b(x+t)$, a polynomial in $x$ with leading
+coefficient $t^2$; it is nonzero for $t\ne0$, so $z\ne0$. (3) At $O$ the
+valuation is the weighted degree $\max(2\deg p,\,2\deg q+3)$ of $p+qT$ with $p,q\in K[X]$,
+shown to be additive on products and extended to fractions; the numerator
+and the denominator of $z$ both have pole order $4$. At $R$ the
+localization of the coordinate ring at the point ideal is a discrete
+valuation ring with maximal ideal generated by $x-t$, because $Y\ne-Y$;
+the numerator of $z$ takes the value $4Y^2\ne0$ at $R$ and $(x-t)^2$ has
+order $2$.
+\end{proof}
+
+Items (1) and (2) hold over every field with $2\ne0$ and need no
+nonsingularity; item (3) uses only that the curve is nonsingular at $R$,
+which follows from $Y\ne0$. The condition $Y\ne0$ says that the target does
+not have order two; it does not say that the target has infinite order.
+Item (3) is stated in Mathlib's coordinate ring, and an isomorphism of its
+fraction field with the field $L$ of item (2) is not formalized: each
+presentation proves the curve equation, the nonvanishing and
+$S_3(x,z,t)=0$ separately.
+
+\paragraph{What remains.} The two pole orders are the local input of the
+written proof: $x^iz^j$ has its poles at $O$ and $R$ only, of orders $2i$
+and $2j$. A curve model also needs the vanishing-sum bound for the
+monomials $x^iz^j$, which the written proof derives from the genus-one
+height and Wronskian estimate. That estimate, the passage to the
+coefficient field of $p$-th powers in positive characteristic, and the link
+to the hypothesis of the Lean growth theorem are not formalized. No
+growth statement for a target with $Y\ne0$ is kernel-checked, and no
+closure was computed for this subsection.
 
 \subsection{Blocks of four: conjectural remarks}\label{sec:blockfour}
 The measured profile climbs by one every four depths. This subsection
@@ -2386,7 +2471,10 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  the explicit cutoff of Corollary~\ref{cor:rationalprime}. For $E_6$ the
  sharper cutoff $B_k=9^{4^k}$ remains available. The explicit cutoff is conservative. Below it,
  item (4) supplies proper-ideal instances at every depth; their numerical
- LFD lower bound remains undecided.
+ LFD lower bound remains undecided. For targets with nonzero ordinate,
+ Proposition~\ref{prop:nontorsion} is the kernel-checked part: it gives no
+ lower bound on any last fall degree, and its two presentations of the
+ function field are not identified in Lean.
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
  is one instance and one engine, with no computation at $k\ge7$ and no
  prediction beyond $k=6$. The value $\deg g+1$ for four and five summands is
@@ -2462,8 +2550,11 @@ below, followed by computations that could test the proposed explanations.
  rational parameter, over every admissible prime field above the explicit
  cutoff of Corollary~\ref{cor:rationalprime}. A sharper family cutoff
  could use the eliminant's factorization rather than its column sums.
- For general targets, the genus-one function field and the vanishing-sum
- bound for its two coordinate functions still need formalization. The
+ For general targets the function field, its two coordinate functions
+ and their pole orders are formalized (Proposition~\ref{prop:nontorsion});
+ the genus-one height and Wronskian estimate that gives the vanishing-sum
+ bound, and the field of $p$-th powers in positive characteristic, still
+ need formalization. The
  case $t=0$ and a lower bound for proper ideals remain separate problems;
  the finite exceptional-prime values in Table~\ref{tab:fermatlfd} do not
  settle that lower bound.
@@ -2501,7 +2592,10 @@ above a closed cutoff that tracks the denominator. The specialized $E_6$
 cutoff is $9^{4^k}$. These are statements about $(p,k)$ pairs, with $p$
 allowed to grow with $k$. The finite exceptional-prime computations give
 LFD $4$ at depths $2$--$5$ and $5$ at depth $6$ on the listed instances;
-the general lower bound for proper ideals remains open. For generic
+the general lower bound for proper ideals remains open. For targets
+that are not of order two, the kernel now has the function field and the
+pole orders of the two coordinate functions, and the growth bound itself
+remains a written proof. For generic
 prime-field targets the data suggest the larger slope $1/4$ and the law
 $\lfd(k)=\lfloor(k+14)/4\rfloor$. None of the six predictions recorded in
 advance for this prime-field law has failed on the values computed;
@@ -2526,9 +2620,12 @@ The Lean development formalizes $V_{F,D}$ as an inductive predicate
 \code{HasLFDBound F d}. The pinned Lean~4.19.0/Mathlib artifact audits
 \LEANDECLS{} declarations with only the foundational axioms \code{propext},
 \code{Classical.choice} and \code{Quot.sound}; no project axioms,
-\code{sorry}, \code{native\_decide} or unsafe overrides occur. The
-development contains no elliptic curve: $S_3$ and $S_4$ enter as explicit
-polynomials, which are not proved there to be summation polynomials, and the
+\code{sorry}, \code{native\_decide} or unsafe overrides occur. In the audited development
+$S_3$ and $S_4$ enter as explicit
+polynomials, which are not proved there to be summation polynomials, and no
+elliptic curve occurs outside the modules of
+Proposition~\ref{prop:nontorsion}, which use Mathlib's Weierstrass
+coordinate ring; the
 binary and Koblitz bounds are one generic Boolean theorem, the second being
 the first with $b=1$.
 The complete Linux build and audit passed at
@@ -2539,7 +2636,12 @@ lists. The downloaded audit artifact's 275 source digests match the saved
 sources. The ten headline statements of the rational prime-field extension
 use only the three foundational axioms above. This receipt concerns those
 source files; it does not validate the written genus-one proof or the
-uncertified depth-$14$ lift.
+uncertified depth-$14$ lift. The eight modules
+\code{GrowthNonTorsion*.lean} of Proposition~\ref{prop:nontorsion} are not
+imported by the root module and are not among the \LEANDECLS{}
+declarations: a separate workflow (\code{non-torsion-bridge.yml}) builds
+them and requires the three foundational axioms, by name, for $58$ of
+their theorems.
 
 Table~\ref{tab:lean} maps each statement of the paper to its declarations,
 named relative to the root namespace \code{ICFallDegrees}; in each cell a
@@ -2583,6 +2685,10 @@ Corollary~\ref{cor:rationalprime} & \code{GrowthRationalPrimeCutoff.rational\_pr
 \caption{Statements and Lean declarations.}
 \label{tab:lean}
 \end{table}
+
+\begin{sloppypar}
+\paragraph{Declarations of Proposition~\ref{prop:nontorsion}.} These lie outside the default audit (separate workflow; see above), in the namespaces of the modules \code{GrowthNonTorsion*}: (1) \code{GrowthNonTorsionBridge.\allowbreak{}recoverY\_square}, \code{recoverY\_secantX}, \code{secantX\_recoverY}, \code{GrowthNonTorsionRationalObstruction.\allowbreak{}cubicPolynomial\_nonsquare}, \code{generic\_s3\_ne\_zero}; (2) \code{GrowthNonTorsionFunctionField.\allowbreak{}equation\_irreducible}, \code{finrank\_two}, \code{y\_square}, \code{x\_ne\_zero}, \code{x\_ne\_constant}, \code{s3\_zero}, \code{z\_ne\_zero}; (3) \code{GrowthNonTorsionInfinity.\allowbreak{}infinityValuation\_X}, \code{infinityValuation\_Y}, \code{infinityValuation\_uniformizer}, \code{GrowthNonTorsionInfinitySecant.\allowbreak{}infinityValuation\_companion}, \code{infinityValuation\_monomial\_ratio}, \code{GrowthNonTorsionTargetLocal.\allowbreak{}pointLocal\_dvr}, \code{GrowthNonTorsionTargetValuation.\allowbreak{}targetValuation\_parameter}, \code{targetValuation\_X}, \code{GrowthNonTorsionTargetSecant.\allowbreak{}targetValuation\_companion}, \code{targetValuation\_monomial\_ratio}, \code{targetValuation\_ne\_infinity}.
+\end{sloppypar}
 
 \paragraph{What is conditional.} The depth-$14$ summary takes the four
 recorded closures of Section~\ref{sec:depth14} as hypotheses, the growth
@@ -2814,7 +2920,7 @@ The companion repository holds the records and verification reports:
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
 The computational and formal evidence reviewed here is available in the
-fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/1c929ae}{commit \code{1c929ae}}.
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/fc329b5}{commit \code{fc329b5}}.
 Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);
@@ -2834,6 +2940,7 @@ Result & Location\\
 \midrule
 Lean development and audit & \code{formal/ICFallDegrees/}; audit report \code{experiments/\allowbreak{}ic-lean/}\\
 Explicit prime cutoffs and rational-family replay & \code{experiments/explicit-prime-bound-20261115/}, \code{experiments/sharp-prime-bound-20261115/}, \code{experiments/rational-prime-growth-20261115/}; scripts \code{check\_n8\_explicit\_prime\_bound.py}, \code{check\_n8\_sharp\_prime\_bound.py}, \code{check\_n8\_rational\_prime\_growth.py} in \code{scripts/}\\
+Function field and pole orders for $Y\ne0$ (Proposition~\ref{prop:nontorsion}) & \code{formal/ICFallDegrees/GrowthNonTorsion*.lean}, \code{formal/N8NonTwoTorsionPolesAudit.lean}; notes \code{docs/proofs/N8-non-torsion-bridge-20261115.md}, \code{N8-non-two-torsion-field-20261116.md}, \code{N8-non-two-torsion-poles-20261116.md}; local kernel receipts \code{experiments/non-two-torsion-bridge-20261115/}, \code{experiments/non-two-torsion-field-20261116/}, \code{experiments/non-two-torsion-poles-20261116/}\\
 Depth-$7$ and depth-$6$ kernel certificates & \code{experiments/\allowbreak{}ic-bounds-cert/}, \code{experiments/\allowbreak{}ic-bounds-exact-k6/}\\
 Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md}, \code{N8-fermat-diagonal-obstruction-20261114.md} and the other \code{N8-*.md}; reviews of the written growth proof: \code{N8-growth-review.md}, \code{N8-growth-review-redteam.md}\\
 Selector-bound test (summaries) & \code{experiments/\allowbreak{}ic-bounds-upper/}, \code{experiments/\allowbreak{}ic-bounds-upper-redteam/}\\

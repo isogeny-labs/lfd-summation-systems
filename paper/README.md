@@ -1,6 +1,9 @@
 # Main manuscript: ePrint preparation
 
-**Status, 15 November 2026:** corrected candidate for author review. No ePrint
+**Status, 16 November 2026:** candidate for author review, 47 pages. It
+combines the rational prime-field growth results, the solving-degree section
+and the kernel-checked function field and pole orders for targets that are
+not of order two (Proposition "Function field and pole orders"). No ePrint
 submission or editorial acceptance is recorded by this review. This is a
 technical and artifact review, not independent certification of every proof.
 
@@ -78,15 +81,13 @@ retain its logs rather than overwriting the archived audit.
 
 ## Before submission
 
-- Done on 14 November: a clean build and audit of the current Lean project
-  (see above). Done on 15 November: the same build and audit are green in CI
-  on `main` at `e16cfb8`, the commit the submission package is taken from
-  (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
-- Done on 15 November: the reviewed source, PDF and evidence snapshot are
-  publicly addressable. The pull requests are merged into `main` with a merge
-  commit, so the fixed snapshot commit cited in the data appendix of the
-  manuscript is reachable from `main`. If history is ever rewritten, update
-  the citation and rebuild.
+- The default Lean audit is that of commit `1c929ae` (CI green there); the
+  audited sources have not changed since. The non-two-torsion modules are
+  checked by a separate workflow. Both must be green on the commit that is
+  submitted (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
+- The data appendix cites the combined evidence commit `fc329b5`. It stays
+  reachable only if this branch is merged with a merge commit; after a squash
+  or a rebase, update the citation and rebuild.
 - Read the review's remaining limits, particularly the depth-14 lift and the
   written growth proof. An independent depth-14 certificate would strengthen
   the result; the qualified preprint does not claim to have one.
@@ -130,3 +131,21 @@ with q>0 it proves the least-LFD window for every admissible prime above
 C=2^N H^(N*N)+2N+q+|m+3q|+|4m+3q|, with N=2^k and
 H=3q+|m+2q|. The cutoff proves denominator invertibility and nonsingularity;
 no lowest-terms assumption is needed. E6 retains the sharper 9^(4^k) cutoff.
+
+## Revision of 16 November 2026
+
+The manuscript sources of pull requests 13 (solving degree) and 19 (rational
+prime-field growth) were merged; the one conflict, in the list of
+contributions, keeps both items. New text: Section "Targets with nonzero
+ordinate: the function field and two places", with matching sentences in the
+contributions, the status paragraph of the growth theorem, the limitations,
+the future directions, the conclusion, the Lean appendix and the data table.
+The abstract gained no claim from that section, because it proves no growth
+bound. The section on the solving degree and the abstract sentence about it
+are those of pull request 13.
+
+Not included: the fall-degree measurements of the `crypto` repository
+(`research/pkm_falldegree_unblock_20261107/`, three to six summands in the
+Kummer and 2-isogeny presentations). They were taken with a different
+instrument on different presentations, the last fall degree depends on the
+presentation, and none has a certificate of the kind this paper requires.

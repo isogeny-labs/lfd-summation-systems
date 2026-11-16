@@ -16,7 +16,10 @@
 >   reviewed changes were merged into `main` (`e16cfb8`) and the submission package was regenerated from
 >   that commit (`paper/eprint-curve-lfd-bounds/EPRINT.md`); the author's confirmations and the
 >   submission itself remain open;
-> - the manuscript has 40 pages (39 before the growth section was extended), and the records in `experiments/publication-review-20261114/` are those of
+> - on 16 November 2026 the manuscript was brought to 47 pages by combining the open pull requests (rational
+>   prime-field growth, solving degree, function field and pole orders for targets not of order two); this
+>   review does not cover those additions, and the submission sheet was regenerated;
+> - at the time of the earlier addenda the manuscript had 40 pages (39 before the growth section was extended), and the records in `experiments/publication-review-20261114/` are those of
 >   the reviewed 38-page version.
 
 ## Scope and verdict

@@ -15,11 +15,11 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io; a.buran28@gmail.com |
-| Abstract | paste `eprint-abstract.txt` (2446 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (2818 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (42 pages) |
+| Content | `../curve-lfd-bounds.pdf` (47 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -30,33 +30,39 @@ ORCID and ROR identifiers are optional.
 
 ## Source snapshot
 
-Regenerated on 15 November 2026 from `main` at commit
-[`e16cfb8`](https://github.com/isogeny-labs/lfd-summation-systems/commit/e16cfb896cb05607a7f78c43f9db08b118c0b1dc)
-(the merge of pull request 8). `python3 scripts/build_ic_curve_paper.py` on a
-checkout of that commit reproduces the committed PDF byte for byte, and the
-abstract extracted from the LaTeX source equals `eprint-abstract.txt`. The
-commit that adds this section changes this sheet, the checker and two notes
-only; the files below are those of `e16cfb8`.
+Regenerated on 16 November 2026 on the branch that combines the open
+manuscript, proof and evidence pull requests (10 to 20, without 9 and 1) on
+top of `main` at `e16cfb8`. The combined evidence, before the manuscript
+edits of this revision, is commit
+[`fc329b5`](https://github.com/isogeny-labs/lfd-summation-systems/commit/fc329b5),
+which the data appendix cites. The files below are those of the commit that
+carries this sheet.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `377ef3ddd21ecf5d75538db5642fcff1c3c33592c43bffd744422aa7a0c2c483` |
-| `paper/curve-lfd-bounds.tex` | `e83bebb7020a0e4c19b74ac79ddf661f5f85b17f5e195fd2345c971e7db237ff` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `3e73357c02dc04cb12291c20f85765b40ee3e20b5462a70b499b585f93902011` |
+| `paper/curve-lfd-bounds.pdf` | `5626e62f24ecfe53af050ed4f22a79085bae53e78519eeb2d984fba3842de310` |
+| `paper/curve-lfd-bounds.tex` | `eaa77b4095b6c040b88a70b05618ed816c2311c835c24073a80ed3bb299ea82f` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `79e4ddebd3ef19013828a8e5049f4286f154059ca5e30527b12d3cbdc2be25a3` |
 
-The [CI run on `e16cfb8`](https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43684708863)
-passed: the Lean build of all modules, the axiom audit, the Python checks and
-the publication checks as they stood at that commit (the checks of this
-section were added afterwards). The data appendix of the manuscript cites the
-snapshot commit `5a98043`, which is an ancestor of `main`.
+The PDF was built with pdfTeX 1.40.25 (TeX Live 2023, Debian) by
+`python3 scripts/build_ic_curve_paper.py`; two consecutive builds gave the
+same bytes. Earlier packages were built with Tectonic, so a Tectonic build of
+the same source gives a different file with the same content. The figures
+were regenerated in the same run.
+
+Lean: the audited sources are those of commit `1c929ae`, whose complete
+Linux build and audit passed (225 modules, 671 default declarations). The
+eight `GrowthNonTorsion*.lean` modules added since are outside that audit
+and are checked by the workflow `non-torsion-bridge.yml`. Check that both
+workflows are green on the commit that is submitted.
 
 ## Checks
 
 - PDF builds without LaTeX warnings, unresolved references or overfull boxes.
 - A4, author email on page 1, PDF metadata title matches the manuscript.
 - Abstract agrees with the LaTeX source.
-- Form constraints checked on 15 November 2026: the abstract is plain ASCII with
-  `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
+- Form constraints checked on 15 November 2026 and again on the text of 16 November: the abstract is ASCII apart from the "ö" of
+  "Gröbner", with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
   for at least 64 characters), and every keyword phrase is at most 40 characters.
 - Mathematical and reproducibility limits: see `../README.md` and
   `../../docs/reviews-publication-20261114.md`.
