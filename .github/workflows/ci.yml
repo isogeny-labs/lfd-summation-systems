@@ -39,6 +39,8 @@ jobs:
           done
       - name: Three to eight summands (second implementation against the records)
         run: python scripts/ic_bounds_msum.py selftest
+      - name: Independent fixed-curve obstructions and rational parameters
+        run: python scripts/check_fixed_curve_obstructions.py
       - name: Fall counterexamples (recomputed against the record and its source hashes)
         run: python scripts/verify_ic_fall_counterexamples.py > /dev/null
       - name: Growth proof, finite lemmas (Semaev identity, table of Lambda)

@@ -3,6 +3,7 @@
 \usepackage[a4paper,margin=27mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm,booktabs,array,graphicx}
+\usepackage{placeins}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 \definecolor{oiblue}{HTML}{0072B2}
@@ -30,7 +31,7 @@
 \setlength{\emergencystretch}{3em}
 \title{Last fall degrees of elliptic curve summation systems:\\ machine-checked bounds and exact values}
 \author{Adam Buran\\ \texttt{adam@isogenylabs.io}\\ \texttt{a.buran28@gmail.com}}
-\date{14 November 2026}
+\date{15 November 2026}
 \input{curve-sweep-data}
 \begin{document}
 \maketitle
@@ -56,9 +57,9 @@ statements take the recorded closures as hypotheses. A written proof,
 checked in two reviews, shows that in characteristic $0$ or
 $p>2^{k+1}$ the LFD of unit-ideal instances with target abscissa $t\ne0$ is
 unbounded, at least $\lfloor(k-10)/14\rfloor+1$ for $k\ge38$ (in Lean,
-conditional on a vanishing-sum bound; for the curve $y^2=x^3+6x-7$ with the
-target of order two the bound is kernel-checked without that hypothesis,
-over $\mathbb{C}$ and along an increasing sequence of primes). The law
+conditional on a vanishing-sum bound; for $y^2=x^3+ax-(1+a)$ with rational
+$a\notin\{-3,-3/4,-1,1\}$ and target $(1,0)$, it is kernel-checked over
+$\mathbb{C}$ and admissible prime fields above an explicit cutoff). The law
 $\mathrm{LFD}(k)=\lfloor(k+14)/4\rfloor$ is a conjecture that agrees with
 every tested prediction recorded in advance. With three to eight summands
 at depth $k\le m-1$ the generator has the full degree $mk$ on $409$ of $412$
@@ -139,9 +140,12 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
  Section~\ref{sec:growth}): the LFD of unit-ideal instances is unbounded in
  the depth, with a linear lower bound of slope $1/14$
  (Theorem~\ref{thm:growth}). For targets of order two the same bound is
- kernel-checked without hypotheses: over $\mathbb{C}$ for a one-parameter
- family of curves, and for one of them along an increasing sequence of
- primes (Theorem~\ref{thm:growthfixed}).
+ kernel-checked without the curve-model hypothesis: over $\mathbb{C}$ for
+ a one-parameter family, and over admissible prime fields for every
+ rational $a\notin\{-3,-3/4,-1,1\}$ in $y^2=x^3+ax-(1+a)$, above an
+ explicit denominator-sensitive cutoff (Corollary~\ref{cor:rationalprime}).
+ For $E_6$, the sharper sufficient cutoff is $9^{4^k}$
+ (Theorem~\ref{thm:growthfixed}).
 \item \emph{A conjecture} (Section~\ref{sec:conjecture}):
  $\lfd(k)=\lfloor(k+14)/4\rfloor$ for generic two-summand prime chain
  systems; six predictions were recorded before the computations: three
@@ -1844,14 +1848,17 @@ $E_6\colon y^2=x^3+6x-7$ is nonsingular away from characteristic $3$
 Consider the normalized two-summand chain presentation at depth $k$ for
 $E_a$ and $t=1$.
 \begin{enumerate}
-\item Over $\mathbb{C}$, for every $a$ with $|a|>5$, the ideal is the unit
- ideal at every depth $k\ge2$, and for every $k\ge24$ the last fall degree
- $d$ satisfies $\lfloor(k-10)/14\rfloor<d\le k+2$.
+\item Over $\mathbb{C}$, for every $a$ with $|a|>5$, and for every rational
+ $a\notin\{-3,-3/4,-1,1\}$, the ideal is the unit ideal at every depth
+ $k\ge2$, and for every $k\ge24$ the last fall degree $d$ satisfies
+ $\lfloor(k-10)/14\rfloor<d\le k+2$.
 \item For $E_6$ over $\F_p$, for every $D\ge1$, every $k\ge14D+10$ and every
  prime $p>2^{k+1}$, $1\notin V_D$.
-\item For $E_6$, every $k\ge24$ and every $B$ there is a prime $p>B$ with
- $p\equiv1\pmod{2^{k+1}}$ such that the last fall degree $d$ of the system
- over $\F_p$ satisfies $\lfloor(k-10)/14\rfloor<d\le k+2$. Hence there are
+\item Put $B_k=9^{4^k}$. For $E_6$, every $k\ge24$ and every prime
+ $p>B_k$ with $2^k\mid p-1$, the system over $\F_p$ has a last fall degree
+ $d$ satisfying $\lfloor(k-10)/14\rfloor<d\le k+2$. For every $B$ there
+ is such a prime above $\max(B,B_k)$ with $p\equiv1\pmod{2^{k+1}}$.
+ Hence there are
  primes $p_{24}<p_{25}<\cdots$ with $p_k\equiv1\pmod{2^{k+1}}$ such that
  the last fall degree $d_k$ at depth $k$ over $\F_{p_k}$ satisfies
  $k/28\le d_k\le k+2$.
@@ -1878,12 +1885,29 @@ $p>2^{k+1}$ for the monomials with exponents in $[0,2^k)^2$, which are the
 ones the reduction of Theorem~\ref{thm:growth} uses; this gives (2) and the
 lower half of (1). The ideal is the unit ideal over $\mathbb{C}$ because on
 the grid $x_1^{2^k}=x_2^{2^k}=1$ one has
-$|(x_1-1)x_2-x_1|\le3<|a|-2\le|a+2|$. For $a=6$ the identity
-$1\in\langle F\rangle$ descends to an identity over $\mathbb{Z}$ with a
-nonzero integer $N_k$ in place of $1$, so the ideal is the unit ideal over
-every field in which $N_k\ne0$; primes $p\equiv1\pmod{2^{k+1}}$ above any
-bound exist by the elementary cyclotomic argument, and the upper bounds
-are Theorem~\ref{thm:selector}. For (4), $2$ has order $2^{k+1}$ modulo a
+$|(x_1-1)x_2-x_1|\le3<|a|-2\le|a+2|$ when $|a|>5$.
+For rational $a$, the kernel proves the exact grid-zero criterion
+$a\in\{-3,-1,1\}$. Indeed a zero with $a\ne-3$ gives
+$x_1+\overline{x_1}=-a-1$, a rational algebraic integer between $-2$ and
+$2$; the two-power order condition excludes the integer values $-1$ and $1$.
+The remaining parameters have the explicit grid zeros $(1,1)$, $(i,-i)$
+and $(-1,-1)$, respectively. The singular parameters are $-3$ and $-3/4$,
+so the stated rational family has both a unit ideal and the selector upper
+bound. This extends (1), for example, to $a=0,2,-2$, with no norm-five
+assumption. For $a=6$, write $N=2^k$ and let $S$ be the integer cyclic
+shift matrix on $N$ coordinates. The eliminant matrix
+$A_k=(S+8I)^N-(S-I)^N$ reduces to $I$ modulo $2$, so its integer
+ determinant $D_k$ is nonzero. The entries of $A_k$ are nonnegative, and each column sums to $9^N$: the
+entrywise absolute values of $(S-I)^N$ are bounded by $(S+8I)^N$,
+and the column sums of the two powers are $9^N$ and $0$, respectively.
+The determinant expansion therefore gives $|D_k|\le9^{N^2}=B_k$.
+A grid zero would give $(x+8)^N=(x-1)^N$, so the nonzero vector
+$(1,x,\ldots,x^{N-1})$ would lie in the kernel of $A_k$ modulo $p$.
+This is impossible when $p>B_k$, because $D_k$ survives reduction. The
+finite-grid theorem gives the actual chain unit ideal; (2) and
+Theorem~\ref{thm:selector} give the LFD window. Primes in the stated
+progression above any bound exist by the elementary cyclotomic argument.
+For (4), $2$ has order $2^{k+1}$ modulo a
 prime factor $p$ of $2^{2^k}+1$, so $4$ has order $2^k$; setting
 $x_1=x_2=4$ and every chain variable to the corresponding power $4^{2^j}$
 solves the chain equations, and there $(x_1-1)x_2-x_1-8=12-4-8=0$.
@@ -1895,11 +1919,12 @@ closure dimensions are exceptional (Section~\ref{sec:blockfour}); the
 function field in the proof has genus zero, so nothing here formalizes
 the genus-one bound that Theorem~\ref{thm:growth} needs for general
 targets, and that theorem stays a written proof, conditional in Lean.
-Item (1) covers a one-parameter family of curves; items (2) to (4) are
-proved for $a=6$ only, because the prime-field part of the development is
-written for that curve. The integer $N_k$ is not computed, so the primes of
-(3) are not explicit and the statement is not claimed for one prime at all
-depths. By (4), the unit-ideal hypothesis fails for some primes
+Item (1) covers a one-parameter family of curves. Items (2) to (4) give
+the sharper fixed-$E_6$ statements; Corollary~\ref{cor:rationalprime}
+below extends prime-field growth to the rational-parameter family. Item (3) now has the explicit sufficient cutoff
+$B_k$, rather than an unspecified integer from a B\'ezout identity. This
+cutoff improves the earlier $2^{2^k}9^{4^k}$ by a factor $2^{2^k}$, but remains loose; no least suitable prime is computed. The statement
+concerns pairs $(p,k)$, with $p$ allowed to grow with $k$. By (4), the unit-ideal hypothesis fails for some primes
 $p\equiv1\pmod{2^{k+1}}$ at every depth (Remark~\ref{rem:fermatbad});
 this does not decide whether their LFD satisfies the numerical bound of (3). Item (2) holds for every prime $p>2^{k+1}$,
 and on the primes of (4) it carries no information, the ideal being proper
@@ -1909,15 +1934,49 @@ so Theorem~\ref{thm:three} already gives $\lfd\ge4$; the lower bound of
 in Lean: the statements concern the explicit polynomial system with
 coefficients $a$, $b=-1-a$ and $t=1$ (Appendix~\ref{app:lean}).
 
+\begin{corollary}[Explicit rational-parameter prime-field growth; kernel-checked]
+\label{cor:rationalprime}
+Let $a=m/q\in\mathbb{Q}\setminus\{-3,-3/4,-1,1\}$, with $m\in\mathbb{Z}$
+and $q\in\mathbb{Z}_{>0}$. Set $N=2^k$, $H=3q+|m+2q|$ and
+\[
+ C_{k,m,q}=2^N H^{N^2}+2N+q+|m+3q|+|4m+3q|.
+\]
+For every $k\ge24$ and every prime $p>C_{k,m,q}$ with $2^k\mid p-1$,
+the denominator $q$ is invertible in $\F_p$. Writing $a_p=mq^{-1}$, the
+normalized chain system for $y^2=x^3+a_px-(1+a_p)$ and $t=1$ has a last
+fall degree $d$ with
+\[
+ \lfloor(k-10)/14\rfloor<d\le k+2.
+\]
+No coprimality assumption on $m,q$ is needed; the canonical numerator and
+positive denominator give a cutoff for each rational parameter.
+\end{corollary}
+\begin{proof}[Proof sketch]
+Use the integer cyclic matrix
+$A=(qS+(m+2q)I)^N-(q(S-I))^N$.
+For each complex $N$th root $x$, its eigenvalue is
+$(qx+m+2q)^N-(q(x-1))^N$. If that were zero, the rational function
+$(x+2+a)/(x-1)$ would be an $N$th root giving an S3 grid zero;
+$x=1$ is excluded by $a\ne-3$. The classification used in Theorem~\ref{thm:growthfixed}(1)
+excludes the other zeros. The Vandermonde matrix of the $N$ distinct
+roots is invertible, so $\det A\ne0$. Both summands have absolute column
+sums at most $H^N$, giving $|\det A|\le2^N H^{N^2}$.
+The cutoff ensures that this determinant, $q$, $m+3q$ and $4m+3q$
+survive modulo $p$, and that $p>2^{k+1}$. Thus the reduced curve is
+nonsingular and the actual chain ideal is the unit ideal. The native
+bounded-box Wronskian and cofactor proof works for $(X,(X+a_p+2)/(X-1))$
+whenever $a_p+3\ne0$, giving $1\notin V_{\lfloor(k-10)/14\rfloor}$.
+The selector bound completes the window.
+\end{proof}
+
 \begin{remark}[Bad admissible primes]\label{rem:fermatbad}
 The primes of (4) are the prime factors of the Fermat numbers
 $2^{2^k}+1$; they are different from $3$, so $E_6$ is nonsingular over
 them. The smallest case is $p=17$, $k=2$, and the known factors give
 $p=257$ at $k=3$, $p=65537$ at $k=4$ and $p=641$, $6700417$ at $k=5$.
 This is consistent with (3): at a fixed depth the ideal is the unit ideal
-over $\F_p$ for every prime above a bound (kernel-checked, the bound being
-the one that is not computed), so the exceptional primes are finitely
-many. The primes of (4) are not the only ones. A common zero is a pair
+over $\F_p$ for every admissible prime $p>B_k$ (kernel-checked), so all
+exceptional admissible primes lie below the explicit bound $B_k$. The primes of (4) are not the only ones. A common zero is a pair
 $(x_1,T(x_1))$ of $2^k$-th roots of unity, that is, a decomposition of the
 target, and the usual count predicts about $4^k/(2p)$ unordered pairs.
 Exhaustive enumeration at $k=2,\ldots,10$ over all primes
@@ -1928,6 +1987,48 @@ $[4^{k+i},4^{k+i+1})$, $i=0,1,2$ (predicted: $120$, $97$, $97$, $90$).
 So exceptional primes are frequent up to $4^k$ and thin out beyond it, as
 the count predicts; the enumeration is exact and is not kernel-checked.
 \end{remark}
+
+\paragraph{Exact values at exceptional primes.}
+Table~\ref{tab:fermatlfd} gives exact closure profiles for six proper-ideal
+instances at prime factors of $2^{2^k}+1$. The computation checks closed
+containing spaces and the evaluation-rank/codimension criterion for the
+local-to-global upper bound. It uses the existing closure engine; it is
+not an independent implementation or a Lean replay. The depth-$6$ value
+$5$ rules out extending the smaller cases into a constant LFD-$4$ pattern.
+All six depths are below $24$, so these values neither establish nor
+refute the asymptotic lower bound for proper ideals.
+\begin{table}[htbp]\centering\small
+\begin{tabular}{rrrr}
+\toprule
+Depth $k$ & Prime $p$ & Solutions & Exact LFD\\
+\midrule
+2 & 17 & 1 & 4\\
+3 & 257 & 1 & 4\\
+4 & 65537 & 1 & 4\\
+5 & 641 & 3 & 4\\
+5 & 6700417 & 1 & 4\\
+6 & 274177 & 1 & 5\\
+\bottomrule
+\end{tabular}
+\caption{Exact proper-ideal profiles at exceptional primes. Reproduction:
+\code{scripts/check\_n8\_sharp\_prime\_bound.py}; the complete closure
+profiles are in the corresponding record of Appendix~\ref{app:data}.}
+\label{tab:fermatlfd}
+\end{table}
+\FloatBarrier
+
+\paragraph{Finite checks of the rational reduction.}
+The denominator-cleared eliminant was also replayed on $24$ parameter/depth
+cells at depths $2$ and $3$, including excluded parameters and singular
+reductions as polynomial controls. Its integer matrix determinant agrees with an
+independently computed univariate resultant. Across $4720$ raw S3 checks,
+the denominator-cleared linear factor agrees with the actual polynomial;
+two noninvertible-denominator cases are rejected. Seven unit instances
+above their explicit cutoffs were checked at depth $2$, at primes below
+$2^{64}$ where the primality test is deterministic. These checks exercise
+the arithmetic and unit components. The all-depth growth conclusion of
+Corollary~\ref{cor:rationalprime} is a symbolic Lean proof, not an
+extrapolation from these finite cells.
 
 \paragraph{Scope.} The range of the theorems ($k\ge24$) is beyond every
 computation here, so only its lemmas and the reduction were tested on data.
@@ -2037,10 +2138,13 @@ This is not proved.
  bound~\cite{voloch85,bm86}; in characteristic $p$ it is a self-contained
  proof of a variant that we did not find stated in the literature. The kernel-checked instances
  (Theorem~\ref{thm:growthfixed}) all have a target of order two and a
- rational function field: the curves $y^2=x^3+ax-(1+a)$ with $|a|>5$ and
- $t=1$ over $\mathbb{C}$, and $y^2=x^3+6x-7$ over prime fields, where the
- bound holds along a sequence of primes that are not explicit, and not for
- every admissible prime (item (4) of the theorem).
+ rational function field: the curves $y^2=x^3+ax-(1+a)$ with $|a|>5$,
+ and the rational parameters outside $\{-3,-3/4,-1,1\}$, with $t=1$ over
+ $\mathbb{C}$; and the same rational-parameter family over admissible prime fields above
+ the explicit cutoff of Corollary~\ref{cor:rationalprime}. For $E_6$ the
+ sharper cutoff $B_k=9^{4^k}$ remains available. The explicit cutoff is conservative. Below it,
+ item (4) supplies proper-ideal instances at every depth; their numerical
+ LFD lower bound remains undecided.
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
  is one instance and one engine, with no computation at $k\ge7$ and no
  prediction beyond $k=6$. The value $\deg g+1$ for four and five summands is
@@ -2111,15 +2215,16 @@ below, followed by computations that could test the proposed explanations.
  unpublished draft (Remark~\ref{rem:binarydraft}) is a candidate, and a
  kernel proof of it would settle its status. A second implementation reaching $k\ge11$ would replicate
  Section~\ref{sec:binarydeep} independently.
-\item \emph{The growth theorem in the kernel.} The kernel has a curve model
- only for curves with a target of order two, in characteristic $0$ for a
- one-parameter family and over prime fields for one curve
- (Theorem~\ref{thm:growthfixed}). Missing for general targets are the
- function field of a curve of genus one and the vanishing-sum bound for
- its two coordinate functions; missing over prime fields are an explicit
- bound for the primes and a statement for every admissible prime. Proofs
- of the case $t=0$ and of an analogue for proper ideals would extend the
- theorem to the remaining instances.
+\item \emph{The growth theorem in the kernel.} The order-two target
+ family now has a kernel proof over $\mathbb{C}$ and, for every allowed
+ rational parameter, over every admissible prime field above the explicit
+ cutoff of Corollary~\ref{cor:rationalprime}. A sharper family cutoff
+ could use the eliminant's factorization rather than its column sums.
+ For general targets, the genus-one function field and the vanishing-sum
+ bound for its two coordinate functions still need formalization. The
+ case $t=0$ and a lower bound for proper ideals remain separate problems;
+ the finite exceptional-prime values in Table~\ref{tab:fermatlfd} do not
+ settle that lower bound.
 \item \emph{Larger computations.} The value at $k=14$ by a second method (a
  direct closure in $M_{\le7}$, beyond the engines used here, or an
  independent lift); degree-$6$ and degree-$7$ closures at $k\ge15$; second
@@ -2146,9 +2251,16 @@ degree-of-regularity breakpoints of Petit, Kosters and Messeng through
 their last depth $11$ and extend the profile to depth $14$; their unreduced
 presentation has the same LFD at these values.
 
-The written growth proof establishes a lower slope of $1/14$, and the
-kernel checks it for curves with a target of order two. The data
-suggest the larger slope $1/4$ and the law
+The written growth proof establishes a lower slope of $1/14$. For targets
+of order two the kernel proves the window
+$\lfloor(k-10)/14\rfloor<d\le k+2$ from depth $24$, over $\mathbb{C}$
+and for every allowed rational parameter over admissible prime fields
+above a closed cutoff that tracks the denominator. The specialized $E_6$
+cutoff is $9^{4^k}$. These are statements about $(p,k)$ pairs, with $p$
+allowed to grow with $k$. The finite exceptional-prime computations give
+LFD $4$ at depths $2$--$5$ and $5$ at depth $6$ on the listed instances;
+the general lower bound for proper ideals remains open. For generic
+prime-field targets the data suggest the larger slope $1/4$ and the law
 $\lfd(k)=\lfloor(k+14)/4\rfloor$. None of the six predictions recorded in
 advance for this prime-field law has failed on the values computed;
 preregistered laws for binary systems have been refuted. With three to
@@ -2172,6 +2284,16 @@ development contains no elliptic curve: $S_3$ and $S_4$ enter as explicit
 polynomials, which are not proved there to be summation polynomials, and the
 binary and Koblitz bounds are one generic Boolean theorem, the second being
 the first with $b=1$.
+The complete Linux build and audit passed at
+\href{https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43777495526}{commit \code{1c929ae}}:
+225 modules, including the root module; 671 declarations in the default
+audit; and 883 distinct declarations across all 87 files that print axiom
+lists. The downloaded audit artifact's 275 source digests match the saved
+sources. The ten headline statements of the rational prime-field extension
+use only the three foundational axioms above. This receipt concerns those
+source files; it does not validate the written genus-one proof or the
+uncertified depth-$14$ lift.
+
 Table~\ref{tab:lean} maps each statement of the paper to its declarations,
 named relative to the root namespace \code{ICFallDegrees}; in each cell a
 name without a namespace prefix lies in the namespace of the preceding name.
@@ -2207,7 +2329,8 @@ $1\in V_4$ on the $(0,0)$ family & \code{PrimeM2Sharp.one\_at\_four}\\
 Local-to-global criterion & \code{LocalReductionBound.lfd\_bound\_of\_local}\\
 Quotient exclusion principle & module \code{QuotientLowerBound}\\
 Theorem~\ref{thm:growth} (conditional) & \code{GrowthMain.CurveModel}, \code{growth\_theorem}, \code{growth\_theorem\_linear}, \code{growth\_lfd\_window}, \code{GrowthExistence.growth\_instance\_window}, \code{GrowthCriterion.closed\_iff\_fei}\\
-Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.\allowbreak{}unit\_complex\_of\_norm\_gt}, \code{GrowthTwoTorsionFamily.model}, \code{exists\_lfd\_linear\_window} (for $a=6$: \code{GrowthFixedE6.model}, \code{unit}, \code{exists\_lfd\_linear\_window}); (2) \code{GrowthPrimeE6NativeNonmembership.\allowbreak{}e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthFixedE6NativeUnit.\allowbreak{}exists\_actual\_e6\_prime\_unit\_bound}, \code{GrowthFixedE6PrimeTheta.\allowbreak{}exists\_actual\_prime\_theta\_above}, \code{GrowthFixedE6PrimeSequence.\allowbreak{}exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.\allowbreak{}e6\_not\_unit\_of\_fermat\_factor}, \code{exists\_bad\_admissible\_prime}\\
+Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.unit\_complex\_of\_norm\_gt}, \code{GrowthRationalParameterClassification.exists\_lfd\_linear\_window}; (2) \code{GrowthPrimeE6NativeNonmembership.e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthSharpPrimeBound.prime\_lfd\_window}, \code{eliminant\_det\_bound}, \code{GrowthFixedE6PrimeSequence.exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.e6\_not\_unit\_of\_fermat\_factor}\\
+Corollary~\ref{cor:rationalprime} & \code{GrowthRationalPrimeCutoff.rational\_prime\_growth}, \code{denominator\_and\_parameter\_guards}, \code{matrix\_det\_ne\_zero}; \code{GrowthRationalPrimeNative.not\_one\_of\_large\_prime}\\
 \bottomrule
 \end{tabular}
 \caption{Statements and Lean declarations.}
@@ -2216,8 +2339,8 @@ Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.\allowbr
 
 \paragraph{What is conditional.} The depth-$14$ summary takes the four
 recorded closures of Section~\ref{sec:depth14} as hypotheses, the growth
-theorem the curve model (constructed in Lean only for
-Theorem~\ref{thm:growthfixed}), and the growth schema one base certificate per
+theorem the curve model (discharged in Lean for
+Theorem~\ref{thm:growthfixed} and Corollary~\ref{cor:rationalprime}), and the growth schema one base certificate per
 degree; the local-to-global step for prime chains is a written
 instantiation of \code{LocalReductionBound.lfd\_bound\_of\_local}.
 
@@ -2414,7 +2537,7 @@ The companion repository holds the records and verification reports:
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
 The computational and formal evidence reviewed here is available in the
-fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/5a98043}{commit \code{5a98043}}.
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/1c929ae}{commit \code{1c929ae}}.
 Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);
@@ -2433,6 +2556,7 @@ hashes.
 Result & Location\\
 \midrule
 Lean development and audit & \code{formal/ICFallDegrees/}; audit report \code{experiments/\allowbreak{}ic-lean/}\\
+Explicit prime cutoffs and rational-family replay & \code{experiments/explicit-prime-bound-20261115/}, \code{experiments/sharp-prime-bound-20261115/}, \code{experiments/rational-prime-growth-20261115/}; scripts \code{check\_n8\_explicit\_prime\_bound.py}, \code{check\_n8\_sharp\_prime\_bound.py}, \code{check\_n8\_rational\_prime\_growth.py} in \code{scripts/}\\
 Depth-$7$ and depth-$6$ kernel certificates & \code{experiments/\allowbreak{}ic-bounds-cert/}, \code{experiments/\allowbreak{}ic-bounds-exact-k6/}\\
 Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md}, \code{N8-fermat-diagonal-obstruction-20261114.md} and the other \code{N8-*.md}; reviews of the written growth proof: \code{N8-growth-review.md}, \code{N8-growth-review-redteam.md}\\
 Selector-bound test (summaries) & \code{experiments/\allowbreak{}ic-bounds-upper/}, \code{experiments/\allowbreak{}ic-bounds-upper-redteam/}\\
