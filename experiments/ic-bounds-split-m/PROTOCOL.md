@@ -62,3 +62,27 @@ No cell is dropped: every launched instance is in the record file, including cap
 
 No solving cost, no statement about cells that do not complete, no statement about the
 2-isogeny arm of stage B.
+
+## Amendment 1 (2026-11-16, before any of the four cells below was run)
+
+State at this amendment: `(4, 2)` and `(5, 2)` complete (six of six instances each, value 6,
+both predictions confirmed); `(4, 3)` running locally.
+
+The cells `(3, 5)`, `(6, 2)`, `(4, 4)` and `(5, 3)` run on reserved RunPod CPU pods, one pod per
+cell, with these changes to the instance rule. The predictions and the reading rule do not change.
+
+- **Primes 114689 and 163841, seed 0: two instances per cell.** Reason: with grids of 4096 to
+  65536 points a random target at `p <= 12289` almost always has a grid zero, so unit
+  instances are rare there; and the exactness bound `n (p - 1)^2 < 2^53` of the engine caps
+  `p` near `3·10^5` at these sizes. Two instead of six because the dense engine needs an
+  estimated 1 to 30 hours per instance on these cells.
+- **Engine `InPlaceClosure`** (`csd/ic_bounds_split_m.py`): the same arithmetic as
+  `BatchedClosure` with the basis update done in place, to halve peak memory. Compared before
+  this amendment on three instances, degrees 3 to 6: dimension, low profile, `contains_one` and
+  the verification result are equal; `control.json` was regenerated with it and passes.
+- **Pods and limits** (the job is killed at the time limit; a killed instance is reported as
+  capped): `(3, 5)` 16 vCPU / 128 GB, 4 h; `(6, 2)` 16 vCPU / 128 GB, 12 h; `(4, 4)` and
+  `(5, 3)` 32 vCPU / 256 GB, 24 h and 30 h. Upper bound of the spend at the listed prices:
+  about US$130.
+- Runner: `scripts/runpod_split_m/server.py` and `job.sh`; the bundle is `csd/*.py`,
+  `csd/_elim.c` and `scripts/run_ic_split_m.py` at the commit of this amendment.

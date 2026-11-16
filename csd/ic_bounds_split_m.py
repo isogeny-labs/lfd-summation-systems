@@ -26,6 +26,7 @@ from itertools import combinations
 
 import numpy as np
 
+from . import elim
 from .ic_bounds_m3 import chain_nf, padd, pmul, s3_quadratic
 from .ic_bounds_m3_batched import TWO53, BatchedClosure
 
@@ -88,6 +89,46 @@ class SplitSpace:
         return v
 
 
+class InPlaceClosure(BatchedClosure):
+    """BatchedClosure with the basis update done in place.  The arithmetic is the same
+    (B <- (B - B[:, newpiv] Enew) mod p, then the new rows are appended); only the temporaries
+    differ, so the peak memory is about twice the basis instead of four times."""
+
+    def _absorb(self, R):
+        p = self.p
+        nz = np.flatnonzero(np.any(R != 0, axis=1))
+        if not len(nz):
+            return 0
+        out = []
+        s, newpiv, _ = elim.fp_echelon(R[nz].astype(np.int64), p, out)
+        if not s:
+            return 0
+        Enew = out[0].astype(np.int64)
+        for i in range(s - 1, 0, -1):
+            col = newpiv[i]
+            c = Enew[:i, col].copy()
+            if np.any(c):
+                Enew[:i] = (Enew[:i] - np.outer(c, Enew[i])) % p
+        Ef = Enew.astype(np.float64)
+        if len(self.piv):
+            T = self.B[:, newpiv] @ Ef
+            self.B -= T
+            del T
+            np.mod(self.B, p, out=self.B)
+        self.B = np.vstack([self.B, Ef])
+        self.piv = np.concatenate([self.piv, np.asarray(newpiv, dtype=np.int64)])
+        D = self.sp.D
+        nvar = len(self.sp.cols)
+        for i in range(s):
+            if newpiv[i] == self.n - 1:
+                self.contains_one = True
+            if self.sp.deg[newpiv[i]] < D:
+                idx = len(self.added)
+                self.added.append(Enew[i].astype(np.int32))
+                self.queue.extend((idx, j) for j in range(nvar))
+        return s
+
+
 def split_generators_m(E, t, k, m):
     """The m - 1 inputs as {(mask, (e_1, .., e_a)): c}; ordinary variables (x_1..x_m, z_1..z_a)."""
     assert m >= 3
@@ -119,14 +160,14 @@ def system_hash(p, m, k, gens):
     return hashlib.sha256(blob.encode()).hexdigest()
 
 
-def closure(gens, m, k, p, D, *, batch=768, log=None):
+def closure(gens, m, k, p, D, *, batch=768, log=None, in_place=True):
     """Exact V_D; returns a record.  Raises ValueError if float64 exactness cannot be guaranteed."""
     sp = SplitSpace(m, k, D, m - 2)
     n = len(sp)
     if n * (p - 1) ** 2 >= TWO53:
         raise ValueError(f'n (p-1)^2 = {n * (p - 1) ** 2} is not below 2^53')
     start = time.time()
-    cl = BatchedClosure(sp, p, batch)
+    cl = (InPlaceClosure if in_place else BatchedClosure)(sp, p, batch)
     rows = [sp.row(g, p) for g in gens if generator_degree(g) <= D]
     cl.add_inputs(rows)
     batches = cl.saturate(log)
@@ -138,6 +179,7 @@ def closure(gens, m, k, p, D, *, batch=768, log=None):
     return dict(D=D, monomials_le_D=n, inputs_used=len(rows), dim_V_D=int(cl.rank),
                 low_profile=[cl.low_dimension(d) for d in range(D + 1)],
                 contains_one=bool(cl.contains_one), verified_closed=verified,
+                engine='InPlaceClosure' if in_place else 'BatchedClosure',
                 batches=int(batches), seconds=round(time.time() - start, 3))
 
 
