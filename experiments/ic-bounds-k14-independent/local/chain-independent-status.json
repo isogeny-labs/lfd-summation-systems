@@ -1,0 +1,171 @@
+{
+ "started": "2026-11-16T18:18:08Z",
+ "device": "cpu",
+ "steps": [
+  {
+   "name": "arith",
+   "cmd": [
+    "/usr/local/bin/python3",
+    "run_ic_lift_independent.py",
+    "arith",
+    "--device",
+    "cpu",
+    "--out",
+    "SCRATCH/pod/out/indep-arith-cpu.json"
+   ],
+   "start": "2026-11-16T18:18:08Z",
+   "rc": 0,
+   "end": "2026-11-16T18:18:08Z"
+  },
+  {
+   "name": "closure-unit-p65537-a1-s10-k10",
+   "cmd": [
+    "/usr/local/bin/python3",
+    "ic_bounds_big_run.py",
+    "closure",
+    "--instance",
+    "SCRATCH/pod/in/unit-p65537-a1-s10-k10.json",
+    "--D",
+    "5",
+    "--device",
+    "cpu",
+    "--work-gb",
+    "4",
+    "--ckpt",
+    "SCRATCH/pod/ckpt/unit-p65537-a1-s10-k10-D5",
+    "--out",
+    "SCRATCH/pod/out/unit-p65537-a1-s10-k10-D5.json"
+   ],
+   "start": "2026-11-16T18:18:08Z",
+   "rc": 0,
+   "end": "2026-11-16T18:19:54Z"
+  },
+  {
+   "name": "indep-unit-p65537-a1-s10-k10",
+   "cmd": [
+    "/usr/local/bin/python3",
+    "run_ic_lift_independent.py",
+    "lift",
+    "--ckpt",
+    "SCRATCH/pod/ckpt/unit-p65537-a1-s10-k10-D5",
+    "--instance",
+    "SCRATCH/pod/in/unit-p65537-a1-s10-k10.json",
+    "--closure-record",
+    "SCRATCH/pod/out/unit-p65537-a1-s10-k10-D5.json",
+    "--device",
+    "cpu",
+    "--out",
+    "SCRATCH/pod/out/indep-lift-unit-p65537-a1-s10-k10-D5to6-cpu.json"
+   ],
+   "start": "2026-11-16T18:19:54Z",
+   "rc": 0,
+   "end": "2026-11-16T18:20:49Z"
+  },
+  {
+   "name": "closure-proper-p65537-s12-k10",
+   "cmd": [
+    "/usr/local/bin/python3",
+    "ic_bounds_big_run.py",
+    "closure",
+    "--instance",
+    "SCRATCH/pod/in/proper-p65537-s12-k10.json",
+    "--D",
+    "5",
+    "--device",
+    "cpu",
+    "--work-gb",
+    "4",
+    "--ckpt",
+    "SCRATCH/pod/ckpt/proper-p65537-s12-k10-D5",
+    "--out",
+    "SCRATCH/pod/out/proper-p65537-s12-k10-D5.json"
+   ],
+   "start": "2026-11-16T18:20:49Z",
+   "rc": 0,
+   "end": "2026-11-16T18:22:30Z"
+  },
+  {
+   "name": "indep-proper-p65537-s12-k10",
+   "cmd": [
+    "/usr/local/bin/python3",
+    "run_ic_lift_independent.py",
+    "lift",
+    "--ckpt",
+    "SCRATCH/pod/ckpt/proper-p65537-s12-k10-D5",
+    "--instance",
+    "SCRATCH/pod/in/proper-p65537-s12-k10.json",
+    "--closure-record",
+    "SCRATCH/pod/out/proper-p65537-s12-k10-D5.json",
+    "--device",
+    "cpu",
+    "--out",
+    "SCRATCH/pod/out/indep-lift-proper-p65537-s12-k10-D5to6-cpu.json"
+   ],
+   "start": "2026-11-16T18:22:30Z",
+   "rc": 0,
+   "end": "2026-11-16T18:24:56Z"
+  }
+ ],
+ "readings": {
+  "unit-p65537-a1-s10-k10": {
+   "lift_cpu": {
+    "got": {
+     "contains_one": true,
+     "dim_low": 21700,
+     "dim_low_parts": [
+      10878,
+      10822
+     ],
+     "dim_VD1": 60460,
+     "dim_VD": 18569
+    },
+    "want": {
+     "contains_one": true,
+     "dim_low": 21700,
+     "dim_low_parts": [
+      10878,
+      10822
+     ],
+     "dim_VD1": 60460,
+     "dim_VD": 18569
+    },
+    "equal": true,
+    "fixed_point": true,
+    "saturated": true,
+    "seconds": 54.1,
+    "status": "done"
+   }
+  },
+  "proper-p65537-s12-k10": {
+   "lift_cpu": {
+    "got": {
+     "contains_one": false,
+     "dim_low": 21686,
+     "dim_low_parts": [
+      10871,
+      10815
+     ],
+     "dim_VD1": 60446,
+     "dim_VD": 18569
+    },
+    "want": {
+     "contains_one": false,
+     "dim_low": 21686,
+     "dim_low_parts": [
+      10871,
+      10815
+     ],
+     "dim_VD1": 60446,
+     "dim_VD": 18569
+    },
+    "equal": true,
+    "fixed_point": true,
+    "saturated": false,
+    "seconds": 146.0,
+    "status": "done"
+   }
+  }
+ },
+ "finished": true,
+ "ended": "2026-11-16T18:24:56Z"
+}

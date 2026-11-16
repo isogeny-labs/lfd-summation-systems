@@ -166,14 +166,16 @@ depend on these; tested locally with other settings, `README.md`).
 
 Unit instance. The run stops as soon as K = T. Locally at k = 10, D = 5 -> 6 that happened after the
 first chunk (2,048 of 37,972 regular tops, 5.4 %) and its fall rounds, with 2.3e11 multiply-adds in the
-products (measured, `validation.json`); the first lift needed 2.05e11 there and 7.15e14 in 751 s at
+products (measured, `local/indep-lift-unit-p65537-a1-s10-k10-D5to6-cpu.json`, `counts`); the first lift
+needed 2.05e11 in all there and 7.15e14 in 751 s at
 k = 14, where it reached K = T after 5.8 % of its schedule (read: `LIFT.md` section 6, lift record).
 
 * Products of the generator chunks: rows x 50,356 x f, f <= 61,394. If one chunk of 2,048 tops is
   enough: about 18,000 rows, 6e13. If 5.8 % to 11 % of the tops are needed (five or six doubling
   chunks): 0.57 to 1.16 million rows, 0.9e15 to 3.6e15.
 * Fall images: at most 50,356 x 28 = 1.41 million rows x 50,356 x f; with f between 300 (the k = 10
-  average, measured) and 30,000: 2e13 to 2.1e15.
+  average, derived from the same counts: (2.33e11 - 16,618 x 3,147 x 3,919) / (28,016 x 3,147)) and
+  30,000: 2e13 to 2.1e15.
 * Reductions of followers and K: at most about 1e15 (bound 28 followers per round, 24,000 dense rows
   x fall rows x f each; the dense-row count is a guess).
 * Total 1e14 to 7e15 multiply-adds. Recorded overall rates on the H200: 0.58e12 /s (engine closure),
