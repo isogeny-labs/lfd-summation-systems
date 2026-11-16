@@ -3211,6 +3211,51 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.eliminant_mod_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_mod_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.no_grid_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.unit_prime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.proper_prime_le_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.prime_lfd_window": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.GrowthExplicitPrimeBound.exists_prime_window_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "allowed_foundational_axioms": [
@@ -3341,7 +3386,7 @@
     "split_lower": "Every base-F2 normalized split chain with m>=4 and either target bit has LFD>=4; upper4 remains written"
   },
   "source_sha256": {
-    "formal/ICFallDegrees.lean": "d714711c0716f1a7ee2977f416ec8e03664dbbca2e8109da8851aa467c9ed1ee",
+    "formal/ICFallDegrees.lean": "001cff75db05cde8de18240219eb428318f784a688a0f290ee9c748feebf26eb",
     "formal/N8ActualCircuitSpreadAudit.lean": "1de48da30f3a0f1f40888cfc04d305a641f4341833ce7f03bfca43fd23b9de15",
     "formal/N8ActualCofactorCrossAudit.lean": "c719879862b7a7f488eebdce8ee9f31afafad3e7d5734741199e0314e82c73ef",
     "formal/N8ActualCofactorNonzeroAudit.lean": "ade9264de4c0a358052f11409a285ec66bb1ce4d1748f0bd48b812f4b5408f1d",
@@ -3390,7 +3435,7 @@
     "formal/N8RationalCoordinateAudit.lean": "ff74e46e2b2ac6b9e020cb1449f0bfa0d752b8d1e053ee3572dbc002b834e4d1",
     "formal/N8RationalMobiusAudit.lean": "fcdd8ea9656a110bf99d0bb969f4bf900f352f8b0fcc54e3e9bb6b6d59259b30",
     "formal/ICFallDegrees/AffineTransport.lean": "1c0ab711a9c71e406278fcdd178c18b5f6674e22f57ddd1c3d7e4fc4c2b42698",
-    "formal/ICFallDegrees/Audit.lean": "f8bedf5e13031a472e5614ece9f2f3e64f4685fdbf675f6743a1fa6b0735d1d2",
+    "formal/ICFallDegrees/Audit.lean": "e147230e2630333604f275baff25d2bb45caaaaa4b3de84684c6634c3f39c47f",
     "formal/ICFallDegrees/BinaryDescent.lean": "c7314353211179ca0b8c26c38232eca258be0bef99794c36a60f05b02f0e4aeb",
     "formal/ICFallDegrees/BinaryDimensionTwoBases.lean": "9e634c9166e5cdbe37da6af2771964f4bd406495a0e36053df5ebe5c98c76212",
     "formal/ICFallDegrees/BinaryDimensionTwoCurves.lean": "1f1470946768011ab5537f5587da16b2b7f7b59fa701dba7f6415c214b670ff0",
@@ -3466,6 +3511,7 @@
     "formal/ICFallDegrees/GrowthCounting.lean": "84dab8039d5377a5cc5ff54f88430945e44733fecc6dd047c4a40861ff1ab7cc",
     "formal/ICFallDegrees/GrowthCriterion.lean": "0e19bb24709fa825d1b663e728cbb124563d6f1a2a1c197d7b641836acfdc5bd",
     "formal/ICFallDegrees/GrowthExistence.lean": "c9ac869f0a19e63d0d874cd0821951002abf17503dd37430e0143a867ea9b6dc",
+    "formal/ICFallDegrees/GrowthExplicitPrimeBound.lean": "4313525e8ba13cab06b0babd6a4a9ffbb6cebe80f6224d9de4e87ecb9f77c1a7",
     "formal/ICFallDegrees/GrowthFermatDiagonalObstruction.lean": "bc2f0b45897c3557ae9971c99c60e5ef7f5c503078652b4e1046f2b6a2da25a9",
     "formal/ICFallDegrees/GrowthFieldCoefficientRetraction.lean": "5191ea17545e2dd5d82adf84e72f3503034f05a5210af458dc1ef931e196b5be",
     "formal/ICFallDegrees/GrowthFiniteCofactorGap.lean": "4929f9e5927d8a07f7f69590e8712507b98cbae0c1bfd2dcfa08b773504c1ed8",

@@ -666,3 +666,13 @@ import ICFallDegrees
 #print axioms ICFallDegrees.GrowthRationalParameterClassification.exists_lfd_linear_window
 #print axioms ICFallDegrees.GrowthRationalParameterClassification.new_members
 #print axioms ICFallDegrees.GrowthRationalParameterClassification.excluded_members
+
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_bound
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.eliminant_mod_two
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_ne_zero
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_mod_prime
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.no_grid_zero
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.unit_prime
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.proper_prime_le_bound
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.prime_lfd_window
+#print axioms ICFallDegrees.GrowthExplicitPrimeBound.exists_prime_window_above
