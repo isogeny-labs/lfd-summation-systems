@@ -3,8 +3,10 @@ on:
   pull_request:
     paths:
       - 'formal/ICFallDegrees/GrowthNonTorsion*.lean'
+      - 'formal/N8NonTwoTorsionPolesAudit.lean'
       - 'scripts/check_non_torsion_axioms.py'
       - 'scripts/check_non_two_field_axioms.py'
+      - 'scripts/check_non_two_poles_axioms.py'
       - '.github/workflows/non-torsion-bridge.yml'
   workflow_dispatch:
 permissions:
@@ -29,17 +31,19 @@ jobs:
           m = json.load(open('lake-manifest.json'))
           assert next(p['rev'] for p in m['packages'] if p['name'] == 'mathlib') == 'c44e0c8ee63ca166450922a373c7409c5d26b00b'
           PY
-          lake exe cache get ICFallDegrees.GrowthNonTorsionFunctionField
+          lake exe cache get ICFallDegrees.GrowthNonTorsionFunctionField ICFallDegrees.GrowthNonTorsionTargetSecant
       - name: Kernel build and explicit transitive axiom audit
         working-directory: formal
         run: |
           set -euo pipefail
-          lake build ICFallDegrees.GrowthNonTorsionFunctionField
+          lake build ICFallDegrees.GrowthNonTorsionFunctionField ICFallDegrees.GrowthNonTorsionTargetSecant
           lake env lean ICFallDegrees/GrowthNonTorsionBridge.lean > "$RUNNER_TEMP/non-torsion-bridge.log"
           lake env lean ICFallDegrees/GrowthNonTorsionRationalObstruction.lean > "$RUNNER_TEMP/non-torsion-rational.log"
           python3 ../scripts/check_non_torsion_axioms.py "$RUNNER_TEMP/non-torsion-bridge.log" "$RUNNER_TEMP/non-torsion-rational.log"
           lake env lean ICFallDegrees/GrowthNonTorsionFunctionField.lean > "$RUNNER_TEMP/non-torsion-field.log"
           python3 ../scripts/check_non_two_field_axioms.py "$RUNNER_TEMP/non-torsion-field.log"
+          lake env lean N8NonTwoTorsionPolesAudit.lean > "$RUNNER_TEMP/non-torsion-poles.log"
+          python3 ../scripts/check_non_two_poles_axioms.py "$RUNNER_TEMP/non-torsion-poles.log"
           git rev-parse HEAD > "$RUNNER_TEMP/non-torsion-source.txt"
           sha256sum ICFallDegrees/GrowthNonTorsion*.lean >> "$RUNNER_TEMP/non-torsion-source.txt"
       - uses: actions/upload-artifact@v4
