@@ -39,6 +39,10 @@ jobs:
           done
       - name: Three to eight summands (second implementation against the records)
         run: python scripts/ic_bounds_msum.py selftest
+      - name: Split presentation against the second instrument (recorded values of both sides)
+        run: |
+          python scripts/check_crossrepo_stage_b.py > /dev/null
+          git diff --exit-code -- experiments/crossrepo-pkm-stage-b/comparison.json
       - name: Independent fixed-curve obstructions and rational parameters
         run: python scripts/check_fixed_curve_obstructions.py
       - name: Fall counterexamples (recomputed against the record and its source hashes)

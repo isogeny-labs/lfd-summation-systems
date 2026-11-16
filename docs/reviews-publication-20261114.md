@@ -18,7 +18,7 @@
 >   submission itself remain open;
 > - the clean-build gap of the reviewed 582-declaration snapshot was closed by a fresh Linux build
 >   (`experiments/ic-lean/clean-20261114/`); that receipt covers the reviewed snapshot only;
-> - on 16 November 2026 the manuscript was brought to 47 pages by combining the open pull requests (rational
+> - on 16 November 2026 the manuscript was brought to 48 pages by combining the open pull requests (rational
 >   prime-field growth, solving degree, function field and pole orders for targets not of order two); this
 >   review does not cover those additions, and the submission sheet was regenerated;
 > - at the time of the earlier addenda the manuscript had 40 pages (39 before the growth section was extended), and the records in `experiments/publication-review-20261114/` are those of
