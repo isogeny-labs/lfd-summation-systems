@@ -109,8 +109,9 @@ build check for this extension.
 ## Revised-paper synchronization
 
 The prose and author contacts from `ml-cryptanalysis` commit `94290676` are
-reconciled into this version. Both `adam@isogenylabs.io` and
-`a.buran28@gmail.com` appear on page 1 and in the submission sheet. This
+reconciled into this version. At that synchronization two contact addresses
+appeared on page 1; since 16 November 2026 the only one, on page 1 and in the
+submission sheet, is `adam@isogenylabs.io`. This
 version retains the later companion corrections and fixed-curve growth
 theorem. The PDF, figures, verification report and ePrint abstract were
 regenerated from these sources; the build and all 295 publication checks
