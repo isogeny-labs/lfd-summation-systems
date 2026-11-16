@@ -1,0 +1,56 @@
+@ICFallDegrees.GrowthNonTorsionBridge.no_section_of_nonsquare.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  (a b x z t Y : K),
+  Ne.{u_1 + 1} 2 0 →
+    Ne.{u_1 + 1} Y 0 →
+      Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} Y 2) (ICFallDegrees.GrowthSecant.cubic.{u_1} a b t) →
+        (∀ (y : K), Ne.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} y 2) (ICFallDegrees.GrowthSecant.cubic.{u_1} a b x)) →
+          Ne.{u_1 + 1} (ICFallDegrees.GrowthSecant.s3.{u_1} a b x z t) 0
+@ICFallDegrees.GrowthNonTorsionBridge.recoverY_secantX.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  (a b x t y Y : K),
+  Ne.{u_1 + 1} 2 0 →
+    Ne.{u_1 + 1} Y 0 →
+      Ne.{u_1 + 1} x t →
+        Eq.{u_1 + 1}
+          (ICFallDegrees.GrowthNonTorsionBridge.recoverY.{u_1} a b x
+            (ICFallDegrees.GrowthSecant.secantX.{u_1} a b x t y Y) t Y)
+          y
+@ICFallDegrees.GrowthNonTorsionBridge.recoverY_square.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] (a b x z t Y : K),
+  Ne.{u_1 + 1} 2 0 →
+    Ne.{u_1 + 1} Y 0 →
+      Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} Y 2) (ICFallDegrees.GrowthSecant.cubic.{u_1} a b t) →
+        Eq.{u_1 + 1} (ICFallDegrees.GrowthSecant.s3.{u_1} a b x z t) 0 →
+          Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} (ICFallDegrees.GrowthNonTorsionBridge.recoverY.{u_1} a b x z t Y) 2)
+            (ICFallDegrees.GrowthSecant.cubic.{u_1} a b x)
+@ICFallDegrees.GrowthNonTorsionBridge.secantX_ne_zero.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] (a b x t y Y : K),
+  Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} y 2) (ICFallDegrees.GrowthSecant.cubic.{u_1} a b x) →
+    Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} Y 2) (ICFallDegrees.GrowthSecant.cubic.{u_1} a b t) →
+      Ne.{u_1 + 1} x t →
+        Ne.{u_1 + 1} (ICFallDegrees.GrowthSecant.companionConstant.{u_1} a b x t) 0 →
+          Ne.{u_1 + 1} (ICFallDegrees.GrowthSecant.secantX.{u_1} a b x t y Y) 0
+@ICFallDegrees.GrowthNonTorsionBridge.secantX_recoverY.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  (a b x z t Y : K),
+  Ne.{u_1 + 1} 2 0 →
+    Ne.{u_1 + 1} Y 0 →
+      Ne.{u_1 + 1} x t →
+        Eq.{u_1 + 1}
+          (ICFallDegrees.GrowthSecant.secantX.{u_1} a b x t
+            (ICFallDegrees.GrowthNonTorsionBridge.recoverY.{u_1} a b x z t Y) Y)
+          z
+@ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_natDegree.{u_1} : ∀ {K : Type u_1}
+  [inst : Field.{u_1} K] (a b : K),
+  Eq.{1} (Polynomial.natDegree.{u_1} (ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial.{u_1} a b)) 3
+@ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_nonsquare.{u_1} : ∀ {K : Type u_1}
+  [inst : Field.{u_1} K] (a b : K) (y : RatFunc.{u_1} K),
+  Ne.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} y 2)
+    ((algebraMap.{u_1, u_1} (Polynomial.{u_1} K) (RatFunc.{u_1} K))
+      (ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial.{u_1} a b))
+@ICFallDegrees.GrowthNonTorsionRationalObstruction.generic_s3_ne_zero.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K]
+  (a b t Y : K),
+  Ne.{u_1 + 1} 2 0 →
+    Ne.{u_1 + 1} Y 0 →
+      Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} Y 2) (ICFallDegrees.GrowthSecant.cubic.{u_1} a b t) →
+        ∀ (z : RatFunc.{u_1} K),
+          Ne.{u_1 + 1}
+            (ICFallDegrees.GrowthSecant.s3.{u_1} (RatFunc.C.{u_1} a) (RatFunc.C.{u_1} b) RatFunc.X.{u_1} z
+              (RatFunc.C.{u_1} t))
+            0

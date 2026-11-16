@@ -1,6 +1,9 @@
 # Main manuscript: ePrint preparation
 
-**Status, 14 November 2026:** corrected candidate for author review. No ePrint
+**Status, 16 November 2026:** candidate for author review, 48 pages. It
+combines the rational prime-field growth results, the solving-degree section
+and the kernel-checked function field and pole orders for targets that are
+not of order two (Proposition "Function field and pole orders"). No ePrint
 submission or editorial acceptance is recorded by this review. This is a
 technical and artifact review, not independent certification of every proof.
 
@@ -20,15 +23,25 @@ selector and carry bounds have a saved source-bound Lean audit. The growth
 theorem has a written proof; its Lean reduction retains the curve-model
 hypothesis, except for curves with a target of order two, where the
 bound is kernel-checked without it (over the complex numbers for a
-one-parameter family of curves, and for one of them along an increasing
-sequence of primes that is not explicit). For prime factors of Fermat numbers,
+one-parameter family of curves, and for every allowed rational parameter over admissible prime fields above
+an explicit denominator-sensitive cutoff; E6 retains the sharper cutoff B_k=9^(4^k)). For prime factors of Fermat numbers,
 the ideal is proper (also kernel-checked), so the unit-ideal argument does not
 establish the LFD lower bound; the numerical bound there remains undecided. At depth 14 the lower bound is certified, and the upper bound
 uses a degree lift without an independent certificate. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
-The saved audit covers 636 declarations of `Audit.lean` and matches every
+The rational prime-field extension passed Linux CI at `1c929ae`:
+[run 43777495526](https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43777495526).
+The complete build covers 225 modules and audits 883 distinct declarations
+across 87 files; the default audit covers 671 declarations. All 275 recorded
+source hashes match, with only the three allowed foundational axioms and no
+project axioms or placeholders. The paper update preserves those Lean sources.
+The new corollary, its explicit denominator guards, the six exceptional-prime
+profiles and the finite rational-reduction checks are mapped to declarations
+and records in the appendices.
+
+Earlier build history follows. The saved audit covers 671 declarations of `Audit.lean` and matches every
 recorded source digest. After the review of 14 November the complete project
 was built from an empty build directory (macOS, Lean 4.19.0, pinned Mathlib):
 all 217 modules build, and the 840 declarations over all files that print
@@ -68,13 +81,13 @@ retain its logs rather than overwriting the archived audit.
 
 ## Before submission
 
-- Done on 14 November: a clean build and audit of the current Lean project
-  (see above). Check that the same run is green in CI on the commit that is
-  submitted.
-- Make the reviewed source, PDF and evidence snapshot publicly addressable:
-  merge the pull requests into `main`. The data appendix of the manuscript
-  cites a fixed snapshot commit; it must stay reachable (merge with a merge
-  commit, or update the citation and rebuild).
+- The default Lean audit is that of commit `1c929ae` (CI green there); the
+  audited sources have not changed since. The non-two-torsion modules are
+  checked by a separate workflow. Both must be green on the commit that is
+  submitted (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
+- The data appendix cites the combined evidence commit `26be75c`. It stays
+  reachable only if this branch is merged with a merge commit; after a squash
+  or a rebase, update the citation and rebuild.
 - Read the review's remaining limits, particularly the depth-14 lift and the
   written growth proof. An independent depth-14 certificate would strengthen
   the result; the qualified preprint does not claim to have one.
@@ -83,6 +96,15 @@ retain its logs rather than overwriting the archived audit.
 
 The existing `paper/` layout is retained to preserve this companion repository's
 published paths; this change adds no separate research manuscript.
+
+The earlier complex rational-parameter extension is in
+`formal/ICFallDegrees/GrowthRationalParameterClassification.lean`: the exact
+complex grid-zero classification is a=-3,-1,1, and the growth window now
+also covers every rational a outside {-3,-3/4,-1,1}, including a=0,2,-2.
+The local default build and 644-declaration audit pass with compiled
+dependencies reused; `experiments/rational-parameter-lean-20261114/` records
+the commands and scope. Linux CI on the submitted commit is the independent
+build check for this extension.
 
 ## Revised-paper synchronization
 
@@ -102,3 +124,38 @@ change. `SYNC-94290676.json` is the record of the synchronized version and
 its hashes of the manuscript source, PDF and build report describe that
 version, not the current one; the current hashes are in
 `../experiments/ic-curve-paper/verification.json`.
+
+The prime-field extension is in `GrowthRationalPrimeNative.lean` and
+`GrowthRationalPrimeCutoff.lean` under `formal/ICFallDegrees/`. For a=m/q
+with q>0 it proves the least-LFD window for every admissible prime above
+C=2^N H^(N*N)+2N+q+|m+3q|+|4m+3q|, with N=2^k and
+H=3q+|m+2q|. The cutoff proves denominator invertibility and nonsingularity;
+no lowest-terms assumption is needed. E6 retains the sharper 9^(4^k) cutoff.
+
+## Revision of 16 November 2026
+
+The manuscript sources of pull requests 13 (solving degree) and 19 (rational
+prime-field growth) were merged; the one conflict, in the list of
+contributions, keeps both items. New text: Section "Targets with nonzero
+ordinate: the function field and two places", with matching sentences in the
+contributions, the status paragraph of the growth theorem, the limitations,
+the future directions, the conclusion, the Lean appendix and the data table.
+The abstract gained no claim from that section, because it proves no growth
+bound. The section on the solving degree and the abstract sentence about it
+are those of pull request 13.
+
+The fall-degree measurements of the `crypto` repository (stage B: three to
+six summands) are the split presentation of Section "Three to eight
+summands", with one free auxiliary per partial sum. On the cells both have
+(three summands, depths 2 to 4) they equal the certified values of this
+repository on every unit instance (`scripts/check_crossrepo_stage_b.py`).
+The paper reports this agreement and prints the further stage B readings in
+a table as readings of one instrument without certificates
+(`../experiments/crossrepo-pkm-stage-b/`). The 2-isogeny arm of that study is
+a different presentation and is not in the paper. An earlier version of this
+note called the stage B values inconsistent with the bound 7 for three
+summands; that compared the split with the direct presentation and was wrong.
+
+Pull requests 1 (review note of 12 November) and 9 (clean build of the
+582-declaration snapshot) are merged as archives; the current status notes
+were kept where they conflicted.

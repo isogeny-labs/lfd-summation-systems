@@ -1,0 +1,310 @@
+ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le.{u_1} {K : Type u_1} [Field K] (W : WeierstrassCurve.Affine K)
+  (u v : W.CoordinateRing) :
+  ((Algebra.norm (Polynomial K)) (u + v)).degree ≤
+    max ((Algebra.norm (Polynomial K)) u).degree ((Algebra.norm (Polynomial K)) v).degree
+ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (u v : W.CoordinateRing) :
+  ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W (u * v) =
+    ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W u *
+      ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W v
+ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (u v : W.CoordinateRing) :
+  ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W (u + v) ≤
+    max (ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W u)
+      (ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W v)
+ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) {u : W.CoordinateRing} (hu : u ≠ 0) :
+  ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W u ≠ 0
+ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (u : W.CoordinateRing) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W) ((algebraMap W.CoordinateRing W.FunctionField) u) =
+    ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue W u
+ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W) (ICFallDegrees.GrowthNonTorsionInfinity.fieldX W) =
+    ↑(Multiplicative.ofAdd 2)
+ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W) (ICFallDegrees.GrowthNonTorsionInfinity.fieldY W) =
+    ↑(Multiplicative.ofAdd 3)
+ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (c : K) (hc : c ≠ 0) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W)
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants W) c) =
+    1
+ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (c : K) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W)
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants W) c) ≤
+    1
+ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W)
+      (ICFallDegrees.GrowthNonTorsionInfinity.fieldX W / ICFallDegrees.GrowthNonTorsionInfinity.fieldY W) =
+    ↑(Multiplicative.ofAdd (-1))
+ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (a b t Y : K) (ht : t ≠ 0) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W)
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.companionX W a b t Y) =
+    1
+ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (a b t Y : K) (ht : t ≠ 0) :
+  ICFallDegrees.GrowthNonTorsionInfinitySecant.companionX W a b t Y ≠ 0
+ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (a b t Y : K) (ht : t ≠ 0) (i j : ℕ) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W)
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.monomial W a b t Y i j) =
+    ↑(Multiplicative.ofAdd (2 * ↑i))
+ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (a b t Y : K) (ht : t ≠ 0) (i j i' j' : ℕ) :
+  (ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation W)
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.monomial W a b t Y i j /
+        ICFallDegrees.GrowthNonTorsionInfinitySecant.monomial W a b t Y i' j') =
+    ↑(Multiplicative.ofAdd (2 * (↑i - ↑i')))
+ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t : K) :
+  ICFallDegrees.GrowthNonTorsionInfinity.fieldX W ≠ (ICFallDegrees.GrowthNonTorsionInfinity.constants W) t
+ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation.{u_1} {K : Type u_1} [Field K] (a b : K) :
+  ICFallDegrees.GrowthNonTorsionInfinity.fieldY (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b) ^ 2 =
+    ICFallDegrees.GrowthSecant.cubic
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        a)
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        b)
+      (ICFallDegrees.GrowthNonTorsionInfinity.fieldX (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) :
+  ICFallDegrees.GrowthSecant.s3
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        a)
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        b)
+      (ICFallDegrees.GrowthNonTorsionInfinity.fieldX (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.companionX
+        (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b) a b t Y)
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        t) =
+    0
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_constant.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y c : K) (hR : W.Equation t Y) :
+  (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR) ((algebraMap K W.CoordinateRing) c) = c
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_X.{u_1} {K : Type u_1} [Field K] (W : WeierstrassCurve.Affine K)
+  (t Y : K) (hR : W.Equation t Y) :
+  (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR)
+      (ICFallDegrees.GrowthNonTorsionInfinity.coordinateX W) =
+    t
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_Y.{u_1} {K : Type u_1} [Field K] (W : WeierstrassCurve.Affine K)
+  (t Y : K) (hR : W.Equation t Y) :
+  (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR)
+      (ICFallDegrees.GrowthNonTorsionInfinity.coordinateY W) =
+    Y
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_surjective.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) :
+  Function.Surjective ⇑(ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR)
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_YClass.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) (p : Polynomial K) :
+  (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR) (WeierstrassCurve.Affine.CoordinateRing.YClass W p) =
+    Y - Polynomial.eval t p
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_XClass.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y c : K) (hR : W.Equation t Y) :
+  (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR) (WeierstrassCurve.Affine.CoordinateRing.XClass W c) =
+    t - c
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointIdeal_maximal.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) :
+  (ICFallDegrees.GrowthNonTorsionTargetLocal.pointIdeal W t Y).IsMaximal
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointIdeal_eq_ker.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) :
+  ICFallDegrees.GrowthNonTorsionTargetLocal.pointIdeal W t Y =
+    RingHom.ker (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR)
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointLocal_maximal_principal.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) (hns : W.Nonsingular t Y) (hY : Y ≠ W.negY t Y) :
+  IsLocalRing.maximalIdeal (ICFallDegrees.GrowthNonTorsionTargetLocal.PointLocalRing W t Y hR) =
+    Ideal.span
+      {(algebraMap W.CoordinateRing (ICFallDegrees.GrowthNonTorsionTargetLocal.PointLocalRing W t Y hR))
+          (WeierstrassCurve.Affine.CoordinateRing.XClass W t)}
+ICFallDegrees.GrowthNonTorsionTargetLocal.localParameter_ne_zero.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) :
+  ICFallDegrees.GrowthNonTorsionTargetLocal.localParameter W t Y hR ≠ 0
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointLocal_not_field.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) (hns : W.Nonsingular t Y) (hY : Y ≠ W.negY t Y) :
+  ¬IsField (ICFallDegrees.GrowthNonTorsionTargetLocal.PointLocalRing W t Y hR)
+ICFallDegrees.GrowthNonTorsionTargetLocal.pointLocal_dvr.{u_1} {K : Type u_1} [Field K] (W : WeierstrassCurve.Affine K)
+  (t Y : K) (hR : W.Equation t Y) (hns : W.Nonsingular t Y) (hY : Y ≠ W.negY t Y) :
+  IsDiscreteValuationRing (ICFallDegrees.GrowthNonTorsionTargetLocal.PointLocalRing W t Y hR)
+ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_parameter.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) (hns : W.Nonsingular t Y) (hY : Y ≠ W.negY t Y) :
+  (ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation W t Y hR hns hY)
+      (ICFallDegrees.GrowthNonTorsionInfinity.fieldX W - (ICFallDegrees.GrowthNonTorsionInfinity.constants W) t) =
+    ↑(Multiplicative.ofAdd (-1))
+ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_unit.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) (hns : W.Nonsingular t Y) (hY : Y ≠ W.negY t Y)
+  (u : W.CoordinateRing) (hu : (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval W t Y hR) u ≠ 0) :
+  (ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation W t Y hR hns hY)
+      ((algebraMap W.CoordinateRing W.FunctionField) u) =
+    1
+ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_X.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) (hns : W.Nonsingular t Y) (hY : Y ≠ W.negY t Y)
+  (ht : t ≠ 0) :
+  (ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation W t Y hR hns hY)
+      (ICFallDegrees.GrowthNonTorsionInfinity.fieldX W) =
+    1
+ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_constant.{u_1} {K : Type u_1} [Field K]
+  (W : WeierstrassCurve.Affine K) (t Y : K) (hR : W.Equation t Y) (hns : W.Nonsingular t Y) (hY : Y ≠ W.negY t Y)
+  (c : K) (hc : c ≠ 0) :
+  (ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation W t Y hR hns hY)
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants W) c) =
+    1
+ICFallDegrees.GrowthNonTorsionTargetSecant.target_equation.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) :
+  (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b).Equation t Y
+ICFallDegrees.GrowthNonTorsionTargetSecant.target_not_neg.{u_1} {K : Type u_1} [Field K] (a b t Y : K) (h2 : 2 ≠ 0)
+  (hY : Y ≠ 0) : Y ≠ (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b).negY t Y
+ICFallDegrees.GrowthNonTorsionTargetSecant.target_nonsingular.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) (h2 : 2 ≠ 0) (hY : Y ≠ 0) :
+  (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b).Nonsingular t Y
+ICFallDegrees.GrowthNonTorsionTargetSecant.evaluate_numerator.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) :
+  (ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b) t Y
+        ⋯)
+      (ICFallDegrees.GrowthNonTorsionTargetSecant.coordinateNumerator a b t Y) =
+    4 * Y ^ 2
+ICFallDegrees.GrowthNonTorsionTargetSecant.map_coordinateNumerator.{u_1} {K : Type u_1} [Field K] (a b t Y : K) :
+  (algebraMap (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b).CoordinateRing
+        (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b).FunctionField)
+      (ICFallDegrees.GrowthNonTorsionTargetSecant.coordinateNumerator a b t Y) =
+    ICFallDegrees.GrowthSecant.secantNumerator
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        a)
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        b)
+      (ICFallDegrees.GrowthNonTorsionInfinity.fieldX (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        t)
+      (ICFallDegrees.GrowthNonTorsionInfinity.fieldY (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+      ((ICFallDegrees.GrowthNonTorsionInfinity.constants (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b))
+        Y)
+ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_companion.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) (h2 : 2 ≠ 0) (hY : Y ≠ 0) :
+  (ICFallDegrees.GrowthNonTorsionTargetSecant.secantTargetValuation a b t Y hR h2 hY)
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.companionX
+        (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b) a b t Y) =
+    ↑(Multiplicative.ofAdd 2)
+ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_monomial.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) (h2 : 2 ≠ 0) (hY : Y ≠ 0) (ht : t ≠ 0) (i j : ℕ) :
+  (ICFallDegrees.GrowthNonTorsionTargetSecant.secantTargetValuation a b t Y hR h2 hY)
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.monomial
+        (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b) a b t Y i j) =
+    ↑(Multiplicative.ofAdd (2 * ↑j))
+ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_monomial_ratio.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) (h2 : 2 ≠ 0) (hY : Y ≠ 0) (ht : t ≠ 0) (i j i' j' : ℕ) :
+  (ICFallDegrees.GrowthNonTorsionTargetSecant.secantTargetValuation a b t Y hR h2 hY)
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.monomial
+          (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b) a b t Y i j /
+        ICFallDegrees.GrowthNonTorsionInfinitySecant.monomial
+          (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b) a b t Y i' j') =
+    ↑(Multiplicative.ofAdd (2 * (↑j - ↑j')))
+ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_ne_infinity.{u_1} {K : Type u_1} [Field K] (a b t Y : K)
+  (hR : Y ^ 2 = ICFallDegrees.GrowthSecant.cubic a b t) (h2 : 2 ≠ 0) (hY : Y ≠ 0) (ht : t ≠ 0) :
+  ICFallDegrees.GrowthNonTorsionTargetSecant.secantTargetValuation a b t Y hR h2 hY ≠
+    ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation
+      (ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve a b)
+'ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_add_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.coordinateValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_map' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_constant_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinity.infinityValuation_uniformizer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinitySecant.companion_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinitySecant.infinityValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinitySecant.fieldX_ne_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionInfinitySecant.shortCurve_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_YClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointEval_XClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointIdeal_maximal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointIdeal_eq_ker' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointLocal_maximal_principal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.localParameter_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointLocal_not_field' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetLocal.pointLocal_dvr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_parameter' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_X' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetValuation.targetValuation_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.target_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.target_not_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.target_nonsingular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.evaluate_numerator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.map_coordinateNumerator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_companion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_monomial_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionTargetSecant.targetValuation_ne_infinity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,61 @@
+{
+  "scope": "targeted producer-local kernel check of both actual pole valuations and 42 new theorems",
+  "source_commit": "24d9761609de8cfec0558344712a778f0b418781",
+  "recorded_at_utc": "2026-11-16T05:45:19.997230+00:00",
+  "lean": "4.19.0",
+  "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "build_targets": [
+    "ICFallDegrees.GrowthNonTorsionFunctionField",
+    "ICFallDegrees.GrowthNonTorsionTargetSecant"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "new_theorem_count": 42,
+  "previous_theorem_count": 16,
+  "allowed_transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_default_library_rebuilt": false,
+  "numerical_study_run": false,
+  "source_sha256": {
+    ".github/workflows/non-torsion-bridge.yml": "7337e8b70ec312c09c523e791c80490f64ea44f8c9e85a4065bf789a64c42c77",
+    "docs/proofs/N8-non-two-torsion-poles-20261116.md": "b374a8ee243b699959f0421caed4813217e2bfaf5ad50f915ec9f8c8edc11c70",
+    "formal/ICFallDegrees/GrowthNonTorsionBridge.lean": "1c9964466bba66481ad4e177bb86006f1ddbf5c4a06053d0efa70b5ca09e0568",
+    "formal/ICFallDegrees/GrowthNonTorsionFunctionField.lean": "376da5d7d0799d38418fe6a322b3c94f63a1c8e5c7bdf3961990f596f8d157fa",
+    "formal/ICFallDegrees/GrowthNonTorsionInfinity.lean": "e636204e179b096002c89e0fd4fe4d9f1a9faa36d99713b64293d392b302d988",
+    "formal/ICFallDegrees/GrowthNonTorsionInfinitySecant.lean": "589badb7b2b1cf4ed6178fd6532c17e49b78089a9d36d9470711419dba2e5935",
+    "formal/ICFallDegrees/GrowthNonTorsionRationalObstruction.lean": "361a2801033b7f365f313df16a056581dcba82501a0bdd5a9bac44d489afedf3",
+    "formal/ICFallDegrees/GrowthNonTorsionTargetLocal.lean": "1fb1bd5b64ecefb0c7329abbed6c6bb28806ae9eb80d296f3796cdeb92f5c0ee",
+    "formal/ICFallDegrees/GrowthNonTorsionTargetSecant.lean": "593abd6ae1f4a1bcbc7ccc14c9582b60d3d3b34e6a2394e3bc50f71e2eb63a80",
+    "formal/ICFallDegrees/GrowthNonTorsionTargetValuation.lean": "8043b46e873f385022d444bef5694899d7c1a1b979e4e735dbd8254f2ec33e11",
+    "formal/ICFallDegrees/GrowthPoleArithmetic.lean": "2e266bcc965ab1a76dfd83ba75ea61f4bab2e412991e314de0d5c2196f3835b7",
+    "formal/ICFallDegrees/GrowthSecant.lean": "a0dfc8454179798d3bbd6033ec152bf87c1d1f5a8a5ed4b1a8d90da8b03eec00",
+    "formal/ICFallDegrees/GrowthSecantFactorization.lean": "046b6b94f175cd2ff5aa1921f2b94d25a4054417cff3609cde4e7922dda2ebe1",
+    "formal/N8NonTwoTorsionPolesAudit.lean": "186708bc243cbefb0d9879876146e51c672d60829027f0d04e58bf264bfc1f9e",
+    "formal/lake-manifest.json": "98e57d45224a5d6b50996badf5fa6485cb52820f41e815f7c05d49f21eca4547",
+    "formal/lakefile.toml": "fb31f690e72083a4c426f1074e733a57bbba3cba77e57c3d3b26769fe0b8703a",
+    "formal/lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "scripts/check_non_torsion_axioms.py": "db945f93f41a2c29623026fc5feedd5c22d15e2c72623667cab67e57895cfe98",
+    "scripts/check_non_two_field_axioms.py": "95bdd3af1bb5f91f99b3da8b78775e84d3c9a00bae4a4789ba1e2ffa6f92ecf2",
+    "scripts/check_non_two_poles_axioms.py": "347fe9593a82bd5a532da3e23a80ffec3410a5635e1f436e24e7bb8c1bd02168"
+  },
+  "artifact_sha256": {
+    "README.md": "9b2539df9f416bfc764274ba30dc69eb3b4977a55690dc769d041e0683b9ba83",
+    "audit-checks.txt": "ac4a2e6820e9d5c15573841a0d4b4ec351cade02a8f3154cda06f5a6ef70ac1b",
+    "build.log": "09c6fc8bad199eb352eae3e0bf08fe14aa9a192385fd26d0e256c01681d79470",
+    "failed-elaborations.log": "7c33062531446cc36d609f23d99ea0115ec45b6b6b00a636356c133b8929b659",
+    "failed-index.json": "861981092f6185166d2445ce79b1f39075bb3f92b1062243f756be93a426ebdb",
+    "regression-bridge.log": "d75f15afb6aec82977af4a92b81cbe44bcec60c86fd0650ce4bdeade136f6cdf",
+    "regression-field.log": "cd3ec28b1ea860726a7b44c42cf98fa0bcc63f13fa56e05587a093c52c04bcc6",
+    "regression-rational.log": "649ca8e7300a90df48ee82cf2383b5243e4a5500a941e0c240340f590196513b",
+    "statements-and-axioms.log": "7d1abee5062991cb64fc158d45419f44aa67084e481359a1ca82e651bbaf6166"
+  },
+  "remaining": [
+    "genus-one height/Wronskian estimate",
+    "positive-characteristic coefficient/scalar tower",
+    "circuit-spread interface",
+    "isomorphism to prior RatFunc quadratic presentation"
+  ]
+}

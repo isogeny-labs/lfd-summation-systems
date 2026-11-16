@@ -16,7 +16,7 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `csd/` | closure engines and certificate code (Python) |
 | `scripts/` | drivers: one script per experiment, the figure script and the paper build |
 | `tests/` | unit tests of the certificate code (`pytest tests`) |
-| `docs/proofs/` | written proofs that are not formalized (the depth reduction, genericity, the growth theorem `N8-growth.md`, the block-of-four lemmas `N9-block-four.md`), the plans of the Lean formalizations, and the notes behind the kernel-checked fixed-curve growth theorem (the other `N8-*.md`; start with `N8-two-torsion-rational-route.md`) |
+| `docs/proofs/` | written proofs that are not formalized (the depth reduction, genericity, the growth theorem `N8-growth.md`, the block-of-four lemmas `N9-block-four.md`, the solving-degree bridge `N10-solving-degree.md`, the static Macaulay degree `SD1-solving-degree.md`), the plans of the Lean formalizations, and the notes behind the kernel-checked fixed-curve growth theorem (the other `N8-*.md`; start with `N8-two-torsion-rational-route.md`) |
 | `docs/reviews-*.md`, `docs/reviews-20261112/`, `docs/proofs/N8-growth-review*.md` | reviews of the written proofs, the red-team reviews of the growth proof and the audit of the paper (see *Working material* below) |
 | `docs/IC_FALL_COUNTEREXAMPLES.md`, `docs/IC_FALL_PROOFS.md` | notes on the fall counterexamples, checked by `scripts/verify_ic_fall_counterexamples.py` against `experiments/ic-fall-counterexamples/` |
 | `experiments/ic-lean/` | audit of the Lean development (declarations and their axioms) |
@@ -38,6 +38,8 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `experiments/ic-bounds-binary-deep/` | deeper binary and Koblitz descents, with two independent replications |
 | `experiments/ic-bounds-cert/`, `ic-bounds-exact-k6/` | data of the certificates checked in Lean |
 | `experiments/ic-curve-validation/` | independent implementation of the closure in the ordinary ring |
+| `experiments/ic-solving-degree/` | solving degree and largest Gröbner-basis degree of every exact-LFD system, with the Singular, PolyBoRi and mutant-closure checks (Section 7) |
+| `experiments/ic-bounds-solving/` | the static (plain XL) Macaulay degree study behind `SD1-solving-degree.md`, and its independent validation (`validation/VALIDATOR_REPORT.md`) |
 
 Each experiment directory has a `README.md` (or `RESULTS.md`, `VERIFY.md`, `NOTES.md`, `REPORT.md`) that names the
 command behind every record; `experiments/publication-review-20261114/` holds the check records of
@@ -82,6 +84,17 @@ builds every module under `formal/ICFallDegrees/`, including those the root file
 every `#print axioms` in the project (`formal/README.md`); the workflow runs it too. The
 depth-ten runs take about two hours each and the degree-six closure about five hours. The commands for the GPU
 runs and for the degree lift are in `experiments/ic-bounds-k14/README.md` and `LIFT.md`.
+
+The depth-9 command above fails on macOS. The driver sets `--product-cap` and `--shift-max-cells` inside `main()`,
+and worker processes started with `spawn`, the macOS default, do not see them: they fall back to 16000 and
+200,000,000, and the first depth-9 system stops after about 1.5 hours with "Shift-closure matrix budget exceeded".
+Linux starts workers with `fork`, which keeps the values, so there the command runs as written. On macOS, start the driver under `fork` instead (the driver itself is unchanged, since its
+hash is pinned in `verification.json`):
+
+    python -c "import multiprocessing, runpy, sys; multiprocessing.set_start_method('fork'); \
+      sys.argv[0] = 'scripts/run_ic_chain_depth8.py'; runpy.run_path(sys.argv[0], run_name='__main__')" \
+      --check-only --depths 9 --primes 7681 --out experiments/ic-chain-depth9 --workers 1 \
+      --product-cap 12000 --shift-max-cells 450000000
 
 ## What kind of evidence each result has
 

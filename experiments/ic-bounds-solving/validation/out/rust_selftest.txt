@@ -1,0 +1,9 @@
+selftest group-law p=12289 a=17 b=72: S3 vanishes ok=4000 bad=0 (random-x zeros 0); S4 ok=2000 bad=0
+selftest group-law p=97 a=17 b=72: S3 vanishes ok=3938 bad=0 (random-x zeros 38); S4 ok=1953 bad=0
+selftest group-law p=12289 a=17 b=72: S3 vanishes ok=4000 bad=0 (random-x zeros 2); S4 ok=2000 bad=0
+selftest fft==naive (n=16): true
+selftest k=2 m=2 p=17: g*g^-1==1 in K[G] on 10/10 unit instances
+selftest k=2 m=2 p=12289: g*g^-1==1 in K[G] on 20/20 unit instances
+selftest k=2 m=3 p=17: g*g^-1==1 in K[G] on 11/11 unit instances
+selftest k=2 m=3 p=12289: g*g^-1==1 in K[G] on 20/20 unit instances
+selftest k=1 p=101 a=17 b=72 t=97: unit=true ginv(0,0),(0,1),(1,0),(1,1)=[91, 81, 81, 95] maxwt=2 sd=4

@@ -1,0 +1,135 @@
+[
+ {
+  "cmd": "/tmp/claude-0/-home-user/9dbbf9e8-7c86-599b-a188-83c0330b1243/scratchpad/frozen_crypto/research/solving_degree_20261115/rust_check/target/release/sd_static --m 2 --k 3 --p 97 --a 90 --b 92 --t 84",
+  "rust": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 2,
+   "sd_static": 8,
+   "top_coeff_zero": false
+  },
+  "mine": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 2,
+   "sd_inverse": 8,
+   "sd_bruteforce": 8,
+   "c_top_zero": false
+  },
+  "agree": true
+ },
+ {
+  "cmd": "/tmp/claude-0/-home-user/9dbbf9e8-7c86-599b-a188-83c0330b1243/scratchpad/frozen_crypto/research/solving_degree_20261115/rust_check/target/release/sd_static --m 2 --k 4 --p 97 --a 92 --b 79 --t 27",
+  "rust": {
+   "unit": true,
+   "maxwt": 8,
+   "delta": 2,
+   "sd_static": 10,
+   "top_coeff_zero": false
+  },
+  "mine": {
+   "unit": true,
+   "maxwt": 8,
+   "delta": 2,
+   "sd_inverse": 10,
+   "sd_bruteforce": 10,
+   "c_top_zero": false
+  },
+  "agree": true
+ },
+ {
+  "cmd": "/tmp/claude-0/-home-user/9dbbf9e8-7c86-599b-a188-83c0330b1243/scratchpad/frozen_crypto/research/solving_degree_20261115/rust_check/target/release/sd_static --m 3 --k 2 --p 97 --a 27 --b 28 --t 81",
+  "rust": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 6,
+   "sd_static": 12,
+   "top_coeff_zero": false
+  },
+  "mine": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 6,
+   "sd_inverse": 12,
+   "sd_bruteforce": 12,
+   "c_top_zero": false
+  },
+  "agree": true
+ },
+ {
+  "cmd": "/tmp/claude-0/-home-user/9dbbf9e8-7c86-599b-a188-83c0330b1243/scratchpad/frozen_crypto/research/solving_degree_20261115/rust_check/target/release/sd_static --m 2 --k 3 --p 17 --a 11 --b 14 --t 4",
+  "rust": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 2,
+   "sd_static": 8,
+   "top_coeff_zero": false
+  },
+  "mine": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 2,
+   "sd_inverse": 8,
+   "sd_bruteforce": 8,
+   "c_top_zero": false
+  },
+  "agree": true
+ },
+ {
+  "cmd": "/tmp/claude-0/-home-user/9dbbf9e8-7c86-599b-a188-83c0330b1243/scratchpad/frozen_crypto/research/solving_degree_20261115/rust_check/target/release/sd_static --m 2 --k 3 --p 17 --a 7 --b 15 --t 7",
+  "rust": {
+   "unit": true,
+   "maxwt": 5,
+   "delta": 2,
+   "sd_static": 7,
+   "top_coeff_zero": true
+  },
+  "mine": {
+   "unit": true,
+   "maxwt": 5,
+   "delta": 2,
+   "sd_inverse": 7,
+   "sd_bruteforce": 7,
+   "c_top_zero": true
+  },
+  "agree": true
+ },
+ {
+  "cmd": "/tmp/claude-0/-home-user/9dbbf9e8-7c86-599b-a188-83c0330b1243/scratchpad/frozen_crypto/research/solving_degree_20261115/rust_check/target/release/sd_static --m 3 --k 2 --p 13 --a 6 --b 2 --t 0",
+  "rust": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 6,
+   "sd_static": 12,
+   "top_coeff_zero": false
+  },
+  "mine": {
+   "unit": true,
+   "maxwt": 6,
+   "delta": 6,
+   "sd_inverse": 12,
+   "sd_bruteforce": 12,
+   "c_top_zero": false
+  },
+  "agree": true
+ },
+ {
+  "cmd": "/tmp/claude-0/-home-user/9dbbf9e8-7c86-599b-a188-83c0330b1243/scratchpad/frozen_crypto/research/solving_degree_20261115/rust_check/target/release/sd_static --m 3 --k 2 --p 13 --a 5 --b 9 --t 0",
+  "rust": {
+   "unit": true,
+   "maxwt": 5,
+   "delta": 6,
+   "sd_static": 11,
+   "top_coeff_zero": true
+  },
+  "mine": {
+   "unit": true,
+   "maxwt": 5,
+   "delta": 6,
+   "sd_inverse": 11,
+   "sd_bruteforce": 11,
+   "c_top_zero": true
+  },
+  "agree": true
+ }
+]

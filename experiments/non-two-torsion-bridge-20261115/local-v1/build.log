@@ -1,0 +1,40 @@
+⚠ [1363/1403] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1370/1403] Replayed ICFallDegrees.HomogeneousFirstFall
+warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1722/1753] Replayed ICFallDegrees.GrowthSecant
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [1724/1753] Replayed ICFallDegrees.GrowthNonTorsionBridge
+warning: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:42:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:49:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:73:0: 'ICFallDegrees.GrowthNonTorsionBridge.recoverY_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:74:0: 'ICFallDegrees.GrowthNonTorsionBridge.recoverY_secantX' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:75:0: 'ICFallDegrees.GrowthNonTorsionBridge.secantX_recoverY' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:76:0: 'ICFallDegrees.GrowthNonTorsionBridge.no_section_of_nonsquare' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionBridge.lean:77:0: 'ICFallDegrees.GrowthNonTorsionBridge.secantX_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2014/2014] Replayed ICFallDegrees.GrowthNonTorsionRationalObstruction
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:69:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_natDegree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:70:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.cubicPolynomial_nonsquare' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthNonTorsionRationalObstruction.lean:71:0: 'ICFallDegrees.GrowthNonTorsionRationalObstruction.generic_s3_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Build completed successfully.

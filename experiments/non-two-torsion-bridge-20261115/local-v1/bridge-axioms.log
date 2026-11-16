@@ -1,0 +1,11 @@
+ICFallDegrees/GrowthNonTorsionBridge.lean:42:43: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ICFallDegrees/GrowthNonTorsionBridge.lean:49:43: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ICFallDegrees.GrowthNonTorsionBridge.recoverY_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionBridge.recoverY_secantX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionBridge.secantX_recoverY' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthNonTorsionBridge.no_section_of_nonsquare' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthNonTorsionBridge.secantX_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

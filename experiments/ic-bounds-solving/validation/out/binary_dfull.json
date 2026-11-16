@@ -1,0 +1,622 @@
+[
+ {
+  "system_hash": "00357f759d06047679beed9708b37e24e669da859c433b65a676b045501feb3d",
+  "r": 6,
+  "k": 3,
+  "n": 10,
+  "Z": 2,
+  "laneC": {
+   "Z": 2,
+   "d_full": 4,
+   "lfd": 2,
+   "dstar": 2,
+   "per_degree": [
+    [
+     2,
+     22,
+     9,
+     11,
+     null
+    ],
+    [
+     3,
+     42,
+     36,
+     4,
+     null
+    ],
+    [
+     4,
+     57,
+     55,
+     0,
+     2
+    ]
+   ]
+  },
+  "mine": {
+   "d_full": 4,
+   "per_degree": [
+    [
+     2,
+     22,
+     9,
+     11,
+     2,
+     false,
+     false
+    ],
+    [
+     3,
+     42,
+     36,
+     4,
+     2,
+     false,
+     false
+    ],
+    [
+     4,
+     57,
+     55,
+     0,
+     2,
+     true,
+     false
+    ],
+    [
+     5,
+     63,
+     61,
+     0,
+     2,
+     true,
+     false
+    ],
+    [
+     6,
+     64,
+     62,
+     0,
+     2,
+     true,
+     false
+    ]
+   ]
+  },
+  "agree_Z": true,
+  "agree_d_full": true,
+  "ranks_agree": true,
+  "stays_full_after": true,
+  "ge_lfd": true,
+  "seconds": 0.0
+ },
+ {
+  "system_hash": "02669d0a927b5bef05b37b18bc7bee45486e1a3ef9395dffa4a7c6295cd7d454",
+  "r": 8,
+  "k": 4,
+  "n": 6,
+  "Z": 8,
+  "laneC": {
+   "Z": 8,
+   "d_full": 5,
+   "lfd": 3,
+   "dstar": 3,
+   "per_degree": [
+    [
+     2,
+     37,
+     5,
+     24,
+     null
+    ],
+    [
+     3,
+     93,
+     45,
+     40,
+     null
+    ],
+    [
+     4,
+     163,
+     146,
+     9,
+     null
+    ],
+    [
+     5,
+     219,
+     211,
+     0,
+     8
+    ]
+   ]
+  },
+  "mine": {
+   "d_full": 5,
+   "per_degree": [
+    [
+     2,
+     37,
+     5,
+     24,
+     8,
+     false,
+     false
+    ],
+    [
+     3,
+     93,
+     45,
+     40,
+     8,
+     false,
+     false
+    ],
+    [
+     4,
+     163,
+     146,
+     9,
+     8,
+     false,
+     false
+    ],
+    [
+     5,
+     219,
+     211,
+     0,
+     8,
+     true,
+     false
+    ],
+    [
+     6,
+     247,
+     239,
+     0,
+     8,
+     true,
+     false
+    ],
+    [
+     7,
+     255,
+     247,
+     0,
+     8,
+     true,
+     false
+    ]
+   ]
+  },
+  "agree_Z": true,
+  "agree_d_full": true,
+  "ranks_agree": true,
+  "stays_full_after": true,
+  "ge_lfd": true,
+  "seconds": 0.0
+ },
+ {
+  "system_hash": "01979f83c23676e7ff63a07c0d83e347044aa2b1c9c40a3887c8ca6b376c4484",
+  "r": 10,
+  "k": 5,
+  "n": 8,
+  "Z": 4,
+  "laneC": {
+   "Z": 4,
+   "d_full": 6,
+   "lfd": 3,
+   "dstar": 3,
+   "per_degree": [
+    [
+     2,
+     56,
+     8,
+     44,
+     null
+    ],
+    [
+     3,
+     176,
+     87,
+     85,
+     null
+    ],
+    [
+     4,
+     386,
+     357,
+     25,
+     null
+    ],
+    [
+     5,
+     638,
+     628,
+     6,
+     null
+    ],
+    [
+     6,
+     848,
+     844,
+     0,
+     4
+    ]
+   ]
+  },
+  "mine": {
+   "d_full": 6,
+   "per_degree": [
+    [
+     2,
+     56,
+     8,
+     44,
+     4,
+     false,
+     false
+    ],
+    [
+     3,
+     176,
+     87,
+     85,
+     4,
+     false,
+     false
+    ],
+    [
+     4,
+     386,
+     357,
+     25,
+     4,
+     false,
+     false
+    ],
+    [
+     5,
+     638,
+     628,
+     6,
+     4,
+     false,
+     false
+    ],
+    [
+     6,
+     848,
+     844,
+     0,
+     4,
+     true,
+     false
+    ],
+    [
+     7,
+     968,
+     964,
+     0,
+     4,
+     true,
+     false
+    ],
+    [
+     8,
+     1013,
+     1009,
+     0,
+     4,
+     true,
+     false
+    ]
+   ]
+  },
+  "agree_Z": true,
+  "agree_d_full": true,
+  "ranks_agree": true,
+  "stays_full_after": true,
+  "ge_lfd": true,
+  "seconds": 0.3
+ },
+ {
+  "system_hash": "04ec65496036c7b3a53cdfcf30e866cf91e51535ae4108e6cf7ca5fb63fc9778",
+  "r": 12,
+  "k": 6,
+  "n": 9,
+  "Z": 12,
+  "laneC": {
+   "Z": 12,
+   "d_full": 7,
+   "lfd": 3,
+   "dstar": 3,
+   "per_degree": [
+    [
+     2,
+     79,
+     9,
+     58,
+     null
+    ],
+    [
+     3,
+     299,
+     116,
+     171,
+     null
+    ],
+    [
+     4,
+     794,
+     646,
+     136,
+     null
+    ],
+    [
+     5,
+     1586,
+     1538,
+     36,
+     null
+    ],
+    [
+     6,
+     2510,
+     2491,
+     7,
+     null
+    ],
+    [
+     7,
+     3302,
+     3290,
+     0,
+     12
+    ]
+   ]
+  },
+  "mine": {
+   "d_full": 7,
+   "per_degree": [
+    [
+     2,
+     79,
+     9,
+     58,
+     10,
+     false,
+     false
+    ],
+    [
+     3,
+     299,
+     116,
+     171,
+     12,
+     false,
+     false
+    ],
+    [
+     4,
+     794,
+     646,
+     136,
+     12,
+     false,
+     false
+    ],
+    [
+     5,
+     1586,
+     1538,
+     36,
+     12,
+     false,
+     false
+    ],
+    [
+     6,
+     2510,
+     2491,
+     7,
+     12,
+     false,
+     false
+    ],
+    [
+     7,
+     3302,
+     3290,
+     0,
+     12,
+     true,
+     false
+    ],
+    [
+     8,
+     3797,
+     3785,
+     0,
+     12,
+     true,
+     false
+    ],
+    [
+     9,
+     4017,
+     4005,
+     0,
+     12,
+     true,
+     false
+    ]
+   ]
+  },
+  "agree_Z": true,
+  "agree_d_full": true,
+  "ranks_agree": true,
+  "stays_full_after": true,
+  "ge_lfd": true,
+  "seconds": 5.9
+ },
+ {
+  "system_hash": "0898244a2d55639c7f81e3e21dc81abd5c0c6595a04b57f08d8c45a44ef4ae17",
+  "r": 12,
+  "k": 6,
+  "n": 7,
+  "Z": 32,
+  "laneC": {
+   "Z": 32,
+   "d_full": 8,
+   "lfd": 3,
+   "dstar": 3,
+   "per_degree": [
+    [
+     2,
+     79,
+     7,
+     40,
+     null
+    ],
+    [
+     3,
+     299,
+     91,
+     176,
+     null
+    ],
+    [
+     4,
+     794,
+     497,
+     265,
+     null
+    ],
+    [
+     5,
+     1586,
+     1404,
+     150,
+     null
+    ],
+    [
+     6,
+     2510,
+     2459,
+     19,
+     null
+    ],
+    [
+     7,
+     3302,
+     3268,
+     2,
+     null
+    ],
+    [
+     8,
+     3797,
+     3765,
+     0,
+     32
+    ]
+   ]
+  },
+  "mine": {
+   "d_full": 8,
+   "per_degree": [
+    [
+     2,
+     79,
+     7,
+     40,
+     13,
+     false,
+     false
+    ],
+    [
+     3,
+     299,
+     91,
+     176,
+     32,
+     false,
+     false
+    ],
+    [
+     4,
+     794,
+     497,
+     265,
+     32,
+     false,
+     false
+    ],
+    [
+     5,
+     1586,
+     1404,
+     150,
+     32,
+     false,
+     false
+    ],
+    [
+     6,
+     2510,
+     2459,
+     19,
+     32,
+     false,
+     false
+    ],
+    [
+     7,
+     3302,
+     3268,
+     2,
+     32,
+     false,
+     false
+    ],
+    [
+     8,
+     3797,
+     3765,
+     0,
+     32,
+     true,
+     false
+    ],
+    [
+     9,
+     4017,
+     3985,
+     0,
+     32,
+     true,
+     false
+    ],
+    [
+     10,
+     4083,
+     4051,
+     0,
+     32,
+     true,
+     false
+    ]
+   ]
+  },
+  "agree_Z": true,
+  "agree_d_full": true,
+  "ranks_agree": true,
+  "stays_full_after": true,
+  "ge_lfd": true,
+  "seconds": 7.2
+ }
+]
