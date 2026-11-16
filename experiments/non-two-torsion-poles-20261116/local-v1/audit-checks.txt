@@ -1,0 +1,7 @@
+PASS 42 exact new two-place theorem axiom answers
+PASS reject missing_answer: missing, duplicate or unexpected theorem audit answer
+PASS reject duplicate_answer: missing, duplicate or unexpected theorem audit answer
+PASS reject project_axiom: ICFallDegrees.GrowthNonTorsionInfinity.norm_degree_add_le: unexpected transitive axioms ['ICFallDegrees.assumed_height_bound']
+PASS reject placeholder: placeholder or native evaluation in audit
+PASS 8 explicit theorem axiom answers
+PASS 8 explicit function-field theorem axiom answers
