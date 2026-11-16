@@ -22,6 +22,8 @@
 \theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
 \newcommand{\F}{\mathbb F}
 \newcommand{\lfd}{\operatorname{LFD}}
+\newcommand{\sd}{\operatorname{sd}}
+\newcommand{\gbdeg}{\operatorname{gbdeg}}
 \newcommand{\ffd}{\operatorname{FFD}}
 \newcommand{\NF}{\operatorname{NF}}
 \newcommand{\wt}{\operatorname{wt}}
@@ -33,6 +35,7 @@
 \author{Adam Buran\\ \texttt{adam@isogenylabs.io}\\ \texttt{a.buran28@gmail.com}}
 \date{15 November 2026}
 \input{curve-sweep-data}
+\input{solving-degree-data}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -68,7 +71,13 @@ instance force $\mathrm{LFD}=mk+1$; at $m=4$, $k=4$, where $\deg g=12$ falls
 short of $mk=16$, the value is $13$, below the bound $17$. For binary and
 Koblitz systems we compute exact values through dimension $16$ and
 reproduce them in separate runs of the same engine. These data refute
-preregistered laws based on the solution count. The results concern
+preregistered laws based on the solution count. By a theorem of
+Caminata and Gorla the solving degree is the larger of the LFD and the
+largest degree of the reduced Gr\"obner basis. On these cube systems we
+bound the latter by $\log_2$ of the number of solutions, so the solving
+degree of two-summand prime systems is at most $k+2$; it is determined on
+all \SDSYSTEMS{} systems with exact LFD and equals the LFD on all but
+eight. The results concern
 polynomial-system degrees; we do not estimate discrete-logarithm costs.
 \end{abstract}
 
@@ -146,6 +155,16 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
  explicit denominator-sensitive cutoff (Corollary~\ref{cor:rationalprime}).
  For $E_6$, the sharper sufficient cutoff is $9^{4^k}$
  (Theorem~\ref{thm:growthfixed}).
+\item \emph{Solving degree} (written proof and exact;
+ Section~\ref{sec:solving}): with the theorem of Caminata and
+ Gorla~\cite{cg}, the reduced Gr\"obner basis of these systems has degree
+ at most $\max(2,\lfloor\log_2(|Z|+1)\rfloor)$ in the number $|Z|$ of
+ solutions (Lemma~\ref{lem:cube}), so $\sd\le\max(\lfd,k+1)\le k+2$ for two
+ summands and $\sd\le mk+1$ in general (Theorem~\ref{thm:sd}); every lower
+ bound on the LFD, including unboundedness, is one on the solving degree;
+ on the systems of this paper the solving degree equals the LFD on
+ \SDEQUAL{} of \SDKNOWN{} settled systems and exceeds it by one or two on
+ eight (Table~\ref{tab:sd}).
 \item \emph{A conjecture} (Section~\ref{sec:conjecture}):
  $\lfd(k)=\lfloor(k+14)/4\rfloor$ for generic two-summand prime chain
  systems; six predictions were recorded before the computations: three
@@ -163,7 +182,8 @@ which we do not measure.
 
 \paragraph{Organization.} We introduce the background in Section~\ref{sec:background} and define
 the systems in Section~\ref{sec:systems}. Sections~\ref{sec:bounds}
-to~\ref{sec:growth} present the results; Sections~\ref{sec:limitations}
+to~\ref{sec:growth} present the results and Section~\ref{sec:solving}
+the solving degree; Sections~\ref{sec:limitations}
 and~\ref{sec:future} discuss their limits and the remaining questions.
 Appendices~\ref{app:lean}, \ref{app:methods} and~\ref{app:data} contain
 the formal verification, the computational methods with the independent
@@ -217,8 +237,10 @@ zero-dimensional ideal $\Id$, as for all systems in this paper. A Gr\"obner
 basis of $\Id$ describes its solutions. Linear-algebra algorithms of the
 Macaulay, XL, F4 and F5 type reduce, for a degree bound $D$, the matrix of
 products $\mu f_i$ of a monomial and an input of degree at most $D$, with
-the monomials of degree at most $D$ as columns; the largest $D$ a given
-algorithm needs on $F$ is its \emph{solving degree}~\cite{cg}. With about
+the monomials of degree at most $D$ as columns; the least $D$ at which
+the iterated degree-$D$ matrix contains a Gr\"obner basis is the
+\emph{solving degree}~\cite[Def.~1.1]{cg}, made precise in
+Section~\ref{sec:solving}. With about
 $\binom{r+D}{D}$ columns, the solving degree enters the exponent of the
 cost. The \emph{degree of regularity} of a system whose top-degree
 forms generate an ideal containing all forms of large degree is the least
@@ -2096,8 +2118,228 @@ from $4w-4$ on for every $w$ it would give $\lfd\ge\lfloor(k+12)/4\rfloor$
 for unit ideals, which is the conjectured value for $k\equiv0,1\bmod4$.
 This is not proved.
 
+\section{The solving degree}\label{sec:solving}
+The last fall degree is a property of an input list. What enters the cost
+of a linear-algebra Gr\"obner-basis computation is the solving degree. We
+use the definition of Caminata and Gorla~\cite[Def.~1.1]{cg}. Fix a term
+order $\sigma$. The degree-$d$ Macaulay matrix is iterated as in Lazard's
+algorithm: after each reduction, every row of degree below $d$ is
+multiplied by every monomial that keeps the degree at most $d$, until
+nothing new appears. Then $\sd_\sigma(F)$ is the least $d$ for which the
+row space contains a $\sigma$-Gr\"obner basis of $\Id$. This is the solving
+degree of Macaulay and MutantXL-type algorithms, which multiply the new
+rows of lower degree again. Plain XL does not. Its degree is the least $d$
+for which the single degree-$d$ Macaulay matrix, without iteration, already
+contains a Gr\"obner basis (for a unit ideal, the constant $1$). This
+\emph{static} degree is at least $\sd_\sigma$ and can be much larger. A
+separate study
+(\code{docs/\allowbreak{}proofs/\allowbreak{}SD1-solving-degree.md}) gives a
+formula for it on unit two-summand prime instances and finds it equal to
+$2k+2$ on every tested such instance at $k=5,\ldots,13$, while there
+$\sd_\sigma=\lfd\le k+2$ by Theorem~\ref{thm:selector}. An independent
+validation
+(\code{experiments/\allowbreak{}ic-bounds-solving/\allowbreak{}validation/\allowbreak{}VALIDATOR\_REPORT.md})
+found no gap in the proof of the formula and reproduced the static degree
+with a literal Macaulay matrix up to $k=5$. Above $k=5$, the value $2k+2$
+rests on the formula and on recomputing a sample of instances. The cost estimates that use $\sd$ therefore
+assume an algorithm that reuses degree falls. The solving degree is not the step
+degree of an F4 or F5 run. In particular it is not the degree read from
+Magma that Petit, Kosters and Messeng~\cite{pkm} call the degree of
+regularity, which is also not the degree of regularity of
+Section~\ref{sec:gb}. Write $\gbdeg_\sigma(F)$ for the largest degree of an
+element of the reduced $\sigma$-Gr\"obner basis of $\Id$; it is $0$ for the
+unit ideal.
+
+\begin{theorem}[{\cite[Thm.~3.1]{cg}}]\label{thm:cg}
+For every degree-compatible term order $\sigma$,
+$\sd_\sigma(F)=\max\{\lfd(F),\gbdeg_\sigma(F)\}$.
+\end{theorem}
+
+Steiner~\cite[Lemma~7.4]{steiner24} proves the upper bound for the degree
+reverse lexicographic order with a single-matrix variant of the last fall
+degree. Gorla, Mueller and Petit~\cite[Thm.~4]{gmp21} treat systems with a
+simple zero. Two consequences need nothing about the systems:
+\begin{itemize}
+\item every lower bound on the LFD is a lower bound on the solving degree,
+ for every degree-compatible order;
+\item for a unit ideal the reduced basis is $\{1\}$, so $\sd_\sigma=\lfd$.
+\end{itemize}
+For proper ideals, the second term is controlled by the cube structure of
+the inputs.
+
+\begin{lemma}[Gr\"obner degree on a cube; written proof]\label{lem:cube}
+Let $F$ contain the chain equations $G_{m,k}$ over a field with $2\ne0$,
+or all Boolean equations $Z_v^2-Z_v$. Let $r$ be the number of variables,
+$Z$ the zero set of $F$ over an algebraic closure, and $\sigma$
+degree-compatible. Then:
+\begin{enumerate}
+\item $\dim_K A/\Id=|Z|$;
+\item every minimal generator of the initial ideal $\mathrm{in}_\sigma(\Id)$
+ is a square $u_v^2$ or squarefree;
+\item a squarefree minimal generator of degree $d$ satisfies $2^d-1\le|Z|$.
+\end{enumerate}
+Hence $\gbdeg_\sigma(F)\le\max\bigl(2,\min(r,\lfloor\log_2(|Z|+1)\rfloor)\bigr)$
+when $\Id\ne A$.
+\end{lemma}
+\begin{proof}
+\emph{Item 2.} The leading monomials $u_v^2$ of the cube equations are
+pairwise coprime, so these equations form a Gr\"obner basis whose standard
+monomials are the squarefree ones (Lemma~\ref{lem:leading}). A minimal
+generator divisible by some $u_v^2$ equals $u_v^2$; otherwise it is
+squarefree, of degree at most $r$.
+
+\emph{Item 1.} After extending scalars to the algebraic closure $L$, the
+cube equations have exactly $2^r$ zeros, and
+$(A/(G))\otimes L\cong L^{2^r}$. So $(A/\Id)\otimes L$ is a quotient of
+$L^{2^r}$, namely $L^{|Z|}$.
+
+\emph{Item 3.} The $2^d-1$ proper divisors of a squarefree minimal
+generator of degree $d$ are standard, and the standard monomials form a
+basis of $A/\Id$. Reduced basis elements have the degrees of their leading
+monomials because $\sigma$ is degree-compatible.
+\end{proof}
+
+For Boolean point sets, the facts that standard monomials are squarefree
+and form a down-set of size $|Z|$ are standard~\cite{meszaros19}. The
+bound $\gbdeg\le|Z|$ is folklore. We found no statement of the logarithmic
+form, but it is elementary and we claim no novelty for it.
+
+\begin{lemma}[Two-summand solution count; written proof]\label{lem:count2}
+Let $p>3$ and $E$ be nonsingular, $t$ arbitrary, and the factor base a
+coset $cH$ of the $2^k$-th roots of unity. Then the two-summand chain system
+has $|Z|\le2^{k+1}$. The same bound holds, with $k=\min(\dim W_1,\dim W_2)$,
+for binary two-summand systems with $b\ne0$.
+\end{lemma}
+\begin{proof}
+For fixed $x_1$, the coefficient of $X^2$ in $S_3(x_1,X,t)$ is
+$(x_1-t)^2$, so for $x_1\ne t$ there are at most two roots.
+
+For $x_1=t$ the polynomial is $-4(t^3+at+b)X+(t^4-2at^2-8bt+a^2)$. If
+$t^3+at+b=0$, the constant equals $(3t^2+a)^2$, which is nonzero on a
+nonsingular curve, so this row contributes at most one root.
+
+In characteristic $2$, for $x_1=t$ the polynomial is $t^2X+t^4+b$, which
+is linear for $t\ne0$ and is the nonzero constant $b$ for $t=0$.
+\end{proof}
+
+\begin{theorem}[Solving-degree bounds; written proof on top of kernel-checked bounds]\label{thm:sd}
+Let $\sigma$ be any degree-compatible term order.
+\begin{enumerate}
+\item \emph{Two summands.} The normalized chain presentation, for
+ $k\ge2$, $p>3$, a nonsingular curve, any target and a subgroup or coset
+ base, satisfies $\lfd\le\sd_\sigma\le\max(\lfd,k+1)\le k+2$.
+\item \emph{Binary two summands.} The binary two-summand descent, with
+ $b\ne0$ and $\min(k,\ell)\ge1$, satisfies
+ $\sd_\sigma\le\max(\lfd,\min(k,\ell)+1)$.
+\item \emph{Direct $m$-summand prime systems.} These satisfy
+ $\sd_\sigma\le\max(\lfd,mk)\le mk+1$, so wherever $\lfd=mk+1$, also
+ $\sd_\sigma=mk+1$.
+\item \emph{Equality.} In general $\sd_\sigma=\lfd$ whenever $Z=\emptyset$
+ or $\lfd\ge\max(2,\lfloor\log_2(|Z|+1)\rfloor)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:cg} with Lemmas~\ref{lem:cube} and~\ref{lem:count2}.
+
+For item~1, $2^d-1\le2^{k+1}$ forces $d\le k+1$, and
+Theorem~\ref{thm:selector} gives $\lfd\le k+2$. A coset base is a subgroup
+base over $K(c)$ for the rescaled curve $(a/c^2,b/c^3)$, since
+$S_3(cx_1,cx_2,x_3;a,b)=c^4S_3(x_1,x_2,x_3/c;a/c^2,b/c^3)$.
+
+For item~3, the normalized generator is squarefree, so $\delta\le mk$, and
+Theorem~\ref{thm:chain} applies.
+
+The written proofs, with the review that corrected them, are in
+\code{docs/\allowbreak{}proofs/\allowbreak{}N10-solving-degree.md}.
+\end{proof}
+
+With Theorem~\ref{thm:growth}, the solving degree of the unit-ideal
+instances of that theorem is unbounded in the depth. With
+Theorem~\ref{thm:carry}, the solving degree of three-summand systems is at
+least $7$ at every $k\ge3$ when $5t^3+3at+6b\ne0$. Both hold for every
+degree-compatible order.
+
+\paragraph{The systems of this paper.} We applied
+Theorem~\ref{thm:sd}(4) to every system with an exact LFD and a stored
+solution set or solution count: \SDSYSTEMS{} systems. Where it did not
+settle the question, and on every proper system with at most $3000$
+solutions anyway, we computed $\gbdeg$ exactly. The computation
+(\code{csd/ic\_solving\_degree.py}) is Buchberger--M\"oller on the
+squarefree staircase: a monomial is standard exactly when its evaluation
+vector on $Z$ is independent of those of the smaller standard monomials.
+It uses both the degree reverse lexicographic order (DRL) and graded-lex,
+following a protocol frozen before the first computation. The results are
+in Table~\ref{tab:sd}.
+\begin{itemize}
+\item \emph{Settled.} The solving degree is determined on \SDKNOWN{} of the
+ systems and equals the LFD on \SDEQUAL{}. Of these, \SDUNIT{} have no
+ solutions, \SDCOUNT{} meet the counting condition and \SDCOMPUTED{} needed
+ the computation.
+\item \emph{Above the LFD.} It is larger on eight systems.
+ \begin{itemize}
+ \item Two are binary systems of the sweep with $\lfd=0$: the input list is
+  already closed, and $\sd=\gbdeg=2$.
+ \item Six are binary two-summand descents over $\F_{2^{11}}$ to
+  $\F_{2^{14}}$ with $k=8$ or $10$ and $129$ to $197$ solutions. On these,
+  $\lfd=3$ and the reduced basis has elements of degree $4$ in both orders,
+  so $\sd=4=\lfd+1$.
+ \end{itemize}
+\item \emph{Beyond the cap.} Five binary systems at dimension $12$ and
+ $13$, with $4004$ to $8234$ solutions, exceed the cap of $3000$ fixed in
+ the protocol. A separate run after the protocol was frozen computed them
+ as well: $\gbdeg_{\mathrm{DRL}}\in\{5,6\}$ and graded-lex at most
+ $\lfd$, so $\sd=\lfd$ there too. They are counted above and labelled in
+ the records.
+\end{itemize}
+
+On the deep prime instances the reduced basis has low degree:
+\begin{itemize}
+\item at $k=13$, $\lfd=6$: $\gbdeg_{\mathrm{DRL}}=3$ over $p=114689$
+ ($594$ solutions) and $4$ over $p=65537$ ($1028$ solutions);
+ graded-lex $4$ on both;
+\item at $k=14$, $\lfd=7$, over $p=114689$ ($2370$ solutions):
+ $\gbdeg=4$ in both orders;
+\item the unit instances have $\gbdeg=0$.
+\end{itemize}
+So the exact two-summand values of Table~\ref{tab:profile} are also exact
+solving degrees: $4$ for $k\le5$, $5$ for $k=6,\ldots,9$ and $6$ for
+$k=10,\ldots,13$, and $7$ at $k=14$ as far as the LFD is exact there. On
+the unit instances this holds for every degree-compatible order; on the
+proper instances at $k=13$ and $14$ it is shown for DRL and graded-lex.
+The checks are in Appendix~\ref{app:checks}.
+
+\begin{table}[ht]
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Solving degree of the exact-LFD systems. \emph{Unit}: no
+solution. \emph{Count}: the condition of Theorem~\ref{thm:sd}(4) holds.
+\emph{Computed}: $\gbdeg$ computed exactly (Theorem~\ref{thm:sd}(4) fails). The last two columns show the
+largest $\gbdeg_{\mathrm{DRL}}$ computed and the number of systems with
+$\sd>\lfd$.}
+\label{tab:sd}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
+\midrule
+\SDTABLEROWS
+\bottomrule
+\end{tabular}
+\end{table}
+
 \section{Limitations}\label{sec:limitations}
 \begin{itemize}
+\item \emph{Solving degree.} Section~\ref{sec:solving} concerns the
+ solving degree of Caminata and Gorla, of Macaulay and MutantXL type, not
+ the larger static degree of plain XL. It
+ says nothing directly about the step degrees of F4 or F5 runs or about
+ the cost of the linear algebra beyond the degree. Five binary systems with
+ more solutions than the frozen cap of $3000$ were computed after the
+ protocol was frozen, and on proper prime instances at $k=13,14$ only two
+ orders were computed. The
+ Gr\"obner-basis degrees come from one implementation. Singular agrees
+ with it on a sample of 182 systems, and PolyBoRi on every computed binary
+ system. The prime degrees at depth nine and at $k=13,14$ have no second
+ engine (Appendix~\ref{app:checks}).
 \item \emph{The value $7$ at $k=14$.} The lower bound $\lfd\ge7$ rests on
  closed degree-$6$ closures of four instances from one engine (on each unit
  instance two runs with equal basis hashes and an independent check of the
@@ -2270,6 +2512,11 @@ $m=4$, $k=4$, the generator has smaller degree and the measured value is
 $13$, below the bound $17$. A tight upper bound for the two-summand profile
 remains open. Section~\ref{sec:future} describes the steps needed to
 address it.
+
+For these cube systems the solving degree in the sense of Caminata and
+Gorla is the LFD up to a Gr\"obner-basis degree of order $\log_2|Z|$. It is
+at most $k+2$ for two summands, and on the systems computed it equals the
+LFD except on eight, where it is larger by at most two.
 
 \appendix
 \small
@@ -2531,6 +2778,36 @@ the reference engine at $k=10,\ldots,13$ for $D=5$ and the part ranks at
 $k=10$ for $D=6$ (hashes are not comparable across primes); the
 cross-checks in the other direction are in Appendix~\ref{app:engines}.
 
+\paragraph{Solving degree.} The Gr\"obner-basis degrees of
+Section~\ref{sec:solving} come from the Buchberger--M\"oller computation on
+the squarefree staircase. Four checks were run on them.
+\begin{itemize}
+\item \emph{Singular.} We compared 192 systems with Singular's \texttt{std}
+ (degree reverse lexicographic order): 150 seeded sweep systems, the 32
+ systems at depths eight and nine, the eight systems with $\sd>\lfd$, and the
+ two proper instances at $k=13$. On all 182 that finished, Singular agrees
+ with the staircase in the maximal degree, the leading monomials and the
+ dimension $|Z|$. Eight depth-nine systems ($18$ variables) did not finish
+ within $20$ minutes each, and the two $k=13$ instances ($26$ variables) not
+ within $40$ minutes. The six binary two-summand systems with $\sd>\lfd$
+ ($16$ and $20$ variables) finished in at most $20$ seconds each and
+ confirm $\gbdeg=4$.
+\item \emph{PolyBoRi.} The graded lexicographic degrees agree on all 2{,}352
+ computed binary systems, including all eight with $\sd>\lfd$. The Boolean
+ ring imposes the field equations implicitly, so we add the square $u^2$ of
+ each standard variable before comparing.
+\item \emph{Mutant closure.} A dense implementation of~\cite[Def.~1.1]{cg} gives $\sd$ directly. It agrees with
+ $\max(\lfd,\gbdeg)$ on all 40 systems with at most eight variables. Its
+ first version failed on 29 of the 40 because it ordered the Macaulay
+ columns by increasing degree; the reduction needs them in decreasing
+ degree.
+\item \emph{Solution sets and the bound.} Brute-force enumeration
+ reproduces $Z$ on 100 prime sweep systems, and $|Z|\le2^{k+1}$ holds on all
+ 1{,}932 two-summand systems.
+\end{itemize}
+So the prime Gr\"obner degrees at depth nine and at $k=13,14$ rest on the
+staircase computation alone.
+
 \section{Data and artifacts}\label{app:data}
 The companion repository holds the records and verification reports:
 \begin{center}
@@ -2575,6 +2852,7 @@ Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experi
 Four and five summands (exact closures) & \code{experiments/\allowbreak{}ic-bounds-msummands/}\\
 Binary grids and laws & \code{experiments/\allowbreak{}ic-bounds-binary/}, \code{experiments/\allowbreak{}ic-bounds-binary-law/}, \code{experiments/\allowbreak{}ic-bounds-binary-deep/}\\
 Ordinary-ring validation & \code{experiments/\allowbreak{}ic-curve-validation/}\\
+Solving degree (Section~\ref{sec:solving}) & \code{experiments/\allowbreak{}ic-solving-degree/} (\code{PROTOCOL.md}, \code{rows-merged.jsonl}, \code{summary.json}, \code{checks.json}); proofs \code{docs/proofs/N10-solving-degree.md}\\
 Unpublished binary draft (Remark~\ref{rem:binarydraft}) & \code{paper/binary-lfd.tex}\\
 \bottomrule
 \end{tabular}
@@ -2642,6 +2920,9 @@ Journal of Symbolic Computation 109 (2022), 386--398.
 \emph{Solving degree bounds for iterated polynomial systems}.
 IACR Transactions on Symmetric Cryptology 2024(1), 357--411.
 \href{https://arxiv.org/abs/2310.03637}{arXiv:2310.03637}.
+\bibitem{meszaros19} T. M\'esz\'aros.
+\emph{Standard monomials and extremal point sets}.
+\href{https://arxiv.org/abs/1908.03045}{arXiv:1908.03045}, 2019.
 \bibitem{kw19} T. Kousidis and A. Wiemers.
 \emph{On the first fall degree of summation polynomials}.
 Journal of Mathematical Cryptology 13(3--4) (2019), 229--237.

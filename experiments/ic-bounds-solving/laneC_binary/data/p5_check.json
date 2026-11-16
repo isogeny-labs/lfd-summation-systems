@@ -1,0 +1,91 @@
+{
+ "m2": {
+  "by_k": {
+   "2": {
+    "eq": 30,
+    "gt": 52
+   },
+   "3": {
+    "eq": 22,
+    "gt": 41
+   },
+   "4": {
+    "eq": 22,
+    "gt": 38
+   },
+   "5": {
+    "eq": 11,
+    "gt": 31
+   },
+   "6": {
+    "eq": 14,
+    "gt": 62
+   },
+   "7": {
+    "eq": 8,
+    "gt": 48
+   },
+   "8": {
+    "eq": 1,
+    "gt": 8,
+    "lb>LFD": 34
+   },
+   "9": {
+    "eq": 3,
+    "lb>LFD": 43
+   },
+   "10": {
+    "eq": 9,
+    "lb>LFD": 53
+   }
+  },
+  "dfull_lt_lfd": [],
+  "dstar_gt_dfull": [],
+  "exact_dfull_rows": 400,
+  "lower_bound_rows": 130,
+  "rows": 2469
+ },
+ "m3-direct": {
+  "by_k": {
+   "2": {
+    "eq": 28,
+    "gt": 173
+   },
+   "3": {
+    "gt": 231
+   },
+   "4": {
+    "gt": 255
+   },
+   "5": {
+    "lb>LFD": 8
+   }
+  },
+  "dfull_lt_lfd": [],
+  "dstar_gt_dfull": [],
+  "exact_dfull_rows": 687,
+  "lower_bound_rows": 8,
+  "rows": 695
+ },
+ "m3-split": {
+  "by_k": {
+   "2": {
+    "eq": 2,
+    "gt": 37,
+    "lb>LFD": 9
+   },
+   "3": {
+    "gt": 14,
+    "lb>LFD": 40
+   },
+   "4": {
+    "lb>LFD": 37
+   }
+  },
+  "dfull_lt_lfd": [],
+  "dstar_gt_dfull": [],
+  "exact_dfull_rows": 53,
+  "lower_bound_rows": 86,
+  "rows": 608
+ }
+}

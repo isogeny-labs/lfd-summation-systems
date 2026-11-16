@@ -1,0 +1,162 @@
+{
+ "p": 65537,
+ "k": 3,
+ "a": 17881,
+ "b": 16412,
+ "t": 56632,
+ "delta": 6,
+ "n_zeros_on_H3": 0,
+ "unit": true,
+ "locus5": false,
+ "inverse_verified_by_convolution": true,
+ "maxwt_ginv": 9,
+ "top_coeff_zero": false,
+ "top_coeff": 21156,
+ "zeros_per_weight": {
+  "0": [
+   0,
+   1
+  ],
+  "1": [
+   0,
+   9
+  ],
+  "2": [
+   0,
+   36
+  ],
+  "3": [
+   0,
+   84
+  ],
+  "4": [
+   0,
+   126
+  ],
+  "5": [
+   0,
+   126
+  ],
+  "6": [
+   0,
+   84
+  ],
+  "7": [
+   0,
+   36
+  ],
+  "8": [
+   0,
+   9
+  ],
+  "9": [
+   0,
+   1
+  ]
+ },
+ "predicted_sd": 15,
+ "generic_sd": 15,
+ "seconds": 2406.0,
+ "sd_bruteforce": 15,
+ "sd_profile": [
+  {
+   "D": 0,
+   "rank": 0,
+   "one_in_Mac": false,
+   "seconds": 0.0
+  },
+  {
+   "D": 1,
+   "rank": 0,
+   "one_in_Mac": false,
+   "seconds": 0.0
+  },
+  {
+   "D": 2,
+   "rank": 9,
+   "one_in_Mac": false,
+   "seconds": 0.0
+  },
+  {
+   "D": 3,
+   "rank": 90,
+   "one_in_Mac": false,
+   "seconds": 0.0
+  },
+  {
+   "D": 4,
+   "rank": 459,
+   "one_in_Mac": false,
+   "seconds": 0.0
+  },
+  {
+   "D": 5,
+   "rank": 1620,
+   "one_in_Mac": false,
+   "seconds": 0.0
+  },
+  {
+   "D": 6,
+   "rank": 4540,
+   "one_in_Mac": false,
+   "seconds": 0.02
+  },
+  {
+   "D": 7,
+   "rank": 10948,
+   "one_in_Mac": false,
+   "seconds": 0.04
+  },
+  {
+   "D": 8,
+   "rank": 23845,
+   "one_in_Mac": false,
+   "seconds": 0.09
+  },
+  {
+   "D": 9,
+   "rank": 48238,
+   "one_in_Mac": false,
+   "seconds": 0.45
+  },
+  {
+   "D": 10,
+   "rank": 92122,
+   "one_in_Mac": false,
+   "seconds": 6.78
+  },
+  {
+   "D": 11,
+   "rank": 167830,
+   "one_in_Mac": false,
+   "seconds": 30.37
+  },
+  {
+   "D": 12,
+   "rank": 293884,
+   "one_in_Mac": false,
+   "seconds": 129.54
+  },
+  {
+   "D": 13,
+   "rank": 497410,
+   "one_in_Mac": false,
+   "seconds": 293.92
+  },
+  {
+   "D": 14,
+   "rank": 817189,
+   "one_in_Mac": false,
+   "seconds": 621.38
+  },
+  {
+   "D": 15,
+   "rank": 1307504,
+   "one_in_Mac": true,
+   "seconds": 1323.17
+  }
+ ],
+ "status": "ok",
+ "maxrss_MB": 528,
+ "sd_matches_prediction": true
+}

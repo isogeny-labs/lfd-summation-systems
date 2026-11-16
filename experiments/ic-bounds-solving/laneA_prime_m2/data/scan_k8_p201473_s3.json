@@ -1,0 +1,49 @@
+{
+ "k": 8,
+ "p": 201473,
+ "seed": 3,
+ "tries": 1,
+ "n_unit": 1,
+ "unit_rate": 1.0,
+ "wall_sec": 547.8,
+ "sec_inverse": 0.0,
+ "sec_bruteforce": 0.0,
+ "sec_dlf": 547.8,
+ "rows": [
+  {
+   "p": 201473,
+   "a": 58126,
+   "b": 93328,
+   "t": 135541,
+   "k": 8,
+   "sd_inverse": 18,
+   "maxwt": 16,
+   "zero_top_coeff": false,
+   "zeros_per_weight": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "nzeros": 0,
+   "inverse_verified": true,
+   "sd_bruteforce": null,
+   "d_lf": 5,
+   "d_ff": 4,
+   "d_lf_source": "quotient closure (lf_quotient.py, exact)"
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="sans-serif" font-size="11">
+<rect width="760" height="480" fill="#ffffff"/>
+<text x="60" y="22" font-size="13" font-weight="600">Binary m=2, proper ideals: LFD vs static Macaulay degree d_full vs k</text>
+<line x1="60" x2="570" y1="425.0" y2="425.0" stroke="#e5e5e5"/><text x="54" y="429.0" text-anchor="end" fill="#444">0</text>
+<line x1="60" x2="570" y1="388.3333333333333" y2="388.3333333333333" stroke="#e5e5e5"/><text x="54" y="392.3333333333333" text-anchor="end" fill="#444">2</text>
+<line x1="60" x2="570" y1="351.6666666666667" y2="351.6666666666667" stroke="#e5e5e5"/><text x="54" y="355.6666666666667" text-anchor="end" fill="#444">4</text>
+<line x1="60" x2="570" y1="315.0" y2="315.0" stroke="#e5e5e5"/><text x="54" y="319.0" text-anchor="end" fill="#444">6</text>
+<line x1="60" x2="570" y1="278.33333333333337" y2="278.33333333333337" stroke="#e5e5e5"/><text x="54" y="282.33333333333337" text-anchor="end" fill="#444">8</text>
+<line x1="60" x2="570" y1="241.66666666666669" y2="241.66666666666669" stroke="#e5e5e5"/><text x="54" y="245.66666666666669" text-anchor="end" fill="#444">10</text>
+<line x1="60" x2="570" y1="205.0" y2="205.0" stroke="#e5e5e5"/><text x="54" y="209.0" text-anchor="end" fill="#444">12</text>
+<line x1="60" x2="570" y1="168.33333333333337" y2="168.33333333333337" stroke="#e5e5e5"/><text x="54" y="172.33333333333337" text-anchor="end" fill="#444">14</text>
+<line x1="60" x2="570" y1="131.66666666666669" y2="131.66666666666669" stroke="#e5e5e5"/><text x="54" y="135.66666666666669" text-anchor="end" fill="#444">16</text>
+<line x1="60" x2="570" y1="95.0" y2="95.0" stroke="#e5e5e5"/><text x="54" y="99.0" text-anchor="end" fill="#444">18</text>
+<line x1="60" x2="570" y1="58.33333333333337" y2="58.33333333333337" stroke="#e5e5e5"/><text x="54" y="62.33333333333337" text-anchor="end" fill="#444">20</text>
+<text x="60.0" y="441" text-anchor="middle" fill="#444">2</text>
+<text x="123.75" y="441" text-anchor="middle" fill="#444">3</text>
+<text x="187.5" y="441" text-anchor="middle" fill="#444">4</text>
+<text x="251.25" y="441" text-anchor="middle" fill="#444">5</text>
+<text x="315.0" y="441" text-anchor="middle" fill="#444">6</text>
+<text x="378.75" y="441" text-anchor="middle" fill="#444">7</text>
+<text x="442.5" y="441" text-anchor="middle" fill="#444">8</text>
+<text x="506.25" y="441" text-anchor="middle" fill="#444">9</text>
+<text x="570.0" y="441" text-anchor="middle" fill="#444">10</text>
+<text x="315.0" y="468" text-anchor="middle" fill="#222">k  (r = 2k variables)</text>
+<text x="14" y="232.5" transform="rotate(-90 14 232.5)" text-anchor="middle" fill="#222">degree</text>
+<polygon points="60.0,370.0 123.75,370.0 187.5,351.6666666666667 251.25,351.6666666666667 315.0,351.6666666666667 378.75,351.6666666666667 442.5,351.6666666666667 506.25,351.6666666666667 570.0,333.33333333333337 570.0,370.0 506.25,370.0 442.5,370.0 378.75,370.0 315.0,370.0 251.25,388.3333333333333 187.5,388.3333333333333 123.75,388.3333333333333 60.0,425.0" fill="#0072B2" opacity="0.15"/>
+<polyline fill="none" stroke="#0072B2" stroke-width="1.8" points="60.0,388.3333333333333 123.75,370.0 187.5,370.0 251.25,370.0 315.0,370.0 378.75,351.6666666666667 442.5,351.6666666666667 506.25,351.6666666666667 570.0,351.6666666666667"/>
+<circle cx="60.0" cy="388.3333333333333" r="3.5" fill="#0072B2"/>
+<circle cx="123.75" cy="370.0" r="3.5" fill="#0072B2"/>
+<circle cx="187.5" cy="370.0" r="3.5" fill="#0072B2"/>
+<circle cx="251.25" cy="370.0" r="3.5" fill="#0072B2"/>
+<circle cx="315.0" cy="370.0" r="3.5" fill="#0072B2"/>
+<circle cx="378.75" cy="351.6666666666667" r="3.5" fill="#0072B2"/>
+<circle cx="442.5" cy="351.6666666666667" r="3.5" fill="#0072B2"/>
+<circle cx="506.25" cy="351.6666666666667" r="3.5" fill="#0072B2"/>
+<circle cx="570.0" cy="351.6666666666667" r="3.5" fill="#0072B2"/>
+<polygon points="60.0,370.0 123.75,351.6666666666667 187.5,351.6666666666667 251.25,351.6666666666667 315.0,333.33333333333337 378.75,333.33333333333337 442.5,333.33333333333337 506.25,315.0 570.0,296.6666666666667 570.0,315.0 506.25,333.33333333333337 442.5,333.33333333333337 378.75,351.6666666666667 315.0,370.0 251.25,370.0 187.5,388.3333333333333 123.75,388.3333333333333 60.0,388.3333333333333" fill="#009E73" opacity="0.15"/>
+<polyline fill="none" stroke="#009E73" stroke-width="1.8" points="60.0,388.3333333333333 123.75,370.0 187.5,370.0 251.25,351.6666666666667 315.0,351.6666666666667 378.75,333.33333333333337 442.5,333.33333333333337 506.25,333.33333333333337 570.0,315.0"/>
+<rect x="56.5" y="384.8333333333333" width="7" height="7" fill="#009E73"/>
+<rect x="120.25" y="366.5" width="7" height="7" fill="#009E73"/>
+<rect x="184.0" y="366.5" width="7" height="7" fill="#009E73"/>
+<rect x="247.75" y="348.1666666666667" width="7" height="7" fill="#009E73"/>
+<rect x="311.5" y="348.1666666666667" width="7" height="7" fill="#009E73"/>
+<rect x="375.25" y="329.83333333333337" width="7" height="7" fill="#009E73"/>
+<rect x="439.0" y="329.83333333333337" width="7" height="7" fill="#009E73"/>
+<rect x="502.75" y="329.83333333333337" width="7" height="7" fill="#009E73"/>
+<rect x="566.5" y="311.5" width="7" height="7" fill="#009E73"/>
+<polygon points="60.0,351.6666666666667 123.75,333.33333333333337 187.5,315.0 251.25,296.6666666666667 315.0,278.33333333333337 378.75,260.0 442.5,241.66666666666669 442.5,260.0 378.75,278.33333333333337 315.0,296.6666666666667 251.25,315.0 187.5,333.33333333333337 123.75,351.6666666666667 60.0,370.0" fill="#D55E00" opacity="0.15"/>
+<polyline fill="none" stroke="#D55E00" stroke-width="1.8" points="60.0,370.0 123.75,351.6666666666667 187.5,333.33333333333337 251.25,315.0 315.0,296.6666666666667 378.75,278.33333333333337 442.5,260.0"/>
+<path d="M60.0 365.5 l4.5 8 h-9 z" fill="#D55E00"/>
+<path d="M123.75 347.1666666666667 l4.5 8 h-9 z" fill="#D55E00"/>
+<path d="M187.5 328.83333333333337 l4.5 8 h-9 z" fill="#D55E00"/>
+<path d="M251.25 310.5 l4.5 8 h-9 z" fill="#D55E00"/>
+<path d="M315.0 292.1666666666667 l4.5 8 h-9 z" fill="#D55E00"/>
+<path d="M378.75 273.83333333333337 l4.5 8 h-9 z" fill="#D55E00"/>
+<path d="M442.5 255.5 l4.5 8 h-9 z" fill="#D55E00"/>
+<path d="M506.25 282.83333333333337 l4.5 -8 h-9 z" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<path d="M570.0 301.1666666666667 l4.5 -8 h-9 z" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+<polyline fill="none" stroke="#555555" stroke-width="1.5" stroke-dasharray="5 3" points="60.0,333.33333333333337 123.75,296.6666666666667 187.5,260.0 251.25,223.33333333333331 315.0,186.66666666666666 378.75,150.0 442.5,113.33333333333331 506.25,76.66666666666669 570.0,40.0"/>
+<rect x="584" y="42" width="10" height="10" fill="#0072B2"/><text x="600" y="51">LFD (median, min-max band)</text>
+<rect x="584" y="60" width="10" height="10" fill="#009E73"/><text x="600" y="69">semi-regular d_reg(r_eff, m_eff)</text>
+<rect x="584" y="78" width="10" height="10" fill="#D55E00"/><text x="600" y="87">d_full exact (scanned systems)</text>
+<path d="M589 96 l4.5 8 h-9 z" fill="none" stroke="#D55E00" stroke-width="1.5"/><text x="600" y="105">d_full lower bound only</text>
+<text x="600" y="123" fill="#555555">- - kernel bound r+1 = 2k+1</text>
+<text x="584" y="425" font-size="9" fill="#666">[pcc:unverified]</text></svg>
