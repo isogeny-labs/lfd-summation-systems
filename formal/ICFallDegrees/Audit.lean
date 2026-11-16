@@ -685,3 +685,14 @@ import ICFallDegrees
 #print axioms ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window_of_det
 #print axioms ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window
 #print axioms ICFallDegrees.GrowthSharpPrimeBound.strict_improvement
+
+#print axioms ICFallDegrees.GrowthRationalPrimeNative.parameter_native_box_spread
+#print axioms ICFallDegrees.GrowthRationalPrimeNative.not_one_of_large_prime
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_bound
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.value_ne_zero_complex
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_ne_zero
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_mod_prime
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.unit_prime
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.denominator_and_parameter_guards
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.prime_lfd_window
+#print axioms ICFallDegrees.GrowthRationalPrimeCutoff.rational_prime_growth

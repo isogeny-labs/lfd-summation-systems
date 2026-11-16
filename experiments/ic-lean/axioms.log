@@ -861,3 +861,25 @@
 'ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window_of_det' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ICFallDegrees.GrowthSharpPrimeBound.strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeNative.parameter_native_box_spread' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeNative.not_one_of_large_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.value_ne_zero_complex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_mod_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.unit_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.denominator_and_parameter_guards' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.prime_lfd_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthRationalPrimeCutoff.rational_prime_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

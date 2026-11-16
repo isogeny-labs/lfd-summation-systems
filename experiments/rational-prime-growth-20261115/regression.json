@@ -1,0 +1,835 @@
+{
+  "source_sha256": "3164852aa93dffbc87c98bc72bc4371109c0bf43926e3cafebaab262d76ea876",
+  "rows": [
+    {
+      "a": "-5/2",
+      "k": 2,
+      "determinant": "-669375",
+      "cutoff": "531726889113641",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-5/2",
+      "k": 3,
+      "determinant": "-743112550209248219109375",
+      "cutoff": "312258684834773939235474908816120786113437515297597030689",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-2",
+      "k": 2,
+      "determinant": "-375",
+      "cutoff": "688747551",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-2",
+      "k": 3,
+      "determinant": "-1343091375",
+      "cutoff": "879023057994883196072409366855959",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 3,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-1/2",
+      "k": 2,
+      "determinant": "-2777109375",
+      "cutoff": "29648323021629473",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-1/2",
+      "k": 3,
+      "determinant": "-1198808983180284738454770794769287109375",
+      "cutoff": "3018287251901077291909343452521604778413622167622615323928822041",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 4,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 2,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "0",
+      "k": 2,
+      "determinant": "-710775",
+      "cutoff": "2441406250015",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "0",
+      "k": 3,
+      "determinant": "-144581864103800973939375",
+      "cutoff": "138777878078144567552953958511352539062500000023",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 4,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "1/2",
+      "k": 2,
+      "determinant": "-301107909375",
+      "cutoff": "735195677817154603",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "1/2",
+      "k": 3,
+      "determinant": "-466530355214414479666069962133119017432709375",
+      "cutoff": "1141226415238631013342595106142679434109481327357830839171567315517731",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "2",
+      "k": 2,
+      "determinant": "3446015625",
+      "cutoff": "531726889113641",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "2",
+      "k": 3,
+      "determinant": "326384717708768564930845811187744140625",
+      "cutoff": "312258684834773939235474908816120786113437515297597030689",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "6",
+      "k": 2,
+      "determinant": "279791370354825",
+      "cutoff": "735195677817154621",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "6",
+      "k": 3,
+      "determinant": "6276960852589902792144572677844567380568550753256078220625",
+      "cutoff": "1141226415238631013342595106142679434109481327357830839171567315517749",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 1,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "1/17",
+      "k": 2,
+      "determinant": "-45060824480100529471488000",
+      "cutoff": "143250188643139157714340624203908",
+      "cells": [
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "1/17",
+      "k": 3,
+      "determinant": "-1667777021349712034874520352341176476804645203165379985031616711276843772983455813545096140015271936000",
+      "cutoff": "1644905091562790170714480461491727200454837185373865002188306978142081872314969840198216275715617819650841087190157248216170636",
+      "cells": [
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-3",
+      "k": 2,
+      "determinant": "0",
+      "cutoff": "68719476754",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 7,
+          "nonsingular": false
+        },
+        {
+          "p": 41,
+          "solutions": 7,
+          "nonsingular": false
+        },
+        {
+          "p": 97,
+          "solutions": 7,
+          "nonsingular": false
+        },
+        {
+          "p": 193,
+          "solutions": 7,
+          "nonsingular": false
+        },
+        {
+          "p": 257,
+          "solutions": 7,
+          "nonsingular": false
+        }
+      ]
+    },
+    {
+      "a": "-3",
+      "k": 3,
+      "determinant": "0",
+      "cutoff": "87112285931760246646623899502532662132762",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 15,
+          "nonsingular": false
+        },
+        {
+          "p": 41,
+          "solutions": 15,
+          "nonsingular": false
+        },
+        {
+          "p": 97,
+          "solutions": 15,
+          "nonsingular": false
+        },
+        {
+          "p": 193,
+          "solutions": 15,
+          "nonsingular": false
+        },
+        {
+          "p": 257,
+          "solutions": 15,
+          "nonsingular": false
+        }
+      ]
+    },
+    {
+      "a": "-1",
+      "k": 2,
+      "determinant": "0",
+      "cutoff": "68719476748",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 2,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-1",
+      "k": 3,
+      "determinant": "0",
+      "cutoff": "87112285931760246646623899502532662132756",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 2,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "1",
+      "k": 2,
+      "determinant": "0",
+      "cutoff": "45137758519316",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 1,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "1",
+      "k": 3,
+      "determinant": "0",
+      "cutoff": "16215113385721159092777545458383842972133494227992604",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 3,
+          "nonsingular": true
+        },
+        {
+          "p": 41,
+          "solutions": 2,
+          "nonsingular": true
+        },
+        {
+          "p": 97,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 193,
+          "solutions": 1,
+          "nonsingular": true
+        },
+        {
+          "p": 257,
+          "solutions": 1,
+          "nonsingular": true
+        }
+      ]
+    },
+    {
+      "a": "-3/4",
+      "k": 2,
+      "determinant": "-20511164685375",
+      "cutoff": "778579070010669895717",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 0,
+          "nonsingular": false
+        },
+        {
+          "p": 41,
+          "solutions": 0,
+          "nonsingular": false
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": false
+        },
+        {
+          "p": 193,
+          "solutions": 0,
+          "nonsingular": false
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": false
+        }
+      ]
+    },
+    {
+      "a": "-3/4",
+      "k": 3,
+      "determinant": "-162547781933492462192546259098483474045297553345828741375",
+      "cutoff": "1435393362073871168809299371005722522112996454339776647129051946909844943222866205",
+      "cells": [
+        {
+          "p": 17,
+          "solutions": 5,
+          "nonsingular": false
+        },
+        {
+          "p": 41,
+          "solutions": 2,
+          "nonsingular": false
+        },
+        {
+          "p": 97,
+          "solutions": 0,
+          "nonsingular": false
+        },
+        {
+          "p": 193,
+          "solutions": 2,
+          "nonsingular": false
+        },
+        {
+          "p": 257,
+          "solutions": 0,
+          "nonsingular": false
+        }
+      ]
+    }
+  ],
+  "above_cutoff_units": [
+    {
+      "a": "-5/2",
+      "k": 2,
+      "p": 531726889113697,
+      "cutoff": "531726889113641"
+    },
+    {
+      "a": "-2",
+      "k": 2,
+      "p": 688747721,
+      "cutoff": "688747551"
+    },
+    {
+      "a": "-1/2",
+      "k": 2,
+      "p": 29648323021629577,
+      "cutoff": "29648323021629473"
+    },
+    {
+      "a": "0",
+      "k": 2,
+      "p": 2441406250033,
+      "cutoff": "2441406250015"
+    },
+    {
+      "a": "1/2",
+      "k": 2,
+      "p": 735195677817154649,
+      "cutoff": "735195677817154603"
+    },
+    {
+      "a": "2",
+      "k": 2,
+      "p": 531726889113697,
+      "cutoff": "531726889113641"
+    },
+    {
+      "a": "6",
+      "k": 2,
+      "p": 735195677817154649,
+      "cutoff": "735195677817154621"
+    }
+  ],
+  "grid_checks": 4720,
+  "denominator_rejections": 2,
+  "wrong_constant_disagreements": 4510,
+  "scope": "finite eliminant, denominator and actual S3 checks; k>=24 growth is symbolic Lean evidence"
+}
