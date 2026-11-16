@@ -1,0 +1,50 @@
+{
+ "device": "gpu",
+ "cases": [
+  {
+   "p": 12289,
+   "max_inner": 59652323,
+   "modp_ok": true,
+   "mm_ok": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 65537,
+   "max_inner": 2097151,
+   "modp_ok": true,
+   "mm_ok": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 163841,
+   "max_inner": 335544,
+   "modp_ok": true,
+   "mm_ok": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  {
+   "p": 16777213,
+   "max_inner": 32,
+   "modp_ok": true,
+   "mm_ok": [
+    true,
+    true,
+    true,
+    true
+   ]
+  }
+ ],
+ "passed": true
+}
