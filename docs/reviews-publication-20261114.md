@@ -16,6 +16,8 @@
 >   reviewed changes were merged into `main` (`e16cfb8`) and the submission package was regenerated from
 >   that commit (`paper/eprint-curve-lfd-bounds/EPRINT.md`); the author's confirmations and the
 >   submission itself remain open;
+> - the clean-build gap of the reviewed 582-declaration snapshot was closed by a fresh Linux build
+>   (`experiments/ic-lean/clean-20261114/`); that receipt covers the reviewed snapshot only;
 > - on 16 November 2026 the manuscript was brought to 47 pages by combining the open pull requests (rational
 >   prime-field growth, solving degree, function field and pole orders for targets not of order two); this
 >   review does not cover those additions, and the submission sheet was regenerated;
@@ -210,3 +212,20 @@ introduces no new mechanism, experiment or performance claim.
 
 A stronger assertion that every theorem has been independently rebuilt or
 that every computed value is independently certified is not supported.
+
+## Follow-up: clean build completed
+
+[GitHub run 43648104843](https://github.com/isogeny-labs/lfd-summation-systems/actions/runs/43648104843)
+succeeded on commit `f13c9ed385f0dfb41a982c8494da3b05064c07fd`. All 120 project
+modules compiled from an initially absent project build directory using Lean
+4.19.0 and the pinned Mathlib dependency cache, then the full verifier and
+582-declaration axiom audit passed. All 124 reviewed source hashes and every
+axiom-dependency entry match the earlier report. Per-module logs, the fresh
+report and the receipt are retained in
+`experiments/ic-lean/clean-20261114/`, with a checksum manifest.
+
+This closes remaining item 1 and the original review's build-reproduction
+reservation. The written growth input, the depth-14 certificate limit,
+same-engine binary replication and author submission decisions retain the
+scope stated above. No theorem or experiment result changed. The revised
+PDF remains byte-identical to the reviewed 38-page candidate.

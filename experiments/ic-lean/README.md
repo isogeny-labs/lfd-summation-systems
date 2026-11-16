@@ -74,3 +74,11 @@ The original logs are in `growth-verification-49585b5/`; its reconciliation reco
 shows that the subsequent proper-ideal clarification changes Lean comments only.
 The archived snapshot records the local 636-declaration audit of those
 corrected sources. Properness alone does not refute a numerical LFD lower bound.
+
+## Fresh build of the 582-declaration snapshot, 14 November 2026
+
+[clean-20261114/README.md](clean-20261114/README.md) records a build from an
+empty project directory on a GitHub Linux runner of the snapshot that the
+publication review read: 120 project modules, 582 declarations, 124 source
+digests. It is kept as the receipt of that earlier snapshot. It does not
+cover the modules added since; the current audit is the one described above.

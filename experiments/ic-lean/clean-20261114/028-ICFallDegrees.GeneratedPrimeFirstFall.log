@@ -1,0 +1,42 @@
+⚠ [1150/1249] Replayed ICFallDegrees.SparseCoefficient
+warning: ././././ICFallDegrees/SparseCoefficient.lean:25:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparsePolynomial.meaning_coefficient':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/SparseCoefficient.lean:39:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparsePolynomial.meaning_variable':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1154/1249] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1162/1249] Replayed ICFallDegrees.SparseLowerCertificate
+warning: ././././ICFallDegrees/SparseLowerCertificate.lean:41:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparseLowerCertificate.meaning_project':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/SparseLowerCertificate.lean:59:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparseLowerCertificate.rowCheck_spec':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1246/1249] Replayed ICFallDegrees.LowerCertificateSupport
+warning: ././././ICFallDegrees/LowerCertificateSupport.lean:40:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.LowerCertificateSupport.rowSpace_coefficient_zero':
+  [Nontrivial K]
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/LowerCertificateSupport.lean:49:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.LowerCertificateSupport.rowSpace_no_low':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [1249/1249] Built ICFallDegrees.GeneratedPrimeFirstFall
+Build completed successfully.

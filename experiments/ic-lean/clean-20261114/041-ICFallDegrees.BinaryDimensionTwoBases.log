@@ -1,0 +1,49 @@
+⚠ [1604/1622] Replayed ICFallDegrees.BinaryExtensionFields
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:19:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:20:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:21:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:22:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:29:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1607/1622] Replayed ICFallDegrees.SparseCoefficient
+warning: ././././ICFallDegrees/SparseCoefficient.lean:25:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparsePolynomial.meaning_coefficient':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/SparseCoefficient.lean:39:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparsePolynomial.meaning_variable':
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1610/1622] Replayed ICFallDegrees.FilteredSpan
+warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1611/1622] Replayed ICFallDegrees.SparseLowerCertificate
+warning: ././././ICFallDegrees/SparseLowerCertificate.lean:41:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparseLowerCertificate.meaning_project':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/SparseLowerCertificate.lean:59:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparseLowerCertificate.rowCheck_spec':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1613/1622] Replayed ICFallDegrees.SparseDAG
+warning: ././././ICFallDegrees/SparseDAG.lean:173:38: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [1621/1622] Replayed ICFallDegrees.BinaryDimensionTwoCurves
+warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:2: 'all_goals rfl' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:12: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [1622/1622] Built ICFallDegrees.BinaryDimensionTwoBases
+Build completed successfully.

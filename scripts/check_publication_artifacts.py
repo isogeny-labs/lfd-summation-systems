@@ -43,6 +43,17 @@ def main():
     allowed = {'propext', 'Classical.choice', 'Quot.sound'}
     check('saved audit has only foundational axioms',
           all(set(axioms) <= allowed for axioms in dependencies.values()))
+    clean = root / 'experiments/ic-lean/clean-20261114'
+    if clean.is_dir():
+        # Receipt of the earlier 582-declaration snapshot: only its own files are checked here.
+        # It is not compared with the current audit, which covers later modules.
+        receipt = json.loads((clean / 'receipt.json').read_text())
+        check('archived clean build of the 582-declaration snapshot passed',
+              receipt['status'] == 'passed' and receipt['project_build_directory_absent'] is True and
+              all(s['exit_code'] == 0 for s in receipt['stages']))
+        for name, digest in json.loads((clean / 'artifact-manifest.json').read_text()).items():
+            check(f'archived clean build artifact:{name}',
+                  hashlib.sha256((clean / name).read_bytes()).hexdigest() == digest)
     check('paper build has no warnings or overfull boxes',
           reports['ic-curve-paper']['latex_warnings'] == [] and
           reports['ic-curve-paper']['overfull_boxes'] == 0)

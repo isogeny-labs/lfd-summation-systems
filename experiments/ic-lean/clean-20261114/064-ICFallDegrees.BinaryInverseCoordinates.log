@@ -1,0 +1,51 @@
+⚠ [1352/1352] Built ICFallDegrees.BinaryInverseCoordinates
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:24:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.form_degree':
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:30:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.boolean_degree':
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:34:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.square_form':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:65:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.conjugate_cycle':
+  [Nontrivial K]
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:69:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.target_zero_s3':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.component_reconstruction':
+  [Nontrivial K]
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:128:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.prime_field_fixed':
+  [Nontrivial K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:135:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.form_frobenius':
+  [Nontrivial K]
+  [Algebra (ZMod 2) K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [Algebra (ZMod 2) K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:154:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.mapped_component_degree':
+  [Nontrivial K]
+  [CharP K 2]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial K] [CharP K 2] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully.

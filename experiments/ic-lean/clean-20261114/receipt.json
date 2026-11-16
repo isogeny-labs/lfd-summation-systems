@@ -1,0 +1,1729 @@
+{
+  "status": "passed",
+  "project_build_directory_absent": true,
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "dependency_cache": "pinned Mathlib only",
+  "stages": [
+    {
+      "name": "000-ICFallDegrees.Closure",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.Closure"
+      ],
+      "log": "000-ICFallDegrees.Closure.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.97
+    },
+    {
+      "name": "001-ICFallDegrees.NormalFormBound",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.NormalFormBound"
+      ],
+      "log": "001-ICFallDegrees.NormalFormBound.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.219
+    },
+    {
+      "name": "002-ICFallDegrees.LowerBounds",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.LowerBounds"
+      ],
+      "log": "002-ICFallDegrees.LowerBounds.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.819
+    },
+    {
+      "name": "003-ICFallDegrees.FirstFall",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.FirstFall"
+      ],
+      "log": "003-ICFallDegrees.FirstFall.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.668
+    },
+    {
+      "name": "004-ICFallDegrees.QuadraticFamily",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.QuadraticFamily"
+      ],
+      "log": "004-ICFallDegrees.QuadraticFamily.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.579
+    },
+    {
+      "name": "005-ICFallDegrees.RawPresentation",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.RawPresentation"
+      ],
+      "log": "005-ICFallDegrees.RawPresentation.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.574
+    },
+    {
+      "name": "006-ICFallDegrees.Certificate",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.Certificate"
+      ],
+      "log": "006-ICFallDegrees.Certificate.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.821
+    },
+    {
+      "name": "007-ICFallDegrees.PrimeCounterexample",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PrimeCounterexample"
+      ],
+      "log": "007-ICFallDegrees.PrimeCounterexample.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.923
+    },
+    {
+      "name": "008-ICFallDegrees.PointIdeal",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PointIdeal"
+      ],
+      "log": "008-ICFallDegrees.PointIdeal.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.822
+    },
+    {
+      "name": "009-ICFallDegrees.BooleanPair",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BooleanPair"
+      ],
+      "log": "009-ICFallDegrees.BooleanPair.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.025
+    },
+    {
+      "name": "010-ICFallDegrees.BooleanRaw",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BooleanRaw"
+      ],
+      "log": "010-ICFallDegrees.BooleanRaw.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.724
+    },
+    {
+      "name": "011-ICFallDegrees.BinaryFamily",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryFamily"
+      ],
+      "log": "011-ICFallDegrees.BinaryFamily.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.274
+    },
+    {
+      "name": "012-ICFallDegrees.FiniteQuotient",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.FiniteQuotient"
+      ],
+      "log": "012-ICFallDegrees.FiniteQuotient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.429
+    },
+    {
+      "name": "013-ICFallDegrees.GridQuotient",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GridQuotient"
+      ],
+      "log": "013-ICFallDegrees.GridQuotient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.621
+    },
+    {
+      "name": "014-ICFallDegrees.QuotientLowerBound",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.QuotientLowerBound"
+      ],
+      "log": "014-ICFallDegrees.QuotientLowerBound.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.523
+    },
+    {
+      "name": "015-ICFallDegrees.BooleanSharp",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BooleanSharp"
+      ],
+      "log": "015-ICFallDegrees.BooleanSharp.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.328
+    },
+    {
+      "name": "016-ICFallDegrees.SparsePolynomial",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparsePolynomial"
+      ],
+      "log": "016-ICFallDegrees.SparsePolynomial.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.122
+    },
+    {
+      "name": "017-ICFallDegrees.SparseCertificate",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparseCertificate"
+      ],
+      "log": "017-ICFallDegrees.SparseCertificate.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.869
+    },
+    {
+      "name": "018-ICFallDegrees.SparsePrimeCertificate",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparsePrimeCertificate"
+      ],
+      "log": "018-ICFallDegrees.SparsePrimeCertificate.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.471
+    },
+    {
+      "name": "019-ICFallDegrees.VariableClosure",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.VariableClosure"
+      ],
+      "log": "019-ICFallDegrees.VariableClosure.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.271
+    },
+    {
+      "name": "020-ICFallDegrees.SparseCoefficient",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparseCoefficient"
+      ],
+      "log": "020-ICFallDegrees.SparseCoefficient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.869
+    },
+    {
+      "name": "021-ICFallDegrees.FilteredSpan",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.FilteredSpan"
+      ],
+      "log": "021-ICFallDegrees.FilteredSpan.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.122
+    },
+    {
+      "name": "022-ICFallDegrees.SparseLowerCertificate",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparseLowerCertificate"
+      ],
+      "log": "022-ICFallDegrees.SparseLowerCertificate.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.174
+    },
+    {
+      "name": "023-ICFallDegrees.SparseDAG",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparseDAG"
+      ],
+      "log": "023-ICFallDegrees.SparseDAG.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.622
+    },
+    {
+      "name": "024-ICFallDegrees.LowerCertificateSupport",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.LowerCertificateSupport"
+      ],
+      "log": "024-ICFallDegrees.LowerCertificateSupport.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.87
+    },
+    {
+      "name": "025-ICFallDegrees.GeneratedPrimeLower",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GeneratedPrimeLower"
+      ],
+      "log": "025-ICFallDegrees.GeneratedPrimeLower.log",
+      "exit_code": 0,
+      "elapsed_seconds": 114.641
+    },
+    {
+      "name": "026-ICFallDegrees.GeneratedPrimeUpper",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GeneratedPrimeUpper"
+      ],
+      "log": "026-ICFallDegrees.GeneratedPrimeUpper.log",
+      "exit_code": 0,
+      "elapsed_seconds": 327.438
+    },
+    {
+      "name": "027-ICFallDegrees.Prime257System",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.Prime257System"
+      ],
+      "log": "027-ICFallDegrees.Prime257System.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.476
+    },
+    {
+      "name": "028-ICFallDegrees.GeneratedPrimeFirstFall",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GeneratedPrimeFirstFall"
+      ],
+      "log": "028-ICFallDegrees.GeneratedPrimeFirstFall.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.427
+    },
+    {
+      "name": "029-ICFallDegrees.HomogeneousFirstFall",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.HomogeneousFirstFall"
+      ],
+      "log": "029-ICFallDegrees.HomogeneousFirstFall.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.873
+    },
+    {
+      "name": "030-ICFallDegrees.QuadraticHomogeneousFamily",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.QuadraticHomogeneousFamily"
+      ],
+      "log": "030-ICFallDegrees.QuadraticHomogeneousFamily.log",
+      "exit_code": 0,
+      "elapsed_seconds": 17.259
+    },
+    {
+      "name": "031-ICFallDegrees.PrimeM2Homogeneous",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PrimeM2Homogeneous"
+      ],
+      "log": "031-ICFallDegrees.PrimeM2Homogeneous.log",
+      "exit_code": 0,
+      "elapsed_seconds": 5.23
+    },
+    {
+      "name": "032-ICFallDegrees.Prime257Homogeneous",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.Prime257Homogeneous"
+      ],
+      "log": "032-ICFallDegrees.Prime257Homogeneous.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.869
+    },
+    {
+      "name": "033-ICFallDegrees.Prime257Counterexample",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.Prime257Counterexample"
+      ],
+      "log": "033-ICFallDegrees.Prime257Counterexample.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.72
+    },
+    {
+      "name": "034-ICFallDegrees.SparseTrustChecks",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparseTrustChecks"
+      ],
+      "log": "034-ICFallDegrees.SparseTrustChecks.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.721
+    },
+    {
+      "name": "035-ICFallDegrees.GeneratedBinaryOrdinary",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GeneratedBinaryOrdinary"
+      ],
+      "log": "035-ICFallDegrees.GeneratedBinaryOrdinary.log",
+      "exit_code": 0,
+      "elapsed_seconds": 6.034
+    },
+    {
+      "name": "036-ICFallDegrees.GeneratedBinaryKoblitz",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GeneratedBinaryKoblitz"
+      ],
+      "log": "036-ICFallDegrees.GeneratedBinaryKoblitz.log",
+      "exit_code": 0,
+      "elapsed_seconds": 7.838
+    },
+    {
+      "name": "037-ICFallDegrees.BinaryExtensionFields",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryExtensionFields"
+      ],
+      "log": "037-ICFallDegrees.BinaryExtensionFields.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.678
+    },
+    {
+      "name": "038-ICFallDegrees.BinaryDescent",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryDescent"
+      ],
+      "log": "038-ICFallDegrees.BinaryDescent.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.226
+    },
+    {
+      "name": "039-ICFallDegrees.BinaryDimensionTwoSystems",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryDimensionTwoSystems"
+      ],
+      "log": "039-ICFallDegrees.BinaryDimensionTwoSystems.log",
+      "exit_code": 0,
+      "elapsed_seconds": 41.502
+    },
+    {
+      "name": "040-ICFallDegrees.BinaryDimensionTwoCurves",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryDimensionTwoCurves"
+      ],
+      "log": "040-ICFallDegrees.BinaryDimensionTwoCurves.log",
+      "exit_code": 0,
+      "elapsed_seconds": 9.248
+    },
+    {
+      "name": "041-ICFallDegrees.BinaryDimensionTwoBases",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryDimensionTwoBases"
+      ],
+      "log": "041-ICFallDegrees.BinaryDimensionTwoBases.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.772
+    },
+    {
+      "name": "042-ICFallDegrees.PowerIdeals",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PowerIdeals"
+      ],
+      "log": "042-ICFallDegrees.PowerIdeals.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.121
+    },
+    {
+      "name": "043-ICFallDegrees.LowDegreeCoefficients",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.LowDegreeCoefficients"
+      ],
+      "log": "043-ICFallDegrees.LowDegreeCoefficients.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.473
+    },
+    {
+      "name": "044-ICFallDegrees.GeneralQuadraticTop",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GeneralQuadraticTop"
+      ],
+      "log": "044-ICFallDegrees.GeneralQuadraticTop.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.629
+    },
+    {
+      "name": "045-ICFallDegrees.GeneralQuadraticClassification",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GeneralQuadraticClassification"
+      ],
+      "log": "045-ICFallDegrees.GeneralQuadraticClassification.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.425
+    },
+    {
+      "name": "046-ICFallDegrees.PrimeM2General",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PrimeM2General"
+      ],
+      "log": "046-ICFallDegrees.PrimeM2General.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.425
+    },
+    {
+      "name": "047-ICFallDegrees.TruncatedFirstFall",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.TruncatedFirstFall"
+      ],
+      "log": "047-ICFallDegrees.TruncatedFirstFall.log",
+      "exit_code": 0,
+      "elapsed_seconds": 15.756
+    },
+    {
+      "name": "048-ICFallDegrees.PrimeM2Truncated",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PrimeM2Truncated"
+      ],
+      "log": "048-ICFallDegrees.PrimeM2Truncated.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.721
+    },
+    {
+      "name": "049-ICFallDegrees.SquareChainRefutation",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SquareChainRefutation"
+      ],
+      "log": "049-ICFallDegrees.SquareChainRefutation.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.472
+    },
+    {
+      "name": "050-ICFallDegrees.QuadraticNoLow",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.QuadraticNoLow"
+      ],
+      "log": "050-ICFallDegrees.QuadraticNoLow.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.377
+    },
+    {
+      "name": "051-ICFallDegrees.PrimeM2Sharp",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PrimeM2Sharp"
+      ],
+      "log": "051-ICFallDegrees.PrimeM2Sharp.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.773
+    },
+    {
+      "name": "052-ICFallDegrees.PrimeFieldConclusions",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PrimeFieldConclusions"
+      ],
+      "log": "052-ICFallDegrees.PrimeFieldConclusions.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.021
+    },
+    {
+      "name": "053-ICFallDegrees.BinaryS3Bounds",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryS3Bounds"
+      ],
+      "log": "053-ICFallDegrees.BinaryS3Bounds.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.872
+    },
+    {
+      "name": "054-ICFallDegrees.LocalReductionBound",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.LocalReductionBound"
+      ],
+      "log": "054-ICFallDegrees.LocalReductionBound.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.427
+    },
+    {
+      "name": "055-ICFallDegrees.CyclicNAF",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.CyclicNAF"
+      ],
+      "log": "055-ICFallDegrees.CyclicNAF.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.57
+    },
+    {
+      "name": "056-ICFallDegrees.CyclicInverseRewrite",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.CyclicInverseRewrite"
+      ],
+      "log": "056-ICFallDegrees.CyclicInverseRewrite.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.973
+    },
+    {
+      "name": "057-ICFallDegrees.BinaryFiber",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryFiber"
+      ],
+      "log": "057-ICFallDegrees.BinaryFiber.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.872
+    },
+    {
+      "name": "058-ICFallDegrees.CyclicCarryWindow",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.CyclicCarryWindow"
+      ],
+      "log": "058-ICFallDegrees.CyclicCarryWindow.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.273
+    },
+    {
+      "name": "059-ICFallDegrees.CyclicProductBridge",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.CyclicProductBridge"
+      ],
+      "log": "059-ICFallDegrees.CyclicProductBridge.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.222
+    },
+    {
+      "name": "060-ICFallDegrees.AffineTransport",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.AffineTransport"
+      ],
+      "log": "060-ICFallDegrees.AffineTransport.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.97
+    },
+    {
+      "name": "061-ICFallDegrees.BinaryTriple",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryTriple"
+      ],
+      "log": "061-ICFallDegrees.BinaryTriple.log",
+      "exit_code": 0,
+      "elapsed_seconds": 5.383
+    },
+    {
+      "name": "062-ICFallDegrees.SplitChainLower",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SplitChainLower"
+      ],
+      "log": "062-ICFallDegrees.SplitChainLower.log",
+      "exit_code": 0,
+      "elapsed_seconds": 11.547
+    },
+    {
+      "name": "063-ICFallDegrees.PresentationTransport",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PresentationTransport"
+      ],
+      "log": "063-ICFallDegrees.PresentationTransport.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.971
+    },
+    {
+      "name": "064-ICFallDegrees.BinaryInverseCoordinates",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryInverseCoordinates"
+      ],
+      "log": "064-ICFallDegrees.BinaryInverseCoordinates.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.076
+    },
+    {
+      "name": "065-ICFallDegrees.ScalarExtensionTransport",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ScalarExtensionTransport"
+      ],
+      "log": "065-ICFallDegrees.ScalarExtensionTransport.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.576
+    },
+    {
+      "name": "066-ICFallDegrees.MooreMatrix",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.MooreMatrix"
+      ],
+      "log": "066-ICFallDegrees.MooreMatrix.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.621
+    },
+    {
+      "name": "067-ICFallDegrees.ChainQuotient",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ChainQuotient"
+      ],
+      "log": "067-ICFallDegrees.ChainQuotient.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.733
+    },
+    {
+      "name": "068-ICFallDegrees.CurveBounds",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.CurveBounds"
+      ],
+      "log": "068-ICFallDegrees.CurveBounds.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.07
+    },
+    {
+      "name": "069-ICFallDegrees.PrimeM2Lower",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.PrimeM2Lower"
+      ],
+      "log": "069-ICFallDegrees.PrimeM2Lower.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.121
+    },
+    {
+      "name": "070-ICFallDegrees.CarryLower",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.CarryLower"
+      ],
+      "log": "070-ICFallDegrees.CarryLower.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.322
+    },
+    {
+      "name": "071-ICFallDegrees.M3CarryLower",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.M3CarryLower"
+      ],
+      "log": "071-ICFallDegrees.M3CarryLower.log",
+      "exit_code": 0,
+      "elapsed_seconds": 111.444
+    },
+    {
+      "name": "072-ICFallDegrees.ChainClosureBridge",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ChainClosureBridge"
+      ],
+      "log": "072-ICFallDegrees.ChainClosureBridge.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.932
+    },
+    {
+      "name": "073-ICFallDegrees.BinaryWeight",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.BinaryWeight"
+      ],
+      "log": "073-ICFallDegrees.BinaryWeight.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.475
+    },
+    {
+      "name": "074-ICFallDegrees.DepthReduction",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.DepthReduction"
+      ],
+      "log": "074-ICFallDegrees.DepthReduction.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.126
+    },
+    {
+      "name": "075-ICFallDegrees.DepthReductionBridge",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.DepthReductionBridge"
+      ],
+      "log": "075-ICFallDegrees.DepthReductionBridge.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.923
+    },
+    {
+      "name": "076-ICFallDegrees.ChainTranslation",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ChainTranslation"
+      ],
+      "log": "076-ICFallDegrees.ChainTranslation.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.731
+    },
+    {
+      "name": "077-ICFallDegrees.ChainModelMap",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ChainModelMap"
+      ],
+      "log": "077-ICFallDegrees.ChainModelMap.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.332
+    },
+    {
+      "name": "078-ICFallDegrees.N5Cert",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5Cert"
+      ],
+      "log": "078-ICFallDegrees.N5Cert.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.867
+    },
+    {
+      "name": "079-ICFallDegrees.N5CertSound",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertSound"
+      ],
+      "log": "079-ICFallDegrees.N5CertSound.log",
+      "exit_code": 0,
+      "elapsed_seconds": 8.946
+    },
+    {
+      "name": "080-ICFallDegrees.N5CertDataP11",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertDataP11"
+      ],
+      "log": "080-ICFallDegrees.N5CertDataP11.log",
+      "exit_code": 0,
+      "elapsed_seconds": 28.981
+    },
+    {
+      "name": "081-ICFallDegrees.N5CertKernelP11",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertKernelP11"
+      ],
+      "log": "081-ICFallDegrees.N5CertKernelP11.log",
+      "exit_code": 0,
+      "elapsed_seconds": 554.218
+    },
+    {
+      "name": "082-ICFallDegrees.N5CertInstanceP11",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertInstanceP11"
+      ],
+      "log": "082-ICFallDegrees.N5CertInstanceP11.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.828
+    },
+    {
+      "name": "083-ICFallDegrees.N5CertDataP40961",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertDataP40961"
+      ],
+      "log": "083-ICFallDegrees.N5CertDataP40961.log",
+      "exit_code": 0,
+      "elapsed_seconds": 72.632
+    },
+    {
+      "name": "084-ICFallDegrees.N5CertKernelP40961",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertKernelP40961"
+      ],
+      "log": "084-ICFallDegrees.N5CertKernelP40961.log",
+      "exit_code": 0,
+      "elapsed_seconds": 593.432
+    },
+    {
+      "name": "085-ICFallDegrees.N5CertInstanceP40961",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertInstanceP40961"
+      ],
+      "log": "085-ICFallDegrees.N5CertInstanceP40961.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.978
+    },
+    {
+      "name": "086-ICFallDegrees.DepthRestriction",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.DepthRestriction"
+      ],
+      "log": "086-ICFallDegrees.DepthRestriction.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.572
+    },
+    {
+      "name": "087-ICFallDegrees.DepthRestrictionM2",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.DepthRestrictionM2"
+      ],
+      "log": "087-ICFallDegrees.DepthRestrictionM2.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.273
+    },
+    {
+      "name": "088-ICFallDegrees.ShiftWitness",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ShiftWitness"
+      ],
+      "log": "088-ICFallDegrees.ShiftWitness.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.079
+    },
+    {
+      "name": "089-ICFallDegrees.GrowthSchema",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GrowthSchema"
+      ],
+      "log": "089-ICFallDegrees.GrowthSchema.log",
+      "exit_code": 0,
+      "elapsed_seconds": 6.032
+    },
+    {
+      "name": "090-ICFallDegrees.N5CertWitness",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertWitness"
+      ],
+      "log": "090-ICFallDegrees.N5CertWitness.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.681
+    },
+    {
+      "name": "091-ICFallDegrees.N5CertWitnessDataP11",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertWitnessDataP11"
+      ],
+      "log": "091-ICFallDegrees.N5CertWitnessDataP11.log",
+      "exit_code": 0,
+      "elapsed_seconds": 6.131
+    },
+    {
+      "name": "092-ICFallDegrees.N5CertWitnessDataP40961",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertWitnessDataP40961"
+      ],
+      "log": "092-ICFallDegrees.N5CertWitnessDataP40961.log",
+      "exit_code": 0,
+      "elapsed_seconds": 7.385
+    },
+    {
+      "name": "093-ICFallDegrees.N5CertWitnessInstanceP11",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertWitnessInstanceP11"
+      ],
+      "log": "093-ICFallDegrees.N5CertWitnessInstanceP11.log",
+      "exit_code": 0,
+      "elapsed_seconds": 22.874
+    },
+    {
+      "name": "094-ICFallDegrees.N5CertWitnessInstanceP40961",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.N5CertWitnessInstanceP40961"
+      ],
+      "log": "094-ICFallDegrees.N5CertWitnessInstanceP40961.log",
+      "exit_code": 0,
+      "elapsed_seconds": 25.279
+    },
+    {
+      "name": "095-ICFallDegrees.ExactK6Cert",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6Cert"
+      ],
+      "log": "095-ICFallDegrees.ExactK6Cert.log",
+      "exit_code": 0,
+      "elapsed_seconds": 0.867
+    },
+    {
+      "name": "096-ICFallDegrees.ExactK6DataP1153",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6DataP1153"
+      ],
+      "log": "096-ICFallDegrees.ExactK6DataP1153.log",
+      "exit_code": 0,
+      "elapsed_seconds": 214.184
+    },
+    {
+      "name": "097-ICFallDegrees.ExactK6LowerSound",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6LowerSound"
+      ],
+      "log": "097-ICFallDegrees.ExactK6LowerSound.log",
+      "exit_code": 0,
+      "elapsed_seconds": 14.157
+    },
+    {
+      "name": "098-ICFallDegrees.ExactK6KernelLowerP1153",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6KernelLowerP1153"
+      ],
+      "log": "098-ICFallDegrees.ExactK6KernelLowerP1153.log",
+      "exit_code": 0,
+      "elapsed_seconds": 224.659
+    },
+    {
+      "name": "099-ICFallDegrees.ExactK6UpperSound",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6UpperSound"
+      ],
+      "log": "099-ICFallDegrees.ExactK6UpperSound.log",
+      "exit_code": 0,
+      "elapsed_seconds": 6.742
+    },
+    {
+      "name": "100-ICFallDegrees.ExactK6KernelUpperP1153",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6KernelUpperP1153"
+      ],
+      "log": "100-ICFallDegrees.ExactK6KernelUpperP1153.log",
+      "exit_code": 0,
+      "elapsed_seconds": 267.318
+    },
+    {
+      "name": "101-ICFallDegrees.ExactK6InstanceP1153",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6InstanceP1153"
+      ],
+      "log": "101-ICFallDegrees.ExactK6InstanceP1153.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.277
+    },
+    {
+      "name": "102-ICFallDegrees.ExactK6Deeper",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.ExactK6Deeper"
+      ],
+      "log": "102-ICFallDegrees.ExactK6Deeper.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.371
+    },
+    {
+      "name": "103-ICFallDegrees.UnitInstance",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.UnitInstance"
+      ],
+      "log": "103-ICFallDegrees.UnitInstance.log",
+      "exit_code": 0,
+      "elapsed_seconds": 9.044
+    },
+    {
+      "name": "104-ICFallDegrees.DepthFourteen",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.DepthFourteen"
+      ],
+      "log": "104-ICFallDegrees.DepthFourteen.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.177
+    },
+    {
+      "name": "105-ICFallDegrees.SelectorGrid",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SelectorGrid"
+      ],
+      "log": "105-ICFallDegrees.SelectorGrid.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.827
+    },
+    {
+      "name": "106-ICFallDegrees.SelectorAssembly",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SelectorAssembly"
+      ],
+      "log": "106-ICFallDegrees.SelectorAssembly.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.223
+    },
+    {
+      "name": "107-ICFallDegrees.SelectorUnivariate",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SelectorUnivariate"
+      ],
+      "log": "107-ICFallDegrees.SelectorUnivariate.log",
+      "exit_code": 0,
+      "elapsed_seconds": 5.231
+    },
+    {
+      "name": "108-ICFallDegrees.SelectorFibre",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SelectorFibre"
+      ],
+      "log": "108-ICFallDegrees.SelectorFibre.log",
+      "exit_code": 0,
+      "elapsed_seconds": 8.142
+    },
+    {
+      "name": "109-ICFallDegrees.SelectorBound",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SelectorBound"
+      ],
+      "log": "109-ICFallDegrees.SelectorBound.log",
+      "exit_code": 0,
+      "elapsed_seconds": 6.841
+    },
+    {
+      "name": "110-ICFallDegrees.SelectorExtension",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SelectorExtension"
+      ],
+      "log": "110-ICFallDegrees.SelectorExtension.log",
+      "exit_code": 0,
+      "elapsed_seconds": 6.932
+    },
+    {
+      "name": "111-ICFallDegrees.GrowthCounting",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GrowthCounting"
+      ],
+      "log": "111-ICFallDegrees.GrowthCounting.log",
+      "exit_code": 0,
+      "elapsed_seconds": 6.338
+    },
+    {
+      "name": "112-ICFallDegrees.GrowthReduction",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GrowthReduction"
+      ],
+      "log": "112-ICFallDegrees.GrowthReduction.log",
+      "exit_code": 0,
+      "elapsed_seconds": 5.884
+    },
+    {
+      "name": "113-ICFallDegrees.GrowthSpread",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GrowthSpread"
+      ],
+      "log": "113-ICFallDegrees.GrowthSpread.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.533
+    },
+    {
+      "name": "114-ICFallDegrees.GrowthMain",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GrowthMain"
+      ],
+      "log": "114-ICFallDegrees.GrowthMain.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.176
+    },
+    {
+      "name": "115-ICFallDegrees.GrowthCriterion",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GrowthCriterion"
+      ],
+      "log": "115-ICFallDegrees.GrowthCriterion.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.227
+    },
+    {
+      "name": "116-ICFallDegrees.GrowthExistence",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.GrowthExistence"
+      ],
+      "log": "116-ICFallDegrees.GrowthExistence.log",
+      "exit_code": 0,
+      "elapsed_seconds": 3.529
+    },
+    {
+      "name": "117-ICFallDegrees",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees"
+      ],
+      "log": "117-ICFallDegrees.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.771
+    },
+    {
+      "name": "118-ICFallDegrees.Audit",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.Audit"
+      ],
+      "log": "118-ICFallDegrees.Audit.log",
+      "exit_code": 0,
+      "elapsed_seconds": 112.573
+    },
+    {
+      "name": "119-ICFallDegrees.SparseDemo",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake",
+        "--no-cache",
+        "build",
+        "ICFallDegrees.SparseDemo"
+      ],
+      "log": "119-ICFallDegrees.SparseDemo.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.869
+    },
+    {
+      "name": "verifier",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/runner/work/lfd-summation-systems/lfd-summation-systems/scripts/verify_lean_fall_degrees.py",
+        "--lake",
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.19.0/bin/lake"
+      ],
+      "log": "verifier.log",
+      "exit_code": 0,
+      "elapsed_seconds": 118.847
+    }
+  ],
+  "source_sha256": {
+    "formal/ICFallDegrees.lean": "b43254ebc56818a52740b1dde9735b716227f138a17938969f975b3400025073",
+    "formal/ICFallDegrees/AffineTransport.lean": "1c0ab711a9c71e406278fcdd178c18b5f6674e22f57ddd1c3d7e4fc4c2b42698",
+    "formal/ICFallDegrees/Audit.lean": "8fcd20a5effe11715a91cfa4c870236745ec0274e95d06560e1ec09cb7b42beb",
+    "formal/ICFallDegrees/BinaryDescent.lean": "c7314353211179ca0b8c26c38232eca258be0bef99794c36a60f05b02f0e4aeb",
+    "formal/ICFallDegrees/BinaryDimensionTwoBases.lean": "9e634c9166e5cdbe37da6af2771964f4bd406495a0e36053df5ebe5c98c76212",
+    "formal/ICFallDegrees/BinaryDimensionTwoCurves.lean": "1f1470946768011ab5537f5587da16b2b7f7b59fa701dba7f6415c214b670ff0",
+    "formal/ICFallDegrees/BinaryDimensionTwoSystems.lean": "c74f33f9f288040aaca40df7598f577a26ef4be041cadde9f81c826f66d0b37d",
+    "formal/ICFallDegrees/BinaryExtensionFields.lean": "42bd88f7cc86eacb5ea1c88b24905e5e39cefb9dcfb0fbd52cf6d549f2f83abb",
+    "formal/ICFallDegrees/BinaryFamily.lean": "03baaf3da2fa7b04ea8bd9838add304577c355d99342ff161c7c41f02b7507fe",
+    "formal/ICFallDegrees/BinaryFiber.lean": "b467a91a9e3c53c75cb1275bf9d49742d63b24c6e96137681561ad6222132e2b",
+    "formal/ICFallDegrees/BinaryInverseCoordinates.lean": "af36299211df646b5f5d60eaf8171c6a04a2e5cb75020796a5d74f2d3e42f3e9",
+    "formal/ICFallDegrees/BinaryS3Bounds.lean": "bc9af60341839cf4786c28097a27c0d82c826cbec90ed9dcedcee1fe8e2692fc",
+    "formal/ICFallDegrees/BinaryTriple.lean": "559b4bfe1cc71302688285ec405bb3cbc3badabd57703a7a3e0f63f21567cd36",
+    "formal/ICFallDegrees/BinaryWeight.lean": "7bd59a41a8c147e8f0182a45290381754187d86e5337ff436bfed67b15bf5eea",
+    "formal/ICFallDegrees/BooleanPair.lean": "1b43cc894be78a1d7944096257868dc2392fc63f25c9bfb8cca6a03f9fb1ab03",
+    "formal/ICFallDegrees/BooleanRaw.lean": "83c99d55ba5d58aad2759854da8d839d075806ab7996a9697c5e213f6270a5f8",
+    "formal/ICFallDegrees/BooleanSharp.lean": "eb079c0aff2e19495aa885277c499d699c8e5647523d7591a07c411fe72e4b90",
+    "formal/ICFallDegrees/CarryLower.lean": "5d8cac6e51c0d9aa02b488f79b55b05493a777ebf1bf863d78913666dd5bc08c",
+    "formal/ICFallDegrees/Certificate.lean": "b4ce9b32c96bd023feb413c281ecf71532a9b3fd823c01edcbaca74d653eaac5",
+    "formal/ICFallDegrees/ChainClosureBridge.lean": "691f5c51695e43132722a05c03d2730e5dd14e4edd39a8ed59b8a9f5a4577a74",
+    "formal/ICFallDegrees/ChainModelMap.lean": "7559cbe54d697299a44f0834385ca5291e95cafb5083e3bf3a4d3893481c0b1b",
+    "formal/ICFallDegrees/ChainQuotient.lean": "846e01c4829278804bc14b07b92b2d5d5edd3af5f20554ade89b90ce4bf03a20",
+    "formal/ICFallDegrees/ChainTranslation.lean": "5421df69deaba806effe51ee0f38aceaf990b485f097afb121c86621b0faf63d",
+    "formal/ICFallDegrees/Closure.lean": "f43ef3c085a363f292ce6802d7e24e48fa5c634e0b403ff5b12488257f057614",
+    "formal/ICFallDegrees/CurveBounds.lean": "73359b7ed804555870986b96efc4494f7ffa8d197e157e0429b73c6cd1cce6dc",
+    "formal/ICFallDegrees/CyclicCarryWindow.lean": "ec7904bfefea5ae0c02118431e8d156b26b07e5a10db2294dcc150d49252e0b7",
+    "formal/ICFallDegrees/CyclicInverseRewrite.lean": "6abdd7bf794c99681041d10abe46f36f3c5d6d3aadb91bbd4e7b514ea207390e",
+    "formal/ICFallDegrees/CyclicNAF.lean": "30b2d7a4e1bd815a7b2c92fdce3f5b53168ccf7c8ebd178d39e565d536fe6174",
+    "formal/ICFallDegrees/CyclicProductBridge.lean": "fe2c163d4d308cea52536156c201dd39511098388375a29cb6db357d2b478876",
+    "formal/ICFallDegrees/DepthFourteen.lean": "e5b18ede25e24779df3974c91a9faefcffd779a0f319cb8322f6564d482d882a",
+    "formal/ICFallDegrees/DepthReduction.lean": "1bd915888e37d8ce8cbc28a05848c2028539f835ad95cfd14de33563ca592e22",
+    "formal/ICFallDegrees/DepthReductionBridge.lean": "bdb7ee7b1a3a5d3432542785dd01563e1bc39f606ebd28e850d1ea264d78fb88",
+    "formal/ICFallDegrees/DepthRestriction.lean": "24512a550db22ab40bbc731e48d41826f4dc629d871201959f5b148ef2900a22",
+    "formal/ICFallDegrees/DepthRestrictionM2.lean": "42586e3cc05ee7b573def6b19f23924d3b8b2d51c2cf7b5ce83208414733f5ef",
+    "formal/ICFallDegrees/ExactK6Cert.lean": "63a05ae91ed1de339dedc3b0afec6f41a82f1547bbfc0dea3c52bbb5ab0e6104",
+    "formal/ICFallDegrees/ExactK6DataP1153.lean": "5508fd6c5e407f106cdc364ad207682aa2722e75f3d16b09b2544d8dffe9089d",
+    "formal/ICFallDegrees/ExactK6Deeper.lean": "4d7c588f52820a0b47d4cd72a7871b60c230d3d73859b90162604c243f57ccbb",
+    "formal/ICFallDegrees/ExactK6InstanceP1153.lean": "3102ee5ce30d9dda652084f76132bf39ec931453fe66c9b5c2ce1f2e0bebcb70",
+    "formal/ICFallDegrees/ExactK6KernelLowerP1153.lean": "7187e33bec0407175874962e2a7b990838ee43596b5754ca6199d4d66fb0b6d3",
+    "formal/ICFallDegrees/ExactK6KernelUpperP1153.lean": "fda50a36d859b8ba3e1c4f740e01537e074323d9d8ad60f954e48015ba359a86",
+    "formal/ICFallDegrees/ExactK6LowerSound.lean": "77ac4aad4175db2cf4e1cfb8e7794c5b15fe7c8e8bcc38f9173be3480989ee8a",
+    "formal/ICFallDegrees/ExactK6UpperSound.lean": "24f55a10973c0e16192d48e4a3d518bc24c6edafbd9c9d1c873b8953a8a7d2aa",
+    "formal/ICFallDegrees/FilteredSpan.lean": "36f601a9562642ae812bfaea6954d2b18978452c1de4faf731337020c599f570",
+    "formal/ICFallDegrees/FiniteQuotient.lean": "64cd12dedad27c12589bb16c3ed40b44225412926b0e17e149b92c5d59aa1c3d",
+    "formal/ICFallDegrees/FirstFall.lean": "08316e11f33443b1f04db9c2cbcb69e82713c4b95f70b868e9f38d4d6aa90176",
+    "formal/ICFallDegrees/GeneralQuadraticClassification.lean": "2694ecda2209e35625adf4c47b828e9beb4dda8cf91cf6fcf112fe5eff9aae68",
+    "formal/ICFallDegrees/GeneralQuadraticTop.lean": "7e0e7c44e77322722d4af26934b6a9485f6b0a01766d4c7bd9fe0f2bec398435",
+    "formal/ICFallDegrees/GeneratedBinaryKoblitz.lean": "8bebc4d21724b8e7e11d197bc121aa1f9c8addaff5d918ae0c908c55e58ceda8",
+    "formal/ICFallDegrees/GeneratedBinaryOrdinary.lean": "521ee60a011468703e6e5bd18b6320fb46bb4d3510e096e4042466b14f6dcc9e",
+    "formal/ICFallDegrees/GeneratedPrimeFirstFall.lean": "930fbdf520b683cc5a7b37d55f5027f3d8562a5d50d34713c7e40e81d1a43c94",
+    "formal/ICFallDegrees/GeneratedPrimeLower.lean": "9cf12ed71814f0ab4c35c5fb1385933b95a80aac40bf0df05aa04dc49610be71",
+    "formal/ICFallDegrees/GeneratedPrimeUpper.lean": "b9c8a618586450e3b66d51bc50b40a2ed9c5389f26a710d4f6d3330602a3db6d",
+    "formal/ICFallDegrees/GridQuotient.lean": "175589aab8aa131159dc93607097c2c0ff9c42445cc2cb358e0c4ec0646ca829",
+    "formal/ICFallDegrees/GrowthCounting.lean": "84dab8039d5377a5cc5ff54f88430945e44733fecc6dd047c4a40861ff1ab7cc",
+    "formal/ICFallDegrees/GrowthCriterion.lean": "0e19bb24709fa825d1b663e728cbb124563d6f1a2a1c197d7b641836acfdc5bd",
+    "formal/ICFallDegrees/GrowthExistence.lean": "c9ac869f0a19e63d0d874cd0821951002abf17503dd37430e0143a867ea9b6dc",
+    "formal/ICFallDegrees/GrowthMain.lean": "60f076a7c00b8d1424a8293d3893aa8cdd393984181a6f50b16959ed4241f46f",
+    "formal/ICFallDegrees/GrowthReduction.lean": "a93ccd9768f134337bb2ce6ed43e08c618e96d9d2de3e504b04f6f0301ed498e",
+    "formal/ICFallDegrees/GrowthSchema.lean": "052b5f6956aad3adf6d686e809553d8660ba29a400c3e91b86790c0177c301bf",
+    "formal/ICFallDegrees/GrowthSpread.lean": "33a35cd316f8f202b51c6775deb3ea2ea97ad47fbf0dbdc99c3d448471e93725",
+    "formal/ICFallDegrees/HomogeneousFirstFall.lean": "f45d13d993547d2b67f290b993e38e6c114a757be32c45985c155efd0d9a9718",
+    "formal/ICFallDegrees/LocalReductionBound.lean": "fd4ce056280a247cd8003323ee3c5600c72cd8d1324045d9ee688de94b56bb7e",
+    "formal/ICFallDegrees/LowDegreeCoefficients.lean": "8cd19097006bb0211b73ade48c8382aaa9cad5510fad8bbd83ab25e59d91dc30",
+    "formal/ICFallDegrees/LowerBounds.lean": "e4c6d180eb1e0d63190542c2b86626477888388b5b63956d52dd6abe353871d3",
+    "formal/ICFallDegrees/LowerCertificateSupport.lean": "ecefe8d484e700752b9a85c3c4af5346363120bfeaffe301322a63d60cbe550f",
+    "formal/ICFallDegrees/M3CarryLower.lean": "763fca15bbbdbf8a1fb00857f0e42c4078956c768790d5b4f9ca0a1362a0cdd0",
+    "formal/ICFallDegrees/MooreMatrix.lean": "b672934dcf95bb0330a4455f7701427a82a8880c5c5a0ef1ba297843e6d024d5",
+    "formal/ICFallDegrees/N5Cert.lean": "b2628ae0d390f5ca80e4675bd74a8fba714164c0119f4b1837bd259e02a4aabd",
+    "formal/ICFallDegrees/N5CertDataP11.lean": "bac3a780ca1364f4bcf7936141d188b5be715200760c8f2880cc9198767a5584",
+    "formal/ICFallDegrees/N5CertDataP40961.lean": "dd27c51e520d958ad2758a6060a069a69b964a5ed101177cc6e2e3e6410a4e76",
+    "formal/ICFallDegrees/N5CertInstanceP11.lean": "5b6edfb1aaee226cf46e0e796089810312eb2e770ca1a0d7f3e6eaf2c18050ad",
+    "formal/ICFallDegrees/N5CertInstanceP40961.lean": "e134b541872ede71154e70e8ca1a87bed147c1b7b340227e3e78108cafea7f30",
+    "formal/ICFallDegrees/N5CertKernelP11.lean": "c2c20f8b8b134f4d710a87d933bc5f356cb9310e1b1841108bac5ac753a5f35b",
+    "formal/ICFallDegrees/N5CertKernelP40961.lean": "aadf660d738d4422dc1827520528852cc115c3ad114a568812a6fb4545b30c66",
+    "formal/ICFallDegrees/N5CertSound.lean": "bef687095b5f2c6094fc3de61f5438c11186f88792d6ae9cd3986ca20bd1018e",
+    "formal/ICFallDegrees/N5CertWitness.lean": "71f3619578cdd12e20629d6228a04ee5fcbab215f56f621f8a4a867a92644943",
+    "formal/ICFallDegrees/N5CertWitnessDataP11.lean": "6f8535ae039232e1d4cf727d7a6a155e36f358d4e33eab140320850029af00fa",
+    "formal/ICFallDegrees/N5CertWitnessDataP40961.lean": "8216f00e5e9aea36b1506dde54d96ce57cd0e78dd4a05ace745e746d885a7b6b",
+    "formal/ICFallDegrees/N5CertWitnessInstanceP11.lean": "f11e4b255dbe36df95cc7b84fb4b9f9b0e5d9cebd8aa5c6ce7232ca1df5dd16e",
+    "formal/ICFallDegrees/N5CertWitnessInstanceP40961.lean": "c254cbbd5d7ac064d21e5c4ede6b5d43f45f0db758e282718d4339ee0aeec55e",
+    "formal/ICFallDegrees/NormalFormBound.lean": "dc0dd6b452b590a1b37fb198a473fdc9dc1fdbec2239d6470c8de6477936054d",
+    "formal/ICFallDegrees/PointIdeal.lean": "15ffc327d6de4830fac09625a9c217ddb232caaff2562d3e8561633c861f6002",
+    "formal/ICFallDegrees/PowerIdeals.lean": "a31e80050508539ebae65219e86a293cd757cd440705be1c0362b1d882a0bd27",
+    "formal/ICFallDegrees/PresentationTransport.lean": "bab249ea4a348f6ac824996f08eb71a8eda7ac58039f93f90014cd01e65fe9e5",
+    "formal/ICFallDegrees/Prime257Counterexample.lean": "e747f665e250e2e3a0f37b3a78a6aa1f5404cbc0623746081b25e8e10a172ab0",
+    "formal/ICFallDegrees/Prime257Homogeneous.lean": "9a447ab393145c35be077ed093229885b6336191d4cb62437fee3f11df6214c7",
+    "formal/ICFallDegrees/Prime257System.lean": "c028bca763d98b053763e107bd06c955fe0737ca55e566e76ad553187302206a",
+    "formal/ICFallDegrees/PrimeCounterexample.lean": "8a51dc3e1c3b25675cd932c0a0e7abe8a80965b3d144635aecfcb55c3a8be769",
+    "formal/ICFallDegrees/PrimeFieldConclusions.lean": "8145b9223c107042102b14a7a06a2b07eecf75e9333316ad1595c50343003380",
+    "formal/ICFallDegrees/PrimeM2General.lean": "941820f25a42c7179360cafceb205246b6f0ed039a2508ad34366a1bb51297f1",
+    "formal/ICFallDegrees/PrimeM2Homogeneous.lean": "22e6b614708e2a8721415714924978d02cc1de7208be7e0330df5b29349da2b3",
+    "formal/ICFallDegrees/PrimeM2Lower.lean": "c2d0a65e5d5b9f8fb12fecf4363bab85af0768c02f81e0a8cc9a48fde02f6b78",
+    "formal/ICFallDegrees/PrimeM2Sharp.lean": "42b461cdc3d387692422ceae2cef3eac1c328632183fcb0c637914e4913b3634",
+    "formal/ICFallDegrees/PrimeM2Truncated.lean": "32343008758a6153530e4bb4c93d571b45eedc2bf0ac58d926d7d6b3e5999f79",
+    "formal/ICFallDegrees/QuadraticFamily.lean": "5cf4656f2be33e058b952ee9501450f87b09635bdd3994bf3e699c054eac39fc",
+    "formal/ICFallDegrees/QuadraticHomogeneousFamily.lean": "17d74abb82a64273d1246097b266ac324b951105ab4331571b45a12783025702",
+    "formal/ICFallDegrees/QuadraticNoLow.lean": "2c1d2bd448c1ac73c013306fdae8f90d8f119bbce745631c202351583019ffb5",
+    "formal/ICFallDegrees/QuotientLowerBound.lean": "321cb778b7089adbdef9364ea54152ca0a5fc7c49cea292e2ba3ae4a9ce802ef",
+    "formal/ICFallDegrees/RawPresentation.lean": "bfef572ef09c03e2008e3b8ccec1ac1ce52a56498cc4a1b0ff44d9a5efbb8938",
+    "formal/ICFallDegrees/ScalarExtensionTransport.lean": "10f927d81916289ae9b0194a7a1b76c35c2e3e59988b02dba8adbaa08e6922eb",
+    "formal/ICFallDegrees/SelectorAssembly.lean": "3f278947fcc2319615b29bdb89944147bde39f2da319dc68311db87a3576be28",
+    "formal/ICFallDegrees/SelectorBound.lean": "1c962240e9882b91a7c4b4442a3176b9c815a8b552f2888bdcbdbf92fff36b13",
+    "formal/ICFallDegrees/SelectorExtension.lean": "22006407e5f314ed6e1524ac4357039395fbc0b2d486e12746f562f438d7f3e7",
+    "formal/ICFallDegrees/SelectorFibre.lean": "c05a3fef4e8fc0034ba457081287956a8e2244e546483ebec3a6c18831504c02",
+    "formal/ICFallDegrees/SelectorGrid.lean": "3104bbc2455b0bfc4c61397b61a4652e9dd4974f2ab5dd2e6b888332b52847ff",
+    "formal/ICFallDegrees/SelectorUnivariate.lean": "977fabe1eff0b4643f47e4c73ce2623e4d12fd4c3046b528bb4833a288852900",
+    "formal/ICFallDegrees/ShiftWitness.lean": "e38436d17737403ea65a1ecc09889734fe65599e7bb70ba1fe188ce8ede33a4c",
+    "formal/ICFallDegrees/SparseCertificate.lean": "84d593fab6394c6eebcf91f494e7e07a0c1938475289e215ae951e0f58c70bb0",
+    "formal/ICFallDegrees/SparseCoefficient.lean": "ea6e25cb43b0eefca5b88161fa9272703d900b386001ac067e6fe5bd5af05c4d",
+    "formal/ICFallDegrees/SparseDAG.lean": "6fede3a722d964f3f9d9a50a68cf3f4f36be18b6d319fd1c8ff843b50224fc3a",
+    "formal/ICFallDegrees/SparseDemo.lean": "a0975fbe49b40b57c00404408edb8389e22a8438489c60c780e907f46d3a873d",
+    "formal/ICFallDegrees/SparseLowerCertificate.lean": "5cc0a0395303c9f49baafa953ec8d0f320c82ff7670543547ca8ec7666046fa5",
+    "formal/ICFallDegrees/SparsePolynomial.lean": "18eb5e1758a315e9e95a4283b061d565e65160c7b3627937f476eed2c631c120",
+    "formal/ICFallDegrees/SparsePrimeCertificate.lean": "52810a19a26bb35263951dd4f0a67f3dca3aef0bccb8acdb00e0c3a67cb3ae66",
+    "formal/ICFallDegrees/SparseTrustChecks.lean": "95fea4086d98215fb0cafb0e4101886c317a5dacfeb87d733d6bb3d54fba5594",
+    "formal/ICFallDegrees/SplitChainLower.lean": "bfa323b1e5ffbc917136b35af266a60e7abbdfa007e3963077c8176cabd56b7b",
+    "formal/ICFallDegrees/SquareChainRefutation.lean": "9787e3dca5d04d8d2e25ae3541efe9e3adbbcfbb9fd1dcfbb5e1d1579a4f4d58",
+    "formal/ICFallDegrees/TruncatedFirstFall.lean": "1952e0d9afeaed2864a16d69fd02d66acbbf8bfd3219224703f04b07a2188bc8",
+    "formal/ICFallDegrees/UnitInstance.lean": "7f3f799aa01a3fd1fe3c1f9cbdd1b873403692efc2f9eaeeed470d8f04bd067b",
+    "formal/ICFallDegrees/VariableClosure.lean": "f07aa209c215186c0a4bc5e6345c2b914109c1712c0b2ecea3a27e8c4891dbb3",
+    "formal/lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "formal/lakefile.toml": "fb31f690e72083a4c426f1074e733a57bbba3cba77e57c3d3b26769fe0b8703a",
+    "formal/lake-manifest.json": "98e57d45224a5d6b50996badf5fa6485cb52820f41e815f7c05d49f21eca4547",
+    "scripts/verify_lean_fall_degrees.py": "30e73945f10dfbdaabe076874579f272a06a545d8312b8165576839682a5b1f3"
+  },
+  "commit": "f13c9ed385f0dfb41a982c8494da3b05064c07fd",
+  "github": {
+    "GITHUB_RUN_ID": "43648104843",
+    "GITHUB_RUN_ATTEMPT": "1",
+    "GITHUB_SHA": "f13c9ed385f0dfb41a982c8494da3b05064c07fd"
+  },
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "dependency_revisions": {
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "plausible": "77e08eddc486491d7b9e470926b3dbe50319451a",
+    "LeanSearchClient": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+    "importGraph": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+    "proofwidgets": "c4919189477c3221e6a204008998b0d724f49904",
+    "aesop": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+    "Qq": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+    "batteries": "f5d04a9c4973d401c8c92500711518f7c656f034",
+    "Cli": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+  },
+  "module_order": [
+    "ICFallDegrees.Closure",
+    "ICFallDegrees.NormalFormBound",
+    "ICFallDegrees.LowerBounds",
+    "ICFallDegrees.FirstFall",
+    "ICFallDegrees.QuadraticFamily",
+    "ICFallDegrees.RawPresentation",
+    "ICFallDegrees.Certificate",
+    "ICFallDegrees.PrimeCounterexample",
+    "ICFallDegrees.PointIdeal",
+    "ICFallDegrees.BooleanPair",
+    "ICFallDegrees.BooleanRaw",
+    "ICFallDegrees.BinaryFamily",
+    "ICFallDegrees.FiniteQuotient",
+    "ICFallDegrees.GridQuotient",
+    "ICFallDegrees.QuotientLowerBound",
+    "ICFallDegrees.BooleanSharp",
+    "ICFallDegrees.SparsePolynomial",
+    "ICFallDegrees.SparseCertificate",
+    "ICFallDegrees.SparsePrimeCertificate",
+    "ICFallDegrees.VariableClosure",
+    "ICFallDegrees.SparseCoefficient",
+    "ICFallDegrees.FilteredSpan",
+    "ICFallDegrees.SparseLowerCertificate",
+    "ICFallDegrees.SparseDAG",
+    "ICFallDegrees.LowerCertificateSupport",
+    "ICFallDegrees.GeneratedPrimeLower",
+    "ICFallDegrees.GeneratedPrimeUpper",
+    "ICFallDegrees.Prime257System",
+    "ICFallDegrees.GeneratedPrimeFirstFall",
+    "ICFallDegrees.HomogeneousFirstFall",
+    "ICFallDegrees.QuadraticHomogeneousFamily",
+    "ICFallDegrees.PrimeM2Homogeneous",
+    "ICFallDegrees.Prime257Homogeneous",
+    "ICFallDegrees.Prime257Counterexample",
+    "ICFallDegrees.SparseTrustChecks",
+    "ICFallDegrees.GeneratedBinaryOrdinary",
+    "ICFallDegrees.GeneratedBinaryKoblitz",
+    "ICFallDegrees.BinaryExtensionFields",
+    "ICFallDegrees.BinaryDescent",
+    "ICFallDegrees.BinaryDimensionTwoSystems",
+    "ICFallDegrees.BinaryDimensionTwoCurves",
+    "ICFallDegrees.BinaryDimensionTwoBases",
+    "ICFallDegrees.PowerIdeals",
+    "ICFallDegrees.LowDegreeCoefficients",
+    "ICFallDegrees.GeneralQuadraticTop",
+    "ICFallDegrees.GeneralQuadraticClassification",
+    "ICFallDegrees.PrimeM2General",
+    "ICFallDegrees.TruncatedFirstFall",
+    "ICFallDegrees.PrimeM2Truncated",
+    "ICFallDegrees.SquareChainRefutation",
+    "ICFallDegrees.QuadraticNoLow",
+    "ICFallDegrees.PrimeM2Sharp",
+    "ICFallDegrees.PrimeFieldConclusions",
+    "ICFallDegrees.BinaryS3Bounds",
+    "ICFallDegrees.LocalReductionBound",
+    "ICFallDegrees.CyclicNAF",
+    "ICFallDegrees.CyclicInverseRewrite",
+    "ICFallDegrees.BinaryFiber",
+    "ICFallDegrees.CyclicCarryWindow",
+    "ICFallDegrees.CyclicProductBridge",
+    "ICFallDegrees.AffineTransport",
+    "ICFallDegrees.BinaryTriple",
+    "ICFallDegrees.SplitChainLower",
+    "ICFallDegrees.PresentationTransport",
+    "ICFallDegrees.BinaryInverseCoordinates",
+    "ICFallDegrees.ScalarExtensionTransport",
+    "ICFallDegrees.MooreMatrix",
+    "ICFallDegrees.ChainQuotient",
+    "ICFallDegrees.CurveBounds",
+    "ICFallDegrees.PrimeM2Lower",
+    "ICFallDegrees.CarryLower",
+    "ICFallDegrees.M3CarryLower",
+    "ICFallDegrees.ChainClosureBridge",
+    "ICFallDegrees.BinaryWeight",
+    "ICFallDegrees.DepthReduction",
+    "ICFallDegrees.DepthReductionBridge",
+    "ICFallDegrees.ChainTranslation",
+    "ICFallDegrees.ChainModelMap",
+    "ICFallDegrees.N5Cert",
+    "ICFallDegrees.N5CertSound",
+    "ICFallDegrees.N5CertDataP11",
+    "ICFallDegrees.N5CertKernelP11",
+    "ICFallDegrees.N5CertInstanceP11",
+    "ICFallDegrees.N5CertDataP40961",
+    "ICFallDegrees.N5CertKernelP40961",
+    "ICFallDegrees.N5CertInstanceP40961",
+    "ICFallDegrees.DepthRestriction",
+    "ICFallDegrees.DepthRestrictionM2",
+    "ICFallDegrees.ShiftWitness",
+    "ICFallDegrees.GrowthSchema",
+    "ICFallDegrees.N5CertWitness",
+    "ICFallDegrees.N5CertWitnessDataP11",
+    "ICFallDegrees.N5CertWitnessDataP40961",
+    "ICFallDegrees.N5CertWitnessInstanceP11",
+    "ICFallDegrees.N5CertWitnessInstanceP40961",
+    "ICFallDegrees.ExactK6Cert",
+    "ICFallDegrees.ExactK6DataP1153",
+    "ICFallDegrees.ExactK6LowerSound",
+    "ICFallDegrees.ExactK6KernelLowerP1153",
+    "ICFallDegrees.ExactK6UpperSound",
+    "ICFallDegrees.ExactK6KernelUpperP1153",
+    "ICFallDegrees.ExactK6InstanceP1153",
+    "ICFallDegrees.ExactK6Deeper",
+    "ICFallDegrees.UnitInstance",
+    "ICFallDegrees.DepthFourteen",
+    "ICFallDegrees.SelectorGrid",
+    "ICFallDegrees.SelectorAssembly",
+    "ICFallDegrees.SelectorUnivariate",
+    "ICFallDegrees.SelectorFibre",
+    "ICFallDegrees.SelectorBound",
+    "ICFallDegrees.SelectorExtension",
+    "ICFallDegrees.GrowthCounting",
+    "ICFallDegrees.GrowthReduction",
+    "ICFallDegrees.GrowthSpread",
+    "ICFallDegrees.GrowthMain",
+    "ICFallDegrees.GrowthCriterion",
+    "ICFallDegrees.GrowthExistence",
+    "ICFallDegrees",
+    "ICFallDegrees.Audit",
+    "ICFallDegrees.SparseDemo"
+  ],
+  "audited_declarations": 582,
+  "source_hashes_match": true,
+  "declaration_audits_match": true
+}

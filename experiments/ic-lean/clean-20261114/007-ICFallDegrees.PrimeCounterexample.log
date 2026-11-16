@@ -1,0 +1,26 @@
+⚠ [1151/1253] Replayed ICFallDegrees.QuadraticFamily
+warning: ././././ICFallDegrees/QuadraticFamily.lean:143:2: try 'simp at hd' instead of 'simpa using hd'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:150:40: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:154:40: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:171:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:171:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:175:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:175:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:177:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:177:80: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/QuadraticFamily.lean:182:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1152/1253] Replayed ICFallDegrees.RawPresentation
+warning: ././././ICFallDegrees/RawPresentation.lean:83:2: try 'simp at he' instead of 'simpa using he'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [1253/1253] Built ICFallDegrees.PrimeCounterexample
+Build completed successfully.
