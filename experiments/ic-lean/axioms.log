@@ -812,3 +812,27 @@
 'ICFallDegrees.GrowthFermatDiagonalObstruction.exists_bad_admissible_prime' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.parameter_of_grid_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.grid_zero_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.unit_complex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.lfd_gt_linear' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.lfd_linear_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.exists_lfd_linear_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.new_members' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthRationalParameterClassification.excluded_members' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
