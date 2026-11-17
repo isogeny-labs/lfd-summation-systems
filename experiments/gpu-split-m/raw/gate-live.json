@@ -1,0 +1,4140 @@
+{
+ "status": "passed",
+ "date": "2026-11-17",
+ "arms": [
+  "cpu:split",
+  "cpu:plain",
+  "fake-gpu:split",
+  "fake-gpu:plain"
+ ],
+ "comparisons": 84,
+ "equal": 84,
+ "failures": [],
+ "rows": [
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.008,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.014,
+   "peak_device_gib": 0.0001,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.008,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.014,
+   "peak_device_gib": 0.0001,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.008,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.039,
+   "peak_device_gib": 0.0002,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.008,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.026,
+   "peak_device_gib": 0.0005,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    263,
+    94
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.046,
+   "peak_device_gib": 0.001,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    357
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.063,
+   "peak_device_gib": 0.0018,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    263,
+    94
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.1,
+   "peak_device_gib": 0.0022,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    357
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.094,
+   "peak_device_gib": 0.0052,
+   "loadavg": 0.74853515625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.576,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    1126,
+    637
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.301,
+   "peak_device_gib": 0.0032,
+   "loadavg": 1.00927734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.576,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    1782
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.614,
+   "peak_device_gib": 0.006,
+   "loadavg": 1.00927734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.576,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    1126,
+    637
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.462,
+   "peak_device_gib": 0.0126,
+   "loadavg": 1.00927734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.576,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    1782
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.662,
+   "peak_device_gib": 0.0303,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.0,
+   "peak_device_gib": 0.0,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0041,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0041,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.016,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    43,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.016,
+   "peak_device_gib": 0.0003,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.016,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    51
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.022,
+   "peak_device_gib": 0.0005,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.016,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    43,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.037,
+   "peak_device_gib": 0.0049,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.016,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    51
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.042,
+   "peak_device_gib": 0.0059,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.111,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    499,
+    138
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.226,
+   "peak_device_gib": 0.0081,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.111,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    637
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.399,
+   "peak_device_gib": 0.0141,
+   "loadavg": 1.2490234375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.111,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    499,
+    138
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.348,
+   "peak_device_gib": 0.0169,
+   "loadavg": 1.5498046875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.111,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    637
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.397,
+   "peak_device_gib": 0.0385,
+   "loadavg": 1.5498046875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 118.95,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    5153,
+    2270
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 37.176,
+   "peak_device_gib": 0.0632,
+   "loadavg": 4.56103515625
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 118.95,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    6909
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 39.211,
+   "peak_device_gib": 0.1173,
+   "loadavg": 5.6904296875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 118.95,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    5153,
+    2270
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 8.335,
+   "peak_device_gib": 0.154,
+   "loadavg": 5.43017578125
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 118.95,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "part_rank": [
+    6909
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 16.233,
+   "peak_device_gib": 0.3154,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.0,
+   "peak_device_gib": 0.0,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0799,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.08,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.015,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    24,
+    6
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.01,
+   "peak_device_gib": 0.0002,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.015,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    30
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.011,
+   "peak_device_gib": 0.0004,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.015,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    24,
+    6
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.026,
+   "peak_device_gib": 0.0262,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.015,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    30
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.025,
+   "peak_device_gib": 0.0266,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.725,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    276,
+    148
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.144,
+   "peak_device_gib": 0.0067,
+   "loadavg": 5.11279296875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.725,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    424
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.271,
+   "peak_device_gib": 0.0127,
+   "loadavg": 5.0234375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.725,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    276,
+    148
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.299,
+   "peak_device_gib": 0.0389,
+   "loadavg": 5.0234375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.725,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    424
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.295,
+   "peak_device_gib": 0.0613,
+   "loadavg": 5.0234375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 21.253,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    1607,
+    910
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 3.757,
+   "peak_device_gib": 0.0699,
+   "loadavg": 4.02783203125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 21.253,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    2517
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 9.904,
+   "peak_device_gib": 0.1355,
+   "loadavg": 4.02294921875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 21.253,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    1607,
+    910
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 4.285,
+   "peak_device_gib": 0.1232,
+   "loadavg": 4.02099609375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 21.253,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    2517
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 9.914,
+   "peak_device_gib": 0.3496,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.0,
+   "peak_device_gib": 0.0,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.2104,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.2105,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.019,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    23,
+    10
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.014,
+   "peak_device_gib": 0.0003,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.019,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    33
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.016,
+   "peak_device_gib": 0.0006,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.019,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    23,
+    10
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.035,
+   "peak_device_gib": 0.074,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.019,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    33
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.035,
+   "peak_device_gib": 0.0758,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.362,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    270,
+    192
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.295,
+   "peak_device_gib": 0.0124,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.362,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    462
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.808,
+   "peak_device_gib": 0.0246,
+   "loadavg": 4.01708984375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.362,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    270,
+    192
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.36,
+   "peak_device_gib": 0.096,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.362,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    462
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.748,
+   "peak_device_gib": 0.1397,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.0,
+   "peak_device_gib": 0.0,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.1147,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.1147,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.047,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    56,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.028,
+   "peak_device_gib": 0.0009,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.047,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    64
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.038,
+   "peak_device_gib": 0.0014,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.047,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    56,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.084,
+   "peak_device_gib": 0.0907,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.047,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    64
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.069,
+   "peak_device_gib": 0.0935,
+   "loadavg": 4.015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.628,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    813,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 3.805,
+   "peak_device_gib": 0.0398,
+   "loadavg": 4.01416015625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.628,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    995
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 6.599,
+   "peak_device_gib": 0.0656,
+   "loadavg": 4.306640625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.628,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    813,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 3.937,
+   "peak_device_gib": 0.1707,
+   "loadavg": 4.6025390625
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.628,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    995
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 7.212,
+   "peak_device_gib": 0.269,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.007,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.007,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.005,
+   "peak_device_gib": 0.0,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.007,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.005,
+   "peak_device_gib": 0.2013,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.007,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.2013,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.097,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.049,
+   "peak_device_gib": 0.0007,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.097,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.049,
+   "peak_device_gib": 0.0012,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.097,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.061,
+   "peak_device_gib": 0.0023,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.097,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.073,
+   "peak_device_gib": 0.0038,
+   "loadavg": 4.875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.489,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    348,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 1.832,
+   "peak_device_gib": 0.0289,
+   "loadavg": 5.134765625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.489,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    530
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 4.027,
+   "peak_device_gib": 0.0558,
+   "loadavg": 5.134765625
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.489,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    348,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 2.325,
+   "peak_device_gib": 0.058,
+   "loadavg": 5.3642578125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.489,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "part_rank": [
+    530
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 4.244,
+   "peak_device_gib": 0.1534,
+   "loadavg": 5.3349609375
+  }
+ ],
+ "controls": [
+  {
+   "control": "drop-operator",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "dim_V_D",
+    "low_profile",
+    "verified_closed",
+    "status:verification-failed",
+    "space"
+   ],
+   "detected_by_dimensions_alone": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 243,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     47,
+     243
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": false,
+   "as_expected": true
+  },
+  {
+   "control": "wrong-gather",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "dim_V_D",
+    "low_profile",
+    "contains_one"
+   ],
+   "detected_by_dimensions_alone": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 1023,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023
+    ],
+    "contains_one": true
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": null,
+   "as_expected": true
+  },
+  {
+   "control": "wrong-gather-plain",
+   "arm": "cpu:plain",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "dim_V_D",
+    "low_profile",
+    "contains_one"
+   ],
+   "detected_by_dimensions_alone": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 1023,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023
+    ],
+    "contains_one": true
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "none (not requested)",
+   "verified_closed": null,
+   "as_expected": true
+  },
+  {
+   "control": "perturbed-input-coefficient",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "space"
+   ],
+   "detected_by_dimensions_alone": false,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": true,
+   "as_expected": true
+  },
+  {
+   "control": "perturbed-input-coefficient-plain",
+   "arm": "cpu:plain",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "space"
+   ],
+   "detected_by_dimensions_alone": false,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "none (not requested)",
+   "verified_closed": true,
+   "as_expected": true
+  },
+  {
+   "control": "no-fault (must pass)",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": false,
+   "differences": [],
+   "detected_by_dimensions_alone": false,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": true,
+   "as_expected": true
+  }
+ ],
+ "engine_sha256": "6d183e2fe77eda6c4348cc5aab7d73c952f5127d7256ee17d6a2d9744973b4da"
+}
