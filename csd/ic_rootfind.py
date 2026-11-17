@@ -36,6 +36,7 @@ import hashlib
 import os
 import shutil
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
 from pathlib import Path
 
@@ -206,19 +207,49 @@ class Solver:
         rows = out[:cnt * 2 * m].reshape(cnt, m, 2)
         return sorted({tuple(sorted((int(x), int(y)) for x, y in row)) for row in rows})
 
-    def lrf(self, m: int, R, cap: int = 1 << 20):
-        """Linearized root finding.  Returns (decompositions, stats, rows found before deduplication)."""
-        out = np.zeros(cap * 2 * m, dtype=np.uint64)
-        st = Stats()
-        cnt = _lib().rf_lrf(self._ctx, m, (u64 * 2)(*R), self.fx.ctypes.data, self.fy.ctypes.data, self.nfb,
-                            0, self.nfb, out.ctypes.data, cap, ctypes.byref(st))
-        return self._rows(out, cnt, cap, m), st.as_dict(), int(cnt)
+    def _ranges(self, threads):
+        if threads <= 1:
+            return [(0, self.nfb)]
+        step = max(1, self.nfb // (16 * threads))
+        return [(lo, min(lo + step, self.nfb)) for lo in range(0, self.nfb, step)]
 
-    def brute(self, m: int, R, cap: int = 1 << 20):
-        out = np.zeros(cap * 2 * m, dtype=np.uint64)
-        cnt = _lib().rf_brute(self._ctx, m, (u64 * 2)(*R), self.fx.ctypes.data, self.fy.ctypes.data, self.nfb,
-                              0, self.nfb, out.ctypes.data, cap)
-        return self._rows(out, cnt, cap, m), int(cnt)
+    def lrf(self, m: int, R, cap: int = 1 << 20, threads: int = 1):
+        """Linearized root finding.  Returns (decompositions, stats, rows found before deduplication).
+        With threads > 1 the first enumerated point is split into ranges (m >= 3); cap is per range."""
+        lib, Rc = _lib(), (u64 * 2)(*R)
+
+        def part(rng):
+            out = np.zeros(cap * 2 * m, dtype=np.uint64)
+            st = Stats()
+            cnt = lib.rf_lrf(self._ctx, m, Rc, self.fx.ctypes.data, self.fy.ctypes.data, self.nfb,
+                             rng[0], rng[1], out.ctypes.data, cap, ctypes.byref(st))
+            if cnt < 0:
+                raise ValueError("m is too large for the kernel")
+            return self._rows(out, cnt, cap, m), st.as_dict(), int(cnt)
+
+        ranges = self._ranges(threads if m >= 3 else 1)
+        if len(ranges) == 1:
+            return part(ranges[0])
+        with ThreadPoolExecutor(threads) as ex:
+            parts = list(ex.map(part, ranges))
+        stats = {f: (max if f == "max_kernel_dim" else sum)(p[1][f] for p in parts) for f in parts[0][1]}
+        return sorted(set().union(*(p[0] for p in parts))), stats, sum(p[2] for p in parts)
+
+    def brute(self, m: int, R, cap: int = 1 << 20, threads: int = 1):
+        lib, Rc = _lib(), (u64 * 2)(*R)
+
+        def part(rng):
+            out = np.zeros(cap * 2 * m, dtype=np.uint64)
+            cnt = lib.rf_brute(self._ctx, m, Rc, self.fx.ctypes.data, self.fy.ctypes.data, self.nfb,
+                               rng[0], rng[1], out.ctypes.data, cap)
+            return self._rows(out, cnt, cap, m), int(cnt)
+
+        ranges = self._ranges(threads)
+        if len(ranges) == 1:
+            return part(ranges[0])
+        with ThreadPoolExecutor(threads) as ex:
+            parts = list(ex.map(part, ranges))
+        return sorted(set().union(*(p[0] for p in parts))), sum(p[1] for p in parts)
 
     def mitm4(self, R, cap: int = 1 << 20):
         out = np.zeros(cap * 8, dtype=np.uint64)

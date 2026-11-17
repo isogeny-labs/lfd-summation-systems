@@ -61,3 +61,23 @@ def test_zero_abscissa_target():
     R = E.add(P, P2)                      # the guess T leaves a generic target; the guess P leaves P2 + T - ...
     assert S.lrf(3, E.add(R, T))[0] == S.decompose_reference(3, E.add(R, T))
     assert S.lrf(2, E.add(P, T))[0] == S.decompose_reference(2, E.add(P, T)) != []
+
+
+def test_threads_and_larger_instance():
+    """n = 28, k = 10, m = 3: 2^20 enumerated pairs against 2^10 linear systems, one and four threads."""
+    rng = random.Random(5)
+    F = I.binary_field(28)
+    E = I.BinaryCurve(F, 0, 1)
+    S = Solver(E, I.standard_subspace(F, 10))
+    hits = 0
+    for _ in range(12):
+        R = E.random_point(rng)
+        ref = S.brute(3, R)[0]
+        for dec in ref:
+            acc = None
+            for P in dec:
+                acc = E.add(acc, P)
+            assert acc == R
+        assert S.lrf(3, R)[0] == ref == S.lrf(3, R, threads=4)[0] == S.brute(3, R, threads=4)[0]
+        hits += len(ref)
+    assert hits > 0

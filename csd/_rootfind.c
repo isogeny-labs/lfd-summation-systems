@@ -162,6 +162,11 @@ long rf_fb(const rf_ctx *c, u64 *xs, u64 *ys, long cap)
     return cnt;
 }
 
+#define QCAP 256
+#define QPTS 6
+/* a solution of the linear system, waiting for the quadratic x^2 + e1 x + e2 (inversions of e1 are shared) */
+typedef struct { u64 Tx, ym, e1, e2, lam; int nchosen; pt chosen[QPTS]; } cand;
+
 typedef struct {
     const rf_ctx *c;
     int m;
@@ -171,6 +176,8 @@ typedef struct {
     long cap, cnt;
     rf_stats *st;
     pt chosen[16];
+    cand q[QCAP];
+    int nq;
 } run;
 
 static void emit(run *r, int nchosen, pt P1, pt P2)
@@ -198,6 +205,41 @@ static void d2_enum(run *r, int nchosen, pt T)
     }
 }
 
+static void batch_inv(const rf_ctx *c, const u64 *in, u64 *out, int cnt);
+
+static void flush(run *r)
+{
+    const rf_ctx *c = r->c;
+    rf_stats *st = r->st;
+    u64 e1[QCAP], ie[QCAP];
+    pt save[QPTS];
+    memcpy(save, r->chosen, sizeof save);
+    for (int i = 0; i < r->nq; i++) e1[i] = r->q[i].e1;
+    batch_inv(c, e1, ie, r->nq);
+    for (int i = 0; i < r->nq; i++) {
+        const cand *q = &r->q[i];
+        u64 x1, x2;
+        if (q->e1 == 0) {
+            x1 = x2 = lm(&c->sqrt, q->e2);
+        } else {
+            u64 d = fmul(c, q->e2, fsq(c, ie[i]));
+            if (ftr(c, d)) continue;
+            x1 = fmul(c, q->e1, lm(&c->Q, d));
+            x2 = x1 ^ q->e1;
+        }
+        st->quad_split++;
+        if (lm(&c->chk, x1)) continue;                       /* x2 = x1 + e1 is then in V as well */
+        u64 mu = fmul(c, q->lam, q->Tx) ^ q->ym;
+        /* P1, P2 and -T are the three points of the line, so P1 + P2 = T */
+        pt P1 = {x1, fmul(c, q->lam, x1) ^ mu, 0}, P2 = {x2, fmul(c, q->lam, x2) ^ mu, 0};
+        st->found++;
+        for (int j = 0; j < q->nchosen; j++) r->chosen[j] = q->chosen[j];
+        emit(r, q->nchosen, P1, P2);
+    }
+    memcpy(r->chosen, save, sizeof save);
+    r->nq = 0;
+}
+
 /* Two-summand step by linear algebra.  P1 + P2 = T  <=>  P1, P2, -T on a line y = lam (x + xT) + yT + xT.
  * Then  e1 = x1 + x2 = lam^2 + lam + a + xT   and   e2 = x1 x2 = xT lam^2 + ((yT + xT)^2 + b) / xT,
  * both F_2-affine in lam.  With e1 = sum t_i v_i in V:  lam = Q(e1 + c1) + eps  (needs Tr(e1 + c1) = 0), and
@@ -222,14 +264,18 @@ static void d2_core(run *r, int nchosen, pt T, u64 ixT)
         u64 col = (i < k) ? (lm(&c->pi, fmul(c, T.x, c->wv[i])) | (((c->trv >> i) & 1) ? trbit : 0))
                           : lm(&c->pi, T.x);
         u64 comb = 1ULL << i;
-        for (int j = 0; j < nb; j++)
-            if ((col >> piv[j]) & 1) { col ^= bvec[j]; comb ^= bcomb[j]; }
+        for (int j = 0; j < nb; j++) {                      /* branch-free: the bits are unpredictable */
+            u64 mk = -((col >> piv[j]) & 1);
+            col ^= bvec[j] & mk; comb ^= bcomb[j] & mk;
+        }
         if (col) { piv[nb] = 63 - __builtin_clzll(col); bvec[nb] = col; bcomb[nb] = comb; nb++; }
         else kern[nk++] = comb;
     }
     u64 part = 0;
-    for (int j = 0; j < nb; j++)
-        if ((rhs >> piv[j]) & 1) { rhs ^= bvec[j]; part ^= bcomb[j]; }
+    for (int j = 0; j < nb; j++) {
+        u64 mk = -((rhs >> piv[j]) & 1);
+        rhs ^= bvec[j] & mk; part ^= bcomb[j] & mk;
+    }
     if (rhs) return;
     st->lin_solvable++;
     if ((u64)nk > st->max_kernel_dim) st->max_kernel_dim = (u64)nk;
@@ -240,25 +286,13 @@ static void d2_core(run *r, int nchosen, pt T, u64 ixT)
         st->lin_candidates++;
         u64 e1 = 0, tm = sol & ((1ULL << k) - 1), eps = (sol >> k) & 1;
         while (tm) { e1 ^= c->v[__builtin_ctzll(tm)]; tm &= tm - 1; }
-        u64 lam = lm(&c->Q, e1 ^ c1) ^ eps;
-        u64 e2 = fmul(c, T.x, lam ^ e1 ^ c1) ^ c2;           /* lam^2 = lam + e1 + c1 */
-        u64 x1, x2;
-        if (e1 == 0) {
-            x1 = x2 = lm(&c->sqrt, e2);
-        } else {
-            u64 ie = finv(c, e1);
-            u64 d = fmul(c, e2, fsq(c, ie));
-            if (ftr(c, d)) continue;
-            x1 = fmul(c, e1, lm(&c->Q, d));
-            x2 = x1 ^ e1;
-        }
-        st->quad_split++;
-        if (lm(&c->chk, x1)) continue;                       /* x2 = x1 + e1 is then in V as well */
-        u64 mu = fmul(c, lam, T.x) ^ ym;
-        pt P1 = {x1, fmul(c, lam, x1) ^ mu, 0}, P2 = {x2, fmul(c, lam, x2) ^ mu, 0};
-        /* P1, P2 and -T are the three points of the line, so P1 + P2 = T */
-        st->found++;
-        emit(r, nchosen, P1, P2);
+        cand *q = &r->q[r->nq++];
+        q->Tx = T.x; q->ym = ym; q->e1 = e1;
+        q->lam = lm(&c->Q, e1 ^ c1) ^ eps;
+        q->e2 = fmul(c, T.x, q->lam ^ e1 ^ c1) ^ c2;         /* lam^2 = lam + e1 + c1 */
+        q->nchosen = nchosen;
+        for (int i = 0; i < nchosen; i++) q->chosen[i] = r->chosen[i];
+        if (r->nq == QCAP) flush(r);
     }
 }
 
@@ -341,7 +375,9 @@ static void rec(run *r, int depth, int nguess, long start, pt S, int linear)
 long rf_lrf(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, long nfb,
             long lo, long hi, u64 *out, long cap, rf_stats *st)
 {
-    run r = {c, m, fx, fy, nfb, out, cap, 0, st};
+    static __thread run r;
+    r.c = c; r.m = m; r.fx = fx; r.fy = fy; r.nfb = nfb; r.out = out; r.cap = cap; r.cnt = 0; r.st = st; r.nq = 0;
+    if (m - 2 > QPTS) return -2;
     pt S = {R[0], R[1], 0};
     memset(st, 0, sizeof *st);
     if (hi > nfb) hi = nfb;
@@ -355,13 +391,14 @@ long rf_lrf(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, 
         }
         return r.cnt;
     }
-    if (m == 2) { d2_linear(&r, 0, S); return r.cnt; }
-    if (m == 3) { last_level(&r, 0, lo, hi, S, 1); return r.cnt; }
+    if (m == 2) { d2_linear(&r, 0, S); flush(&r); return r.cnt; }
+    if (m == 3) { last_level(&r, 0, lo, hi, S, 1); flush(&r); return r.cnt; }
     for (long i = lo; i < hi; i++) {
         pt P = {fx[i], fy[i], 0};
         r.chosen[0] = P;
         rec(&r, 1, m - 2, i, padd(c, S, pneg(P)), 1);
     }
+    flush(&r);
     return r.cnt;
 }
 
@@ -369,7 +406,8 @@ long rf_brute(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy
               long lo, long hi, u64 *out, long cap)
 {
     rf_stats st;
-    run r = {c, m, fx, fy, nfb, out, cap, 0, &st};
+    static __thread run r;
+    r.c = c; r.m = m; r.fx = fx; r.fy = fy; r.nfb = nfb; r.out = out; r.cap = cap; r.cnt = 0; r.st = &st; r.nq = 0;
     pt S = {R[0], R[1], 0};
     memset(&st, 0, sizeof st);
     if (hi > nfb) hi = nfb;
