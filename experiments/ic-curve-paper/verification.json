@@ -1,23 +1,23 @@
 {
   "status": "passed: PDF built; no unresolved citations or references; not a proof or novelty certificate",
-  "tex_engine": "pdflatex",
+  "tex_engine": "tectonic",
   "latex_warnings": [],
   "overfull_boxes": 0,
   "source_sha256": {
     "scripts/build_ic_curve_paper.py": "787834c6878558c565224e766b066469ff6090adf4698785252ed0b51399c5a0",
     "scripts/make_paper_figures.py": "06c2c487ebc061994960372e612820924d4cae3d19c4cd27302c23fd7cef6cf5",
-    "paper/curve-lfd-bounds.tex": "9a77a3416ebc4089bd1cf0b01ace2826b955b9f0e9e8fdc874cbbb91afb46b38",
+    "paper/curve-lfd-bounds.tex": "ede29ef22653a3006db6325e1de27780a9d7a137465a31206c290e47b9db21b4",
     "paper/curve-sweep-data.tex": "21d3de9d6cf708c394f8813c092c0e1eaf86f4f5ca4e432724b294f6728c9ffa",
     "experiments/ic-curve-sweep/summary.json": "4722c5d0f3c407f9b97979d722b62541cf3c2fb6b215f9ac15c23d9ca600a404",
     "experiments/ic-lean/verification.json": "f13efba1c25b780909b9c26063b427a9f96d37219709346fddbafff2621b594a"
   },
   "data_sha256": {
-    "paper/curve-lfd-bounds.pdf": "f33c4e8ed615471992295a7f144a2c89e267122e2b9a643d69328cea2a7e278c",
-    "paper/figures/curve-sweep.pdf": "6e1309d3c4888dd73866d6c3eee88c23a59df3f89b71378914689c2974f5b98b",
-    "paper/figures/curve-sweep.png": "f0dfe51b6025a92c96c4dccd71a8a0fa02025e04d2e4c070d57e44b3b8da8cbc",
-    "paper/figures/lfd-depth.pdf": "535e5538adb2bf11c027cf1be171e3b4ffbb9170cacf4d2596afbcc474db751b",
-    "paper/figures/closure-dims.pdf": "bc57bc100a6476d28d90d54e828714a3705258d09e0c3cc04e3b28ea3faaddeb",
-    "paper/figures/msummands.pdf": "94e53f9d75d40a23410a989be94a5e1cedab5f234b60deccfe724f0e94bfe203",
-    "paper/figures/binary-deep.pdf": "1cb7171da6743a9c1b1ba9a1522dd6e719f53ecf0deb9f0bcb42ab15a6e2e184"
+    "paper/curve-lfd-bounds.pdf": "6fa55466b930308a257a1bb63c3543e1961a85afddfad49c6624a03263ebd078",
+    "paper/figures/curve-sweep.pdf": "b685b14333fe9552d6882c0098b051eec5a3f1ca12d09e5824a5371c7ecb94bb",
+    "paper/figures/curve-sweep.png": "1d5897b3d0854e69d945f7f6109e2b648a0e2fdd976d55d4e3946d793a0581a5",
+    "paper/figures/lfd-depth.pdf": "7660b11ddec519682ee62a0d29f2ba35365a891d27484e878124617c88236615",
+    "paper/figures/closure-dims.pdf": "86cb54cd3afa197acdf19695cbfc4dc4f441d4a236a37fe8fa506a38b2651c81",
+    "paper/figures/msummands.pdf": "454e4cdfb07ba125ec1ee5e2ebd3d68a4ab57f3f8daed784108d420bc254b771",
+    "paper/figures/binary-deep.pdf": "b7bffa5fcb4641425b2d3d9d14330ff10384b875c66e5a632f6b8d55129ede54"
   }
 }
