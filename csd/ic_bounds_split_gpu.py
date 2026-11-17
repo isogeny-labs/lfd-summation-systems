@@ -236,7 +236,7 @@ def host_inverse(M: np.ndarray, p: int) -> np.ndarray:
     return T
 
 
-def rref_batch(R, fdeg: np.ndarray, p: int, mi: int, sub: int, stats: dict):
+def rref_batch(R, fdeg: np.ndarray, p: int, mi: int, sub: int, stats: dict, width: int = 4):
     """Reduced echelon form of the rows of R (b x f device array, entries in [0, p)) under the pivot
     rule of the module docstring.  fdeg (host): degree of each column, non-increasing.
     Returns (L, lead): L is t x f on the device with the identity on the columns `lead` (host)."""
@@ -260,12 +260,17 @@ def rref_batch(R, fdeg: np.ndarray, p: int, mi: int, sub: int, stats: dict):
                 ad = DV.to_dev(alive)
                 S, nzm = S[ad], nzm[ad]
             first = DV.to_host(xp.argmax(nzm, axis=1)).astype(np.int64)
-            del nzm
             d = fdeg[first]
-            sel = np.flatnonzero(d == d.max())
-            J = np.unique(first[sel])
+            top = d.max()
+            sel = np.flatnonzero(d == top)
             sd = DV.to_dev(sel)
             Ssel = S[sd]
+            # candidate pivot columns: the leading columns of the selected rows and, up to `width` per
+            # row, the first columns of the same degree block where a selected row is nonzero
+            lo = int(np.searchsorted(-fdeg, -top, side='left'))
+            hi = int(np.searchsorted(-fdeg, -top, side='right'))
+            occupied = lo + np.flatnonzero(DV.to_host(xp.any(nzm[sd][:, lo:hi], axis=0)))
+            J = np.union1d(first[sel], occupied[:width * len(sel)])
             A = DV.to_host(Ssel[:, DV.to_dev(J)]).astype(np.int64)
             T, r, pc = host_rref_transform(A, p)
             stats['rounds'] += 1

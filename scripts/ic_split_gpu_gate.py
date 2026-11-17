@@ -134,7 +134,9 @@ def main():
                                reference={f: ref.get(f) for f in FIELDS}, reference_seconds=ref_s,
                                reference_verified=ref.get('verified_closed'),
                                candidate={f: rec[f] for f in FIELDS}, verified_closed=rec['verified_closed'],
-                               space_equal=rec.get('space_equal'), part_rank=rec['part_rank'], symmetry=rec['symmetry'], seconds=rec['seconds'],
+                               space_equal=rec.get('space_equal'), madds=rec['ops'], stats=rec['stats'],
+                               part_columns=rec['part_columns'], products_per_pivot=rec['products_per_pivot'],
+                               peak_basis_gib=rec['peak_basis_gib'], part_rank=rec['part_rank'], symmetry=rec['symmetry'], seconds=rec['seconds'],
                                peak_device_gib=rec['peak_device_gib'], loadavg=os.getloadavg()[0])
                     rows.append(row)
                     log(f'{mode} m={m} k={k} D={D} {arm}: {"EQUAL" if not diff else "DIFFERENT " + str(diff)} '
