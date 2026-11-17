@@ -1,0 +1,48 @@
+6f0865c2f28d165225cf9787bd890c19d134d791c0f7b7cb77df606949602ca4  bundle.tar.gz
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+cc (Debian 14.2.0-19) 14.2.0
+32
+MemTotal:       527605580 kB
+/usr/local/lib/python3.13/site-packages/numpy/__config__.py:155: UserWarning: Install `pyyaml` for better output
+  warnings.warn("Install `pyyaml` for better output", stacklevel=1)
+      "name": "gcc",
+      "name": "cython",
+      "name": "gcc",
+compiled elimination: True
+  D=3 cols=1045 dim=1 one=False 0.001s
+  D=4 cols=4570 dim=39 one=False 0.008s
+  D=5 cols=15694 dim=711 one=False 0.89s
+  batches=20 rank=5150 queue=252
+  D=6 cols=44366 dim=5243 one=False 48.267s
+  batches=20 rank=5058 queue=22128
+  batches=40 rank=8875 queue=19638
+  batches=60 rank=12670 queue=14790
+  batches=80 rank=16276 queue=13218
+  batches=100 rank=19984 queue=11916
+  batches=120 rank=23784 queue=7932
+  batches=140 rank=27838 queue=0
+  D=7 cols=106970 dim=27838 one=False 2304.261s
+  batches=20 rank=5101 queue=59478
+  batches=40 rank=8774 queue=54090
+  batches=60 rank=12060 queue=56838
+  batches=80 rank=15596 queue=52674
+  batches=100 rank=18711 queue=89460
+  batches=120 rank=22581 queue=94332
+  batches=140 rank=25566 queue=89250
+  batches=160 rank=28961 queue=87282
+  batches=180 rank=31716 queue=86988
+  batches=200 rank=34167 queue=85542
+  batches=220 rank=36457 queue=84996
+  batches=240 rank=39334 queue=82794
+  batches=260 rank=42339 queue=73716
+  batches=280 rank=45909 queue=67536
+  batches=300 rank=48527 queue=65082
+  batches=320 rank=50348 queue=50370
+  batches=340 rank=53594 queue=43272
+  batches=360 rank=57194 queue=52662
+  batches=380 rank=60265 queue=59064
+  batches=400 rank=63202 queue=56232
+/work/job.sh: line 14:    95 Killed                  python3 scripts/run_ic_split_m.py cell --m "$M" --k "$K" --primes $PRIMES --seeds "$SEEDS" --cap "$CAP"
