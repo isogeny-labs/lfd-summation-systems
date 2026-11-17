@@ -19,7 +19,7 @@ author must agree.
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (48 pages) |
+| Content | `../curve-lfd-bounds.pdf` (49 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -40,8 +40,8 @@ carries this sheet.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `d09e8240e0c201199225c84e0e7ece18f858d2ab620c5c2050d5834c640ffb99` |
-| `paper/curve-lfd-bounds.tex` | `5925cc9dbd3ec891e3e14316e1498b01af0fda3f0d3e325fd0d99abe9d51ff03` |
+| `paper/curve-lfd-bounds.pdf` | `f33c4e8ed615471992295a7f144a2c89e267122e2b9a643d69328cea2a7e278c` |
+| `paper/curve-lfd-bounds.tex` | `9a77a3416ebc4089bd1cf0b01ace2826b955b9f0e9e8fdc874cbbb91afb46b38` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `79e4ddebd3ef19013828a8e5049f4286f154059ca5e30527b12d3cbdc2be25a3` |
 
 The PDF was built with pdfTeX 1.40.25 (TeX Live 2023, Debian) by

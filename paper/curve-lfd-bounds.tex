@@ -1342,7 +1342,15 @@ $k=14$, the upper half resting on the lift. The lift was
 validated against direct closures at smaller sizes and by controls that
 could have failed (Appendix~\ref{app:lift}); it does not end with a sweep in
 $M_{\le7}$ and produces no basis of $V_7$, so the value $7$ has no
-independent certificate (Section~\ref{sec:limitations}).
+independent certificate (Section~\ref{sec:limitations}). A second
+implementation of the lift, written separately in ordinary monomial
+coordinates and sharing no code with the first, was run on the unit
+instance over $p=65537$ from a degree-$6$ closure recomputed for the
+purpose (equal basis hashes, independent check passed): it gives
+$1\in V_7$ and the same dimensions, $\dim(V_7\cap M_{\le6})=499{,}178$ in
+parts $249{,}824$ and $249{,}354$ and $\dim V_7=1{,}683{,}218$, every one
+of them fixed as a prediction before the run
+(Appendix~\ref{app:checks}).
 
 \paragraph{A random curve over $p=65537$.}
 On $y^2=x^3+4021x+9917$ over $p=65537$ (seed $12$, target $(1424,826)$,
@@ -1481,20 +1489,19 @@ side: the value $7$ lies below the bounds $10$ and $13$. The split presentation 
 auxiliary variable has LFD $6$ at $k=4$ and in $111$ of $117$ cases at
 $k=3$ ($5$ in the other six), and $5$ in all $116$ cases at $k=2$.
 
-\paragraph{The split presentation on a second instrument (empirical).}
+\paragraph{The split presentation with more summands (exact).}
 The split presentation generalizes to $m$ summands: $m$ chains, $m-2$ free
 auxiliary abscissae $u_j$ of the partial sums, and the left chain
-$S_3(x_1,x_2,u_1)$, $S_3(u_j,x_{j+2},u_{j+1})$, $S_3(u_{m-2},x_m,t)$. A
-preregistered study in another repository measured it with a closure engine
-and an F4 implementation written in Rust, which share no code with the
-engines of this paper, on coset bases $g\mu_{2^k}$ and random targets (unit
-ideals) over $p=786433$ and $p=2013265921$, two draws per cell and prime. On
-the cells that both have, the values agree: for three summands its four
-draws read $5$, $6$, $6$ at $k=2,3,4$, the certified value on all $63$,
-$51$ and $27$ unit instances of our sweep at these depths. Its further
-readings are in Table~\ref{tab:splitm}. They carry no certificate of the
-kind of Appendix~\ref{app:certs} and were not recomputed here, so we report
-them as readings of one instrument and claim no exact value from them.
+$S_3(x_1,x_2,u_1)$, $S_3(u_j,x_{j+2},u_{j+1})$, $S_3(u_{m-2},x_m,t)$. We
+computed its exact LFD on unit instances with the batched closure engine of
+the three-summand sweep, on a monomial space with several free auxiliaries
+(Table~\ref{tab:splitm}). An entry is the least $D$ with $1\in V_D$, every
+smaller closure verified closed without $1$. The engine was first checked
+against twelve recorded three-summand cases (equal generators, value and
+quotient rank at every degree) and against five planted instances, where
+no closure through degree $7$ contains $1$; the instance rule, the predicted
+values and the reading rule were fixed before the cells were run
+(Appendix~\ref{app:checks}).
 
 \begin{table}[!ht]
 \centering\small
@@ -1502,30 +1509,42 @@ them as readings of one instrument and claim no exact value from them.
 \toprule
 $m$ & $k=2$ & $k=3$ & $k=4$ & $k=5$ & $k=6$\\
 \midrule
-$3$ & $5^{*}$ & $6^{*}$ & $6^{*}$ & $7$ & $\ge7$\\
-$4$ & $6$ & $7$ & $7$ & $\ge7$ & \\
-$5$ & $6$ & $8$ & $\ge8$ & & \\
-$6$ & $7$ & & & & \\
+$3$ & $5$ \ ($63$) & $6$ \ ($51$) & $6$ \ ($27$) & $7$ \ ($2$) & $\ge7^{\dagger}$\\
+$4$ & $6$ \ ($6$) & $7$ \ ($6$) & $7$ \ ($2$) & $\ge7^{\dagger}$ & \\
+$5$ & $6$ \ ($6$) & $\ge8$ \ ($1$) & $\ge8^{\dagger}$ & & \\
+$6$ & $7$ \ ($2$) & & & & \\
 \bottomrule
 \end{tabular}
-\caption{Last fall degree of the split presentation with $m$ summands and
-$m-2$ free auxiliaries, as read by the second instrument (not certified
-here). Starred entries equal the certified values of this paper. An entry
-$\ge d$ is a closure stopped by a resource limit after degree $d-1$. At
-$m=3$, $k=5$, $p=786433$ one of the two draws stopped at $\ge7$. The entries
-$8$ ($m=5$) and $7$ ($m=6$) combine a closure without $1$ one degree below
-with the degree at which F4 ends. For $m=5,6$ at $k=2$ the base has four
-points, fewer than $m$.}
+\caption{Exact last fall degree of the split presentation with $m$ summands
+and $m-2$ free auxiliaries on unit instances, with the number of instances
+in parentheses; every instance of a cell has the value shown. The
+three-summand cells at $k\le4$ are those of the seeded sweep. At $m=5$,
+$k=3$ the closures of degree $3$ to $7$ are verified without $1$ on one
+instance and the degree-$8$ closure ($226{,}325$ columns) did not finish, so
+the entry is a lower bound. Entries marked $\dagger$ are readings of the
+second instrument only (closures stopped by a resource limit), not computed
+here.}
 \label{tab:splitm}
 \end{table}
 
-On every cell of that study the operational first fall degree is $4$, while
-the readings rise with both $m$ and $k$; with the certified values at
-$m=3$, $k\le4$ this is the pattern of the two-summand profile, in which the
-first fall degree does not predict the last. The direct and the split
-presentations differ at equal $(m,k)$, $7$ against $5$ or $6$ for three
-summands at $k\le4$, in line with the dependence of the LFD on the
-presentation (Section~\ref{sec:related}).
+A preregistered study in another repository had measured the same cells
+with a closure engine and an F4 implementation written in Rust, which share
+no code with the engines of this paper, on coset bases $g\mu_{2^k}$ and
+random targets over $p=786433$ and $p=2013265921$, two draws per cell and
+prime. Its readings were the predictions of our runs. They equal the
+certified value in every cell of Table~\ref{tab:splitm} with an exact entry,
+on different primes, curves and bases; where both record them, the closure
+dimensions agree as well (at $m=4$, $k=4$: $38$, $530$ and $3672$ at
+degrees $4$, $5$ and $6$). At $m=5$, $k=3$ it reads $8$, from a closure
+without $1$ through degree $7$ and the degree at which F4 ends; our lower
+bound $8$ agrees with it and the upper bound is not certified here.
+
+In that study the operational first fall degree is $4$ on every cell, while
+the values rise with both $m$ and $k$: as for two summands, the first fall
+degree does not predict the last. The direct and the split presentations
+differ at equal $(m,k)$, $7$ against $5$ or $6$ for three summands at
+$k\le4$, in line with the dependence of the LFD on the presentation
+(Section~\ref{sec:related}).
 
 On twelve further instances (eight primes with $32\mid p-1$, random curves, random and
 planted generic targets, the same curve and target at every depth) the
@@ -2477,19 +2496,23 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  stored basis; on the random curve over $p=114689$ one run with that check;
  on the random curve over $p=65537$ one run). The upper bound $\lfd\le7$ is
  the degree lift, run once on each of three instances, without a final sweep
- in $M_{\le7}$ or a basis of $V_7$; the value $7$ therefore has no
+ in $M_{\le7}$ or a basis of $V_7$, and repeated on the unit instance over
+ $p=65537$ by a second implementation that agrees with it; the value $7$
+ therefore has no
  independent certificate and rests on the written proof of the lift, the
- assertions of the runs, the comparisons with direct closures and the
- control, and in Lean the depth-$14$ values are kernel-checked only relative
+ assertions of the runs, the agreement of the two implementations, the
+ comparisons with direct closures and the control, and in Lean the depth-$14$ values are kernel-checked only relative
  to the recorded closures as hypotheses. The two halves also use the
  stored degree-$6$ space $W$ differently. The independent check shows that
  $W$ is closed and contains the generator, hence $W\supseteq V_6$, which is
  what $1\notin V_6$ needs. The upper bound lifts $W$ and so needs
  $W\subseteq V_6$, which the check does not show: it holds if the
  degree-$6$ engine added only the generator and admissible products, and
- no second engine has computed the degree-$6$ closure at $k=14$. A second
- implementation of the lift from the same stored basis would test the lift
- and leave this dependence in place.
+ no second engine has computed the degree-$6$ closure at $k=14$. The second
+ implementation of the lift starts from a stored basis of the same engine
+ (recomputed, with equal hashes), so it tests the lift and leaves this
+ dependence in place; the two implementations also rest on one written
+ theorem.
 \item \emph{Second engines.} For $D=6$ the reference engine confirms the
  full closure at $k=10$ and $11$ only. The $k=14$ degree-$6$ bases were kept
  for the checker and the lift but not archived; the hashes and the
@@ -2508,8 +2531,9 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
 \item \emph{The conjecture.} The law was fitted to the exact values at
  $k\le13$; every depth beyond $14$ (including the prediction that the
  free-extension structure of $V_6$ has base depth $15$, with the recursion of
- dimensions from $k=14$) and the value at $k=14$ by a second method are
- untested. Uniformity over curves, primes and targets
+ dimensions from $k=14$) is untested; at $k=14$ the lift was repeated by a
+ second implementation on one instance, and a direct closure in $M_{\le7}$
+ was not computed. Uniformity over curves, primes and targets
  rests at degree $6$ (depths $13$ and $14$) on two unit instances with
  $j=1728$ and two random curves over three primes, and at degree $7$ on
  three of these instances.
@@ -2530,9 +2554,12 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  lower bound on any last fall degree, and its two presentations of the
  function field are not identified in Lean.
 \item \emph{The split presentation beyond three summands}
- (Table~\ref{tab:splitm}) is read by one instrument, with two draws per
- cell and prime, and has no certificate; only its three-summand entries at
- $k\le4$ are certified here.
+ (Table~\ref{tab:splitm}) rests on six instances per cell at $(m,k)=(4,2)$,
+ $(4,3)$, $(5,2)$ and on two at $(3,5)$, $(4,4)$, $(6,2)$, all unit
+ instances over subgroup bases, computed with one engine; a containing
+ closure is accepted on the engine's arithmetic, without a separate
+ verification pass. The cell $(5,3)$ has a lower bound from one instance,
+ and the entries marked $\dagger$ are not computed here.
 \item \emph{More summands.} The bound $\lfd\ge8$ at $k=6$ for three summands
  is one instance and one engine, with no computation at $k\ge7$ and no
  prediction beyond $k=6$. The value $\deg g+1$ for four and five summands is
@@ -2616,9 +2643,10 @@ below, followed by computations that could test the proposed explanations.
  case $t=0$ and a lower bound for proper ideals remain separate problems;
  the finite exceptional-prime values in Table~\ref{tab:fermatlfd} do not
  settle that lower bound.
-\item \emph{Larger computations.} The value at $k=14$ by a second method (a
- direct closure in $M_{\le7}$, beyond the engines used here, or an
- independent lift); degree-$6$ and degree-$7$ closures at $k\ge15$; second
+\item \emph{Larger computations.} The value at $k=14$ by a direct closure in
+ $M_{\le7}$, beyond the engines used here, or by a lift from a degree-$6$
+ closure of a second engine; the degree-$8$ closure of the split
+ presentation at $m=5$, $k=3$; degree-$6$ and degree-$7$ closures at $k\ge15$; second
  engines for $D=6$ at $k\ge12$; three-summand closures on further instances
  at $k=6$ and at $k\ge7$; larger cells with four and five summands.
 \item \emph{Towards cost.} The LFD controls solving only together with the
@@ -2928,16 +2956,39 @@ coordinate functions on two curves, tested the characteristic-$p$ bound
 with relations whose coefficients are non-constant $p$-th powers, and
 confirmed that the Lean bridge is applied with the space $S_D$ of the text.
 
-\paragraph{A second instrument for the split presentation.} The readings
-of Table~\ref{tab:splitm} come from the repository
-\code{isogeny-labs/crypto} (preregistered study
-\code{research/prime\_fall\_degree\_20261027}, stage B). Its scored table,
-the two closure records behind the entry $m=4$, $k=4$, and their digests
-are copied to \code{experiments/crossrepo-pkm-stage-b/};
-\code{scripts/check\_crossrepo\_stage\_b.py} rebuilds the comparison with
-the certified three-summand values from the records of both sides and
-fails on any difference. The check compares recorded values and runs no
-closure.
+\paragraph{The split presentation with $m$ summands.} Engine
+\code{csd/ic\_bounds\_split\_m.py} on the batched closure of the
+three-summand sweep; protocol, controls and records in
+\code{experiments/\allowbreak{}ic-bounds-split-m/}. The protocol fixed the instances
+(seeded random curves and rational targets, redrawn until $S_{m+1}$ has no
+zero on the grid), the predicted values and the reading rule before any
+cell with $m\ge4$ was run; an amendment, written before the four large
+cells, moved them to two instances over $p=114689$ and $163841$ and to a
+variant of the basis update that halves peak memory and was compared with
+the original on three instances. Every launched instance is in the
+records, including the one that did not finish. The predictions were the
+readings of the repository \code{isogeny-labs/crypto} (preregistered study
+\code{research/prime\_fall\_degree\_20261027}, stage B), whose scored table
+is copied with digests to \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/};
+\code{scripts/check\_crossrepo\_stage\_b.py} rebuilds the three-summand
+comparison from the records of both sides and fails on any difference.
+
+\paragraph{A second implementation of the lift.}
+\code{csd/ic\_bounds\_lift\_independent.py} imports nothing from the
+repository and works in ordinary monomial coordinates, where the first
+lift works in orbit coordinates of the swap of the two summands. On $37$
+cases at depths $2$ to $10$ ($15$ where $1$ enters, $22$ where it does
+not; unit and proper instances) it agrees with direct closures of the
+reference engine in the verdict and in every dimension, and it refuses or
+changes its result on $62$ of $69$ altered inputs; the seven others drop
+generators that are redundant there. At $k=14$ the run on a rented GPU
+recomputed $V_6$ (rank $448{,}922$, both basis hashes equal to the recorded
+ones), repeated the independent check of the stored basis, and then ran
+both lifts on the same files; the plan with the predicted fields and the
+reading rule was written before the run
+(\code{experiments/\allowbreak{}ic-bounds-k14-independent/}). The second
+implementation shares with the first the theorem of this appendix, the
+engine's file format and the degree-$6$ engine that produced its input.
 
 \paragraph{Replays.} The sweep was replayed in full. The depth-ten probe was
 rerun from scratch on the same instance and reproduces the verified $V_5$
@@ -3022,8 +3073,9 @@ Exceptional targets at depth $6$ & \code{experiments/\allowbreak{}ic-bounds-locu
 Depth ten & \code{experiments/\allowbreak{}ic-chain-depth10/} (\code{degree6.json}, \code{rerun.json}, \code{proper-13313.json}, \code{random-15361.json})\\
 Reference engine, depths $10$--$13$ & \code{experiments/\allowbreak{}ic-bounds-d5/} (\code{VERIFY.md}; \code{verify/k10-p12289-s10-D6.json})\\
 Third engine, depths $10$--$16$; lift & \code{experiments/\allowbreak{}ic-bounds-k14/} (\code{RESULTS.md}, \code{README.md}, \code{LIFT.md}, \code{CERTCHECK.md}; \code{runs/lift-unit-p65537-k14-D6to7.json}, \code{runs/lift-unit-p163841-k14-D6to7.json}, \code{runs/lift-proper-p114689-k14-D6to7.json}, \code{runs/reference-engine-unit-p65537-k14-D5.json} with \code{-k10-D6.json} and \code{-k11-D6.json}, \code{validation/lift-k10d5-proper.json}; instances in \code{instances/})\\
+Second lift at $k=14$ & \code{experiments/\allowbreak{}ic-bounds-k14-independent/} (\code{PLAN.md}, \code{RESULT-unit-p65537.md}, \code{pod/})\\
 Free extension, predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/} (\code{records/}; \code{predictions-2026-11-10.json}, ids \code{d5-14}, \code{d6-full-through-13}, \code{d6-falls-at-14}; \code{outcomes-2026-11-10.json})\\
-Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r}); Table~\ref{tab:splitm}: \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/}\\
+Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r}); Table~\ref{tab:splitm}: \code{experiments/\allowbreak{}ic-bounds-split-m/}, \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/}\\
 Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experiments/\allowbreak{}ic-bounds-msum/}\\
 Four and five summands (exact closures) & \code{experiments/\allowbreak{}ic-bounds-msummands/}\\
 Binary grids and laws & \code{experiments/\allowbreak{}ic-bounds-binary/}, \code{experiments/\allowbreak{}ic-bounds-binary-law/}, \code{experiments/\allowbreak{}ic-bounds-binary-deep/}\\

@@ -1,6 +1,6 @@
 # Main manuscript: ePrint preparation
 
-**Status, 16 November 2026:** candidate for author review, 48 pages. It
+**Status, 16 November 2026:** candidate for author review, 49 pages. It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint
