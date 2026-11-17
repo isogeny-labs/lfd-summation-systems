@@ -18,6 +18,7 @@ _(none pinned — set one with `/goal <text>`)_
 
 - [x] Finalize and locally validate both depth-14 replications and submission provenance; final CI and merge tracked in PR #24 (Codex, started 2026-11-16, branch paper/finalize-pr24-20261116, PR #24)
 - [x] Build and benchmark a root-finding solver for index-calculus summation systems to replace F4/F5 (resultant/GCD elimination vs Groebner baseline, measured) (Claude, started 2026-11-17, branch claude/index-calculus-root-finding-e95kd6, PR #28)
+- [ ] Multi-word root-finding kernel in Rust (no Python in the execution path) and a measurement at n = 131 on the ECC2K-130 curve (Claude, started 2026-11-17, branch claude/index-calculus-root-finding-e95kd6, PR #28)
 
 <!-- One line per task, added as the task's first step with its draft PR:
 - [ ] <task> (<runtime>, started YYYY-MM-DD, branch <branch>, PR #<n>) -->
