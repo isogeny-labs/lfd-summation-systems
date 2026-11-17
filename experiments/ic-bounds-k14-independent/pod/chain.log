@@ -1,0 +1,235 @@
+{
+ "unit-p65537-a1-s10-k10": {
+  "lift_gpu": {
+   "got": {
+    "contains_one": true,
+    "dim_low": 21700,
+    "dim_low_parts": [
+     10878,
+     10822
+    ],
+    "dim_VD1": 60460,
+    "dim_VD": 18569
+   },
+   "want": {
+    "contains_one": true,
+    "dim_low": 21700,
+    "dim_low_parts": [
+     10878,
+     10822
+    ],
+    "dim_VD1": 60460,
+    "dim_VD": 18569
+   },
+   "equal": true,
+   "fixed_point": true,
+   "saturated": true,
+   "seconds": 15.3,
+   "status": "done"
+  },
+  "lift_gpu_basis_on_device": {
+   "got": {
+    "contains_one": true,
+    "dim_low": 21700,
+    "dim_low_parts": [
+     10878,
+     10822
+    ],
+    "dim_VD1": 60460,
+    "dim_VD": 18569
+   },
+   "want": {
+    "contains_one": true,
+    "dim_low": 21700,
+    "dim_low_parts": [
+     10878,
+     10822
+    ],
+    "dim_VD1": 60460,
+    "dim_VD": 18569
+   },
+   "equal": true,
+   "fixed_point": true,
+   "saturated": true,
+   "seconds": 9.9,
+   "status": "done"
+  },
+  "lift_cpu": {
+   "got": {
+    "contains_one": true,
+    "dim_low": 21700,
+    "dim_low_parts": [
+     10878,
+     10822
+    ],
+    "dim_VD1": 60460,
+    "dim_VD": 18569
+   },
+   "want": {
+    "contains_one": true,
+    "dim_low": 21700,
+    "dim_low_parts": [
+     10878,
+     10822
+    ],
+    "dim_VD1": 60460,
+    "dim_VD": 18569
+   },
+   "equal": true,
+   "fixed_point": true,
+   "saturated": true,
+   "seconds": 59.6,
+   "status": "done"
+  }
+ },
+ "proper-p65537-s12-k10": {
+  "lift_gpu": {
+   "got": {
+    "contains_one": false,
+    "dim_low": 21686,
+    "dim_low_parts": [
+     10871,
+     10815
+    ],
+    "dim_VD1": 60446,
+    "dim_VD": 18569
+   },
+   "want": {
+    "contains_one": false,
+    "dim_low": 21686,
+    "dim_low_parts": [
+     10871,
+     10815
+    ],
+    "dim_VD1": 60446,
+    "dim_VD": 18569
+   },
+   "equal": true,
+   "fixed_point": true,
+   "saturated": false,
+   "seconds": 14.0,
+   "status": "done"
+  },
+  "lift_gpu_basis_on_device": {
+   "got": {
+    "contains_one": false,
+    "dim_low": 21686,
+    "dim_low_parts": [
+     10871,
+     10815
+    ],
+    "dim_VD1": 60446,
+    "dim_VD": 18569
+   },
+   "want": {
+    "contains_one": false,
+    "dim_low": 21686,
+    "dim_low_parts": [
+     10871,
+     10815
+    ],
+    "dim_VD1": 60446,
+    "dim_VD": 18569
+   },
+   "equal": true,
+   "fixed_point": true,
+   "saturated": false,
+   "seconds": 13.4,
+   "status": "done"
+  },
+  "lift_cpu": {
+   "got": {
+    "contains_one": false,
+    "dim_low": 21686,
+    "dim_low_parts": [
+     10871,
+     10815
+    ],
+    "dim_VD1": 60446,
+    "dim_VD": 18569
+   },
+   "want": {
+    "contains_one": false,
+    "dim_low": 21686,
+    "dim_low_parts": [
+     10871,
+     10815
+    ],
+    "dim_VD1": 60446,
+    "dim_VD": 18569
+   },
+   "equal": true,
+   "fixed_point": true,
+   "saturated": false,
+   "seconds": 143.5,
+   "status": "done"
+  }
+ },
+ "unit-p65537": {
+  "closure": {
+   "status": "done",
+   "closed": true,
+   "contains_one": false,
+   "rank": 448922,
+   "profile": [
+    0,
+    0,
+    2,
+    154,
+    4451,
+    73587,
+    448922
+   ],
+   "part_ranks": [
+    224688,
+    224234
+   ],
+   "repairs": 0,
+   "seconds": 6707.0,
+   "basis_sha256": [
+    "eeac52ef422214ffe21d411fa9b6da488de2b63e20871875dbd94e81cb3d8c38",
+    "a58c6c7d982c6f3e1144d8a79223e23aeba34bd965f940ffe8a9182defd0fb24"
+   ],
+   "hashes_equal_recorded": true
+  },
+  "certcheck": {
+   "all_true": true,
+   "certificate_valid": true,
+   "one_excluded": true
+  },
+  "independent_lift": {
+   "got": {
+    "contains_one": true,
+    "dim_low": 499178,
+    "dim_low_parts": [
+     249824,
+     249354
+    ],
+    "dim_VD1": 1683218,
+    "dim_VD": 448922,
+    "n_special_tops": 11038,
+    "n_regular_tops": 1173002,
+    "n_N_weight_D": 1406
+   },
+   "want": {
+    "contains_one": true,
+    "dim_low": 499178,
+    "dim_low_parts": [
+     249824,
+     249354
+    ],
+    "dim_VD1": 1683218,
+    "dim_VD": 448922,
+    "n_special_tops": 11038,
+    "n_regular_tops": 1173002,
+    "n_N_weight_D": 1406
+   },
+   "equal": true,
+   "fixed_point": true,
+   "saturated": true,
+   "seconds": 699.6,
+   "status": "done"
+  },
+  "verdict": "confirm"
+ }
+}

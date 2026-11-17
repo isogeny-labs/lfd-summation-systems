@@ -1,0 +1,88 @@
+{
+ "command": "lift",
+ "ckpt": "SCRATCH/pod/ckpt/proper-p65537-s12-k10-D5",
+ "instance_file": "proper-p65537-s12-k10.json",
+ "device": "cpu",
+ "source_sha256": {
+  "lift": "8a6a32466677fc11fda4bdf832fd823ff8fef1a7335ebe7dc25cb31a6db62e7a",
+  "driver": "84127174a727fd5681bdc4330405fe746fbecb8ab6c280c0c5ca64a7d2813c8c",
+  "instance": "fcb561535a4edc59bb654c9653b0002256adabd1f999ae962f3621abbef831b4"
+ },
+ "basis": {
+  "path": "SCRATCH/pod/ckpt/proper-p65537-s12-k10-D5/ck-00000001",
+  "files_verified": true,
+  "manifest_files_id": "db471383276bae051dd159f789a5279f5fd28ddbc7123a66f990b10dfa18b13f",
+  "engine_sha256": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "canonical_sha256": [
+   "a90256733b9c3e0dac62e8e9f20292c04a6e229fa4909d0c11b9cd1af2aa78a9",
+   "4efc90abbe624f35f93c9a6792be34e376ada33379b0503a5e93545d1db9086d"
+  ],
+  "closure_record": {
+   "file": "proper-p65537-s12-k10-D5.json",
+   "closed": true,
+   "basis_sha256": [
+    "a90256733b9c3e0dac62e8e9f20292c04a6e229fa4909d0c11b9cd1af2aa78a9",
+    "4efc90abbe624f35f93c9a6792be34e376ada33379b0503a5e93545d1db9086d"
+   ]
+  }
+ },
+ "version": "ic_bounds_lift_independent/1",
+ "k": 10,
+ "D": 5,
+ "D_target": 6,
+ "p": 65537,
+ "contains_one": false,
+ "one_in_VD": false,
+ "fixed_point": true,
+ "saturated": false,
+ "schedule_complete": true,
+ "stopped": null,
+ "bounds_only": false,
+ "verify_new_rows": 0,
+ "sigma_stable": true,
+ "dim_VD": 18569,
+ "dim_low": 21686,
+ "dim_low_parts": [
+  10871,
+  10815
+ ],
+ "dim_VD1": 60446,
+ "columns": {
+  "L": 21700,
+  "top": 38760,
+  "total": 60460
+ },
+ "n_Pd": 18553,
+ "n_N": 3147,
+ "n_N_weight_D": 98,
+ "n_single": 16,
+ "n_special_tops": 788,
+ "n_regular_tops": 37972,
+ "n_T": 3935,
+ "rank_K": 3921,
+ "falls": 3133,
+ "falls_new": 3117,
+ "n_sources": 15406,
+ "n_direct": 80288,
+ "include_low": false,
+ "closed_check": {
+  "random_combinations": 2,
+  "shifts": 20,
+  "nonzero": 0
+ },
+ "counts": {
+  "generator_rows": 308120,
+  "fall_images": 125320,
+  "followers": 180,
+  "chunks": 5,
+  "fall_rounds": 4,
+  "madds_gemm": 250808425875,
+  "madds_red": 41160202458,
+  "madds_K": 17370838073
+ },
+ "seed": 1,
+ "seconds": 146.0,
+ "status": "done",
+ "seconds_total": 146.3,
+ "maxrss_mb": 894
+}

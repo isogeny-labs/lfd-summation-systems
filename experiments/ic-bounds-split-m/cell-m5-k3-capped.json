@@ -1,0 +1,47 @@
+{
+ "m": 5,
+ "k": 3,
+ "p": 114689,
+ "seed": 0,
+ "status": "lower-bound (degree-8 closure killed by the pod for memory, exit 137)",
+ "exact_lfd": null,
+ "lfd_lower_bound": 8,
+ "source": "read from pod-logs/m5-k3-pod-8j5tma6wxwh592.log; the run wrote no record line because the instance did not finish",
+ "closures_without_one": [
+  {
+   "D": 3,
+   "monomials_le_D": 1045,
+   "dim_V_D": 1
+  },
+  {
+   "D": 4,
+   "monomials_le_D": 4570,
+   "dim_V_D": 39
+  },
+  {
+   "D": 5,
+   "monomials_le_D": 15694,
+   "dim_V_D": 711
+  },
+  {
+   "D": 6,
+   "monomials_le_D": 44366,
+   "dim_V_D": 5243
+  },
+  {
+   "D": 7,
+   "monomials_le_D": 106970,
+   "dim_V_D": 27838,
+   "seconds": 2304.261
+  }
+ ],
+ "note": "closure() returns only after the verification pass (all variable shifts of low rows reduce to zero, inputs in the span), so each line above is a verified closure without 1",
+ "degree_8": {
+  "monomials_le_D": 226325,
+  "last_logged_rank": 63202,
+  "last_logged_queue": 56232,
+  "job_minutes": 502,
+  "outcome": "killed"
+ },
+ "second_instance": "not started (p = 163841)"
+}

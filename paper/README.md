@@ -1,6 +1,6 @@
 # Main manuscript: ePrint preparation
 
-**Status, 16 November 2026:** candidate for author review, 48 pages. It
+**Status, 16 November 2026:** candidate for author review, 49 pages. It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint
@@ -27,7 +27,10 @@ one-parameter family of curves, and for every allowed rational parameter over ad
 an explicit denominator-sensitive cutoff; E6 retains the sharper cutoff B_k=9^(4^k)). For prime factors of Fermat numbers,
 the ideal is proper (also kernel-checked), so the unit-ideal argument does not
 establish the LFD lower bound; the numerical bound there remains undecided. At depth 14 the lower bound is certified, and the upper bound
-uses a degree lift without an independent certificate. Binary replications
+uses a degree lift replicated by a second implementation on both unit instances.
+The lift still assumes that its input space is contained in the true degree-6
+closure; the independent closed-space check proves the reverse inclusion.
+There is no independent certificate for that input containment. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
@@ -85,7 +88,7 @@ retain its logs rather than overwriting the archived audit.
   audited sources have not changed since. The non-two-torsion modules are
   checked by a separate workflow. Both must be green on the commit that is
   submitted (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
-- The data appendix cites the combined evidence commit `26be75c`. It stays
+- The data appendix cites the combined evidence commit `2cb270c`. It stays
   reachable only if this branch is merged with a merge commit; after a squash
   or a rebase, update the citation and rebuild.
 - Read the review's remaining limits, particularly the depth-14 lift and the
@@ -150,8 +153,8 @@ six summands) are the split presentation of Section "Three to eight
 summands", with one free auxiliary per partial sum. On the cells both have
 (three summands, depths 2 to 4) they equal the certified values of this
 repository on every unit instance (`scripts/check_crossrepo_stage_b.py`).
-The paper reports this agreement and prints the further stage B readings in
-a table as readings of one instrument without certificates
+The paper reports this agreement and distinguishes the completed certified
+split-presentation cells from capped or external-only readings
 (`../experiments/crossrepo-pkm-stage-b/`). The 2-isogeny arm of that study is
 a different presentation and is not in the paper. An earlier version of this
 note called the stage B values inconsistent with the bound 7 for three
@@ -160,3 +163,19 @@ summands; that compared the split with the direct presentation and was wrong.
 Pull requests 1 (review note of 12 November) and 9 (clean build of the
 582-declaration snapshot) are merged as archives; the current status notes
 were kept where they conflicted.
+
+## Latest paper reconciliation, 16 November 2026
+
+This revision is based on frozen evidence snapshot `2cb270c` from pending
+PR #24. The split-presentation table now includes exact values 6 and 7
+on the completed cells; the five-summand depth-3 cell remains a lower
+bound of 8 after an out-of-memory termination. The second implementation
+of the depth-14 lift agrees on both unit instances over p=65537 and p=163841, with the
+shared degree-6 producer limitation stated in the text. The reviewed
+[update record](latest-update-20261116.md) distinguishes the saved large-run
+records from the fresh bounded CPU replay. No cloud run was launched for
+this paper update.
+
+The prose pass retains the isogenylabs.io-only contact. The solving-degree
+section and the kernel-checked non-two-torsion function field and pole
+orders from the combined manuscript are preserved.

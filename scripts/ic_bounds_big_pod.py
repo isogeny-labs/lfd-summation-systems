@@ -19,7 +19,7 @@ State dir: env POD_STATE_DIR (default: scratchpad/pod).
 """
 import argparse, base64, hashlib, json, os, secrets, subprocess, sys, tempfile, time
 
-API = "https://rest.runpod.io/v1"
+API = "https://api.runpod.io/v2"   # REST v2; the v1 host rest.runpod.io stopped answering on 2026-11-16
 GQL = "https://api.runpod.io/graphql"
 IMAGE = "runpod/base:1.0.2-ubuntu2404"
 STATE_DIR = os.environ.get(
@@ -619,22 +619,30 @@ def q(s):
 # Runpod commands
 # --------------------------------------------------------------------------
 def build_body(a, token):
+    """REST v2 body.  v2 has no minRAMPerGPU / minVCPUPerGPU: the catalog's per-type minimum applies
+    and cmd_create checks the pod it got against the requested minimum."""
     src = CTL_SOURCE.encode()
     body = {
-        "name": a.name, "cloudType": "SECURE", "imageName": a.image,
-        "containerDiskInGb": a.disk_gb, "volumeInGb": a.volume_gb, "volumeMountPath": "/workspace",
-        "ports": ["8000/http"], "dockerEntrypoint": ["bash", "-c"], "dockerStartCmd": [START],
+        "name": a.name, "cloud": "SECURE", "image": a.image, "disk": a.disk_gb,
+        "ports": ["8000/http"], "entrypoint": ["bash", "-c"], "cmd": [START],
         "env": {"POD_MAX_SECONDS": str(a.max_seconds), "CTL_TOKEN": token, "PIP_PKGS": a.pip,
                 "CTL_B64": base64.b64encode(src).decode()},
     }
+    if a.volume_gb:
+        body["mounts"] = {"persistent": {"size": a.volume_gb, "path": "/workspace"}}
     if getattr(a, "datacenters", None):   # restrict placement, e.g. to data centres where a run was fast
         body["dataCenterIds"] = a.datacenters.split(",")
-    if a.gpu:   # GPU pod (same field names as the lab launcher)
-        body.update({"computeType": "GPU", "gpuTypeIds": a.gpu.split(","), "gpuCount": a.gpu_count,
-                     "minRAMPerGPU": a.min_ram_per_gpu, "minVCPUPerGPU": a.min_vcpu_per_gpu})
+    if a.gpu:
+        if "," in a.gpu:
+            raise SystemExit("REST v2 takes one GPU type per pod; got %r" % a.gpu)
+        body["gpu"] = {"id": a.gpu, "count": a.gpu_count}
     else:
-        body.update({"computeType": "CPU", "cpuFlavorIds": a.flavors.split(","), "vcpuCount": a.vcpu})
+        raise SystemExit("CPU pods are not ported to REST v2 in this launcher; only --gpu is")
     return body
+
+
+def unwrap(r):
+    return r["pod"] if isinstance(r, dict) and isinstance(r.get("pod"), dict) else r
 
 
 def cmd_create(a):
@@ -652,20 +660,17 @@ def cmd_create(a):
     fd = os.open(tok_path(a.name), os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     with os.fdopen(fd, "w") as f:
         f.write(token + "\n")
-    r = rp("POST", "/pods", build_body(a, token))
+    r = unwrap(rp("POST", "/pods", build_body(a, token)))
     if not isinstance(r, dict) or "id" not in r:
         os.unlink(tok_path(a.name))
         raise SystemExit("pod not created: %s" % json.dumps(r)[:600])
     rec = {"id": r["id"], "name": a.name, "created": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-           "max_seconds": a.max_seconds, "costPerHr": r.get("costPerHr")}
+           "max_seconds": a.max_seconds, "costPerHr": r.get("cost")}
     with open(rec_path(a.name), "w") as f:
         json.dump(rec, f, indent=1)
-    cost = r.get("costPerHr")
-    print(json.dumps({"id": r["id"], "name": r.get("name"), "flavor": r.get("cpuFlavorId"),
-                      "gpu": (r.get("gpu") or {}).get("displayName") if isinstance(r.get("gpu"), dict) else r.get("gpu"),
-                      "machine": {k: (r.get("machine") or {}).get(k) for k in ("gpuTypeId", "location", "dataCenterId")} if isinstance(r.get("machine"), dict) else None,
-                      "vcpu": r.get("vcpuCount"), "memoryInGb": r.get("memoryInGb"), "costPerHr": cost,
-                      "desiredStatus": r.get("desiredStatus")}))
+    cost = r.get("cost")
+    print(json.dumps({k: r.get(k) for k in ("id", "name", "status", "cost", "gpu", "cpu", "memory", "dataCenterId",
+                                           "cudaVersion", "disk")}))
     if isinstance(cost, (int, float)):
         print("worst case at the lifetime cap (%ds): $%.2f" % (a.max_seconds, cost * a.max_seconds / 3600))
     print("proxy:", "https://%s-8000.proxy.runpod.net/" % r["id"])
@@ -674,19 +679,19 @@ def cmd_create(a):
 
 def cmd_ls(a):
     if a.all:
-        for p in rp("GET", "/pods"):
-            print(p["id"], p.get("name"), p.get("desiredStatus"), p.get("vcpuCount"), p.get("memoryInGb"), p.get("costPerHr"))
+        for p in rp("GET", "/pods")["pods"]:
+            print(p["id"], p.get("name"), p.get("status"), p.get("cost"))
         return
     for r in recorded():
-        p = rp("GET", "/pods/" + r["id"])
-        st = p.get("desiredStatus") if isinstance(p, dict) and "id" in p else "gone/unknown: %s" % json.dumps(p)[:80]
+        p = unwrap(rp("GET", "/pods/" + r["id"]))
+        st = p.get("status") if isinstance(p, dict) and "id" in p else "gone/unknown: %s" % json.dumps(p)[:80]
         print(r["id"], r["name"], st, r.get("created"), r.get("costPerHr"))
 
 
 def cmd_status(a):
-    p = rp("GET", "/pods/" + a.id)
-    print(json.dumps({k: p.get(k) for k in ("id", "name", "desiredStatus", "vcpuCount", "memoryInGb",
-                                           "costPerHr", "lastStatusChange")}) if isinstance(p, dict) else p)
+    p = unwrap(rp("GET", "/pods/" + a.id))
+    print(json.dumps({k: p.get(k) for k in ("id", "name", "status", "cost", "gpu", "cpu", "memory", "dataCenterId",
+                                           "startedAt")}) if isinstance(p, dict) else p)
 
 
 def cmd_stop(a):
