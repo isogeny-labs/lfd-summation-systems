@@ -1,6 +1,11 @@
 # Main manuscript: ePrint preparation
 
-**Status, 16 November 2026:** candidate for author review, 49 pages. It
+**Status, 17 November 2026:** candidate for author review, 53 pages. The
+cleanup of 17 November put the full proof of the growth theorem into
+Appendix C, shortened the abstract, added a statement on the use of AI
+tools (the author must confirm its wording before submission) and removed
+wording about earlier drafts; no theorem statement, Lean source or record
+changed. The PDF of that date was built with pdfTeX. It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint

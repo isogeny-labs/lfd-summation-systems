@@ -43,7 +43,7 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 
 Each experiment directory has a `README.md` (or `RESULTS.md`, `VERIFY.md`, `NOTES.md`, `REPORT.md`) that names the
 command behind every record; `experiments/publication-review-20261114/` holds the check records of
-`docs/reviews-publication-20261114.md`. Appendix C of the manuscript identifies the evidence used.
+`docs/reviews-publication-20261114.md`. Appendix D of the manuscript identifies the evidence used.
 
 ## Requirements
 
