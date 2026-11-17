@@ -15,7 +15,7 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io |
-| Abstract | paste `eprint-abstract.txt` (2818 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (2901 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
@@ -30,19 +30,20 @@ ORCID and ROR identifiers are optional.
 
 ## Source snapshot
 
-Regenerated on 16 November 2026 on the branch that combines the open
-manuscript, proof and evidence pull requests (1 and 9 to 20) on
-top of `main` at `e16cfb8`. The combined evidence, before the manuscript
-edits of this revision, is commit
-[`26be75c`](https://github.com/isogeny-labs/lfd-summation-systems/commit/26be75c),
-which the data appendix cites. The files below are those of the commit that
-carries this sheet.
+Regenerated on 16 November 2026 from the combined evidence snapshot
+[`14b6145`](https://github.com/isogeny-labs/lfd-summation-systems/commit/14b6145).
+It includes the merged manuscript and proof work, the completed split-presentation
+records, the capped five-summand run, and the first second-implementation depth-14
+lift record from pending PR #24. That research PR is not merged by this paper
+revision. The limits of the input-space certificate remain in the manuscript.
+The data appendix cites this frozen snapshot. The files below are those of
+the commit carrying this sheet.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `f33c4e8ed615471992295a7f144a2c89e267122e2b9a643d69328cea2a7e278c` |
-| `paper/curve-lfd-bounds.tex` | `9a77a3416ebc4089bd1cf0b01ace2826b955b9f0e9e8fdc874cbbb91afb46b38` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `79e4ddebd3ef19013828a8e5049f4286f154059ca5e30527b12d3cbdc2be25a3` |
+| `paper/curve-lfd-bounds.pdf` | `6fa55466b930308a257a1bb63c3543e1961a85afddfad49c6624a03263ebd078` |
+| `paper/curve-lfd-bounds.tex` | `ede29ef22653a3006db6325e1de27780a9d7a137465a31206c290e47b9db21b4` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `b344d65276ff962ce972cf76a47d1fcdf68e217750c728ca895a1f23fd191de5` |
 
 The PDF was built with pdfTeX 1.40.25 (TeX Live 2023, Debian) by
 `python3 scripts/build_ic_curve_paper.py`; two consecutive builds gave the
