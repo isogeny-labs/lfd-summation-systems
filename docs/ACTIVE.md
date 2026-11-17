@@ -16,7 +16,7 @@ _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
 
-- [ ] GPU path for split-presentation closures with m >= 4 summands (sparse/hybrid eliminator; equality gate against the CPU engines) (claude, started 2026-11-17, branch claude/lfd-ffd-paper-eprint-status-qq8fit)
+- [x] GPU path for split-presentation closures with m >= 4 summands: dense device engine built and gated on CPU; verdict: it does not beat the sparse CPU engine; no GPU run made (claude, started 2026-11-17, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #30)
 - [x] Finalize and locally validate both depth-14 replications and submission provenance; final CI and merge tracked in PR #24 (Codex, started 2026-11-16, branch paper/finalize-pr24-20261116, PR #24)
 
 <!-- One line per task, added as the task's first step with its draft PR:
