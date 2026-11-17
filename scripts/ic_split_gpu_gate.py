@@ -146,12 +146,13 @@ def main():
         m, k, D = 4, 2, 5
         p, gens, prof = instance(m, k)
         ref = S.closure(gens, m, k, p, D)
-        tests = [('drop-operator', dict(fault='drop-operator'), gens, 'cpu:split'),
-                 ('wrong-gather', dict(fault='wrong-gather'), gens, 'cpu:split'),
-                 ('wrong-gather-plain', dict(fault='wrong-gather'), gens, 'cpu:plain'),
-                 ('perturbed-input-coefficient', {}, perturb(gens, p), 'cpu:split'),
-                 ('perturbed-input-coefficient-plain', {}, perturb(gens, p), 'cpu:plain'),
-                 ('no-fault (must pass)', {}, gens, 'cpu:split')]
+        dev = arms[0].split(':')[0]
+        tests = [('drop-operator', dict(fault='drop-operator'), gens, f'{dev}:split'),
+                 ('wrong-gather', dict(fault='wrong-gather'), gens, f'{dev}:split'),
+                 ('wrong-gather-plain', dict(fault='wrong-gather'), gens, f'{dev}:plain'),
+                 ('perturbed-input-coefficient', {}, perturb(gens, p), f'{dev}:split'),
+                 ('perturbed-input-coefficient-plain', {}, perturb(gens, p), f'{dev}:plain'),
+                 ('no-fault (must pass)', {}, gens, f'{dev}:split')]
         for name, kw, gg, arm in tests:
             rec = run_candidate(gg, m, k, p, D, arm, ref_gens=gens, **kw)
             diff = compare(ref, rec)

@@ -6,8 +6,9 @@ Same object as csd.ic_bounds_split_m.closure (system `split_generators_m`, monom
 * **compact reduced echelon form.**  A basis row is e_pivot + (entries on the free columns); only
   the free columns are stored, so the basis is a (rank x (n - rank)) matrix instead of the
   (rank x n) matrix of `InPlaceClosure`: at most n^2/4 cells instead of n^2, and one third of the
-  multiply-adds.  The update that keeps the form reduced also drops the new pivot columns, so there
-  is never a second full copy (one tile of temporary).
+  multiply-adds.  The update that keeps the form reduced is done in place on the rows that meet a
+  new pivot; columns that became pivots are dropped tile by tile once they exceed `compact_frac`
+  of the stored columns, so there is never a second full copy (one tile of temporary).
 * **summand-swap split.**  sigma exchanges the first two summands (blocks 0 and 1 of the mask).
   g_1 = S_3(x_1, x_2, z_1) is symmetric in x_1, x_2 and no other input contains them, so V_D is
   sigma-stable and V_D = V_D^+ (+) V_D^-.  The engine works in orbit coordinates (+ part: one
@@ -313,10 +314,12 @@ class PartBasis:
     def __init__(self, n: int, deg: np.ndarray, p: int, D: int, eng):
         self.n, self.deg, self.p, self.D, self.E = n, deg, p, D, eng
         self.mi = B.max_inner(p)
-        self.tiles = []
-        self.starts = [0]
+        self.tiles = []                                 # device arrays, tile_rows x nphys, rows filled in order
+        self.starts = [0]                               # starts[i]: first row of tile i; starts[-1] = rank
         self.piv = np.zeros(0, dtype=np.int64)
-        self.free = np.arange(n, dtype=np.int64)
+        self.phys = np.arange(n, dtype=np.int64)        # column of the part behind each stored column
+        self.alive = np.ones(n, dtype=bool)             # False: the column has become a pivot (dead)
+        self.compactions = 0
         self.low = np.zeros(0, dtype=np.int64)          # rows with pivot degree < D, insertion order
         self._dev = {}
 
@@ -326,8 +329,12 @@ class PartBasis:
         return len(self.piv)
 
     @property
+    def nphys(self):
+        return len(self.phys)
+
+    @property
     def nfree(self):
-        return len(self.free)
+        return self.n - self.rank
 
     def dev(self, name):
         if name not in self._dev:
@@ -335,7 +342,14 @@ class PartBasis:
         return self._dev[name]
 
     def cells(self):
-        return self.rank * self.nfree
+        return self.rank * self.nphys
+
+    def tile(self, ti):
+        """The filled rows of tile ti (a view)."""
+        return self.tiles[ti][:self.starts[ti + 1] - self.starts[ti]]
+
+    def filled(self):
+        return [self.tile(ti) for ti in range(len(self.tiles))]
 
     def _gather(self, rows: np.ndarray):
         """rows (host, ascending) of the stored matrix: len(rows) x nfree device array (a copy)."""
@@ -345,30 +359,31 @@ class PartBasis:
         ti = np.searchsorted(starts, rows, side='right') - 1
         for t in np.unique(ti):
             loc = rows[ti == t] - starts[t]
-            out.append(self.tiles[t][DV.to_dev(loc)])
+            out.append(self.tiles[t][DV.to_dev(loc)])       # loc < filled rows
         return xp.concatenate(out) if len(out) > 1 else out[0]
 
     def expand(self, rows: np.ndarray):
         """Basis rows as dense vectors of the part: len(rows) x n device array."""
         xp, DV = B.xp, B.DV
         X = xp.zeros((len(rows), self.n), dtype=F64)
-        if self.nfree:
-            X[:, self.dev('free')] = self._gather(rows)
+        if self.nphys:
+            X[:, self.dev('phys')] = self._gather(rows)
         X[DV.to_dev(np.arange(len(rows))), DV.to_dev(self.piv[rows])] = 1.0
         return X
 
     # -- arithmetic
     def reduce(self, P):
-        """P: b x n device rows with entries in [0, p).  Returns the residues on the free columns."""
+        """P: b x n device rows with entries in [0, p).  Returns the residues on the stored columns
+        (exactly zero on the dead ones: a stored row has the identity on its own dead pivot column)."""
         xp, DV = B.xp, B.DV
         st = self.E.stats
-        R = P[:, self.dev('free')]
+        R = P[:, self.dev('phys')]
         if not self.rank:
             return R
         C = P[:, self.dev('piv')]
         b = P.shape[0]
         pending = 0
-        for ti, tile in enumerate(self.tiles):
+        for ti, tile in enumerate(self.filled()):
             r0, r1 = self.starts[ti], self.starts[ti + 1]
             Ct = C[:, r0:r1]
             hit = np.flatnonzero(DV.to_host(xp.any(Ct != 0, axis=0)))
@@ -387,8 +402,8 @@ class PartBasis:
                     pending = 0
                 R -= Ct[:, a:a + c] @ Tt[a:a + c]
                 pending += c
-            st['madds_reduce'] += b * h * self.nfree
-            st['madds_reduce_dense'] += b * (r1 - r0) * self.nfree
+            st['madds_reduce'] += b * h * self.nphys
+            st['madds_reduce_dense'] += b * (r1 - r0) * self.nphys
         if pending:
             B.modp_(R, self.p)
         return R
@@ -398,56 +413,72 @@ class PartBasis:
         xp, DV = B.xp, B.DV
         st = self.E.stats
         t0 = time.perf_counter()
-        L, lead = rref_batch(R, self.deg[self.free], self.p, self.mi, self.E.sub, st)
+        L, lead = rref_batch(R, self.deg[self.phys], self.p, self.mi, self.E.sub, st)
         DV.sync()
         st['s_rref'] += time.perf_counter() - t0
         t = len(lead)
         if not t:
             return 0
+        assert self.alive[lead].all(), 'a dead column became a pivot'
         t0 = time.perf_counter()
-        keep = np.ones(self.nfree, dtype=bool)
-        keep[lead] = False
-        keep = np.flatnonzero(keep)
-        kd, ld = DV.to_dev(keep), DV.to_dev(lead)
-        Lk = L[:, kd]
-        del L
-        for ti in range(len(self.tiles)):
-            tile = self.tiles[ti]
+        ld = DV.to_dev(lead)
+        for ti in range(len(self.tiles)):                 # old rows <- row - row[lead] @ L, in place
+            tile = self.tile(ti)
             X = tile[:, ld]
-            new = tile[:, kd]
-            self.tiles[ti] = None
-            del tile
             touched = np.flatnonzero(DV.to_host(xp.any(X != 0, axis=1)))
-            if len(touched) and len(keep):
+            if len(touched):
                 if len(touched) < self.E.hit_frac * X.shape[0]:
                     td = DV.to_dev(touched)
-                    part = new[td]
-                    B.matmul_sub(part, X[td], Lk, self.p, self.mi)
-                    new[td] = part
+                    part = tile[td]
+                    B.matmul_sub(part, X[td], L, self.p, self.mi)
+                    tile[td] = part
                 else:
-                    B.matmul_sub(new, X, Lk, self.p, self.mi)
-                st['madds_update'] += len(touched) * t * len(keep)
-            st['madds_update_dense'] += X.shape[0] * t * len(keep)
-            self.tiles[ti] = new
-        if self.tiles and self.tiles[-1].shape[0] + t <= self.E.tile_rows:
-            self.tiles[-1] = xp.concatenate([self.tiles[-1], Lk])
-            self.starts[-1] += t
-        else:
-            for a in range(0, t, self.E.tile_rows):
-                blk = Lk[a:a + self.E.tile_rows]
-                self.tiles.append(xp.array(blk) if t > self.E.tile_rows else blk)
-                self.starts.append(self.starts[-1] + blk.shape[0])
+                    B.matmul_sub(tile, X, L, self.p, self.mi)
+                st['madds_update'] += len(touched) * t * self.nphys
+            st['madds_update_dense'] += X.shape[0] * t * self.nphys
+        a = 0
+        while a < t:                                      # append into the last tile, new tiles as needed
+            used = self.starts[-1] - self.starts[-2] if self.tiles else self.E.tile_rows
+            if used == self.E.tile_rows:
+                self.tiles.append(xp.zeros((self.E.tile_rows, self.nphys), dtype=F64))
+                self.starts.append(self.starts[-1])
+                used = 0
+            c = min(t - a, self.E.tile_rows - used)
+            self.tiles[-1][used:used + c] = L[a:a + c]
+            self.starts[-1] += c
+            a += c
+        del L
         r0 = self.rank
-        newpiv = self.free[lead]
+        newpiv = self.phys[lead]
         self.piv = np.concatenate([self.piv, newpiv])
-        self.free = self.free[keep]
+        self.alive[lead] = False
         lowrows = r0 + np.flatnonzero(self.deg[newpiv] < self.D)
         self.low = np.concatenate([self.low, lowrows])
-        self._dev = {}
+        self._dev.pop('piv', None)
+        self.E.note_memory()
+        if self.nphys - int(self.alive.sum()) > self.E.compact_frac * self.nphys:
+            self.compact()
         DV.sync()
         st['s_update'] += time.perf_counter() - t0
-        self.E.note_memory()
         return t
+
+    def compact(self):
+        """Drop the dead columns, tile by tile (one tile of temporary)."""
+        keep = np.flatnonzero(self.alive)
+        kd = B.DV.to_dev(keep)
+        for ti in range(len(self.tiles)):
+            fill = self.starts[ti + 1] - self.starts[ti]
+            if fill == self.E.tile_rows:
+                self.tiles[ti] = self.tiles[ti][:, kd]
+            else:
+                new = B.xp.zeros((self.E.tile_rows, len(keep)), dtype=F64)
+                new[:fill] = self.tiles[ti][:fill][:, kd]
+                self.tiles[ti] = new
+        self.phys = self.phys[keep]
+        self.alive = np.ones(len(keep), dtype=bool)
+        self._dev = {}
+        self.compactions += 1
+        B.DV.free_pool()
 
     # -- queries
     def profile(self, D: int):
@@ -458,9 +489,9 @@ class PartBasis:
         """All basis rows as dense host integer vectors of the part (small cases only)."""
         out = np.zeros((self.rank, self.n), dtype=np.int64)
         if self.rank:
-            if self.nfree:
-                M = np.concatenate([B.DV.to_host(t) for t in self.tiles])
-                out[:, self.free] = M.astype(np.int64)
+            if self.nphys:
+                M = np.concatenate([B.DV.to_host(t) for t in self.filled()])
+                out[:, self.phys] = M.astype(np.int64)
             out[np.arange(self.rank), self.piv] = 1
         return out
 
@@ -475,7 +506,7 @@ class SplitClosure:
     """V_D of the split presentation.  gens: output of split_generators_m (normal forms)."""
 
     def __init__(self, gens, m, k, p, D, *, device='cpu', split=True, batch=1024, tile_rows=4096, sub=64,
-                 hit_frac=0.7, fault=None, log=None, budget_s=None, mem_budget_gb=None, checkpoint=None,
+                 hit_frac=0.7, compact_frac=0.125, fault=None, log=None, budget_s=None, mem_budget_gb=None, checkpoint=None,
                  checkpoint_every_s=None):
         if p >= 1 << 24 or p % 2 == 0:
             raise ValueError('p must be an odd prime below 2^24 (exact float64 reduction)')
@@ -484,7 +515,7 @@ class SplitClosure:
         B.use_device(device)
         if device == 'fake-gpu':
             B._Live.peak = B._Live.cur
-        self.batch, self.tile_rows, self.hit_frac = batch, tile_rows, hit_frac
+        self.batch, self.tile_rows, self.hit_frac, self.compact_frac = batch, tile_rows, hit_frac, compact_frac
         self.sub = min(sub, B.max_inner(p))
         self.fault, self.log = fault, log
         self.budget_s, self.mem_budget = budget_s, (mem_budget_gb * 2 ** 30 if mem_budget_gb else None)
@@ -521,7 +552,8 @@ class SplitClosure:
     def note_memory(self):
         st = self.stats
         st['peak_cells'] = max(st['peak_cells'], sum(pt.cells() for pt in self.parts))
-        used = B.DV.pool_bytes() if self.device != 'cpu' else 8 * sum(pt.cells() for pt in self.parts)
+        used = (B.DV.pool_bytes() if self.device != 'cpu'
+                else 8 * sum(sum(t.size for t in pt.tiles) for pt in self.parts))
         st['peak_device_bytes'] = max(st['peak_device_bytes'], int(used))
         if self.mem_budget and 8 * sum(pt.cells() for pt in self.parts) > self.mem_budget:
             raise Stop(f'memory budget: basis {8 * sum(pt.cells() for pt in self.parts) / 2 ** 30:.2f} GiB')
@@ -714,9 +746,9 @@ class SplitClosure:
             contains_one=self.contains_one, stats=self.stats, elapsed=self.seconds(),
             ops=len(self.ops), gens=hashlib.sha256(repr(sorted(map(lambda g: sorted(g.items()), self.gens))).encode()).hexdigest()))))
         for q, pt in enumerate(self.parts):
-            data[f'piv{q}'], data[f'free{q}'], data[f'low{q}'] = pt.piv, pt.free, pt.low
-            data[f'M{q}'] = (np.concatenate([B.DV.to_host(t) for t in pt.tiles]) if pt.tiles
-                             else np.zeros((0, pt.nfree)))
+            data[f'piv{q}'], data[f'phys{q}'], data[f'alive{q}'], data[f'low{q}'] = pt.piv, pt.phys, pt.alive, pt.low
+            data[f'M{q}'] = (np.concatenate([B.DV.to_host(t) for t in pt.filled()]) if pt.tiles
+                             else np.zeros((0, pt.nphys)))
         tmp = path + '.tmp.npz'
         np.savez(tmp, **data)
         os.replace(tmp, path)
@@ -735,13 +767,15 @@ class SplitClosure:
             if meta[key] != v:
                 raise ValueError(f'checkpoint {path} is for another run: {key} = {meta[key]!r}, expected {v!r}')
         for q, pt in enumerate(self.parts):
-            pt.piv, pt.free, pt.low = z[f'piv{q}'], z[f'free{q}'], z[f'low{q}']
+            pt.piv, pt.phys, pt.alive, pt.low = z[f'piv{q}'], z[f'phys{q}'], z[f'alive{q}'], z[f'low{q}']
             M = z[f'M{q}']
             pt.tiles, pt.starts, pt._dev = [], [0], {}
             for a in range(0, M.shape[0], self.tile_rows):
-                blk = M[a:a + self.tile_rows]
+                blk = np.zeros((self.tile_rows, M.shape[1]))
+                rows = M[a:a + self.tile_rows]
+                blk[:len(rows)] = rows
                 pt.tiles.append(B.DV.to_dev(blk))
-                pt.starts.append(pt.starts[-1] + blk.shape[0])
+                pt.starts.append(pt.starts[-1] + len(rows))
         self.cursor = list(meta['cursor'])
         self.contains_one = meta['contains_one']
         self.stats.update(meta['stats'])
