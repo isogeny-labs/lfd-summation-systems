@@ -52,7 +52,7 @@ generic targets $\mathrm{LFD}=4$ for $k\le5$, $5$ for $k=6,\ldots,9$ and
 $6$ for $k=10,\ldots,13$ on a unit instance, matching the corrected
 degree-of-regularity breakpoints of Petit, Kosters and Messeng, whose
 unreduced presentation has the same LFD there. At $k=14$,
-the lower bound $\mathrm{LFD}\ge7$ is certified. We obtain the matching upper bound by a degree lift with a written proof but no final certificate. The Lean statements assume the recorded closures. A second lift implementation reproduces one depth-14 unit instance, with input from the same degree-6 engine. We give a written proof, checked in two reviews, that in characteristic $0$ or
+the lower bound $\mathrm{LFD}\ge7$ is certified. We obtain the matching upper bound by a degree lift with a written proof but no final certificate. The Lean statements assume the recorded closures. A second lift implementation reproduces both depth-14 unit instances, with input from the same degree-6 engine. We give a written proof, checked in two reviews, that in characteristic $0$ or
 $p>2^{k+1}$ the LFD of unit-ideal instances with target abscissa $t\ne0$ is
 unbounded, at least $\lfloor(k-10)/14\rfloor+1$ for $k\ge38$ (in Lean,
 conditional on a vanishing-sum bound; for $y^2=x^3+ax-(1+a)$ with rational
@@ -1333,9 +1333,10 @@ could have failed (Appendix~\ref{app:lift}); it does not end with a sweep in
 $M_{\le7}$ and produces no basis of $V_7$, so the value $7$ has no
 independent certificate (Section~\ref{sec:limitations}). A second
 implementation of the lift, written separately in ordinary monomial
-coordinates and sharing no code with the first, was run on the unit
-instance over $p=65537$ from a recomputed degree-$6$ input space (equal basis hashes,
-independent closed-space check passed). Subject to the input-space
+coordinates and sharing no code with the first, was run on both unit
+instances, over $p=65537$ and $p=163841$. Each run used a recomputed
+degree-$6$ input space with matching basis hashes and a passing independent
+closed-space check. Subject to the input-space
 assumption in Section~\ref{sec:limitations}, it gives the lifted conclusion
 $1\in V_7$ and the same dimensions, $\dim(V_7\cap M_{\le6})=499{,}178$ in
 parts $249{,}824$ and $249{,}354$ and $\dim V_7=1{,}683{,}218$, every one
@@ -2483,8 +2484,8 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  stored basis; on the random curve over $p=114689$ one run with that check;
  on the random curve over $p=65537$ one run). The upper bound $\lfd\le7$ is
  the degree lift, run once on each of three instances, without a final sweep
- in $M_{\le7}$ or a basis of $V_7$, and repeated on the unit instance over
- $p=65537$ by a second implementation that agrees with it; the value $7$
+ in $M_{\le7}$ or a basis of $V_7$, and repeated on both unit instances over
+ $p=65537$ and $p=163841$ by a second implementation that agrees with it; the value $7$
  therefore has no
  independent certificate and rests on the written proof of the lift, the
  assertions of the runs, the agreement of the two implementations, the
@@ -2519,7 +2520,7 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  $k\le13$; every depth beyond $14$ (including the prediction that the
  free-extension structure of $V_6$ has base depth $15$, with the recursion of
  dimensions from $k=14$) is untested; at $k=14$ the lift was repeated by a
- second implementation on one instance, and a direct closure in $M_{\le7}$
+ second implementation on both unit instances, and a direct closure in $M_{\le7}$
  was not computed. Uniformity over curves, primes and targets
  rests at degree $6$ (depths $13$ and $14$) on two unit instances with
  $j=1728$ and two random curves over three primes, and at degree $7$ on
@@ -2968,11 +2969,15 @@ cases at depths $2$ to $10$ ($15$ where $1$ enters, $22$ where it does
 not; unit and proper instances) it agrees with direct closures of the
 reference engine in the verdict and in every dimension, and it refuses or
 changes its result on $62$ of $69$ altered inputs; the seven others drop
-generators that are redundant there. At $k=14$ the run on a rented GPU
-recomputed $V_6$ (rank $448{,}922$, both basis hashes equal to the recorded
-ones), repeated the independent check of the stored basis, and then ran
-both lifts on the same files; the plan with the predicted fields and the
-reading rule was written before the run
+generators that are redundant there. At $k=14$ two GPU runs, over $p=65537$ and $p=163841$, each
+recomputed $V_6$ (rank $448{,}922$, both basis hashes equal to that
+instance's recorded ones), repeated the independent check of the stored
+basis, and ran both lifts on the same files. For $p=163841$, a provider
+restart interrupted the first attempt; the completed job resumed with the
+depth-$14$ stage. Its small-depth controls were reported as passing before
+the interruption and were not repeated in the completed job; their status
+file was overwritten. The plan with the predicted fields and the
+reading rule was written before either run
 (\code{experiments/\allowbreak{}ic-bounds-k14-independent/}). The second
 implementation shares with the first the theorem of this appendix, the
 engine's file format and the degree-$6$ engine that produced its input.
@@ -3027,7 +3032,7 @@ The companion repository holds the records and verification reports:
 \url{https://github.com/isogeny-labs/lfd-summation-systems}
 \end{center}
 The computational and formal evidence reviewed here is available in the
-fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/14b6145}{commit \code{14b6145}}.
+fixed snapshot \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/2cb270c}{commit \code{2cb270c}}.
 Every result is stored there,
 except where the text says that records were not kept (the per-instance
 rows of the selector-bound test and the $k=14$ degree-$6$ bases);
@@ -3060,7 +3065,7 @@ Exceptional targets at depth $6$ & \code{experiments/\allowbreak{}ic-bounds-locu
 Depth ten & \code{experiments/\allowbreak{}ic-chain-depth10/} (\code{degree6.json}, \code{rerun.json}, \code{proper-13313.json}, \code{random-15361.json})\\
 Reference engine, depths $10$--$13$ & \code{experiments/\allowbreak{}ic-bounds-d5/} (\code{VERIFY.md}; \code{verify/k10-p12289-s10-D6.json})\\
 Third engine, depths $10$--$16$; lift & \code{experiments/\allowbreak{}ic-bounds-k14/} (\code{RESULTS.md}, \code{README.md}, \code{LIFT.md}, \code{CERTCHECK.md}; \code{runs/lift-unit-p65537-k14-D6to7.json}, \code{runs/lift-unit-p163841-k14-D6to7.json}, \code{runs/lift-proper-p114689-k14-D6to7.json}, \code{runs/reference-engine-unit-p65537-k14-D5.json} with \code{-k10-D6.json} and \code{-k11-D6.json}, \code{validation/lift-k10d5-proper.json}; instances in \code{instances/})\\
-Second lift at $k=14$ & \code{experiments/\allowbreak{}ic-bounds-k14-independent/} (\code{PLAN.md}, \code{RESULT-unit-p65537.md}, \code{pod/})\\
+Second lift at $k=14$ & \code{experiments/\allowbreak{}ic-bounds-k14-independent/} (\code{PLAN.md}, \code{RESULT-unit-p65537.md}, \code{RESULT-unit-p163841.md}, \code{pod/}, \code{pod-p163841/})\\
 Free extension, predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/} (\code{records/}; \code{predictions-2026-11-10.json}, ids \code{d5-14}, \code{d6-full-through-13}, \code{d6-falls-at-14}; \code{outcomes-2026-11-10.json})\\
 Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r}); Table~\ref{tab:splitm}: \code{experiments/\allowbreak{}ic-bounds-split-m/}, \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/}\\
 Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experiments/\allowbreak{}ic-bounds-msum/}\\

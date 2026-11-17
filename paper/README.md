@@ -27,7 +27,7 @@ one-parameter family of curves, and for every allowed rational parameter over ad
 an explicit denominator-sensitive cutoff; E6 retains the sharper cutoff B_k=9^(4^k)). For prime factors of Fermat numbers,
 the ideal is proper (also kernel-checked), so the unit-ideal argument does not
 establish the LFD lower bound; the numerical bound there remains undecided. At depth 14 the lower bound is certified, and the upper bound
-uses a degree lift replicated by a second implementation on one unit instance.
+uses a degree lift replicated by a second implementation on both unit instances.
 The lift still assumes that its input space is contained in the true degree-6
 closure; the independent closed-space check proves the reverse inclusion.
 There is no independent certificate for that input containment. Binary replications
@@ -88,7 +88,7 @@ retain its logs rather than overwriting the archived audit.
   audited sources have not changed since. The non-two-torsion modules are
   checked by a separate workflow. Both must be green on the commit that is
   submitted (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
-- The data appendix cites the combined evidence commit `14b6145`. It stays
+- The data appendix cites the combined evidence commit `2cb270c`. It stays
   reachable only if this branch is merged with a merge commit; after a squash
   or a rebase, update the citation and rebuild.
 - Read the review's remaining limits, particularly the depth-14 lift and the
@@ -166,11 +166,11 @@ were kept where they conflicted.
 
 ## Latest paper reconciliation, 16 November 2026
 
-This revision is based on frozen evidence snapshot `14b6145` from pending
+This revision is based on frozen evidence snapshot `2cb270c` from pending
 PR #24. The split-presentation table now includes exact values 6 and 7
 on the completed cells; the five-summand depth-3 cell remains a lower
 bound of 8 after an out-of-memory termination. The second implementation
-of the depth-14 lift agrees on the unit instance over p=65537, with the
+of the depth-14 lift agrees on both unit instances over p=65537 and p=163841, with the
 shared degree-6 producer limitation stated in the text. The reviewed
 [update record](latest-update-20261116.md) distinguishes the saved large-run
 records from the fresh bounded CPU replay. No cloud run was launched for
