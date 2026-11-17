@@ -13,9 +13,12 @@ One command does, in this order, and writes everything under --out:
     python3 scripts/ic_split_gpu_pod.py --device gpu --out /workspace/gpu-split-m \
         --cells '6,2:3-7;5,3:3-8;7,2:3-8' --device-gb 130 --budget-s 14400
 
-A closure whose predicted device memory exceeds --device-gb is not started (recorded as
-'skipped: memory'); a closure that passes --budget-s stops with a checkpoint (if --checkpoint-gb
-allows its size) and is recorded as 'stopped'.  Any exception is recorded with its traceback and the
+A closure stops itself when its stored basis passes the memory budget (--device-gb minus the working
+set) or when it passes --budget-s; it is then recorded as 'stopped: ...' (with a checkpoint if
+--checkpoint-gb allows its size) and the ladder of that cell ends.  The upper bound printed before
+each closure is the worst case (1 enters, about n_q^2/4 cells per part); a closure without 1 uses
+rank x (n_q - rank) cells, usually far less.  The batch is cut so that the working set stays below
+15 % of the planned device memory.  Any exception is recorded with its traceback and the
 job goes on with the next cell.  --device cpu and --device fake-gpu run the same code with numpy.
 
 Instances: the certified instance of experiments/ic-bounds-split-m for cells that have one; else a
@@ -178,16 +181,19 @@ def main():
                 log(f'm={m} k={k} D={D}: already recorded, skipped')
                 continue
             n = columns(m, k, D)
-            need = predicted_device_gib(n, a.batch, not a.no_split)
+            need = predicted_device_gib(n, min(a.batch, 2048), not a.no_split)
             base = dict(m=m, k=k, p=p, D=D, monomials_le_D=n, instance=source, predicted_device_gib_upper=round(need, 2))
             log(f'm={m} k={k} D={D}: {n} columns, upper bound of device memory {need:.1f} GiB '
                 f'(a closure without 1 normally uses far less; the run stops itself at the budget)')
             ck = str(out / f'ckpt-m{m}-k{k}-D{D}.npz') if need <= a.checkpoint_gb else None
+            batch = max(64, min(a.batch, int(0.15 * a.device_gb * 2 ** 30 / (6 * 0.56 * n * 8))))
+            work_gib = 6 * batch * 0.56 * n * 8 / 2 ** 30
+            log(f'  batch {batch} (working set about {work_gib:.1f} GiB), checkpoint: {ck}')
             try:
                 t0 = time.time()
-                rec, eng = G.closure(gens, m, k, p, D, device=a.device, split=not a.no_split, batch=a.batch,
+                rec, eng = G.closure(gens, m, k, p, D, device=a.device, split=not a.no_split, batch=batch,
                                      tile_rows=a.tile_rows, sub=a.sub, budget_s=a.budget_s,
-                                     mem_budget_gb=a.device_gb - 6 * a.batch * 0.56 * n * 8 / 2 ** 30,
+                                     mem_budget_gb=max(0.5, a.device_gb - work_gib - 2 * a.tile_rows * 0.56 * n * 8 / 2 ** 30),
                                      checkpoint=ck, checkpoint_every_s=a.checkpoint_every_s, resume=a.resume, log=log)
                 rec.update(base, wall_seconds=round(time.time() - t0, 2))
                 del eng

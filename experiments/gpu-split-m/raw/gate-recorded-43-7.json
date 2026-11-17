@@ -57,38 +57,38 @@
     "kernel": "ic_bounds_split_gpu/1",
     "unit": "float64 multiply-add (exact, mod p)",
     "counted": {
-     "reduce": 274808156095,
-     "update": 139546086182,
-     "rref": 37909323060
+     "reduce": 274821111692,
+     "update": 139535200743,
+     "rref": 37906212538
     },
-    "total": 452263565337,
-    "dense_equivalent": 1283452505605,
+    "total": 452262524973,
+    "dense_equivalent": 1283482897846,
     "seconds": {
-     "reduce": 9.934,
-     "update": 14.36,
-     "rref": 11.405
+     "reduce": 9.124,
+     "update": 13.97,
+     "rref": 6.335
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
    "stats": {
     "products": 51221,
-    "zero_rows": 23986,
+    "zero_rows": 23985,
     "pivots": 18094,
     "batches": 127,
-    "rounds": 9163,
-    "host_cells": 557157,
-    "madds_reduce": 274808156095,
-    "madds_reduce_dense": 950065626956,
-    "madds_update": 139546086182,
-    "madds_update_dense": 295477555589,
-    "madds_rref": 37909323060,
-    "s_setup": 0.17,
-    "s_products": 10.658,
-    "s_reduce": 9.934,
-    "s_rref": 11.405,
-    "s_update": 14.36,
+    "rounds": 936,
+    "host_cells": 3029118,
+    "madds_reduce": 274821111692,
+    "madds_reduce_dense": 950097415361,
+    "madds_update": 139535200743,
+    "madds_update_dense": 295479269947,
+    "madds_rref": 37906212538,
+    "s_setup": 0.197,
+    "s_products": 10.137,
+    "s_reduce": 9.124,
+    "s_rref": 6.335,
+    "s_update": 13.97,
     "s_verify": 0.0,
-    "s_closure": 46.721,
+    "s_closure": 39.902,
     "peak_cells": 49253026,
     "peak_device_bytes": 1096781632
    },
@@ -103,9 +103,9 @@
     7622
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 46.725,
+   "seconds": 39.907,
    "peak_device_gib": 1.0215,
-   "loadavg": 3.31982421875
+   "loadavg": 3.33837890625
   },
   {
    "mode": "recorded",
@@ -155,55 +155,55 @@
     "kernel": "ic_bounds_split_gpu/1",
     "unit": "float64 multiply-add (exact, mod p)",
     "counted": {
-     "reduce": 726413797669,
-     "update": 505423027616,
-     "rref": 106910502466
+     "reduce": 726430261413,
+     "update": 505396727408,
+     "rref": 106908556664
     },
-    "total": 1338747327751,
-    "dense_equivalent": 4688324908688,
+    "total": 1338735545485,
+    "dense_equivalent": 4688245051775,
     "seconds": {
-     "reduce": 32.597,
-     "update": 46.412,
-     "rref": 19.494
+     "reduce": 30.844,
+     "update": 45.789,
+     "rref": 12.351
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
    "stats": {
     "products": 49835,
-    "zero_rows": 23856,
+    "zero_rows": 23851,
     "pivots": 18307,
     "batches": 67,
-    "rounds": 9318,
-    "host_cells": 556799,
-    "madds_reduce": 726413797669,
-    "madds_reduce_dense": 3499189743996,
-    "madds_update": 505423027616,
-    "madds_update_dense": 1082224662226,
-    "madds_rref": 106910502466,
-    "s_setup": 0.089,
-    "s_products": 19.878,
-    "s_reduce": 32.597,
-    "s_rref": 19.494,
-    "s_update": 46.412,
+    "rounds": 916,
+    "host_cells": 3129091,
+    "madds_reduce": 726430261413,
+    "madds_reduce_dense": 3499109233903,
+    "madds_update": 505396727408,
+    "madds_update_dense": 1082227261208,
+    "madds_rref": 106908556664,
+    "s_setup": 0.09,
+    "s_products": 18.732,
+    "s_reduce": 30.844,
+    "s_rref": 12.351,
+    "s_update": 45.789,
     "s_verify": 0.0,
-    "s_closure": 119.502,
-    "peak_cells": 96754311,
+    "s_closure": 108.656,
+    "peak_cells": 96744204,
     "peak_device_bytes": 1140031488
    },
    "part_columns": [
     18324
    ],
    "products_per_pivot": 2.722,
-   "peak_basis_gib": 0.7209,
+   "peak_basis_gib": 0.7208,
    "part_rank": [
     18307
    ],
    "symmetry": "none (not requested)",
-   "seconds": 119.505,
+   "seconds": 108.659,
    "peak_device_gib": 1.0617,
-   "loadavg": 3.0966796875
+   "loadavg": 3.4697265625
   }
  ],
  "controls": [],
- "engine_sha256": "cfa69ff10249464d5c0bc9fa1e4d512bc8ddd0ed3483602ec197bc3c81934f35"
+ "engine_sha256": "627fb5de71ee4e16ad0111fafd2de4033b6918b85eb943c8142098886d46e619"
 }

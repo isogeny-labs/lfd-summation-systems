@@ -99,6 +99,7 @@ def main():
     ap.add_argument('--arms', default='cpu:split,cpu:plain,fake-gpu:split,fake-gpu:plain')
     ap.add_argument('--controls', action='store_true', help='also run the negative controls')
     ap.add_argument('--batch', type=int, default=1024)
+    ap.add_argument('--tile-rows', type=int, default=4096)
     ap.add_argument('--space-max', type=int, default=5000, help='compare the spaces themselves up to this many columns')
     ap.add_argument('--out', default=None)
     a = ap.parse_args()
@@ -127,7 +128,7 @@ def main():
                         raise SystemExit(f'no recorded closure for ({m},{k}) D={D}')
                     ref, ref_s = prof[D], prof[D].get('seconds')
                 for arm in arms:
-                    rec = run_candidate(gens, m, k, p, D, arm, batch=a.batch,
+                    rec = run_candidate(gens, m, k, p, D, arm, batch=a.batch, tile_rows=a.tile_rows, log=log,
                                         ref_gens=gens if (mode == 'live' and ref['monomials_le_D'] <= a.space_max) else None)
                     diff = compare(ref, rec)
                     row = dict(mode=mode, m=m, k=k, p=p, D=D, arm=arm, equal=not diff, differences=diff,

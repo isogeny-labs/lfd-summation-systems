@@ -56,38 +56,38 @@
     "kernel": "ic_bounds_split_gpu/1",
     "unit": "float64 multiply-add (exact, mod p)",
     "counted": {
-     "reduce": 274808156095,
-     "update": 139546086182,
-     "rref": 37909323060
+     "reduce": 274821111692,
+     "update": 139535200743,
+     "rref": 37906212538
     },
-    "total": 452263565337,
-    "dense_equivalent": 1283452505605,
+    "total": 452262524973,
+    "dense_equivalent": 1283482897846,
     "seconds": {
-     "reduce": 9.746,
-     "update": 14.512,
-     "rref": 10.719
+     "reduce": 9.521,
+     "update": 14.448,
+     "rref": 5.764
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
    "stats": {
     "products": 51221,
-    "zero_rows": 23986,
+    "zero_rows": 23985,
     "pivots": 18094,
     "batches": 127,
-    "rounds": 9163,
-    "host_cells": 557157,
-    "madds_reduce": 274808156095,
-    "madds_reduce_dense": 950065626956,
-    "madds_update": 139546086182,
-    "madds_update_dense": 295477555589,
-    "madds_rref": 37909323060,
-    "s_setup": 0.11,
-    "s_products": 10.131,
-    "s_reduce": 9.746,
-    "s_rref": 10.719,
-    "s_update": 14.512,
+    "rounds": 936,
+    "host_cells": 3029118,
+    "madds_reduce": 274821111692,
+    "madds_reduce_dense": 950097415361,
+    "madds_update": 139535200743,
+    "madds_update_dense": 295479269947,
+    "madds_rref": 37906212538,
+    "s_setup": 0.148,
+    "s_products": 10.31,
+    "s_reduce": 9.521,
+    "s_rref": 5.764,
+    "s_update": 14.448,
     "s_verify": 0.0,
-    "s_closure": 45.434,
+    "s_closure": 40.429,
     "peak_cells": 49253026,
     "peak_device_bytes": 600440832
    },
@@ -102,9 +102,9 @@
     7622
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 45.437,
+   "seconds": 40.433,
    "peak_device_gib": 0.5592,
-   "loadavg": 3.52001953125
+   "loadavg": 2.7666015625
   },
   {
    "mode": "recorded",
@@ -154,14 +154,14 @@
     "counted": {
      "reduce": 181603814168,
      "update": 15696967942,
-     "rref": 7715523418
+     "rref": 7717410658
     },
-    "total": 205016305528,
-    "dense_equivalent": 621098686481,
+    "total": 205018192768,
+    "dense_equivalent": 621100573721,
     "seconds": {
-     "reduce": 2.65,
-     "update": 4.326,
-     "rref": 3.091
+     "reduce": 2.212,
+     "update": 3.498,
+     "rref": 1.702
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
@@ -170,20 +170,20 @@
     "zero_rows": 6141,
     "pivots": 7007,
     "batches": 142,
-    "rounds": 1509,
-    "host_cells": 256451,
+    "rounds": 418,
+    "host_cells": 1391946,
     "madds_reduce": 181603814168,
     "madds_reduce_dense": 530557773767,
     "madds_update": 15696967942,
     "madds_update_dense": 82825389296,
-    "madds_rref": 7715523418,
-    "s_setup": 0.093,
-    "s_products": 2.463,
-    "s_reduce": 2.65,
-    "s_rref": 3.091,
-    "s_update": 4.326,
-    "s_verify": 5.984,
-    "s_closure": 12.662,
+    "madds_rref": 7717410658,
+    "s_setup": 0.132,
+    "s_products": 2.153,
+    "s_reduce": 2.212,
+    "s_rref": 1.702,
+    "s_update": 3.498,
+    "s_verify": 5.418,
+    "s_closure": 9.707,
     "peak_cells": 40764869,
     "peak_device_bytes": 575012864
    },
@@ -198,9 +198,9 @@
     3258
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 18.648,
+   "seconds": 15.127,
    "peak_device_gib": 0.5355,
-   "loadavg": 4.859375
+   "loadavg": 3.18798828125
   },
   {
    "mode": "recorded",
@@ -255,9 +255,9 @@
     "total": 387514436101,
     "dense_equivalent": 2131631154089,
     "seconds": {
-     "reduce": 6.565,
-     "update": 2.982,
-     "rref": 3.198
+     "reduce": 6.016,
+     "update": 2.856,
+     "rref": 2.9
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
@@ -266,20 +266,20 @@
     "zero_rows": 11584,
     "pivots": 7195,
     "batches": 204,
-    "rounds": 618,
-    "host_cells": 252153,
+    "rounds": 461,
+    "host_cells": 598557,
     "madds_reduce": 362378214717,
     "madds_reduce_dense": 1890146326912,
     "madds_update": 6403983118,
     "madds_update_dense": 222752588911,
     "madds_rref": 18732238266,
-    "s_setup": 0.123,
-    "s_products": 7.527,
-    "s_reduce": 6.565,
-    "s_rref": 3.198,
-    "s_update": 2.982,
-    "s_verify": 24.365,
-    "s_closure": 20.588,
+    "s_setup": 0.134,
+    "s_products": 6.496,
+    "s_reduce": 6.016,
+    "s_rref": 2.9,
+    "s_update": 2.856,
+    "s_verify": 23.788,
+    "s_closure": 18.551,
     "peak_cells": 85129007,
     "peak_device_bytes": 1248657408
    },
@@ -294,9 +294,9 @@
     1822
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 44.957,
+   "seconds": 42.346,
    "peak_device_gib": 1.1629,
-   "loadavg": 3.59375
+   "loadavg": 3.3095703125
   },
   {
    "mode": "recorded",
@@ -351,9 +351,9 @@
     "total": 144819716364,
     "dense_equivalent": 734466012068,
     "seconds": {
-     "reduce": 3.686,
-     "update": 0.535,
-     "rref": 2.202
+     "reduce": 3.216,
+     "update": 0.488,
+     "rref": 2.096
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
@@ -362,20 +362,20 @@
     "zero_rows": 5265,
     "pivots": 3672,
     "batches": 126,
-    "rounds": 283,
-    "host_cells": 142001,
+    "rounds": 256,
+    "host_cells": 365858,
     "madds_reduce": 132029937428,
     "madds_reduce_dense": 654444002112,
     "madds_update": 1409737320,
     "madds_update_dense": 68641968340,
     "madds_rref": 11380041616,
-    "s_setup": 0.373,
-    "s_products": 4.369,
-    "s_reduce": 3.686,
-    "s_rref": 2.202,
-    "s_update": 0.535,
-    "s_verify": 9.74,
-    "s_closure": 10.942,
+    "s_setup": 0.219,
+    "s_products": 3.884,
+    "s_reduce": 3.216,
+    "s_rref": 2.096,
+    "s_update": 0.488,
+    "s_verify": 9.232,
+    "s_closure": 9.812,
     "peak_cells": 74604364,
     "peak_device_bytes": 1304035328
    },
@@ -390,9 +390,9 @@
     1465
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 20.687,
+   "seconds": 19.048,
    "peak_device_gib": 1.2145,
-   "loadavg": 3.2412109375
+   "loadavg": 3.28515625
   },
   {
    "mode": "recorded",
@@ -448,7 +448,7 @@
     "pivots": 1,
     "batches": 0,
     "rounds": 1,
-    "host_cells": 1,
+    "host_cells": 2,
     "madds_reduce": 711,
     "madds_reduce_dense": 711,
     "madds_update": 0,
@@ -477,7 +477,7 @@
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
    "seconds": 0.001,
    "peak_device_gib": 0.0217,
-   "loadavg": 3.0615234375
+   "loadavg": 3.10205078125
   },
   {
    "mode": "recorded",
@@ -524,7 +524,7 @@
     "seconds": {
      "reduce": 0.002,
      "update": 0.002,
-     "rref": 0.004
+     "rref": 0.006
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
@@ -534,7 +534,7 @@
     "pivots": 39,
     "batches": 32,
     "rounds": 33,
-    "host_cells": 53,
+    "host_cells": 116,
     "madds_reduce": 335928,
     "madds_reduce_dense": 3824520,
     "madds_update": 5856,
@@ -543,10 +543,10 @@
     "s_setup": 0.019,
     "s_products": 0.003,
     "s_reduce": 0.002,
-    "s_rref": 0.004,
+    "s_rref": 0.006,
     "s_update": 0.002,
     "s_verify": 0.005,
-    "s_closure": 0.01,
+    "s_closure": 0.012,
     "peak_cells": 106476,
     "peak_device_bytes": 149749760
    },
@@ -561,9 +561,9 @@
     6
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 0.017,
+   "seconds": 0.019,
    "peak_device_gib": 0.1395,
-   "loadavg": 3.0615234375
+   "loadavg": 3.10205078125
   },
   {
    "mode": "recorded",
@@ -609,9 +609,9 @@
     "total": 1327220670,
     "dense_equivalent": 10109783062,
     "seconds": {
-     "reduce": 0.104,
-     "update": 0.04,
-     "rref": 0.105
+     "reduce": 0.115,
+     "update": 0.042,
+     "rref": 0.134
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
@@ -620,20 +620,20 @@
     "zero_rows": 493,
     "pivots": 711,
     "batches": 92,
-    "rounds": 112,
-    "host_cells": 11745,
+    "rounds": 111,
+    "host_cells": 32356,
     "madds_reduce": 1074180750,
     "madds_reduce_dense": 8614386842,
     "madds_update": 47449520,
     "madds_update_dense": 1289805820,
     "madds_rref": 205590400,
-    "s_setup": 0.094,
-    "s_products": 0.11,
-    "s_reduce": 0.104,
-    "s_rref": 0.105,
-    "s_update": 0.04,
-    "s_verify": 0.224,
-    "s_closure": 0.365,
+    "s_setup": 0.103,
+    "s_products": 0.147,
+    "s_reduce": 0.115,
+    "s_rref": 0.134,
+    "s_update": 0.042,
+    "s_verify": 0.227,
+    "s_closure": 0.445,
     "peak_cells": 6101440,
     "peak_device_bytes": 514260992
    },
@@ -648,9 +648,9 @@
     211
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 0.592,
+   "seconds": 0.675,
    "peak_device_gib": 0.4789,
-   "loadavg": 3.0615234375
+   "loadavg": 3.10205078125
   },
   {
    "mode": "recorded",
@@ -692,14 +692,14 @@
     "counted": {
      "reduce": 309887964742,
      "update": 5255319721,
-     "rref": 19664759936
+     "rref": 19663797872
     },
-    "total": 334808044399,
-    "dense_equivalent": 1814677306233,
+    "total": 334807082335,
+    "dense_equivalent": 1814676344169,
     "seconds": {
-     "reduce": 6.963,
-     "update": 2.107,
-     "rref": 3.816
+     "reduce": 6.189,
+     "update": 2.098,
+     "rref": 3.661
     },
     "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
    },
@@ -708,20 +708,20 @@
     "zero_rows": 8112,
     "pivots": 5243,
     "batches": 142,
-    "rounds": 387,
-    "host_cells": 197206,
+    "rounds": 327,
+    "host_cells": 580005,
     "madds_reduce": 309887964742,
     "madds_reduce_dense": 1612016253326,
     "madds_update": 5255319721,
     "madds_update_dense": 182996292971,
-    "madds_rref": 19664759936,
-    "s_setup": 0.264,
-    "s_products": 7.588,
-    "s_reduce": 6.963,
-    "s_rref": 3.816,
-    "s_update": 2.107,
-    "s_verify": 16.326,
-    "s_closure": 20.846,
+    "madds_rref": 19663797872,
+    "s_setup": 0.235,
+    "s_products": 7.007,
+    "s_reduce": 6.189,
+    "s_rref": 3.661,
+    "s_update": 2.098,
+    "s_verify": 15.845,
+    "s_closure": 19.315,
     "peak_cells": 118082830,
     "peak_device_bytes": 1453785088
    },
@@ -736,11 +736,11 @@
     1700
    ],
    "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
-   "seconds": 37.178,
+   "seconds": 35.166,
    "peak_device_gib": 1.3539,
-   "loadavg": 3.01171875
+   "loadavg": 3.119140625
   }
  ],
  "controls": [],
- "engine_sha256": "cfa69ff10249464d5c0bc9fa1e4d512bc8ddd0ed3483602ec197bc3c81934f35"
+ "engine_sha256": "627fb5de71ee4e16ad0111fafd2de4033b6918b85eb943c8142098886d46e619"
 }
