@@ -39,6 +39,7 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `experiments/ic-bounds-cert/`, `ic-bounds-exact-k6/` | data of the certificates checked in Lean |
 | `experiments/ic-curve-validation/` | independent implementation of the closure in the ordinary ring |
 | `experiments/ic-solving-degree/` | solving degree and largest Gröbner-basis degree of every exact-LFD system, with the Singular, PolyBoRi and mutant-closure checks (Section 7) |
+| `experiments/ic-rootfind/` | point decomposition on binary curves by linear algebra and one quadratic instead of a Gröbner basis (`csd/ic_rootfind.py`), measured against enumeration, meet in the middle and MutantXL |
 | `experiments/ic-bounds-solving/` | the static (plain XL) Macaulay degree study behind `SD1-solving-degree.md`, and its independent validation (`validation/VALIDATOR_REPORT.md`) |
 
 Each experiment directory has a `README.md` (or `RESULTS.md`, `VERIFY.md`, `NOTES.md`, `REPORT.md`) that names the
