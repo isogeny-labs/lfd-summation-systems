@@ -1,1 +1,10 @@
   D=7 batches=50 rank=[4644, 4040] pending=28176 t=91.0s dev=3.74GiB
+  D=7 batches=100 rank=[8670, 6705] pending=31016 t=295.2s dev=5.89GiB
+  D=7 batches=150 rank=[11272, 8391] pending=22052 t=481.8s dev=7.68GiB
+  D=7 batches=200 rank=[12866, 8661] pending=13630 t=603.7s dev=8.10GiB
+  D=7 batches=250 rank=[15404, 8908] pending=7528 t=746.1s dev=8.93GiB
+  D=7 batches=300 rank=[17436, 9841] pending=2153 t=868.7s dev=9.54GiB
+  D=7 batches=350 rank=[17906, 9908] pending=79 t=888.8s dev=9.54GiB
+recorded m=5 k=3 D=7 cpu:split: EQUAL dim=27838 one=False cand=1851.459s ref=2304.261s
+{"status": "passed", "comparisons": 1, "equal": 1, "controls": [], "failures": []}
+exit 0

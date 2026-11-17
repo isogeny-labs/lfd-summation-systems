@@ -115,7 +115,7 @@ this repository on every closure without 1 ((5,2): 51, 637; (4,3): 30, 424, 2,51
 | (5,2), 6 | 7,937 | yes | 0.19 | 3.07e8 | 1,732 / 7,107 | 3.9 | 2.45e10 | 80 |
 | (4,3), 7 | 18,324 | yes | 1.7 | 6.81e9 | 7,119 / 16,752 | 40.4 | 4.52e11 | 66 |
 | (6,2), 7 | 61,183 | yes | 9.1 | 2.32e10 | 6,219 / 39,937 | 803 | 1.05e13 | 450 |
-| (5,3), 7 | 106,970 | no | 2.1 | 2.72e8 | 0 / 27,838 | not run (9.7 GiB, section 6) | | |
+| (5,3), 7 | 106,970 | no | 2.1 | 2.72e8 | 0 / 27,838 | 1851 | 1e+13 | 37686 |
 | (6,3), 7 | 440,772 | no | 14.4 | 3.68e8 | 0 / 60,140 | does not fit here | | |
 | (5,3), 8 | 226,325 | yes | 257 on 32 vCPU (**given**) | not reported | | | | |
 
@@ -296,17 +296,17 @@ reference needs a pod:
 | (6,2), 7 | 61,183 | yes | 61,183 | cpu:split | 803.2 | 4,203.5 | EQUAL |
 | (4,4), 6 | 39,796 | no | 3,672 | cpu:split | 19.0 | 24.8 | EQUAL |
 | (5,3), 3..6 | 1,045 .. 44,366 | no | 1, 39, 711, 5,243 | cpu:split | 0.001, 0.02, 0.68, 35.2 | (pod log, dims only) | EQUAL |
-@@G537@@
+| (5,3), 7 | 106,970 | no | 27,838 | cpu:split (batch 512, tiles of 1,024 rows) | 1851, verified closed, peak basis 9.3 GiB | 2,304.3 (256 GB pod) | EQUAL |
 
 The reference times are from the pods of `experiments/ic-bounds-split-m/` and are not an A/B with
 this machine; the A/B is section 7. The low-degree profile is compared wherever the record has one
 (all rows except (5,3), whose record holds dimensions only).
 
 Certified values reproduced by the candidate's own ladder (closed and verified without 1 below, 1
-at the value): (4,2) = 6, (5,2) = 6, (4,3) = 7, (3,5) = 7, (6,2) = 7. Not reproduced here: (4,4) = 7 (the
-closure with 1 has 91,276 columns: 8.9 GiB and an estimated 3 hours on 4 vCPU), and (5,3) "no 1 at
-D = 7" (9.7 GiB of basis on a 15 GiB machine: not attempted); for (5,3) the closures at D = 3..6 equal
-the record (1, 39, 711, 5,243). Both are in the pod job's default list.
+at the value): (4,2) = 6, (5,2) = 6, (4,3) = 7, (3,5) = 7, (6,2) = 7. (5,3): closed and verified without 1 at
+D = 3..7 (1, 39, 711, 5,243, 27,838), as recorded. Not reproduced here: (4,4) = 7 (its closure with 1
+has 91,276 columns: 8.9 GiB and an estimated 1 to 3 hours on 4 vCPU; D = 6 equals the record) and
+anything at (5,3), D = 8.
 
 **What the gate can and cannot see.** On a closure with 1 the reported dimensions are those of the
 whole space whatever happened before; the power of the gate is in the closures without 1 and in
