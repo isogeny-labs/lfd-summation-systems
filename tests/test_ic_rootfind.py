@@ -81,3 +81,39 @@ def test_threads_and_larger_instance():
         assert S.lrf(3, R)[0] == ref == S.lrf(3, R, threads=4)[0] == S.brute(3, R, threads=4)[0]
         hits += len(ref)
     assert hits > 0
+
+
+def test_rust_kernel_against_c_kernel():
+    """rust/ic_rootfind (multi-word fields, row form of the linear system) on the instances of the C kernel."""
+    import json
+    import shutil
+    import subprocess
+    from pathlib import Path
+
+    import pytest
+
+    if shutil.which("cargo") is None:
+        pytest.skip("no cargo")
+    crate = Path(__file__).resolve().parents[1] / "rust" / "ic_rootfind"
+    subprocess.run(["cargo", "build", "--release", "--quiet"], cwd=crate, check=True)
+    exe = crate / "target" / "release" / "ic_rootfind"
+    assert "SELFTEST PASSED" in subprocess.run([exe, "selftest"], capture_output=True, text=True, check=True).stdout
+    rng = random.Random(11)
+    hits = 0
+    for n, k in [(13, 5), (16, 6), (19, 7), (25, 9), (28, 10), (31, 11), (40, 14), (61, 12)]:
+        F = I.binary_field(n)
+        for _ in range(3):
+            E = I.BinaryCurve(F, rng.getrandbits(1), rng.randrange(1, 1 << n))
+            S = Solver(E, I.standard_subspace(F, k))
+            for m in (2, 3):
+                R = E.random_point(rng)
+                if m == 2:                   # a target that has a decomposition
+                    R = E.add((int(S.fx[1]), int(S.fy[1])), (int(S.fx[-1]), int(S.fy[-1])))
+                out = subprocess.run([exe, "solve", "--n", str(n), "--k", str(k), "--m", str(m), "--a", str(E.a),
+                                      "--b", f"{E.b:x}", "--xr", f"{R[0]:x}", "--yr", f"{R[1]:x}"],
+                                     capture_output=True, text=True, check=True).stdout
+                got = sorted(tuple(sorted((int(x, 16), int(y, 16)) for x, y in dec)) for dec in json.loads(out))
+                want = S.lrf(m, R)[0]
+                assert got == want, (n, k, m)
+                hits += len(want)
+    assert hits > 20

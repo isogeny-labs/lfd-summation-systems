@@ -10,6 +10,7 @@ is small). For such `V` the two-summand problem is one F_2-linear system in `k +
 `V` with `k(k+1)/2 >= n` the method gives nothing; the table below shows the cliff.
 
 Code: `csd/ic_rootfind.py` (mathematics, tables, Python reference), `csd/_rootfind.c` (kernels, `n <= 63`),
+`rust/ic_rootfind/` (Rust kernel, `n <= 191`, used for `n = 131`),
 `tests/test_ic_rootfind.py`, driver `scripts/run_ic_rootfind.py`.
 
 ## The algorithm (LRF, "linearized root finding")
@@ -145,12 +146,79 @@ Set-up of the tables is excluded (it is below 0.2 s everywhere).
   to `-R`); LRF returns only the decompositions.
 - Sizes below `k = 8` are dominated by the Python call (about 20 to 50 µs); read ratios from `k >= 9`.
 
+## n = 131: the ECC2K-130 curve (Rust kernel, multi-word field)
+
+`rust/ic_rootfind/` is a second implementation of LRF for `m = 2, 3`, in Rust with no dependencies and no
+Python in its execution path (field arithmetic, table construction, solver, self-test and benchmark are all in the
+crate). Fields up to `n = 191` (three words, PCLMULQDQ). It differs from the C kernel in three ways:
+
+- **No stored factor base.** The abscissas `x(P_3)` are walked by Gray-code index and lifted on the fly, so a range
+  of a factor base far too large to list (`k = 44`, about 2^44 points) can be scanned and split across threads.
+- **Row form of the linear system.** For `V = <1, w, ..., w^(k-1)>` and a modulus whose low terms have degree at
+  most `2k - 1`, the annihilator of `V2` under the trace form is `δ·<1, w, ..., w^(n-2k)>` with `δ = 1/f'(w)`.
+  Equation `j` is then the trace form against `z_j = w^j δ xT`: its whole coefficient row is one table lookup, and
+  `z_(j+1) = w z_j` is a shift. The `k + 1` field multiplications per target of the column form become two. The
+  crate checks the annihilator numerically at set-up and falls back to the column form when it does not hold.
+- **Gauss–Jordan over all rows**, written so that the compiler vectorizes it.
+
+Checks: `ic_rootfind selftest` (field arithmetic against a bit-by-bit product at 14 degrees from 7 to 191; 144
+random instances against enumeration, 51 with decompositions, row and column forms compared on 42; planted
+decompositions at `n` = 67, 71, 97, 131, 163 in both forms). `tests/test_ic_rootfind.py` runs the crate on the C
+kernel's instances (`n` up to 61) and compares the decomposition sets.
+
+Measurement (`rust/ic_rootfind/run_n131.sh`, record `n131.jsonl`): the curve `y^2 + xy = x^3 + 1` over
+`F_2[x]/(x^131 + x^8 + x^3 + x^2 + 1)`, `k = 44`, so 45 unknowns and 45 equations. One decomposition
+`R = P_1 + P_2 + P_3` is planted, a range of 2^22 abscissas containing a planted one is scanned, the planted
+decomposition must be found and every row must re-add to `R`. Median of three seeds:
+
+| form | threads | per target | targets with a solvable system | candidates per target |
+|---|---|---|---|---|
+| rows | 1 | 1850 ns | 0.61 | 1.00 |
+| columns | 1 | 2757 ns | 0.61 | 1.00 |
+| rows | 4 | 463 ns (wall) | 0.61 | 1.00 |
+
+The enumeration inner loop on the same field (shared-inversion additions and membership tests, 2^24 of them)
+takes 150 ns per addition.
+
+Extrapolation to the whole search, **not measured**:
+
+| per target `R` | work | single-thread time at the measured rate |
+|---|---|---|
+| LRF, rows | 2^44 abscissas, about 2^44 linear systems | about 1.0 core-years |
+| enumeration | about 2^87 additions (unordered pairs) | about 7e+11 core-years |
+
+The expected number of decompositions of a random `R` is about `|FB|^3 / (6 · 2^131) ≈ 1/3`, so one relation costs
+about three such scans, and index calculus needs about 2^43 relations. LRF is about twelve orders of magnitude
+below enumeration per target, and the relation stage would still be about 3·10^13 core-years. Pollard rho
+on this curve needs about 2^61 group operations in total. Nothing here changes the security of ECC2K-130.
+
+Cost per target of the Rust kernel at other sizes (`rust-scaling.jsonl`, one seed, ranges of at most 2^21 abscissas):
+
+| n | k | per target | candidates per target |
+|---|---|---|---|
+| 34 | 12 | 1049 ns | 4.02 |
+| 46 | 16 | 937 ns | 4.00 |
+| 61 | 21 | 1096 ns | 2.00 |
+| 97 | 33 | 1548 ns | 2.00 |
+| 113 | 38 | 1581 ns | 1.00 |
+| 131 | 44 | 1820 ns | 1.00 |
+| 163 | 55 | 2417 ns | 2.00 |
+
+At `n = 61, k = 21` the C kernel takes 564 ns per target (table above) and the Rust kernel about twice that: it
+always computes on three words. The Rust kernel needs `n - dim V2 <= 62` (the system's rows are single words),
+so at `n = 131` it needs `k >= 35`.
+
+A stage ablation at `n = 131` (temporary early returns, not in the committed code) put the time per target at
+about 320 ns for lifting and the target addition, 850 ns for building the 45 rows (45 lookups of 17 bytes each),
+580 ns for the elimination and 260 ns for the candidates.
+
 ## Limits
 
 - **No ECDLP speed claim.** The cost per target is `|FB|^(m-2)` linear systems, and the expected number of
   decompositions per target is about `|FB|^m / (m! 2^n)`. For `n = 131` (ECC2K-130) and `m = 3` this needs
   `k ≈ 44`: about 2^44 linear systems for about a third of a relation, and about 2^44 relations. That is far above
-  Pollard rho (about 2^65 group operations in total). Not measured: the kernel stops at `n = 63`.
+  Pollard rho (about 2^61 group operations in total). The per-target rate at `n = 131` is measured (section above);
+  the whole search is extrapolated.
 - **Koblitz structure is unused.** For prime `n` such as 131 no proper Frobenius-invariant subspace exists
   (`csd.ic_dreg.koblitz_invariant_dims`), so `V = <1, w, ..>` is not Frobenius-stable.
 - **Binary curves only.** For the prime-field chain systems (`x^(2^k) = 1`) `S_3` has no such linear structure;
@@ -163,7 +231,12 @@ Set-up of the tables is excluded (it is below 0.2 s everywhere).
 - Three summands in fewer than `|FB|` linear systems. The Riemann–Roch form (`f = a(x) + y c(x)`, norm with
   roots in `V`) gives equations that are linear in squares plus bilinear terms `a_i c_j`; guessing less than a
   whole point and linearizing the rest has not been tried.
-- A multi-word field (`n = 131`) to replace the extrapolation above by a measurement.
+- Building the rows of the linear system by carry-less correlation of `δ xT` with fixed bit strings (about six
+  `PCLMULQDQ` per column) instead of 45 table lookups of 17 bytes; the ablation says the rows are the largest stage.
+- The related Rust work in `isogeny-labs/crypto` (pair-sum tables and enumeration: `src/cryptanalysis/ic_framework/rootfind.rs`,
+  `RESEARCH_SEMAEV_ROOTFIND_VS_GROEBNER.md`) was found only after this solver was written. I did not find the
+  linear two-summand step there (not an exhaustive search of that repository). Comparing LRF with its
+  `rootfind-mitm` on the same instances, inside its harness and its matrix-F4, is the natural next step.
 - F4 (Magma or msolve-style) on the same seeded instances, to replace the MutantXL stand-in.
 
 ## Commands
@@ -171,6 +244,7 @@ Set-up of the tables is excluded (it is below 0.2 s everywhere).
     python3 -m pytest -q tests/test_ic_rootfind.py
     python3 scripts/run_ic_rootfind.py all          # about 6 minutes, almost all of it the MutantXL baseline
     python3 experiments/ic-rootfind/summarize.py    # tables.md (the tables above)
+    rust/ic_rootfind/run_n131.sh                    # Rust self-test, n131.jsonl, rust-scaling.jsonl (about 90 s)
 
-Records: `scaling-m3.jsonl`, `m4.jsonl`, `basis-n31-k10.jsonl`, `regime-k12.jsonl`, `algebraic-m3.jsonl` (one row
+Records: `scaling-m3.jsonl`, `m4.jsonl`, `basis-n31-k10.jsonl`, `regime-k12.jsonl`, `algebraic-m3.jsonl`, `n131.jsonl`, `rust-scaling.jsonl` (one row
 per seeded instance, with the curve, the target, the timings and the kernel's counters).

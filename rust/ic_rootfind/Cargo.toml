@@ -1,0 +1,12 @@
+[package]
+name = "ic_rootfind"
+version = "0.1.0"
+edition = "2021"
+description = "Point decomposition on binary curves by linear algebra and one quadratic (n <= 191)"
+license = "MIT"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = false
