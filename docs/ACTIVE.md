@@ -16,6 +16,7 @@ _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
 
+- [ ] Standardize the repository CI check contract (Codex, started 2026-11-17, branch codex/standard-ci-check)
 - [x] Finalize and locally validate both depth-14 replications and submission provenance; final CI and merge tracked in PR #24 (Codex, started 2026-11-16, branch paper/finalize-pr24-20261116, PR #24)
 
 <!-- One line per task, added as the task's first step with its draft PR:
