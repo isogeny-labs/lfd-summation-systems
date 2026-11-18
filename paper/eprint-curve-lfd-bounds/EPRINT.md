@@ -19,7 +19,7 @@ author must agree.
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (52 pages) |
+| Content | `../curve-lfd-bounds.pdf` (57 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -30,30 +30,31 @@ ORCID and ROR identifiers are optional.
 
 ## Source snapshot
 
-Regenerated on 16 November 2026 from the combined evidence snapshot
-[`2cb270c`](https://github.com/isogeny-labs/lfd-summation-systems/commit/2cb270c).
-It includes the merged manuscript and proof work, the completed split-presentation
-records, the capped five-summand run, and both second-implementation depth-14
-lift records in PR #24. This package is prepared for merging that PR after
-its final CI checks pass. The limits of the input-space certificate remain in the manuscript.
-The data appendix cites this frozen snapshot. The files below are those of
-the commit carrying this sheet.
+Regenerated on 18 November 2026 from the combined evidence snapshot of the
+manuscript merged in PR #32, which includes the merged manuscript and proof
+work, the completed split-presentation records, the capped five-summand run,
+both second-implementation depth-14 lift records in PR #24, the full proof of
+the growth theorem (Appendix C), and the validation follow-ups of PR #31.
+The limits of the input-space certificate remain in the manuscript.
+The data appendix cites the frozen snapshot `2cb270c` for the records added
+before 16 November; later additions cite their own commits. The files below
+are those of the commit carrying this sheet.
 
 Revision of 18 November 2026: shortened abstract (180 words, 1291
 characters; previously 432 words), a significance paragraph in the
-introduction, and the second engine's degree-6 closure at k = 14 on the unit
-instance over p = 65537 (a corroboration from the `isogeny-labs/crypto`
+introduction, the full proof of the growth theorem in Appendix C, a statement
+on the use of AI tools, and the second engine's degree-6 closure at k = 14 on
+the unit instance over p = 65537 (a corroboration from the `isogeny-labs/crypto`
 records at commit `98b7d87`, not a certificate; `../latest-update-20261118.md`).
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `5b29b268f53bddc885858874b7c78e78e6264aac0d8d8ddaa08d712f4f06e79d` |
-| `paper/curve-lfd-bounds.tex` | `699e7d4b9b7dd32e12ba0ff1e795eca7412f9c4391d597bc9d799ad85a5856c7` |
+| `paper/curve-lfd-bounds.pdf` | `3594bc374c17435c557c5b4a8b04035b0c81128237c4d9000d8a11af3e565d37` |
+| `paper/curve-lfd-bounds.tex` | `80262d5a9ba445a0bf13ad76e806af99d41cf71938aa2c95bf3352718cd1e6c9` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
-The PDF and figures were regenerated on 18 November 2026 with Tectonic 0.17.0
-(conda-forge build, default bundle v33, `tlextras-2022.0r0`) by
-`python3 scripts/build_ic_curve_paper.py`; the previous build used Tectonic 0.16.9. The PDF producer is xdvipdfmx
+The PDF and figures were regenerated on 18 November 2026 with Tectonic 0.16.9 by
+`python3 scripts/build_ic_curve_paper.py`. The PDF producer is xdvipdfmx
 (0.1). This replaces the earlier, incorrect pdfTeX build attribution.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
@@ -61,9 +62,10 @@ reproducibility claim is made for other TeX engines.
 Lean: the saved default audit reports 671 declarations. Final PR CI builds
 all modules and checks every printed axiom list with
 `python3 scripts/lean_check_all.py`, including the non-two-torsion modules
-outside the older default audit. The merge is gated on that final CI run;
-see PR #24 for the tested commit and run. This sheet does not treat the
-older saved audit as evidence for modules added later.
+outside the older default audit, and the modules added by PR #31. The merge
+is gated on that final CI run; see PR #32 for the tested commit and run.
+This sheet does not treat the older saved audit as evidence for modules
+added later.
 
 ## Checks
 

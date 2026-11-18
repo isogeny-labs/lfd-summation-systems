@@ -119,3 +119,17 @@ The `% PENDING(paper-runs-20261118)` markers remain (13, rewritten where J1
 filled part of them): J2 (p = 163841), the canonical-hash comparison and the
 second lift on the second engine's bases, k = 15 on unit-p65537 and k = 16 on
 the new unit instance over p = 786433.
+
+## Final reconciliation, 18 November 2026
+
+PR #32 merges #27, #28, #30 and #31 into one manuscript. The result keeps the
+18 November abstract, significance paragraph and second-engine closure above,
+adds the full proof of the growth theorem (Appendix C) and the AI-tool
+statement from #27, and the review corrections of #28 (cube-degree bound,
+nonsingularity in characteristic 2, the `B_k` derivation, the solving-degree
+counts). All `% PENDING(paper-runs-20261118)` markers are removed; nothing in
+the visible text depended on them. The rebuilt PDF has 57 pages, no warnings,
+no overfull boxes and no unresolved references, and the submission sheet and
+digests are regenerated. The build used Tectonic 0.16.9 locally; the
+page-count and toolchain differences from the 52-page build above are the
+growth appendix and the local TeX bundle.
