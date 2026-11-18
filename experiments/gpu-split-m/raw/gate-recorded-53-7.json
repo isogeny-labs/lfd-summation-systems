@@ -1,0 +1,103 @@
+{
+ "status": "passed",
+ "date": "2026-11-17",
+ "arms": [
+  "cpu:split"
+ ],
+ "comparisons": 1,
+ "equal": 1,
+ "failures": [],
+ "rows": [
+  {
+   "mode": "recorded",
+   "m": 5,
+   "k": 3,
+   "p": 114689,
+   "D": 7,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 106970,
+    "dim_V_D": 27838,
+    "low_profile": null,
+    "contains_one": false
+   },
+   "reference_seconds": 2304.261,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 106970,
+    "dim_V_D": 27838,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     82,
+     873,
+     5895,
+     27838
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 9489259680033,
+     "update": 311854417184,
+     "rref": 449418418976
+    },
+    "total": 10250532516193,
+    "dense_equivalent": 111357461294627,
+    "seconds": {
+     "reduce": 557.739,
+     "update": 81.251,
+     "rref": 70.863
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 106110,
+    "zero_rows": 71532,
+    "pivots": 27838,
+    "batches": 379,
+    "rounds": 1517,
+    "host_cells": 3582068,
+    "madds_reduce": 9489259680033,
+    "madds_reduce_dense": 100395006170220,
+    "madds_update": 311854417184,
+    "madds_update_dense": 10513036705431,
+    "madds_rref": 449418418976,
+    "s_setup": 0.817,
+    "s_products": 170.652,
+    "s_reduce": 557.739,
+    "s_rref": 70.863,
+    "s_update": 81.251,
+    "s_verify": 960.753,
+    "s_closure": 890.684,
+    "peak_cells": 1242898679,
+    "peak_device_bytes": 10238967808
+   },
+   "part_columns": [
+    62832,
+    44138
+   ],
+   "products_per_pivot": 3.812,
+   "peak_basis_gib": 9.2603,
+   "part_rank": [
+    17923,
+    9915
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 1851.459,
+   "peak_device_gib": 9.5358,
+   "loadavg": 2.13427734375
+  }
+ ],
+ "controls": [],
+ "engine_sha256": "627fb5de71ee4e16ad0111fafd2de4033b6918b85eb943c8142098886d46e619"
+}

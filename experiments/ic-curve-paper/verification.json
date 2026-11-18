@@ -1,18 +1,18 @@
 {
   "status": "passed: PDF built; no unresolved citations or references; not a proof or novelty certificate",
-  "tex_engine": "pdflatex",
+  "tex_engine": "tectonic",
   "latex_warnings": [],
   "overfull_boxes": 0,
   "source_sha256": {
     "scripts/build_ic_curve_paper.py": "787834c6878558c565224e766b066469ff6090adf4698785252ed0b51399c5a0",
     "scripts/make_paper_figures.py": "06c2c487ebc061994960372e612820924d4cae3d19c4cd27302c23fd7cef6cf5",
-    "paper/curve-lfd-bounds.tex": "2ff21661a24cf1b34d6815bafc213a5ff77a0cfea0b8b1d8aa95caf8eb1dbf44",
+    "paper/curve-lfd-bounds.tex": "699e7d4b9b7dd32e12ba0ff1e795eca7412f9c4391d597bc9d799ad85a5856c7",
     "paper/curve-sweep-data.tex": "21d3de9d6cf708c394f8813c092c0e1eaf86f4f5ca4e432724b294f6728c9ffa",
     "experiments/ic-curve-sweep/summary.json": "4722c5d0f3c407f9b97979d722b62541cf3c2fb6b215f9ac15c23d9ca600a404",
     "experiments/ic-lean/verification.json": "f13efba1c25b780909b9c26063b427a9f96d37219709346fddbafff2621b594a"
   },
   "data_sha256": {
-    "paper/curve-lfd-bounds.pdf": "4d4b944a6907c525b55f485bb7dc5c5ddcb8e01782c64e1d0a2a6a8c791fb16a",
+    "paper/curve-lfd-bounds.pdf": "5b29b268f53bddc885858874b7c78e78e6264aac0d8d8ddaa08d712f4f06e79d",
     "paper/figures/curve-sweep.pdf": "6e1309d3c4888dd73866d6c3eee88c23a59df3f89b71378914689c2974f5b98b",
     "paper/figures/curve-sweep.png": "f0dfe51b6025a92c96c4dccd71a8a0fa02025e04d2e4c070d57e44b3b8da8cbc",
     "paper/figures/lfd-depth.pdf": "535e5538adb2bf11c027cf1be171e3b4ffbb9170cacf4d2596afbcc474db751b",
