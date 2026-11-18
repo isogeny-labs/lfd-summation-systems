@@ -64,12 +64,13 @@
       "max_total_usd": 100,
       "max_hours": 30,
       "min_ram_gib": 256,
-      "status": "awaiting-explicit-approval"
+      "status": "declined: user requested all work remain local"
     }
   },
   "local": {
     "ram_gib": 48,
-    "workspace_free_gib_at_start": 1.9
+    "workspace_free_gib_at_start": 1.9,
+    "internal_free_gib_checked": 3.8
   },
   "depth14": {
     "archival_style_basis_bytes": 45122062592,

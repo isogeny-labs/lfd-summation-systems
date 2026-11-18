@@ -1,7 +1,8 @@
 # Five LFD follow-ups, 17 November 2026
 
 Tracking: PR #31. This is a follow-up to merged evidence snapshot ce4d785.
-The user authorized all five tracks. Paid compute has not been launched.
+The user authorized all five tracks. Paid compute has not been launched. The owner selected local-only after
+reviewing the US$100 split-worker proposal; that proposal is not approved.
 
 ## Scope and chronology
 
@@ -17,7 +18,7 @@ The prospective full split retry below uses that original prediction.
 `derivations.py` produces a DAG with normal-form inputs, linear combinations
 and variable shifts. `checker.py` uses Python integers and imports no
 producer or repository algebra. It binds the parameters and input list,
-checks each edge, checks the source degree BEFORE a shift, reconstructs
+checks each edge, requires an external target output digest, checks the source degree BEFORE a shift, reconstructs
 chain carries independently, and checks the output rows and their digest.
 This certifies containment of the provided rows in the normalized chain
 closure. It does not certify unprovided rows or raw inputs whose unreduced
@@ -115,3 +116,24 @@ These are worst-case storage formulas, not measured usage or runtimes.
 A structured method with a defensible resource bound is required before
 requesting a paid degree-7/8 run. No such run is included in this task's
 split-worker budget question.
+
+## Local-only amendment
+
+After the owner selected local-only, storage checks found about 3.8 GiB
+free internally and 7 GiB on the workspace disk. Neither can hold the
+large bases. Run the checked split lower ladder through D7 with a
+1800-second cap and a 16-GiB basis cap, four BLAS threads. This can
+independently bind the reconstructed instance to its old lower ranks.
+A cap remains a cap; it does not complete D8. The depth-10 reference
+probe retains its 1800-second cap and runs with two BLAS threads. No
+paid resources or further cloud-budget request are part of this amendment.
+
+## Exploratory proof probe after the finite profiles
+
+jet_probe.py tests h=xy-x-y-8 against the completed lower closures and
+checks the truncated-shift/Euler-derivative commutator on all monomials
+at k=2..6. This probe was designed after the numerical exact values were
+known. GrowthJetPrototype.lean records only elementary cofactor and
+commutator implications. The concrete growth bridge remains unproved.
+The optimized depth-10 cross-check used a separate 900-second local cap
+and four BLAS threads; it completed within that cap.

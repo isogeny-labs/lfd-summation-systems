@@ -9,7 +9,7 @@
       "rank": 5,
       "nodes": 10,
       "reference_contains_one": false,
-      "seconds": 0.007,
+      "seconds": 0.003,
       "row_sha256": "7873958f71780c781e599e0a80270011e700c732cf956752be7a0c176ae88732"
     },
     {
@@ -19,7 +19,7 @@
       "rank": 16,
       "nodes": 77,
       "reference_contains_one": true,
-      "seconds": 0.002,
+      "seconds": 0.003,
       "row_sha256": "96dcd59adb15c96fe3fb77202647e3b93640b71885b7846e8f7f3eba0e7e322a"
     },
     {
@@ -29,7 +29,7 @@
       "rank": 57,
       "nodes": 310,
       "reference_contains_one": true,
-      "seconds": 0.016,
+      "seconds": 0.022,
       "row_sha256": "da583c6d030c10a346db73d7b6694c511b0eb69a05a1e39812f48572a0d4854b"
     },
     {
@@ -49,7 +49,7 @@
       "rank": 163,
       "nodes": 908,
       "reference_contains_one": true,
-      "seconds": 0.163,
+      "seconds": 0.309,
       "row_sha256": "10452b198f7f123fbb2c127e936737d96158b914b9272f95865de618b574cd25"
     },
     {
@@ -59,7 +59,7 @@
       "rank": 163,
       "nodes": 908,
       "reference_contains_one": true,
-      "seconds": 0.163,
+      "seconds": 0.2,
       "row_sha256": "f3b6227fceda50b5611693e25c54ee09ea400b6391bf4551a7efc8c44ea07363"
     }
   ],
@@ -68,6 +68,7 @@
     "forward-reference",
     "wrong-input",
     "wrong-field",
+    "vacuous-output-set",
     "unknown-operation",
     "carry-does-not-authorize-overdegree-shift",
     "unsafe-inner-0",
@@ -92,12 +93,15 @@
   ],
   "source_sha256": {
     "csd/ic_bounds_lift_independent.py": "5518b951575cae5d9537f5bb5a129fe67949f30567a3bc4b0024cd3619126f23",
-    "experiments/lfd-followups-20261117/checker.py": "afe20e79a86ff77246cdf59ab48543622d31eebe38a8e9f1f420c77dcfe9d7c2",
-    "experiments/lfd-followups-20261117/derivations.py": "333c2e41cedba04bf6743afe48db791d808e2ee42ed61d6d107babd67a9bcf1d",
+    "experiments/lfd-followups-20261117/check_exceptional_points.py": "00950843af759df291b901f64f0a4a7eb4fe029b75bbf064712bb228e21b98ca",
+    "experiments/lfd-followups-20261117/checker.py": "19d6e20a62733c8c50b09fbd6d84aad11e94688d3c853f7f05dcdc94991c8bb2",
+    "experiments/lfd-followups-20261117/derivations.py": "49d1846055a511b77ada62aa91cffa738ed854424761a166dba45055703a1998",
     "experiments/lfd-followups-20261117/exceptional.py": "bfe6ed1b92e03290cb966d3f87780cff46ea00655544f05e5a5072b757054951",
+    "experiments/lfd-followups-20261117/exceptional_big.py": "bc6c3887ba957b22af89776e6c471bf351a3e1ace614db82ca7ce275ebe97441",
     "experiments/lfd-followups-20261117/exceptional_reference.py": "ebb7611cded40641204d39bc20bdb8d21bf0937910078cdfff06c80da98828fb",
-    "experiments/lfd-followups-20261117/split_retry.py": "9a20d82f038bac5a5639cac924e4cd0f317cce7db88f42bd1d0095aee1d314cb",
+    "experiments/lfd-followups-20261117/jet_probe.py": "ebcfb0ef2d6b77de93efe9df5a6a7e38eb73caedf3fe33e8821b8528914d54ca",
+    "experiments/lfd-followups-20261117/split_retry.py": "c5685293726a6cd1abee1fda3cc7cea73ac4e1bf2ccfe75965421a5dcaf9ca4d",
     "experiments/lfd-followups-20261117/tiled_split.py": "eea1f70dfd623b9e9ccd80a15d06a1dad07a45d92a057f01763a514c099b4c69",
-    "experiments/lfd-followups-20261117/validate.py": "6928285f2ebe8de3a0629cfe5b9d8b0e5dc43b2f452405ea0f8e7b9929643b4c"
+    "experiments/lfd-followups-20261117/validate.py": "f5125e193c62fb1a82d3069c7b7839bb585341a9bf1018ca361830a123ebba70"
   }
 }

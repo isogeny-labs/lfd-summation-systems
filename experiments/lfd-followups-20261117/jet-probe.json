@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "scope": "finite witnesses and commutators only; no asymptotic theorem",
+  "commutators": [
+    {
+      "k": 2,
+      "commutator_basis_checks": 64
+    },
+    {
+      "k": 3,
+      "commutator_basis_checks": 384
+    },
+    {
+      "k": 4,
+      "commutator_basis_checks": 2048
+    },
+    {
+      "k": 5,
+      "commutator_basis_checks": 10240
+    },
+    {
+      "k": 6,
+      "commutator_basis_checks": 49152
+    }
+  ],
+  "witnesses": [
+    {
+      "k": 7,
+      "p": 257,
+      "D": 4,
+      "rank": 835,
+      "h_in_V_D": false,
+      "frobenius_normal_form_checked": true,
+      "seconds": 0.102
+    },
+    {
+      "k": 7,
+      "p": 769,
+      "D": 4,
+      "rank": 835,
+      "h_in_V_D": false,
+      "frobenius_normal_form_checked": true,
+      "seconds": 0.098
+    },
+    {
+      "k": 8,
+      "p": 7681,
+      "D": 4,
+      "rank": 1071,
+      "h_in_V_D": false,
+      "frobenius_normal_form_checked": true,
+      "seconds": 0.218
+    },
+    {
+      "k": 9,
+      "p": 12289,
+      "D": 4,
+      "rank": 1315,
+      "h_in_V_D": false,
+      "frobenius_normal_form_checked": true,
+      "seconds": 0.395
+    },
+    {
+      "k": 10,
+      "p": 12289,
+      "D": 5,
+      "rank": 18573,
+      "h_in_V_D": false,
+      "frobenius_normal_form_checked": true,
+      "seconds": 70.33
+    }
+  ],
+  "source_sha256": {
+    "experiments/lfd-followups-20261117/jet_probe.py": "ebcfb0ef2d6b77de93efe9df5a6a7e38eb73caedf3fe33e8821b8528914d54ca",
+    "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d"
+  }
+}

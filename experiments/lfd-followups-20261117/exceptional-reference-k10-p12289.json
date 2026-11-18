@@ -10,13 +10,14 @@
     0
   ],
   "points": 86,
-  "exact_lfd": null,
-  "status": "capped",
+  "exact_lfd": 6,
+  "status": "exact-proper-local",
   "strict_falls": [
     4,
-    5
+    5,
+    6
   ],
-  "lfd_lower_bound": 5,
+  "lfd_lower_bound": 6,
   "profile": [
     {
       "D": 2,
@@ -106,23 +107,30 @@
     },
     {
       "D": 6,
-      "rank": 20259,
+      "rank": 60374,
       "columns": 60460,
-      "closed_check": null,
-      "complete": false,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 21614,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
       "contains_one": false,
       "profile": [
         0,
         0,
-        2,
-        140,
-        1698,
-        8412,
-        20259
-      ]
+        125,
+        1265,
+        6110,
+        21614,
+        60374
+      ],
+      "evaluation_rank_below_D": 86,
+      "codimension": 86
     }
   ],
-  "seconds": 240.047,
+  "seconds": 977.99,
   "source_sha256": {
     "experiments/lfd-followups-20261117/exceptional_reference.py": "ebb7611cded40641204d39bc20bdb8d21bf0937910078cdfff06c80da98828fb",
     "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d"

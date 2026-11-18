@@ -23,7 +23,7 @@ def main():
         p=65537; a,b=(1,0) if X==4271 else (4021,9917)
         gen={(i|(j<<k)):c for (i,j),c in lift.s3_generator(p,a,b,X,k).items()}
         start=time.monotonic();cert=produce([gen],2,k,p,D)
-        rows=verify(cert,generators=[gen],parameters=(2,k,p,D))
+        rows=verify(cert,generators=[gen],parameters=(2,k,p,D),expected_output_sha256=cert["row_sha256"])
         ref=chain_degree_closure([gen],2,k,p,D)
         assert len(rows)==ref.quotient_rank
         assert all(ref.contains_normal_form(row) for row in rows)
@@ -42,15 +42,16 @@ def main():
                 ('forward-reference',lambda c:c['nodes'].append({'op':'lin','terms':[[len(c['nodes']),1]]})),
                 ('wrong-input',lambda c:c['generators'][0].append([255,1])),
                 ('wrong-field',lambda c:c.update(p=17)),
+                ('vacuous-output-set',lambda c:c.update(outputs=[],rows=[],row_sha256=hashlib.sha256(b'[]').hexdigest())),
                 ('unknown-operation',lambda c:c['nodes'].append({'op':'trust-me'}))]:
                 bad=copy.deepcopy(cert);mutate(bad)
-                try: verify(bad,generators=[gen],parameters=(2,k,p,D))
+                try: verify(bad,generators=[gen],parameters=(2,k,p,D),expected_output_sha256=cert["row_sha256"])
                 except (ValueError,KeyError,IndexError): controls.append(name)
                 else: raise AssertionError(f'accepted {name}')
     # A carry drops the output degree, but the pre-reduction degree is illegal.
     bad=dict(m=1,k=3,p=17,D=2,generators=[[[3,1]]],nodes=[{'op':'input','index':0},
         {'op':'shift','source':0,'variable':0}],outputs=[],rows=[],row_sha256='')
-    try: verify(bad,generators=[{3:1}],parameters=(1,3,17,2))
+    try: verify(bad,generators=[{3:1}],parameters=(1,3,17,2),expected_output_sha256="")
     except ValueError as e:
         assert 'unreduced' in str(e);controls.append('carry-does-not-authorize-overdegree-shift')
     else: raise AssertionError('accepted inadmissible carry')

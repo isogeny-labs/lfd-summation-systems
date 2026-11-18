@@ -24,3 +24,5 @@ _(none pinned — set one with `/goal <text>`)_
 - [ ] <task> (<runtime>, started YYYY-MM-DD, branch <branch>, PR #<n>) -->
 
 ## Blocked / questions for the owner
+
+- Local-only constraint: full depth-14 certificate and direct depth-18 D7/D8 runs exceed current RAM/scratch capacity; local probes finished with explicit caps; full depth-14 certificate, split D8, and depth-18 breakpoint remain open (PR #31).

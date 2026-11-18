@@ -50,8 +50,6 @@ def produce(generators, m, k, p, D, *, max_nodes=200000, max_rank=10000):
             raise ValueError('derivation rank cap')
         if pivot.bit_count() < D:
             queue.append(ident)
-    # basis dictionary keys are filtration keys, not raw masks.
-    # Convert lookup in elimination explicitly below via a custom mapping loop.
     for i, g in enumerate(generators):
         row = cleaned(g, p)
         if max((e.bit_count() for e in row), default=0) <= D:

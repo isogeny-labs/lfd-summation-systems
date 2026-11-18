@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+"""Finite proper-ideal probes; no asymptotic extrapolation."""
+import argparse,hashlib,json,sys,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
+from csd import ic_curve_sweep as S
+from csd import ic_bounds_d5_verify as REF
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--k',type=int,required=True);ap.add_argument('--p',type=int,required=True);a=ap.parse_args()
+    k,p=a.k,a.p
+    assert (p-1)%(2**(k+1))==0
+    E=S.I.PrimeCurve(p,6,-7)
+    g=S.prime_coset_generator(E,1,k,1,1);h=S.subgroup_generator_value(p,k)
+    # Independent enumerators use the same mathematical curve, separate code.
+    pts=S.prime_points(E,k,h,1,1,1)
+    refpts=REF.solutions(p,6,p-7,1,k)
+    # The enumerators may select different primitive roots. Compare the actual x pairs.
+    hr,H=REF.subgroup(p,k);N=1<<k
+    A={(pow(h,v%N,p),pow(h,v//N,p)) for v in pts}
+    B={(H[i],H[j]) for i,j in refpts}
+    assert A==B and pts
+    start=time.monotonic()
+    out=S.prime_local_profile(g,k,p,pts,h,max_degree=6,max_columns=20000,max_cells=30_000_000)
+    rec=dict(k=k,p=p,curve=[6,-7],target=[1,0],points=len(pts),enumerators_agree=True,
+             profile=out,seconds=round(time.monotonic()-start,3),source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+    dest=Path(__file__).resolve().parent/f'exceptional-k{k}-p{p}.json';dest.write_text(json.dumps(rec,indent=2)+'\n');print(json.dumps(rec))
+if __name__=='__main__':main()

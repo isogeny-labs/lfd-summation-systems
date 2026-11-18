@@ -22,11 +22,11 @@ def one(m,k,p,seed,D,seconds,max_basis_gib=8):
         status='unit-witness' if C.contains_one else ('closed-exclusion' if closed else 'capped'))
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--large',action='store_true');ap.add_argument('--ladder',action='store_true');ap.add_argument('--max-basis-gib',type=float,default=8);ap.add_argument('--seconds',type=int,default=300);a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--large',action='store_true');ap.add_argument('--ladder',action='store_true');ap.add_argument('--max-degree',type=int,choices=range(3,9),default=8);ap.add_argument('--max-basis-gib',type=float,default=8);ap.add_argument('--seconds',type=int,default=300);a=ap.parse_args()
     if a.large:
         if a.ladder:
             start=time.time();results=[];expected={3:1,4:39,5:711,6:5243,7:27838}
-            for D in range(3,9):
+            for D in range(3,a.max_degree+1):
                 remaining=a.seconds-(time.time()-start)
                 if remaining<=0:break
                 stage=one(5,3,114689,0,D,remaining,a.max_basis_gib)
@@ -36,9 +36,10 @@ def main():
                 if D<8:
                     assert not stage['contains_one'] and stage['rank']==expected[D], 'lower ladder disagrees'
             exact=8 if len(results)==6 and results[-1]['contains_one'] else None
-            rec=dict(status='exact-unit' if exact else 'capped-or-lower-bound',exact_lfd=exact,
+            lower=max((r['D']+1 for r in results if r['verified_closed'] and not r['contains_one']),default=0)
+            rec=dict(status='exact-unit' if exact else 'capped-or-lower-bound',exact_lfd=exact,lfd_lower_bound=exact or lower,
                      ladder=results,seconds=round(time.time()-start,3))
-            dest=HERE/'split-m5-k3-full-retry.json'
+            dest=HERE/f'split-m5-k3-ladder-through-D{a.max_degree}.json'
         else:
             rec=one(5,3,114689,0,8,a.seconds,a.max_basis_gib)
             dest=HERE/'split-m5-k3-D8-retry.json' 

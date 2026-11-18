@@ -4,13 +4,14 @@ Proves output rows belong to V_D modulo the chain equations. Each shift
 requires its SOURCE polynomial to have weight < D, before normal-form
 reduction. The degree-compatible chain relations justify that reduction.
 Does not prove completeness, independence, or anything about unprovided
-large-run basis rows. Generators must be supplied independently by caller.
+large-run basis rows. Generators and the expected output digest must be
+supplied by the caller, outside the certificate being checked.
 """
 import hashlib
 import json
 
 
-def verify(cert, *, generators, parameters):
+def verify(cert, *, generators, parameters, expected_output_sha256):
     m,k,p,D = parameters
     if tuple(cert[x] for x in ('m','k','p','D')) != parameters:
         raise ValueError('parameter mismatch')
@@ -66,4 +67,5 @@ def verify(cert, *, generators, parameters):
             raise ValueError('output mismatch')
     digest=hashlib.sha256(json.dumps(cert['rows'],separators=(',',':')).encode()).hexdigest()
     if digest!=cert['row_sha256']: raise ValueError('output digest')
+    if digest!=expected_output_sha256: raise ValueError('external target digest')
     return rows

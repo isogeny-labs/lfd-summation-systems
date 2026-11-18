@@ -26,7 +26,7 @@
         0,
         1
       ],
-      "seconds": 0.004,
+      "seconds": 0.001,
       "inputs_in_span": true,
       "status": "closed-exclusion"
     },
@@ -87,7 +87,7 @@
         129,
         192
       ],
-      "seconds": 0.006,
+      "seconds": 0.007,
       "inputs_in_span": true,
       "status": "unit-witness"
     },
@@ -209,7 +209,7 @@
         48,
         248
       ],
-      "seconds": 0.047,
+      "seconds": 0.046,
       "inputs_in_span": true,
       "status": "closed-exclusion"
     },
@@ -241,7 +241,7 @@
         825,
         1291
       ],
-      "seconds": 0.49,
+      "seconds": 0.525,
       "inputs_in_span": true,
       "status": "unit-witness"
     },
@@ -331,7 +331,7 @@
         78,
         357
       ],
-      "seconds": 0.097,
+      "seconds": 0.099,
       "inputs_in_span": true,
       "status": "closed-exclusion"
     },
@@ -363,7 +363,7 @@
         1023,
         1792
       ],
-      "seconds": 1.24,
+      "seconds": 1.272,
       "inputs_in_span": true,
       "status": "unit-witness"
     },
@@ -422,7 +422,7 @@
         4,
         51
       ],
-      "seconds": 0.005,
+      "seconds": 0.004,
       "inputs_in_span": true,
       "status": "closed-exclusion"
     },
@@ -453,7 +453,7 @@
         103,
         637
       ],
-      "seconds": 0.864,
+      "seconds": 0.908,
       "inputs_in_span": true,
       "status": "closed-exclusion"
     },
@@ -485,13 +485,13 @@
         3598,
         7937
       ],
-      "seconds": 105.74,
+      "seconds": 116.31,
       "inputs_in_span": true,
       "status": "unit-witness"
     }
   ],
   "source_sha256": {
-    "experiments/lfd-followups-20261117/split_retry.py": "9a20d82f038bac5a5639cac924e4cd0f317cce7db88f42bd1d0095aee1d314cb",
+    "experiments/lfd-followups-20261117/split_retry.py": "c5685293726a6cd1abee1fda3cc7cea73ac4e1bf2ccfe75965421a5dcaf9ca4d",
     "experiments/lfd-followups-20261117/tiled_split.py": "eea1f70dfd623b9e9ccd80a15d06a1dad07a45d92a057f01763a514c099b4c69",
     "csd/ic_bounds_split_m.py": "8db9f67bb4a98c8cd2e951b070afce20ca77a2d67ba79129dc4acf220e37698d",
     "csd/ic_bounds_m3_batched.py": "26ced2792b1d253ab6a9a8290c0980828e8152c97143b01ac7f4b2da4512cf3d"
