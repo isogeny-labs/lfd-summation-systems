@@ -2640,6 +2640,34 @@ below, followed by computations that could test the proposed explanations.
 \item \emph{Towards cost.} The LFD controls solving only together with the
  number of solutions~\cite[Prop.~2.8]{hkyy}; a cost statement would also
  need relation yield and rank, which are not studied here.
+\item \emph{Decomposition without a Gr\"obner basis.} The LFD and the
+ solving degree describe one route to the decomposition step. On the binary
+ curves of Section~\ref{sec:presentations} a second route needs no Gr\"obner
+ basis. If $P_1+P_2=T$ with $x_T\ne0$, then $P_1$, $P_2$ and $-T$ lie on a
+ line $y=\lambda(x+x_T)+y_T+x_T$, and
+ \[
+ x_1+x_2=\lambda^2+\lambda+a+x_T,\qquad
+ x_1x_2=x_T\lambda^2+\bigl((y_T+x_T)^2+b\bigr)/x_T
+ \]
+ are both $\F_2$-affine in $\lambda$. If $x_1,x_2$ lie in a coordinate
+ space $W$ of dimension $k$, then $x_1+x_2\in W$ and
+ $x_1x_2\in W_2=\langle W\cdot W\rangle$, which is one $\F_2$-linear system
+ in $k+1$ unknowns with $n-\dim W_2+1$ equations; each solution leaves one
+ quadratic, whose roots are checked for membership in $W$. Three summands
+ then cost one such system per factor-base point instead of a closure. The
+ linear structure is not new (it underlies the symmetrized systems
+ of~\cite{fppr}); what the companion records add is a measurement. For
+ $W=\langle1,w,\dots,w^{k-1}\rangle$, so that $\dim W_2=2k-1$, and $n=3k-2$,
+ an implementation decides three-summand decompositions $293$ times faster
+ than enumeration at $k=12$, the ratio doubling with each $k$. At $n=13$,
+ $k=5$, the repository's MutantXL closes the Boolean system at degree $7$
+ in $94$\,s, where the linear route takes tens of microseconds. On the
+ ECC2K-130 curve ($n=131$, $k=44$) it takes $1.85\,\mu$s per fixed summand on
+ one core, about one core-year per target. The gain needs $\dim W_2<n$: with
+ $n=31$, $k=10$, replacing one basis vector of $W$ by a random vector cuts it
+ from $110$ to $6$ times, and two remove it. This bypasses the solving
+ degree but not the counting: the number of targets and relations is
+ unchanged, so it is no cost statement either.
 \end{enumerate}
 
 \section{Conclusion}\label{sec:conclusion}
@@ -3074,6 +3102,7 @@ Binary grids and laws & \code{experiments/\allowbreak{}ic-bounds-binary/}, \code
 Ordinary-ring validation & \code{experiments/\allowbreak{}ic-curve-validation/}\\
 Solving degree (Section~\ref{sec:solving}) & \code{experiments/\allowbreak{}ic-solving-degree/} (\code{PROTOCOL.md}, \code{rows-merged.jsonl}, \code{summary.json}, \code{checks.json}); proofs \code{docs/proofs/N10-solving-degree.md}\\
 Unpublished binary draft (Remark~\ref{rem:binarydraft}) & \code{paper/binary-lfd.tex}\\
+Decomposition without a Gr\"obner basis (Section~\ref{sec:future}) & \code{experiments/\allowbreak{}ic-rootfind/} (\code{README.md}, records \code{*.jsonl}; code \code{csd/ic\_rootfind.py}, \code{csd/\_rootfind.c}, \code{rust/ic\_rootfind/}); added after the snapshot, in commit \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/a28475a}{\code{a28475a}}\\
 \bottomrule
 \end{tabular}
 \caption{Location of the data, records and reports for each result.}

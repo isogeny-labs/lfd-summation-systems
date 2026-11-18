@@ -41,13 +41,14 @@ the commit carrying this sheet.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `2c8357fdb2a000c33e246cdb36f2e6bdd95c8cd4dae4657f62fcfc9d9ce59b82` |
-| `paper/curve-lfd-bounds.tex` | `9b2764756520a04d08b1dd07447f7fb454cb54ad5499f2cb0ed24eeba9328d0b` |
+| `paper/curve-lfd-bounds.pdf` | `1cc428f870c4094436a7fa9b2d6da9854e01960a28f3b23c90d0a253f5ec63d5` |
+| `paper/curve-lfd-bounds.tex` | `e6500dc31fb407483441d9ac0494d99a23fd1496841a715860506f33161e6741` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `c9eda86df3d7de4e064999dd4d078fc5aba3b3a7586f906b85360bc9e9eca819` |
 
-The PDF and figures were regenerated with Tectonic 0.16.9 by
-`python3 scripts/build_ic_curve_paper.py`. The PDF producer is xdvipdfmx
-(0.1). This replaces the earlier, incorrect pdfTeX build attribution.
+The PDF and figures were regenerated on 18 November 2026 with pdfTeX 1.40.25 (TeX Live 2023/Debian),
+matplotlib 3.11.2 and numpy 2.5.3 by `python3 scripts/build_ic_curve_paper.py`; the PDF producer is
+pdfTeX-1.40.25. The previous version was built with Tectonic 0.16.9 (producer xdvipdfmx); the figure
+script and its input records are unchanged, so the figures differ only by the plotting and TeX toolchain.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 
