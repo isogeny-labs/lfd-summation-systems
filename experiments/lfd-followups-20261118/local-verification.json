@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "scope": "eight concrete and conditional identities, not a proper-ideal growth theorem",
+  "lean_source_sha256": "b972efb1e73c37190625f6ed64e6f3dc975c77ebe2a34fd9aeca0f61016fe9af",
+  "axioms": {
+    "ICFallDegrees.GrowthJetClosure.inverse_index": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetClosure.euler_cyclicShift": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetClosure.chain_euler_shift": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetClosure.euler_supported": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetClosure.wrappingPart_supported": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetClosure.euler_other_coordinate": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetClosure.jetSpace_shift": [
+      "propext",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetClosure.not_mem_jetSpace_of_derivative": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "python_tests": 35,
+  "publication_checks": 439
+}

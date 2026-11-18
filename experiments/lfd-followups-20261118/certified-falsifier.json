@@ -1,0 +1,70 @@
+{
+  "k": 2,
+  "p": 17,
+  "D": 3,
+  "curve": [
+    6,
+    -7
+  ],
+  "target": [
+    1,
+    0
+  ],
+  "rational_sample": [
+    2,
+    10
+  ],
+  "checked_output_sha256": "32857c6c424756bcd7d77b837e35883c4f0bf13bb8a454ec7d1641a6c7d58ed5",
+  "row_index": 2,
+  "row_terms": [
+    [
+      0,
+      11
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      8,
+      13
+    ],
+    [
+      9,
+      4
+    ]
+  ],
+  "phi": 8,
+  "phi_euler": 14,
+  "status": "derived counterexample to unqualified jet invariance",
+  "scope": "ordinary normalized chain closure modulo degree-compatible chain relations; no growth theorem",
+  "source_sha256": {
+    "experiments/lfd-followups-20261118/check_certified_falsifier.py": "9948a0c313521e4ad706b06cfb6c61caa064e802167945a994f26cdd5f86f855",
+    "experiments/lfd-followups-20261117/derivations.py": "49d1846055a511b77ada62aa91cffa738ed854424761a166dba45055703a1998",
+    "experiments/lfd-followups-20261117/checker.py": "19d6e20a62733c8c50b09fbd6d84aad11e94688d3c853f7f05dcdc94991c8bb2"
+  }
+}
