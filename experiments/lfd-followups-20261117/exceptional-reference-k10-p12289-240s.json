@@ -1,0 +1,130 @@
+{
+  "k": 10,
+  "p": 12289,
+  "curve": [
+    6,
+    -7
+  ],
+  "target": [
+    1,
+    0
+  ],
+  "points": 86,
+  "exact_lfd": null,
+  "status": "capped",
+  "strict_falls": [
+    4,
+    5
+  ],
+  "lfd_lower_bound": 5,
+  "profile": [
+    {
+      "D": 2,
+      "rank": 1,
+      "columns": 211,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 0,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        1
+      ],
+      "evaluation_rank_below_D": 21,
+      "codimension": 210
+    },
+    {
+      "D": 3,
+      "rank": 21,
+      "columns": 1351,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 1,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        1,
+        21
+      ],
+      "evaluation_rank_below_D": 86,
+      "codimension": 1330
+    },
+    {
+      "D": 4,
+      "rank": 1567,
+      "columns": 6196,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 129,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        2,
+        129,
+        1567
+      ],
+      "evaluation_rank_below_D": 86,
+      "codimension": 4629
+    },
+    {
+      "D": 5,
+      "rank": 18573,
+      "columns": 21700,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 3167,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        2,
+        140,
+        3167,
+        18573
+      ],
+      "evaluation_rank_below_D": 86,
+      "codimension": 3127
+    },
+    {
+      "D": 6,
+      "rank": 20259,
+      "columns": 60460,
+      "closed_check": null,
+      "complete": false,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        2,
+        140,
+        1698,
+        8412,
+        20259
+      ]
+    }
+  ],
+  "seconds": 240.047,
+  "source_sha256": {
+    "experiments/lfd-followups-20261117/exceptional_reference.py": "ebb7611cded40641204d39bc20bdb8d21bf0937910078cdfff06c80da98828fb",
+    "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d"
+  }
+}

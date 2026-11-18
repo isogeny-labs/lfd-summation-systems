@@ -1,0 +1,18 @@
+{
+  "platform": "Darwin",
+  "explanation": "The historical engine divides ru_maxrss by 1024, appropriate for Linux KiB but yielding KiB on macOS, where ru_maxrss is bytes. Preserve raw records; normalize these local fields by a further factor of 1024.",
+  "records": [
+    {
+      "file": "depth18-D4.json",
+      "raw_maxrss_mb": 987584,
+      "raw_field_actual_unit": "KiB on macOS",
+      "normalized_peak_rss_mib": 964.4375
+    },
+    {
+      "file": "exceptional-big-k10-p12289.json",
+      "raw_maxrss_mb": 2757184,
+      "raw_field_actual_unit": "KiB on macOS",
+      "normalized_peak_rss_mib": 2692.5625
+    }
+  ]
+}

@@ -94,10 +94,11 @@ retain its logs rather than overwriting the archived audit.
 
 ## Before submission
 
-- The default Lean audit is that of commit `1c929ae` (CI green there); the
-  audited sources have not changed since. The non-two-torsion modules are
-  checked by a separate workflow. Both must be green on the commit that is
-  submitted (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
+- CI on the submitted commit must pass both the default Lean audit and the
+  all-module check (`scripts/lean_check_all.py`). The merged package at
+  `ce4d785` passed: 233 modules built, 941 declarations audited, and no
+  axioms beyond `propext`, `Classical.choice` and `Quot.sound`. The older
+  saved default audit covers 671 declarations and is not the full count.
 - The data appendix cites the combined evidence commit `2cb270c`. It stays
   reachable only if this branch is merged with a merge commit; after a squash
   or a rebase, update the citation and rebuild.

@@ -1,0 +1,65 @@
+{
+  "k": 7,
+  "p": 257,
+  "curve": [
+    6,
+    -7
+  ],
+  "target": [
+    1,
+    0
+  ],
+  "points": 62,
+  "enumerators_agree": true,
+  "profile": {
+    "status": "exact-proper-local",
+    "exact_lfd": 5,
+    "lfd_lower_bound": 5,
+    "lfd_upper_bound": 5,
+    "strict_falls": [
+      4,
+      5
+    ],
+    "scanned_through": 5,
+    "local_upper_bound": 5,
+    "point_count": 62,
+    "quotient_ranks": [
+      0,
+      0,
+      1,
+      15,
+      835,
+      3411
+    ],
+    "local_checks": [
+      {
+        "degree": 1,
+        "evaluation_rank": 1,
+        "codimension": 15
+      },
+      {
+        "degree": 2,
+        "evaluation_rank": 15,
+        "codimension": 105
+      },
+      {
+        "degree": 3,
+        "evaluation_rank": 62,
+        "codimension": 455
+      },
+      {
+        "degree": 4,
+        "evaluation_rank": 62,
+        "codimension": 636
+      },
+      {
+        "degree": 5,
+        "evaluation_rank": 62,
+        "codimension": 62
+      }
+    ],
+    "containing_spaces_checked": true
+  },
+  "seconds": 27.122,
+  "source_sha256": "bfe6ed1b92e03290cb966d3f87780cff46ea00655544f05e5a5072b757054951"
+}

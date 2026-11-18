@@ -1,0 +1,946 @@
+{
+ "harness": "experiments/ic-bounds-k14-independent/validate.py",
+ "argv": [
+  "--sets",
+  "quick",
+  "--negative",
+  "unit-65537:7:4",
+  "--work",
+  "/tmp/lfd-followup-replay-two-fixes",
+  "--out",
+  "experiments/lfd-followups-20261117/lift-small-replay.json"
+ ],
+ "device": "cpu",
+ "numpy": "2.4.0",
+ "lift_md_rows_parsed": 37,
+ "source_sha256": {
+  "lift": "035d9c49883009a3e52a9c09916dbf21aae504fdd1f90d345972de03bbc974ad",
+  "harness": "c4f58e08eb76251e6d4ea0f6bdde4992bf50464de8b0aa9e9d33af131793d82d",
+  "oracle_reference": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "engine_driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "lift_md": "4b8871d4b4594eab6d72756be944707869996ab8a5b7ca18e5cb1429c87d384d"
+ },
+ "cases": [
+  {
+   "case": "unit-65537-k4-D3to4",
+   "instance": "unit-65537",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 4,
+   "D": 3,
+   "solutions": 0,
+   "engine_VD": {
+    "dim": 9,
+    "closed": true,
+    "contains_one": false,
+    "basis_sha256": [
+     "65c742f98363fea030e88f1d5aaafc5072dc8433b6053262354607066799d57c",
+     "ba5bdd0ade2d593fbefa2ee171cfd5bf89bf6072a2ba898389e64fb02d0a6f34"
+    ]
+   },
+   "oracle_kind": "recomputed",
+   "oracle_reference_direct": {
+    "dim": 163,
+    "contains_one": true,
+    "profile": [
+     1,
+     9,
+     37,
+     93,
+     163
+    ],
+    "dim_low": 93,
+    "dim_low_parts": [
+     49,
+     44
+    ],
+    "full_sweep_clean": true,
+    "seconds": 0.0
+   },
+   "canonical_sha_equal_engine": true,
+   "phi_two_routes_equal": true,
+   "runs": {
+    "plain": {
+     "contains_one": true,
+     "dim_low": 93,
+     "dim_low_parts": [
+      49,
+      44
+     ],
+     "dim_VD1": 163,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": true,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 9,
+     "n_T": 153,
+     "rank_K": 153,
+     "n_single": 0,
+     "falls_new": 84,
+     "n_special_tops": 69,
+     "n_regular_tops": 1,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 8,
+      "nonzero": 0
+     },
+     "seconds": 0.0,
+     "chunks": 1,
+     "fall_rounds": 3,
+     "agrees_with_oracle": true
+    },
+    "tiny": {
+     "contains_one": true,
+     "dim_low": 93,
+     "dim_low_parts": [
+      49,
+      44
+     ],
+     "dim_VD1": 163,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": true,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 9,
+     "n_T": 153,
+     "rank_K": 153,
+     "n_single": 0,
+     "falls_new": 84,
+     "n_special_tops": 69,
+     "n_regular_tops": 1,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 8,
+      "nonzero": 0
+     },
+     "seconds": 0.0,
+     "chunks": 1,
+     "fall_rounds": 3,
+     "agrees_with_oracle": true
+    },
+    "low": {
+     "contains_one": true,
+     "dim_low": 93,
+     "dim_low_parts": [
+      49,
+      44
+     ],
+     "dim_VD1": 163,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": true,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 9,
+     "n_T": 153,
+     "rank_K": 153,
+     "n_single": 0,
+     "falls_new": 84,
+     "n_special_tops": 69,
+     "n_regular_tops": 1,
+     "closed_check": null,
+     "seconds": 0.0,
+     "chunks": 1,
+     "fall_rounds": 3,
+     "agrees_with_oracle": true
+    },
+    "seed9": {
+     "contains_one": true,
+     "dim_low": 93,
+     "dim_low_parts": [
+      49,
+      44
+     ],
+     "dim_VD1": 163,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": true,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 9,
+     "n_T": 153,
+     "rank_K": 153,
+     "n_single": 0,
+     "falls_new": 84,
+     "n_special_tops": 69,
+     "n_regular_tops": 1,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 8,
+      "nonzero": 0
+     },
+     "seconds": 0.0,
+     "chunks": 1,
+     "fall_rounds": 3,
+     "agrees_with_oracle": true
+    }
+   },
+   "oracle_naive_ordinary": {
+    "dim": 163,
+    "contains_one": true,
+    "dim_low": 93,
+    "agrees": true
+   },
+   "first_lift_recorded": {
+    "p": 65537,
+    "dim_VD": 9,
+    "dim_VD1": 163,
+    "contains_one": true,
+    "dim_low": 93,
+    "dim_T": 153,
+    "dim_K": 153,
+    "equal": {
+     "dim_VD": true,
+     "dim_VD1": true,
+     "contains_one": true,
+     "dim_low": true,
+     "dim_T": true,
+     "dim_K": true
+    },
+    "all_equal": true
+   },
+   "ok": true,
+   "set": "quick"
+  },
+  {
+   "case": "unit-65537-k6-D3to4",
+   "instance": "unit-65537",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 6,
+   "D": 3,
+   "solutions": 0,
+   "engine_VD": {
+    "dim": 13,
+    "closed": true,
+    "contains_one": false,
+    "basis_sha256": [
+     "ac183be3ecc0a83672ce569bef6b01fe9826b395767b7f63030707a9c9f16a6e",
+     "56d22e2bd6859f0960b970ad1fcf3ec728140a14d0ad552cddcd8cfc388b25da"
+    ]
+   },
+   "oracle_kind": "recomputed",
+   "oracle_reference_direct": {
+    "dim": 605,
+    "contains_one": false,
+    "profile": [
+     0,
+     0,
+     2,
+     111,
+     605
+    ],
+    "dim_low": 111,
+    "dim_low_parts": [
+     58,
+     53
+    ],
+    "full_sweep_clean": true,
+    "seconds": 0.1
+   },
+   "canonical_sha_equal_engine": true,
+   "phi_two_routes_equal": true,
+   "runs": {
+    "plain": {
+     "contains_one": false,
+     "dim_low": 111,
+     "dim_low_parts": [
+      58,
+      53
+     ],
+     "dim_VD1": 605,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 13,
+     "n_T": 780,
+     "rank_K": 591,
+     "n_single": 0,
+     "falls_new": 98,
+     "n_special_tops": 494,
+     "n_regular_tops": 1,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 7,
+     "agrees_with_oracle": true
+    },
+    "tiny": {
+     "contains_one": false,
+     "dim_low": 111,
+     "dim_low_parts": [
+      58,
+      53
+     ],
+     "dim_VD1": 605,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 13,
+     "n_T": 780,
+     "rank_K": 591,
+     "n_single": 0,
+     "falls_new": 98,
+     "n_special_tops": 494,
+     "n_regular_tops": 1,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.7,
+     "chunks": 1,
+     "fall_rounds": 7,
+     "agrees_with_oracle": true
+    },
+    "low": {
+     "contains_one": false,
+     "dim_low": 111,
+     "dim_low_parts": [
+      58,
+      53
+     ],
+     "dim_VD1": 605,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 13,
+     "n_T": 780,
+     "rank_K": 591,
+     "n_single": 0,
+     "falls_new": 98,
+     "n_special_tops": 494,
+     "n_regular_tops": 1,
+     "closed_check": null,
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 7,
+     "agrees_with_oracle": true
+    },
+    "seed9": {
+     "contains_one": false,
+     "dim_low": 111,
+     "dim_low_parts": [
+      58,
+      53
+     ],
+     "dim_VD1": 605,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 13,
+     "n_T": 780,
+     "rank_K": 591,
+     "n_single": 0,
+     "falls_new": 98,
+     "n_special_tops": 494,
+     "n_regular_tops": 1,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 7,
+     "agrees_with_oracle": true
+    }
+   },
+   "oracle_naive_ordinary": {
+    "dim": 605,
+    "contains_one": false,
+    "dim_low": 111,
+    "agrees": true
+   },
+   "first_lift_recorded": {
+    "p": 65537,
+    "dim_VD": 13,
+    "dim_VD1": 605,
+    "contains_one": false,
+    "dim_low": 111,
+    "dim_T": 780,
+    "dim_K": 591,
+    "equal": {
+     "dim_VD": true,
+     "dim_VD1": true,
+     "contains_one": true,
+     "dim_low": true,
+     "dim_T": true,
+     "dim_K": true
+    },
+    "all_equal": true
+   },
+   "ok": true,
+   "set": "quick"
+  },
+  {
+   "case": "unit-65537-k6-D4to5",
+   "instance": "unit-65537",
+   "p": 65537,
+   "a": 1,
+   "b": 0,
+   "X": 4271,
+   "k": 6,
+   "D": 4,
+   "solutions": 0,
+   "engine_VD": {
+    "dim": 605,
+    "closed": true,
+    "contains_one": false,
+    "basis_sha256": [
+     "33599fe08e5b29cbcf190b833127e8ecb6fe4ddfba0f6f06b2d80871094e9e44",
+     "5f0411b7c787edd77781be62dbdb5e3614206aea982416987ce62f16252e5c67"
+    ]
+   },
+   "oracle_kind": "recomputed",
+   "oracle_reference_direct": {
+    "dim": 1586,
+    "contains_one": true,
+    "profile": [
+     1,
+     13,
+     79,
+     299,
+     794,
+     1586
+    ],
+    "dim_low": 794,
+    "dim_low_parts": [
+     408,
+     386
+    ],
+    "full_sweep_clean": true,
+    "seconds": 0.2
+   },
+   "canonical_sha_equal_engine": true,
+   "phi_two_routes_equal": true,
+   "runs": {
+    "plain": {
+     "contains_one": true,
+     "dim_low": 794,
+     "dim_low_parts": [
+      408,
+      386
+     ],
+     "dim_VD1": 1586,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": true,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 201,
+     "n_single": 4,
+     "falls_new": 189,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 2,
+     "agrees_with_oracle": true
+    },
+    "tiny": {
+     "contains_one": true,
+     "dim_low": 794,
+     "dim_low_parts": [
+      408,
+      386
+     ],
+     "dim_VD1": 1586,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": false,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 201,
+     "n_single": 4,
+     "falls_new": 189,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 3,
+     "agrees_with_oracle": true
+    },
+    "low": {
+     "contains_one": true,
+     "dim_low": 794,
+     "dim_low_parts": [
+      408,
+      386
+     ],
+     "dim_VD1": 1586,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": true,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 201,
+     "n_single": 4,
+     "falls_new": 189,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": null,
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 2,
+     "agrees_with_oracle": true
+    },
+    "seed9": {
+     "contains_one": true,
+     "dim_low": 794,
+     "dim_low_parts": [
+      408,
+      386
+     ],
+     "dim_VD1": 1586,
+     "fixed_point": true,
+     "saturated": true,
+     "schedule_complete": false,
+     "verify_new_rows": null,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 201,
+     "n_single": 4,
+     "falls_new": 189,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.0,
+     "chunks": 1,
+     "fall_rounds": 2,
+     "agrees_with_oracle": true
+    }
+   },
+   "oracle_naive_ordinary": {
+    "dim": 1586,
+    "contains_one": true,
+    "dim_low": 794,
+    "agrees": true
+   },
+   "first_lift_recorded": {
+    "p": 65537,
+    "dim_VD": 605,
+    "dim_VD1": 1586,
+    "contains_one": true,
+    "dim_low": 794,
+    "dim_T": 197,
+    "dim_K": 197,
+    "equal": {
+     "dim_VD": true,
+     "dim_VD1": true,
+     "contains_one": true,
+     "dim_low": true,
+     "dim_T": true,
+     "dim_K": true
+    },
+    "all_equal": true
+   },
+   "ok": true,
+   "set": "quick"
+  },
+  {
+   "case": "proper-65537-X2-k6-D4to5",
+   "instance": "proper-65537-X2",
+   "p": 65537,
+   "a": 4021,
+   "b": 9917,
+   "X": 2,
+   "k": 6,
+   "D": 4,
+   "solutions": 2,
+   "engine_VD": {
+    "dim": 605,
+    "closed": true,
+    "contains_one": false,
+    "basis_sha256": [
+     "09542d43106efff9bf8325453adeef44c15411a2ad69f55e6193828bb383921e",
+     "0034e4d94733c5e8e16fabd40ac2e08b0563b837dc328895762c9cf83e4bf8a0"
+    ]
+   },
+   "oracle_kind": "recomputed",
+   "oracle_reference_direct": {
+    "dim": 1584,
+    "contains_one": false,
+    "profile": [
+     0,
+     11,
+     77,
+     297,
+     792,
+     1584
+    ],
+    "dim_low": 792,
+    "dim_low_parts": [
+     407,
+     385
+    ],
+    "full_sweep_clean": true,
+    "seconds": 0.2
+   },
+   "canonical_sha_equal_engine": true,
+   "phi_two_routes_equal": true,
+   "runs": {
+    "plain": {
+     "contains_one": false,
+     "dim_low": 792,
+     "dim_low_parts": [
+      407,
+      385
+     ],
+     "dim_VD1": 1584,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 199,
+     "n_single": 4,
+     "falls_new": 187,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 4,
+     "agrees_with_oracle": true
+    },
+    "tiny": {
+     "contains_one": false,
+     "dim_low": 792,
+     "dim_low_parts": [
+      407,
+      385
+     ],
+     "dim_VD1": 1584,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 199,
+     "n_single": 4,
+     "falls_new": 187,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.9,
+     "chunks": 8,
+     "fall_rounds": 5,
+     "agrees_with_oracle": true
+    },
+    "low": {
+     "contains_one": false,
+     "dim_low": 792,
+     "dim_low_parts": [
+      407,
+      385
+     ],
+     "dim_VD1": 1584,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 199,
+     "n_single": 4,
+     "falls_new": 187,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": null,
+     "seconds": 0.1,
+     "chunks": 1,
+     "fall_rounds": 4,
+     "agrees_with_oracle": true
+    },
+    "seed9": {
+     "contains_one": false,
+     "dim_low": 792,
+     "dim_low_parts": [
+      407,
+      385
+     ],
+     "dim_VD1": 1584,
+     "fixed_point": true,
+     "saturated": false,
+     "schedule_complete": true,
+     "verify_new_rows": 0,
+     "sigma_stable": true,
+     "dim_VD": 605,
+     "n_T": 201,
+     "rank_K": 199,
+     "n_single": 4,
+     "falls_new": 187,
+     "n_special_tops": 8,
+     "n_regular_tops": 784,
+     "closed_check": {
+      "random_combinations": 2,
+      "shifts": 12,
+      "nonzero": 0
+     },
+     "seconds": 0.1,
+     "chunks": 4,
+     "fall_rounds": 4,
+     "agrees_with_oracle": true
+    }
+   },
+   "oracle_naive_ordinary": {
+    "dim": 1584,
+    "contains_one": false,
+    "dim_low": 792,
+    "agrees": true
+   },
+   "first_lift_recorded": {
+    "p": 65537,
+    "dim_VD": 605,
+    "dim_VD1": 1584,
+    "contains_one": false,
+    "dim_low": 792,
+    "dim_T": 197,
+    "dim_K": 195,
+    "equal": {
+     "dim_VD": true,
+     "dim_VD1": true,
+     "contains_one": true,
+     "dim_low": true,
+     "dim_T": true,
+     "dim_K": true
+    },
+    "all_equal": true
+   },
+   "ok": true,
+   "set": "quick"
+  }
+ ],
+ "negative": [
+  {
+   "case": "unit-65537-k7-D4to5",
+   "clean": {
+    "contains_one": true,
+    "dim_low": 1471,
+    "dim_low_parts": [
+     750,
+     721
+    ],
+    "dim_VD1": 3473
+   },
+   "controls": [
+    {
+     "control": "generator coefficient (0, 0) + 1",
+     "outcome": "refused",
+     "reason": "the generator g is not in the stored space",
+     "detected": true
+    },
+    {
+     "control": "generator coefficient (1, 1) + 1",
+     "outcome": "refused",
+     "reason": "the generator g is not in the stored space",
+     "detected": true
+    },
+    {
+     "control": "basis part 0, low row 110, free column 226 (weight 3) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 28 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 0, low row 136, free column 227 (weight 3) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 28 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 0, low row 310, free column 159 (weight 3) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 28 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 0, top row 392, free column 161 (weight 3) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 8 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 0, top row 94, free column 280 (weight 2) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 16 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 0, top row 139, free column 92 (weight 4) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 12 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 1, low row 289, free column 301 (weight 2) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 28 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 1, low row 286, free column 266 (weight 3) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 28 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 1, low row 44, free column 175 (weight 3) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 28 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 1, top row 176, free column 37 (weight 4) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 12 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 1, top row 275, free column 81 (weight 4) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 8 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "basis part 1, top row 116, free column 145 (weight 3) + 1",
+     "outcome": "refused",
+     "reason": "the stored space is not closed: 12 of 28 shifted random low elements leave it",
+     "detected": true,
+     "canonical_sha_differs_from_engine_record": true
+    },
+    {
+     "control": "one byte of p0_t00000.npy flipped on disk",
+     "outcome": "refused",
+     "reason": "p0_t00000.npy: sha256 differs from the manifest",
+     "detected": true
+    },
+    {
+     "control": "TEST HOOK: fall rows never shifted",
+     "outcome": "result",
+     "result": {
+      "contains_one": false,
+      "dim_low": 955,
+      "dim_low_parts": [
+       489,
+       466
+      ],
+      "dim_VD1": 2844
+     },
+     "changed": true,
+     "detected": true
+    },
+    {
+     "control": "TEST HOOK: direct generators of shift u_{1,0} dropped",
+     "outcome": "result",
+     "result": {
+      "contains_one": true,
+      "dim_low": 1471,
+      "dim_low_parts": [
+       750,
+       721
+      ],
+      "dim_VD1": 3473
+     },
+     "changed": false,
+     "detected": false
+    },
+    {
+     "control": "TEST HOOK: all direct generators dropped",
+     "outcome": "result",
+     "result": {
+      "contains_one": true,
+      "dim_low": 1471,
+      "dim_low_parts": [
+       750,
+       721
+      ],
+      "dim_VD1": 3473
+     },
+     "changed": false,
+     "detected": false
+    }
+   ]
+  }
+ ],
+ "totals": {
+  "cases": 4,
+  "lift_runs": 16,
+  "all_ok": true,
+  "mismatches_with_reference_oracle": 0,
+  "one_enters": 2,
+  "one_stays_out": 2,
+  "naive_oracle_cases": 4,
+  "naive_oracle_agree": 4,
+  "first_lift_rows_compared": 4,
+  "first_lift_rows_equal": 4,
+  "negative_controls": 18,
+  "negative_detected": 16,
+  "seconds": 10.7
+ }
+}

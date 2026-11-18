@@ -1,0 +1,80 @@
+{
+  "depth18": [
+    {
+      "k": 18,
+      "D": 4,
+      "columns": 66712,
+      "part_columns": [
+        33442,
+        33270
+      ],
+      "compressed_split_worst_bytes": 2225260264,
+      "scope": "worst case over rank; excludes buffers, not measured memory"
+    },
+    {
+      "k": 18,
+      "D": 5,
+      "columns": 443704,
+      "part_columns": [
+        221938,
+        221766
+      ],
+      "compressed_split_worst_bytes": 98436634600,
+      "scope": "worst case over rank; excludes buffers, not measured memory"
+    },
+    {
+      "k": 18,
+      "D": 6,
+      "columns": 2391496,
+      "part_columns": [
+        1196242,
+        1195254
+      ],
+      "compressed_split_worst_bytes": 2859627047080,
+      "scope": "worst case over rank; excludes buffers, not measured memory"
+    },
+    {
+      "k": 18,
+      "D": 7,
+      "columns": 10739176,
+      "part_columns": [
+        5370082,
+        5369094
+      ],
+      "compressed_split_worst_bytes": 57664951067560,
+      "scope": "worst case over rank; excludes buffers, not measured memory"
+    },
+    {
+      "k": 18,
+      "D": 8,
+      "columns": 40999516,
+      "part_columns": [
+        20501782,
+        20497734
+      ],
+      "compressed_split_worst_bytes": 840480164310280,
+      "scope": "worst case over rank; excludes buffers, not measured memory"
+    }
+  ],
+  "split_D8": {
+    "columns": 226325,
+    "full_float64_basis_bytes": 409784045000,
+    "tiled_float32_full_basis_bytes": 204892022500,
+    "paid_worker_requested": {
+      "max_total_usd": 100,
+      "max_hours": 30,
+      "min_ram_gib": 256,
+      "status": "declined: user requested all work remain local"
+    }
+  },
+  "local": {
+    "ram_gib": 48,
+    "workspace_free_gib_at_start": 1.9,
+    "internal_free_gib_checked": 3.8
+  },
+  "depth14": {
+    "archival_style_basis_bytes": 45122062592,
+    "derivation_trace_bytes": null,
+    "scope": "proof trace size not measured; no full-basis run"
+  }
+}

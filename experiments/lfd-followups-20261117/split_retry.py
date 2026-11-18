@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+"""Controls and bounded, restart-from-source split retry; never claims resume."""
+import argparse,hashlib,json,sys,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'scripts'))
+from csd import ic_bounds_split_m as S
+from run_ic_split_m import unit_instance
+from tiled_split import TiledClosure
+HERE=Path(__file__).resolve().parent
+
+def one(m,k,p,seed,D,seconds,max_basis_gib=8):
+    E,inst=unit_instance(p,m,k,seed);gens,_=S.split_generators_m(E,inst['t'],k,m)
+    sp=S.SplitSpace(m,k,D,m-2);C=TiledClosure(sp,p,max_basis_gib=max_basis_gib)
+    rows=[sp.row(g,p) for g in gens if S.generator_degree(g)<=D]
+    start=time.time();deadline=start+seconds;C.add_inputs(rows);complete=C.saturate(deadline)
+    closed=C.verify_closed(deadline) if complete else None
+    return dict(m=m,k=k,p=p,seed=seed,a=E.a,b=E.b,target=[inst['t'],inst['y']],
+        system_hash=S.system_hash(p,m,k,gens),D=D,columns=len(sp),rank=C.rank,
+        contains_one=C.contains_one,stop_reason=C.stop_reason,complete=complete,verified_closed=closed,
+        profile=[C.low_dimension(d) for d in range(D+1)],seconds=round(time.time()-start,3),
+        inputs_in_span=all(C.contains(r) for r in rows),
+        status='unit-witness' if C.contains_one else ('closed-exclusion' if closed else 'capped'))
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--large',action='store_true');ap.add_argument('--ladder',action='store_true');ap.add_argument('--max-degree',type=int,choices=range(3,9),default=8);ap.add_argument('--max-basis-gib',type=float,default=8);ap.add_argument('--seconds',type=int,default=300);a=ap.parse_args()
+    if a.large:
+        if a.ladder:
+            start=time.time();results=[];expected={3:1,4:39,5:711,6:5243,7:27838}
+            for D in range(3,a.max_degree+1):
+                remaining=a.seconds-(time.time()-start)
+                if remaining<=0:break
+                stage=one(5,3,114689,0,D,remaining,a.max_basis_gib)
+                results.append(stage)
+                (HERE/'split-large-progress.json').write_text(json.dumps(results,indent=2)+'\n')
+                if not stage['complete'] or stage['verified_closed'] is not True:break
+                if D<8:
+                    assert not stage['contains_one'] and stage['rank']==expected[D], 'lower ladder disagrees'
+            exact=8 if len(results)==6 and results[-1]['contains_one'] else None
+            lower=max((r['D']+1 for r in results if r['verified_closed'] and not r['contains_one']),default=0)
+            rec=dict(status='exact-unit' if exact else 'capped-or-lower-bound',exact_lfd=exact,lfd_lower_bound=exact or lower,
+                     ladder=results,seconds=round(time.time()-start,3))
+            dest=HERE/f'split-m5-k3-ladder-through-D{a.max_degree}.json'
+        else:
+            rec=one(5,3,114689,0,8,a.seconds,a.max_basis_gib)
+            dest=HERE/'split-m5-k3-D8-retry.json' 
+    else:
+        cases=[]
+        for m,k,p,seed in [(3,2,7681,0),(3,3,7681,0),(4,2,7681,0),(5,2,7681,0)]:
+            E,inst=unit_instance(p,m,k,seed);gens,_=S.split_generators_m(E,inst['t'],k,m)
+            for D in range(3,7):
+                new=one(m,k,p,seed,D,a.seconds)
+                old=S.closure(gens,m,k,p,D)
+                assert new['rank']==old['dim_V_D'] and new['contains_one']==old['contains_one'] and new['profile']==old['low_profile']
+                assert new['inputs_in_span'] and (new['contains_one'] or new['verified_closed'])
+                cases.append(new)
+        rec=dict(status='passed',cases=cases)
+        dest=HERE/'split-tiled-controls.json'
+    rec['source_sha256']={str(f.relative_to(ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in [Path(__file__),HERE/'tiled_split.py',ROOT/'csd/ic_bounds_split_m.py',ROOT/'csd/ic_bounds_m3_batched.py']}
+    dest.write_text(json.dumps(rec,indent=2)+'\n');print(json.dumps(rec))
+if __name__=='__main__':main()

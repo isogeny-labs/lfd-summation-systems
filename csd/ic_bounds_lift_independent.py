@@ -99,8 +99,11 @@ def modp(X, p: int, xp):
 
 
 def mm(A, B, p: int, xp, mi: int | None = None):
-    """(A @ B) mod p for A, B with entries in [0, p)."""
-    mi = mi or max_inner(p)
+    """(A @ B) mod p; requested positive chunks are capped at the exactness bound."""
+    safe_inner = max_inner(p)
+    if mi is not None and (not isinstance(mi, int) or mi <= 0):
+        raise Refuse('mi must be a positive integer')
+    mi = safe_inner if mi is None else min(mi, safe_inner)
     n = A.shape[1]
     if A.shape[0] == 0 or n == 0 or B.shape[1] == 0:
         return xp.zeros((A.shape[0], B.shape[1]), dtype=xp.float64)
@@ -140,7 +143,7 @@ def rref(R, p: int, xp, block: int = 64, mi: int | None = None):
         for i in range(S.shape[0]):
             v = S[i]
             if new:                                      # clear the pivots found in this block
-                v -= v[xp.asarray(new)] @ S[:len(new)]
+                v -= mm(v[xp.asarray(new)][None, :], S[:len(new)], p, xp, mi)[0]
                 modp(v, p, xp)
             c = int(xp.argmax(v != 0))
             if float(v[c]) == 0.0:
@@ -480,7 +483,10 @@ class Lift:
             raise Refuse('a shifted monomial is outside M_<=D+1')
         inL = li >= 0
         nn = np.where(inL, self.nidx[np.maximum(li, 0)], -1)
-        sp = np.where(inL, -1, self.spidx[np.maximum(ti, 0)])
+        # At D >= 2k there is no top layer. np.where eagerly indexes both
+        # branches, so avoid indexing the empty special-top array.
+        sp = (-np.ones(len(li), dtype=I64) if self.Tp.n == 0 else
+              np.where(inL, -1, self.spidx[np.maximum(ti, 0)]))
         tcol = np.where(nn >= 0, self.nSp + nn, np.where(sp >= 0, sp, -1))
         pd = np.where(inL & (nn < 0), li, -1)
         reg = np.where(~inL & (sp < 0), ti, -1)

@@ -1,0 +1,169 @@
+{
+  "status": "capped-or-lower-bound",
+  "exact_lfd": null,
+  "lfd_lower_bound": 7,
+  "ladder": [
+    {
+      "m": 5,
+      "k": 3,
+      "p": 114689,
+      "seed": 0,
+      "a": 52814,
+      "b": 60265,
+      "target": [
+        52173,
+        107269
+      ],
+      "system_hash": "723464b8d858065cf28bbaea733e70fe7c41d6db528d6d4f74dc159c1ee3f627",
+      "D": 3,
+      "columns": 1045,
+      "rank": 1,
+      "contains_one": false,
+      "stop_reason": null,
+      "complete": true,
+      "verified_closed": true,
+      "profile": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "seconds": 0.006,
+      "inputs_in_span": true,
+      "status": "closed-exclusion"
+    },
+    {
+      "m": 5,
+      "k": 3,
+      "p": 114689,
+      "seed": 0,
+      "a": 52814,
+      "b": 60265,
+      "target": [
+        52173,
+        107269
+      ],
+      "system_hash": "723464b8d858065cf28bbaea733e70fe7c41d6db528d6d4f74dc159c1ee3f627",
+      "D": 4,
+      "columns": 4570,
+      "rank": 39,
+      "contains_one": false,
+      "stop_reason": null,
+      "complete": true,
+      "verified_closed": true,
+      "profile": [
+        0,
+        0,
+        0,
+        2,
+        39
+      ],
+      "seconds": 0.01,
+      "inputs_in_span": true,
+      "status": "closed-exclusion"
+    },
+    {
+      "m": 5,
+      "k": 3,
+      "p": 114689,
+      "seed": 0,
+      "a": 52814,
+      "b": 60265,
+      "target": [
+        52173,
+        107269
+      ],
+      "system_hash": "723464b8d858065cf28bbaea733e70fe7c41d6db528d6d4f74dc159c1ee3f627",
+      "D": 5,
+      "columns": 15694,
+      "rank": 711,
+      "contains_one": false,
+      "stop_reason": null,
+      "complete": true,
+      "verified_closed": true,
+      "profile": [
+        0,
+        0,
+        0,
+        4,
+        77,
+        711
+      ],
+      "seconds": 4.419,
+      "inputs_in_span": true,
+      "status": "closed-exclusion"
+    },
+    {
+      "m": 5,
+      "k": 3,
+      "p": 114689,
+      "seed": 0,
+      "a": 52814,
+      "b": 60265,
+      "target": [
+        52173,
+        107269
+      ],
+      "system_hash": "723464b8d858065cf28bbaea733e70fe7c41d6db528d6d4f74dc159c1ee3f627",
+      "D": 6,
+      "columns": 44366,
+      "rank": 5243,
+      "contains_one": false,
+      "stop_reason": null,
+      "complete": true,
+      "verified_closed": true,
+      "profile": [
+        0,
+        0,
+        0,
+        4,
+        82,
+        823,
+        5243
+      ],
+      "seconds": 1280.28,
+      "inputs_in_span": true,
+      "status": "closed-exclusion"
+    },
+    {
+      "m": 5,
+      "k": 3,
+      "p": 114689,
+      "seed": 0,
+      "a": 52814,
+      "b": 60265,
+      "target": [
+        52173,
+        107269
+      ],
+      "system_hash": "723464b8d858065cf28bbaea733e70fe7c41d6db528d6d4f74dc159c1ee3f627",
+      "D": 7,
+      "columns": 106970,
+      "rank": 3644,
+      "contains_one": false,
+      "stop_reason": "deadline",
+      "complete": false,
+      "verified_closed": null,
+      "profile": [
+        0,
+        0,
+        0,
+        2,
+        47,
+        370,
+        1327,
+        3644
+      ],
+      "seconds": 509.198,
+      "inputs_in_span": true,
+      "status": "capped"
+    }
+  ],
+  "seconds": 1806.759,
+  "source_sha256": {
+    "experiments/lfd-followups-20261117/split_retry.py": "c5685293726a6cd1abee1fda3cc7cea73ac4e1bf2ccfe75965421a5dcaf9ca4d",
+    "experiments/lfd-followups-20261117/tiled_split.py": "eea1f70dfd623b9e9ccd80a15d06a1dad07a45d92a057f01763a514c099b4c69",
+    "csd/ic_bounds_split_m.py": "8db9f67bb4a98c8cd2e951b070afce20ca77a2d67ba79129dc4acf220e37698d",
+    "csd/ic_bounds_m3_batched.py": "26ced2792b1d253ab6a9a8290c0980828e8152c97143b01ac7f4b2da4512cf3d"
+  }
+}
