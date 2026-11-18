@@ -1,6 +1,9 @@
 # Main manuscript: ePrint preparation
 
-**Status, 16 November 2026:** candidate for author review, 49 pages. It
+**Status, 18 November 2026:** candidate for author review, 52 pages (rebuilt
+with Tectonic 0.17.0; shortened abstract, significance paragraph in the
+introduction, second-engine corroboration at depth 14 on the unit instance
+over p = 65537: [update note](latest-update-20261118.md)). It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint
@@ -30,7 +33,10 @@ establish the LFD lower bound; the numerical bound there remains undecided. At d
 uses a degree lift replicated by a second implementation on both unit instances.
 The lift still assumes that its input space is contained in the true degree-6
 closure; the independent closed-space check proves the reverse inclusion.
-There is no independent certificate for that input containment. Binary replications
+There is no independent certificate for that input containment; since 18 November
+it also follows if the later version of the second engine, whose degree-6 closure of
+the unit instance over p = 65537 has the same dimension (one run, not certified),
+adds only admissible products. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 

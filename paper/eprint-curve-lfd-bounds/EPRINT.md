@@ -15,11 +15,11 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io |
-| Abstract | paste `eprint-abstract.txt` (2903 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (1291 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (49 pages) |
+| Content | `../curve-lfd-bounds.pdf` (52 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -39,14 +39,21 @@ its final CI checks pass. The limits of the input-space certificate remain in th
 The data appendix cites this frozen snapshot. The files below are those of
 the commit carrying this sheet.
 
+Revision of 18 November 2026: shortened abstract (180 words, 1291
+characters; previously 432 words), a significance paragraph in the
+introduction, and the second engine's degree-6 closure at k = 14 on the unit
+instance over p = 65537 (a corroboration from the `isogeny-labs/crypto`
+records at commit `98b7d87`, not a certificate; `../latest-update-20261118.md`).
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `2c8357fdb2a000c33e246cdb36f2e6bdd95c8cd4dae4657f62fcfc9d9ce59b82` |
-| `paper/curve-lfd-bounds.tex` | `9b2764756520a04d08b1dd07447f7fb454cb54ad5499f2cb0ed24eeba9328d0b` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `c9eda86df3d7de4e064999dd4d078fc5aba3b3a7586f906b85360bc9e9eca819` |
+| `paper/curve-lfd-bounds.pdf` | `5b29b268f53bddc885858874b7c78e78e6264aac0d8d8ddaa08d712f4f06e79d` |
+| `paper/curve-lfd-bounds.tex` | `699e7d4b9b7dd32e12ba0ff1e795eca7412f9c4391d597bc9d799ad85a5856c7` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
-The PDF and figures were regenerated with Tectonic 0.16.9 by
-`python3 scripts/build_ic_curve_paper.py`. The PDF producer is xdvipdfmx
+The PDF and figures were regenerated on 18 November 2026 with Tectonic 0.17.0
+(conda-forge build, default bundle v33, `tlextras-2022.0r0`) by
+`python3 scripts/build_ic_curve_paper.py`; the previous build used Tectonic 0.16.9. The PDF producer is xdvipdfmx
 (0.1). This replaces the earlier, incorrect pdfTeX build attribution.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
@@ -63,8 +70,8 @@ older saved audit as evidence for modules added later.
 - PDF builds without LaTeX warnings, unresolved references or overfull boxes.
 - A4, author email on page 1, PDF metadata title matches the manuscript.
 - Abstract agrees with the LaTeX source.
-- Form constraints checked on 15 November 2026 and again on the text of 16 November: the abstract is ASCII apart from the "ö" of
-  "Gröbner", with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
+- Form constraints checked on 15 November 2026 and again on the texts of 16 and 18 November: the abstract is ASCII (the earlier texts had one "ö", in
+  "Gröbner"), with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
   for at least 64 characters), and every keyword phrase is at most 40 characters.
 - Mathematical and reproducibility limits: see `../README.md` and
   `../../docs/reviews-publication-20261114.md`.

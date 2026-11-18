@@ -1,10 +1,10 @@
 # Paper update, 18 November 2026
 
-Source edits to `paper/curve-lfd-bounds.tex` only. The PDF, the figures, the
-ePrint abstract and the digests in `eprint-curve-lfd-bounds/` were not
-rebuilt or changed (no Tectonic in the editing environment); the owner
-rebuilds. Until then `scripts/check_publication_artifacts.py` reports the
-manuscript digest as stale. The abstract itself is unchanged.
+The first pass (commit `431bd79`) edited `paper/curve-lfd-bounds.tex` only.
+The second pass (below, "Second pass") folds in the second engine's run on
+the unit instance over p = 65537, shortens the abstract, adds a significance
+paragraph to the introduction, and rebuilds the PDF, the figures, the ePrint
+abstract and the digests with Tectonic.
 
 ## Results folded in
 
@@ -47,3 +47,75 @@ instances over p = 65537 and 163841 at k = 14; depth 15 on the unit
 instance over p = 65537; depth 16 on a new unit instance over a prime with
 2^17 | p − 1) will go carries a LaTeX comment `% PENDING(paper-runs-20261118)`.
 No pending result is in the visible text.
+
+## Second pass, 18 November 2026
+
+### Result folded in (run J1 of `paper-runs-20261118`)
+
+Records in `isogeny-labs/crypto`, branch `wt/paper-engine`, commit `98b7d87056`
+(local in the session that produced them; it must be pushed before the
+citation in the data appendix resolves), directory
+`research/hky_paper_runs_20261118/`: `README.md` (system correspondence,
+gate), `pod/LAUNCH.md`, `results/J1/record.json`, `job.json`,
+`basis.bin.json`; engine notes `research/hky_engine_opt_20261118/README.md`.
+Labelled `[pcc:unverified]` there.
+
+| Item | Value |
+|---|---|
+| Engine | `src/cryptanalysis/hky_fp_tower_fast2.rs` (hky3), driver `examples/pkm_tower_pilot.rs` (`--instance` mode); engine commit `450d5b295b`; binary sha256 `39acdeac81689a49fa98a9b71e9924bdc29418d80247bece72e372aa41cac74f` |
+| Instance | `unit-p65537-a1-s10-k14` (y² = x³ + x over p = 65537, R = (4271, 11720)), file sha256 `fa06148e0276dd459a45ad45e08b751a699ceb2a9a440a8ee07770a9ebeaa1ab`; generator checked against the paper's formula and the file (`generator_matches_pkm_generator`, `generator_matches_file`) |
+| Gate before the run | same binary reproduced 11 recorded closures: D = 5 at k = 10..15 (both unit instances at k = 13, 14), D = 6 at k = 10, 11, 12 |
+| Closure, D = 6, k = 14 | 499,178 columns; profile (0,0,2,154,4451,73587,448922); 1 ∉ V_6; rank 448,922; parts 249,824 / 249,354 columns, ranks 224,688 + 224,234 |
+| Closedness check (engine-internal, `--hky3-verify-closed on`) | closed; 0 non-zero over 4,120,873 reductions; 18,495 s |
+| Resources | wall 26,723 s on 32 shared vCPU (EPYC 7713); peak RSS 73,882,436 KiB (`peak_rss_kb_this_attempt`, about 70 GiB; with the check) |
+| Basis | `hky.basis/v1`, file sha256 `06fdd4e4d00095ad02d9a9cea735ca59eed62843552ee14b43726f76d1ad9d1c` |
+
+Where in the paper: `sec:depth14`, new paragraph "The second engine on the
+unit instance over p = 65537"; `tab:profile` row 14 and caption; Limitations
+items "The value 7 at k=14", "Second engines", "Depth", "The conjecture";
+Future directions, "Larger computations"; data appendix, new row in the
+second data table.
+
+Label: a corroboration, not a certificate. The check has the form of the
+paper's closedness sweep but runs inside the engine; the paper's checker has
+not read the exported basis; one run. Not done: the canonical-hash
+comparison of this basis with the paper's stored W, and the second lift on
+this basis (running). So W = V_6(14) and the lift are not settled. The paper
+states one consequence that needs no hash: since the checker gives
+W ⊇ V_6(14) with dim W = 448,922, W ⊆ V_6(14) also follows if this engine adds
+only admissible products (neither engine is certified to).
+
+### Abstract and significance
+
+- Abstract shortened from 432 to 180 words (1291 characters). It keeps the
+  kernel-checked upper bounds, the at-every-depth lower bounds, the certified
+  values 4, 5, 6 through k = 13, the depth-14 split (lower bound certified,
+  upper bound by the lift), the conjecture, the written growth and
+  solving-degree results, and the no-cost statement; it drops the sweep size,
+  the m-summand and binary details and the second-lift sentence (all still in
+  the body).
+- Introduction: new paragraph "Why this matters" (relation search versus
+  Pollard rho; what the proved bounds cap and what they rule out; no cost
+  claim).
+- Date of the manuscript set to 18 November 2026.
+
+### Build and layout
+
+- Tectonic 0.17.0 (conda-forge), default bundle v33 (`tlextras-2022.0r0`,
+  fetched from data1.fullyjustified.net), through
+  `python3 scripts/build_ic_curve_paper.py`: no warnings, no overfull boxes,
+  no unresolved references. The regenerated figures changed bytes
+  (matplotlib 3.11.2 here).
+- The data table overflowed its page ("Float too large" by 73 pt) once the
+  new row was added; it is now split into `tab:data` (formal development,
+  proofs, reviews) and `tab:data2` (computations).
+- 52 pages (the source of `431bd79` alone builds to 51 pages with this
+  toolchain; the committed PDF before this pass had 49 and predated
+  `431bd79`).
+
+### Still pending
+
+The `% PENDING(paper-runs-20261118)` markers remain (13, rewritten where J1
+filled part of them): J2 (p = 163841), the canonical-hash comparison and the
+second lift on the second engine's bases, k = 15 on unit-p65537 and k = 16 on
+the new unit instance over p = 786433.
