@@ -1,0 +1,58 @@
+{
+  "k": 8,
+  "p": 7681,
+  "curve": [
+    6,
+    -7
+  ],
+  "target": [
+    1,
+    0
+  ],
+  "points": 8,
+  "enumerators_agree": true,
+  "profile": {
+    "status": "capped",
+    "exact_lfd": null,
+    "lfd_lower_bound": 4,
+    "lfd_upper_bound": 17,
+    "strict_falls": [
+      4
+    ],
+    "scanned_through": 4,
+    "quotient_ranks": [
+      0,
+      0,
+      1,
+      17,
+      1071
+    ],
+    "point_count": 8,
+    "local_checks": [
+      {
+        "degree": 1,
+        "evaluation_rank": 1,
+        "codimension": 17
+      },
+      {
+        "degree": 2,
+        "evaluation_rank": 8,
+        "codimension": 136
+      },
+      {
+        "degree": 3,
+        "evaluation_rank": 8,
+        "codimension": 680
+      },
+      {
+        "degree": 4,
+        "evaluation_rank": 8,
+        "codimension": 1446
+      }
+    ],
+    "cap_reason": "Exact chain-closure product budget exceeded.",
+    "containing_spaces_checked": true
+  },
+  "seconds": 14.131,
+  "source_sha256": "bfe6ed1b92e03290cb966d3f87780cff46ea00655544f05e5a5072b757054951"
+}

@@ -99,8 +99,11 @@ def modp(X, p: int, xp):
 
 
 def mm(A, B, p: int, xp, mi: int | None = None):
-    """(A @ B) mod p for A, B with entries in [0, p)."""
-    mi = mi or max_inner(p)
+    """(A @ B) mod p; requested positive chunks are capped at the exactness bound."""
+    safe_inner = max_inner(p)
+    if mi is not None and (not isinstance(mi, int) or mi <= 0):
+        raise Refuse('mi must be a positive integer')
+    mi = safe_inner if mi is None else min(mi, safe_inner)
     n = A.shape[1]
     if A.shape[0] == 0 or n == 0 or B.shape[1] == 0:
         return xp.zeros((A.shape[0], B.shape[1]), dtype=xp.float64)
@@ -140,7 +143,7 @@ def rref(R, p: int, xp, block: int = 64, mi: int | None = None):
         for i in range(S.shape[0]):
             v = S[i]
             if new:                                      # clear the pivots found in this block
-                v -= v[xp.asarray(new)] @ S[:len(new)]
+                v -= mm(v[xp.asarray(new)][None, :], S[:len(new)], p, xp, mi)[0]
                 modp(v, p, xp)
             c = int(xp.argmax(v != 0))
             if float(v[c]) == 0.0:

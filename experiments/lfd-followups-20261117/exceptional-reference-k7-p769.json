@@ -1,0 +1,113 @@
+{
+  "k": 7,
+  "p": 769,
+  "curve": [
+    6,
+    -7
+  ],
+  "target": [
+    1,
+    0
+  ],
+  "points": 24,
+  "exact_lfd": 5,
+  "status": "exact-proper-local",
+  "strict_falls": [
+    4,
+    5
+  ],
+  "lfd_lower_bound": 5,
+  "profile": [
+    {
+      "D": 2,
+      "rank": 1,
+      "columns": 106,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 0,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        1
+      ],
+      "evaluation_rank_below_D": 15,
+      "codimension": 105
+    },
+    {
+      "D": 3,
+      "rank": 15,
+      "columns": 470,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 1,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        1,
+        15
+      ],
+      "evaluation_rank_below_D": 24,
+      "codimension": 455
+    },
+    {
+      "D": 4,
+      "rank": 835,
+      "columns": 1471,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 117,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        2,
+        117,
+        835
+      ],
+      "evaluation_rank_below_D": 24,
+      "codimension": 636
+    },
+    {
+      "D": 5,
+      "rank": 3449,
+      "columns": 3473,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 1447,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        82,
+        446,
+        1447,
+        3449
+      ],
+      "evaluation_rank_below_D": 24,
+      "codimension": 24
+    }
+  ],
+  "seconds": 0.818,
+  "source_sha256": {
+    "experiments/lfd-followups-20261117/exceptional_reference.py": "ebb7611cded40641204d39bc20bdb8d21bf0937910078cdfff06c80da98828fb",
+    "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d"
+  }
+}

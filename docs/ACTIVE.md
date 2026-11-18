@@ -16,7 +16,7 @@ _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
 
-- [ ] Execute five LFD follow-ups: derivation certificates, lift review, split closure, exceptional primes, depth-18 test (Codex, started 2026-11-17, branch research/lfd-followups-20261117)
+- [ ] Execute five LFD follow-ups: derivation certificates, lift review, split closure, exceptional primes, depth-18 test (Codex, started 2026-11-17, branch research/lfd-followups-20261117, PR #31)
 
 - [x] Finalize and locally validate both depth-14 replications and submission provenance; final CI and merge tracked in PR #24 (Codex, started 2026-11-16, branch paper/finalize-pr24-20261116, PR #24)
 

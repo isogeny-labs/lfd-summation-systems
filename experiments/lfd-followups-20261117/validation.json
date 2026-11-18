@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "scope": "bounded derivation prototype and high-prime arithmetic; not a depth-14 certificate",
+  "cases": [
+    {
+      "k": 2,
+      "D": 3,
+      "X": 4271,
+      "rank": 5,
+      "nodes": 10,
+      "reference_contains_one": false,
+      "seconds": 0.007,
+      "row_sha256": "7873958f71780c781e599e0a80270011e700c732cf956752be7a0c176ae88732"
+    },
+    {
+      "k": 2,
+      "D": 4,
+      "X": 4271,
+      "rank": 16,
+      "nodes": 77,
+      "reference_contains_one": true,
+      "seconds": 0.002,
+      "row_sha256": "96dcd59adb15c96fe3fb77202647e3b93640b71885b7846e8f7f3eba0e7e322a"
+    },
+    {
+      "k": 3,
+      "D": 4,
+      "X": 4271,
+      "rank": 57,
+      "nodes": 310,
+      "reference_contains_one": true,
+      "seconds": 0.016,
+      "row_sha256": "da583c6d030c10a346db73d7b6694c511b0eb69a05a1e39812f48572a0d4854b"
+    },
+    {
+      "k": 4,
+      "D": 3,
+      "X": 4271,
+      "rank": 9,
+      "nodes": 18,
+      "reference_contains_one": false,
+      "seconds": 0.001,
+      "row_sha256": "ea9c95a6b3ace6d40f7d28d42c106c29607dbe6830dcec269c995236baf1ebe4"
+    },
+    {
+      "k": 4,
+      "D": 4,
+      "X": 4271,
+      "rank": 163,
+      "nodes": 908,
+      "reference_contains_one": true,
+      "seconds": 0.163,
+      "row_sha256": "10452b198f7f123fbb2c127e936737d96158b914b9272f95865de618b574cd25"
+    },
+    {
+      "k": 4,
+      "D": 4,
+      "X": 2,
+      "rank": 163,
+      "nodes": 908,
+      "reference_contains_one": true,
+      "seconds": 0.163,
+      "row_sha256": "f3b6227fceda50b5611693e25c54ee09ea400b6391bf4551a7efc8c44ea07363"
+    }
+  ],
+  "negative_controls": [
+    "forged-output",
+    "forward-reference",
+    "wrong-input",
+    "wrong-field",
+    "unknown-operation",
+    "carry-does-not-authorize-overdegree-shift",
+    "unsafe-inner-0",
+    "unsafe-inner--1"
+  ],
+  "arithmetic": [
+    {
+      "p": 65537,
+      "last_free": 65473,
+      "expected": 65473
+    },
+    {
+      "p": 163841,
+      "last_free": 163777,
+      "expected": 163777
+    },
+    {
+      "p": 16777213,
+      "last_free": 16777149,
+      "expected": 16777149
+    }
+  ],
+  "source_sha256": {
+    "csd/ic_bounds_lift_independent.py": "5518b951575cae5d9537f5bb5a129fe67949f30567a3bc4b0024cd3619126f23",
+    "experiments/lfd-followups-20261117/checker.py": "afe20e79a86ff77246cdf59ab48543622d31eebe38a8e9f1f420c77dcfe9d7c2",
+    "experiments/lfd-followups-20261117/derivations.py": "333c2e41cedba04bf6743afe48db791d808e2ee42ed61d6d107babd67a9bcf1d",
+    "experiments/lfd-followups-20261117/exceptional.py": "bfe6ed1b92e03290cb966d3f87780cff46ea00655544f05e5a5072b757054951",
+    "experiments/lfd-followups-20261117/exceptional_reference.py": "ebb7611cded40641204d39bc20bdb8d21bf0937910078cdfff06c80da98828fb",
+    "experiments/lfd-followups-20261117/split_retry.py": "9a20d82f038bac5a5639cac924e4cd0f317cce7db88f42bd1d0095aee1d314cb",
+    "experiments/lfd-followups-20261117/tiled_split.py": "eea1f70dfd623b9e9ccd80a15d06a1dad07a45d92a057f01763a514c099b4c69",
+    "experiments/lfd-followups-20261117/validate.py": "6928285f2ebe8de3a0629cfe5b9d8b0e5dc43b2f452405ea0f8e7b9929643b4c"
+  }
+}
