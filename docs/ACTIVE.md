@@ -16,6 +16,7 @@ _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
 
+- [ ] Reconcile and merge the open submission PRs; rebuild and verify the manuscript (opencode, started 2026-11-18, branch paper/finalize-submission-20261118)
 - [ ] Standardize the repository CI check contract (Codex, started 2026-11-17, branch codex/standard-ci-check, PR #29)
 - [x] Finalize and locally validate both depth-14 replications and submission provenance; final CI and merge tracked in PR #24 (Codex, started 2026-11-16, branch paper/finalize-pr24-20261116, PR #24)
 
