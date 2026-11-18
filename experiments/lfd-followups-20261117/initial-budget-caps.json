@@ -1,0 +1,121 @@
+{
+  "max_cells": 30000000,
+  "records": [
+    {
+      "k": 7,
+      "p": 257,
+      "curve": [
+        6,
+        -7
+      ],
+      "target": [
+        1,
+        0
+      ],
+      "points": 62,
+      "enumerators_agree": true,
+      "profile": {
+        "status": "capped",
+        "exact_lfd": null,
+        "lfd_lower_bound": 4,
+        "lfd_upper_bound": 15,
+        "strict_falls": [
+          4
+        ],
+        "scanned_through": 4,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          15,
+          835
+        ],
+        "point_count": 62,
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 15
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 15,
+            "codimension": 105
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 62,
+            "codimension": 455
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 62,
+            "codimension": 636
+          }
+        ],
+        "cap_reason": "Exact chain-closure product budget exceeded.",
+        "containing_spaces_checked": true
+      },
+      "seconds": 0.561,
+      "source_sha256": "697323e16d6bd0beb2051bd4683d5b43af5821221743abaaf961d63cff807804"
+    },
+    {
+      "k": 7,
+      "p": 769,
+      "curve": [
+        6,
+        -7
+      ],
+      "target": [
+        1,
+        0
+      ],
+      "points": 24,
+      "enumerators_agree": true,
+      "profile": {
+        "status": "capped",
+        "exact_lfd": null,
+        "lfd_lower_bound": 4,
+        "lfd_upper_bound": 15,
+        "strict_falls": [
+          4
+        ],
+        "scanned_through": 4,
+        "quotient_ranks": [
+          0,
+          0,
+          1,
+          15,
+          835
+        ],
+        "point_count": 24,
+        "local_checks": [
+          {
+            "degree": 1,
+            "evaluation_rank": 1,
+            "codimension": 15
+          },
+          {
+            "degree": 2,
+            "evaluation_rank": 15,
+            "codimension": 105
+          },
+          {
+            "degree": 3,
+            "evaluation_rank": 24,
+            "codimension": 455
+          },
+          {
+            "degree": 4,
+            "evaluation_rank": 24,
+            "codimension": 636
+          }
+        ],
+        "cap_reason": "Exact chain-closure product budget exceeded.",
+        "containing_spaces_checked": true
+      },
+      "seconds": 0.497,
+      "source_sha256": "697323e16d6bd0beb2051bd4683d5b43af5821221743abaaf961d63cff807804"
+    }
+  ]
+}

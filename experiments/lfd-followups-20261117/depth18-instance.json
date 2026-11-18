@@ -1,0 +1,26 @@
+{
+  "k": 18,
+  "prime": 7340033,
+  "a": 1,
+  "b": 0,
+  "seed": null,
+  "target": [
+    3,
+    2205181
+  ],
+  "unit_nonresidue": true,
+  "points": 0,
+  "Z": [],
+  "generator": {
+    "2,0": 9,
+    "1,1": 7340013,
+    "0,2": 9,
+    "2,1": 7340027,
+    "1,2": 7340027,
+    "1,0": 7340027,
+    "0,1": 7340027,
+    "0,0": 1,
+    "2,2": 1
+  },
+  "unit_justification": "Paper Lemma unit: nonsquare rational target X, Y nonzero, 2^(k+1) divides p-1; no grid enumeration performed"
+}

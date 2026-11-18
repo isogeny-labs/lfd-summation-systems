@@ -1,0 +1,113 @@
+{
+  "k": 9,
+  "p": 12289,
+  "curve": [
+    6,
+    -7
+  ],
+  "target": [
+    1,
+    0
+  ],
+  "points": 16,
+  "exact_lfd": 5,
+  "status": "exact-proper-local",
+  "strict_falls": [
+    4,
+    5
+  ],
+  "lfd_lower_bound": 5,
+  "profile": [
+    {
+      "D": 2,
+      "rank": 1,
+      "columns": 172,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 0,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        1
+      ],
+      "evaluation_rank_below_D": 16,
+      "codimension": 171
+    },
+    {
+      "D": 3,
+      "rank": 19,
+      "columns": 988,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 1,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        1,
+        19
+      ],
+      "evaluation_rank_below_D": 16,
+      "codimension": 969
+    },
+    {
+      "D": 4,
+      "rank": 1315,
+      "columns": 4048,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 125,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        0,
+        2,
+        125,
+        1315
+      ],
+      "evaluation_rank_below_D": 16,
+      "codimension": 2733
+    },
+    {
+      "D": 5,
+      "rank": 12600,
+      "columns": 12616,
+      "closed_check": {
+        "complete": true,
+        "rows_checked": 4032,
+        "nonzero_residuals": 0,
+        "passed": true
+      },
+      "complete": true,
+      "contains_one": false,
+      "profile": [
+        0,
+        3,
+        156,
+        972,
+        4032,
+        12600
+      ],
+      "evaluation_rank_below_D": 16,
+      "codimension": 16
+    }
+  ],
+  "seconds": 13.135,
+  "source_sha256": {
+    "experiments/lfd-followups-20261117/exceptional_reference.py": "ebb7611cded40641204d39bc20bdb8d21bf0937910078cdfff06c80da98828fb",
+    "csd/ic_bounds_d5_verify.py": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d"
+  }
+}

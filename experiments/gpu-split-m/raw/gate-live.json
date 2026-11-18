@@ -1,0 +1,7962 @@
+{
+ "status": "passed",
+ "date": "2026-11-17",
+ "arms": [
+  "cpu:split",
+  "cpu:plain",
+  "fake-gpu:split",
+  "fake-gpu:plain"
+ ],
+ "comparisons": 84,
+ "equal": 84,
+ "failures": [],
+ "rows": [
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 134,
+     "update": 0,
+     "rref": 268
+    },
+    "total": 402,
+    "dense_equivalent": 402,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.0,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 134,
+    "madds_reduce_dense": 134,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 268,
+    "s_setup": 0.008,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.0,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 134,
+    "peak_device_bytes": 4390912
+   },
+   "part_columns": [
+    134,
+    64
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0041,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 198,
+     "update": 0,
+     "rref": 396
+    },
+    "total": 594,
+    "dense_equivalent": 594,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.0,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 198,
+    "madds_reduce_dense": 198,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 396,
+    "s_setup": 0.001,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.0,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 198,
+    "peak_device_bytes": 6488064
+   },
+   "part_columns": [
+    198
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.0,
+   "peak_device_gib": 0.006,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 134,
+     "update": 0,
+     "rref": 268
+    },
+    "total": 402,
+    "dense_equivalent": 402,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.0,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 134,
+    "madds_reduce_dense": 134,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 268,
+    "s_setup": 0.004,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.0,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 134,
+    "peak_device_bytes": 4395208
+   },
+   "part_columns": [
+    134,
+    64
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0041,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 198,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 198,
+     "update": 0,
+     "rref": 396
+    },
+    "total": 594,
+    "dense_equivalent": 594,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.0,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 198,
+    "madds_reduce_dense": 198,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 396,
+    "s_setup": 0.001,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.0,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 198,
+    "peak_device_bytes": 10886912
+   },
+   "part_columns": [
+    198
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0101,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.006,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 69006,
+     "update": 11877,
+     "rref": 35568
+    },
+    "total": 116451,
+    "dense_equivalent": 606474,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.001,
+     "rref": 0.004
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 40,
+    "zero_rows": 5,
+    "pivots": 38,
+    "batches": 30,
+    "rounds": 29,
+    "host_cells": 76,
+    "madds_reduce": 69006,
+    "madds_reduce_dense": 427080,
+    "madds_update": 11877,
+    "madds_update_dense": 143826,
+    "madds_rref": 35568,
+    "s_setup": 0.002,
+    "s_products": 0.002,
+    "s_reduce": 0.001,
+    "s_rref": 0.004,
+    "s_update": 0.001,
+    "s_verify": 0.001,
+    "s_closure": 0.008,
+    "peak_cells": 11202,
+    "peak_device_bytes": 16416768
+   },
+   "part_columns": [
+    327,
+    174
+   ],
+   "products_per_pivot": 1.053,
+   "peak_basis_gib": 0.0001,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.01,
+   "peak_device_gib": 0.0153,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.006,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 113226,
+     "update": 20541,
+     "rref": 60120
+    },
+    "total": 193887,
+    "dense_equivalent": 1364724,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.001,
+     "rref": 0.004
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 40,
+    "zero_rows": 5,
+    "pivots": 38,
+    "batches": 30,
+    "rounds": 29,
+    "host_cells": 76,
+    "madds_reduce": 113226,
+    "madds_reduce_dense": 957912,
+    "madds_update": 20541,
+    "madds_update_dense": 346692,
+    "madds_rref": 60120,
+    "s_setup": 0.002,
+    "s_products": 0.002,
+    "s_reduce": 0.001,
+    "s_rref": 0.004,
+    "s_update": 0.001,
+    "s_verify": 0.001,
+    "s_closure": 0.008,
+    "peak_cells": 19038,
+    "peak_device_bytes": 16416768
+   },
+   "part_columns": [
+    501
+   ],
+   "products_per_pivot": 1.053,
+   "peak_basis_gib": 0.0001,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.01,
+   "peak_device_gib": 0.0153,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.006,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 69006,
+     "update": 11877,
+     "rref": 35568
+    },
+    "total": 116451,
+    "dense_equivalent": 606474,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.014,
+     "rref": 0.01
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 40,
+    "zero_rows": 5,
+    "pivots": 38,
+    "batches": 30,
+    "rounds": 29,
+    "host_cells": 76,
+    "madds_reduce": 69006,
+    "madds_reduce_dense": 427080,
+    "madds_update": 11877,
+    "madds_update_dense": 143826,
+    "madds_rref": 35568,
+    "s_setup": 0.002,
+    "s_products": 0.005,
+    "s_reduce": 0.003,
+    "s_rref": 0.01,
+    "s_update": 0.014,
+    "s_verify": 0.005,
+    "s_closure": 0.032,
+    "peak_cells": 11202,
+    "peak_device_bytes": 16518600
+   },
+   "part_columns": [
+    327,
+    174
+   ],
+   "products_per_pivot": 1.053,
+   "peak_basis_gib": 0.0001,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.037,
+   "peak_device_gib": 0.0154,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.006,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 501,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 113226,
+     "update": 20541,
+     "rref": 60120
+    },
+    "total": 193887,
+    "dense_equivalent": 1364724,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.004,
+     "rref": 0.009
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 40,
+    "zero_rows": 5,
+    "pivots": 38,
+    "batches": 30,
+    "rounds": 29,
+    "host_cells": 76,
+    "madds_reduce": 113226,
+    "madds_reduce_dense": 957912,
+    "madds_update": 20541,
+    "madds_update_dense": 346692,
+    "madds_rref": 60120,
+    "s_setup": 0.002,
+    "s_products": 0.004,
+    "s_reduce": 0.003,
+    "s_rref": 0.009,
+    "s_update": 0.004,
+    "s_verify": 0.004,
+    "s_closure": 0.02,
+    "peak_cells": 19038,
+    "peak_device_bytes": 33038000
+   },
+   "part_columns": [
+    501
+   ],
+   "products_per_pivot": 1.053,
+   "peak_basis_gib": 0.0001,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.025,
+   "peak_device_gib": 0.0308,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 32773913,
+     "update": 1214618,
+     "rref": 4770458
+    },
+    "total": 38758989,
+    "dense_equivalent": 135018228,
+    "seconds": {
+     "reduce": 0.006,
+     "update": 0.009,
+     "rref": 0.019
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 780,
+    "zero_rows": 358,
+    "pivots": 357,
+    "batches": 59,
+    "rounds": 81,
+    "host_cells": 5747,
+    "madds_reduce": 32773913,
+    "madds_reduce_dense": 112144362,
+    "madds_update": 1214618,
+    "madds_update_dense": 18103408,
+    "madds_rref": 4770458,
+    "s_setup": 0.004,
+    "s_products": 0.006,
+    "s_reduce": 0.006,
+    "s_rref": 0.019,
+    "s_update": 0.009,
+    "s_verify": 0.008,
+    "s_closure": 0.041,
+    "peak_cells": 139763,
+    "peak_device_bytes": 33521664
+   },
+   "part_columns": [
+    655,
+    368
+   ],
+   "products_per_pivot": 2.185,
+   "peak_basis_gib": 0.001,
+   "part_rank": [
+    263,
+    94
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.05,
+   "peak_device_gib": 0.0312,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 75022868,
+     "update": 3292398,
+     "rref": 9448182
+    },
+    "total": 87763448,
+    "dense_equivalent": 388263340,
+    "seconds": {
+     "reduce": 0.011,
+     "update": 0.01,
+     "rref": 0.021
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 780,
+    "zero_rows": 349,
+    "pivots": 357,
+    "batches": 49,
+    "rounds": 67,
+    "host_cells": 8023,
+    "madds_reduce": 75022868,
+    "madds_reduce_dense": 327445569,
+    "madds_update": 3292398,
+    "madds_update_dense": 51369589,
+    "madds_rref": 9448182,
+    "s_setup": 0.003,
+    "s_products": 0.008,
+    "s_reduce": 0.011,
+    "s_rref": 0.021,
+    "s_update": 0.01,
+    "s_verify": 0.011,
+    "s_closure": 0.049,
+    "peak_cells": 268231,
+    "peak_device_bytes": 33521664
+   },
+   "part_columns": [
+    1023
+   ],
+   "products_per_pivot": 2.185,
+   "peak_basis_gib": 0.002,
+   "part_rank": [
+    357
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.061,
+   "peak_device_gib": 0.0312,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 32773913,
+     "update": 1214618,
+     "rref": 4770458
+    },
+    "total": 38758989,
+    "dense_equivalent": 135018228,
+    "seconds": {
+     "reduce": 0.015,
+     "update": 0.028,
+     "rref": 0.037
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 780,
+    "zero_rows": 358,
+    "pivots": 357,
+    "batches": 59,
+    "rounds": 81,
+    "host_cells": 5747,
+    "madds_reduce": 32773913,
+    "madds_reduce_dense": 112144362,
+    "madds_update": 1214618,
+    "madds_update_dense": 18103408,
+    "madds_rref": 4770458,
+    "s_setup": 0.007,
+    "s_products": 0.015,
+    "s_reduce": 0.015,
+    "s_rref": 0.037,
+    "s_update": 0.028,
+    "s_verify": 0.016,
+    "s_closure": 0.09,
+    "peak_cells": 139763,
+    "peak_device_bytes": 52823696
+   },
+   "part_columns": [
+    655,
+    368
+   ],
+   "products_per_pivot": 2.185,
+   "peak_basis_gib": 0.001,
+   "part_rank": [
+    263,
+    94
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.115,
+   "peak_device_gib": 0.0492,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.17,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 75022868,
+     "update": 3292398,
+     "rref": 9448182
+    },
+    "total": 87763448,
+    "dense_equivalent": 388263340,
+    "seconds": {
+     "reduce": 0.018,
+     "update": 0.024,
+     "rref": 0.038
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 780,
+    "zero_rows": 349,
+    "pivots": 357,
+    "batches": 49,
+    "rounds": 67,
+    "host_cells": 8023,
+    "madds_reduce": 75022868,
+    "madds_reduce_dense": 327445569,
+    "madds_update": 3292398,
+    "madds_update_dense": 51369589,
+    "madds_rref": 9448182,
+    "s_setup": 0.005,
+    "s_products": 0.014,
+    "s_reduce": 0.018,
+    "s_rref": 0.038,
+    "s_update": 0.024,
+    "s_verify": 0.013,
+    "s_closure": 0.094,
+    "peak_cells": 268231,
+    "peak_device_bytes": 87388600
+   },
+   "part_columns": [
+    1023
+   ],
+   "products_per_pivot": 2.185,
+   "peak_basis_gib": 0.002,
+   "part_rank": [
+    357
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.109,
+   "peak_device_gib": 0.0814,
+   "loadavg": 2.0673828125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.385,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 341235858,
+     "update": 127864774,
+     "rref": 100480118
+    },
+    "total": 569580750,
+    "dense_equivalent": 1393903495,
+    "seconds": {
+     "reduce": 0.031,
+     "update": 0.054,
+     "rref": 0.105
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 4805,
+    "zero_rows": 2154,
+    "pivots": 1763,
+    "batches": 63,
+    "rounds": 164,
+    "host_cells": 95136,
+    "madds_reduce": 341235858,
+    "madds_reduce_dense": 979355847,
+    "madds_update": 127864774,
+    "madds_update_dense": 314067530,
+    "madds_rref": 100480118,
+    "s_setup": 0.007,
+    "s_products": 0.038,
+    "s_reduce": 0.031,
+    "s_rref": 0.105,
+    "s_update": 0.054,
+    "s_verify": 0.0,
+    "s_closure": 0.225,
+    "peak_cells": 492870,
+    "peak_device_bytes": 58720256
+   },
+   "part_columns": [
+    1136,
+    656
+   ],
+   "products_per_pivot": 2.725,
+   "peak_basis_gib": 0.0037,
+   "part_rank": [
+    1126,
+    637
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.23,
+   "peak_device_gib": 0.0547,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.385,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 986380510,
+     "update": 426766063,
+     "rref": 243613336
+    },
+    "total": 1656759909,
+    "dense_equivalent": 4517302134,
+    "seconds": {
+     "reduce": 0.061,
+     "update": 0.091,
+     "rref": 0.138
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 5353,
+    "zero_rows": 1931,
+    "pivots": 1782,
+    "batches": 33,
+    "rounds": 133,
+    "host_cells": 149961,
+    "madds_reduce": 986380510,
+    "madds_reduce_dense": 3246441881,
+    "madds_update": 426766063,
+    "madds_update_dense": 1027246917,
+    "madds_rref": 243613336,
+    "s_setup": 0.006,
+    "s_products": 0.086,
+    "s_reduce": 0.061,
+    "s_rref": 0.138,
+    "s_update": 0.091,
+    "s_verify": 0.0,
+    "s_closure": 0.378,
+    "peak_cells": 943028,
+    "peak_device_bytes": 58720256
+   },
+   "part_columns": [
+    1792
+   ],
+   "products_per_pivot": 3.004,
+   "peak_basis_gib": 0.007,
+   "part_rank": [
+    1782
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.379,
+   "peak_device_gib": 0.0547,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.385,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 341235858,
+     "update": 127864774,
+     "rref": 100480118
+    },
+    "total": 569580750,
+    "dense_equivalent": 1393903495,
+    "seconds": {
+     "reduce": 0.043,
+     "update": 0.076,
+     "rref": 0.171
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 4805,
+    "zero_rows": 2154,
+    "pivots": 1763,
+    "batches": 63,
+    "rounds": 164,
+    "host_cells": 95136,
+    "madds_reduce": 341235858,
+    "madds_reduce_dense": 979355847,
+    "madds_update": 127864774,
+    "madds_update_dense": 314067530,
+    "madds_rref": 100480118,
+    "s_setup": 0.008,
+    "s_products": 0.053,
+    "s_reduce": 0.043,
+    "s_rref": 0.171,
+    "s_update": 0.076,
+    "s_verify": 0.0,
+    "s_closure": 0.343,
+    "peak_cells": 492870,
+    "peak_device_bytes": 138874968
+   },
+   "part_columns": [
+    1136,
+    656
+   ],
+   "products_per_pivot": 2.725,
+   "peak_basis_gib": 0.0037,
+   "part_rank": [
+    1126,
+    637
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.348,
+   "peak_device_gib": 0.1293,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 3.385,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 1792,
+    "dim_V_D": 1792,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023,
+     1792
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 986380510,
+     "update": 426766063,
+     "rref": 243613336
+    },
+    "total": 1656759909,
+    "dense_equivalent": 4517302134,
+    "seconds": {
+     "reduce": 0.078,
+     "update": 0.101,
+     "rref": 0.227
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 5353,
+    "zero_rows": 1931,
+    "pivots": 1782,
+    "batches": 33,
+    "rounds": 133,
+    "host_cells": 149961,
+    "madds_reduce": 986380510,
+    "madds_reduce_dense": 3246441881,
+    "madds_update": 426766063,
+    "madds_update_dense": 1027246917,
+    "madds_rref": 243613336,
+    "s_setup": 0.01,
+    "s_products": 0.102,
+    "s_reduce": 0.078,
+    "s_rref": 0.227,
+    "s_update": 0.101,
+    "s_verify": 0.0,
+    "s_closure": 0.51,
+    "peak_cells": 943028,
+    "peak_device_bytes": 162339792
+   },
+   "part_columns": [
+    1792
+   ],
+   "products_per_pivot": 3.004,
+   "peak_basis_gib": 0.007,
+   "part_rank": [
+    1782
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.513,
+   "peak_device_gib": 0.1512,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 300,
+     "update": 0,
+     "rref": 600
+    },
+    "total": 900,
+    "dense_equivalent": 900,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 300,
+    "madds_reduce_dense": 300,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 600,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 300,
+    "peak_device_bytes": 9830400
+   },
+   "part_columns": [
+    300,
+    120
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0092,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 420,
+     "update": 0,
+     "rref": 840
+    },
+    "total": 1260,
+    "dense_equivalent": 1260,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 420,
+    "madds_reduce_dense": 420,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 840,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 420,
+    "peak_device_bytes": 13762560
+   },
+   "part_columns": [
+    420
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.002,
+   "peak_device_gib": 0.0128,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 300,
+     "update": 0,
+     "rref": 600
+    },
+    "total": 900,
+    "dense_equivalent": 900,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 300,
+    "madds_reduce_dense": 300,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 600,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 300,
+    "peak_device_bytes": 57239008
+   },
+   "part_columns": [
+    300,
+    120
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.002,
+   "peak_device_gib": 0.0533,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.001,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 420,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 420,
+     "update": 0,
+     "rref": 840
+    },
+    "total": 1260,
+    "dense_equivalent": 1260,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 420,
+    "madds_reduce_dense": 420,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 840,
+    "s_setup": 0.001,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 420,
+    "peak_device_bytes": 71008776
+   },
+   "part_columns": [
+    420
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.002,
+   "peak_device_gib": 0.0661,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 248266,
+     "update": 44671,
+     "rref": 147314
+    },
+    "total": 440251,
+    "dense_equivalent": 3248850,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.007,
+     "rref": 0.005
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 52,
+    "zero_rows": 5,
+    "pivots": 51,
+    "batches": 39,
+    "rounds": 38,
+    "host_cells": 113,
+    "madds_reduce": 248266,
+    "madds_reduce_dense": 2258092,
+    "madds_update": 44671,
+    "madds_update_dense": 843444,
+    "madds_rref": 147314,
+    "s_setup": 0.007,
+    "s_products": 0.002,
+    "s_reduce": 0.001,
+    "s_rref": 0.005,
+    "s_update": 0.007,
+    "s_verify": 0.002,
+    "s_closure": 0.013,
+    "peak_cells": 43795,
+    "peak_device_bytes": 45056000
+   },
+   "part_columns": [
+    937,
+    438
+   ],
+   "products_per_pivot": 1.02,
+   "peak_basis_gib": 0.0003,
+   "part_rank": [
+    43,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.019,
+   "peak_device_gib": 0.042,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 387750,
+     "update": 72875,
+     "rref": 233750
+    },
+    "total": 694375,
+    "dense_equivalent": 6402000,
+    "seconds": {
+     "reduce": 0.002,
+     "update": 0.002,
+     "rref": 0.006
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 52,
+    "zero_rows": 5,
+    "pivots": 51,
+    "batches": 39,
+    "rounds": 38,
+    "host_cells": 113,
+    "madds_reduce": 387750,
+    "madds_reduce_dense": 4438500,
+    "madds_update": 72875,
+    "madds_update_dense": 1729750,
+    "madds_rref": 233750,
+    "s_setup": 0.004,
+    "s_products": 0.003,
+    "s_reduce": 0.002,
+    "s_rref": 0.006,
+    "s_update": 0.002,
+    "s_verify": 0.002,
+    "s_closure": 0.012,
+    "peak_cells": 70125,
+    "peak_device_bytes": 45056000
+   },
+   "part_columns": [
+    1375
+   ],
+   "products_per_pivot": 1.02,
+   "peak_basis_gib": 0.0005,
+   "part_rank": [
+    51
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.015,
+   "peak_device_gib": 0.042,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 248266,
+     "update": 44671,
+     "rref": 147314
+    },
+    "total": 440251,
+    "dense_equivalent": 3248850,
+    "seconds": {
+     "reduce": 0.004,
+     "update": 0.01,
+     "rref": 0.013
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 52,
+    "zero_rows": 5,
+    "pivots": 51,
+    "batches": 39,
+    "rounds": 38,
+    "host_cells": 113,
+    "madds_reduce": 248266,
+    "madds_reduce_dense": 2258092,
+    "madds_update": 44671,
+    "madds_update_dense": 843444,
+    "madds_rref": 147314,
+    "s_setup": 0.005,
+    "s_products": 0.007,
+    "s_reduce": 0.004,
+    "s_rref": 0.013,
+    "s_update": 0.01,
+    "s_verify": 0.005,
+    "s_closure": 0.032,
+    "peak_cells": 43795,
+    "peak_device_bytes": 92786848
+   },
+   "part_columns": [
+    937,
+    438
+   ],
+   "products_per_pivot": 1.02,
+   "peak_basis_gib": 0.0003,
+   "part_rank": [
+    43,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.041,
+   "peak_device_gib": 0.0864,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1375,
+    "dim_V_D": 51,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     51
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 387750,
+     "update": 72875,
+     "rref": 233750
+    },
+    "total": 694375,
+    "dense_equivalent": 6402000,
+    "seconds": {
+     "reduce": 0.005,
+     "update": 0.005,
+     "rref": 0.013
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 52,
+    "zero_rows": 5,
+    "pivots": 51,
+    "batches": 39,
+    "rounds": 38,
+    "host_cells": 113,
+    "madds_reduce": 387750,
+    "madds_reduce_dense": 4438500,
+    "madds_update": 72875,
+    "madds_update_dense": 1729750,
+    "madds_rref": 233750,
+    "s_setup": 0.004,
+    "s_products": 0.006,
+    "s_reduce": 0.005,
+    "s_rref": 0.013,
+    "s_update": 0.005,
+    "s_verify": 0.006,
+    "s_closure": 0.028,
+    "peak_cells": 70125,
+    "peak_device_bytes": 138185872
+   },
+   "part_columns": [
+    1375
+   ],
+   "products_per_pivot": 1.02,
+   "peak_basis_gib": 0.0005,
+   "part_rank": [
+    51
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.035,
+   "peak_device_gib": 0.1287,
+   "loadavg": 2.22216796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.967,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 352133775,
+     "update": 10991321,
+     "rref": 52753796
+    },
+    "total": 415878892,
+    "dense_equivalent": 2132776184,
+    "seconds": {
+     "reduce": 0.033,
+     "update": 0.033,
+     "rref": 0.049
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 1339,
+    "zero_rows": 584,
+    "pivots": 637,
+    "batches": 76,
+    "rounds": 102,
+    "host_cells": 17514,
+    "madds_reduce": 352133775,
+    "madds_reduce_dense": 1809116439,
+    "madds_update": 10991321,
+    "madds_update_dense": 270905949,
+    "madds_rref": 52753796,
+    "s_setup": 0.016,
+    "s_products": 0.028,
+    "s_reduce": 0.033,
+    "s_rref": 0.049,
+    "s_update": 0.033,
+    "s_verify": 0.055,
+    "s_closure": 0.144,
+    "peak_cells": 1204507,
+    "peak_device_bytes": 117899264
+   },
+   "part_columns": [
+    2380,
+    1218
+   ],
+   "products_per_pivot": 2.102,
+   "peak_basis_gib": 0.009,
+   "part_rank": [
+    499,
+    138
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.201,
+   "peak_device_gib": 0.1098,
+   "loadavg": 2.36474609375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.967,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 709870382,
+     "update": 25191858,
+     "rref": 86994152
+    },
+    "total": 822056392,
+    "dense_equivalent": 5170786478,
+    "seconds": {
+     "reduce": 0.036,
+     "update": 0.027,
+     "rref": 0.042
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 1339,
+    "zero_rows": 575,
+    "pivots": 637,
+    "batches": 63,
+    "rounds": 86,
+    "host_cells": 22505,
+    "madds_reduce": 709870382,
+    "madds_reduce_dense": 4420106097,
+    "madds_update": 25191858,
+    "madds_update_dense": 663686229,
+    "madds_rref": 86994152,
+    "s_setup": 0.012,
+    "s_products": 0.03,
+    "s_reduce": 0.036,
+    "s_rref": 0.042,
+    "s_update": 0.027,
+    "s_verify": 0.091,
+    "s_closure": 0.137,
+    "peak_cells": 1998269,
+    "peak_device_bytes": 117899264
+   },
+   "part_columns": [
+    3598
+   ],
+   "products_per_pivot": 2.102,
+   "peak_basis_gib": 0.0149,
+   "part_rank": [
+    637
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.229,
+   "peak_device_gib": 0.1098,
+   "loadavg": 2.36474609375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.967,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 352133775,
+     "update": 10991321,
+     "rref": 52753796
+    },
+    "total": 415878892,
+    "dense_equivalent": 2132776184,
+    "seconds": {
+     "reduce": 0.038,
+     "update": 0.027,
+     "rref": 0.059
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 1339,
+    "zero_rows": 584,
+    "pivots": 637,
+    "batches": 76,
+    "rounds": 102,
+    "host_cells": 17514,
+    "madds_reduce": 352133775,
+    "madds_reduce_dense": 1809116439,
+    "madds_update": 10991321,
+    "madds_update_dense": 270905949,
+    "madds_rref": 52753796,
+    "s_setup": 0.014,
+    "s_products": 0.032,
+    "s_reduce": 0.038,
+    "s_rref": 0.059,
+    "s_update": 0.027,
+    "s_verify": 0.059,
+    "s_closure": 0.157,
+    "peak_cells": 1204507,
+    "peak_device_bytes": 194293656
+   },
+   "part_columns": [
+    2380,
+    1218
+   ],
+   "products_per_pivot": 2.102,
+   "peak_basis_gib": 0.009,
+   "part_rank": [
+    499,
+    138
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.218,
+   "peak_device_gib": 0.181,
+   "loadavg": 2.36474609375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.967,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3598,
+    "dim_V_D": 637,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     103,
+     637
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 709870382,
+     "update": 25191858,
+     "rref": 86994152
+    },
+    "total": 822056392,
+    "dense_equivalent": 5170786478,
+    "seconds": {
+     "reduce": 0.047,
+     "update": 0.03,
+     "rref": 0.064
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 1339,
+    "zero_rows": 575,
+    "pivots": 637,
+    "batches": 63,
+    "rounds": 86,
+    "host_cells": 22505,
+    "madds_reduce": 709870382,
+    "madds_reduce_dense": 4420106097,
+    "madds_update": 25191858,
+    "madds_update_dense": 663686229,
+    "madds_rref": 86994152,
+    "s_setup": 0.012,
+    "s_products": 0.042,
+    "s_reduce": 0.047,
+    "s_rref": 0.064,
+    "s_update": 0.03,
+    "s_verify": 0.097,
+    "s_closure": 0.184,
+    "peak_cells": 1998269,
+    "peak_device_bytes": 343569840
+   },
+   "part_columns": [
+    3598
+   ],
+   "products_per_pivot": 2.102,
+   "peak_basis_gib": 0.0149,
+   "part_rank": [
+    637
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.283,
+   "peak_device_gib": 0.32,
+   "loadavg": 2.36474609375
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 104.303,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 12624916324,
+     "update": 8838719294,
+     "rref": 3047221486
+    },
+    "total": 24510857104,
+    "dense_equivalent": 99201573656,
+    "seconds": {
+     "reduce": 0.695,
+     "update": 1.464,
+     "rref": 0.931
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 17037,
+    "zero_rows": 6592,
+    "pivots": 7423,
+    "batches": 193,
+    "rounds": 448,
+    "host_cells": 940072,
+    "madds_reduce": 12624916324,
+    "madds_reduce_dense": 67981540304,
+    "madds_update": 8838719294,
+    "madds_update_dense": 28172811866,
+    "madds_rref": 3047221486,
+    "s_setup": 0.038,
+    "s_products": 0.929,
+    "s_reduce": 0.695,
+    "s_rref": 0.931,
+    "s_update": 1.464,
+    "s_verify": 0.0,
+    "s_closure": 4.054,
+    "peak_cells": 9649786,
+    "peak_device_bytes": 260079616
+   },
+   "part_columns": [
+    5153,
+    2784
+   ],
+   "products_per_pivot": 2.295,
+   "peak_basis_gib": 0.0719,
+   "part_rank": [
+    5153,
+    2270
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 4.056,
+   "peak_device_gib": 0.2422,
+   "loadavg": 1.45556640625
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 104.303,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 32959066446,
+     "update": 28139804398,
+     "rref": 6397803328
+    },
+    "total": 67496674172,
+    "dense_equivalent": 297871081442,
+    "seconds": {
+     "reduce": 1.732,
+     "update": 5.303,
+     "rref": 1.388
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 16334,
+    "zero_rows": 6142,
+    "pivots": 6909,
+    "batches": 98,
+    "rounds": 391,
+    "host_cells": 1048369,
+    "madds_reduce": 32959066446,
+    "madds_reduce_dense": 207214646072,
+    "madds_update": 28139804398,
+    "madds_update_dense": 84258632042,
+    "madds_rref": 6397803328,
+    "s_setup": 0.034,
+    "s_products": 1.61,
+    "s_reduce": 1.732,
+    "s_rref": 1.388,
+    "s_update": 5.303,
+    "s_verify": 0.0,
+    "s_closure": 10.105,
+    "peak_cells": 18015470,
+    "peak_device_bytes": 286916608
+   },
+   "part_columns": [
+    7937
+   ],
+   "products_per_pivot": 2.364,
+   "peak_basis_gib": 0.1342,
+   "part_rank": [
+    6909
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 10.109,
+   "peak_device_gib": 0.2672,
+   "loadavg": 1.84716796875
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 104.303,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 12624916324,
+     "update": 8838719294,
+     "rref": 3047221486
+    },
+    "total": 24510857104,
+    "dense_equivalent": 99201573656,
+    "seconds": {
+     "reduce": 0.694,
+     "update": 1.413,
+     "rref": 1.061
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 17037,
+    "zero_rows": 6592,
+    "pivots": 7423,
+    "batches": 193,
+    "rounds": 448,
+    "host_cells": 940072,
+    "madds_reduce": 12624916324,
+    "madds_reduce_dense": 67981540304,
+    "madds_update": 8838719294,
+    "madds_update_dense": 28172811866,
+    "madds_rref": 3047221486,
+    "s_setup": 0.068,
+    "s_products": 0.94,
+    "s_reduce": 0.694,
+    "s_rref": 1.061,
+    "s_update": 1.413,
+    "s_verify": 0.0,
+    "s_closure": 4.142,
+    "peak_cells": 9649786,
+    "peak_device_bytes": 552916904
+   },
+   "part_columns": [
+    5153,
+    2784
+   ],
+   "products_per_pivot": 2.295,
+   "peak_basis_gib": 0.0719,
+   "part_rank": [
+    5153,
+    2270
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 4.146,
+   "peak_device_gib": 0.5149,
+   "loadavg": 2.02001953125
+  },
+  {
+   "mode": "live",
+   "m": 5,
+   "k": 2,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "reference_seconds": 104.303,
+   "reference_verified": null,
+   "candidate": {
+    "monomials_le_D": 7937,
+    "dim_V_D": 7937,
+    "low_profile": [
+     1,
+     14,
+     95,
+     420,
+     1375,
+     3598,
+     7937
+    ],
+    "contains_one": true
+   },
+   "verified_closed": null,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 32959066446,
+     "update": 28139804398,
+     "rref": 6397803328
+    },
+    "total": 67496674172,
+    "dense_equivalent": 297871081442,
+    "seconds": {
+     "reduce": 1.721,
+     "update": 5.103,
+     "rref": 1.507
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 16334,
+    "zero_rows": 6142,
+    "pivots": 6909,
+    "batches": 98,
+    "rounds": 391,
+    "host_cells": 1048369,
+    "madds_reduce": 32959066446,
+    "madds_reduce_dense": 207214646072,
+    "madds_update": 28139804398,
+    "madds_update_dense": 84258632042,
+    "madds_rref": 6397803328,
+    "s_setup": 0.057,
+    "s_products": 1.599,
+    "s_reduce": 1.721,
+    "s_rref": 1.507,
+    "s_update": 5.103,
+    "s_verify": 0.0,
+    "s_closure": 10.005,
+    "peak_cells": 18015470,
+    "peak_device_bytes": 714905072
+   },
+   "part_columns": [
+    7937
+   ],
+   "products_per_pivot": 2.364,
+   "peak_basis_gib": 0.1342,
+   "part_rank": [
+    6909
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 10.007,
+   "peak_device_gib": 0.6658,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 319,
+     "update": 0,
+     "rref": 638
+    },
+    "total": 957,
+    "dense_equivalent": 957,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 319,
+    "madds_reduce_dense": 319,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 638,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 319,
+    "peak_device_bytes": 10452992
+   },
+   "part_columns": [
+    319,
+    181
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.002,
+   "peak_device_gib": 0.0097,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 500,
+     "update": 0,
+     "rref": 1000
+    },
+    "total": 1500,
+    "dense_equivalent": 1500,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.002,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 500,
+    "madds_reduce_dense": 500,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1000,
+    "s_setup": 0.001,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.002,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 500,
+    "peak_device_bytes": 16384000
+   },
+   "part_columns": [
+    500
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.002,
+   "peak_device_gib": 0.0153,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 319,
+     "update": 0,
+     "rref": 638
+    },
+    "total": 957,
+    "dense_equivalent": 957,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 319,
+    "madds_reduce_dense": 319,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 638,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 319,
+    "peak_device_bytes": 202058520
+   },
+   "part_columns": [
+    319,
+    181
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.002,
+   "peak_device_gib": 0.1882,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 500,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 500,
+     "update": 0,
+     "rref": 1000
+    },
+    "total": 1500,
+    "dense_equivalent": 1500,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.002,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 500,
+    "madds_reduce_dense": 500,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1000,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.002,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 500,
+    "peak_device_bytes": 218452320
+   },
+   "part_columns": [
+    500
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.003,
+   "peak_device_gib": 0.2034,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.012,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 94911,
+     "update": 2046,
+     "rref": 81612
+    },
+    "total": 178569,
+    "dense_equivalent": 1126149,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.006,
+     "rref": 0.004
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 28,
+    "zero_rows": 1,
+    "pivots": 30,
+    "batches": 25,
+    "rounds": 26,
+    "host_cells": 80,
+    "madds_reduce": 94911,
+    "madds_reduce_dense": 758382,
+    "madds_update": 2046,
+    "madds_update_dense": 286155,
+    "madds_rref": 81612,
+    "s_setup": 0.007,
+    "s_products": 0.002,
+    "s_reduce": 0.001,
+    "s_rref": 0.004,
+    "s_update": 0.006,
+    "s_verify": 0.002,
+    "s_closure": 0.009,
+    "peak_cells": 28530,
+    "peak_device_bytes": 55246848
+   },
+   "part_columns": [
+    1023,
+    663
+   ],
+   "products_per_pivot": 0.933,
+   "peak_basis_gib": 0.0002,
+   "part_rank": [
+    24,
+    6
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.015,
+   "peak_device_gib": 0.0515,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.012,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 163542,
+     "update": 3372,
+     "rref": 141624
+    },
+    "total": 308538,
+    "dense_equivalent": 2682426,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.001,
+     "rref": 0.004
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 28,
+    "zero_rows": 1,
+    "pivots": 30,
+    "batches": 25,
+    "rounds": 26,
+    "host_cells": 80,
+    "madds_reduce": 163542,
+    "madds_reduce_dense": 1817508,
+    "madds_update": 3372,
+    "madds_update_dense": 723294,
+    "madds_rref": 141624,
+    "s_setup": 0.006,
+    "s_products": 0.002,
+    "s_reduce": 0.001,
+    "s_rref": 0.004,
+    "s_update": 0.001,
+    "s_verify": 0.002,
+    "s_closure": 0.008,
+    "peak_cells": 50580,
+    "peak_device_bytes": 55246848
+   },
+   "part_columns": [
+    1686
+   ],
+   "products_per_pivot": 0.933,
+   "peak_basis_gib": 0.0004,
+   "part_rank": [
+    30
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.011,
+   "peak_device_gib": 0.0515,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.012,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 94911,
+     "update": 2046,
+     "rref": 81612
+    },
+    "total": 178569,
+    "dense_equivalent": 1126149,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.009,
+     "rref": 0.011
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 28,
+    "zero_rows": 1,
+    "pivots": 30,
+    "batches": 25,
+    "rounds": 26,
+    "host_cells": 80,
+    "madds_reduce": 94911,
+    "madds_reduce_dense": 758382,
+    "madds_update": 2046,
+    "madds_update_dense": 286155,
+    "madds_rref": 81612,
+    "s_setup": 0.007,
+    "s_products": 0.005,
+    "s_reduce": 0.003,
+    "s_rref": 0.011,
+    "s_update": 0.009,
+    "s_verify": 0.006,
+    "s_closure": 0.022,
+    "peak_cells": 28530,
+    "peak_device_bytes": 263620510
+   },
+   "part_columns": [
+    1023,
+    663
+   ],
+   "products_per_pivot": 0.933,
+   "peak_basis_gib": 0.0002,
+   "part_rank": [
+    24,
+    6
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.035,
+   "peak_device_gib": 0.2455,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.012,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1686,
+    "dim_V_D": 30,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     30
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 163542,
+     "update": 3372,
+     "rref": 141624
+    },
+    "total": 308538,
+    "dense_equivalent": 2682426,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.007,
+     "rref": 0.013
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 28,
+    "zero_rows": 1,
+    "pivots": 30,
+    "batches": 25,
+    "rounds": 26,
+    "host_cells": 80,
+    "madds_reduce": 163542,
+    "madds_reduce_dense": 1817508,
+    "madds_update": 3372,
+    "madds_update_dense": 723294,
+    "madds_rref": 141624,
+    "s_setup": 0.005,
+    "s_products": 0.004,
+    "s_reduce": 0.003,
+    "s_rref": 0.013,
+    "s_update": 0.007,
+    "s_verify": 0.007,
+    "s_closure": 0.017,
+    "peak_cells": 50580,
+    "peak_device_bytes": 263706998
+   },
+   "part_columns": [
+    1686
+   ],
+   "products_per_pivot": 0.933,
+   "peak_basis_gib": 0.0004,
+   "part_rank": [
+    30
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.035,
+   "peak_device_gib": 0.2456,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.662,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 137052048,
+     "update": 6056412,
+     "rref": 23531820
+    },
+    "total": 166640280,
+    "dense_equivalent": 916583970,
+    "seconds": {
+     "reduce": 0.024,
+     "update": 0.01,
+     "rref": 0.05
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 840,
+    "zero_rows": 314,
+    "pivots": 424,
+    "batches": 72,
+    "rounds": 86,
+    "host_cells": 12730,
+    "madds_reduce": 137052048,
+    "madds_reduce_dense": 778879089,
+    "madds_update": 6056412,
+    "madds_update_dense": 114173061,
+    "madds_rref": 23531820,
+    "s_setup": 0.019,
+    "s_products": 0.023,
+    "s_reduce": 0.024,
+    "s_rref": 0.05,
+    "s_update": 0.01,
+    "s_verify": 0.034,
+    "s_closure": 0.108,
+    "peak_cells": 995784,
+    "peak_device_bytes": 146079744
+   },
+   "part_columns": [
+    2625,
+    1833
+   ],
+   "products_per_pivot": 1.981,
+   "peak_basis_gib": 0.0074,
+   "part_rank": [
+    276,
+    148
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.144,
+   "peak_device_gib": 0.136,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.662,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 376589550,
+     "update": 16770996,
+     "rref": 72255264
+    },
+    "total": 465615810,
+    "dense_equivalent": 3071954304,
+    "seconds": {
+     "reduce": 0.028,
+     "update": 0.01,
+     "rref": 0.039
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 840,
+    "zero_rows": 307,
+    "pivots": 424,
+    "batches": 42,
+    "rounds": 61,
+    "host_cells": 22825,
+    "madds_reduce": 376589550,
+    "madds_reduce_dense": 2617042152,
+    "madds_update": 16770996,
+    "madds_update_dense": 382656888,
+    "madds_rref": 72255264,
+    "s_setup": 0.015,
+    "s_products": 0.024,
+    "s_reduce": 0.028,
+    "s_rref": 0.039,
+    "s_update": 0.01,
+    "s_verify": 0.055,
+    "s_closure": 0.102,
+    "peak_cells": 1890192,
+    "peak_device_bytes": 146079744
+   },
+   "part_columns": [
+    4458
+   ],
+   "products_per_pivot": 1.981,
+   "peak_basis_gib": 0.0141,
+   "part_rank": [
+    424
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.158,
+   "peak_device_gib": 0.136,
+   "loadavg": 2.32470703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.662,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 137052048,
+     "update": 6056412,
+     "rref": 23531820
+    },
+    "total": 166640280,
+    "dense_equivalent": 916583970,
+    "seconds": {
+     "reduce": 0.032,
+     "update": 0.013,
+     "rref": 0.051
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 840,
+    "zero_rows": 314,
+    "pivots": 424,
+    "batches": 72,
+    "rounds": 86,
+    "host_cells": 12730,
+    "madds_reduce": 137052048,
+    "madds_reduce_dense": 778879089,
+    "madds_update": 6056412,
+    "madds_update_dense": 114173061,
+    "madds_rref": 23531820,
+    "s_setup": 0.019,
+    "s_products": 0.029,
+    "s_reduce": 0.032,
+    "s_rref": 0.051,
+    "s_update": 0.013,
+    "s_verify": 0.044,
+    "s_closure": 0.125,
+    "peak_cells": 995784,
+    "peak_device_bytes": 328813232
+   },
+   "part_columns": [
+    2625,
+    1833
+   ],
+   "products_per_pivot": 1.981,
+   "peak_basis_gib": 0.0074,
+   "part_rank": [
+    276,
+    148
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.172,
+   "peak_device_gib": 0.3062,
+   "loadavg": 2.458984375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.662,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4458,
+    "dim_V_D": 424,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     60,
+     424
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 376589550,
+     "update": 16770996,
+     "rref": 72255264
+    },
+    "total": 465615810,
+    "dense_equivalent": 3071954304,
+    "seconds": {
+     "reduce": 0.035,
+     "update": 0.015,
+     "rref": 0.054
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 840,
+    "zero_rows": 307,
+    "pivots": 424,
+    "batches": 42,
+    "rounds": 61,
+    "host_cells": 22825,
+    "madds_reduce": 376589550,
+    "madds_reduce_dense": 2617042152,
+    "madds_update": 16770996,
+    "madds_update_dense": 382656888,
+    "madds_rref": 72255264,
+    "s_setup": 0.015,
+    "s_products": 0.03,
+    "s_reduce": 0.035,
+    "s_rref": 0.054,
+    "s_update": 0.015,
+    "s_verify": 0.066,
+    "s_closure": 0.135,
+    "peak_cells": 1890192,
+    "peak_device_bytes": 479981640
+   },
+   "part_columns": [
+    4458
+   ],
+   "products_per_pivot": 1.981,
+   "peak_basis_gib": 0.0141,
+   "part_rank": [
+    424
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.203,
+   "peak_device_gib": 0.447,
+   "loadavg": 2.458984375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 20.547,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 18140177061,
+     "update": 374022194,
+     "rref": 1247210952
+    },
+    "total": 19761410207,
+    "dense_equivalent": 74326641886,
+    "seconds": {
+     "reduce": 0.37,
+     "update": 0.222,
+     "rref": 0.353
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 7224,
+    "zero_rows": 3986,
+    "pivots": 2517,
+    "batches": 111,
+    "rounds": 210,
+    "host_cells": 215704,
+    "madds_reduce": 18140177061,
+    "madds_reduce_dense": 65606250628,
+    "madds_update": 374022194,
+    "madds_update_dense": 7473180306,
+    "madds_rref": 1247210952,
+    "s_setup": 0.063,
+    "s_products": 0.487,
+    "s_reduce": 0.37,
+    "s_rref": 0.353,
+    "s_update": 0.222,
+    "s_verify": 0.941,
+    "s_closure": 1.45,
+    "peak_cells": 10054945,
+    "peak_device_bytes": 319160320
+   },
+   "part_columns": [
+    5633,
+    4107
+   ],
+   "products_per_pivot": 2.87,
+   "peak_basis_gib": 0.0749,
+   "part_rank": [
+    1607,
+    910
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 2.393,
+   "peak_device_gib": 0.2972,
+   "loadavg": 2.35205078125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 20.547,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 53054194760,
+     "update": 1107914900,
+     "rref": 3647900400
+    },
+    "total": 57810010060,
+    "dense_equivalent": 259439316760,
+    "seconds": {
+     "reduce": 0.79,
+     "update": 0.453,
+     "rref": 0.674
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 7224,
+    "zero_rows": 3931,
+    "pivots": 2517,
+    "batches": 69,
+    "rounds": 175,
+    "host_cells": 246465,
+    "madds_reduce": 53054194760,
+    "madds_reduce_dense": 229615109180,
+    "madds_update": 1107914900,
+    "madds_update_dense": 26176307180,
+    "madds_rref": 3647900400,
+    "s_setup": 0.042,
+    "s_products": 0.902,
+    "s_reduce": 0.79,
+    "s_rref": 0.674,
+    "s_update": 0.453,
+    "s_verify": 2.248,
+    "s_closure": 2.861,
+    "peak_cells": 20134800,
+    "peak_device_bytes": 319160320
+   },
+   "part_columns": [
+    9740
+   ],
+   "products_per_pivot": 2.87,
+   "peak_basis_gib": 0.15,
+   "part_rank": [
+    2517
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 5.112,
+   "peak_device_gib": 0.2972,
+   "loadavg": 2.484375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 20.547,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 18140177061,
+     "update": 374022194,
+     "rref": 1247210952
+    },
+    "total": 19761410207,
+    "dense_equivalent": 74326641886,
+    "seconds": {
+     "reduce": 0.385,
+     "update": 0.196,
+     "rref": 0.395
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 7224,
+    "zero_rows": 3986,
+    "pivots": 2517,
+    "batches": 111,
+    "rounds": 210,
+    "host_cells": 215704,
+    "madds_reduce": 18140177061,
+    "madds_reduce_dense": 65606250628,
+    "madds_update": 374022194,
+    "madds_update_dense": 7473180306,
+    "madds_rref": 1247210952,
+    "s_setup": 0.057,
+    "s_products": 0.436,
+    "s_reduce": 0.385,
+    "s_rref": 0.395,
+    "s_update": 0.196,
+    "s_verify": 0.93,
+    "s_closure": 1.431,
+    "peak_cells": 10054945,
+    "peak_device_bytes": 528410728
+   },
+   "part_columns": [
+    5633,
+    4107
+   ],
+   "products_per_pivot": 2.87,
+   "peak_basis_gib": 0.0749,
+   "part_rank": [
+    1607,
+    910
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 2.364,
+   "peak_device_gib": 0.4921,
+   "loadavg": 2.60595703125
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 3,
+   "p": 7681,
+   "D": 6,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 20.547,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9740,
+    "dim_V_D": 2517,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     65,
+     516,
+     2517
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 53054194760,
+     "update": 1107914900,
+     "rref": 3647900400
+    },
+    "total": 57810010060,
+    "dense_equivalent": 259439316760,
+    "seconds": {
+     "reduce": 0.775,
+     "update": 0.451,
+     "rref": 0.724
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 7224,
+    "zero_rows": 3931,
+    "pivots": 2517,
+    "batches": 69,
+    "rounds": 175,
+    "host_cells": 246465,
+    "madds_reduce": 53054194760,
+    "madds_reduce_dense": 229615109180,
+    "madds_update": 1107914900,
+    "madds_update_dense": 26176307180,
+    "madds_rref": 3647900400,
+    "s_setup": 0.042,
+    "s_products": 0.922,
+    "s_reduce": 0.775,
+    "s_rref": 0.724,
+    "s_update": 0.451,
+    "s_verify": 2.411,
+    "s_closure": 2.913,
+    "peak_cells": 20134800,
+    "peak_device_bytes": 989395800
+   },
+   "part_columns": [
+    9740
+   ],
+   "products_per_pivot": 2.87,
+   "peak_basis_gib": 0.15,
+   "part_rank": [
+    2517
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 5.328,
+   "peak_device_gib": 0.9214,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 399,
+     "update": 0,
+     "rref": 798
+    },
+    "total": 1197,
+    "dense_equivalent": 1197,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.002,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 399,
+    "madds_reduce_dense": 399,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 798,
+    "s_setup": 0.003,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.002,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 399,
+    "peak_device_bytes": 13074432
+   },
+   "part_columns": [
+    399,
+    315
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.002,
+   "peak_device_gib": 0.0122,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 714,
+     "update": 0,
+     "rref": 1428
+    },
+    "total": 2142,
+    "dense_equivalent": 2142,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.0,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 714,
+    "madds_reduce_dense": 714,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1428,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.0,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 714,
+    "peak_device_bytes": 23396352
+   },
+   "part_columns": [
+    714
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.0,
+   "peak_device_gib": 0.0218,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 399,
+     "update": 0,
+     "rref": 798
+    },
+    "total": 1197,
+    "dense_equivalent": 1197,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 399,
+    "madds_reduce_dense": 399,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 798,
+    "s_setup": 0.003,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 399,
+    "peak_device_bytes": 515244648
+   },
+   "part_columns": [
+    399,
+    315
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.002,
+   "peak_device_gib": 0.4799,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 714,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 714,
+     "update": 0,
+     "rref": 1428
+    },
+    "total": 2142,
+    "dense_equivalent": 2142,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.003,
+     "rref": 0.001
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 714,
+    "madds_reduce_dense": 714,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1428,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.001,
+    "s_update": 0.003,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 714,
+    "peak_device_bytes": 525576648
+   },
+   "part_columns": [
+    714
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.004,
+   "peak_device_gib": 0.4895,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 138900,
+     "update": 2860,
+     "rref": 118880
+    },
+    "total": 260640,
+    "dense_equivalent": 1594945,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.001,
+     "rref": 0.004
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 32,
+    "zero_rows": 1,
+    "pivots": 33,
+    "batches": 28,
+    "rounds": 29,
+    "host_cells": 86,
+    "madds_reduce": 138900,
+    "madds_reduce_dense": 1066300,
+    "madds_update": 2860,
+    "madds_update_dense": 409765,
+    "madds_rref": 118880,
+    "s_setup": 0.011,
+    "s_products": 0.002,
+    "s_reduce": 0.001,
+    "s_rref": 0.004,
+    "s_update": 0.001,
+    "s_verify": 0.003,
+    "s_closure": 0.008,
+    "peak_cells": 45140,
+    "peak_device_bytes": 86999040
+   },
+   "part_columns": [
+    1430,
+    1225
+   ],
+   "products_per_pivot": 0.97,
+   "peak_basis_gib": 0.0003,
+   "part_rank": [
+    23,
+    10
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.012,
+   "peak_device_gib": 0.081,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 265500,
+     "update": 5310,
+     "rref": 228330
+    },
+    "total": 499140,
+    "dense_equivalent": 5015295,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.001,
+     "rref": 0.005
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 32,
+    "zero_rows": 1,
+    "pivots": 33,
+    "batches": 28,
+    "rounds": 29,
+    "host_cells": 86,
+    "madds_reduce": 265500,
+    "madds_reduce_dense": 3398400,
+    "madds_update": 5310,
+    "madds_update_dense": 1388565,
+    "madds_rref": 228330,
+    "s_setup": 0.008,
+    "s_products": 0.002,
+    "s_reduce": 0.001,
+    "s_rref": 0.005,
+    "s_update": 0.001,
+    "s_verify": 0.003,
+    "s_closure": 0.009,
+    "peak_cells": 87615,
+    "peak_device_bytes": 86999040
+   },
+   "part_columns": [
+    2655
+   ],
+   "products_per_pivot": 0.97,
+   "peak_basis_gib": 0.0007,
+   "part_rank": [
+    33
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.013,
+   "peak_device_gib": 0.081,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 138900,
+     "update": 2860,
+     "rref": 118880
+    },
+    "total": 260640,
+    "dense_equivalent": 1594945,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.003,
+     "rref": 0.009
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 32,
+    "zero_rows": 1,
+    "pivots": 33,
+    "batches": 28,
+    "rounds": 29,
+    "host_cells": 86,
+    "madds_reduce": 138900,
+    "madds_reduce_dense": 1066300,
+    "madds_update": 2860,
+    "madds_update_dense": 409765,
+    "madds_rref": 118880,
+    "s_setup": 0.01,
+    "s_products": 0.005,
+    "s_reduce": 0.003,
+    "s_rref": 0.009,
+    "s_update": 0.003,
+    "s_verify": 0.008,
+    "s_closure": 0.019,
+    "peak_cells": 45140,
+    "peak_device_bytes": 613259300
+   },
+   "part_columns": [
+    1430,
+    1225
+   ],
+   "products_per_pivot": 0.97,
+   "peak_basis_gib": 0.0003,
+   "part_rank": [
+    23,
+    10
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.028,
+   "peak_device_gib": 0.5711,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.018,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 2655,
+    "dim_V_D": 33,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     33
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 265500,
+     "update": 5310,
+     "rref": 228330
+    },
+    "total": 499140,
+    "dense_equivalent": 5015295,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.003,
+     "rref": 0.01
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 32,
+    "zero_rows": 1,
+    "pivots": 33,
+    "batches": 28,
+    "rounds": 29,
+    "host_cells": 86,
+    "madds_reduce": 265500,
+    "madds_reduce_dense": 3398400,
+    "madds_update": 5310,
+    "madds_update_dense": 1388565,
+    "madds_rref": 228330,
+    "s_setup": 0.008,
+    "s_products": 0.006,
+    "s_reduce": 0.003,
+    "s_rref": 0.01,
+    "s_update": 0.003,
+    "s_verify": 0.008,
+    "s_closure": 0.021,
+    "peak_cells": 87615,
+    "peak_device_bytes": 701060014
+   },
+   "part_columns": [
+    2655
+   ],
+   "products_per_pivot": 0.97,
+   "peak_basis_gib": 0.0007,
+   "part_rank": [
+    33
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.03,
+   "peak_device_gib": 0.6529,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.326,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 195882396,
+     "update": 6477341,
+     "rref": 37403624
+    },
+    "total": 239763361,
+    "dense_equivalent": 1343126905,
+    "seconds": {
+     "reduce": 0.033,
+     "update": 0.014,
+     "rref": 0.044
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 768,
+    "zero_rows": 248,
+    "pivots": 462,
+    "batches": 80,
+    "rounds": 99,
+    "host_cells": 14737,
+    "madds_reduce": 195882396,
+    "madds_reduce_dense": 1102703185,
+    "madds_update": 6477341,
+    "madds_update_dense": 203020096,
+    "madds_rref": 37403624,
+    "s_setup": 0.036,
+    "s_products": 0.035,
+    "s_reduce": 0.033,
+    "s_rref": 0.044,
+    "s_update": 0.014,
+    "s_verify": 0.065,
+    "s_closure": 0.128,
+    "peak_cells": 1772022,
+    "peak_device_bytes": 249004032
+   },
+   "part_columns": [
+    4013,
+    3586
+   ],
+   "products_per_pivot": 1.662,
+   "peak_basis_gib": 0.0132,
+   "part_rank": [
+    270,
+    192
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.194,
+   "peak_device_gib": 0.2319,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.326,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 562174020,
+     "update": 16299855,
+     "rref": 124927560
+    },
+    "total": 703401435,
+    "dense_equivalent": 5126186613,
+    "seconds": {
+     "reduce": 0.055,
+     "update": 0.028,
+     "rref": 0.064
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 768,
+    "zero_rows": 247,
+    "pivots": 462,
+    "batches": 46,
+    "rounds": 67,
+    "host_cells": 20723,
+    "madds_reduce": 562174020,
+    "madds_reduce_dense": 4221510465,
+    "madds_update": 16299855,
+    "madds_update_dense": 779748588,
+    "madds_rref": 124927560,
+    "s_setup": 0.053,
+    "s_products": 0.049,
+    "s_reduce": 0.055,
+    "s_rref": 0.064,
+    "s_update": 0.028,
+    "s_verify": 0.103,
+    "s_closure": 0.199,
+    "peak_cells": 3510738,
+    "peak_device_bytes": 249004032
+   },
+   "part_columns": [
+    7599
+   ],
+   "products_per_pivot": 1.662,
+   "peak_basis_gib": 0.0262,
+   "part_rank": [
+    462
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.303,
+   "peak_device_gib": 0.2319,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.326,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 195882396,
+     "update": 6477341,
+     "rref": 37403624
+    },
+    "total": 239763361,
+    "dense_equivalent": 1343126905,
+    "seconds": {
+     "reduce": 0.04,
+     "update": 0.022,
+     "rref": 0.059
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 768,
+    "zero_rows": 248,
+    "pivots": 462,
+    "batches": 80,
+    "rounds": 99,
+    "host_cells": 14737,
+    "madds_reduce": 195882396,
+    "madds_reduce_dense": 1102703185,
+    "madds_update": 6477341,
+    "madds_update_dense": 203020096,
+    "madds_rref": 37403624,
+    "s_setup": 0.035,
+    "s_products": 0.042,
+    "s_reduce": 0.04,
+    "s_rref": 0.059,
+    "s_update": 0.022,
+    "s_verify": 0.06,
+    "s_closure": 0.165,
+    "peak_cells": 1772022,
+    "peak_device_bytes": 846350828
+   },
+   "part_columns": [
+    4013,
+    3586
+   ],
+   "products_per_pivot": 1.662,
+   "peak_basis_gib": 0.0132,
+   "part_rank": [
+    270,
+    192
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.227,
+   "peak_device_gib": 0.7882,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 3,
+   "k": 5,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 1.326,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 7599,
+    "dim_V_D": 462,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     48,
+     462
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 562174020,
+     "update": 16299855,
+     "rref": 124927560
+    },
+    "total": 703401435,
+    "dense_equivalent": 5126186613,
+    "seconds": {
+     "reduce": 0.057,
+     "update": 0.023,
+     "rref": 0.068
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 768,
+    "zero_rows": 247,
+    "pivots": 462,
+    "batches": 46,
+    "rounds": 67,
+    "host_cells": 20723,
+    "madds_reduce": 562174020,
+    "madds_reduce_dense": 4221510465,
+    "madds_update": 16299855,
+    "madds_update_dense": 779748588,
+    "madds_rref": 124927560,
+    "s_setup": 0.031,
+    "s_products": 0.048,
+    "s_reduce": 0.057,
+    "s_rref": 0.068,
+    "s_update": 0.023,
+    "s_verify": 0.112,
+    "s_closure": 0.199,
+    "peak_cells": 3510738,
+    "peak_device_bytes": 852400580
+   },
+   "part_columns": [
+    7599
+   ],
+   "products_per_pivot": 1.662,
+   "peak_basis_gib": 0.0262,
+   "part_rank": [
+    462
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.313,
+   "peak_device_gib": 0.7939,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 571,
+     "update": 0,
+     "rref": 1142
+    },
+    "total": 1713,
+    "dense_equivalent": 1713,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.001,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 571,
+    "madds_reduce_dense": 571,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1142,
+    "s_setup": 0.003,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.001,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 571,
+    "peak_device_bytes": 18710528
+   },
+   "part_columns": [
+    571,
+    194
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.001,
+   "peak_device_gib": 0.0174,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 765,
+     "update": 0,
+     "rref": 1530
+    },
+    "total": 2295,
+    "dense_equivalent": 2295,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.003,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 765,
+    "madds_reduce_dense": 765,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1530,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.003,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 765,
+    "peak_device_bytes": 25067520
+   },
+   "part_columns": [
+    765
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.003,
+   "peak_device_gib": 0.0233,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 571,
+     "update": 0,
+     "rref": 1142
+    },
+    "total": 1713,
+    "dense_equivalent": 1713,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.003,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 571,
+    "madds_reduce_dense": 571,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1142,
+    "s_setup": 0.003,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.003,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 571,
+    "peak_device_bytes": 859600336
+   },
+   "part_columns": [
+    571,
+    194
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.004,
+   "peak_device_gib": 0.8006,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.002,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 765,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 765,
+     "update": 0,
+     "rref": 1530
+    },
+    "total": 2295,
+    "dense_equivalent": 2295,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.002,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 765,
+    "madds_reduce_dense": 765,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1530,
+    "s_setup": 0.002,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.002,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 765,
+    "peak_device_bytes": 884680192
+   },
+   "part_columns": [
+    765
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.003,
+   "peak_device_gib": 0.8239,
+   "loadavg": 2.7177734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.043,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 700356,
+     "update": 128895,
+     "rref": 457656
+    },
+    "total": 1286907,
+    "dense_equivalent": 12193380,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.004,
+     "rref": 0.007
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 64,
+    "zero_rows": 5,
+    "pivots": 64,
+    "batches": 48,
+    "rounds": 47,
+    "host_cells": 156,
+    "madds_reduce": 700356,
+    "madds_reduce_dense": 8401722,
+    "madds_update": 128895,
+    "madds_update_dense": 3334002,
+    "madds_rref": 457656,
+    "s_setup": 0.012,
+    "s_products": 0.004,
+    "s_reduce": 0.003,
+    "s_rref": 0.007,
+    "s_update": 0.004,
+    "s_verify": 0.004,
+    "s_closure": 0.018,
+    "peak_cells": 129288,
+    "peak_device_bytes": 100761600
+   },
+   "part_columns": [
+    2181,
+    894
+   ],
+   "products_per_pivot": 1.0,
+   "peak_basis_gib": 0.001,
+   "part_rank": [
+    56,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.024,
+   "peak_device_gib": 0.0938,
+   "loadavg": 2.82080078125
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.043,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 1045500,
+     "update": 199875,
+     "rref": 688800
+    },
+    "total": 1934175,
+    "dense_equivalent": 21826350,
+    "seconds": {
+     "reduce": 0.003,
+     "update": 0.004,
+     "rref": 0.008
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 64,
+    "zero_rows": 5,
+    "pivots": 64,
+    "batches": 48,
+    "rounds": 47,
+    "host_cells": 156,
+    "madds_reduce": 1045500,
+    "madds_reduce_dense": 15012150,
+    "madds_update": 199875,
+    "madds_update_dense": 6125400,
+    "madds_rref": 688800,
+    "s_setup": 0.009,
+    "s_products": 0.004,
+    "s_reduce": 0.003,
+    "s_rref": 0.008,
+    "s_update": 0.004,
+    "s_verify": 0.005,
+    "s_closure": 0.019,
+    "peak_cells": 196800,
+    "peak_device_bytes": 100761600
+   },
+   "part_columns": [
+    3075
+   ],
+   "products_per_pivot": 1.0,
+   "peak_basis_gib": 0.0015,
+   "part_rank": [
+    64
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.025,
+   "peak_device_gib": 0.0938,
+   "loadavg": 2.82080078125
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.043,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 700356,
+     "update": 128895,
+     "rref": 457656
+    },
+    "total": 1286907,
+    "dense_equivalent": 12193380,
+    "seconds": {
+     "reduce": 0.006,
+     "update": 0.01,
+     "rref": 0.016
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 64,
+    "zero_rows": 5,
+    "pivots": 64,
+    "batches": 48,
+    "rounds": 47,
+    "host_cells": 156,
+    "madds_reduce": 700356,
+    "madds_reduce_dense": 8401722,
+    "madds_update": 128895,
+    "madds_update_dense": 3334002,
+    "madds_rref": 457656,
+    "s_setup": 0.011,
+    "s_products": 0.009,
+    "s_reduce": 0.006,
+    "s_rref": 0.016,
+    "s_update": 0.01,
+    "s_verify": 0.008,
+    "s_closure": 0.04,
+    "peak_cells": 129288,
+    "peak_device_bytes": 942500688
+   },
+   "part_columns": [
+    2181,
+    894
+   ],
+   "products_per_pivot": 1.0,
+   "peak_basis_gib": 0.001,
+   "part_rank": [
+    56,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.05,
+   "peak_device_gib": 0.8778,
+   "loadavg": 2.82080078125
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.043,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 3075,
+    "dim_V_D": 64,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     64
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 1045500,
+     "update": 199875,
+     "rref": 688800
+    },
+    "total": 1934175,
+    "dense_equivalent": 21826350,
+    "seconds": {
+     "reduce": 0.007,
+     "update": 0.008,
+     "rref": 0.017
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 64,
+    "zero_rows": 5,
+    "pivots": 64,
+    "batches": 48,
+    "rounds": 47,
+    "host_cells": 156,
+    "madds_reduce": 1045500,
+    "madds_reduce_dense": 15012150,
+    "madds_update": 199875,
+    "madds_update_dense": 6125400,
+    "madds_rref": 688800,
+    "s_setup": 0.009,
+    "s_products": 0.01,
+    "s_reduce": 0.007,
+    "s_rref": 0.017,
+    "s_update": 0.008,
+    "s_verify": 0.009,
+    "s_closure": 0.041,
+    "peak_cells": 196800,
+    "peak_device_bytes": 1044167640
+   },
+   "part_columns": [
+    3075
+   ],
+   "products_per_pivot": 1.0,
+   "peak_basis_gib": 0.0015,
+   "part_rank": [
+    64
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.052,
+   "peak_device_gib": 0.9725,
+   "loadavg": 2.82080078125
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.373,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 2117495355,
+     "update": 60972573,
+     "rref": 339895518
+    },
+    "total": 2518363446,
+    "dense_equivalent": 17437316928,
+    "seconds": {
+     "reduce": 0.102,
+     "update": 0.038,
+     "rref": 0.103
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 2048,
+    "zero_rows": 866,
+    "pivots": 995,
+    "batches": 93,
+    "rounds": 123,
+    "host_cells": 41054,
+    "madds_reduce": 2117495355,
+    "madds_reduce_dense": 14905107486,
+    "madds_update": 60972573,
+    "madds_update_dense": 2192313924,
+    "madds_rref": 339895518,
+    "s_setup": 0.041,
+    "s_products": 0.105,
+    "s_reduce": 0.102,
+    "s_rref": 0.103,
+    "s_update": 0.038,
+    "s_verify": 0.216,
+    "s_closure": 0.355,
+    "peak_cells": 6041211,
+    "peak_device_bytes": 322535424
+   },
+   "part_columns": [
+    6735,
+    3108
+   ],
+   "products_per_pivot": 2.058,
+   "peak_basis_gib": 0.045,
+   "part_rank": [
+    813,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.573,
+   "peak_device_gib": 0.3004,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.373,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 3992557032,
+     "update": 123362319,
+     "rref": 484059054
+    },
+    "total": 4599978405,
+    "dense_equivalent": 37517992206,
+    "seconds": {
+     "reduce": 0.173,
+     "update": 0.061,
+     "rref": 0.136
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 2048,
+    "zero_rows": 857,
+    "pivots": 995,
+    "batches": 77,
+    "rounds": 105,
+    "host_cells": 48584,
+    "madds_reduce": 3992557032,
+    "madds_reduce_dense": 32282539878,
+    "madds_update": 123362319,
+    "madds_update_dense": 4751393274,
+    "madds_rref": 484059054,
+    "s_setup": 0.038,
+    "s_products": 0.149,
+    "s_reduce": 0.173,
+    "s_rref": 0.136,
+    "s_update": 0.061,
+    "s_verify": 0.623,
+    "s_closure": 0.534,
+    "peak_cells": 9793785,
+    "peak_device_bytes": 322535424
+   },
+   "part_columns": [
+    9843
+   ],
+   "products_per_pivot": 2.058,
+   "peak_basis_gib": 0.073,
+   "part_rank": [
+    995
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 1.159,
+   "peak_device_gib": 0.3004,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.373,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 2117495355,
+     "update": 60972573,
+     "rref": 339895518
+    },
+    "total": 2518363446,
+    "dense_equivalent": 17437316928,
+    "seconds": {
+     "reduce": 0.116,
+     "update": 0.049,
+     "rref": 0.128
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 2048,
+    "zero_rows": 866,
+    "pivots": 995,
+    "batches": 93,
+    "rounds": 123,
+    "host_cells": 41054,
+    "madds_reduce": 2117495355,
+    "madds_reduce_dense": 14905107486,
+    "madds_update": 60972573,
+    "madds_update_dense": 2192313924,
+    "madds_rref": 339895518,
+    "s_setup": 0.042,
+    "s_products": 0.121,
+    "s_reduce": 0.116,
+    "s_rref": 0.128,
+    "s_update": 0.049,
+    "s_verify": 0.243,
+    "s_closure": 0.421,
+    "peak_cells": 6041211,
+    "peak_device_bytes": 1186267808
+   },
+   "part_columns": [
+    6735,
+    3108
+   ],
+   "products_per_pivot": 2.058,
+   "peak_basis_gib": 0.045,
+   "part_rank": [
+    813,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.667,
+   "peak_device_gib": 1.1048,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 6,
+   "k": 2,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 4.373,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 9843,
+    "dim_V_D": 995,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     128,
+     995
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 3992557032,
+     "update": 123362319,
+     "rref": 484059054
+    },
+    "total": 4599978405,
+    "dense_equivalent": 37517992206,
+    "seconds": {
+     "reduce": 0.194,
+     "update": 0.078,
+     "rref": 0.183
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 2048,
+    "zero_rows": 857,
+    "pivots": 995,
+    "batches": 77,
+    "rounds": 105,
+    "host_cells": 48584,
+    "madds_reduce": 3992557032,
+    "madds_reduce_dense": 32282539878,
+    "madds_update": 123362319,
+    "madds_update_dense": 4751393274,
+    "madds_rref": 484059054,
+    "s_setup": 0.036,
+    "s_products": 0.169,
+    "s_reduce": 0.194,
+    "s_rref": 0.183,
+    "s_update": 0.078,
+    "s_verify": 0.735,
+    "s_closure": 0.639,
+    "peak_cells": 9793785,
+    "peak_device_bytes": 1516067696
+   },
+   "part_columns": [
+    9843
+   ],
+   "products_per_pivot": 2.058,
+   "peak_basis_gib": 0.073,
+   "part_rank": [
+    995
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 1.377,
+   "peak_device_gib": 1.4119,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.003,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 634,
+     "update": 0,
+     "rref": 1268
+    },
+    "total": 1902,
+    "dense_equivalent": 1902,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.002,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 634,
+    "madds_reduce_dense": 634,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1268,
+    "s_setup": 0.004,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.002,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 634,
+    "peak_device_bytes": 20774912
+   },
+   "part_columns": [
+    634,
+    392
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.002,
+   "peak_device_gib": 0.0193,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.003,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 1026,
+     "update": 0,
+     "rref": 2052
+    },
+    "total": 3078,
+    "dense_equivalent": 3078,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.003,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 1026,
+    "madds_reduce_dense": 1026,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 2052,
+    "s_setup": 0.003,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.003,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 1026,
+    "peak_device_bytes": 33619968
+   },
+   "part_columns": [
+    1026
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.003,
+   "peak_device_gib": 0.0313,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.003,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 634,
+     "update": 0,
+     "rref": 1268
+    },
+    "total": 1902,
+    "dense_equivalent": 1902,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.002,
+     "rref": 0.0
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 634,
+    "madds_reduce_dense": 634,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 1268,
+    "s_setup": 0.004,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.0,
+    "s_update": 0.002,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 634,
+    "peak_device_bytes": 1512580560
+   },
+   "part_columns": [
+    634,
+    392
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1,
+    0
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.003,
+   "peak_device_gib": 1.4087,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 3,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.003,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 1026,
+    "dim_V_D": 1,
+    "low_profile": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 1026,
+     "update": 0,
+     "rref": 2052
+    },
+    "total": 3078,
+    "dense_equivalent": 3078,
+    "seconds": {
+     "reduce": 0.0,
+     "update": 0.003,
+     "rref": 0.001
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 0,
+    "zero_rows": 0,
+    "pivots": 1,
+    "batches": 0,
+    "rounds": 1,
+    "host_cells": 2,
+    "madds_reduce": 1026,
+    "madds_reduce_dense": 1026,
+    "madds_update": 0,
+    "madds_update_dense": 0,
+    "madds_rref": 2052,
+    "s_setup": 0.003,
+    "s_products": 0.0,
+    "s_reduce": 0.0,
+    "s_rref": 0.001,
+    "s_update": 0.003,
+    "s_verify": 0.0,
+    "s_closure": 0.0,
+    "peak_cells": 1026,
+    "peak_device_bytes": 1546221288
+   },
+   "part_columns": [
+    1026
+   ],
+   "products_per_pivot": 0.0,
+   "peak_basis_gib": 0.0,
+   "part_rank": [
+    1
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.004,
+   "peak_device_gib": 1.44,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.039,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 278247,
+     "update": 5134,
+     "rref": 255144
+    },
+    "total": 538525,
+    "dense_equivalent": 4284088,
+    "seconds": {
+     "reduce": 0.001,
+     "update": 0.008,
+     "rref": 0.005
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 36,
+    "zero_rows": 1,
+    "pivots": 38,
+    "batches": 32,
+    "rounds": 33,
+    "host_cells": 103,
+    "madds_reduce": 278247,
+    "madds_reduce_dense": 2879084,
+    "madds_update": 5134,
+    "madds_update_dense": 1149860,
+    "madds_rref": 255144,
+    "s_setup": 0.017,
+    "s_products": 0.003,
+    "s_reduce": 0.001,
+    "s_rref": 0.005,
+    "s_update": 0.008,
+    "s_verify": 0.005,
+    "s_closure": 0.016,
+    "peak_cells": 91634,
+    "peak_device_bytes": 144015360
+   },
+   "part_columns": [
+    2567,
+    1828
+   ],
+   "products_per_pivot": 0.947,
+   "peak_basis_gib": 0.0007,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.023,
+   "peak_device_gib": 0.1341,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.039,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 496635,
+     "update": 8790,
+     "rref": 457080
+    },
+    "total": 962505,
+    "dense_equivalent": 10846860,
+    "seconds": {
+     "reduce": 0.002,
+     "update": 0.002,
+     "rref": 0.006
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 36,
+    "zero_rows": 1,
+    "pivots": 38,
+    "batches": 32,
+    "rounds": 33,
+    "host_cells": 103,
+    "madds_reduce": 496635,
+    "madds_reduce_dense": 7330860,
+    "madds_update": 8790,
+    "madds_update_dense": 3058920,
+    "madds_rref": 457080,
+    "s_setup": 0.014,
+    "s_products": 0.003,
+    "s_reduce": 0.002,
+    "s_rref": 0.006,
+    "s_update": 0.002,
+    "s_verify": 0.006,
+    "s_closure": 0.012,
+    "peak_cells": 167010,
+    "peak_device_bytes": 144015360
+   },
+   "part_columns": [
+    4395
+   ],
+   "products_per_pivot": 0.947,
+   "peak_basis_gib": 0.0012,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.02,
+   "peak_device_gib": 0.1341,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.039,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 278247,
+     "update": 5134,
+     "rref": 255144
+    },
+    "total": 538525,
+    "dense_equivalent": 4284088,
+    "seconds": {
+     "reduce": 0.005,
+     "update": 0.01,
+     "rref": 0.014
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 36,
+    "zero_rows": 1,
+    "pivots": 38,
+    "batches": 32,
+    "rounds": 33,
+    "host_cells": 103,
+    "madds_reduce": 278247,
+    "madds_reduce_dense": 2879084,
+    "madds_update": 5134,
+    "madds_update_dense": 1149860,
+    "madds_rref": 255144,
+    "s_setup": 0.019,
+    "s_products": 0.009,
+    "s_reduce": 0.005,
+    "s_rref": 0.014,
+    "s_update": 0.01,
+    "s_verify": 0.009,
+    "s_closure": 0.037,
+    "peak_cells": 91634,
+    "peak_device_bytes": 1311877910
+   },
+   "part_columns": [
+    2567,
+    1828
+   ],
+   "products_per_pivot": 0.947,
+   "peak_basis_gib": 0.0007,
+   "part_rank": [
+    30,
+    8
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.048,
+   "peak_device_gib": 1.2218,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 4,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 0.039,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 4395,
+    "dim_V_D": 38,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     38
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": true,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 496635,
+     "update": 8790,
+     "rref": 457080
+    },
+    "total": 962505,
+    "dense_equivalent": 10846860,
+    "seconds": {
+     "reduce": 0.004,
+     "update": 0.003,
+     "rref": 0.011
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 36,
+    "zero_rows": 1,
+    "pivots": 38,
+    "batches": 32,
+    "rounds": 33,
+    "host_cells": 103,
+    "madds_reduce": 496635,
+    "madds_reduce_dense": 7330860,
+    "madds_update": 8790,
+    "madds_update_dense": 3058920,
+    "madds_rref": 457080,
+    "s_setup": 0.015,
+    "s_products": 0.006,
+    "s_reduce": 0.004,
+    "s_rref": 0.011,
+    "s_update": 0.003,
+    "s_verify": 0.011,
+    "s_closure": 0.024,
+    "peak_cells": 167010,
+    "peak_device_bytes": 290701006
+   },
+   "part_columns": [
+    4395
+   ],
+   "products_per_pivot": 0.947,
+   "peak_basis_gib": 0.0012,
+   "part_rank": [
+    38
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.036,
+   "peak_device_gib": 0.2707,
+   "loadavg": 2.91552734375
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 3.137,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 411017709,
+     "update": 9240726,
+     "rref": 105733176
+    },
+    "total": 525991611,
+    "dense_equivalent": 3931191846,
+    "seconds": {
+     "reduce": 0.062,
+     "update": 0.021,
+     "rref": 0.066
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 900,
+    "zero_rows": 296,
+    "pivots": 530,
+    "batches": 86,
+    "rounds": 99,
+    "host_cells": 15495,
+    "madds_reduce": 411017709,
+    "madds_reduce_dense": 3245697876,
+    "madds_update": 9240726,
+    "madds_update_dense": 579760794,
+    "madds_rref": 105733176,
+    "s_setup": 0.073,
+    "s_products": 0.068,
+    "s_reduce": 0.062,
+    "s_rref": 0.066,
+    "s_update": 0.021,
+    "s_verify": 0.119,
+    "s_closure": 0.219,
+    "peak_cells": 4038108,
+    "peak_device_bytes": 480018432
+   },
+   "part_columns": [
+    8265,
+    6384
+   ],
+   "products_per_pivot": 1.698,
+   "peak_basis_gib": 0.0301,
+   "part_rank": [
+    348,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.341,
+   "peak_device_gib": 0.4471,
+   "loadavg": 2.76171875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "cpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 3.137,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 1098484563,
+     "update": 21534030,
+     "rref": 301300632
+    },
+    "total": 1421319225,
+    "dense_equivalent": 13318358085,
+    "seconds": {
+     "reduce": 0.114,
+     "update": 0.039,
+     "rref": 0.114
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 900,
+    "zero_rows": 295,
+    "pivots": 530,
+    "batches": 54,
+    "rounds": 76,
+    "host_cells": 22413,
+    "madds_reduce": 1098484563,
+    "madds_reduce_dense": 11034930561,
+    "madds_update": 21534030,
+    "madds_update_dense": 1982126892,
+    "madds_rref": 301300632,
+    "s_setup": 0.056,
+    "s_products": 0.107,
+    "s_reduce": 0.114,
+    "s_rref": 0.114,
+    "s_update": 0.039,
+    "s_verify": 0.244,
+    "s_closure": 0.383,
+    "peak_cells": 7763970,
+    "peak_device_bytes": 480018432
+   },
+   "part_columns": [
+    14649
+   ],
+   "products_per_pivot": 1.698,
+   "peak_basis_gib": 0.0578,
+   "part_rank": [
+    530
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.629,
+   "peak_device_gib": 0.4471,
+   "loadavg": 2.76171875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:split",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 3.137,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 411017709,
+     "update": 9240726,
+     "rref": 105733176
+    },
+    "total": 525991611,
+    "dense_equivalent": 3931191846,
+    "seconds": {
+     "reduce": 0.076,
+     "update": 0.052,
+     "rref": 0.094
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 900,
+    "zero_rows": 296,
+    "pivots": 530,
+    "batches": 86,
+    "rounds": 99,
+    "host_cells": 15495,
+    "madds_reduce": 411017709,
+    "madds_reduce_dense": 3245697876,
+    "madds_update": 9240726,
+    "madds_update_dense": 579760794,
+    "madds_rref": 105733176,
+    "s_setup": 0.068,
+    "s_products": 0.086,
+    "s_reduce": 0.076,
+    "s_rref": 0.094,
+    "s_update": 0.052,
+    "s_verify": 0.13,
+    "s_closure": 0.311,
+    "peak_cells": 4038108,
+    "peak_device_bytes": 642038092
+   },
+   "part_columns": [
+    8265,
+    6384
+   ],
+   "products_per_pivot": 1.698,
+   "peak_basis_gib": 0.0301,
+   "part_rank": [
+    348,
+    182
+   ],
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "seconds": 0.444,
+   "peak_device_gib": 0.5979,
+   "loadavg": 2.76171875
+  },
+  {
+   "mode": "live",
+   "m": 4,
+   "k": 4,
+   "p": 114689,
+   "D": 5,
+   "arm": "fake-gpu:plain",
+   "equal": true,
+   "differences": [],
+   "reference": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "reference_seconds": 3.137,
+   "reference_verified": true,
+   "candidate": {
+    "monomials_le_D": 14649,
+    "dim_V_D": 530,
+    "low_profile": [
+     0,
+     0,
+     0,
+     2,
+     50,
+     530
+    ],
+    "contains_one": false
+   },
+   "verified_closed": true,
+   "space_equal": null,
+   "madds": {
+    "schema": "optlevel.ops/v1",
+    "kernel": "ic_bounds_split_gpu/1",
+    "unit": "float64 multiply-add (exact, mod p)",
+    "counted": {
+     "reduce": 1098484563,
+     "update": 21534030,
+     "rref": 301300632
+    },
+    "total": 1421319225,
+    "dense_equivalent": 13318358085,
+    "seconds": {
+     "reduce": 0.122,
+     "update": 0.059,
+     "rref": 0.131
+    },
+    "note": "reduce and update counts are the GEMM sizes actually issued (rows without a nonzero coefficient are skipped); rref is an upper estimate"
+   },
+   "stats": {
+    "products": 900,
+    "zero_rows": 295,
+    "pivots": 530,
+    "batches": 54,
+    "rounds": 76,
+    "host_cells": 22413,
+    "madds_reduce": 1098484563,
+    "madds_reduce_dense": 11034930561,
+    "madds_update": 21534030,
+    "madds_update_dense": 1982126892,
+    "madds_rref": 301300632,
+    "s_setup": 0.056,
+    "s_products": 0.112,
+    "s_reduce": 0.122,
+    "s_rref": 0.131,
+    "s_update": 0.059,
+    "s_verify": 0.243,
+    "s_closure": 0.432,
+    "peak_cells": 7763970,
+    "peak_device_bytes": 1140179884
+   },
+   "part_columns": [
+    14649
+   ],
+   "products_per_pivot": 1.698,
+   "peak_basis_gib": 0.0578,
+   "part_rank": [
+    530
+   ],
+   "symmetry": "none (not requested)",
+   "seconds": 0.679,
+   "peak_device_gib": 1.0619,
+   "loadavg": 2.76171875
+  }
+ ],
+ "controls": [
+  {
+   "control": "drop-operator",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "dim_V_D",
+    "low_profile",
+    "verified_closed",
+    "status:verification-failed",
+    "space"
+   ],
+   "detected_by_dimensions_alone": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 243,
+    "low_profile": [
+     0,
+     0,
+     0,
+     4,
+     47,
+     243
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": false,
+   "as_expected": true
+  },
+  {
+   "control": "wrong-gather",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "dim_V_D",
+    "low_profile",
+    "contains_one"
+   ],
+   "detected_by_dimensions_alone": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 1023,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023
+    ],
+    "contains_one": true
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": null,
+   "as_expected": true
+  },
+  {
+   "control": "wrong-gather-plain",
+   "arm": "cpu:plain",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "dim_V_D",
+    "low_profile",
+    "contains_one"
+   ],
+   "detected_by_dimensions_alone": true,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 1023,
+    "low_profile": [
+     1,
+     11,
+     58,
+     198,
+     501,
+     1023
+    ],
+    "contains_one": true
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "none (not requested)",
+   "verified_closed": null,
+   "as_expected": true
+  },
+  {
+   "control": "perturbed-input-coefficient",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "space"
+   ],
+   "detected_by_dimensions_alone": false,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": true,
+   "as_expected": true
+  },
+  {
+   "control": "perturbed-input-coefficient-plain",
+   "arm": "cpu:plain",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": true,
+   "differences": [
+    "space"
+   ],
+   "detected_by_dimensions_alone": false,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "none (not requested)",
+   "verified_closed": true,
+   "as_expected": true
+  },
+  {
+   "control": "no-fault (must pass)",
+   "arm": "cpu:split",
+   "m": 4,
+   "k": 2,
+   "D": 5,
+   "detected": false,
+   "differences": [],
+   "detected_by_dimensions_alone": false,
+   "candidate": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "reference": {
+    "monomials_le_D": 1023,
+    "dim_V_D": 357,
+    "low_profile": [
+     0,
+     0,
+     0,
+     8,
+     78,
+     357
+    ],
+    "contains_one": false
+   },
+   "symmetry": "split: checked: involution, degrees, all shifts, all inputs",
+   "verified_closed": true,
+   "as_expected": true
+  }
+ ],
+ "engine_sha256": "627fb5de71ee4e16ad0111fafd2de4033b6918b85eb943c8142098886d46e619"
+}

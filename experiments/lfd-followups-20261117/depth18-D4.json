@@ -1,0 +1,144 @@
+{
+ "k": 18,
+ "D": 4,
+ "p": 7340033,
+ "split": true,
+ "gens": "all",
+ "columns": 66712,
+ "generator_rows": 667,
+ "rank": 3821,
+ "profile": [
+  0,
+  0,
+  2,
+  159,
+  3821
+ ],
+ "part_profiles": [
+  [
+   0,
+   0,
+   2,
+   82,
+   1932
+  ],
+  [
+   0,
+   0,
+   0,
+   77,
+   1889
+  ]
+ ],
+ "part_ranks": [
+  1932,
+  1889
+ ],
+ "contains_one": false,
+ "closure_complete": true,
+ "closed": true,
+ "rounds": 15,
+ "seconds": 10.6,
+ "madds": 63187386455,
+ "madds_detail": {
+  "reduce": 55197983685,
+  "reduce_dense": 202208217495,
+  "update": 3861200440,
+  "rref": 4128202330
+ },
+ "madds_dense": 210197620265,
+ "madds_closure_phase": 24564907463,
+ "seconds_detail": {
+  "reduce": 6.65,
+  "update": 1.12,
+  "rref": 2.04
+ },
+ "peak_entries": [
+  60877320,
+  59278709
+ ],
+ "peak_phys_entries": [
+  61368048,
+  59688622
+ ],
+ "compactions": [
+  1,
+  1
+ ],
+ "rref_ok": true,
+ "basis_sha256": [
+  "fe516551311ef30a5a00892217a4c0fecb869ebad40ddbd040b75d95d8c5cd66",
+  "8afa5ec52f860e6aca5332507b9010a5f1a4ee292fbb42d0f57610e216b5f974"
+ ],
+ "sweep_random": {
+  "t": 6,
+  "seed": 1,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "maps": 72
+ },
+ "sweep_full": {
+  "complete": true,
+  "rows_checked": 318,
+  "nonzero_residuals": 0,
+  "passed": true,
+  "sweeps_run": 1
+ },
+ "repairs": 0,
+ "repair_rows": 0,
+ "resumes": 0,
+ "device": "cpu",
+ "threads": 2,
+ "blas_threads_env": "2",
+ "maxrss_mb": 987584,
+ "engine_sha256": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+ "engine_version": "ic_bounds_big/2",
+ "work_gb": 1.0,
+ "tile_mb": 32.0,
+ "tile_rows": [
+  250,
+  252
+ ],
+ "batch": 128,
+ "compact_frac": 0.05,
+ "t_random": 6,
+ "sweep_chunk": 256,
+ "stop_on_one": false,
+ "no_repair": false,
+ "compress": false,
+ "spill": {
+  "spills": 0,
+  "fetches": 0,
+  "d2h_bytes": 0,
+  "h2d_bytes": 0,
+  "d2h_s": 0.0,
+  "h2d_s": 0.0,
+  "switches": 0,
+  "tile_budget_bytes": null,
+  "dev_limit_bytes": null,
+  "host_tile_bytes": 0
+ },
+ "dev_used_mb": 0,
+ "dev_total_mb": 0,
+ "dev_peak_live_mb": null,
+ "status": "done",
+ "instance_file": "depth18-instance.json",
+ "instance_sha256": "f4e397afba265d309a9fc82ae1fe17911d0683af47b8999c51a9818f1869cbc8",
+ "a": 1,
+ "b": 0,
+ "seed": null,
+ "want": null,
+ "unit_nonresidue": true,
+ "instance_target": [
+  3,
+  2205181
+ ],
+ "attempts": null,
+ "instance_k": 18,
+ "resumed_from_checkpoint": false,
+ "source_sha256": {
+  "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
+  "driver": "6c8bb10e5781fe16a0aaadafd8f5a24a975b758b8bde6f0a05958628a0b07cd2",
+  "instance": "f4e397afba265d309a9fc82ae1fe17911d0683af47b8999c51a9818f1869cbc8"
+ }
+}

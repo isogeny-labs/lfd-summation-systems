@@ -1,0 +1,8 @@
+'ICFallDegrees.GrowthJetClosure.inverse_index' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthJetClosure.euler_cyclicShift' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthJetClosure.chain_euler_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetClosure.euler_supported' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthJetClosure.wrappingPart_supported' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthJetClosure.euler_other_coordinate' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthJetClosure.jetSpace_shift' depends on axioms: [propext, Quot.sound]
+'ICFallDegrees.GrowthJetClosure.not_mem_jetSpace_of_derivative' depends on axioms: [propext, Quot.sound]
