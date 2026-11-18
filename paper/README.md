@@ -1,9 +1,13 @@
 # Main manuscript: ePrint preparation
 
-**Status, 18 November 2026:** candidate for author review, 52 pages (rebuilt
-with Tectonic 0.17.0; shortened abstract, significance paragraph in the
-introduction, second-engine corroboration at depth 14 on the unit instance
-over p = 65537: [update note](latest-update-20261118.md)). It
+**Status, 18 November 2026:** candidate for author review. The cleanup of
+17 November put the full proof of the growth theorem into Appendix C,
+shortened the abstract, added a statement on the use of AI tools (the author
+must confirm its wording before submission) and removed wording about
+earlier drafts. The revision of 18 November shortened the abstract further,
+added a significance paragraph in the introduction, and added the
+second-engine corroboration at depth 14 on the unit instance over p = 65537
+([update note](latest-update-20261118.md)). It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint

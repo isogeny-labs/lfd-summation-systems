@@ -25,7 +25,11 @@ _(none pinned — set one with `/goal <text>`)_
 - [x] Update the LFD paper: independent review and fixes of the 16 Nov sections (rational prime-field growth, solving degree, function field and pole orders), a root-finding remark, and refreshed status/provenance (Claude, started 2026-11-18, branch claude/index-calculus-root-finding-e95kd6, PR #28)
 - [x] Standardize the repository CI check contract (Codex, started 2026-11-17, branch codex/standard-ci-check, PR #29)
 
+- [x] Manuscript cleanup before ePrint: full growth proof in an appendix, shorter abstract, AI-assistance disclosure, no revision-history wording (Claude, started 2026-11-17, branch claude/ecstatic-dirac-7f5qyt, PR #27)
+
 <!-- One line per task, added as the task's first step with its draft PR:
 - [ ] <task> (<runtime>, started YYYY-MM-DD, branch <branch>, PR #<n>) -->
 
 ## Blocked / questions for the owner
+
+- PR #27: the author must confirm the wording of the "Use of AI tools" paragraph (it names Claude and Codex) before submission.
