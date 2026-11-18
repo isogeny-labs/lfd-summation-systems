@@ -6,7 +6,7 @@
   "--negative",
   "unit-65537:7:4",
   "--work",
-  "/tmp/lfd-followup-replay-final",
+  "/tmp/lfd-followup-replay-two-fixes",
   "--out",
   "experiments/lfd-followups-20261117/lift-small-replay.json"
  ],
@@ -14,7 +14,7 @@
  "numpy": "2.4.0",
  "lift_md_rows_parsed": 37,
  "source_sha256": {
-  "lift": "5518b951575cae5d9537f5bb5a129fe67949f30567a3bc4b0024cd3619126f23",
+  "lift": "035d9c49883009a3e52a9c09916dbf21aae504fdd1f90d345972de03bbc974ad",
   "harness": "c4f58e08eb76251e6d4ea0f6bdde4992bf50464de8b0aa9e9d33af131793d82d",
   "oracle_reference": "c3d123ed2e4baaf738d0f780928468f0558b0db792a34fe5e948d099dc81990d",
   "engine": "e4f15a088f92305f7d15dfc1b4e787c1ecc0233520a8e053e88ccbd804e99bab",
@@ -243,7 +243,7 @@
      53
     ],
     "full_sweep_clean": true,
-    "seconds": 0.0
+    "seconds": 0.1
    },
    "canonical_sha_equal_engine": true,
    "phi_two_routes_equal": true,
@@ -303,7 +303,7 @@
       "shifts": 12,
       "nonzero": 0
      },
-     "seconds": 0.5,
+     "seconds": 0.7,
      "chunks": 1,
      "fall_rounds": 7,
      "agrees_with_oracle": true
@@ -941,6 +941,6 @@
   "first_lift_rows_equal": 4,
   "negative_controls": 18,
   "negative_detected": 16,
-  "seconds": 7.7
+  "seconds": 10.7
  }
 }

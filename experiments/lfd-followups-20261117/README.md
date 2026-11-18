@@ -9,7 +9,7 @@ submission package merged in #24. No paid worker has been launched; the owner se
 | Track | Completed work | Remaining obligation |
 |---|---|---|
 | Degree-6 input certificate | Pure-integer DAG checker; six small closures checked against the direct engine; saved replayable certificate and malformed-input controls | Emit and check derivations of the actual depth-14 input basis; prototype is not that certificate |
-| Independent lift review | Confirmed high-prime row-reduction defect, corrected it, added CI tests; four-prime arithmetic and 16 fresh lift runs pass | Separate external review / formal algorithm proof; input containment still required |
+| Independent lift review | Fixed high-prime row reduction and empty-top indexing; added CI tests; four-prime arithmetic, boundary cases and 16 fresh lift runs pass | Separate external review / formal algorithm proof; input containment still required |
 | Five summands, depth 3 | Tiled engine matches 16 control closures; bounded D8 retry stopped after 183.433 s at rank 1677 | Local ladder checked through D6, capped at D7; D8 needs a method that fits local resources |
 | Proper-ideal exceptional primes | Exact LFD 5 at (k,p)=(7,257),(7,769),(8,7681),(9,12289); exact LFD 6 at (10,12289) | General proper-ideal lower bound remains open |
 | Depth-18 breakpoint | Unit instance fixed and closed V4 computed: rank 3821, 1 excluded, hence LFD at least 5 | Checked exclusion at D7 and upper witness at D8; prediction 8 is untested |

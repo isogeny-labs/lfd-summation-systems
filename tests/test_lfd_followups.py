@@ -100,3 +100,18 @@ def test_certificate_cannot_substitute_an_empty_output_set():
     cert.update(outputs=[],rows=[],row_sha256=hashlib.sha256(b"[]").hexdigest())
     with pytest.raises(ValueError,match="external target"):
         checker.verify(cert,generators=gens,parameters=params,expected_output_sha256=expected)
+
+
+@pytest.mark.parametrize('p,a,b,X,one,rank',[(17,6,-7,1,False,15),(65537,1,0,4271,True,16)])
+def test_lift_when_the_next_monomial_layer_is_empty(p,a,b,X,one,rank):
+    from csd import ic_bounds_d5_verify as reference
+    from csd import ic_bounds_lift_independent as lift
+    k,D=2,4
+    g=lift.s3_generator(p,a,b,X,k)
+    closure=reference.Closure(g,k,p,D)
+    assert closure.run()
+    parts=[(part.piv.copy(),part.B.copy()) for part in closure.parts]
+    result=lift.Lift(k,D,p,parts,g).run()
+    assert result['fixed_point']
+    assert result['contains_one']==one
+    assert result['dim_low']==result['dim_VD1']==rank

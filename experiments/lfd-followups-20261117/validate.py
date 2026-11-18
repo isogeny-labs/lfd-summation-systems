@@ -67,9 +67,19 @@ def main():
         try: lift.mm(np.ones((1,1)),np.ones((1,1)),16777213,np,unsafe)
         except lift.Refuse: controls.append(f'unsafe-inner-{unsafe}')
         else: raise AssertionError('unsafe inner accepted')
+    from csd import ic_bounds_d5_verify as reference
+    ambient=[]
+    for p,a,b,X,one,rank in [(17,6,-7,1,False,15),(65537,1,0,4271,True,16)]:
+        g=lift.s3_generator(p,a,b,X,2)
+        C=reference.Closure(g,2,p,4);assert C.run()
+        parts=[(part.piv.copy(),part.B.copy()) for part in C.parts]
+        result=lift.Lift(2,4,p,parts,g).run()
+        assert result['fixed_point'] and result['contains_one']==one
+        assert result['dim_low']==result['dim_VD1']==rank
+        ambient.append(dict(k=2,D=4,p=p,contains_one=one,dimension=rank))
     files=['csd/ic_bounds_lift_independent.py']+[str(p.relative_to(ROOT)) for p in HERE.glob('*.py')]
     out=dict(status='passed',scope='bounded derivation prototype and high-prime arithmetic; not a depth-14 certificate',
-             cases=cases,negative_controls=controls,arithmetic=arithmetic,
+             cases=cases,negative_controls=controls,arithmetic=arithmetic,ambient_boundary=ambient,
              source_sha256={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in sorted(files)})
     (HERE/'validation.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2))

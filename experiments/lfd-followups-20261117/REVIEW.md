@@ -26,6 +26,16 @@ At the archived depth-14 primes, 63*(p-1)^2 is below 2^53-2p, so this
 specific defect does not change those runs' arithmetic. Their source hashes
 remain historical identifiers and are not rewritten to the corrected hash.
 
+## Confirmed empty-top boundary defect and fix
+
+At D=2k the degree-(D+1) monomial table is empty. `image` used
+`np.where` around an index into that table, but NumPy evaluates the index
+even when every monomial is in the lower layer. A proper-ideal input at
+k=2, D=4, p=17 therefore raised IndexError instead of returning its
+unchanged 15-dimensional ideal space. The fix handles the empty table
+explicitly. Both proper and unit cases now pass at this boundary.
+The depth-14 runs have D=6<2k, so this boundary was not reached there.
+
 ## Other reviewed invariants
 
 - The two orbit parts determine ordinary pivot rows and single rows. The

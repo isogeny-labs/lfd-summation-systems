@@ -483,7 +483,10 @@ class Lift:
             raise Refuse('a shifted monomial is outside M_<=D+1')
         inL = li >= 0
         nn = np.where(inL, self.nidx[np.maximum(li, 0)], -1)
-        sp = np.where(inL, -1, self.spidx[np.maximum(ti, 0)])
+        # At D >= 2k there is no top layer. np.where eagerly indexes both
+        # branches, so avoid indexing the empty special-top array.
+        sp = (-np.ones(len(li), dtype=I64) if self.Tp.n == 0 else
+              np.where(inL, -1, self.spidx[np.maximum(ti, 0)]))
         tcol = np.where(nn >= 0, self.nSp + nn, np.where(sp >= 0, sp, -1))
         pd = np.where(inL & (nn < 0), li, -1)
         reg = np.where(~inL & (sp < 0), ti, -1)

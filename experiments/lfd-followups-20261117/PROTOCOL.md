@@ -41,7 +41,7 @@ separate US$100 split-retry question.
 Inspect coordinate conversion, regular-top elimination, fall propagation,
 fixed-point/saturation exits, degree restrictions and arithmetic bounds.
 The high-prime rref counterexample and its correction are recorded in
-REVIEW.md. Retain historical run source hashes unchanged; they identify
+REVIEW.md, together with the D=2k empty-top boundary crash. Retain historical run source hashes unchanged; they identify
 the older source. Test the corrected implementation against direct small
 closures and altered-input controls. An internal review is not an external
 review or a Lean proof of the numerical algorithm.
