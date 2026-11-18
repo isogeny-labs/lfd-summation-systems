@@ -1,11 +1,15 @@
 # Main manuscript: ePrint preparation
 
-**Status, 16 November 2026:** candidate for author review, 49 pages. It
+**Status, 18 November 2026:** candidate for author review, 49 pages. It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
-not of order two (Proposition "Function field and pole orders"). No ePrint
-submission or editorial acceptance is recorded by this review. This is a
-technical and artifact review, not independent certification of every proof.
+not of order two (Proposition "Function field and pole orders"). The
+submission package of PR #24 is on `main` (merge commit `ce4d785`), where CI
+passes (Lean build and axiom audit, Python self-tests). The sections added on
+16 November now have an independent review; its corrections are in this
+revision (see "Revision of 18 November 2026" below). No ePrint submission or
+editorial acceptance is recorded. This is a technical and artifact review, not
+independent certification of every proof.
 
 Title: *Last fall degrees of elliptic curve summation systems: machine-checked
 bounds and exact values*, Adam Buran.
@@ -84,16 +88,21 @@ retain its logs rather than overwriting the archived audit.
 
 ## Before submission
 
-- The default Lean audit is that of commit `1c929ae` (CI green there); the
-  audited sources have not changed since. The non-two-torsion modules are
-  checked by a separate workflow. Both must be green on the commit that is
-  submitted (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot").
-- The data appendix cites the combined evidence commit `2cb270c`. It stays
-  reachable only if this branch is merged with a merge commit; after a squash
-  or a rebase, update the citation and rebuild.
+- CI on the submitted commit must pass, including the non-two-torsion
+  workflow (`eprint-curve-lfd-bounds/EPRINT.md`, "Source snapshot"). On `main`
+  at `ce4d785` the Lean build and axiom audit and the Python self-tests pass.
+- The data appendix cites the evidence snapshot `2cb270c` (reachable: PR #24
+  was merged with a merge commit) and, for the root-finding records added
+  afterwards, commit `a28475a`. That commit stays reachable only if this
+  branch is merged with a merge commit; after a squash or a rebase, update the
+  citation and rebuild.
 - Read the review's remaining limits, particularly the depth-14 lift and the
   written growth proof. An independent depth-14 certificate would strengthen
   the result; the qualified preprint does not claim to have one.
+- The cited theorem numbers of Caminata and Gorla (Def. 1.1, Thm. 3.1),
+  Steiner (Lemma 7.4) and Gorla, Mueller and Petit (Thm. 4, journal versus
+  arXiv numbering) were not re-read against the sources in the review of 18
+  November; check them before submission.
 - The author confirms authorship, publication information and the ePrint
   distribution license. The earlier sheet's CC BY entry is a proposal.
 
@@ -179,3 +188,48 @@ this paper update.
 The prose pass retains the isogenylabs.io-only contact. The solving-degree
 section and the kernel-checked non-two-torsion function field and pole
 orders from the combined manuscript are preserved.
+
+## Revision of 18 November 2026
+
+An independent review of the 16 November additions (growth over prime fields
+and the rational family, the solving degree, the function field and pole
+orders, and the sentences they put elsewhere) checked the statements against
+the Lean sources, the written proofs and the records. Corrections made:
+
+- **Solving-degree counts (data error).** The driver passed the grid size
+  2^(mk) instead of the solution count for the direct m-summand prime set, so
+  617 systems without solutions were counted under "count". Corrected:
+  2,496 unit (was 1,879), 2,467 count (was 3,084), 850 computed; no Gröbner
+  degree, LFD or solving degree changed. Erratum in
+  `../experiments/ic-solving-degree/README.md`; the table row is relabelled
+  "Direct m-summand, prime, m = 2..8".
+- **Wrong fields.** The six systems with sd = LFD + 1 are all over F_(2^14),
+  not F_(2^11) to F_(2^14).
+- **Overclaims narrowed.** The three k = 14 systems among the 5,813 rest on
+  the lifted upper bound (stated in the abstract and Section 7); PolyBoRi
+  covers the 2,352 computed binary systems of the sweep and binary grids, not
+  every binary system; Gröbner degrees were computed on proper systems with a
+  stored solution set; sd ≤ mk+1 is stated for direct m-summand prime systems;
+  Theorem sd(4) and Lemma cube state their scope; the abstract gives the bound
+  max(2, ⌊log2(|Z|+1)⌋) exactly.
+- **Lean scope.** The curve model is discharged in Lean over the complex
+  numbers only; over prime fields Lean proves the restricted box form of the
+  vanishing-sum bound natively. The Lean table adds the declarations of the
+  complex window, the grid-zero criterion and the explicit prime window.
+- **Smaller fixes.** Characteristics 2 and 3 for E6; the trace values ±1;
+  the column-bound wording for B_k; "allows only" the three axioms (and the
+  non-torsion CI run); Proposition nontorsion(3) places distinctness under
+  t ≠ 0; eight of the ten depth-nine systems lack a second engine; the data
+  table cites the exceptional-prime records and the SD1 proof.
+- **New Future-directions item** "Decomposition without a Gröbner basis": on
+  binary curves the two-summand step is F_2-affine in the slope and needs one
+  linear system and one quadratic per fixed summand. It is measured against
+  enumeration and the repository's MutantXL (`../experiments/ic-rootfind/`,
+  commit `a28475a`) and makes no cost claim.
+
+Build: pdfTeX 1.40.25 (TeX Live 2023/Debian), matplotlib 3.11.2; the previous
+version used Tectonic 0.16.9. Figures were regenerated from unchanged scripts
+and records. The PDF builds without warnings or overfull boxes and all 439
+publication checks pass. Not done: the cited literature was not re-read (the
+proxy blocked arXiv), and no Lean or closure replay was run.
+

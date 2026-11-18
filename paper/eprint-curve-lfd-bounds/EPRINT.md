@@ -15,7 +15,7 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io |
-| Abstract | paste `eprint-abstract.txt` (2903 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (2978 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
@@ -30,24 +30,27 @@ ORCID and ROR identifiers are optional.
 
 ## Source snapshot
 
-Regenerated on 16 November 2026 from the combined evidence snapshot
-[`2cb270c`](https://github.com/isogeny-labs/lfd-summation-systems/commit/2cb270c).
-It includes the merged manuscript and proof work, the completed split-presentation
-records, the capped five-summand run, and both second-implementation depth-14
-lift records in PR #24. This package is prepared for merging that PR after
-its final CI checks pass. The limits of the input-space certificate remain in the manuscript.
-The data appendix cites this frozen snapshot. The files below are those of
+Regenerated on 18 November 2026. The evidence reviewed for the manuscript is the
+frozen snapshot [`2cb270c`](https://github.com/isogeny-labs/lfd-summation-systems/commit/2cb270c)
+(merged with PR #24 at `ce4d785`). This revision applies the independent review of
+the 16 November sections (corrected solving-degree counts, narrowed claims, Lean
+scope; see `../README.md`, "Revision of 18 November 2026") and adds the root-finding
+item, whose records are at commit
+[`a28475a`](https://github.com/isogeny-labs/lfd-summation-systems/commit/a28475a).
+Both commits must stay reachable: merge with a merge commit. The limits of the
+input-space certificate remain in the manuscript. The files below are those of
 the commit carrying this sheet.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `2c8357fdb2a000c33e246cdb36f2e6bdd95c8cd4dae4657f62fcfc9d9ce59b82` |
-| `paper/curve-lfd-bounds.tex` | `9b2764756520a04d08b1dd07447f7fb454cb54ad5499f2cb0ed24eeba9328d0b` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `c9eda86df3d7de4e064999dd4d078fc5aba3b3a7586f906b85360bc9e9eca819` |
+| `paper/curve-lfd-bounds.pdf` | `4d4b944a6907c525b55f485bb7dc5c5ddcb8e01782c64e1d0a2a6a8c791fb16a` |
+| `paper/curve-lfd-bounds.tex` | `2ff21661a24cf1b34d6815bafc213a5ff77a0cfea0b8b1d8aa95caf8eb1dbf44` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `9ff0cf29587bc1c532eaa39a28547e6aa47f22d7f2f06c5dfb73740bc2625627` |
 
-The PDF and figures were regenerated with Tectonic 0.16.9 by
-`python3 scripts/build_ic_curve_paper.py`. The PDF producer is xdvipdfmx
-(0.1). This replaces the earlier, incorrect pdfTeX build attribution.
+The PDF and figures were regenerated on 18 November 2026 with pdfTeX 1.40.25 (TeX Live 2023/Debian),
+matplotlib 3.11.2 and numpy 2.5.3 by `python3 scripts/build_ic_curve_paper.py`; the PDF producer is
+pdfTeX-1.40.25. The previous version was built with Tectonic 0.16.9 (producer xdvipdfmx); the figure
+script and its input records are unchanged, so the figures differ only by the plotting and TeX toolchain.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 
@@ -63,7 +66,7 @@ older saved audit as evidence for modules added later.
 - PDF builds without LaTeX warnings, unresolved references or overfull boxes.
 - A4, author email on page 1, PDF metadata title matches the manuscript.
 - Abstract agrees with the LaTeX source.
-- Form constraints checked on 15 November 2026 and again on the text of 16 November: the abstract is ASCII apart from the "ö" of
+- Form constraints checked on 15 November 2026 and again on the texts of 16 and 18 November: the abstract is ASCII apart from the "ö" of
   "Gröbner", with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
   for at least 64 characters), and every keyword phrase is at most 40 characters.
 - Mathematical and reproducibility limits: see `../README.md` and

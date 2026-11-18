@@ -56,7 +56,7 @@ summary = dict(
 GROUPS = [('Sweep, prime and binary (Sec.~\\ref{sec:sweep})', ('S1',)),
           ('Two summands, $k=8,9$ (Sec.~\\ref{sec:depth89})', ('S2',)),
           ('Two summands, $k=10$--$14$ (Sec.~\\ref{sec:depth14})', ('S7',)),
-          ('Three to eight summands, prime (Sec.~\\ref{sec:msummands})', ('S4',)),
+          ('Direct $m$-summand, prime, $m=2,\\ldots,8$ (Sec.~\\ref{sec:msummands})', ('S4',)),
           ('Three to five summands, prime and binary', ('S3', 'S3pod')),
           ('Binary, $m=2,3$ (Sec.~\\ref{sec:sweep})', ('S5',)),
           ('Binary to dimension $16$ (Sec.~\\ref{sec:binarydeep})', ('S6',))]

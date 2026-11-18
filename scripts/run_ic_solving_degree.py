@@ -107,7 +107,7 @@ def msum():
             continue
         m, k = rec['m'], rec['k']
         yield dict(set='S4', id='m%dk%dp%da%db%dt%d' % (m, k, rec['p'], rec['a'], rec['b'], rec['t']), family='prime', m=m,
-                   k=k, r=m * k, p=rec['p'], lfd=rec['lfd_exact'], npoints=rec.get('points'), points=None)
+                   k=k, r=m * k, p=rec['p'], lfd=rec['lfd_exact'], npoints=rec['zeros'], points=None)
 
 
 def binary_results():
