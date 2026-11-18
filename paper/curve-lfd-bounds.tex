@@ -68,9 +68,9 @@ Koblitz systems we compute exact values through dimension $16$ and
 reproduce them in separate runs of the same engine. These computations refute preregistered laws based on the solution count. By a theorem of
 Caminata and Gorla the solving degree is the larger of the LFD and the
 largest degree of the reduced Gr\"obner basis. On these cube systems we
-bound the latter by $\log_2$ of the number of solutions, so the solving
+bound the latter by $\max(2,\lfloor\log_2(|Z|+1)\rfloor)$ for $|Z|$ solutions, so the solving
 degree of two-summand prime systems is at most $k+2$; it is determined on
-all \SDSYSTEMS{} systems with exact LFD and equals the LFD on all but
+all \SDSYSTEMS{} systems with exact LFD (three of them at $k=14$, with a lifted upper bound) and equals the LFD on all but
 eight. The results concern
 polynomial-system degrees; we do not estimate discrete-logarithm costs.
 \end{abstract}
@@ -155,7 +155,7 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
  Gorla~\cite{cg}, the reduced Gr\"obner basis of these systems has degree
  at most $\max(2,\lfloor\log_2(|Z|+1)\rfloor)$ in the number $|Z|$ of
  solutions (Lemma~\ref{lem:cube}), so $\sd\le\max(\lfd,k+1)\le k+2$ for two
- summands and $\sd\le mk+1$ in general (Theorem~\ref{thm:sd}); every lower
+ summands and $\sd\le mk+1$ for direct $m$-summand prime systems (Theorem~\ref{thm:sd}); every lower
  bound on the LFD, including unboundedness, is one on the solving degree;
  on the systems of this paper the solving degree equals the LFD on
  \SDEQUAL{} of \SDKNOWN{} settled systems and exceeds it by one or two on
@@ -1902,8 +1902,12 @@ $\lfloor(k-10)/14\rfloor<d\le k+2$ for $k\ge24$ (for $24\le k\le37$ the
 lower half says only $d\ge2$, which is why the theorem is stated from
 $k=38$); the splitting criterion is proved as an equivalence. Not formalized: the vanishing-sum bound for a
 curve of genus one; the kernel has a
-curve model only for the instances of Theorem~\ref{thm:growthfixed}, where
-the function field is rational. For targets with nonzero ordinate the
+curve model only over $\mathbb{C}$, for the family of
+Theorem~\ref{thm:growthfixed}(1), where the function field is rational;
+over prime fields it proves instead the restricted box form of the
+vanishing-sum bound, for exponents in $[0,2^k)^2$
+(Theorem~\ref{thm:growthfixed}(2), (3) and
+Corollary~\ref{cor:rationalprime}). For targets with nonzero ordinate the
 function field, the two coordinate functions and their pole orders are
 kernel-checked (Proposition~\ref{prop:nontorsion}), without the bound. The hypothesis ``$t\ne0$'' is used only
 there, to produce a curve model, so it does not appear in the Lean
@@ -1922,7 +1926,7 @@ For curves with a target of order two the hypothesis of the Lean statement
 is discharged in Lean. Let $E_a\colon y^2=x^3+ax-(1+a)$, which contains the
 point $(1,0)$ of order two, and $t=1$, the abscissa of that point. Since
 $4a^3+27(1+a)^2=(a+3)^2(4a+3)$, the curve is nonsingular for $a\ne-3,-3/4$;
-$E_6\colon y^2=x^3+6x-7$ is nonsingular away from characteristic $3$
+$E_6\colon y^2=x^3+6x-7$ is nonsingular away from characteristics $2$ and $3$
 ($4\cdot6^3+27\cdot7^2=3^7$).
 
 \begin{theorem}[Growth for a target of order two; kernel-checked]\label{thm:growthfixed}
@@ -1970,7 +1974,8 @@ $|(x_1-1)x_2-x_1|\le3<|a|-2\le|a+2|$ when $|a|>5$.
 For rational $a$, the kernel proves the exact grid-zero criterion
 $a\in\{-3,-1,1\}$. Indeed a zero with $a\ne-3$ gives
 $x_1+\overline{x_1}=-a-1$, a rational algebraic integer between $-2$ and
-$2$; the two-power order condition excludes the integer values $-1$ and $1$.
+$2$; the two-power order condition excludes the trace values $\pm1$, that is
+$a=0$ and $a=-2$.
 The remaining parameters have the explicit grid zeros $(1,1)$, $(i,-i)$
 and $(-1,-1)$, respectively. The singular parameters are $-3$ and $-3/4$,
 so the stated rational family has both a unit ideal and the selector upper
@@ -2004,17 +2009,18 @@ targets, and that theorem stays a written proof, conditional in Lean
 construction that is kernel-checked).
 Item (1) covers a one-parameter family of curves. Items (2) to (4) give
 the sharper fixed-$E_6$ statements; Corollary~\ref{cor:rationalprime}
-below extends prime-field growth to the rational-parameter family. Item (3) now has the explicit sufficient cutoff
-$B_k$, rather than an unspecified integer from a B\'ezout identity. This
-cutoff improves the earlier $2^{2^k}9^{4^k}$ by a factor $2^{2^k}$, but remains loose; no least suitable prime is computed. The statement
+below extends prime-field growth to the rational-parameter family. Item (3) has the explicit sufficient cutoff
+$B_k$, rather than an unspecified integer from a B\'ezout identity; the
+general column bound gives $2^{2^k}9^{4^k}$, and the nonnegativity of the
+entries removes the factor $2^{2^k}$. The cutoff remains loose; no least suitable prime is computed. The statement
 concerns pairs $(p,k)$, with $p$ allowed to grow with $k$. By (4), the unit-ideal hypothesis fails for some primes
 $p\equiv1\pmod{2^{k+1}}$ at every depth (Remark~\ref{rem:fermatbad});
 this does not decide whether their LFD satisfies the numerical bound of (3). Item (2) holds for every prime $p>2^{k+1}$,
 and on the primes of (4) it carries no information, the ideal being proper
 there. On the unit-ideal instances of (1) and (3), $3t^2+a=3+a\ne0$,
 so Theorem~\ref{thm:three} already gives $\lfd\ge4$; the lower bound of
-(1) and (3) exceeds it from $k=66$ on. As elsewhere in the development, no elliptic curve appears
-in Lean: the statements concern the explicit polynomial system with
+(1) and (3) exceeds it from $k=66$ on. Outside the modules of Proposition~\ref{prop:nontorsion}, no elliptic
+curve appears in Lean: the statements concern the explicit polynomial system with
 coefficients $a$, $b=-1-a$ and $t=1$ (Appendix~\ref{app:lean}).
 
 \begin{corollary}[Explicit rational-parameter prime-field growth; kernel-checked]
@@ -2154,9 +2160,9 @@ and $Y\ne0$.
  and differs from every constant; and $z\in L$, defined by the formula
  above, satisfies $S_3(x,z,t)=0$. If $t\ne0$, then $z\ne0$.
 \item \emph{Two places.} In the fraction field of the coordinate ring
- $K[X,T]/(T^2-f)$ there are two distinct discrete valuations, at the point
- at infinity $O$ and at $R$, with uniformizers $x/y$ and $x-t$. With
- $t\ne0$, the orders are
+ $K[X,T]/(T^2-f)$ there are discrete valuations at the point at infinity $O$ and at $R$,
+ with uniformizers $x/y$ and $x-t$. With $t\ne0$ they are distinct, and
+ the orders are
  \[
  \operatorname{ord}_O(x)=-2,\quad \operatorname{ord}_O(y)=-3,\quad
  \operatorname{ord}_O(z)=0,\qquad
@@ -2307,7 +2313,8 @@ the inputs.
 
 \begin{lemma}[Gr\"obner degree on a cube; written proof]\label{lem:cube}
 Let $F$ contain the chain equations $G_{m,k}$ over a field with $2\ne0$,
-or all Boolean equations $Z_v^2-Z_v$. Let $r$ be the number of variables,
+or all Boolean equations $Z_v^2-Z_v$, and suppose every variable is constrained by one of
+these equations. Let $r$ be the number of variables,
 $Z$ the zero set of $F$ over an algebraic closure, and $\sigma$
 degree-compatible. Then:
 \begin{enumerate}
@@ -2372,7 +2379,7 @@ Let $\sigma$ be any degree-compatible term order.
 \item \emph{Direct $m$-summand prime systems.} These satisfy
  $\sd_\sigma\le\max(\lfd,mk)\le mk+1$, so wherever $\lfd=mk+1$, also
  $\sd_\sigma=mk+1$.
-\item \emph{Equality.} In general $\sd_\sigma=\lfd$ whenever $Z=\emptyset$
+\item \emph{Equality.} For every system as in Lemma~\ref{lem:cube}, $\sd_\sigma=\lfd$ whenever $Z=\emptyset$
  or $\lfd\ge\max(2,\lfloor\log_2(|Z|+1)\rfloor)$.
 \end{enumerate}
 \end{theorem}
@@ -2399,9 +2406,11 @@ degree-compatible order.
 
 \paragraph{The systems of this paper.} We applied
 Theorem~\ref{thm:sd}(4) to every system with an exact LFD and a stored
-solution set or solution count: \SDSYSTEMS{} systems. Where it did not
-settle the question, and on every proper system with at most $3000$
-solutions anyway, we computed $\gbdeg$ exactly. The computation
+solution set or solution count: \SDSYSTEMS{} systems, including the three at
+$k=14$ whose value $7$ rests on the lifted upper bound
+(Section~\ref{sec:depth14}). Where it did not settle the question, and on
+every proper system with a stored solution set of at most $3000$ points
+anyway, we computed $\gbdeg$ exactly. The computation
 (\code{csd/ic\_solving\_degree.py}) is Buchberger--M\"oller on the
 squarefree staircase: a monomial is standard exactly when its evaluation
 vector on $Z$ is independent of those of the smaller standard monomials.
@@ -2410,15 +2419,14 @@ following a protocol frozen before the first computation. The results are
 in Table~\ref{tab:sd}.
 \begin{itemize}
 \item \emph{Settled.} The solving degree is determined on \SDKNOWN{} of the
- systems and equals the LFD on \SDEQUAL{}. Of these, \SDUNIT{} have no
+ systems and equals the LFD on \SDEQUAL{}. Of the \SDKNOWN{}, \SDUNIT{} have no
  solutions, \SDCOUNT{} meet the counting condition and \SDCOMPUTED{} needed
  the computation.
 \item \emph{Above the LFD.} It is larger on eight systems.
  \begin{itemize}
  \item Two are binary systems of the sweep with $\lfd=0$: the input list is
   already closed, and $\sd=\gbdeg=2$.
- \item Six are binary two-summand descents over $\F_{2^{11}}$ to
-  $\F_{2^{14}}$ with $k=8$ or $10$ and $129$ to $197$ solutions. On these,
+ \item Six are binary two-summand descents over $\F_{2^{14}}$ with $k=8$ or $10$ and $129$ to $197$ solutions. On these,
   $\lfd=3$ and the reduced basis has elements of degree $4$ in both orders,
   so $\sd=4=\lfd+1$.
  \end{itemize}
@@ -2475,9 +2483,11 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  protocol was frozen, and on proper prime instances at $k=13,14$ only two
  orders were computed. The
  Gr\"obner-basis degrees come from one implementation. Singular agrees
- with it on a sample of 182 systems, and PolyBoRi on every computed binary
- system. The prime degrees at depth nine and at $k=13,14$ have no second
- engine (Appendix~\ref{app:checks}).
+ with it on a sample of 182 systems, and PolyBoRi on the 2{,}352 computed
+ binary systems of the sweep and the binary grids. The prime degrees of
+ eight of the ten depth-nine systems and at $k=13,14$, and the binary
+ degrees of the deep grid (dimension $10$ to $14$) and with $m\ge3$, have
+ no second engine (Appendix~\ref{app:checks}).
 \item \emph{The value $7$ at $k=14$.} The lower bound $\lfd\ge7$ rests on
  closed degree-$6$ closures of four instances from one engine (on each unit
  instance two runs with equal basis hashes and an independent check of the
@@ -2742,8 +2752,8 @@ uncertified depth-$14$ lift. The eight modules
 \code{GrowthNonTorsion*.lean} of Proposition~\ref{prop:nontorsion} are not
 imported by the root module and are not among the \LEANDECLS{}
 declarations: a separate workflow (\code{non-torsion-bridge.yml}) builds
-them and requires the three foundational axioms, by name, for $58$ of
-their theorems.
+them and allows only the three foundational axioms for $58$ of their
+theorems (run 43814371146 of that workflow passed).
 
 Table~\ref{tab:lean} maps each statement of the paper to its declarations,
 named relative to the root namespace \code{ICFallDegrees}; in each cell a
@@ -2780,7 +2790,7 @@ $1\in V_4$ on the $(0,0)$ family & \code{PrimeM2Sharp.one\_at\_four}\\
 Local-to-global criterion & \code{LocalReductionBound.lfd\_bound\_of\_local}\\
 Quotient exclusion principle & module \code{QuotientLowerBound}\\
 Theorem~\ref{thm:growth} (conditional) & \code{GrowthMain.CurveModel}, \code{growth\_theorem}, \code{growth\_theorem\_linear}, \code{growth\_lfd\_window}, \code{GrowthExistence.growth\_instance\_window}, \code{GrowthCriterion.closed\_iff\_fei}\\
-Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.unit\_complex\_of\_norm\_gt}, \code{GrowthRationalParameterClassification.exists\_lfd\_linear\_window}; (2) \code{GrowthPrimeE6NativeNonmembership.e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthSharpPrimeBound.prime\_lfd\_window}, \code{eliminant\_det\_bound}, \code{GrowthFixedE6PrimeSequence.exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.e6\_not\_unit\_of\_fermat\_factor}\\
+Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.unit\_complex\_of\_norm\_gt}, \code{GrowthTwoTorsionFamily.exists\_lfd\_linear\_window}, \code{GrowthRationalParameterClassification.exists\_lfd\_linear\_window}, \code{grid\_zero\_iff}; (2) \code{GrowthPrimeE6NativeNonmembership.e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthSharpPrimeBound.prime\_lfd\_window}, \code{eliminant\_det\_bound}, \code{GrowthExplicitPrimeBound.exists\_prime\_window\_above}, \code{GrowthFixedE6PrimeSequence.exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.e6\_not\_unit\_of\_fermat\_factor}\\
 Corollary~\ref{cor:rationalprime} & \code{GrowthRationalPrimeCutoff.rational\_prime\_growth}, \code{denominator\_and\_parameter\_guards}, \code{matrix\_det\_ne\_zero}; \code{GrowthRationalPrimeNative.not\_one\_of\_large\_prime}\\
 \bottomrule
 \end{tabular}
@@ -2794,8 +2804,10 @@ Corollary~\ref{cor:rationalprime} & \code{GrowthRationalPrimeCutoff.rational\_pr
 
 \paragraph{What is conditional.} The depth-$14$ summary takes the four
 recorded closures of Section~\ref{sec:depth14} as hypotheses, the growth
-theorem the curve model (discharged in Lean for
-Theorem~\ref{thm:growthfixed} and Corollary~\ref{cor:rationalprime}), and the growth schema one base certificate per
+theorem the curve model (discharged in Lean over $\mathbb{C}$ for
+Theorem~\ref{thm:growthfixed}(1); for Theorem~\ref{thm:growthfixed}(2), (3)
+and Corollary~\ref{cor:rationalprime} Lean instead proves the restricted
+box form of the vanishing-sum bound natively over the prime field), and the growth schema one base certificate per
 degree; the local-to-global step for prime chains is a written
 instantiation of \code{LocalReductionBound.lfd\_bound\_of\_local}.
 
@@ -3039,7 +3051,7 @@ the squarefree staircase. Four checks were run on them.
  ($16$ and $20$ variables) finished in at most $20$ seconds each and
  confirm $\gbdeg=4$.
 \item \emph{PolyBoRi.} The graded lexicographic degrees agree on all 2{,}352
- computed binary systems, including all eight with $\sd>\lfd$. The Boolean
+ computed binary systems of the sweep and the binary grids, including all eight with $\sd>\lfd$. The Boolean
  ring imposes the field equations implicitly, so we add the square $u^2$ of
  each standard variable before comparing.
 \item \emph{Mutant closure.} A dense implementation of~\cite[Def.~1.1]{cg} gives $\sd$ directly. It agrees with
@@ -3051,8 +3063,9 @@ the squarefree staircase. Four checks were run on them.
  reproduces $Z$ on 100 prime sweep systems, and $|Z|\le2^{k+1}$ holds on all
  1{,}932 two-summand systems.
 \end{itemize}
-So the prime Gr\"obner degrees at depth nine and at $k=13,14$ rest on the
-staircase computation alone.
+So the prime Gr\"obner degrees of eight of the ten depth-nine systems and
+at $k=13,14$, and the binary degrees of the deep grid and of the systems
+with $m\ge3$, rest on the staircase computation alone.
 
 \section{Data and artifacts}\label{app:data}
 The companion repository holds the records and verification reports:
@@ -3079,7 +3092,7 @@ hashes.
 Result & Location\\
 \midrule
 Lean development and audit & \code{formal/ICFallDegrees/}; audit report \code{experiments/\allowbreak{}ic-lean/}\\
-Explicit prime cutoffs and rational-family replay & \code{experiments/explicit-prime-bound-20261115/}, \code{experiments/sharp-prime-bound-20261115/}, \code{experiments/rational-prime-growth-20261115/}; scripts \code{check\_n8\_explicit\_prime\_bound.py}, \code{check\_n8\_sharp\_prime\_bound.py}, \code{check\_n8\_rational\_prime\_growth.py} in \code{scripts/}\\
+Explicit prime cutoffs and rational-family replay & \code{experiments/explicit-prime-bound-20261115/}, \code{experiments/sharp-prime-bound-20261115/}, \code{experiments/rational-prime-growth-20261115/}; scripts \code{check\_n8\_explicit\_prime\_bound.py}, \code{check\_n8\_sharp\_prime\_bound.py}, \code{check\_n8\_rational\_prime\_growth.py} in \code{scripts/}; Remark~\ref{rem:fermatbad}: \code{ic-bounds-growth/\allowbreak{}prime-grid-exceptions.json}, \code{check\_n8\_prime\_grid\_exceptions.py}\\
 Function field and pole orders for $Y\ne0$ (Proposition~\ref{prop:nontorsion}) & \code{formal/ICFallDegrees/GrowthNonTorsion*.lean}, \code{formal/N8NonTwoTorsionPolesAudit.lean}; notes \code{docs/proofs/N8-non-t*.md}; local kernel receipts \code{experiments/non-two-torsion-*/}\\
 Depth-$7$ and depth-$6$ kernel certificates & \code{experiments/\allowbreak{}ic-bounds-cert/}, \code{experiments/\allowbreak{}ic-bounds-exact-k6/}\\
 Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md}, \code{N8-fermat-diagonal-obstruction-20261114.md} and the other \code{N8-*.md}; reviews of the written growth proof: \code{N8-growth-review.md}, \code{N8-growth-review-redteam.md}\\
@@ -3100,9 +3113,9 @@ Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experi
 Four and five summands (exact closures) & \code{experiments/\allowbreak{}ic-bounds-msummands/}\\
 Binary grids and laws & \code{experiments/\allowbreak{}ic-bounds-binary/}, \code{experiments/\allowbreak{}ic-bounds-binary-law/}, \code{experiments/\allowbreak{}ic-bounds-binary-deep/}\\
 Ordinary-ring validation & \code{experiments/\allowbreak{}ic-curve-validation/}\\
-Solving degree (Section~\ref{sec:solving}) & \code{experiments/\allowbreak{}ic-solving-degree/} (\code{PROTOCOL.md}, \code{rows-merged.jsonl}, \code{summary.json}, \code{checks.json}); proofs \code{docs/proofs/N10-solving-degree.md}\\
+Solving degree (Section~\ref{sec:solving}) & \code{experiments/\allowbreak{}ic-solving-degree/} (\code{PROTOCOL.md}, \code{rows-merged.jsonl}, \code{summary.json}, \code{checks.json}); \code{ic-bounds-solving/}; proofs \code{N10-} and \code{SD1-solving-degree.md}\\
 Unpublished binary draft (Remark~\ref{rem:binarydraft}) & \code{paper/binary-lfd.tex}\\
-Decomposition without a Gr\"obner basis (Section~\ref{sec:future}) & \code{experiments/\allowbreak{}ic-rootfind/} (\code{README.md}, records \code{*.jsonl}; code \code{csd/ic\_rootfind.py}, \code{csd/\_rootfind.c}, \code{rust/ic\_rootfind/}); added after the snapshot, in commit \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/a28475a}{\code{a28475a}}\\
+Root finding (Section~\ref{sec:future}) & \code{experiments/\allowbreak{}ic-rootfind/}, \code{rust/\allowbreak{}ic\_rootfind/}; after the snapshot, commit \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/a28475a}{\code{a28475a}}\\
 \bottomrule
 \end{tabular}
 \caption{Location of the data, records and reports for each result.}

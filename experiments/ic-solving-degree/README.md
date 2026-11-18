@@ -56,8 +56,10 @@ directory and `PYTHONNOUSERSITE=1`.
 
 ## Results (DRL; see `summary.json`)
 
-- **Settled.** The solving degree is settled on all 5,813 systems with an exact LFD.
-  - 1,879 settled by `unit`, 3,084 by `count`, 850 by computation.
+- **Settled.** The solving degree is settled on all 5,813 systems with an exact LFD (three of them at
+  k = 14, whose upper bound 7 is lifted; `DEEP_LFD` in `scripts/run_ic_solving_degree.py`).
+  - 2,496 settled by `unit`, 2,467 by `count`, 850 by computation (corrected 18 November 2026, see
+    *Erratum* below; previously 1,879 and 3,084).
   - `sd = LFD` on 5,805.
   - Five of the 850 computed systems are labelled `beyond_cap` (see below).
 - **`sd > LFD` on 8 systems.** The same 8 in both orders:
@@ -114,3 +116,16 @@ See `checks.json`; the results are summarized in the paper's Appendix `app:check
 | `summary.json`, `checks.json` | aggregate results, check results |
 | `sage_gb_stream.sage`, `sage-in.json`, `sage-out.jsonl`, `sage-shard*` | the C1 Singular run (seed 20261114) |
 | `polybori_gb.sage`, `polybori-all-out.jsonl`, `checks-polybori-all.json` | the C1b PolyBoRi run |
+
+## Erratum, 18 November 2026
+
+Set S4 (direct m-summand prime systems, `experiments/ic-bounds-msum/results.jsonl`) passed the record's
+`points` field as the solution count. That field is the grid size 2^(mk); the solution count is `zeros`.
+With the grid size every S4 system was tagged `count`, including the 617 with no solutions. The driver now
+passes `zeros` (`msum()` in `scripts/run_ic_solving_degree.py`); only the S4 rows were regenerated
+(`--sets S4`) and spliced into `rows.jsonl` in generation order, and `summarize.py` was rerun. Changed fields:
+`points`, `count_bound` on all 733 S4 rows and `tag` on 617 (`count` -> `unit`). No Groebner degree, LFD or
+solving degree changed: S4 has no stored solution set, so none of its systems was computed, and the bound
+|Z| <= 2^(mk) used before was valid. The table row is relabelled "Direct m-summand, prime, m = 2..8" because
+the set includes 47 systems with m = 2.
+
