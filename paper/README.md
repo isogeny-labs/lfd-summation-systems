@@ -1,6 +1,9 @@
 # Main manuscript: ePrint preparation
 
-**Status, 18 November 2026:** candidate for author review. The cleanup of
+**Status, 18 November 2026:** ready for submission; what remains is the
+author's own confirmation of the ePrint form (license, publication
+information, authorship) and the submission itself, which only an author can
+make. The cleanup of
 17 November put the full proof of the growth theorem into Appendix C,
 shortened the abstract, added a statement on the use of AI tools (the author
 must confirm its wording before submission) and removed wording about

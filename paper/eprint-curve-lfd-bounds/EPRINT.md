@@ -49,8 +49,8 @@ records at commit `98b7d87`, not a certificate; `../latest-update-20261118.md`).
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `3594bc374c17435c557c5b4a8b04035b0c81128237c4d9000d8a11af3e565d37` |
-| `paper/curve-lfd-bounds.tex` | `80262d5a9ba445a0bf13ad76e806af99d41cf71938aa2c95bf3352718cd1e6c9` |
+| `paper/curve-lfd-bounds.pdf` | `2972b38c28d2c4a3ac4de17fd46b169329e4843c9aef3b23b54bb537f7634d02` |
+| `paper/curve-lfd-bounds.tex` | `003ca1d52ed96b251a3748f6afc55533989b27040894558b18fe708e3b44da40` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
 The PDF and figures were regenerated on 18 November 2026 with Tectonic 0.16.9 by
