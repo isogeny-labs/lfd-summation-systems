@@ -1489,7 +1489,7 @@ $499{,}178-2^{15}=466{,}410>448{,}922$. Because the instances differ, the
 runs do not test the stored space $W$ of the unit instances on which the
 upper bound rests (Section~\ref{sec:limitations}).
 % Second engine on the paper's own unit instance (run J1 of paper-runs-20261118): isogeny-labs/crypto,
-% branch wt/paper-engine, records commit 98b7d87056 (local at the time of writing), directory
+% branch wt/paper-engine, records commit 98b7d87056, directory
 % research/hky_paper_runs_20261118/: README.md (system correspondence, gate table), pod/LAUNCH.md,
 % results/J1/record.json, job.json, basis.bin.json. Engine src/cryptanalysis/hky_fp_tower_fast2.rs (hky3),
 % generator examples/pkm_tower_pilot.rs (--instance mode, examples/pkm_tower_paper/paper.rs), engine commit
@@ -2688,11 +2688,11 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  the unit instance over $p=65537$ at $k=14$, once, with the same
  dimension, profile and part ranks and an engine-internal closedness check
  (Section~\ref{sec:depth14}). On that instance $W\supseteq V_6$ and $\dim W$
- equals that dimension, so $W\subseteq V_6$ now also follows if that engine added
+ equals that dimension, so $W\subseteq V_6$ also follows if that engine added
  only admissible products; the containment thus rests on either of two
  separately written engines, and neither is certified to have this
  property. The canonical basis hashes have not been compared, the second
- lift on that engine's basis has not finished, and on the unit instance
+ lift on that engine's basis is not available, and on the unit instance
  over $p=163841$ no second engine has computed the closure at $k=14$; an
  earlier version computed it on another instance, over $p=2013265921$,
  with the same dimension and profile, which says nothing about $W$.
