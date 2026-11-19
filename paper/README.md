@@ -16,7 +16,12 @@ third, separately written lift of the second engine's depth-14 spaces on
 both unit instances (1 in V_7), its depth-14 closure over p = 163841, and degree-6 closures
 without 1 at depths 15 and 16 whose profiles follow the recursion predicted
 on 10 November; none is a certificate, and LFD <= 7 at depths 15 and 16 is
-open ([update note](latest-update-20261119.md)). It
+open ([update note](latest-update-20261119.md)). Also on 19 November the
+E6 proper-ideal growth theorem of PR #33 was folded into item (5) of the
+target-of-order-two theorem: the lower bound holds at every admissible prime
+for k >= 38 without a unit-ideal premise, which also settles the
+Fermat-factor caveat of item (4) in that range; the capped local searches of
+PR #35 were merged as a record and change no claim. It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint
@@ -42,7 +47,8 @@ bound is kernel-checked without it (over the complex numbers for a
 one-parameter family of curves, and for every allowed rational parameter over admissible prime fields above
 an explicit denominator-sensitive cutoff; E6 retains the sharper cutoff B_k=9^(4^k)). For prime factors of Fermat numbers,
 the ideal is proper (also kernel-checked), so the unit-ideal argument does not
-establish the LFD lower bound; the numerical bound there remains undecided. At depth 14 the lower bound is certified, and the upper bound
+establish the LFD lower bound; for k >= 38 item (5) of that theorem supplies
+it from a degree-two witness, and below k = 38 it remains undecided. At depth 14 the lower bound is certified, and the upper bound
 uses a degree lift replicated by a second implementation on both unit instances.
 The lift still assumes that its input space is contained in the true degree-6
 closure; the independent closed-space check proves the reverse inclusion.
