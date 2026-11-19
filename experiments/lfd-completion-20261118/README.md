@@ -215,3 +215,30 @@ compressed prefix is undergoing independent membership replay. A separate
 input file retains exactly the same system and degree with a 300-million-
 term budget for continuation; the two-GiB artifact cap, disk floor and
 30-minute producer time limit remain in force.
+
+## Indexed independent replay
+
+`replay_indexed.rs` retains the independent replay program's exponent
+reconstruction, prime checks, row identities, normalization and pivot
+checks. It builds its own registry from encountered monomial codes, rather
+than importing producer code or its precomputed monomial domain. Reductions
+use indexed coefficient arrays and compact stored rows. Full closedness
+uses the original separate residual check. Both replay programs are run
+through the same positive and corruption controls: 54 local tests pass.
+
+The new replay path checked the complete degree-7 certificate with full
+closedness. It also checked all 101,595 retained rows of the capped
+p=114689 degree-8 prefix, performing 3,936,050,458 replay multiply-adds in
+60.71 seconds. This is a local membership check, not an exact closure or
+a degree-8 witness. The original replay path checked all 103,008 rows of
+the p=163841 prefix, with 6,338,057,280 replay multiply-adds. Both prefixes
+are now verified and suitable for continuation. The actual first-prime
+cap was 100 million terms; the second-prime cap was 150 million terms.
+
+`verify_compressed.py --engine indexed` selects the indexed checker and
+keeps its receipt separate from the original checker. A continuation can
+select it with `run_heap.py --replay-engine indexed`. Receipts bind the
+selected verifier source and exact proof files. Both original systems are
+continuing with 300-million-term budgets, exact source cursors, 30-minute
+producer caps and unchanged artifact/disk guards. No degree-8 exact result
+is inferred from the partial counts.

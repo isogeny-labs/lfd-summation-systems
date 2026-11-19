@@ -45,11 +45,11 @@ def test_degree_D_source_is_not_shiftable(tmp_path):
         replay(inp,ledger,basis,hashlib.sha256(basis.read_bytes()).hexdigest())
 
 
-@pytest.fixture(scope='module')
-def rust_checker(tmp_path_factory):
+@pytest.fixture(scope='module',params=['baseline','indexed'])
+def rust_checker(tmp_path_factory,request):
     import subprocess
     out=tmp_path_factory.mktemp('rust-replay')/'checker'
-    subprocess.run(['rustc','-O',str(HERE/'replay.rs'),'-o',str(out)],check=True)
+    subprocess.run(['rustc','-O',str(HERE/('replay.rs' if request.param=='baseline' else 'replay_indexed.rs')),'-o',str(out)],check=True)
     return out
 
 

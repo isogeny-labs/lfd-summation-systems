@@ -11,16 +11,16 @@ def digest(path,decoded=False):
     return h.hexdigest()
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed','restart'],default='heap');ap.add_argument('--resume',type=Path);ap.add_argument('--resume-cursor',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed','restart'],default='heap');ap.add_argument('--resume',type=Path);ap.add_argument('--resume-cursor',action='store_true');ap.add_argument('--replay-engine',choices=['baseline','indexed'],default='baseline');args=ap.parse_args()
     resume_record=None;cursor=None
     if args.resume_cursor and not args.resume:raise ValueError('cursor requires a seed run')
     if args.resume:
         if args.engine!='restart':raise ValueError('--resume requires --engine restart')
         from verify_compressed import verify
-        verify(args.resume,reuse=True)
+        verify(args.resume,reuse=True,engine=args.replay_engine)
         old=(args.resume/'input.txt').read_text().split();new=args.input.read_text().split()
         if old[:5]!=new[:5] or old[8:]!=new[8:]:raise ValueError('resume changes the polynomial system or degree')
-        resume_record={'run_dir':str(args.resume.resolve()),'result_sha256':digest(args.resume/'result.json'),'verification_sha256':digest(args.resume/'replay.json')}
+        resume_record={'run_dir':str(args.resume.resolve()),'result_sha256':digest(args.resume/'result.json'),'verification_sha256':digest(args.resume/('replay.json' if args.replay_engine=='baseline' else 'replay-indexed.json'))}
         if args.resume_cursor:
             old_receipt=json.loads((args.resume/'result.json').read_text())
             cursor=old_receipt.get('schedule_products',old_receipt.get('products') if not old_receipt.get('resume_from') else None)

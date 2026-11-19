@@ -1,0 +1,32 @@
+{
+  "status": "capped",
+  "p": 114689,
+  "m": 5,
+  "k": 3,
+  "D": 8,
+  "derived_rank": 101595,
+  "contains_one": false,
+  "products": 497682,
+  "terms": 100013236,
+  "muladds": 33920505389,
+  "seconds": 1396.112245,
+  "source_sha256": {
+    "heap_producer.rs": "9b90ba6185166d15c3a59add55bdc926cb1b14ff5d378fa6d6d86447e29e6b5e",
+    "run_heap.py": "ade19c80545004535424809fa6ab89e16cca9d52f8aec947b4cacdad2d4cb664"
+  },
+  "input_sha256": "fc11c011d710e848719aff7f1496600ef85843fe803fef48d3d228cd30ec0332",
+  "original_input_sha256": "de63da2d681b213b0d624f6969a4c40286c56665484992dc4e6665f75a267a70",
+  "elapsed_seconds": 1396.2855676660001,
+  "artifacts": {
+    "derivations.txt.gz": {
+      "sha256": "ce0de33e3f3ffa40ffc38b119401dc43d23d526a2e7c8b0ccc38520e365a1ae2",
+      "bytes": 21754327,
+      "decoded_sha256": "fab60d5fdcd32443c44d111b116a13d2d17a7aa7f81d5593db3b955aaade5436"
+    },
+    "basis.txt.gz": {
+      "sha256": "f4e3feb8699d6577920e6b8b39cb430d4cf4c66c0b6a10ef06400e477b5412c5",
+      "bytes": 607644256,
+      "decoded_sha256": "0ed0f56d91edce39142cefe8005e6a2db5b87597d205a93c2050bf4795725739"
+    }
+  }
+}
