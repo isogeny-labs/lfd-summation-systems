@@ -1,0 +1,52 @@
+{
+  "status": "capped",
+  "contains_one": false,
+  "compact_rows": 417,
+  "terms": 2006117,
+  "pairs_processed": 495,
+  "queued": 394,
+  "coprime_pairs_skipped": 0,
+  "muladds": 362917155,
+  "seconds": 33.552177,
+  "claim": "retained polynomial membership independently replayed; compact closedness remains unproved",
+  "producer_claim": "membership pending replay; compact closedness criterion unproved",
+  "queue_order": "frontier",
+  "pair_strategy": "coprime-pruned",
+  "replay_engine": "rust",
+  "engine": "rust",
+  "budget": {
+    "seconds": 120,
+    "max_rows": 10000,
+    "max_terms": 2000000,
+    "max_queue": 2000000,
+    "proof_byte_cap": 268435456,
+    "rss_cap_bytes": 2147483648
+  },
+  "replay": {
+    "status": "passed",
+    "verified_rows": 417,
+    "contains_one": false,
+    "closed_check": false,
+    "replay_muladds": 301212522,
+    "seconds": 4.251512,
+    "scope": "independent compact row membership only",
+    "input_sha256": "4deca2f16f788dad81622062312075365397abb2dc793c704c03146944d7d91b",
+    "proof_sha256": "17c7b26da48a2fcf5f12470db352ab981f5b935460d54f6d021745ad4f7ba20f",
+    "text_sha256": "ac9e885b420f760087fc99b306b10391ecc8a68a00284ef90c00978f3a305b19",
+    "text_bytes": 41604902,
+    "nodes": 417,
+    "verifier_source_sha256": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151",
+    "verifier_binary_sha256": "5607b991ba9fde56d4434bda7a3e62362a0ff65de88180fde81429868cc983ae",
+    "converter_source_sha256": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb"
+  },
+  "source_sha256": {
+    "compact_producer.rs": "85321e3760bfd3d5108ae71d24914915a35821e3bb7c39ddda0c02a297c56b3f",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run_compact.py": "7d8c4dffc096ada669f80b40a913d2f97e411052cdb7558dc814048e436700b8",
+    "compact_replay_rust.py": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb",
+    "compact_replay.rs": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151"
+  },
+  "input_sha256": "4deca2f16f788dad81622062312075365397abb2dc793c704c03146944d7d91b",
+  "original_input_sha256": "3afc6e0356fb1cde453038a38effe81214feac3739f47a81ef11e7a3ed047ce7",
+  "proof_sha256": "17c7b26da48a2fcf5f12470db352ab981f5b935460d54f6d021745ad4f7ba20f"
+}

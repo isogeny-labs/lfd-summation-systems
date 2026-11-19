@@ -407,3 +407,35 @@ caps, preserving the two-GiB RSS, 256-MiB proof and disk guards. Their
 receipts, once terminal and replayed, determine their status. CI run
 44469176506 passed the Python tests and Lean build/axiom audit on fe9ae7d;
 that result does not cover subsequent verifier and pruning changes.
+
+
+The independent finite-condition checks on all six five-minute lists reached
+30-second caps during carry checks, after checking the inputs; none supplied
+a complete closedness result. Derived carry-free leading coverage from the
+replayed depth14 lists is 256,042 and 256,020 respectively, below the archived
+rank 448,922. The counting receipts do not certify archived input containment.
+
+An optional `--queue-order frontier` processes higher-degree work first,
+then newer pairs. It searches for witnesses with a different schedule; it
+does not change degree admissibility or the independent replay requirements.
+All 2,075 controls agree with direct closure under this schedule and pass
+both replayers. The schedule changes 508 traces and skips 812 coprime pairs.
+The regression suite has 93 passing tests. Six two-minute original-input
+probes retain the same resource guards. Their terminal receipts, rather than
+this scheduling rationale, determine the experimental outcome.
+
+
+All six initial frontier probes reached their two-million-term caps and
+passed independent membership replay without a unit witness: both depth14
+inputs retained 998 generators, both split inputs 650, depth18 D7 686, and
+depth18 D8 417. These are different partial spaces, not a measured improvement
+in exact closure. Further bounded ten-million-term probes cover the two
+depth14 inputs, the two split inputs and depth18 D8.
+
+
+Both degree-first ten-million-term split searches are terminal. Each retained
+1,595 generators and reached the term cap after about 476 seconds, before
+the 600-second wall limit. Both complete retained proofs passed independent
+Rust replay (about 1.095 billion multiply-adds each). Neither contains 1;
+neither establishes exclusion or closedness. Original input and adjusted
+budget-input hashes are recorded separately in the receipts.

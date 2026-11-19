@@ -8,8 +8,8 @@ from compact_replay import verify
 HERE=Path(__file__).resolve().parent
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=30);ap.add_argument('--max-rows',type=int,default=500);ap.add_argument('--engine',choices=['python','rust'],default='python');ap.add_argument('--max-terms',type=int,default=1000000);ap.add_argument('--max-queue',type=int,default=2000000);ap.add_argument('--replay-engine',choices=['python','rust'],default='python');ap.add_argument('--prune-coprime',action='store_true');a=ap.parse_args()
-    if a.prune_coprime and a.engine!='rust':raise ValueError('pair pruning requires the Rust producer')
+    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=30);ap.add_argument('--max-rows',type=int,default=500);ap.add_argument('--engine',choices=['python','rust'],default='python');ap.add_argument('--max-terms',type=int,default=1000000);ap.add_argument('--max-queue',type=int,default=2000000);ap.add_argument('--replay-engine',choices=['python','rust'],default='python');ap.add_argument('--prune-coprime',action='store_true');ap.add_argument('--queue-order',choices=['degree','frontier'],default='degree');a=ap.parse_args()
+    if (a.prune_coprime or a.queue_order!='degree') and a.engine!='rust':raise ValueError('pair pruning requires the Rust producer')
     if min(a.seconds,a.max_rows,a.max_terms,a.max_queue)<1:raise ValueError('positive resource budgets required')
     if shutil.disk_usage(HERE).free<3*2**30:raise RuntimeError('need 3 GiB free')
     dest=HERE/'runs'/a.tag
@@ -32,6 +32,7 @@ def main():
         with (dest/'stderr.log').open('w') as err:
             start=time.monotonic();command=[str(binary),str(inp),str(proof),str(a.max_queue)]
             if a.prune_coprime:command.append('coprime')
+            if a.queue_order=='frontier':command.append('frontier')
             child=subprocess.Popen(command,stdout=subprocess.PIPE,stderr=err,text=True,start_new_session=True)
             while True:
                 try:
@@ -58,7 +59,7 @@ def main():
     if checked:
         result['producer_claim']=result.get('claim');result['claim']='retained polynomial membership independently replayed; compact closedness remains unproved'
         if checked['contains_one']:result['claim']='constant polynomial 1 independently derived within the recorded degree; lower bound remains separate'
-    result.update(pair_strategy='coprime-pruned' if a.prune_coprime else 'all-bounded',replay_engine=a.replay_engine,engine=a.engine,budget=budget,replay=checked,source_sha256=sources,input_sha256=hashlib.sha256(inp.read_bytes()).hexdigest(),original_input_sha256=original_sha,proof_sha256=hashlib.sha256(proof.read_bytes()).hexdigest() if proof.exists() else None)
+    result.update(queue_order=a.queue_order,pair_strategy='coprime-pruned' if a.prune_coprime else 'all-bounded',replay_engine=a.replay_engine,engine=a.engine,budget=budget,replay=checked,source_sha256=sources,input_sha256=hashlib.sha256(inp.read_bytes()).hexdigest(),original_input_sha256=original_sha,proof_sha256=hashlib.sha256(proof.read_bytes()).hexdigest() if proof.exists() else None)
     (dest/'result.json').write_text(json.dumps(result,indent=2)+'\n');(HERE/'results'/(a.tag+'.json')).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2),flush=True)
     if reason:raise SystemExit(1)
 if __name__=='__main__':main()

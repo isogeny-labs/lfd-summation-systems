@@ -419,10 +419,11 @@ def test_compact_rust_replay_binds_converted_bytes(tmp_path,monkeypatch):
     with pytest.raises(ValueError,match='converted text changed'):checker.verify(inp,proof)
 
 
-def test_coprime_pruning_readings_against_direct_closure(tmp_path):
+@pytest.mark.parametrize('frontier',[False,True])
+def test_coprime_pruning_readings_against_direct_closure(tmp_path,frontier):
     import subprocess,sys,json
     out=tmp_path/'pruned.json'
-    subprocess.run([sys.executable,str(HERE/'compact_falsify.py'),'--trials','64','--compiled','--prune-coprime','--out',str(out)],capture_output=True,text=True,check=True)
+    subprocess.run([sys.executable,str(HERE/'compact_falsify.py'),'--trials','64','--compiled','--prune-coprime','--out',str(out)]+(['--frontier'] if frontier else []),capture_output=True,text=True,check=True)
     assert json.loads(out.read_text())['all_agree']
 
 

@@ -1,0 +1,33 @@
+{
+  "scope": "derived carry-free leading coverage from independently replayed compact rows; no closedness or archived input-containment claim",
+  "proof_sha256": "b2e984451904589dfb9c53236b847bf2a47a63524c96610880c5216b4a43ac89",
+  "replay": {
+    "status": "passed",
+    "verified_rows": 1344,
+    "contains_one": false,
+    "closed_check": false,
+    "replay_muladds": 596113560,
+    "seconds": 15.964498,
+    "scope": "independent compact row membership only",
+    "input_sha256": "e5a59b43cd59812587d2d37773d1328f08d1702a9c2b9867fb5a40443a664ff8",
+    "proof_sha256": "b2e984451904589dfb9c53236b847bf2a47a63524c96610880c5216b4a43ac89",
+    "text_sha256": "e1525b85daae495940dbe06c240a6d3e04506b64822ab8e1984ef20739936b19",
+    "text_bytes": 52948248,
+    "nodes": 1344,
+    "verifier_source_sha256": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151",
+    "verifier_binary_sha256": "660d06ce4d83836fbe97d3e768c2b1c9131c1ae0c3ffb7e46782c555cc50ced2",
+    "converter_source_sha256": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb"
+  },
+  "covered_leading_counts": [
+    0,
+    0,
+    2,
+    152,
+    3574,
+    36208,
+    216084
+  ],
+  "covered_count": 256020,
+  "archived_target_rank": 448922,
+  "counting_source_sha256": "104573d5e328ea16441b3ef7440f0197d05ab8aa8f0d6dd1512332a0818c3dd2"
+}
