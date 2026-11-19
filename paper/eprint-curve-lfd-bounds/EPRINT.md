@@ -50,19 +50,19 @@ records at commit `98b7d87`, not a certificate; `../latest-update-20261118.md`).
 Revision of 19 November 2026 (abstract unchanged): the remaining results of
 the runs `paper-runs-20261118` from the `isogeny-labs/crypto` records at
 commit `12308b4`, each a corroboration and not a certificate: a third,
-separately written degree lift on the second engine's k = 14 space over
-p = 65537 (1 in V_7, same dimensions as the recorded lift); the second
+separately written degree lift on the second engine's k = 14 spaces on
+both unit instances (1 in V_7, same dimensions as the recorded lifts; the
+p = 163841 lift from the records at commit `6fc6ccf`); the second
 engine's k = 14 closure on the unit instance over p = 163841; degree-6
 closures without 1 at k = 15 (p = 65537) and k = 16 (new unit instance over
 p = 786433), whose profiles follow the recursion predicted on 10 November;
 the prediction scoring, limitations and future directions updated
-accordingly. The lift of the p = 163841 space had not finished
-(`../latest-update-20261119.md`).
+accordingly (`../latest-update-20261119.md`).
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `b44cdd8c56a94bdf1ca167c7eff89459b2760618c4b7ac7bc85eb440caab24d5` |
-| `paper/curve-lfd-bounds.tex` | `e95692753c5d3833db83575b31daf08705ea75a142a11cfea5d65550a0567170` |
+| `paper/curve-lfd-bounds.pdf` | `d0a446b77f66a796f2ec939cda98cddb9943dfd11d7dc6ce1561403027883546` |
+| `paper/curve-lfd-bounds.tex` | `988a501f22215650cb4d8e07f13d36a7b6c65a385b2da6cd8168ca16e3fddc69` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
 The PDF and figures were regenerated on 19 November 2026 with Tectonic 0.17.0

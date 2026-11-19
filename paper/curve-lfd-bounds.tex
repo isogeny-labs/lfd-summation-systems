@@ -1596,12 +1596,27 @@ The qualifications of the run over $p=65537$ apply unchanged (one run,
 engine-internal check, our checker has not read the basis, recorded as
 unverified), and so does the conditional containment of the previous
 paragraph, with this run's space in place of $S$.
-% PENDING(paper-runs-20261118): the Rust lift (tools/hky_lift) on the J2 basis (sha256 3d1f2996...) was
-% still running when this was written. When it lands, report its fields as for the J1 lift (dim V_7,
-% 1 in V_7, dim F, dim(V_7 n M_<=6), agreement with runs/lift-unit-p163841-k14-D6to7.json, resources) here,
-% in sec:limitations ("The value 7 at k=14", "Second engines"), tab:profile row 14, tab:data2, and the
-% update note; until then say that it has not finished.
-The lift of this basis had not finished when this version was written.
+% J2 lift: isogeny-labs/crypto, branch claude/lfd-ffd-paper-eprint-status-qq8fit (PR #4735), commit 6fc6ccf847
+% (merge of wt/paper-engine 752424ef08), research/hky_paper_runs_20261118/results/J2/lift/: lift_ref.rust.json
+% (dim_VD, dim_VD1, dim_low, falls, falls_new_per_round, rounds, profile, input_checks, counts.madds_total,
+% timing_s.total = 21,198.5 s, maxrss_mb = 234,298.7, threads = 32, binary_sha256 6824a8bd...,
+% input.file_sha256 3d1f2996...), lift_ref.verify.json (all_equal against
+% experiments/ic-bounds-k14/runs/lift-unit-p163841-k14-D6to7.json; regular-top count 1,166,824 against
+% 1,173,002 is informational, a different notion), lift_ref.stdout, lift_ref.inputs.sha256. [pcc:unverified] there.
+The same lift program was then run on this basis. It checked that the $4$
+generators lie in the space and that $84$ shifted random combinations of
+its rows stay in it, and reached its fixed point in four rounds ($551$,
+$9166$, $35{,}167$ and $5372$ new falls), with $\dim F=50{,}256$,
+$\dim(V_7\cap M_{\le6})=499{,}178$ and
+$\dim V_7=1{,}683{,}218=|M_{\le7}|$, so $1\in V_7(14)$; these values and
+the profile equal the record of the first lift on this instance field by
+field. It took $5.6\cdot10^{14}$ multiply-adds and about $5.9$~h
+($21{,}199$~s) on $32$ virtual CPUs, with a recorded peak resident set of
+$234{,}299$~MB (records at commit \code{6fc6ccf}). The second, separately
+written implementation of both halves of $\lfd(14)=7$ thus holds on both
+unit instances, with the qualifications stated above for $p=65537$: each
+half is a corroboration, not a certificate, the lift was run once, and the
+canonical basis hashes of this space and $W$ have not been compared.
 
 % Runs J3 (k = 15) and J4s (k = 16): isogeny-labs/crypto commit 12308b4877, research/hky_paper_runs_20261118/:
 % results/J3/record.json, job.json, basis.bin.json (basis sha256 5da602a8..., not kept on disk);
@@ -2060,7 +2075,7 @@ $10$ & $6$ ($\ge6$ on two more instances) & $18{,}569$ & full & unit instances o
 $11$ & $6$ & $25{,}033$ & full & unit instance, $p=65537$ (third engine); $\ge6$ on two instances, $p=12289$ & $6$\\
 $12$ & $6$ & $32{,}057$ & full & as $k=11$ & ---\\
 $13$ & $6$ & $39{,}657$ & full & unit instance, $p=65537$; $\ge6$ on two instances, $p=40961$; random curve, $p=65537$: $V_6=I\cap M_{\le6}$; second engine, two targets, $p=2013265921$: same values (one run each) & ---\\
-$14$ & $7$ ($\ge7$ certified; $\le7$ lifted, no certificate) & $47{,}849$ & closed, $1\notin V_6$ & unit instances, $p=65537$ and $163841$, random curves, $p=65537$ and $114689$: $\dim V_6=448{,}922$; independent checker on three; lift on three: $V_7$ is the degree-$7$ part of the ideal; second engine, random curve, $p=2013265921$: same $\dim V_6$ and profile (one run, no sweep); its later version, both unit instances: same $\dim V_6$, profile and part ranks (one run each, engine-internal closedness check); a third lift of its space, $p=65537$: $1\in V_7$ (one run); not certified & ---\\
+$14$ & $7$ ($\ge7$ certified; $\le7$ lifted, no certificate) & $47{,}849$ & closed, $1\notin V_6$ & unit instances, $p=65537$ and $163841$, random curves, $p=65537$ and $114689$: $\dim V_6=448{,}922$; independent checker on three; lift on three: $V_7$ is the degree-$7$ part of the ideal; second engine, random curve, $p=2013265921$: same $\dim V_6$ and profile (one run, no sweep); its later version, both unit instances: same $\dim V_6$, profile and part ranks (one run each, engine-internal closedness check); a third lift of its space, both unit instances: $1\in V_7$ (one run each); not certified & ---\\
 $15$ & $\ge7$ ($\le7$ open) & $56{,}649$ & $1\notin V_6$; $\dim 600{,}547$ & unit instance, $p=65537$; Theorem~\ref{thm:restrict}; $\dim V_6$: second engine, one run, internal closedness check, not certified & ---\\
 $16$ & $\ge7$ (one engine, not certified) & $66{,}073$ & $1\notin V_6$; $\dim 770{,}594$ & unit instance, $p=786433$: second engine, one run, no closedness check, not certified; $\dim V_5$: random curve, $p=65537$ & ---\\
 every $k\ge2$ & $\ge4$ if $3t^2+a\ne0$, unit ideal & & & Lean (Theorem~\ref{thm:three}) & ---\\
@@ -2807,7 +2822,7 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  the degree lift, run once on each of three instances, without a final sweep
  in $M_{\le7}$ or a basis of $V_7$, repeated on both unit instances over
  $p=65537$ and $p=163841$ by a second implementation that agrees with it,
- and on the unit instance over $p=65537$ by a third implementation, which
+ and on both unit instances by a third implementation, which
  lifts the second engine's space and agrees field by field; the value $7$
  therefore has no
  independent certificate and rests on the written proof of the lift, the
@@ -2832,10 +2847,9 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  implementation of the lift starts from a stored basis of the same engine
  as the first (recomputed, with equal hashes), so it tests the lift and
  leaves this dependence in place. The third implementation lifts the
- second engine's space over $p=65537$ instead, so on that instance the
+ second engine's space instead, so on both unit instances the
  upper bound has been computed along two chains of separately written
- programs, each needing its own engine to add only admissible products;
- the lift of the second engine's space over $p=163841$ had not finished.
+ programs, each needing its own engine to add only admissible products.
  All three implementations rest on one written theorem.
 \item \emph{Second engines.} For $D=6$ the reference engine confirms the
  full closure at $k=10$ and $11$ only. The $k=14$ degree-$6$ bases were kept
@@ -2852,7 +2866,7 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  closedness check, reproduces the degree-$6$ dimension, profile and part
  ranks at $k=14$ on both unit instances in one run each, after
  reproducing $11$ recorded closures of this paper; a separately written
- lift of its space over $p=65537$ reproduces the recorded lift
+ lift of its space reproduces the recorded lift on both unit instances
  (Section~\ref{sec:depth14}); these are corroborations, not certificates. The binary and Koblitz replication at
  $k\ge11$ uses the same engine.
 \item \emph{Depth.} Beyond $k=14$ our engines computed only degree-$5$
@@ -2895,7 +2909,7 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  without a closedness check); the closedness of the free extensions is
  untested. At $k=14$ the lift was repeated by a
  second implementation on both unit instances and by a third on the
- second engine's space over $p=65537$, and a direct closure in $M_{\le7}$
+ second engine's space on both unit instances, and a direct closure in $M_{\le7}$
  was not computed. Uniformity over curves, primes and targets
  rests at degree $6$ (depths $13$ and $14$) on two unit instances with
  $j=1728$ and two random curves over three primes, and at degree $7$ on
@@ -3888,7 +3902,8 @@ Third engine, depths $10$--$16$; lift & \code{experiments/\allowbreak{}ic-bounds
 Second lift at $k=14$ & \code{experiments/\allowbreak{}ic-bounds-k14-independent/} (\code{PLAN.md}, \code{RESULT-unit-p65537.md}, \code{RESULT-unit-p163841.md}, \code{pod/}, \code{pod-p163841/})\\
 Second engine at $k=13,14$ over $p=2013265921$; later split readings (other repository) & \code{isogeny-labs/crypto} at commit \code{89a2a70}: \code{research/\allowbreak{}hky\_pod\_runs\_20261117/} (\code{RESULTS.md}, \code{LAUNCH.md}; \code{results/t13\_hky2.jsonl}, \code{t14\_hky2.jsonl}, \code{t14\_progress.jsonl}, \code{t14\_rss.log}, \code{prog\_m6-T2.jsonl}, \code{b\_m7-T2.jsonl}, \code{b\_m8-T2.jsonl}, \code{prog\_m9-T2-cols12M.jsonl}); engine \code{research/\allowbreak{}hky\_engine\_speed\_20261117/README.md}, \code{src/cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast.rs}, generator \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}\\
 Second engine, later version, at $k=14$ on the unit instance over $p=65537$ (other repository) & \code{isogeny-labs/crypto} at commit \code{98b7d87}: \code{research/\allowbreak{}hky\_paper\_runs\_20261118/} (\code{README.md}, \code{pod/LAUNCH.md}; \code{results/J1/record.json}, \code{job.json}, \code{basis.bin.json}); engine \code{src/cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast2.rs}, \code{research/\allowbreak{}hky\_engine\_opt\_20261118/README.md}; generator \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}\\
-Third lift at $k=14$; second engine at $k=14$ over $p=163841$, at $k=15$ and at $k=16$ over $p=786433$ (other repository) & \code{isogeny-labs/crypto} at commit \code{12308b4}, \code{research/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J1/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}); \code{results/J2/}, \code{results/J3/}, \code{results/J4s/} (\code{record.json}, \code{job.json}); \code{instances/\allowbreak{}unit-p786433-a1-s10-k16.json}; \code{PREDICTIONS.md}, \code{pod/LAUNCH.md}; lift \code{tools/hky\_lift/}; skip criterion \code{research/\allowbreak{}hky\_engine\_skip\_20261118/} (\code{PROOF.md}, \code{README.md})\\
+Third lift at $k=14$ over $p=65537$; second engine at $k=14$ over $p=163841$, at $k=15$ and at $k=16$ over $p=786433$ (other repository) & \code{isogeny-labs/crypto} at commit \code{12308b4}, \code{research/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J1/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}); \code{results/J2/}, \code{results/J3/}, \code{results/J4s/} (\code{record.json}, \code{job.json}); \code{instances/\allowbreak{}unit-p786433-a1-s10-k16.json}; \code{PREDICTIONS.md}, \code{pod/LAUNCH.md}; lift \code{tools/hky\_lift/}; skip criterion \code{research/\allowbreak{}hky\_engine\_skip\_20261118/} (\code{PROOF.md}, \code{README.md})\\
+Third lift at $k=14$ over $p=163841$ (other repository) & \code{isogeny-labs/crypto} at commit \code{6fc6ccf}, \code{research/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J2/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}, \code{lift\_ref.stdout}, \code{lift\_ref.inputs.sha256}); \code{pod/LAUNCH.md}\\
 Free extension, predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/} (\code{records/}; \code{predictions-2026-11-10.json}, ids \code{d5-14}, \code{d5-closed-form}, \code{d6-full-through-13}, \code{d6-falls-at-14}, \code{d6-base-15}, \code{lfd-table}; \code{outcomes-2026-11-10.json})\\
 Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r}); Table~\ref{tab:splitm}: \code{experiments/\allowbreak{}ic-bounds-split-m/}, \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/}\\
 Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experiments/\allowbreak{}ic-bounds-msum/}\\

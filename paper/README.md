@@ -12,8 +12,8 @@ added a significance paragraph in the introduction, and added the
 second-engine corroboration at depth 14 on the unit instance over p = 65537
 ([update note](latest-update-20261118.md)). The revision of 19 November
 (abstract unchanged) adds the remaining corroborations of those runs: a
-third, separately written lift of the second engine's depth-14 space
-(1 in V_7), its depth-14 closure over p = 163841, and degree-6 closures
+third, separately written lift of the second engine's depth-14 spaces on
+both unit instances (1 in V_7), its depth-14 closure over p = 163841, and degree-6 closures
 without 1 at depths 15 and 16 whose profiles follow the recursion predicted
 on 10 November; none is a certificate, and LFD <= 7 at depths 15 and 16 is
 open ([update note](latest-update-20261119.md)). It
