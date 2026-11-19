@@ -324,3 +324,48 @@ checkers as well as compact membership corruption. Sage probes are local
 experiments, not tests asserted to run in the ordinary Python CI job.
 The next work is the compiled compact reducer and the bounded-criterion
 proof, preserving all original depth14, split and depth18 obligations.
+
+## Compiled compact membership producer
+
+`compact_producer.rs` implements divisor-based reduction in Rust. Reducers
+are found by enumerating divisors of the current normal monomial, rather
+than scanning every prior polynomial. Every retained row records its
+input/carry/critical-pair source, monomial reductions and normalization.
+The independent Python compact replayer checks the full derivation.
+An empty critical-pair queue remains provisional under the draft criterion.
+
+The compiled implementation reproduced the Python producer's complete
+parsed derivation trace on all 2,075 controls, after normalizing Python
+tuples to their JSON list representation. Both agreed with the direct
+finite closure and every compiled trace replayed independently. Additional
+controls check three auxiliary variables, the depth18 high-bit cyclic
+wrap, a valid capped prefix and overwrite refusal. The local suite now
+has 82 passing cases; the compiled falsification controls are wired into
+that suite and therefore into the ordinary Python CI job.
+
+`run_compact.py --engine rust` records the original input hash and the
+budget-adjusted run input separately. It enforces producer time, row,
+term and pending-pair limits, plus external RSS, proof-size and disk
+guards. A normal internal cap closes a valid proof prefix; an external
+stop is recorded without a replay or mathematical claim. The raw producer
+claim string describes its pre-replay state; the separate `replay` result
+records completed independent verification.
+
+The initial 30-second compiled searches retained and verified:
+
+| Original task | Retained compact polynomials | Status |
+| --- | ---: | --- |
+| depth14 p=65537, D6 | 415 | capped; membership checked |
+| depth14 p=163841, D6 | 412 | capped; membership checked |
+| split p=114689, D8 | 481 | capped; membership checked |
+| split p=163841, D8 | 481 | capped; membership checked |
+| frozen depth18 D7 | 414 | capped; membership checked |
+| frozen depth18 D8 | 414 | capped; membership checked |
+
+These are retained generator counts. Exact span dimensions require a
+completed closedness certificate. No short search found a unit witness.
+The second archived depth14 input now has its own identity and generator
+record, including its curve/target checks and required canonical hashes.
+Both original depth14 inputs, both split instances and the frozen
+breakpoint remain in scope. Follow-on depth18 searches use five-minute
+producer caps and retain the same resource guards.

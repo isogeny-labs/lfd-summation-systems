@@ -285,10 +285,13 @@ def test_priority_schedule_rejects_fifo_cursor(tmp_path,monkeypatch):
     with pytest.raises(ValueError,match='FIFO restart engine'):runner.main()
 
 
-def test_compact_falsification_controls(tmp_path):
+@pytest.mark.parametrize('compiled',[False,True])
+def test_compact_falsification_controls(tmp_path,compiled):
     import subprocess,sys,json
     out=tmp_path/'falsification.json'
-    subprocess.run([sys.executable,str(HERE/'compact_falsify.py'),'--trials','64','--out',str(out)],capture_output=True,text=True,check=True)
+    cmd=[sys.executable,str(HERE/'compact_falsify.py'),'--trials','64','--out',str(out)]
+    if compiled:cmd.append('--compiled')
+    subprocess.run(cmd,capture_output=True,text=True,check=True)
     assert json.loads(out.read_text())['all_agree']
 
 
@@ -333,3 +336,58 @@ def test_compact_condition_falsifier(tmp_path,monkeypatch,kind,implementation):
     else:
         assert result['status']=='conditions-failed'
         assert result['missing']['kind']==('carries' if kind=='missing-carry' else 'pairs')
+
+
+@pytest.fixture(scope='module')
+def compiled_compact(tmp_path_factory):
+    import subprocess
+    binary=tmp_path_factory.mktemp('compiled-compact')/'producer'
+    subprocess.run(['rustc','-O',str(HERE/'compact_producer.rs'),'-o',str(binary)],check=True)
+    return binary
+
+
+def test_compiled_compact_retains_valid_capped_prefix(tmp_path,compiled_compact):
+    import subprocess,json
+    from compact_replay import verify
+    inp=tmp_path/'input';tokens=(SRC/'input.txt').read_text().split();tokens[6]='2';inp.write_text(' '.join(tokens)+'\n');proof=tmp_path/'proof'
+    result=json.loads(subprocess.run([str(compiled_compact),str(inp),str(proof)],capture_output=True,text=True,check=True).stdout)
+    assert result['status']=='capped' and result['compact_rows']==2
+    data=json.loads(proof.read_text());data['input_sha256']=hashlib.sha256(inp.read_bytes()).hexdigest();proof.write_text(json.dumps(data))
+    checked=verify(inp,proof);assert checked['verified_rows']==2 and not checked['closed_check']
+
+
+def test_compiled_compact_high_chain_wrap_witness(tmp_path,compiled_compact):
+    import subprocess,json
+    from compact_replay import verify
+    inp=tmp_path/'input';inp.write_text(f'7340033 2 18 0 2 10 100 10000\n1\n1 {1<<35} 1\n');proof=tmp_path/'proof'
+    result=json.loads(subprocess.run([str(compiled_compact),str(inp),str(proof)],capture_output=True,text=True,check=True).stdout)
+    assert result['status']=='unit-witness' and result['contains_one']
+    data=json.loads(proof.read_text());data['input_sha256']=hashlib.sha256(inp.read_bytes()).hexdigest();proof.write_text(json.dumps(data))
+    assert verify(inp,proof)['contains_one']
+
+
+def test_compact_runner_refuses_existing_tag(tmp_path,monkeypatch):
+    import run_compact as runner
+    import sys
+    from types import SimpleNamespace
+    existing=tmp_path/'runs'/'existing';existing.mkdir(parents=True);(existing/'result.json').write_text('keep this')
+    monkeypatch.setattr(runner,'HERE',tmp_path);monkeypatch.setattr(runner.shutil,'disk_usage',lambda path:SimpleNamespace(free=4*2**30))
+    monkeypatch.setattr(sys,'argv',['run_compact.py','unused','existing','--engine','rust'])
+    with pytest.raises(FileExistsError):runner.main()
+    assert (existing/'result.json').read_text()=='keep this'
+
+
+def test_compiled_compact_three_auxiliary_variables(tmp_path,compiled_compact):
+    import subprocess,json
+    from compact_candidate import Ring,Compact
+    from compact_falsify import text_input,direct
+    from compact_replay import verify
+    R=Ring(17,1,2,3,3);u,v,w=[1<<(2+6*j) for j in range(3)]
+    gens=[{2*w:1,u:16},{w+u:1,v:16},{2*v:1,0:16}]
+    inp=tmp_path/'input';inp.write_text(text_input(R,gens));proof=tmp_path/'proof'
+    out=json.loads(subprocess.run([str(compiled_compact),str(inp),str(proof)],capture_output=True,text=True,check=True).stdout)
+    C=Compact(R);py=C.run(gens);assert not C.capped and out['status']=='provisional-complete'
+    data=json.loads(proof.read_text());assert data['trace']==json.loads(json.dumps(C.trace))
+    data['input_sha256']=hashlib.sha256(inp.read_bytes()).hexdigest();proof.write_text(json.dumps(data));assert not verify(inp,proof)['contains_one']
+    binary=tmp_path/'reference';subprocess.run(['rustc','-O',str(HERE/'sparse_producer.rs'),'-o',str(binary)],check=True)
+    reference=direct(binary,tmp_path,R,gens);assert reference['status']=='closed' and reference['derived_rank']==C.candidate_rank()

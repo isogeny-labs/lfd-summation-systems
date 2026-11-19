@@ -16,12 +16,14 @@ def direct(binary,dest,R,gens):
     return out
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--trials',type=int,default=200);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--exhaustive-univariate',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--trials',type=int,default=200);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--exhaustive-univariate',action='store_true');ap.add_argument('--compiled',action='store_true');args=ap.parse_args()
     rng=random.Random(20261119);records=[]
-    sources={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'compact_candidate.py',Path(__file__),HERE/'sparse_producer.rs',HERE/'compact_replay.py',HERE/'replay.py']}
+    sources={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'compact_candidate.py',Path(__file__),HERE/'sparse_producer.rs',HERE/'compact_replay.py',HERE/'replay.py',HERE/'compact_producer.rs']}
     with tempfile.TemporaryDirectory(prefix='compact-falsify-') as tmp:
         d=Path(tmp);binary=d/'reference'
         subprocess.run(['rustc','-O',str(HERE/'sparse_producer.rs'),'-o',str(binary)],check=True)
+        compiled=d/'compact'
+        if args.compiled:subprocess.run(['rustc','-O',str(HERE/'compact_producer.rs'),'-o',str(compiled)],check=True)
         # The harness must catch these deliberately incomplete criteria.
         R=Ring(17,1,2,0,2);g=[{2:1}];ref=direct(binary,d,R,g)
         bad=Compact(R,carry=False).run(g);assert ref['contains_one'] and not bad['contains_one']
@@ -44,12 +46,17 @@ def main():
                     cases.append((Ring(5,1,2,0,D),[{x:c for x,c in enumerate(coeffs) if c}]))
         for i,(R,gens) in enumerate(cases):
             ref=direct(binary,d,R,gens);candidate=Compact(R,seconds=5);out=candidate.run(gens)
-            proof=d/'proof.json';proof.write_text(json.dumps({'input_sha256':hashlib.sha256((d/'input').read_bytes()).hexdigest(),'trace':candidate.trace}))
+            proof=d/'proof.json';trace=candidate.trace;python_out=out;trace_identity=None
+            if args.compiled:
+                out=json.loads(subprocess.run([str(compiled),str(d/'input'),str(proof)],capture_output=True,text=True,check=True).stdout)
+                trace=json.loads(proof.read_text())['trace'];trace_identity=trace==json.loads(json.dumps(candidate.trace))
+                if not trace_identity:raise AssertionError(f'compiled derivation differs in case {i}')
+            proof.write_text(json.dumps({'input_sha256':hashlib.sha256((d/'input').read_bytes()).hexdigest(),'trace':trace}))
             membership=verify(d/'input',proof)
             assert membership['contains_one']==out['contains_one']
             rank=None if out['contains_one'] else candidate.candidate_rank() if not candidate.capped else None
             ok=not candidate.capped and out['contains_one']==ref['contains_one'] and (out['contains_one'] or rank==ref['derived_rank'])
-            rec={'case':i,'parameters':vars(R),'input_sha256':hashlib.sha256(text_input(R,gens).encode()).hexdigest(),'candidate':out,'candidate_rank':rank,'reference':ref,'membership_replay':membership,'agrees':ok}
+            rec={'case':i,'parameters':vars(R),'input_sha256':hashlib.sha256(text_input(R,gens).encode()).hexdigest(),'candidate':out,'python_candidate':python_out,'compiled_trace_identity':trace_identity,'candidate_rank':rank,'reference':ref,'membership_replay':membership,'agrees':ok}
             records.append(rec)
             if not ok:
                 rec['failure_kind']='resource-cap' if candidate.capped else 'reading-mismatch'
