@@ -1,6 +1,6 @@
 # E6 growth beyond the unit-ideal argument
 
-18 November 2026. Continuation of draft PR #31, local-only work.
+18 November 2026. Continuation after merged PR #31, tracked in draft PR #33, local-only work.
 
 ## New result and exact scope
 
@@ -101,3 +101,13 @@ The script rewrites its output record; use a separate checkout to preserve
 original records. No full depth-14 basis, split degree-8 or depth-18 closure
 was run. Those computational obligations remain open. The submitted
 paper/PDF package has not been regenerated to include this new theorem.
+
+## Integration with current main
+
+After this proof was written, current main was integrated through #32.
+The integrated local suite has 50 passing tests and four failures in the
+root-finding tests: the C kernel includes x86-only intrinsics and does not
+compile on this ARM Mac. This is not a Lean failure. The full Linux CI
+suite is still required; do not report a locally green integrated suite.
+The 439 submission consistency checks pass on the integrated tree.
+The new proof does not regenerate the newer paper package from #32.
