@@ -242,3 +242,29 @@ selected verifier source and exact proof files. Both original systems are
 continuing with 300-million-term budgets, exact source cursors, 30-minute
 producer caps and unchanged artifact/disk guards. No degree-8 exact result
 is inferred from the partial counts.
+
+## Degree-priority schedule and the original depth-14 input
+
+`priority_producer.rs` schedules admissible rows by degree, then insertion
+ID. This changes elimination order, not the polynomial system or proof
+rules. The complete degree-7 check still has rank 27,838 and excludes 1;
+its new proof passed independent membership and full closedness replay.
+The same reading and refusal controls run against both checkers. There
+are now 65 passing local tests. FIFO cursors are explicitly refused for
+this schedule; a seeded priority run must requeue the admissible rows.
+
+A fresh p=114689 degree-8 priority trial stopped at its three-minute cap,
+retaining 102,780 rows and 87,019,708 terms without a unit witness. Its
+producer receipt and independent replay receipt are separate. This trial
+does not replace the two original verified-prefix continuations.
+
+`inputs/depth14-p65537-D6.txt` starts the original degree-6 certificate
+problem at depth 14, using the archived curve a=1, b=0 and target
+(4271,11720). `depth14-p65537-input-identity.json` binds the input and
+generator source to the archived record and the two required canonical
+basis hashes. The point and nonsquare conditions were checked directly.
+The degree-priority run permits 500,000 rows (above the full 499,178-column
+domain), with a 150-million-term budget and 30-minute cap. A stopped prefix
+will not establish the target input containment. Completion still requires
+an independently verified full input certificate and binding to the lift;
+the second archived prime remains in scope too.

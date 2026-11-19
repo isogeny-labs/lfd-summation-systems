@@ -11,11 +11,12 @@ def digest(path,decoded=False):
     return h.hexdigest()
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed','restart'],default='heap');ap.add_argument('--resume',type=Path);ap.add_argument('--resume-cursor',action='store_true');ap.add_argument('--replay-engine',choices=['baseline','indexed'],default='baseline');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed','restart','priority'],default='heap');ap.add_argument('--resume',type=Path);ap.add_argument('--resume-cursor',action='store_true');ap.add_argument('--replay-engine',choices=['baseline','indexed'],default='baseline');args=ap.parse_args()
     resume_record=None;cursor=None
     if args.resume_cursor and not args.resume:raise ValueError('cursor requires a seed run')
+    if args.resume_cursor and args.engine!='restart':raise ValueError('cursor requires the FIFO restart engine')
     if args.resume:
-        if args.engine!='restart':raise ValueError('--resume requires --engine restart')
+        if args.engine not in ['restart','priority']:raise ValueError('--resume requires a restart-capable engine')
         from verify_compressed import verify
         verify(args.resume,reuse=True,engine=args.replay_engine)
         old=(args.resume/'input.txt').read_text().split();new=args.input.read_text().split()
@@ -56,7 +57,7 @@ def main():
                     try:child.communicate(timeout=5)
                     except subprocess.TimeoutExpired:os.killpg(child.pid,signal.SIGKILL);child.communicate()
                     result={'status':reason,'scope':'partial compressed files; no complete closure claim'};break
-    result.update(schedule_products=(cursor or 0)+result['products'] if 'products' in result else None,resume_from=resume_record,engine=args.engine,source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
+    result.update(schedule_products=(cursor or 0)+result['products'] if 'products' in result and args.engine!='priority' else None,resume_from=resume_record,engine=args.engine,source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
     result['artifacts']={p.name:{'sha256':digest(p),'bytes':p.stat().st_size} for p in outputs}
     if not reason:
         for p in outputs:result['artifacts'][p.name]['decoded_sha256']=digest(p,True)

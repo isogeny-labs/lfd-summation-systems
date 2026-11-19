@@ -255,3 +255,31 @@ def test_false_cursor_cannot_pass_independent_closedness(tmp_path,restart_produc
     result=json.loads(subprocess.run([str(restart_producer),str(inp),str(outledger),str(outbasis),str(ledger),str(basis),str(4*eligible)],capture_output=True,text=True,check=True).stdout)
     assert result['status']=='closed' and result['derived_rank']==2
     assert subprocess.run([str(rust_checker),str(inp),str(outledger),str(outbasis),'closed'],capture_output=True).returncode!=0
+
+
+@pytest.fixture(scope='module')
+def priority_producer(tmp_path_factory):
+    import subprocess
+    binary=tmp_path_factory.mktemp('priority')/'producer'
+    subprocess.run(['rustc','-O',str(HERE/'priority_producer.rs'),'-o',str(binary)],check=True)
+    return binary
+
+
+@pytest.mark.parametrize('name',['gate-k2-D4','gate-k3-D4','gate-m3-k2-D5','gate-m4-k2-D5','gate-m5-k3-D5'])
+def test_degree_priority_schedule_keeps_checked_reading(tmp_path,priority_producer,rust_checker,name):
+    import subprocess,json
+    inp=HERE/'inputs'/(name+'.txt');ledger=tmp_path/'ledger.gz';basis=tmp_path/'basis.gz'
+    result=json.loads(subprocess.run([str(priority_producer),str(inp),str(ledger),str(basis)],capture_output=True,text=True,check=True).stdout)
+    known=json.loads((HERE/'results'/(name+'.json')).read_text())
+    assert result['status'] in ['closed','unit-witness'] and result['contains_one']==known['contains_one']
+    cmd=[str(rust_checker),str(inp),str(ledger),str(basis)]
+    if not result['contains_one']:
+        assert result['derived_rank']==known['derived_rank'];cmd.append('closed')
+    assert subprocess.run(cmd,capture_output=True).returncode==0
+
+
+def test_priority_schedule_rejects_fifo_cursor(tmp_path,monkeypatch):
+    import run_heap as runner
+    import sys
+    monkeypatch.setattr(sys,'argv',['run_heap.py','unused','tag','--engine','priority','--resume','unused','--resume-cursor'])
+    with pytest.raises(ValueError,match='FIFO restart engine'):runner.main()
