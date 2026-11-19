@@ -1,6 +1,16 @@
 # Main manuscript: ePrint preparation
 
-**Status, 16 November 2026:** candidate for author review, 49 pages. It
+**Status, 18 November 2026:** ready for submission; what remains is the
+author's own confirmation of the ePrint form (license, publication
+information, authorship) and the submission itself, which only an author can
+make. The cleanup of
+17 November put the full proof of the growth theorem into Appendix C,
+shortened the abstract, added a statement on the use of AI tools (the author
+must confirm its wording before submission) and removed wording about
+earlier drafts. The revision of 18 November shortened the abstract further,
+added a significance paragraph in the introduction, and added the
+second-engine corroboration at depth 14 on the unit instance over p = 65537
+([update note](latest-update-20261118.md)). It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint
@@ -30,7 +40,10 @@ establish the LFD lower bound; the numerical bound there remains undecided. At d
 uses a degree lift replicated by a second implementation on both unit instances.
 The lift still assumes that its input space is contained in the true degree-6
 closure; the independent closed-space check proves the reverse inclusion.
-There is no independent certificate for that input containment. Binary replications
+There is no independent certificate for that input containment; since 18 November
+it also follows if the later version of the second engine, whose degree-6 closure of
+the unit instance over p = 65537 has the same dimension (one run, not certified),
+adds only admissible products. Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
@@ -85,10 +98,11 @@ retain its logs rather than overwriting the archived audit.
 ## Before submission
 
 - CI on the submitted commit must pass both the default Lean audit and the
-  all-module check (`scripts/lean_check_all.py`). The merged package at
-  `ce4d785` passed: 233 modules built, 941 declarations audited, and no
-  axioms beyond `propext`, `Classical.choice` and `Quot.sound`. The older
-  saved default audit covers 671 declarations and is not the full count.
+  all-module check (`scripts/lean_check_all.py`). The reconciliation commit
+  `1f3f55a` (PR #32) passed: 235 modules built, 1,038 declarations across 93
+  files audited, and no axioms beyond `propext`, `Classical.choice` and
+  `Quot.sound`. The older saved default audit covers 671 declarations and is
+  not the full count.
 - The data appendix cites the combined evidence commit `2cb270c`. It stays
   reachable only if this branch is merged with a merge commit; after a squash
   or a rebase, update the citation and rebuild.
