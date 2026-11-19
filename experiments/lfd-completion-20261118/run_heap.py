@@ -11,14 +11,15 @@ def digest(path,decoded=False):
     return h.hexdigest()
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed'],default='heap');args=ap.parse_args()
     dest=HERE/'runs'/args.tag
     if dest.exists():raise FileExistsError(dest)
     if shutil.disk_usage(HERE).free<3*2**30:raise RuntimeError('need at least 3 GiB free before launch')
     dest.mkdir();tokens=args.input.read_text().split();tokens[5]=str(args.seconds)
     (dest/'input.txt').write_text(' '.join(tokens)+'\n')
-    source_hashes={p.name:digest(p) for p in [HERE/'heap_producer.rs',Path(__file__)]}
-    binary=dest/'producer';subprocess.run(['rustc','-O',str(HERE/'heap_producer.rs'),'-o',str(binary)],check=True)
+    source=HERE/(args.engine+'_producer.rs')
+    source_hashes={p.name:digest(p) for p in [source,Path(__file__)]}
+    binary=dest/'producer';subprocess.run(['rustc','-O',str(source),'-o',str(binary)],check=True)
     outputs=[dest/'derivations.txt.gz',dest/'basis.txt.gz'];start=time.monotonic();reason=None
     with (dest/'stderr.log').open('w') as err:
         child=subprocess.Popen([str(binary),str(dest/'input.txt'),*map(str,outputs)],stdout=subprocess.PIPE,stderr=err,text=True,start_new_session=True)
@@ -38,7 +39,7 @@ def main():
                     try:child.communicate(timeout=5)
                     except subprocess.TimeoutExpired:os.killpg(child.pid,signal.SIGKILL);child.communicate()
                     result={'status':reason,'scope':'partial compressed files; no complete closure claim'};break
-    result.update(source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
+    result.update(engine=args.engine,source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
     result['artifacts']={p.name:{'sha256':digest(p),'bytes':p.stat().st_size} for p in outputs}
     if not reason:
         for p in outputs:result['artifacts'][p.name]['decoded_sha256']=digest(p,True)

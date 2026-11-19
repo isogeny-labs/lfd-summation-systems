@@ -143,3 +143,27 @@ recorded separately from the CI result on the pushed commit. The second
 planned prime, p=163841, now also has a complete degree-7 certificate:
 27,838 rows, independently replayed with full closedness and exclusion of 1.
 The frozen seed-0 input identity is in split-p163841-instance-identity.json.
+
+## Indexed elimination
+
+`indexed_producer.rs` enumerates the complete degree-bounded monomial domain,
+orders it identically to the original producer, and stores sparse basis
+rows as `(column_index, coefficient)` pairs. Reductions update a reusable
+coefficient array and nonzero bitmap directly. Only input and shift encoding
+need a hash lookup. Its degree-7 comparison completed in 4.30 seconds and
+matched both previously checked proof files byte for byte; see
+`results/indexed-D7-comparison.json`. This timing excludes domain preflight.
+It is a separate local measurement, not a matched throughput guarantee.
+
+The engine refuses domains above two million columns before opening proof
+outputs. This is an explicit engine resource limit: it does not truncate
+the polynomial space and does not resolve the depth-18 requirement. The
+original heap engine remains available for sparse exploration beyond that
+limit. `run_heap.py --engine indexed` selects the new engine and captures
+its source identity. `run_heap-v1.py.txt` preserves the runner already loaded
+by the first compressed degree-8 job.
+
+Both engines run through the same byte-agreement and replay tests. There
+are now 29 distinct local tests, including an oversized-domain refusal
+check. The p=163841 degree-8 computation uses the indexed engine while the
+already running p=114689 heap computation retains its original sources.

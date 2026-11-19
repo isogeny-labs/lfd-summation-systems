@@ -82,11 +82,11 @@ def test_runner_refuses_existing_artifact_directory(tmp_path,monkeypatch):
         runner.run_case('existing',17,2,2,0,3,[{0:1}])
     assert (old/'result.json').read_text()=='preserve me'
 
-@pytest.fixture(scope='module')
-def heap_producer(tmp_path_factory):
+@pytest.fixture(scope='module',params=['heap','indexed'])
+def heap_producer(tmp_path_factory,request):
     import subprocess
     out=tmp_path_factory.mktemp('heap-producer')/'producer'
-    subprocess.run(['rustc','-O',str(HERE/'heap_producer.rs'),'-o',str(out)],check=True)
+    subprocess.run(['rustc','-O',str(HERE/(request.param+'_producer.rs')),'-o',str(out)],check=True)
     return out
 
 
@@ -149,3 +149,14 @@ def test_compressed_receipt_binding_refuses_mutation(tmp_path,corrupt):
     else:receipt['artifacts']['basis.txt.gz']['decoded_sha256']='wrong'
     (tmp_path/'result.json').write_text(json.dumps(receipt))
     with pytest.raises(ValueError,match='digest mismatch'):verify(tmp_path)
+
+
+def test_indexed_engine_refuses_oversized_domain_before_writing(tmp_path):
+    import subprocess
+    binary=tmp_path/'indexed'
+    subprocess.run(['rustc','-O',str(HERE/'indexed_producer.rs'),'-o',str(binary)],check=True)
+    inp=tmp_path/'input';inp.write_text('7340033 2 18 0 7 1 100 1000\n0\n')
+    ledger=tmp_path/'ledger';basis=tmp_path/'basis'
+    result=subprocess.run([str(binary),str(inp),str(ledger),str(basis)],capture_output=True,text=True)
+    assert result.returncode!=0 and 'indexed-space cap exceeded' in result.stderr
+    assert not ledger.exists() and not basis.exists()
