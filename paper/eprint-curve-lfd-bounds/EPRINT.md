@@ -69,17 +69,26 @@ step. This also decides the Fermat-factor caveat of item (4) for
 $k\ge38$. The capped local searches of PR #35 were merged as a record;
 they do not change any manuscript claim.
 
+Revision of 19 November 2026, last (abstract unchanged): the records of the
+second engine's runs and of the third lift, the lift itself and a standalone
+extract of the second engine were moved from `isogeny-labs/crypto` into this
+repository (`second-engine/`); the paper now cites those paths. The runs were
+made with binaries built from crypto commits `450d5b2` and `43d5c40` (listed
+with their hashes in `second-engine/PROVENANCE.md`); the extract reproduces the
+recorded closures that fit in 16 GB (`second-engine/gate-20261119/`).
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `c3cc7e43d4405097414136997c091d4a9e6ac38106072187ddae3ef4c466533d` |
-| `paper/curve-lfd-bounds.tex` | `f6de88099b50a4fdfbb6d6b9e724a59bace98d0da2d150cfa636b275d10728eb` |
+| `paper/curve-lfd-bounds.pdf` | `1f946485d437d8b82692b0b5bbaf0d6f9550689ba5af77246b82113f1bdbfca4` |
+| `paper/curve-lfd-bounds.tex` | `e9fc8a2144e5378509fc15abe9ee9082cbe8da5f4a3a1939d2c4da11f94a36e7` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
 The PDF and figures were regenerated on 19 November 2026 with Tectonic 0.17.0
-(Homebrew formula `tectonic`, default bundle) by
+(conda-forge package, bundle `tlextras-2022.0r0`) by
 `python3 scripts/build_ic_curve_paper.py`. The PDF producer is xdvipdfmx
-(0.1). Earlier rebuilds used the conda-forge package of the same version;
-this replaces the earlier, incorrect pdfTeX build attribution.
+(0.1). An earlier rebuild of the same day used the Homebrew formula of the
+same version with its default bundle; the first rebuilds used the conda-forge
+package; this replaces the earlier, incorrect pdfTeX build attribution.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 
