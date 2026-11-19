@@ -4,6 +4,7 @@ import argparse,hashlib,itertools,json,random,subprocess,tempfile
 from pathlib import Path
 from compact_candidate import Ring,Compact
 from compact_replay import verify
+from compact_replay_rust import convert,run_backend
 HERE=Path(__file__).resolve().parent
 
 def text_input(R,gens):
@@ -18,12 +19,14 @@ def direct(binary,dest,R,gens):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--trials',type=int,default=200);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--exhaustive-univariate',action='store_true');ap.add_argument('--compiled',action='store_true');args=ap.parse_args()
     rng=random.Random(20261119);records=[]
-    sources={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'compact_candidate.py',Path(__file__),HERE/'sparse_producer.rs',HERE/'compact_replay.py',HERE/'replay.py',HERE/'compact_producer.rs']}
+    sources={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'compact_candidate.py',Path(__file__),HERE/'sparse_producer.rs',HERE/'compact_replay.py',HERE/'replay.py',HERE/'compact_producer.rs',HERE/'compact_replay.rs',HERE/'compact_replay_rust.py']}
     with tempfile.TemporaryDirectory(prefix='compact-falsify-') as tmp:
         d=Path(tmp);binary=d/'reference'
         subprocess.run(['rustc','-O',str(HERE/'sparse_producer.rs'),'-o',str(binary)],check=True)
         compiled=d/'compact'
         if args.compiled:subprocess.run(['rustc','-O',str(HERE/'compact_producer.rs'),'-o',str(compiled)],check=True)
+        compact_checker=d/'compact-checker'
+        if args.compiled:subprocess.run(['rustc','-O',str(HERE/'compact_replay.rs'),'-o',str(compact_checker)],check=True)
         # The harness must catch these deliberately incomplete criteria.
         R=Ring(17,1,2,0,2);g=[{2:1}];ref=direct(binary,d,R,g)
         bad=Compact(R,carry=False).run(g);assert ref['contains_one'] and not bad['contains_one']
@@ -54,9 +57,13 @@ def main():
             proof.write_text(json.dumps({'input_sha256':hashlib.sha256((d/'input').read_bytes()).hexdigest(),'trace':trace}))
             membership=verify(d/'input',proof)
             assert membership['contains_one']==out['contains_one']
+            rust_membership=None
+            if args.compiled:
+                text=d/'proof.txt';convert(d/'input',proof,text);rust_membership=run_backend(d/'input',text,compact_checker)
+                assert rust_membership['contains_one']==membership['contains_one'] and rust_membership['verified_rows']==membership['verified_rows']
             rank=None if out['contains_one'] else candidate.candidate_rank() if not candidate.capped else None
             ok=not candidate.capped and out['contains_one']==ref['contains_one'] and (out['contains_one'] or rank==ref['derived_rank'])
-            rec={'case':i,'parameters':vars(R),'input_sha256':hashlib.sha256(text_input(R,gens).encode()).hexdigest(),'candidate':out,'python_candidate':python_out,'compiled_trace_identity':trace_identity,'candidate_rank':rank,'reference':ref,'membership_replay':membership,'agrees':ok}
+            rec={'case':i,'parameters':vars(R),'input_sha256':hashlib.sha256(text_input(R,gens).encode()).hexdigest(),'candidate':out,'python_candidate':python_out,'compiled_trace_identity':trace_identity,'candidate_rank':rank,'reference':ref,'membership_replay':membership,'rust_membership_replay':rust_membership,'agrees':ok}
             records.append(rec)
             if not ok:
                 rec['failure_kind']='resource-cap' if candidate.capped else 'reading-mismatch'

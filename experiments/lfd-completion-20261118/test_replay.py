@@ -295,11 +295,14 @@ def test_compact_falsification_controls(tmp_path,compiled):
     assert json.loads(out.read_text())['all_agree']
 
 
+@pytest.mark.parametrize('backend',['python','rust'])
 @pytest.mark.parametrize('corrupt',[None,'row','future','degree','digest'])
-def test_compact_membership_replay_refuses_invalid_proofs(tmp_path,corrupt):
+def test_compact_membership_replay_refuses_invalid_proofs(tmp_path,corrupt,backend):
     import json
     from compact_candidate import Ring,Compact
     from compact_replay import verify
+    if backend=='rust':
+        from compact_replay_rust import verify
     # A high chain bit squares to 1; the auxiliary variable exercises the
     # independent bound on reducer multipliers.
     inp=tmp_path/'input';inp.write_text('17 1 2 1 2 10 100 10000\n1\n1 2 1\n')
