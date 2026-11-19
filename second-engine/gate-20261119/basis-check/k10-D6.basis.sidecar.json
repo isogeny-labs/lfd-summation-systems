@@ -1,0 +1,78 @@
+{
+  "D": 6,
+  "basis_file": "k10-D6.basis",
+  "bytes": 967512,
+  "closure": {
+    "muladds": 43706615635,
+    "resumed": false,
+    "rows_reduced": 137866,
+    "seconds": 19.582388883
+  },
+  "column_order": 1,
+  "contains_one": true,
+  "content_sha256": "4ba2c7783cbccd9325b56045006c49eae9ff32767ab3339124e2bf5019db4182",
+  "created_utc_unix_s": 1795115988,
+  "engine": {
+    "binary_sha256": "7b859090f7f8c63b0c42a6ba05a2de3296745739cf38e525daa4a96068e6fd05",
+    "commit": "unknown",
+    "name": "hky_fp_tower_fast2",
+    "options": {
+      "batch_max": 256,
+      "batch_min": 32,
+      "bitmap": true,
+      "deg_weight": 1,
+      "dense": [
+        1,
+        3
+      ],
+      "fault": 0,
+      "interreduce": 0.25,
+      "interreduce_block": 256,
+      "interreduce_min": 256,
+      "np_epochs": true,
+      "par_second": true,
+      "rebucket": true,
+      "skip": false,
+      "skip_order": 1,
+      "skip_witness": 1,
+      "skip_witness_max": 0,
+      "sweep": true,
+      "sweep_max_words": 268435456,
+      "sweep_ratio": 4,
+      "sweep_tile_bytes": 1048576,
+      "target_pivots": 32,
+      "verify_closed": false
+    }
+  },
+  "file_sha256": "269920d88d1698b42c53ef90114c0eb72d6bf4408bea53e8ac1f068de42fde05",
+  "instance": {
+    "a": 1,
+    "b": 0,
+    "control": null,
+    "k": 10,
+    "path": "/home/user/lfd-summation-systems/experiments/ic-bounds-k14/instances/unit-p65537-a1-s10-k10.json",
+    "prime": 65537,
+    "sha256": "fa6b2beaf3201aa64de015462ed44dd76b6c889b62c185b4cd79d40b9e7dc9a7",
+    "target": [
+      4271,
+      11720
+    ]
+  },
+  "k": 10,
+  "m": 2,
+  "mask_encoding": 1,
+  "n_cols": 60460,
+  "n_vars": 20,
+  "p": 65537,
+  "profile": [
+    1,
+    21,
+    211,
+    1351,
+    6196,
+    21700,
+    60460
+  ],
+  "rank": 60460,
+  "schema": "hky.basis.sidecar/v1"
+}

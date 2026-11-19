@@ -1,0 +1,12 @@
+closures: 11 cells, 11 match; closedness re-check 1637168 products, 0 non-zero; skipped 0 of 1681623 items
+closures-skip: 11 cells, 11 match; closedness re-check 1637168 products, 0 non-zero; skipped 361502 of 1681623 items
+basis-check k10 D5: rc=0 {"ok":true,"n_cols":21700,"rank":18569,"contains_one":false,"profile":[0,0,2,138,3163,18569],"closedness":{"closed":true,"generator_in_span":true,"mode":"annihilator","products_checked":63260}}
+basis-check k10 D6: rc=0 {"ok":true,"n_cols":60460,"rank":60460,"contains_one":true,"profile":[1,21,211,1351,6196,21700,60460],"closedness":{"closed":true,"generator_in_span":true,"mode":"annihilator","products_checked":434000}}
+ckpt k10 D5: KILL identical to reference: true
+ckpt k10 D5: KILL basis files byte-identical: true
+ckpt k10 D5: TERM identical to reference: true
+ckpt k10 D5: TERM basis files byte-identical: true
+negctl k10 D6 --override-x 11932: {"profile":[0,0,175,1315,6160,21664,60424],"contains_one":false,"closed":true,"muladds":364111639774}; equal to the record (gate/negative_controls_d6.log): true
+negctl k10 D6 --override-x 4272: {"profile":[1,21,211,1351,6196,21700,60460],"contains_one":true,"closed":true,"muladds":43537310049}; equal to the record (gate/negative_controls_d6.log): true
+negctl k10 D6 --override-a 2: {"profile":[1,21,211,1351,6196,21700,60460],"contains_one":true,"closed":true,"muladds":43706363116}; equal to the record (gate/negative_controls_d6.log): true
+EXTRACT_GATE_DONE
