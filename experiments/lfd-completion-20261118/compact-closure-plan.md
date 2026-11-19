@@ -1,4 +1,4 @@
-# Compact closure candidate: not yet implemented or certified
+# Compact closure candidate: prototype implemented, criterion not certified
 
 The current exact-pivot engines store a separate row for every retained
 monomial pivot, including many monomial multiples of earlier low-degree
@@ -6,7 +6,7 @@ rows. Both split runs reached roughly 300 million terms at only 107,024
 retained rows. Increasing that budget alone is unlikely to be sufficient
 for the larger depth inputs on this machine.
 
-The next candidate is a degree-bounded, divisor-based polynomial basis.
+The implemented Python candidate is a degree-bounded, divisor-based polynomial basis.
 This is a proposed algorithm, not evidence of any open cell's exact value.
 
 Represent normal monomials by chain masks and auxiliary exponents. Reduce
@@ -44,3 +44,10 @@ upper space's checked containment of V_6, its exact input identity and
 basis hashes. Matching two rank numbers alone does not establish equality.
 The second depth14 prime and the frozen depth18 D7/D8 instance remain full
 requirements; a compact prototype or a capped search does not replace them.
+
+The next implementation target is a compiled divisor-based reducer with
+replayable monomial reductions. It should consume the already verified
+large prefixes where useful, rather than regenerate their proofs. Preserve
+all original instances and use exact-membership witnesses or checked
+closedness; a compact-looking CAS output is insufficient. See the draft
+bounded criterion and the retained failing CAS carry checks.

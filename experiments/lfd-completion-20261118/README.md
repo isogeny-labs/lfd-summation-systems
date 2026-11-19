@@ -268,3 +268,59 @@ domain), with a 150-million-term budget and 30-minute cap. A stopped prefix
 will not establish the target input containment. Completion still requires
 an independently verified full input certificate and binding to the lift;
 the second archived prime remains in scope too.
+
+## Compact candidate: falsification and membership checks
+
+`compact_candidate.py` implements the provisional divisor/carry-pair
+method. `compact_replay.py` imports no producer algebra and checks every
+retained derivation, including its monomial multiplier and degree budget.
+It proves row membership only. `compact-criterion-draft.md` records the
+proposed bounded critical-pair argument and its remaining proof gate.
+
+The direct comparison harness agrees on 2,075 controls: 200 generated
+systems plus every coefficient choice for one polynomial over the
+four-element cyclic grid at each of D=1,2,3. Every retained compact row in
+these controls was independently replayed. Omitted carry and critical
+pairs are detected by explicit negative controls. The original 200-case
+source and receipt are retained in commit ca1efc3. These controls do not
+prove the arbitrary-depth closedness criterion.
+
+The original depth18 input now has separately bound D7/D8 input files and
+an identity record tied to the frozen JSON. Thirty-second compact searches
+retained 135 and 134 polynomials respectively. Their derivations replayed,
+but both searches capped without a unit witness or closedness certificate.
+The source instance and requested breakpoint have not been changed.
+
+The original p=65537 depth14 run stopped at 150,000,655 terms and 251,300
+rows. Independent replay checked all rows, with no full-closure claim.
+The exploratory leading-coverage tool reports 302,313 carry-free covered
+monomials, below the archived rank 448,922. This tool assumes the first
+recorded term is the leading term and is not an accepted rank certificate;
+that order condition and the algebraic rank argument require separate
+validation before any use in input binding.
+
+Both split D8 continuations stopped at about 300 million terms and 107,024
+rows. Both complete retained prefixes passed independent replay. These
+remain partial spaces; neither supplied a unit witness.
+
+## Local CAS candidates and rejected shortcuts
+
+`singular_probe.py` and `singular_iterate.py` use the installed local
+Sage/libSingular build, with a wall-time guard, two-GiB RSS guard and disk
+floor. They produce candidate polynomial lists, not derivations in V_D.
+The iterated variant chain-normalizes and saves each completed round
+atomically before restarting; all terminal/capped receipts are retained.
+
+The first-pass candidates for depth14 D6 and depth18 D7/D8 each failed a
+required carry check. The iterated probes reached their two-minute caps;
+their last completed snapshots also failed carry checks under
+`compact_conditions_independent.py`, which imports no producer algebra.
+The finite-condition checker passes on a small saved control whose input
+also has an existing direct closure certificate. Thus neither a short CAS list nor a degree-bound
+option is being accepted as the requested closed-space certificate.
+
+The local pytest suite now includes 77 cases, covering both condition
+checkers as well as compact membership corruption. Sage probes are local
+experiments, not tests asserted to run in the ordinary Python CI job.
+The next work is the compiled compact reducer and the bounded-criterion
+proof, preserving all original depth14, split and depth18 obligations.

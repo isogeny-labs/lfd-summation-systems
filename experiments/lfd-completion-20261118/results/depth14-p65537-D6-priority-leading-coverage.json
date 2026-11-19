@@ -1,0 +1,33 @@
+{
+  "scope": "carry-free leading coverage; row membership must be independently verified; no closedness claim",
+  "parameters": [
+    65537,
+    2,
+    14,
+    0,
+    6
+  ],
+  "source_sha256": "104573d5e328ea16441b3ef7440f0197d05ab8aa8f0d6dd1512332a0818c3dd2",
+  "basis_sha256": "c36890b1957712255bc1ddcf74bff79ee57475f4240e9c3997bb97bc8882143f",
+  "retained_rows": 251300,
+  "retained_leading_counts": [
+    0,
+    0,
+    2,
+    152,
+    4169,
+    43526,
+    203451
+  ],
+  "covered_leading_counts": [
+    0,
+    0,
+    2,
+    152,
+    4169,
+    43526,
+    254464
+  ],
+  "covered_count": 302313,
+  "multiplication_rule": "For each covered monomial M choose a row with leading mask L subset M; multiply by M xor L. Its total degree is at most D."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "derived_rank": 251300,
+  "contains_one": false,
+  "closed_check": false,
+  "replay_muladds": 10597641707,
+  "seconds": 100.73702,
+  "verifier_engine": "indexed",
+  "verifier_source_sha256": "e1b86cb2fc367901a684cbc68b0ea95759c3a8ebd24889ee3936dfa8daa14ce0",
+  "input_sha256": "8b663bd410748956a8905b98f143bfeae4cc44d7c736febb390008ecb226dbfa",
+  "target": {
+    "derivations.txt.gz": {
+      "sha256": "38ac7147389343028acdb34913ba84d709b4cb85506a6e0f8e444fd141e66dd9",
+      "bytes": 68527794,
+      "decoded_sha256": "62da8f4c8be4e6bf0401c07d1595a83242a73182ebbcff423be203d69c35bfa5"
+    },
+    "basis.txt.gz": {
+      "sha256": "c36890b1957712255bc1ddcf74bff79ee57475f4240e9c3997bb97bc8882143f",
+      "bytes": 896826837,
+      "decoded_sha256": "2bba21e8cc10b49aeb42851dd414bcfdbafb6c541e61be03727e07be7ba9f6ee"
+    }
+  }
+}

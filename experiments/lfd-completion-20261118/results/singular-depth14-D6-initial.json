@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "scope": "local CAS candidate only; no V_D membership or compact closedness certificate",
+  "parameters": [
+    65537,
+    2,
+    14,
+    0,
+    6
+  ],
+  "sage_version": "10.10.rc0",
+  "algorithm": "libsingular:std",
+  "degree_bound": 6,
+  "seconds": 0.14384229099960066,
+  "raw_polynomials": 57,
+  "normal_polynomials": 29,
+  "terms": 857,
+  "contains_one_candidate": false,
+  "input_sha256": "a878bcd04861493e4798275f0d69454c1870c4c0d813135b1e9f943675f006bb",
+  "source_sha256": "80a71696b24dbd34b4216717dfa1d8bd346e5c4a62038db01a32fee99b453562",
+  "elapsed_seconds": 5.1663113750000775,
+  "candidate_sha256": "49013e1e51aa2c0d76ab6fe63430df6938b68a1b6e82d92648e20677f7514fc8"
+}

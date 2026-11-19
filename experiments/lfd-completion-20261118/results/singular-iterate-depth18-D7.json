@@ -1,0 +1,25 @@
+{
+  "status": "capped",
+  "reason": "wall-time-cap",
+  "scope": "no completed candidate or mathematical claim",
+  "completed_snapshots": [
+    {
+      "name": "round-0001.json",
+      "sha256": "2a9ba1487677a7a435445f4931986596930a63bd9e04f522f14a5c21b67b714d",
+      "bytes": 30897
+    },
+    {
+      "name": "round-0002.json",
+      "sha256": "905f07efdb490955d10c9a7207a09e5282b9bede1f04dd9d96f09fe5e780adbd",
+      "bytes": 445398
+    },
+    {
+      "name": "round-0003.json",
+      "sha256": "69358aaa86e7969c8e7a78b06111ca018ab29add8301002f182ffec72e0e6fbc",
+      "bytes": 5301736
+    }
+  ],
+  "input_sha256": "cb641bcd76a65b97763852ba29ddcb96adb20438810e55b0bf0caba27ed4194c",
+  "source_sha256": "ee799e466b37b3bb9c394fff32fec4c9bc1391fcf76fd832ad247d345f2ce72a",
+  "elapsed_seconds": 120.6427953329985
+}

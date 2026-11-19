@@ -283,3 +283,53 @@ def test_priority_schedule_rejects_fifo_cursor(tmp_path,monkeypatch):
     import sys
     monkeypatch.setattr(sys,'argv',['run_heap.py','unused','tag','--engine','priority','--resume','unused','--resume-cursor'])
     with pytest.raises(ValueError,match='FIFO restart engine'):runner.main()
+
+
+def test_compact_falsification_controls(tmp_path):
+    import subprocess,sys,json
+    out=tmp_path/'falsification.json'
+    subprocess.run([sys.executable,str(HERE/'compact_falsify.py'),'--trials','64','--out',str(out)],capture_output=True,text=True,check=True)
+    assert json.loads(out.read_text())['all_agree']
+
+
+@pytest.mark.parametrize('corrupt',[None,'row','future','degree','digest'])
+def test_compact_membership_replay_refuses_invalid_proofs(tmp_path,corrupt):
+    import json
+    from compact_candidate import Ring,Compact
+    from compact_replay import verify
+    # A high chain bit squares to 1; the auxiliary variable exercises the
+    # independent bound on reducer multipliers.
+    inp=tmp_path/'input';inp.write_text('17 1 2 1 2 10 100 10000\n1\n1 2 1\n')
+    C=Compact(Ring(17,1,2,1,2));assert C.run([{2:1}])['contains_one']
+    proof={'input_sha256':hashlib.sha256(inp.read_bytes()).hexdigest(),'trace':C.trace}
+    if corrupt=='row':proof['trace'][-1]['row'][0]=(proof['trace'][-1]['row'][0][0],2)
+    elif corrupt=='future':proof['trace'][-1]['source']=['carry',999,1]
+    elif corrupt=='degree':proof['trace'][-1]['reductions'].append([0,3<<2,1])
+    elif corrupt=='digest':proof['input_sha256']='wrong'
+    path=tmp_path/'proof';path.write_text(json.dumps(proof))
+    if corrupt:
+        with pytest.raises(ValueError):verify(inp,path)
+    else:
+        result=verify(inp,path);assert result['contains_one'] and not result['closed_check']
+
+
+@pytest.mark.parametrize('implementation',['prototype','independent'])
+@pytest.mark.parametrize('kind',['closed-control','missing-carry','missing-pair'])
+def test_compact_condition_falsifier(tmp_path,monkeypatch,kind,implementation):
+    import json,shutil
+    import importlib
+    checker=importlib.import_module('compact_conditions' if implementation=='prototype' else 'compact_conditions_independent')
+    from compact_falsify import text_input
+    from compact_candidate import Ring
+    home=tmp_path/'checker';home.mkdir();(home/'results').mkdir();shutil.copyfile(HERE/'compact_candidate.py',home/'compact_candidate.py');monkeypatch.setattr(checker,'HERE',home)
+    d=tmp_path/'case';d.mkdir()
+    if kind=='missing-pair':
+        R=Ring(17,1,1,3,3);x,y,z=[1<<(1+6*j) for j in range(3)];gens=[{x+y:1,0:1},{x+z:1,0:1}]
+    else:
+        R=Ring(17,1,2,0,2);gens=[{2:1,0:16}] if kind=='closed-control' else [{2:1}]
+    inp=d/'input.txt';inp.write_text(text_input(R,gens));(d/'candidate.json').write_text(json.dumps({'input_sha256':hashlib.sha256(inp.read_bytes()).hexdigest(),'polynomials':[sorted(g.items()) for g in gens]}))
+    result=checker.check(d)
+    if kind=='closed-control':assert result['status']=='finite-conditions-passed'
+    else:
+        assert result['status']=='conditions-failed'
+        assert result['missing']['kind']==('carries' if kind=='missing-carry' else 'pairs')
