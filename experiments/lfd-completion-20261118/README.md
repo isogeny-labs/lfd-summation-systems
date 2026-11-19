@@ -190,3 +190,28 @@ counts include the seed's initial-generator terms, which the first
 producer's runtime counter omitted; this is not a change in mathematical
 rank. The restart and wrapper refusal checks bring the local suite to 32
 tests. These controls validate restart mechanics, not the open larger cells.
+
+`--resume-cursor` resumes the recorded source/variable schedule rather than
+rechecking all earlier zero products. The cursor is a count of products,
+including zero products absent from the ledger. It selects a source from
+the ordered list of rows of degree below D and a variable within that
+source. Resume receipts preserve a cumulative `schedule_products` value.
+Older restarted runs without an unambiguous cumulative count must use the
+full requeue mode. This cursor is a scheduling aid, never a proof of
+closedness: an intentionally false cursor can fool the producer's status,
+and the independent full closedness check rejects it in the refusal tests.
+
+The recorded degree-7 cursor test resumed after 75,039 products, evaluated
+31,071 additional products, and reproduced the exact independently checked
+input and compressed proof hashes. The suite now has 35 passing local
+tests. A verified seed replay may be reused only after rechecking current
+input, compressed and decoded proof hashes, verifier-source identity and
+result identity. The source files and receipts for the first restart mode
+are retained in commit fa53222.
+
+The p=163841 degree-8 indexed run stopped at the 150-million-term budget:
+103,008 retained rows, no unit witness, and no closedness claim. Its intact
+compressed prefix is undergoing independent membership replay. A separate
+input file retains exactly the same system and degree with a 300-million-
+term budget for continuation; the two-GiB artifact cap, disk floor and
+30-minute producer time limit remain in force.

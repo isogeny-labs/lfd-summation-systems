@@ -11,15 +11,21 @@ def digest(path,decoded=False):
     return h.hexdigest()
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed','restart'],default='heap');ap.add_argument('--resume',type=Path);args=ap.parse_args()
-    resume_record=None
+    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed','restart'],default='heap');ap.add_argument('--resume',type=Path);ap.add_argument('--resume-cursor',action='store_true');args=ap.parse_args()
+    resume_record=None;cursor=None
+    if args.resume_cursor and not args.resume:raise ValueError('cursor requires a seed run')
     if args.resume:
         if args.engine!='restart':raise ValueError('--resume requires --engine restart')
         from verify_compressed import verify
-        verify(args.resume)
+        verify(args.resume,reuse=True)
         old=(args.resume/'input.txt').read_text().split();new=args.input.read_text().split()
         if old[:5]!=new[:5] or old[8:]!=new[8:]:raise ValueError('resume changes the polynomial system or degree')
-        resume_record={'run_dir':str(args.resume.resolve()),'result_sha256':digest(args.resume/'result.json')}
+        resume_record={'run_dir':str(args.resume.resolve()),'result_sha256':digest(args.resume/'result.json'),'verification_sha256':digest(args.resume/'replay.json')}
+        if args.resume_cursor:
+            old_receipt=json.loads((args.resume/'result.json').read_text())
+            cursor=old_receipt.get('schedule_products',old_receipt.get('products') if not old_receipt.get('resume_from') else None)
+            if cursor is None or cursor<0:raise ValueError('seed has no unambiguous schedule cursor')
+            resume_record['schedule_products']=cursor
     dest=HERE/'runs'/args.tag
     if dest.exists():raise FileExistsError(dest)
     if shutil.disk_usage(HERE).free<3*2**30:raise RuntimeError('need at least 3 GiB free before launch')
@@ -32,6 +38,7 @@ def main():
     with (dest/'stderr.log').open('w') as err:
         command=[str(binary),str(dest/'input.txt'),*map(str,outputs)]
         if args.resume:command.extend(str(args.resume/name) for name in ['derivations.txt.gz','basis.txt.gz'])
+        if cursor is not None:command.append(str(cursor))
         child=subprocess.Popen(command,stdout=subprocess.PIPE,stderr=err,text=True,start_new_session=True)
         while True:
             try:
@@ -49,7 +56,7 @@ def main():
                     try:child.communicate(timeout=5)
                     except subprocess.TimeoutExpired:os.killpg(child.pid,signal.SIGKILL);child.communicate()
                     result={'status':reason,'scope':'partial compressed files; no complete closure claim'};break
-    result.update(resume_from=resume_record,engine=args.engine,source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
+    result.update(schedule_products=(cursor or 0)+result['products'] if 'products' in result else None,resume_from=resume_record,engine=args.engine,source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
     result['artifacts']={p.name:{'sha256':digest(p),'bytes':p.stat().st_size} for p in outputs}
     if not reason:
         for p in outputs:result['artifacts'][p.name]['decoded_sha256']=digest(p,True)

@@ -204,8 +204,54 @@ def test_restart_wrapper_refuses_different_polynomial_system(tmp_path,monkeypatc
     import verify_compressed
     seed=tmp_path/'seed';seed.mkdir();original=(SRC/'input.txt').read_text();(seed/'input.txt').write_text(original)
     inp=tmp_path/'changed-input';tokens=original.split();tokens[-1]=str((int(tokens[-1])+1)%65537);inp.write_text(' '.join(tokens)+'\n')
-    monkeypatch.setattr(verify_compressed,'verify',lambda path:None)
+    monkeypatch.setattr(verify_compressed,'verify',lambda path,**kwargs:None)
     monkeypatch.setattr(runner,'HERE',tmp_path)
     monkeypatch.setattr(sys,'argv',['run_heap.py',str(inp),'new-run','--engine','restart','--resume',str(seed)])
     with pytest.raises(ValueError,match='polynomial system or degree'):runner.main()
     assert not (tmp_path/'runs'/'new-run').exists()
+
+
+def test_partial_source_cursor_resumes_exact_proof(tmp_path,restart_producer,rust_checker):
+    import subprocess,json,gzip
+    inp,_,_=clone(tmp_path);original=inp.read_text();tokens=original.split();tokens[6]='2';inp.write_text(' '.join(tokens)+'\n')
+    ledger=tmp_path/'seed-ledger.gz';basis=tmp_path/'seed-basis.gz'
+    seed=json.loads(subprocess.run([str(restart_producer),str(inp),str(ledger),str(basis)],capture_output=True,text=True,check=True).stdout)
+    assert seed['status']=='capped' and seed['derived_rank']==2 and seed['products']%4!=0
+    inp.write_text(original);outledger=tmp_path/'ledger.gz';outbasis=tmp_path/'basis.gz'
+    result=json.loads(subprocess.run([str(restart_producer),str(inp),str(outledger),str(outbasis),str(ledger),str(basis),str(seed['products'])],capture_output=True,text=True,check=True).stdout)
+    assert result['status']=='closed' and result['derived_rank']==5
+    assert gzip.decompress(outledger.read_bytes())==(SRC/'derivations.txt').read_bytes()
+    assert gzip.decompress(outbasis.read_bytes())==(SRC/'basis.txt').read_bytes()
+    assert subprocess.run([str(rust_checker),str(inp),str(outledger),str(outbasis),'closed'],capture_output=True).returncode==0
+
+
+def test_verified_prefix_cache_is_bound_to_current_artifacts(tmp_path,monkeypatch):
+    import gzip,json
+    import verify_compressed as checker
+    inp,ledger,basis=clone(tmp_path);artifacts={}
+    for p in [ledger,basis]:
+        dest=p.with_suffix('.txt.gz');dest.write_bytes(gzip.compress(p.read_bytes()))
+        artifacts[dest.name]={'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'decoded_sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+    receipt={'input_sha256':hashlib.sha256(inp.read_bytes()).hexdigest(),'artifacts':artifacts,'derived_rank':5,'contains_one':False,'status':'closed'}
+    (tmp_path/'result.json').write_text(json.dumps(receipt))
+    output=tmp_path/'checker-home';output.mkdir();(output/'results').mkdir();(output/'replay.rs').write_bytes((HERE/'replay.rs').read_bytes())
+    monkeypatch.setattr(checker,'HERE',output)
+    assert checker.verify(tmp_path,closed=True)['closed_check']
+    assert checker.verify(tmp_path,closed=True,reuse=True)['cache_reused']
+    (tmp_path/'basis.txt.gz').write_bytes(gzip.compress(b'changed'))
+    with pytest.raises(ValueError,match='compressed digest mismatch'):checker.verify(tmp_path,closed=True,reuse=True)
+
+
+def test_false_cursor_cannot_pass_independent_closedness(tmp_path,restart_producer,rust_checker):
+    import subprocess,json,gzip
+    inp,_,_=clone(tmp_path);original=inp.read_text();tokens=original.split();tokens[6]='2';inp.write_text(' '.join(tokens)+'\n')
+    ledger=tmp_path/'seed-ledger.gz';basis=tmp_path/'seed-basis.gz'
+    subprocess.run([str(restart_producer),str(inp),str(ledger),str(basis)],capture_output=True,check=True)
+    rows=[list(map(int,line.split())) for line in gzip.decompress(basis.read_bytes()).decode().splitlines()]
+    eligible=sum(max(x.bit_count() for x in row[2::2])<3 for row in rows)
+    inp.write_text(original);outledger=tmp_path/'ledger.gz';outbasis=tmp_path/'basis.gz'
+    # Pretend all admissible source rows have been processed. Membership can
+    # still be valid, but exactness must fail the independent closure gate.
+    result=json.loads(subprocess.run([str(restart_producer),str(inp),str(outledger),str(outbasis),str(ledger),str(basis),str(4*eligible)],capture_output=True,text=True,check=True).stdout)
+    assert result['status']=='closed' and result['derived_rank']==2
+    assert subprocess.run([str(rust_checker),str(inp),str(outledger),str(outbasis),'closed'],capture_output=True).returncode!=0

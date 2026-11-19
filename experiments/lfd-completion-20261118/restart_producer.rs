@@ -101,7 +101,7 @@ fn absorb(raw:Row,source:(&str,usize,u32),p:u32,d:u32,space:&mut Space,
  basis.push(new);(space.codes[x]==0,ops)
 }
 fn main(){
- let args:Vec<String>=std::env::args().collect();assert!(args.len()==4||args.len()==6,"input ledger basis [seed_ledger seed_basis]");
+ let args:Vec<String>=std::env::args().collect();assert!(args.len()==4||args.len()==6||args.len()==7,"input ledger basis [seed_ledger seed_basis [schedule_products]]");
  let mut text=String::new();File::open(&args[1]).unwrap().read_to_string(&mut text).unwrap();let mut it=text.split_whitespace();
  macro_rules! n {()=>{it.next().unwrap().parse::<u64>().unwrap()};}
  let p=n!() as u32;let m=n!() as u32;let k=n!() as u32;let a=n!() as u32;let d=n!() as u32;
@@ -112,7 +112,7 @@ fn main(){
  let mut space=Space::new(r,a,d);let start=Instant::now();
  let mut log=ProofOutput::create(&args[2]);let mut out=ProofOutput::create(&args[3]);
  let mut basis=Vec::new();let mut queue=VecDeque::new();let mut one=false;let mut ops=0;let mut stored=0u64;
- if args.len()==6 {
+ if args.len()>=6 {
   // Seed membership must be checked by the caller; the combined proof is
   // independently replayed again. Requeue every admissible seed row so
   // restart cannot silently skip products absent from the retained log.
@@ -140,9 +140,18 @@ fn main(){
   let raw=g.into_iter().map(|(x,c)|(*space.index.get(&x).expect("input monomial outside domain"),c)).collect();
   let (hit,o)=absorb(raw,("input",i,0),p,d,&mut space,&mut basis,&mut queue,&mut log,&mut out);one|=hit;ops+=o;
  }
+ let mut first_var=0;
+ if args.len()==7 {
+  let done=args[6].parse::<usize>().unwrap();let nvars=(r+a) as usize;
+  let complete=done/nvars;first_var=(done%nvars) as u32;
+  assert!(complete<=queue.len(),"seed cursor beyond queue");
+  for _ in 0..complete{queue.pop_front().unwrap();}
+  assert!(first_var==0||!queue.is_empty(),"partial cursor beyond queue");
+ }
  let mut products=0;let mut status="closed";
  'outer:while !one{let id=match queue.pop_front(){Some(i)=>i,None=>break};
-  for v in 0..r+a{
+  let begin=first_var;first_var=0;
+  for v in begin..r+a{
    if start.elapsed().as_secs()>=seconds||basis.len()>=max_rows||stored>=max_terms{status="capped";break 'outer;}
    let old=basis.len();let raw=basis[id].iter().map(|&(j,c)|{
     let code=shifted(space.codes[j as usize],v,m,k);(*space.index.get(&code).expect("shift outside domain"),c)
