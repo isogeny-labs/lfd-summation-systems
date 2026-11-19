@@ -1,0 +1,7015 @@
+{
+  "scope": "small-instance falsification only; no large-cell exactness claim",
+  "source_sha256": {
+    "compact_candidate.py": "512ac6f860d094b262748483e11459b97c37abd8d1938eed24b7058a57be5b18",
+    "compact_falsify.py": "c2d9faf0d591ac1b3795c3acac0b1d17e5954c2065488687c79732d9d0eb1c0a",
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453"
+  },
+  "negative_controls": {
+    "missing_carry_detected": true,
+    "missing_pair_detected": true
+  },
+  "cases": [
+    {
+      "case": 0,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "9942e0f1ec7c3c90b1366944bfd1584dc5b63230b0ddaac103ad3ea4fe26d390",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 4.7999998059822246e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 1,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "f6e981918f2544e6aad0347ca2f6c6fee27250785528f02ea90daf2b7e316419",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.00014675000056740828,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 3.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 2,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "c80ea32663989b35d89c028758eefd5545cd5d142160e44c5ad75aaa6a944124",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.00024695799947949126,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 3,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "9ace75a2f1748b6085fa207cfbdd2eb8e751ad38db1bc2214a64d23cfe804d52",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 6.004100214340724e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 4,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "a8c8305f9198c484a940b96d5e437f42298fd499bf1fcdcd54948680dc73b429",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 8.762500146985985e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 5.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 5,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "9ee52d3db0c6390cecee3efce441650396cb2a51213b69452cf63ad46faef888",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.0002414170012343675,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 6,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "00e36510240d518164bf94e19bbbec10e8ae164a67e9159c88841dd955e54bfb",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 0.00010483299774932675,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 7,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "531624b4f82cb016b6ee0bf668ab8d6e1801a93bffd5ed547ac989d4d2ff681c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.0010197920018981677,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 8,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "b671fe9c9388b4ed09b7d08ac40e432e8c1caa40571b5fb355215caf9ae82d5e",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00013324999963515438,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 9,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "96c89f2dc5afbdeb8b08cc6de1e1bb9b0d3bc0ede72cff97539005fbfdfe9304",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 6.804200165788643e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 10,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "beac858835123fab39c519fe85207b57778453d906c224f5426398c88b7388d7",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 7,
+        "pairs_processed": 5,
+        "seconds": 0.0004978750002919696,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 4,
+        "terms": 2,
+        "muladds": 19,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 11,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "0346c9ec1cdf509048b9c0cc0909784c6c9bca2628c25deac6c320dc7202cffb",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 6,
+        "terms": 15,
+        "pairs_processed": 3,
+        "seconds": 0.0006566659976670053,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 8,
+        "contains_one": true,
+        "products": 5,
+        "terms": 14,
+        "muladds": 24,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 12,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "0d0d58fe9b038f864bcca6a028b4263c4b9a5d47bf22d0b66ae09937f3916a4c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 6.341699918266386e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 13,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "f01012d3ddf7cb5775ec7d06e09bd028398db1d048a858ef4b526ad0b3dc83cc",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 10,
+        "pairs_processed": 0,
+        "seconds": 0.00013712500003748573,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 5,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 14,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "0de76f48cd887627ac461e5b6f442f369e0b582a425562553676bdca366a62bf",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 17,
+        "pairs_processed": 0,
+        "seconds": 0.0003545830004441086,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 9.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 15,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "ed8bdd19e793337b023101dc32771bc9ed5890cd7af198bd9706536805c86d82",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 7.804099732311442e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 6.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 16,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "76865b61f47416a77861787cc8d327915f0060ba887124d79e7fae0c695bebf5",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.0003080419992329553,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 17,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "959b1796807f1e250fbb40defa69214e47f72c3b6eff03c4573cc833969d24d6",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 9,
+        "pairs_processed": 1,
+        "seconds": 0.00016187499932129867,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 16,
+        "seconds": 3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 18,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "a5b7285136cf5ab1b7b538b2afaa514efafaa6312e0fc20e5bdfa893615ca5e2",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 7,
+        "seconds": 0.000662500002363231,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 5,
+        "muladds": 43,
+        "seconds": 5.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 19,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "d2359627b1fc48ed43fdce80a87270b277326ea29c3210ad0ed217a3c2422d72",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 12,
+        "pairs_processed": 0,
+        "seconds": 9.166699965135194e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 20,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "aede62cd1e6ed8cce94223af6086c96b39a49e230e05da8b17fc72392cf46530",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 4,
+        "seconds": 0.000785625001299195,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 6,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 6,
+        "contains_one": false,
+        "products": 8,
+        "terms": 8,
+        "muladds": 44,
+        "seconds": 8.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 21,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "1a18a81632209a8dc88d8def2035684373e30196851c0e1aa09b2632802423d1",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 6.520799797726795e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 22,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "bf40b8990e9883693144ebbb987c613128b3f52b242aa30f81dc5b20fa6c8b1d",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 8.387499838136137e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 23,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "ccdee03bb38f42dfe200006e7779c7702c80084c4c378b274a687f84447b4b4f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 15,
+        "pairs_processed": 0,
+        "seconds": 0.000469375001557637,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 24,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "f21fa164c5242d500eb2ebf5db97604b1334bed0119c6afdc99691b4936a1c8c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 9.579099787515588e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 4.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 25,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "2d7854bc243ccae1bd6cdfcaa041da515c8dee2b9659f3fddf6fae0b589c06bc",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 3,
+        "terms": 5,
+        "pairs_processed": 1,
+        "seconds": 0.00026041700039058924,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 2,
+        "seconds": 5.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 26,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "9a3297bd5aa292c369516075d5b691171f25870cc30948fba4be5b0bbfd96994",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 3,
+        "seconds": 0.0008113750009215437,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 0,
+        "muladds": 36,
+        "seconds": 3.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 27,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "65a43f15b295cb6138d674d16bf065994ef6bab23f1287c855bdfe61159fb6c0",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 12,
+        "terms": 55,
+        "pairs_processed": 89,
+        "seconds": 0.02118295800028136,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 15,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 15,
+        "contains_one": false,
+        "products": 56,
+        "terms": 67,
+        "muladds": 1672,
+        "seconds": 8.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 28,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "2cd8b54a354d89787572dff5da7c08e18ce0cba3dea88e47269208a1fb9121c4",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 6,
+        "terms": 25,
+        "pairs_processed": 15,
+        "seconds": 0.0030265829991549253,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 8,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 8,
+        "contains_one": false,
+        "products": 12,
+        "terms": 24,
+        "muladds": 110,
+        "seconds": 3.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 29,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "39b3894ffae74e038d80402bff58711e38e3087fc01ce706c2f9a32cc45fc8a8",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 19,
+        "pairs_processed": 0,
+        "seconds": 0.00019662500199046917,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 5.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 30,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "a7667aef872af76041a832035b5adc3641f4b238f1edd319f742d91d6cc76fe7",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 5,
+        "seconds": 0.0001772499999788124,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 8,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 8,
+        "contains_one": false,
+        "products": 12,
+        "terms": 21,
+        "muladds": 15,
+        "seconds": 3.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 31,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "0d0ee7a9313061168c7c13c16fe1646fa667758426b9e26615fd1e7049cc8e0d",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.0001782079998520203,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 32,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "e5cf7baa21a0360320868bcca92dd97eb715cc21e1bcfdc41dcb34ba5a7c6c00",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 0.00015420799900311977,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 33,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "8e364c707681df0c26b30fbb069fbb25800e3f13050e08b496f2eba8e349d969",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 6.100000246078707e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 34,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "6294800af207465589594ad80941ab37f30625cc7b164ccb80031b7e9e40866c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 7.47500016586855e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 35,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "f2d0fc5616bc6b8cb82265bd8a67f261b3da012a45d23fe210e9a6cfc4cea822",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 3,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 9.433300147065893e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 0,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 36,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "c72bf1155a6edd06c184112d382c0642dec798e7053e6ff869a162edaee8f86c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 0.00012558299931697547,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 37,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "6d5090b24ef5a4d58d8e236565df08f38b0f8cabceba872ba73540e05be8d8b4",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 7,
+        "pairs_processed": 0,
+        "seconds": 9.833299918682314e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 38,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "71e446735661c3eff3a98b42c51448fbd345ff1ca784b26b68d99830ec0beeaf",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.00027854099971591495,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 39,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "51f8885e61eb76314fad6af0553c38030423c729ce98e10cb496f36616e0533e",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 6.916699931025505e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 40,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "2ac0740c4f2cf9c67ec73df7c708da4d26ccdea9d9f66bc6b8feec562cb64c39",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00018045799879473634,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 41,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "0d1e334eb8cedeeaa52df5fe881f3a50f16ab43086efd0a51f5e902a70fafb35",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 9,
+        "pairs_processed": 1,
+        "seconds": 0.00014958400061004795,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 14,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 42,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "1c73514930d54297840e84717c577a157ea14cee2c1df80804b6f90ea8b0d811",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 5.6333999964408576e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 3.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 43,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "2294ee283bb9eae328a4d13486fc28c6a236a1a7972a44a0ae59cf218ff47371",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 10,
+        "pairs_processed": 0,
+        "seconds": 0.00016766699991421774,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 44,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "366549f3844ceaea3ae591130c111314286e4cb74a6f42f65ee9de7c5181ea42",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 4,
+        "terms": 13,
+        "pairs_processed": 5,
+        "seconds": 0.0007985409974935465,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 4,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 4,
+        "contains_one": false,
+        "products": 4,
+        "terms": 3,
+        "muladds": 43,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 45,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "614ed5dde6a3b22ea735bc2554fd0c447adcacd861eed4744704deac2cfec742",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 6.6917000367539e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 46,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "c4089b9df17a4e4a8d26211f2440c5d230dc1f3863479f65d11c93be0f022a3e",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 8,
+        "pairs_processed": 0,
+        "seconds": 7.866600208217278e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 47,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "1597dc2e7173032622e3e9dc028cc50a051cc2b91dbd32201f20afd71c2cbf65",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 12,
+        "pairs_processed": 0,
+        "seconds": 0.00033845799771370366,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 48,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "57970d930d66d71ef1545f73155053e5bf1773ab1ad9eaee53475d10530900eb",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00014116699821897782,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 4.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 49,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "f4b73329387ea80dd7418e57aef561f19fe6e01ea54bfaf726aca850dfb3bd11",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 3,
+        "seconds": 0.0002533750011934899,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 11,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 50,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "df714691f14e0610303273e2adde11dcd05bfd6f101ea01bb8a0e3c72eaa42c1",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 3,
+        "seconds": 0.00027133399999001995,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 0,
+        "muladds": 48,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 51,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "b43d21ac67a7c32fc6b60ac1a8e24839fa39b18aa0e9ca12cf5d8b4deebc9374",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 4.70000013592653e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 52,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "3d93870b6af51f8110c030208efd3a1c1314099b6e4db5f1213c6ece095c1fe7",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 5,
+        "terms": 17,
+        "pairs_processed": 10,
+        "seconds": 0.0032022080013121013,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 6,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 6,
+        "contains_one": false,
+        "products": 8,
+        "terms": 13,
+        "muladds": 53,
+        "seconds": 6.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 53,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "0d26cc182212b8fb0975f9cb4eff5510eb61a11df6bb6af0b9955568ff1ec41f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 15,
+        "pairs_processed": 0,
+        "seconds": 0.0002692499983822927,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 54,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "71ec56c363cc80f242ec4f699288bed623ff1d2ce83ae6ecba5dfa22f18c55b8",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 7,
+        "pairs_processed": 0,
+        "seconds": 7.229100083350204e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 5.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 55,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "7a9ab93ff3cac94b12ace4deb81e4c7d2ea47418efbf512f99230dd9d0f4acf4",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 7.120800000848249e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 56,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "f0d554c065b97909853a1240f9bed5b5040dd9936c19b3032728098d5fb34d51",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00033229200198547915,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 57,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "fc70f9e08094be7e17d69f7e14f376e958e3d235c58bb5a2f2244160af92693d",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 4,
+        "seconds": 0.00031358300111605786,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 4,
+        "terms": 6,
+        "muladds": 27,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 58,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "ef440f5e4acf62897fef436bb5681e8689850da9c03e3ae975f7d185be0f2580",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 7,
+        "seconds": 0.0003421669971430674,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 2,
+        "muladds": 42,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 59,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "7f094eb98addf66bc3479a8efecc52ee2d81df6a3a1d9e5ae6c84b98dff42d95",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 15,
+        "terms": 96,
+        "pairs_processed": 12,
+        "seconds": 0.0025247499979741406,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 16,
+        "contains_one": true,
+        "products": 14,
+        "terms": 80,
+        "muladds": 651,
+        "seconds": 6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 60,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "150fa6e4385bddc278d89adae2d0211d972f9db18542bfb6626cd7f495c640d4",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 0.0001438330000382848,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 5,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 5,
+        "contains_one": false,
+        "products": 6,
+        "terms": 12,
+        "muladds": 6,
+        "seconds": 5.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 61,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "90c075ef39ab08da9c35a7f0f79f49890c26e8bbe38a3dfc54a62cff51855754",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 5,
+        "seconds": 0.0006022919988026842,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 14,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 14,
+        "contains_one": false,
+        "products": 30,
+        "terms": 34,
+        "muladds": 135,
+        "seconds": 0.000153
+      },
+      "agrees": true
+    },
+    {
+      "case": 62,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "9acdbce648185c9b3dbd05a731ed791aed3db35a23c87f227c9409fd9f49fdb0",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 11,
+        "terms": 53,
+        "pairs_processed": 51,
+        "seconds": 0.014663791000202764,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 15,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 15,
+        "contains_one": false,
+        "products": 33,
+        "terms": 57,
+        "muladds": 533,
+        "seconds": 7.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 63,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "d5e6812164c6f108827f905622e49addc4ac6968415297a9e510e58c9e289ddc",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 6.466699778684415e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 64,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "c5f5913d8477c61075449da7df87f8f7ed11727484722052b8240d3a0a2fe9c1",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 0.0001478750018577557,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 65,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "d9e28426c2be15e99143299d312162320d095aefa58d12e36148b66b60e34eb1",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 3,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 9.712500104797073e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 0,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 66,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "4dc41be33670f2f965ebe1b31bf848d228012fabc4d1200182fee1594bfab6b1",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 0.003404833001695806,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 0.002445
+      },
+      "agrees": true
+    },
+    {
+      "case": 67,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "4b5f8787149542c2002d12a90dd0eaf8866aadccad39385b3f03724d140a486f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 8,
+        "pairs_processed": 0,
+        "seconds": 9.849999696598388e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 68,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "fcab4cf8efa8c249b7504b3f37864065869ab2971c94ce84c828e13e8016d3bb",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.00016387499999837019,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 9.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 69,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "82f41b5fa2baae969cfbd3addef8bf1459e08ee8d4d779d51e7df0a1899f74ba",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 8.949999755714089e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 70,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "628dfc609919fa4a69e16657351def22f4d998f191ca3afc21d3cbdeda3a1725",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.0002647080000315327,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 71,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "8cf6258a9993def1a44401c485efdf94141aadc361281916d51a0719d8f66903",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 3,
+        "terms": 7,
+        "pairs_processed": 0,
+        "seconds": 0.00043775000085588545,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 0,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 72,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "deea92403206085a0c9c96cb19b05834b83e2fd46a1edb606a3929307616ac6a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 8.887500007404014e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 73,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "97482800a3895b71dd7794ed397d4306bfa2fcb56e9fa6595cf95273ccc4be84",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 2,
+        "seconds": 0.0004304169997340068,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 2,
+        "terms": 3,
+        "muladds": 20,
+        "seconds": 2.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 74,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "011272cc0b47f2d6d497cb2827166c3a6128ec8bb499b0ebe6f2432841df68e5",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 5,
+        "seconds": 0.0006278330001805443,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 4,
+        "terms": 0,
+        "muladds": 43,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 75,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "80d0acbe61bcf780ebcbd2b938ccaeaf8aac13a14a0513f0cf5786455595005c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 9.316599971498363e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 76,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "6bec6a7575883f505f0c77e14263b6a985590dcce618cf4d9c9567b9da418d32",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 2,
+        "seconds": 0.00015412499851663597,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 4,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 4,
+        "contains_one": false,
+        "products": 4,
+        "terms": 5,
+        "muladds": 13,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 77,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "2680724e82c76edaa573c3841db10b4d759c65cf639c76a94685b9e5b7b77c6a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 13,
+        "pairs_processed": 0,
+        "seconds": 0.0005397499990067445,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 78,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "d34d47481ed31429c2faf15181e4569e8c6f73b5540f5bbcaf12e4bf0ff4388a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.001662416001636302,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 79,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "fcf5238f6b09acbef2ad49b02d78abfae512d045a1702c518fcf7b0dffa24505",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 14,
+        "pairs_processed": 0,
+        "seconds": 0.00014970900156185962,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 6.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 80,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "04e8eb36597ec88d3636f5a359790fa11999028ea6d159a4fc28813671ebec73",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.0002190830018662382,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 81,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "f999a8c5eaebebb52291e6f3a7762b6c3b206c83cc98de8b236196bc59b538fb",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 7,
+        "seconds": 0.002852957997674821,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 5,
+        "muladds": 33,
+        "seconds": 3.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 82,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "ffa45159819bf45a0eafa43ac8cfb51ae64f444b26c350a7123f6898e87ad27a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 7,
+        "seconds": 0.0002949170011561364,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 2,
+        "muladds": 40,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 83,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "36baea2f22bd224a646b0fb4b134695be95b65e2bd0134f80c3f6b1423d584dc",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 13,
+        "terms": 65,
+        "pairs_processed": 11,
+        "seconds": 0.001762625000992557,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 15,
+        "contains_one": true,
+        "products": 15,
+        "terms": 60,
+        "muladds": 383,
+        "seconds": 5.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 84,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "a5daa35d5599ff3ef108454494e6a4a5f87896b006c409c9cda335aae14d3d3e",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 8.283299757749774e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 85,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "7353c7023fe7d831f1836d4c5582b20bab7b9a6248d54a58cd043ba13f84d260",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 5,
+        "terms": 8,
+        "pairs_processed": 4,
+        "seconds": 0.0002805420008371584,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 11,
+        "contains_one": true,
+        "products": 14,
+        "terms": 15,
+        "muladds": 17,
+        "seconds": 6.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 86,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "ddeda0d814bc62c4d0b318b6ec2bdfe049c81c43028c2f4495a61da591238d76",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 6,
+        "terms": 16,
+        "pairs_processed": 16,
+        "seconds": 0.0015769160017953254,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 11,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 11,
+        "contains_one": false,
+        "products": 21,
+        "terms": 25,
+        "muladds": 210,
+        "seconds": 4.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 87,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "71d5eb50ae94e5736e4ba6e6dceb0f7595b19f375c7675ca555e7074b0df1c37",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 0.00010770799781312235,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 88,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "ba605f5dc4774332a70d0d71b9e914e1110be8ad0650174cb81d3a800666467b",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00015808399984962307,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 89,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "b6d4a42e9dc44a3c71616a0343cc6c221b354057ab59dd8ffbffb504b3edddd3",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 1,
+        "seconds": 0.00017816599938669242,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 20,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 90,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "20184a8db4bd4615a9c1618ea603d95a211b795021c6ef676bb7b257a4d88543",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 7,
+        "seconds": 0.00036712499786517583,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 5,
+        "muladds": 35,
+        "seconds": 5.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 91,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "7c9e3bcaabd5d52593613adbf79b69376e3a7561691117ed45d5ab88166935cf",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 15,
+        "terms": 57,
+        "pairs_processed": 15,
+        "seconds": 0.0013807079994876403,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 16,
+        "contains_one": true,
+        "products": 20,
+        "terms": 44,
+        "muladds": 155,
+        "seconds": 0.000106
+      },
+      "agrees": true
+    },
+    {
+      "case": 92,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "e23903ce8cab73b00ebcb5c2c44e0e960d0a6d476c5fea0ebaed2e7b52b99856",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 7,
+        "terms": 28,
+        "pairs_processed": 24,
+        "seconds": 0.003677167002024362,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 8,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 8,
+        "contains_one": false,
+        "products": 12,
+        "terms": 19,
+        "muladds": 134,
+        "seconds": 5.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 93,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "faf56a6a0e540825a0684d042f6cfd2c4c74d5b03206ef9bbc984b3d2fdba45d",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 10,
+        "pairs_processed": 2,
+        "seconds": 0.000371458001609426,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 8,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 8,
+        "contains_one": false,
+        "products": 12,
+        "terms": 35,
+        "muladds": 25,
+        "seconds": 4.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 94,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "e9379cea49521d74a8abedfe935c9520f04732bbd4a17e1104ff5cb3d9682437",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 13,
+        "pairs_processed": 0,
+        "seconds": 0.00028625000049942173,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 0.000129
+      },
+      "agrees": true
+    },
+    {
+      "case": 95,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "848f57a59d52c273e428947793f5c1241899a96f2ddb1858898d4bd4ef09261c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 9,
+        "terms": 14,
+        "pairs_processed": 13,
+        "seconds": 0.0004828749988519121,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 42,
+        "contains_one": true,
+        "products": 99,
+        "terms": 58,
+        "muladds": 194,
+        "seconds": 5.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 96,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "0a186f7c6bd063fc61a64170f5a9919a9db7d4ec18abae193c0f5fe9961b23d9",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 7.416700100293383e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 97,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "dad884bec2da7a8e121a45f8013cf38206dba06156827097ded6fa960df49d68",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.0002083750005112961,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 98,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "9d4cd031c657dcfcbd050a61146dcf2636ff08db90eaa59423fcce8809aac2da",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.0001536249983473681,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 99,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "a2e8afc2c0493e18f3d1f8ad7eeb3de7f076d051ebf4e721e46b4ef36a66efca",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.00010341699817217886,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 100,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "144b34d32c183bc28793e36f0d94f802b5c70fa4dda6a7fb9268424da480e749",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 7.47500016586855e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 101,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "86f610aeca3d2463cb6bd02d61c58698f105c130e16ee39d11ac18d7def8c6fe",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 0,
+        "seconds": 0.006407083001249703,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 102,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "19f8a7f499412ca78692becbf157d4d358513ae9ec51f1aa380b044bba12f02f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 6.158299947855994e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 103,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "091504ac9333e4651d1022c2e14f5539e0e1a5c455e11bbc3ce9d4d82fd27557",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 10,
+        "pairs_processed": 0,
+        "seconds": 0.00021508400095626712,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 5,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 104,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "6e7f211a771281db626339ea193cd674e1b67b92d35d1f5520110da85699e2db",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 9.791700358618982e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 5.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 105,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "6a762717a8a0a48ff85349f4258d694e84e88706938f511d6f78b5f440ab3e36",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 2,
+        "terms": 3,
+        "pairs_processed": 1,
+        "seconds": 0.00016829100059112534,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 2,
+        "terms": 3,
+        "muladds": 2,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 106,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "60819eb399b3e2d59e34d867323cf9d6ea3d6d382d2671b94b99ff3c313a7926",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 5,
+        "seconds": 0.00023562500064144842,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 4,
+        "terms": 2,
+        "muladds": 28,
+        "seconds": 3.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 107,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "68bcc12fbdf8993f2065df0adeb4d1a35da1f89f3d0bd2e00ba1f8a922c6a18f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 14,
+        "pairs_processed": 0,
+        "seconds": 0.00016104199676192366,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 6.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 108,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "87de7986440ac52f9e3123d6753551098829180bdb73e534512f42f9b12f6f8c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 5.749999763793312e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 0.000612
+      },
+      "agrees": true
+    },
+    {
+      "case": 109,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "02223bab2248c4fb2a73efa631dbaba9475e00b1b0a7f8c48e76dbd6fd12647d",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 13,
+        "pairs_processed": 0,
+        "seconds": 0.00013983299868414178,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 0.000103
+      },
+      "agrees": true
+    },
+    {
+      "case": 110,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "1a9ecdedd75b2aca23ce997f7854a78b3eba7eb983e011090c6b95d571a6d9da",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 1,
+        "seconds": 0.00013483400107361376,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 5,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 5,
+        "contains_one": false,
+        "products": 3,
+        "terms": 4,
+        "muladds": 2,
+        "seconds": 4.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 111,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "8bfa643877cdcae1763c429121d8a3f0050147221ef6a14e3267eca58c41e577",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 5.108299956191331e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 112,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "dafdffcac4e88b039b78dca291b3407b55f436039ad8b9565d3f7a010e92fbe5",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00012304199844948016,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 0.000133
+      },
+      "agrees": true
+    },
+    {
+      "case": 113,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "e279aa8d88ef86cf2987dca7c70353f91025a627e07b0ef898c0f1b368108614",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 1,
+        "seconds": 0.0003308340019430034,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 17,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 114,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "735b409da8b2b63d6966bac364e4b50ef2224772d1a36243b0419166aacb57ef",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 7,
+        "seconds": 0.0008819169997877907,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 5,
+        "muladds": 43,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 115,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "b9583ed98e34ddc9041e8daffb5debf318db02c32346ebe09c712f55a6a1c7d7",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 5,
+        "terms": 8,
+        "pairs_processed": 3,
+        "seconds": 0.00029054200058453716,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 11,
+        "contains_one": true,
+        "products": 10,
+        "terms": 17,
+        "muladds": 8,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 116,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "01f983233660808bab37349671ebca4fba48bf72dddf20cee7089e499ef273e8",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 4,
+        "terms": 13,
+        "pairs_processed": 7,
+        "seconds": 0.0005677080007444602,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 6,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 6,
+        "contains_one": false,
+        "products": 8,
+        "terms": 10,
+        "muladds": 77,
+        "seconds": 3.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 117,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "c4fae5b6b5d7db12f5bef12dd2db18ab663afda42a8c943aaaaf0602e4946e76",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 6.266699710977264e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 118,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "437d3163fd5757d2b3d7e40662b9737c8c76910b6e558565d81c576d5b4b01ec",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 7,
+        "terms": 30,
+        "pairs_processed": 22,
+        "seconds": 0.004776582998601953,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 10,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 10,
+        "contains_one": false,
+        "products": 18,
+        "terms": 41,
+        "muladds": 243,
+        "seconds": 4.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 119,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "2fb685410cd58f52520a677ada21c50805874267dfa22ef2183bb1f7affd9eb8",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 18,
+        "pairs_processed": 0,
+        "seconds": 0.00013591600145446137,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 120,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "32e778434635098a99b5c013b54562ab8e87139544e11330aff6b31f8ed0ff1b",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 8.770799831836484e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 121,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "1299b90857ec09549054ca8a132ac33e2edf20f3888b65c3fdf3552ea384033d",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 3,
+        "terms": 6,
+        "pairs_processed": 1,
+        "seconds": 0.00017816699983086437,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 2,
+        "terms": 3,
+        "muladds": 14,
+        "seconds": 5.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 122,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "8d700749da9688c15a98a3e39a545d73633a935b4c1766c17690739ecfdcd5f7",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 7,
+        "seconds": 0.00046179199853213504,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 0,
+        "muladds": 50,
+        "seconds": 3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 123,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "81637bd0523543592fd858767662dae8e6667058dfa6aa8524b69184daac2219",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 14,
+        "terms": 87,
+        "pairs_processed": 119,
+        "seconds": 0.0318785419985943,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 15,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 15,
+        "contains_one": false,
+        "products": 56,
+        "terms": 88,
+        "muladds": 2433,
+        "seconds": 0.000723
+      },
+      "agrees": true
+    },
+    {
+      "case": 124,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "8100c80fefd57218971734c8f2d8f9971f3131259084636afa34db141d406e65",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 6,
+        "terms": 27,
+        "pairs_processed": 15,
+        "seconds": 0.0022979579989623744,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 8,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 8,
+        "contains_one": false,
+        "products": 12,
+        "terms": 25,
+        "muladds": 122,
+        "seconds": 5.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 125,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "5fc40540984779349ac891649bfd35c42cf6348c790ae49d522785493f5a2400",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 5,
+        "terms": 9,
+        "pairs_processed": 12,
+        "seconds": 0.0005446670002129395,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 12,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 12,
+        "contains_one": false,
+        "products": 24,
+        "terms": 17,
+        "muladds": 99,
+        "seconds": 7.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 126,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "2bcbf6623610fb0ba09f6390a2b4aacd757acc7c40681b388c34b2858f7919c0",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 5.862499892828055e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 127,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "3aeb47a290a052095e1504bd9ccaec8d1c37d67981cdc0fa1a534f5fb3cd387e",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 8,
+        "pairs_processed": 0,
+        "seconds": 0.0002793749990814831,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 128,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "3ace584f372997349281d303b9a9ceaa461e11b68441bb263fb9b4710c2b1044",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 0.00017033299809554592,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 4.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 129,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "0a37545014e4cde0043483f982e2957d92563dfa341d41577a0f8fd9d9337b79",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 0.00015708300270489417,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 130,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "26219fde579386e00f0cc86d5f4464f19ad6456f72c5f68cf75c2eca38a670ed",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.0008902499976102263,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 131,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "77958d26dd36699499cd84f34fd968e7c389c1731e205e9a04f28416d6a3fb27",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.00012649999916902743,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 132,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "3a6e16a4296f8ade6fa8b76cc33c4178b886ca5bd4df61320e07fcc608d09f05",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 5.337499896995723e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 133,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "f66590b4e9195b4265dfaa33f72b99bcc70d0ffae81da6b6601a5394a7430b70",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 7,
+        "pairs_processed": 0,
+        "seconds": 0.00025604199981899,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 134,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "df3e503ed8200b975ee376e5f13e1fd9f707c614c636c09a43b9791e98ea1371",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.0001397500018356368,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 11,
+        "seconds": 6.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 135,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "3933d74c54b12304bdfacfc24583ab207c213b046f761f6593900afc61505238",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 9.737499931361526e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 136,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "1f2d3b6e64725cd6a7a8c9914edc9bcbbe8c63d53ceb79bd7b088677a075ac44",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00021724999896832742,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 137,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "9d4a92c6e3dd34fbdb6681e0252c241237cf28abd1359823fc9096b433ecdf26",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 1,
+        "seconds": 0.00036758300120709464,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 20,
+        "seconds": 5.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 138,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "2f9657f99731ce11ac9747678bcebb6949043a92805eeb5e0b083386c4992f1c",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 6.441599907702766e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 5.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 139,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "070ef1331ebffe90aa93dc2df557aafdb8ef40c89fe621ffb8f7f2264a54cba8",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 13,
+        "pairs_processed": 0,
+        "seconds": 0.00021891600044909865,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 4.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 140,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "95f65bd4a4a1391e96400c349a7452ef53c9154f1cb9c53fd1d092e9e77a0592",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 5,
+        "seconds": 0.0007418750028591603,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 4,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 4,
+        "contains_one": false,
+        "products": 4,
+        "terms": 3,
+        "muladds": 27,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 141,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "47f7df7643f8976fa23fdd29e229aaf5b7332d3956d51cb25f5faf7b07ed7833",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 5.866600258741528e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 142,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "4aabba2ab934e213f4147477dcd5dce29d1a281953a6a4062ba6e65bcfc0fd9a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 9.458400018047541e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 0.000186
+      },
+      "agrees": true
+    },
+    {
+      "case": 143,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "4915b02f7df9b96dfe409dc9fc87426f4b98979ce180889c788af62ddce343d6",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 15,
+        "pairs_processed": 0,
+        "seconds": 0.00012483300088206306,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 144,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "92408b68efb598f5980e268f20b0ee5e5175824056f97c9b48f900e479a00986",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 7.479199848603457e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 145,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "f2568d75c83b3c2c56c4f41a73c5cef1e31d56ea0cbf0fab71c47ab15d661a9a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 2,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 0.00010683299842639826,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 2,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 146,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "86fe8d3566dc5efb72c7b24e8b9b8bc2140ea3e86884df2d2e386a5a73f8a811",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 7,
+        "seconds": 0.00030187499942258,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 0,
+        "muladds": 48,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 147,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "00536412bdfe34e0f77e3f7cccdca930ed1152a23380550fe7b01fbede5e6775",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 13,
+        "pairs_processed": 2,
+        "seconds": 0.00047745800111442804,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 5,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 5,
+        "contains_one": false,
+        "products": 4,
+        "terms": 16,
+        "muladds": 0,
+        "seconds": 5.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 148,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "e38f1f65dd9707dc634cbcfc3c28ad50235ec54db908bd1852ace11d70758b4a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 11,
+        "pairs_processed": 0,
+        "seconds": 0.0003295419992355164,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 149,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "41f55140f0a1d113053171ed2d9ecc184b5168090221e54652ceecb77c8cb7f6",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 22,
+        "pairs_processed": 0,
+        "seconds": 0.0006632920012634713,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 3.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 150,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "4f82c38df3555ff666ab102275d1d661e9b1a4e0738d5e7755f31fff0aa68fce",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 6.612500146729872e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 151,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "79599f6e94aac4e7412cbf23ea48a030a49062ce8b567ac9d5273d370b7fc9f5",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.002489082999090897,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 152,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "c635d8ac7442d3f56f9a9ed7f94c2aede939b0ad36de7fcce85debccfabb1b44",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.00029404099768726155,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 153,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "612688bad2253a49ad99eb819954504038708ee1966b1919f07ea04c6da050af",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 4,
+        "seconds": 0.00020170800053165294,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 4,
+        "terms": 6,
+        "muladds": 27,
+        "seconds": 6.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 154,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "e0cb938f7727993aa0dcccab9d59a496947958b71968d6bfeb5c81de76712713",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 7,
+        "seconds": 0.000881333999132039,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 2,
+        "muladds": 49,
+        "seconds": 3.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 155,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "f68774db9c0511d63efd4d9a1203e9a7b5aa54af66d1c82a3a6cb04469535822",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 6,
+        "terms": 11,
+        "pairs_processed": 3,
+        "seconds": 0.0007800829989719205,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 14,
+        "contains_one": true,
+        "products": 15,
+        "terms": 21,
+        "muladds": 40,
+        "seconds": 3.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 156,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "c65a51f8e1241e257eaf314fd430d1b699c17aed5296c5b33c9adf8f8814d589",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 5.337499896995723e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 157,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "189d118762cccd476c5f418265ec2c209fe00a7b4d6906130f2a55e127020bcd",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 10,
+        "terms": 42,
+        "pairs_processed": 9,
+        "seconds": 0.003291208002337953,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 16,
+        "contains_one": true,
+        "products": 27,
+        "terms": 61,
+        "muladds": 470,
+        "seconds": 0.000121
+      },
+      "agrees": true
+    },
+    {
+      "case": 158,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "610df748e3c8dad9774c5a1726ef8bee6fb4891b0fcc0ff3f78526c5a8b23947",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 12,
+        "terms": 63,
+        "pairs_processed": 70,
+        "seconds": 0.03356391600027564,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 15,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 15,
+        "contains_one": false,
+        "products": 33,
+        "terms": 69,
+        "muladds": 843,
+        "seconds": 6.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 159,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "785af7b4dbe02fd0a4715410868b43b8aac4bfa079016f11339917c52794d88b",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.00015133399938349612,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 160,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "c7def8d26c40207608fe992f71985ae8715746957324b5a03585c53c12bed1b4",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 9.212499935529195e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 161,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "eab98f2ca15dbf42dc645c46f6272ca370aa60d64a40e0e6ed0d1fe118aa7aca",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 3,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.00030879099722369574,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": true,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 162,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "57c6149d44be0c4721edccb8cb0ae0d3b984d1258aed280b7154ccf5d96872c6",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 4.858400279772468e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 163,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "87b753f3eede2ebb0d29c1b8b12d53bbcb775383f413146f772cae3dd223b495",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.00040987499960465357,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 5,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 164,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "2f3c2586d81ae0093dfd144de7c256c40f95170ed71cd8ae06b3a644e5331281",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.00041612499990151264,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 165,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "20d15ab7d8e3ae5aec0784a502f3254d5d22d88a96ca35bdee1094331056147d",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 8.504200013703667e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 166,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "880ba5b189c2364721748ba79956e7f94822734fe84fb5900fbc4a3500c17535",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.00010387500151409768,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 167,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "8230b9d6fb7cacd486f71725858a70bff9147f17119e29b48105947e0f965465",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 13,
+        "pairs_processed": 0,
+        "seconds": 0.00036758300120709464,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 13,
+        "seconds": 5.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 168,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "40bbdbb6516fdc6c785cf300b45630668561cc93e4a74eb55218b6e775a1f3a5",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 0.0002653339979588054,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 2.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 169,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "868abd3af724ff364f5d9ff6238573c48619aa7ca53ef2fd61eebbfe1222ddf0",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 4,
+        "terms": 10,
+        "pairs_processed": 2,
+        "seconds": 0.0005999579989293125,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 2,
+        "terms": 3,
+        "muladds": 20,
+        "seconds": 5.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 170,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "d67cd09d0dc25e7a206c2a72021243cc6ec2a63d187edcb28cfabe4a7f31d1c7",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 4,
+        "pairs_processed": 3,
+        "seconds": 0.0003120000001217704,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 4,
+        "terms": 2,
+        "muladds": 21,
+        "seconds": 6.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 171,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 2
+      },
+      "input_sha256": "feaa99ba4fc04692e7a5316493eb38202f3c159bbbb1a105eaafaa75e7604e86",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 3,
+        "pairs_processed": 0,
+        "seconds": 0.00023291699835681356,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 172,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "a47ea8c9659faec93be2b78e5d9809cc08321bdc0ef8a9ae55f8425d56df3c42",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.0002190830018662382,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 5,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 173,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "d3a73a13aa3baeff0727e9ea1000bb393add1fd04a4b8032f30abfb256fbcf42",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 15,
+        "pairs_processed": 0,
+        "seconds": 0.0003043750002689194,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 2,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 174,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "2a6e3796109bf56ac9766ae04111e52d59e0ab97448614f501864581848cba04",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.00047354200069094077,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 175,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 2
+      },
+      "input_sha256": "dfb9bac21078e61ad3b6c441694811ef9f156c1c9772ebbd354f34bc329defd5",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 0.00026129200341529213,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 2,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 0.000202
+      },
+      "agrees": true
+    },
+    {
+      "case": 176,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "11d0d22c8a39c3fa9affdb497b66eaca87b1d5870d30325036c5b2af13f99ab4",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 9.408400001120754e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 5.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 177,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "44f262c0278cce45e08d21d10c0fdbaf4af0487805dc1b50d51d3cddd401c437",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 7,
+        "seconds": 0.000654499999654945,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 5,
+        "muladds": 38,
+        "seconds": 3.2e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 178,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "ae361c1f0e836d6271379c6cffbc9a23929bbe0434a771341ee6c1fccbdf4679",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 8,
+        "pairs_processed": 7,
+        "seconds": 0.0005374579995987006,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 3,
+        "muladds": 46,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 179,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 3
+      },
+      "input_sha256": "28b08dde4cbc15d7b15e0b10ced47372edee568372bb7777b0d46bf41d05b412",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 23,
+        "pairs_processed": 0,
+        "seconds": 0.00019008399976883084,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 12,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 180,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "d5606116ad7a66baf4b25d9c041de731ca7a8fb2f387918da0857a483bb748a3",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 9.995800064643845e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 4,
+        "terms": 4,
+        "muladds": 4,
+        "seconds": 5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 181,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "582451ab0ac03074af5c10e230d5474d5636ad4cfb365e4c6175a899451f1a76",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 7,
+        "pairs_processed": 0,
+        "seconds": 9.516700083622709e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 3,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 5.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 182,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "de737ec96bf9105afaa1fe99bce83f445ac55f99ba5a689db04070ca9e4af4be",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 10,
+        "terms": 44,
+        "pairs_processed": 40,
+        "seconds": 0.005280666999169625,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 11,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 11,
+        "contains_one": false,
+        "products": 21,
+        "terms": 37,
+        "muladds": 374,
+        "seconds": 4.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 183,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 3
+      },
+      "input_sha256": "e3e2f890b9153e69dcb7dc5df8cb5ed3ef744c5d57b1cc6359f10b128657e9d1",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.00013224999929661863,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 3,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 3.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 184,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "c18dd18492aaf8fcbc131c88a09c6f1bf1499e4bb10915bf0c165da9261bd597",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 1,
+        "seconds": 9.074999979929999e-05,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 1,
+        "terms": 0,
+        "muladds": 4,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 185,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "02df1acba1c3ad518ca163435a74bfccc597a61b36270b9bc3af8bf37fc924b9",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 3,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.000556541999685578,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 4,
+        "contains_one": true,
+        "products": 1,
+        "terms": 1,
+        "muladds": 4,
+        "seconds": 2.7e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 186,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "5bd76f23c8621f54ca72eb1b03d676cab6298eba39edc301db1562285d63891f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 3,
+        "seconds": 0.0003276249990449287,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 6,
+        "terms": 5,
+        "muladds": 35,
+        "seconds": 3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 187,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 4
+      },
+      "input_sha256": "edf30ce8bb9d08bf79e09a4e0ce3cbc6b88b05eb56b11201400cdd00a11cffc7",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": true,
+        "compact_rows": 15,
+        "terms": 69,
+        "pairs_processed": 16,
+        "seconds": 0.0057095839983958285,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": null,
+      "reference": {
+        "status": "unit-witness",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 16,
+        "contains_one": true,
+        "products": 18,
+        "terms": 69,
+        "muladds": 460,
+        "seconds": 0.00013
+      },
+      "agrees": true
+    },
+    {
+      "case": 188,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "f5dc2f2c566e0f7475e098827f9e26b835b5a1d245b27eb60af7c45877818fee",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 6,
+        "terms": 22,
+        "pairs_processed": 18,
+        "seconds": 0.0042280830020899884,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 8,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 8,
+        "contains_one": false,
+        "products": 12,
+        "terms": 20,
+        "muladds": 173,
+        "seconds": 8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 189,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "8d39cb77a292968914c2ef961ac8940c2348380bd96b6bce7f078e1669f0d38a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 6,
+        "pairs_processed": 0,
+        "seconds": 0.0001592919979884755,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 4,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.5e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 190,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "dfade35bc7a30ad9d3bb88645494ea7a2a34b19d5a2b8f52a407f519947cf10f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 6,
+        "terms": 18,
+        "pairs_processed": 21,
+        "seconds": 0.004714374998002313,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 15,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 15,
+        "contains_one": false,
+        "products": 33,
+        "terms": 41,
+        "muladds": 291,
+        "seconds": 5.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 191,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 4
+      },
+      "input_sha256": "7a89cbb25e5d4926d284519fd28f8309c7592a8645fba08e49ab5a3c85d4edab",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.00019654100105981342,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 4,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.8e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 192,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "349c986ee49701809de74be2900c6ff5756afeff783983b84d0b0f92bb6f1c7f",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 0.00023191700165625662,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 2.6e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 193,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "2b0ad3453dbc76de02f5dea4864bf93bb347c31f7197078e6ccc6ea5ae86a2ed",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.00024112499886541627,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 3,
+        "seconds": 6.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 194,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "3277dfdd269ff494857011c7697792ce3cfdbc6c4faad2ea8efe1ec5dd452a75",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 5,
+        "pairs_processed": 0,
+        "seconds": 0.0002132499976141844,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 3.3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 195,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 0,
+        "D": 1
+      },
+      "input_sha256": "b478dbb6c23f5d1d082692d70bd40b25696459dfbe3b1b154d79d552ff95f7e8",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 2,
+        "pairs_processed": 0,
+        "seconds": 0.0002290419979544822,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 5.4e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 196,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "4c5e7fc210356133351b3eb4ed483e97ee4571489b047e90a5abe997e2154c1a",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 0.0003009169995493721,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 2,
+        "seconds": 3.1e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 197,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "ef65eabd2d4264c989b287f33c3c3b1d766ae884cafa61e1b5e5afe5f08a38bc",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 3,
+        "terms": 9,
+        "pairs_processed": 0,
+        "seconds": 0.00012891699952888303,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 3,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 1,
+        "D": 1,
+        "derived_rank": 3,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 8,
+        "seconds": 2.9e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 198,
+      "parameters": {
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "7ac33cd504c0be758f0f0c3994074883d64bb577c292b7d4b2819d6b4361df52",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 1,
+        "terms": 4,
+        "pairs_processed": 0,
+        "seconds": 0.0001572500004840549,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 1,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 1,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 1,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 0,
+        "seconds": 3e-05
+      },
+      "agrees": true
+    },
+    {
+      "case": 199,
+      "parameters": {
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "a": 1,
+        "D": 1
+      },
+      "input_sha256": "e180db375c323909736b1274a8249612157491cb495bc5c0f51af18561bfda35",
+      "candidate": {
+        "status": "provisional-complete",
+        "contains_one": false,
+        "compact_rows": 2,
+        "terms": 11,
+        "pairs_processed": 0,
+        "seconds": 0.00013591599781648256,
+        "claim": "candidate only; compact closedness criterion unproved"
+      },
+      "candidate_rank": 2,
+      "reference": {
+        "status": "closed",
+        "p": 17,
+        "m": 2,
+        "k": 2,
+        "D": 1,
+        "derived_rank": 2,
+        "contains_one": false,
+        "products": 0,
+        "terms": 0,
+        "muladds": 6,
+        "seconds": 5.8e-05
+      },
+      "agrees": true
+    }
+  ],
+  "all_agree": true
+}
