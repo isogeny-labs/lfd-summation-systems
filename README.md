@@ -40,6 +40,7 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `experiments/ic-curve-validation/` | independent implementation of the closure in the ordinary ring |
 | `experiments/ic-solving-degree/` | solving degree and largest Gröbner-basis degree of every exact-LFD system, with the Singular, PolyBoRi and mutant-closure checks (Section 7) |
 | `experiments/ic-rootfind/` | point decomposition on binary curves by linear algebra and one quadratic instead of a Gröbner basis (`csd/ic_rootfind.py`; Rust kernel for multi-word fields in `rust/ic_rootfind/`, measured at n = 131), measured against enumeration, meet in the middle and MutantXL |
+| `second-engine/` | the second closure engine (written in `isogeny-labs/crypto`, moved here 19 November 2026): records of its runs and of the third lift (`records/`), the Rust lift (`lift/`), a standalone Rust extract of the engine that reproduces the paper's instance closures (`engine/`), its local gate (`gate-20261119/`); `README.md` and `PROVENANCE.md` |
 | `experiments/ic-bounds-solving/` | the static (plain XL) Macaulay degree study behind `SD1-solving-degree.md`, and its independent validation (`validation/VALIDATOR_REPORT.md`) |
 
 Each experiment directory has a `README.md` (or `RESULTS.md`, `VERIFY.md`, `NOTES.md`, `REPORT.md`) that names the
@@ -139,8 +140,8 @@ Please cite the paper; `CITATION.cff` has the entry for this repository.
 The software (the Python code, the Lean development and the scripts) is under the MIT licence (`LICENSE`). The
 papers, figures, written proofs, notes and data records are under the Creative Commons Attribution 4.0
 International licence (`LICENSE-CC-BY-4.0.txt`). In detail: MIT covers `csd/`, `scripts/`, `tests/`, `formal/`
-and the code inside `experiments/`; CC BY 4.0 covers `paper/`, `docs/`, the Markdown files in `experiments/` and
-the data records (the JSON, JSONL, CSV, NPZ and log files in `experiments/`).
+and the code inside `experiments/` and `second-engine/`; CC BY 4.0 covers `paper/`, `docs/`, the Markdown files in `experiments/`
+and `second-engine/`, and the data records (the JSON, JSONL, CSV, NPZ and log files in `experiments/` and `second-engine/`).
 
 Three Lean files contain portions adapted from Apache-2.0 sources and keep those notices in their headers:
 `formal/ICFallDegrees/GrowthComplexRatFuncDerivative.lean` (JacobianTwo; licence text in

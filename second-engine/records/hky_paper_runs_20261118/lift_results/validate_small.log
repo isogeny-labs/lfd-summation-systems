@@ -1,0 +1,42 @@
+{"name":"unit-65537-k3-D3to4","flags":"--parts","all_equal":true,"dim":57,"one":true,"s":0.00678726}
+{"name":"unit-65537-k4-D3to4","flags":"--parts","all_equal":true,"dim":163,"one":true,"s":0.007579033}
+{"name":"unit-65537-k5-D3to4","flags":"--parts","all_equal":true,"dim":386,"one":true,"s":0.031917897}
+{"name":"unit-65537-k6-D4to5","flags":"--parts","all_equal":true,"dim":1586,"one":true,"s":0.109194586}
+{"name":"unit-65537-k7-D4to5","flags":"--parts","all_equal":true,"dim":3473,"one":true,"s":1.637156315}
+{"name":"unit-65537-k8-D4to5","flags":"--parts","all_equal":true,"dim":6885,"one":true,"s":12.310397251}
+{"name":"unit-12289-k4-D3to4","flags":"","all_equal":true,"dim":163,"one":true,"s":0.012232387}
+{"name":"unit-12289-k6-D4to5","flags":"","all_equal":true,"dim":1586,"one":true,"s":0.064482251}
+{"name":"unit-12289-k7-D4to5","flags":"","all_equal":true,"dim":3473,"one":true,"s":1.472777111}
+{"name":"unit-163841-k5-D3to4","flags":"","all_equal":true,"dim":386,"one":true,"s":0.024046822}
+{"name":"unit-163841-k6-D4to5","flags":"","all_equal":true,"dim":1586,"one":true,"s":0.057035071}
+{"name":"unit-163841-k7-D4to5","flags":"","all_equal":true,"dim":3473,"one":true,"s":1.6352936470000001}
+{"name":"unit-65537-k2-D2to3","flags":"--parts","all_equal":true,"dim":5,"one":false,"s":0.002186458}
+{"name":"unit-65537-k3-D2to3","flags":"","all_equal":true,"dim":7,"one":false,"s":0.001966491}
+{"name":"unit-65537-k4-D2to3","flags":"","all_equal":true,"dim":9,"one":false,"s":0.001908585}
+{"name":"unit-65537-k6-D3to4","flags":"--parts","all_equal":true,"dim":605,"one":false,"s":0.089604841}
+{"name":"unit-65537-k7-D3to4","flags":"","all_equal":true,"dim":829,"one":false,"s":0.47742885}
+{"name":"unit-65537-k8-D3to4","flags":"","all_equal":true,"dim":1061,"one":false,"s":1.288757559}
+{"name":"unit-12289-k6-D3to4","flags":"","all_equal":true,"dim":605,"one":false,"s":0.109700729}
+{"name":"unit-163841-k7-D3to4","flags":"","all_equal":true,"dim":829,"one":false,"s":0.337425768}
+{"name":"proper-65537-X2-k6-D3to4","flags":"--parts","all_equal":true,"dim":605,"one":false,"s":0.093494283}
+{"name":"proper-65537-X2-k6-D4to5","flags":"--parts","all_equal":true,"dim":1584,"one":false,"s":0.123817592}
+{"name":"proper-65537-X2-k7-D3to4","flags":"","all_equal":true,"dim":829,"one":false,"s":0.413225801}
+{"name":"proper-65537-X2-k7-D4to5","flags":"--parts","all_equal":true,"dim":3471,"one":false,"s":1.111679839}
+{"name":"proper-65537-X2-k8-D3to4","flags":"","all_equal":true,"dim":1061,"one":false,"s":1.294814255}
+{"name":"proper-65537-X2-k8-D4to5","flags":"--parts","all_equal":true,"dim":6881,"one":false,"s":11.825049365}
+{"name":"proper-15361-k6-D4to5","flags":"","all_equal":true,"dim":1584,"one":false,"s":0.063311798}
+{"name":"proper-15361-k7-D4to5","flags":"","all_equal":true,"dim":3469,"one":false,"s":0.947817815}
+{"name":"proper-15361-k7-D3to4","flags":"","all_equal":true,"dim":829,"one":false,"s":0.356719349}
+{"name":"order1-unit-65537-k7-D4to5","flags":"--order 1 --parts","all_equal":true,"dim":3473,"one":true,"s":1.581418862}
+{"name":"order1-proper-65537-X2-k7-D4to5","flags":"--order 1","all_equal":true,"dim":3471,"one":false,"s":1.697961765}
+{"name":"order1-unit-65537-k7-D3to4","flags":"--order 1","all_equal":true,"dim":829,"one":false,"s":0.48105913}
+{"name":"low-unit-65537-k7-D4to5","flags":"--include-low","all_equal":true,"dim":3473,"one":true,"s":1.533553388}
+{"name":"low-proper-65537-X2-k8-D4to5","flags":"--include-low","all_equal":true,"dim":6881,"one":false,"s":10.328946007}
+{"name":"endfalls-unit-65537-k8-D3to4","flags":"--fall-every 0","all_equal":true,"dim":1061,"one":false,"s":1.111777923}
+{"name":"endfalls-unit-65537-k7-D4to5","flags":"--fall-every 0","all_equal":true,"dim":3473,"one":true,"s":1.557015222}
+{"name":"tiny-unit-65537-k7-D4to5","flags":"--batch-tops 7 --cache-gb 0.0001","all_equal":true,"dim":3473,"one":true,"s":1.05305321}
+{"name":"tiny-proper-15361-k7-D4to5","flags":"--batch-tops 5 --cache-gb 0.0001","all_equal":true,"dim":3469,"one":false,"s":3.019053946}
+{"name":"noscramble-unit-65537-k6-D4to5","flags":"--scramble 0","all_equal":true,"dim":1586,"one":true,"s":0.088011321}
+{"name":"unit-65537-k9-D4to5","flags":"","all_equal":true,"dim":12616,"one":true,"s":60.093668273}
+{"name":"proper-65537-X1424-k9-D4to5","flags":"","all_equal":true,"dim":12614,"one":false,"s":60.844903918}
+cases: 41  all_equal: 41

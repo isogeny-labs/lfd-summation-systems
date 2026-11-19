@@ -15,6 +15,7 @@ PR, not in this file.
 _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
+- [x] Consolidate the second-engine paper material from crypto PR #4735 here: run records, lift crate, standalone engine extract gated locally, paper cites lfd paths (Claude, started 2026-11-19, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #37)
 - [x] Merge the open PRs (#33, #35), fold the E6 proper-ideal theorem into the manuscript, rebuild and reverify the submission artifacts (opencode, started 2026-11-19, branch paper/finalize-submission-20261119, PR #36)
 - [x] Paper: second engine at depth 14 on both unit instances (closures + lifts), V_6 at depth 15 and 16 against the frozen recursion (Claude, started 2026-11-19, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #34)
 

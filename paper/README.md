@@ -21,7 +21,11 @@ E6 proper-ideal growth theorem of PR #33 was folded into item (5) of the
 target-of-order-two theorem: the lower bound holds at every admissible prime
 for k >= 38 without a unit-ideal premise, which also settles the
 Fermat-factor caveat of item (4) in that range; the capped local searches of
-PR #35 were merged as a record and change no claim. It
+PR #35 were merged as a record and change no claim. The records of the second engine and of the third lift,
+the lift itself and a standalone extract of the engine (gated here against the recorded closures) were then
+moved from `isogeny-labs/crypto` into [`../second-engine/`](../second-engine/README.md), and the paper cites
+those paths; the runs were made with binaries built from crypto commits listed in
+[`PROVENANCE.md`](../second-engine/PROVENANCE.md). It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint

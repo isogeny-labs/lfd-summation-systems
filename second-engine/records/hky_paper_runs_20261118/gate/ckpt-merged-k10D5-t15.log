@@ -1,0 +1,14 @@
+reference:  {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":0,"resumes":0,"resumed_at_batch":0}
+./gate/ckpt_test.sh: line 23: kill: (5862) - No such process
+KILL: first process rc=0 after 20 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"613349706ab8346b6970513c2fac6eb4cea89fa69c15f790c7983a9d9c7f89b9","bytes":83173924,"batches":500,"rank":18103,"queued":3695,"muladds":8959443244,"elapsed_s":4.3,"write_s":0.20,"fingerprint":"5f60aa6f59e896349f6e56d82e0536753f48634a79480e929343669323656bdc","unix_s":1794977939}
+KILL resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":21,"resumes":1,"resumed_at_batch":500}
+KILL identical to reference: true
+KILL basis files byte-identical: true
+./gate/ckpt_test.sh: line 23: kill: (5912) - No such process
+TERM: first process rc=0 after 20 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"2c824c162c8a09977f9706466eff627576c12f083ae43edc6bc6f0d20f3596af","bytes":83173924,"batches":500,"rank":18103,"queued":3695,"muladds":8959443244,"elapsed_s":4.9,"write_s":0.25,"fingerprint":"5f60aa6f59e896349f6e56d82e0536753f48634a79480e929343669323656bdc","unix_s":1794977949}
+TERM resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":21,"resumes":1,"resumed_at_batch":500}
+TERM identical to reference: true
+TERM basis files byte-identical: true
+basis bytes: 220856336 gate/raw-merged/ckpt-k10D5-t15/KILL.basis
+basis bytes: 220856336 gate/raw-merged/ckpt-k10D5-t15/TERM.basis
+basis bytes: 220856336 gate/raw-merged/ckpt-k10D5-t15/ref.basis

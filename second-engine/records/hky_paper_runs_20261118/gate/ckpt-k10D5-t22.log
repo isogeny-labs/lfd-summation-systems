@@ -1,0 +1,9 @@
+reference:  {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":0,"resumes":0,"resumed_at_batch":0}
+KILL: first process rc=137 after 19 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"b9b529196085515144d60c98125ae860050a1764f7330586f53e383065a8c66c","bytes":75197034,"batches":475,"rank":16993,"queued":3102,"muladds":4831908728,"elapsed_s":17.9,"write_s":0.45,"fingerprint":"98c10ad37488753200919820efacc399e893728a67cca8277dbbd8bf0cc98672","unix_s":1794973137}
+KILL resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":21,"resumes":1,"resumed_at_batch":475}
+KILL identical to reference: true
+KILL basis files byte-identical: true
+TERM: first process rc=3 after 20 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"b816b9ef4aee21e0308ecff1ab06d65cd78d511186db0a3e8f031957eb379ddd","bytes":83675009,"batches":488,"rank":17744,"queued":3936,"muladds":5988815846,"elapsed_s":21.9,"write_s":0.39,"fingerprint":"98c10ad37488753200919820efacc399e893728a67cca8277dbbd8bf0cc98672","unix_s":1794973204}
+TERM resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":22,"resumes":1,"resumed_at_batch":488}
+TERM identical to reference: true
+TERM basis files byte-identical: true

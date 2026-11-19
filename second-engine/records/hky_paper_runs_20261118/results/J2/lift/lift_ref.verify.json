@@ -1,0 +1,89 @@
+{
+  "all_equal": true,
+  "fields": [
+    {
+      "expected": 14,
+      "field": "k",
+      "got": 14,
+      "result": "equal"
+    },
+    {
+      "expected": 6,
+      "field": "D",
+      "got": 6,
+      "result": "equal"
+    },
+    {
+      "expected": 163841,
+      "field": "p",
+      "got": 163841,
+      "result": "equal"
+    },
+    {
+      "expected": 448922,
+      "field": "dim_VD",
+      "got": 448922,
+      "result": "equal"
+    },
+    {
+      "expected": true,
+      "field": "contains_one",
+      "got": true,
+      "result": "equal"
+    },
+    {
+      "expected": true,
+      "field": "fixed_point",
+      "got": true,
+      "result": "equal"
+    },
+    {
+      "expected": 1683218,
+      "field": "dim_VD1",
+      "got": 1683218,
+      "result": "equal"
+    },
+    {
+      "expected": [
+        1,
+        29,
+        407,
+        3683,
+        24158,
+        122438,
+        499178,
+        1683218
+      ],
+      "field": "profile",
+      "got": [
+        1,
+        29,
+        407,
+        3683,
+        24158,
+        122438,
+        499178,
+        1683218
+      ],
+      "result": "equal"
+    },
+    {
+      "expected": 50256,
+      "field": "falls (dim F = dim(V_{D+1} n L) - dim V_D)",
+      "got": 50256,
+      "result": "equal"
+    },
+    {
+      "expected": 499178,
+      "field": "dim(V_{D+1} n M_<=D)",
+      "got": 499178,
+      "result": "equal"
+    },
+    {
+      "expected": 1173002,
+      "field": "regular_tops (orbit count summed over parts; not the same notion)",
+      "got": 1166824,
+      "result": "informational"
+    }
+  ]
+}

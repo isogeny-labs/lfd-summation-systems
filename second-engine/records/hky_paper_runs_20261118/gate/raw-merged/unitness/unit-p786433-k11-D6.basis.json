@@ -1,0 +1,73 @@
+{
+  "D": 6,
+  "basis_file": "unit-p786433-k11-D6.basis",
+  "bytes": 1761048,
+  "closure": {
+    "muladds": 321531001082,
+    "resumed": false,
+    "rows_reduced": 257541,
+    "seconds": 200.500383784
+  },
+  "column_order": 1,
+  "contains_one": true,
+  "content_sha256": "91ac87afb016cf9f099120e0fd1f877117e6be078ac4906e2210b797476906d3",
+  "created_utc_unix_s": 1794979133,
+  "engine": {
+    "binary_sha256": "0dfbffadf7bf4c18762cc53b2aac28f51e3e6de7bfb183bbd34511d011903c08",
+    "commit": "9fb60e9c13",
+    "name": "hky_fp_tower_fast2",
+    "options": {
+      "batch_max": 256,
+      "batch_min": 32,
+      "bitmap": true,
+      "deg_weight": 1,
+      "dense": [
+        1,
+        3
+      ],
+      "interreduce": 0.25,
+      "interreduce_block": 256,
+      "interreduce_min": 256,
+      "np_epochs": true,
+      "par_second": true,
+      "rebucket": true,
+      "sweep": true,
+      "sweep_max_words": 268435456,
+      "sweep_ratio": 4,
+      "sweep_tile_bytes": 1048576,
+      "target_pivots": 32,
+      "verify_closed": false
+    }
+  },
+  "file_sha256": "5bec2f3d0adc9e9615c318170bd9582df65f8553a9ec0249d911b48313d6043e",
+  "instance": {
+    "a": 1,
+    "b": 0,
+    "control": null,
+    "k": 11,
+    "path": "instances/unit-p786433-a1-s10-k11.json",
+    "prime": 786433,
+    "sha256": "613da6992fa842c9ad27b3e6cf3df2e2a10e78bc7cb7b438a203c53e84f929ff",
+    "target": [
+      485051,
+      497175
+    ]
+  },
+  "k": 11,
+  "m": 2,
+  "mask_encoding": 1,
+  "n_cols": 110056,
+  "n_vars": 22,
+  "p": 786433,
+  "profile": [
+    1,
+    23,
+    254,
+    1794,
+    9109,
+    35443,
+    110056
+  ],
+  "rank": 110056,
+  "schema": "hky.basis.sidecar/v1"
+}

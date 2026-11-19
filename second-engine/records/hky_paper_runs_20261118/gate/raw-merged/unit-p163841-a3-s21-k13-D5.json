@@ -1,0 +1,125 @@
+{
+  "D": 5,
+  "binary_sha256": "0dfbffadf7bf4c18762cc53b2aac28f51e3e6de7bfb183bbd34511d011903c08",
+  "censored": null,
+  "closed": true,
+  "closure_ms_this_process": 10016.230039,
+  "columns": 83682,
+  "contains_one": false,
+  "control": null,
+  "engine": {
+    "batches": 1078,
+    "core_muladds": 10732298139,
+    "final_row_bytes": 243446052,
+    "interreduce_s": 0.7075151909999999,
+    "interreductions": 19,
+    "name": "hky_fp_tower_fast2",
+    "options": {
+      "batch_max": 256,
+      "batch_min": 32,
+      "bitmap": true,
+      "deg_weight": 1,
+      "dense": [
+        1,
+        3
+      ],
+      "interreduce": 0.25,
+      "interreduce_block": 256,
+      "interreduce_min": 256,
+      "np_epochs": true,
+      "par_second": true,
+      "rebucket": true,
+      "sweep": true,
+      "sweep_max_words": 268435456,
+      "sweep_ratio": 4,
+      "sweep_tile_bytes": 1048576,
+      "target_pivots": 32,
+      "verify_closed": false
+    },
+    "parallel_s": 8.741486282000002,
+    "part_cols": [
+      41887,
+      41795
+    ],
+    "part_rank": [
+      19864,
+      19793
+    ],
+    "peak_words": 31831887,
+    "products": 104547,
+    "second_s": 0.5524776879999997,
+    "simd": "avx512",
+    "stored_words": 31831887,
+    "sweep_bytes": 113954816,
+    "swept_batches": 279,
+    "symmetry": "split",
+    "threads": 4,
+    "verify_nonzero": 0,
+    "verify_products": 0,
+    "verify_s": 0.0,
+    "zero": 57055,
+    "zero_muladds": 9844985494
+  },
+  "engine_commit": "9fb60e9c13",
+  "entries": 30280613,
+  "instance": {
+    "a": 3,
+    "b": 0,
+    "k": 13,
+    "path": "/home/user/lfd-summation-systems/experiments/ic-bounds-k14/instances/unit-p163841-a3-s21-k13.json",
+    "prime": 163841,
+    "seed": 21,
+    "sha256": "38025d9f10468b4c4e0c57683530e784e99f04dbcc907e9e95e04c19d58b3efb",
+    "target": [
+      73730,
+      28291
+    ],
+    "unit_nonresidue": true
+  },
+  "io": {
+    "checkpoint_s": 0.0,
+    "checkpoints": 0,
+    "elapsed_total_s": 10.016228999,
+    "export": null,
+    "last_checkpoint_bytes": 0,
+    "resumed_at_batch": 0,
+    "resumed_from": null,
+    "resumes": 0
+  },
+  "maxrss_mb": 380,
+  "muladds": 17993415519,
+  "profile": [
+    0,
+    0,
+    2,
+    150,
+    4021,
+    39657
+  ],
+  "rank": 39657,
+  "rayon_threads": 4,
+  "rows_reduced": 52274,
+  "schema": "hky_paper_runs.closure/v1",
+  "system": {
+    "a": 3,
+    "b": 0,
+    "generator_masks": {
+      "0": 9,
+      "1": 49143,
+      "16384": 32361,
+      "16385": 16381,
+      "16386": 1,
+      "2": 32361,
+      "8192": 49143,
+      "8193": 99113,
+      "8194": 16381
+    },
+    "generator_matches_file": true,
+    "generator_matches_pkm_generator": true,
+    "k": 13,
+    "p": 163841,
+    "x_r": 73730,
+    "zeta": 84080
+  },
+  "wall_s_this_process": 10.039170656
+}

@@ -1,0 +1,15 @@
+paper instance: p=65537 k=13 a=1 b=0 X_R=4271 D=6 generator terms=9 file_generator_match=Some(true) control=false
+
+thread 'main' (7209) panicked at src/cryptanalysis/../../../../../src/cryptanalysis/hky_closure_io.rs:223:29:
+hky_closure_io: write: Os { code: 28, kind: StorageFull, message: "No space left on device" }
+stack backtrace:
+   0: __rustc::rust_begin_unwind
+   1: core::panicking::panic_fmt
+   2: core::result::unwrap_failed
+   3: <crypto_lib::cryptanalysis::hky_closure_io::HW<std::io::buffered::bufwriter::BufWriter<std::fs::File>>>::put
+   4: <crypto_lib::cryptanalysis::hky_closure_io::HW<std::io::buffered::bufwriter::BufWriter<std::fs::File>>>::pairs
+   5: crypto_lib::cryptanalysis::hky_closure_io::checkpoint_now
+   6: crypto_lib::cryptanalysis::hky_fp_tower_fast2::closure_fast2
+   7: pkm_tower_pilot::paper::run
+   8: pkm_tower_pilot::main
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.

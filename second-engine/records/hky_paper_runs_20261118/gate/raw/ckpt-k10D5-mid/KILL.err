@@ -1,0 +1,12 @@
+paper instance: p=65537 k=10 a=1 b=0 X_R=4271 D=5 generator terms=9 file_generator_match=Some(true) control=false
+hky3 resume: gate/raw/ckpt-k10D5-mid/ckpt-KILL/state.ckpt batch 300 rank 10575 sha256 81654c49eee6c40885ac47ce704eb3b7cb2b6a9127ff7be34aad21790c44d6ac (0.1 s)
+hky3 checkpoint: 15344282 bytes, batch 301, rank 10609, queued 6256, 0.1 s
+hky3 checkpoint: 16634166 bytes, batch 326, rank 11205, queued 4075, 0.1 s
+hky3 checkpoint: 23992406 bytes, batch 351, rank 12417, queued 5079, 0.1 s
+hky3 checkpoint: 28333588 bytes, batch 376, rank 13191, queued 5099, 0.3 s
+hky3 checkpoint: 31576306 bytes, batch 401, rank 13821, queued 3841, 0.1 s
+hky3 checkpoint: 52802788 bytes, batch 426, rank 15063, queued 3602, 0.2 s
+hky3 checkpoint: 61020664 bytes, batch 451, rank 15763, queued 3441, 0.3 s
+hky3 checkpoint: 75924210 bytes, batch 476, rank 17057, queued 3070, 0.4 s
+hky3 checkpoint: 110621232 bytes, batch 501, rank 18127, queued 3642, 0.5 s
+paper closure: k=10 D=5 cols=21700 profile=[0, 0, 2, 138, 3163, 18569] one=false censored=None muladds=16024605579 wall=49.7s

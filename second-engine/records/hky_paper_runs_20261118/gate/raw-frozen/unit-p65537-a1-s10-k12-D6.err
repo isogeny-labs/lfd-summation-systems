@@ -1,0 +1,6 @@
+paper instance: p=65537 k=12 a=1 b=0 X_R=4271 D=6 generator terms=9 file_generator_match=Some(true) control=false
+hky3 resume: no checkpoint at gate/raw/ckpt/unit-p65537-a1-s10-k12-D6/state.ckpt, starting fresh
+hky3 checkpoint: 87940826 bytes, batch 2129, rank 75173, queued 102116, 3.0 s
+paper closure: k=12 D=6 cols=190051 profile=[] one=false censored=Some("signal") muladds=655531563 wall=6.6s
+paper instance: p=65537 k=12 a=1 b=0 X_R=4271 D=6 generator terms=9 file_generator_match=Some(true) control=false
+hky3 resume: gate/raw/ckpt/unit-p65537-a1-s10-k12-D6/state.ckpt batch 2129 rank 75173 sha256 9d1a33489d3cfa48b641f8ecd629df33c62b630aed809ae22f8a1b6b8f985b4c (0.2 s)

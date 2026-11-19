@@ -1,0 +1,13 @@
+hky3 c=3 sym=split parts=[974, 286] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=9 ir_muladds=0 products=1 zero=0 reducers=0 dense=0 sparse=1 words=9 peak_words=9
+hky3 c=4 sym=split parts=[4410, 1596] rank=[69, 8] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=5 rounds=6 irs=0 muladds=1809 ir_muladds=0 products=82 zero=4 reducers=34 dense=0 sparse=77 words=731 peak_words=731
+hky3 c=5 sym=split parts=[16078, 6686] rank=[1205, 226] par=0.04s second=0.02s serial=0.00s ir=0.01s batches=55 rounds=64 irs=5 muladds=114732 ir_muladds=6678 products=2913 zero=1342 reducers=3536 dense=0 sparse=1431 words=19484 peak_words=19364
+hky3 c=6 sym=split parts=[49314, 22562] rank=[9254, 2656] par=0.19s second=0.09s serial=0.03s ir=0.07s batches=374 rounds=529 irs=14 muladds=10341856 ir_muladds=1145692 products=34035 zero=20557 reducers=139735 dense=0 sparse=11910 words=446396 peak_words=446396
+kummer   m=7 tower  t= 2 hky d_F=None ffd=Some(4) falls=[4, 5, 6] censored_at=None 720 ms
+kummer   m=7 tower  t= 2 N=14 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0    720.3 ms
+hky3 c=3 sym=split parts=[2303, 784] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=9 ir_muladds=0 products=1 zero=0 reducers=0 dense=0 sparse=1 words=9 peak_words=9
+hky3 c=4 sym=split parts=[13797, 5880] rank=[51, 6] par=0.01s second=0.00s serial=0.00s ir=0.00s batches=3 rounds=5 irs=0 muladds=1431 ir_muladds=0 products=58 zero=0 reducers=12 dense=0 sparse=57 words=646 peak_words=646
+hky3 c=5 sym=split parts=[66024, 32823] rank=[1164, 337] par=0.03s second=0.01s serial=0.00s ir=0.01s batches=53 rounds=73 irs=5 muladds=133786 ir_muladds=6825 products=2892 zero=1290 reducers=2697 dense=0 sparse=1501 words=25479 peak_words=25479
+hky3 c=6 sym=split parts=[262912, 145825] rank=[11217, 4072] par=0.28s second=0.11s serial=0.03s ir=0.10s batches=470 rounds=566 irs=15 muladds=4475202 ir_muladds=187668 products=42984 zero=27007 reducers=71468 dense=0 sparse=15289 words=443773 peak_words=443773
+kummer   m=7 tower  t= 3 hky d_F=None ffd=Some(4) falls=[4, 5, 6] censored_at=None 3281 ms
+kummer   m=7 tower  t= 3 N=21 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0   3281.1 ms
+{"budget_seconds":1800,"p":2013265921,"planted_per_cell":0,"planted_violations":0,"random_per_cell":1,"rows":2,"seed":1347112276,"wall_seconds":4.007015459}

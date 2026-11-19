@@ -1442,17 +1442,17 @@ lifted. The degree-$6$ closures thus agree on four
 instances over three primes at both depths.
 
 % Second engine, different instance: isogeny-labs/crypto at commit 89a2a70 (branch
-% claude/lfd-ffd-paper-eprint-status-qq8fit), research/hky_pod_runs_20261117/: RESULTS.md, LAUNCH.md,
+% claude/lfd-ffd-paper-eprint-status-qq8fit), second-engine/records/hky_pod_runs_20261117/: RESULTS.md, LAUNCH.md,
 % results/t14_hky2.jsonl (sha256 093245bb...), results/t14_progress.jsonl, results/t13_hky2.jsonl
 % (sha256 aeba21e3...), results/t13_progress.jsonl; frozen binary pilot_candidate sha256 47d6c281...
-% (research/hky_engine_speed_20261117/README.md), engine src/cryptanalysis/hky_fp_tower_fast.rs,
+% (second-engine/records/hky_engine_speed_20261117/README.md), engine src/cryptanalysis/hky_fp_tower_fast.rs,
 % generator examples/pkm_tower_pilot.rs (Kummer tower: y_j^2 = y_{j+1}, y_{t-1}^2 = 1, x_i = g*y_{i,0}).
 % Record fields used: t (= k), curve, x_r, tower.g, closures[].dims/cols/one, hky2.stats[].part_rank/part_cols,
 % wall_s, and t14_rss.log (peak RSS). The other repository labels these numbers [pcc:unverified].
 \paragraph{A second engine on a fourth prime.}
-A closure engine of another repository computed the same closures on
-further instances (repository \code{isogeny-labs/crypto}, commit
-\code{89a2a70}, directory \code{research/\allowbreak{}hky\_pod\_runs\_20261117/};
+A closure engine written in another repository (\code{isogeny-labs/crypto})
+computed the same closures on further instances (records in
+\code{second-engine/\allowbreak{}records/\allowbreak{}hky\_pod\_runs\_20261117/};
 Appendix~\ref{app:data}). It is written in Rust, runs on processors and
 keeps most rows sparse, where the third engine eliminates dense tiles on a
 graphics processor, and it shares no code with the engines of this paper,
@@ -1486,7 +1486,7 @@ of $23{,}129{,}176$~KiB (about $22$~GiB). These runs corroborate the closure dim
 certificates in the sense of Section~\ref{sec:certs}. The engine has no
 closedness sweep of the kind of Appendix~\ref{app:engines}, each closure
 was run once (one target at $k=13$ also on a second host, with the same
-dimensions), and the other repository records them as unverified. If the
+dimensions), and its records label them unverified. If the
 closure at $k=14$ is exact, $\lfd\ge7$ holds on that instance whether or
 not its ideal is the unit ideal, since $|Z|\le2^{15}$ and
 $499{,}178-2^{15}=466{,}410>448{,}922$. Because the instances differ, the
@@ -1494,21 +1494,22 @@ runs do not test the stored space $W$ of the unit instances on which the
 upper bound rests (Section~\ref{sec:limitations}).
 % Second engine on the paper's own unit instance (run J1 of paper-runs-20261118): isogeny-labs/crypto,
 % branch wt/paper-engine, records commit 98b7d87056, directory
-% research/hky_paper_runs_20261118/: README.md (system correspondence, gate table), pod/LAUNCH.md,
+% second-engine/records/hky_paper_runs_20261118/: README.md (system correspondence, gate table), pod/LAUNCH.md,
 % results/J1/record.json, job.json, basis.bin.json. Engine src/cryptanalysis/hky_fp_tower_fast2.rs (hky3),
 % generator examples/pkm_tower_pilot.rs (--instance mode, examples/pkm_tower_paper/paper.rs), engine commit
 % 450d5b295b, binary sha256 39acdeac81689a49fa98a9b71e9924bdc29418d80247bece72e372aa41cac74f; optimisation
-% round research/hky_engine_opt_20261118/README.md (closedness check: --hky3-verify-closed on).
+% round second-engine/records/hky_engine_opt_20261118/README.md (closedness check: --hky3-verify-closed on).
 % Instance unit-p65537-a1-s10-k14, file sha256 fa06148e0276dd45...; record fields columns, profile,
 % contains_one, rank, engine.part_cols/part_rank, engine.verify_products/verify_nonzero/verify_s,
 % system.generator_matches_file/generator_matches_pkm_generator; job.json wall_s_this_attempt,
 % peak_rss_kb_this_attempt (VmHWM, KiB); basis file sha256 06fdd4e4d00095ad.... [pcc:unverified] there.
 \paragraph{The second engine on the unit instance over $p=65537$.}
 A later version of the second engine
-(\code{src/cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast2.rs}, with the
-generator of \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}; records in
-\code{research/\allowbreak{}hky\_paper\_runs\_20261118/} of the same
-repository, commit \code{98b7d87}; Appendix~\ref{app:data}) was run on the
+(\code{hky\_fp\_tower\_fast2.rs}, with the instance loader of its
+generator \code{pkm\_tower\_pilot.rs}, extracted to
+\code{second-engine/\allowbreak{}engine/}; records in
+\code{second-engine/\allowbreak{}records/\allowbreak{}hky\_paper\_runs\_20261118/};
+Appendix~\ref{app:data}) was run on the
 unit instance of this paper, $y^2=x^3+x$ over $p=65537$ with target
 $(4271,11720)$, read from our instance file. Here the tower has top
 constant $1$ and $x_i=u_{i,0}$, so the engine's system is the subgroup
@@ -1517,7 +1518,10 @@ checks the generator coefficient by coefficient against our formula and
 against the instance file. Before the run, the same binary reproduced
 $11$ recorded closures of this paper (column count, profile and membership
 of $1$): those of degree $5$ at $k=10,\ldots,15$, on both unit instances
-at $k=13$ and $14$, and those of degree $6$ at $k=10$, $11$ and $12$. At
+at $k=13$ and $14$, and those of degree $6$ at $k=10$, $11$ and $12$;
+a standalone extract of the engine, kept with the records in
+\code{second-engine/}, reproduces the same eleven closures
+(\code{second-engine/\allowbreak{}gate-20261119/}). At
 $k=14$ its degree-$6$ closure, in $499{,}178$ columns, ends without $1$,
 with dimension $448{,}922$, profile $(0,0,2,154,4451,73587,448922)$ and
 part ranks $224{,}688+224{,}234$ in parts of $249{,}824$ and $249{,}354$
@@ -1533,20 +1537,21 @@ This run corroborates $1\notin V_6(14)$ and the dimension; it is not one of
 our certificates: the check has the form of the sweep of
 Section~\ref{sec:certs} but runs inside the engine, on its own arithmetic,
 our checker has not read the exported basis, the closure was run once,
-and the other repository records the result as unverified.
+and its records label the result unverified.
 
 % Lift on the second engine's basis (J1 lift) and run J2: isogeny-labs/crypto, branch
 % claude/lfd-ffd-paper-eprint-status-qq8fit, commit 12308b4877 (merge of wt/paper-engine b4aba21adf),
-% research/hky_paper_runs_20261118/: results/J1/lift/lift_ref.rust.json (fields dim_VD, dim_VD1, dim_low, falls,
+% second-engine/records/hky_paper_runs_20261118/: results/J1/lift/lift_ref.rust.json (fields dim_VD, dim_VD1, dim_low, falls,
 % falls_new_per_round, profile, input_checks, counts.madds_total, timing_s.total, maxrss_mb, binary_sha256,
 % input.file_sha256), lift_ref.verify.json (all_equal against experiments/ic-bounds-k14/runs/
 % lift-unit-p65537-k14-D6to7.json; the regular-top count is informational, a different notion), j1_tail.log;
-% lift tool tools/hky_lift (Rust, commits 7ca693ea52, ab6ba13436); results/J2/record.json, job.json,
+% lift tool second-engine/lift (Rust, commits 7ca693ea52, ab6ba13436); results/J2/record.json, job.json,
 % basis.bin.json; pod/LAUNCH.md. [pcc:unverified] there.
 \paragraph{A third lift, on the second engine's space.}
 A separately written implementation of the degree lift in the other
-repository (\code{tools/\allowbreak{}hky\_lift}, in Rust, binary SHA-256
-\code{6824a8bd\ldots}; records at commit \code{12308b4}), which works in
+repository (now \code{second-engine/\allowbreak{}lift/}, in Rust, binary SHA-256
+\code{6824a8bd\ldots}; records in \code{results/\allowbreak{}J1/\allowbreak{}lift/} of the
+same records directory), which works in
 ordinary monomial coordinates without the swap split and shares no code
 with the two lifts of Appendix~\ref{app:checks}, was run on the basis
 exported by this run (SHA-256 \code{06fdd4e4\ldots}). It first checked
@@ -1597,7 +1602,7 @@ engine-internal check, our checker has not read the basis, recorded as
 unverified), and so does the conditional containment of the previous
 paragraph, with this run's space in place of $S$.
 % J2 lift: isogeny-labs/crypto, branch claude/lfd-ffd-paper-eprint-status-qq8fit (PR #4735), commit 6fc6ccf847
-% (merge of wt/paper-engine 752424ef08), research/hky_paper_runs_20261118/results/J2/lift/: lift_ref.rust.json
+% (merge of wt/paper-engine 752424ef08), second-engine/records/hky_paper_runs_20261118/results/J2/lift/: lift_ref.rust.json
 % (dim_VD, dim_VD1, dim_low, falls, falls_new_per_round, rounds, profile, input_checks, counts.madds_total,
 % timing_s.total = 21,198.5 s, maxrss_mb = 234,298.7, threads = 32, binary_sha256 6824a8bd...,
 % input.file_sha256 3d1f2996...), lift_ref.verify.json (all_equal against
@@ -1612,18 +1617,18 @@ $\dim V_7=1{,}683{,}218=|M_{\le7}|$, so $1\in V_7(14)$; these values and
 the profile equal the record of the first lift on this instance field by
 field. It took $5.6\cdot10^{14}$ multiply-adds and about $5.9$~h
 ($21{,}199$~s) on $32$ virtual CPUs, with a recorded peak resident set of
-$234{,}299$~MB (records at commit \code{6fc6ccf}). The second, separately
+$234{,}299$~MB (records in \code{results/\allowbreak{}J2/\allowbreak{}lift/}). The second, separately
 written implementation of both halves of $\lfd(14)=7$ thus holds on both
 unit instances, with the qualifications stated above for $p=65537$: each
 half is a corroboration, not a certificate, the lift was run once, and the
 canonical basis hashes of this space and $W$ have not been compared.
 
-% Runs J3 (k = 15) and J4s (k = 16): isogeny-labs/crypto commit 12308b4877, research/hky_paper_runs_20261118/:
+% Runs J3 (k = 15) and J4s (k = 16): isogeny-labs/crypto commit 12308b4877, second-engine/records/hky_paper_runs_20261118/:
 % results/J3/record.json, job.json, basis.bin.json (basis sha256 5da602a8..., not kept on disk);
 % results/J4s/record.json, job.json (no basis export, no closedness check); instance
 % instances/unit-p786433-a1-s10-k16.json (sha256 341d79d8...; unit-ness checks in README.md section 6 and
 % gate/unitness_786433*.log); pod/LAUNCH.md. J3 binary 39acdeac..., J4s binary 36a047ff... (commit 43d5c40d1f,
-% flags --hky3-skip on --hky3-skip-witness leads); skip criterion: research/hky_engine_skip_20261118/PROOF.md and
+% flags --hky3-skip on --hky3-skip-witness leads); skip criterion: second-engine/records/hky_engine_skip_20261118/PROOF.md and
 % README.md (gate: 110 reference cells equal, paper gate 11/11; seeded fault 7 not detected). J4s wall
 % 10,238 s against a prediction of 230,000 s (band 100,000-950,000 s) written before the run (PREDICTIONS.md):
 % below the band, not explained there. Lift memory at k = 15 (about 540 GB) and k = 16 (about 1.2 TB):
@@ -1646,13 +1651,14 @@ $p=786433=3\cdot2^{18}+1$, the smallest prime with $2^{17}\mid p-1$,
 $y^2=x^3+x$ and target $(485051,497175)$, drawn by our instance recipe
 with seed $10$. The abscissa is a non-residue and the ordinate is nonzero,
 so the ideal is the unit ideal for $k\le17$ by Lemma~\ref{lem:unit}; the
-other repository also enumerated no scalar solution at $k=16$. In
+records of the run also enumerate no scalar solution at $k=16$. In
 $|M_{\le6}|=1{,}149{,}017$ columns the closure ends without $1$, with
 dimension $770{,}594$, profile $(0,0,2,162,5079,92323,770594)$ and part
 ranks $385{,}594+385{,}000$, in $10{,}238$~s on $32$ virtual CPUs with a
 peak resident set of $51{,}529{,}076$~KiB (about $49$~GiB). This run is
 weaker than the others: it omits products by a criterion that is proved,
-in a written proof of the other repository, to leave the final span
+in a written proof
+(\code{second-engine/\allowbreak{}records/\allowbreak{}hky\_engine\_skip\_20261118/\allowbreak{}PROOF.md}), to leave the final span
 unchanged, and that passes a gate of $110$ reference closures (one of its
 seeded faults was not detected), and it ran without a closedness check.
 Since the prime differs, Theorem~\ref{thm:restrict} does not carry the
@@ -1660,7 +1666,7 @@ certified exclusion at $k=14$ to this instance: $1\notin V_6(16)$ is a
 single-engine reading, and with the unit ideal it would give $\lfd\ge7$ on
 this instance, without a certificate.
 
-Neither run reaches degree $7$. The other repository estimates that the
+Neither run reaches degree $7$. The records of these runs estimate that the
 degree lift needs about $540$~GB of memory at $k=15$ and about $1.2$~TB at
 $k=16$, beyond the hosts used, so $\lfd\le7$ at these depths is open. Both
 profiles equal, entry by entry, the recursion
@@ -1803,7 +1809,7 @@ degrees $4$, $5$ and $6$). At $m=5$, $k=3$ it reads $8$, from a closure
 without $1$ through degree $7$ and the degree at which F4 ends; our lower
 bound $8$ agrees with it and the upper bound is not certified here.
 
-% Later single-engine readings: isogeny-labs/crypto at commit 89a2a70, research/hky_pod_runs_20261117/
+% Later single-engine readings: isogeny-labs/crypto at commit 89a2a70, second-engine/records/hky_pod_runs_20261117/
 % RESULTS.md and LAUNCH.md ("m-sweep"), records results/prog_m6-T2.jsonl (m = 6, k = 2, 3),
 % results/prog_m6-T3-d3-long.jsonl ((6,3) degree 8, max_entries), results/b_m7-T2.jsonl (m = 7, k = 2, 3),
 % results/b_m8-T2.jsonl, m8pod_m8-T2.jsonl, m8pod_m8-T2-cols12M.jsonl (m = 8), results/prog_m9-T2-cols12M.jsonl
@@ -3876,6 +3882,12 @@ how they are replayed; the others hold a \code{RESULTS.md} or
 \code{REPORT.md}, or only the records with a \code{summary.json} or
 \code{verification.json}, which record the seed and engine or the source
 hashes.
+The runs of the second engine and the third lift were made with binaries
+built from the repository \code{isogeny-labs/crypto} (commits \code{89a2a70},
+\code{450d5b2} and \code{43d5c40}); their records, the lift and a
+standalone extract of the engine are now in \code{second-engine/}, whose
+\code{PROVENANCE.md} lists the commits, the binary hashes and every change
+made in the extract.
 
 \begin{table}[!ht]
 \centering\scriptsize
@@ -3914,19 +3926,11 @@ Depth ten & \code{experiments/\allowbreak{}ic-chain-depth10/} (\code{degree6.jso
 Reference engine, depths $10$--$13$ & \code{experiments/\allowbreak{}ic-bounds-d5/} (\code{VERIFY.md}; \code{verify/k10-p12289-s10-D6.json})\\
 Third engine, depths $10$--$16$; lift & \code{experiments/\allowbreak{}ic-bounds-k14/} (\code{RESULTS.md}, \code{README.md}, \code{LIFT.md}, \code{CERTCHECK.md}; \code{runs/lift-unit-p65537-k14-D6to7.json}, \code{runs/lift-unit-p163841-k14-D6to7.json}, \code{runs/lift-proper-p114689-k14-D6to7.json}, \code{runs/reference-engine-unit-p65537-k14-D5.json} with \code{-k10-D6.json} and \code{-k11-D6.json}, \code{validation/lift-k10d5-proper.json}; instances in \code{instances/})\\
 Second lift at $k=14$ & \code{experiments/\allowbreak{}ic-bounds-k14-independent/} (\code{PLAN.md}, \code{RESULT-unit-p65537.md}, \code{RESULT-unit-p163841.md}, \code{pod/}, \code{pod-p163841/})\\
-Second engine at $k=13,14$ over $p=2013265921$; later split readings (other repository) & \code{isogeny-labs/crypto} at commit \code{89a2a70}: \code{research/\allowbreak{}hky\_pod\_runs\_20261117/} (\code{RESULTS.md}, \code{LAUNCH.md}; \code{results/t13\_hky2.jsonl}, \code{t14\_hky2.jsonl}, \code{t14\_progress.jsonl}, \code{t14\_rss.log}, \code{prog\_m6-T2.jsonl}, \code{b\_m7-T2.jsonl}, \code{b\_m8-T2.jsonl}, \code{prog\_m9-T2-cols12M.jsonl}); engine \code{research/\allowbreak{}hky\_engine\_speed\_20261117/README.md}, \code{src/cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast.rs}, generator \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}\\
-Second engine, later version, at $k=14$ on the unit instance over $p=65537$ (other repository) & \code{isogeny-labs/crypto} at commit \code{98b7d87}: \code{research/\allowbreak{}hky\_paper\_runs\_20261118/} (\code{README.md}, \code{pod/LAUNCH.md}; \code{results/J1/record.json}, \code{job.json}, \code{basis.bin.json}); engine \code{src/cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast2.rs}, \code{research/\allowbreak{}hky\_engine\_opt\_20261118/README.md}; generator \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}\\
-Third lift at $k=14$ over $p=65537$; second engine at $k=14$ over $p=163841$, at $k=15$ and at $k=16$ over $p=786433$ (other repository) & \code{isogeny-labs/crypto} at commit \code{12308b4}, \code{research/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J1/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}); \code{results/J2/}, \code{results/J3/}, \code{results/J4s/} (\code{record.json}, \code{job.json}); \code{instances/\allowbreak{}unit-p786433-a1-s10-k16.json}; \code{PREDICTIONS.md}, \code{pod/LAUNCH.md}; lift \code{tools/hky\_lift/}; skip criterion \code{research/\allowbreak{}hky\_engine\_skip\_20261118/} (\code{PROOF.md}, \code{README.md})\\
-Third lift at $k=14$ over $p=163841$ (other repository) & \code{isogeny-labs/crypto} at commit \code{6fc6ccf}, \code{research/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J2/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}, \code{lift\_ref.stdout}, \code{lift\_ref.inputs.sha256}); \code{pod/LAUNCH.md}\\
-Free extension, predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/} (\code{records/}; \code{predictions-2026-11-10.json}, ids \code{d5-14}, \code{d5-closed-form}, \code{d6-full-through-13}, \code{d6-falls-at-14}, \code{d6-base-15}, \code{lfd-table}; \code{outcomes-2026-11-10.json})\\
-Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r}); Table~\ref{tab:splitm}: \code{experiments/\allowbreak{}ic-bounds-split-m/}, \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/}\\
-Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experiments/\allowbreak{}ic-bounds-msum/}\\
-Four and five summands (exact closures) & \code{experiments/\allowbreak{}ic-bounds-msummands/}\\
-Binary grids and laws & \code{experiments/\allowbreak{}ic-bounds-binary/}, \code{experiments/\allowbreak{}ic-bounds-binary-law/}, \code{experiments/\allowbreak{}ic-bounds-binary-deep/}\\
-Ordinary-ring validation & \code{experiments/\allowbreak{}ic-curve-validation/}\\
-Solving degree (Section~\ref{sec:solving}) & \code{experiments/\allowbreak{}ic-solving-degree/} (\code{PROTOCOL.md}, \code{rows-merged.jsonl}, \code{summary.json}, \code{checks.json}); \code{ic-bounds-solving/}; proofs \code{N10-} and \code{SD1-solving-degree.md}\\
-Unpublished binary draft (Remark~\ref{rem:binarydraft}) & \code{paper/binary-lfd.tex}\\
-Root finding (Section~\ref{sec:future}) & \code{experiments/\allowbreak{}ic-rootfind/}, \code{rust/\allowbreak{}ic\_rootfind/}; after the snapshot, commit \href{https://github.com/isogeny-labs/lfd-summation-systems/tree/a28475a}{\code{a28475a}}\\
+Second engine: records, standalone extract, lift and local gate (written in another repository; after the snapshot) & \code{second-engine/} (\code{README.md}, \code{PROVENANCE.md}; \code{engine/}, \code{lift/}, \code{records/}, \code{gate-20261119/})\\
+Second engine at $k=13,14$ over $p=2013265921$; later split readings & \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_pod\_runs\_20261117/} (\code{RESULTS.md}, \code{LAUNCH.md}; \code{results/t13\_hky2.jsonl}, \code{t14\_hky2.jsonl}, \code{t14\_progress.jsonl}, \code{t14\_rss.log}, \code{prog\_m6-T2.jsonl}, \code{b\_m7-T2.jsonl}, \code{b\_m8-T2.jsonl}, \code{prog\_m9-T2-cols12M.jsonl}); engine \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_engine\_speed\_20261117/README.md}, \code{second-engine/\allowbreak{}engine/\allowbreak{}src/\allowbreak{}cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast.rs}\\
+Second engine, later version, at $k=14$ on the unit instance over $p=65537$ & \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_paper\_runs\_20261118/} (\code{README.md}, \code{pod/LAUNCH.md}; \code{results/J1/record.json}, \code{job.json}, \code{basis.bin.json}); engine \code{second-engine/\allowbreak{}engine/} (\code{src/\allowbreak{}cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast2.rs}, \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}), \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_engine\_opt\_20261118/README.md}\\
+Third lift at $k=14$ over $p=65537$; second engine at $k=14$ over $p=163841$, at $k=15$ and at $k=16$ over $p=786433$ & \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J1/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}); \code{results/J2/}, \code{results/J3/}, \code{results/J4s/} (\code{record.json}, \code{job.json}); \code{instances/\allowbreak{}unit-p786433-a1-s10-k16.json}; \code{PREDICTIONS.md}, \code{pod/LAUNCH.md}; lift \code{second-engine/\allowbreak{}lift/}; skip criterion \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_engine\_skip\_20261118/} (\code{PROOF.md}, \code{README.md})\\
+Third lift at $k=14$ over $p=163841$ & \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J2/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}, \code{lift\_ref.stdout}, \code{lift\_ref.inputs.sha256}); \code{pod/LAUNCH.md}\\
 \bottomrule
 \end{tabular}
 \caption{Location of the data, records and reports of the computations.}

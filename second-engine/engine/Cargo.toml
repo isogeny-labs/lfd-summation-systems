@@ -1,0 +1,48 @@
+# Standalone extract of the second closure engine (hky3, `hky_fp_tower_fast2`) with the paper-instance
+# loader, the basis checker and the instance generator. See ../PROVENANCE.md for what was taken from
+# isogeny-labs/crypto (commit 7014d5dd2a) and what changed.
+#
+# The library is named `crypto_lib` and keeps the module path `crypto_lib::cryptanalysis::*` so that the
+# engine files and the instance loader compile unchanged from the crypto sources.
+[package]
+name = "hky3-engine"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+publish = false
+license = "MIT"
+description = "Second closure engine of the LFD paper (HKY closures V_D on the two-summand prime chain system), standalone extract"
+autoexamples = false
+
+# Standalone: not part of any workspace.
+[workspace]
+
+[lib]
+name = "crypto_lib"
+path = "src/lib.rs"
+
+[dependencies]
+rayon = "1.10"
+sha2 = "0.10"
+serde_json = "1.0"
+libc = "0.2"
+rand = "0.8"
+
+[profile.release]
+debug = false
+incremental = false
+
+# The paper-instance runner (`--instance` mode of the crypto pilot).
+[[example]]
+name = "pkm_tower_pilot"
+path = "examples/pkm_tower_pilot.rs"
+
+# Round-trip and closedness checker of an exported basis (independent of the engine's code).
+[[example]]
+name = "hky_basis_check"
+path = "../records/hky_paper_runs_20261118/tools/hky_basis_check.rs"
+
+# The unit instances over p = 786433 (depth 4..16).
+[[example]]
+name = "hky_paper_instance"
+path = "../records/hky_paper_runs_20261118/tools/hky_paper_instance.rs"

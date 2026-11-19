@@ -126,3 +126,35 @@ SHA-256 `d0a446b7…`; ePrint sheet digests and revision paragraph updated;
 No `% PENDING(paper-runs-20261118)` marker remains: the last one, for the
 Rust lift on the J2 basis (`3d1f2996…`), is filled with the finished lift.
 Not run: the canonical-hash comparison of either second-engine basis with W.
+
+## Consolidation into this repository (later on 19 November)
+
+Owner decision: the paper material of `isogeny-labs/crypto` PR #4735 moves here.
+`second-engine/` (see its `README.md` and `PROVENANCE.md`) now holds the records
+cited above (`records/hky_paper_runs_20261118/`, `records/hky_engine_opt_20261118/`,
+`records/hky_engine_skip_20261118/`, the cited files of
+`records/hky_pod_runs_20261117/`, `records/hky_engine_speed_20261117/README.md`),
+the Rust lift (`lift/`, unchanged), and a standalone Rust extract of the second
+engine (`engine/`: the engine files unchanged from crypto commit `7014d5dd2a`, the
+paper-instance loader and the items of the pilot it uses). The runs were made with
+binaries built from crypto commits `450d5b295b` (J1–J3, sha256 `39acdeac…`) and
+`43d5c40d1f` (J4s, `36a047ff…`); the lift binary built here has the recorded
+hash `6824a8bd…`.
+
+Local gate of the extract (`second-engine/gate-20261119/`): the eleven recorded
+closures that fit in 16 GB (degree 5 at k = 10..15 and on both unit instances at
+k = 13, 14; degree 6 at k = 10, 11, 12) give equal columns, profile and
+membership of 1, closed, with and without the skip criterion, and the same
+multiply-add and row counts as the recorded gates of the two run binaries; the
+engine's closedness re-check reduced 1,637,168 products to zero; the independent
+basis checker accepts the exported bases at k = 10, D = 5 and 6 (closed, generator
+in span); a SIGKILL and a SIGTERM resume reproduce the reference closure and its
+basis file byte for byte, and that basis file is the one the run binary exported
+in its own test; the three negative controls at k = 10, D = 6 (planted target
+X = 11932, perturbed X, wrong a) equal the record; the engine's 20 unit tests
+pass; the lift's validation suite gives 41 of 41 equal.
+
+Paper: the second-engine paragraphs of `sec:depth14` and the `tab:data2` rows cite
+`second-engine/…` instead of crypto commits; the data appendix gains one
+provenance sentence, and the run-J1 paragraph one sentence on the extract's gate.
+No value changes.

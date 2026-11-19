@@ -1,0 +1,10 @@
+true basis, true generator:
+{"ok":true,"closedness":{"closed":true,"generator_in_span":true,"mode":"annihilator","products_checked":63260},"failures":[],"content_sha256":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849"}
+true basis, generator with .instance.target[0]=4272:
+{"ok":false,"closedness":{"closed":true,"generator_in_span":false,"mode":"annihilator","products_checked":63260},"failures":["generator in span"]}
+true basis, generator with .instance.a=2:
+{"ok":false,"closedness":{"closed":true,"generator_in_span":false,"mode":"annihilator","products_checked":63260},"failures":["generator in span"]}
+basis of X=4272 (same profile), checked with its own generator:
+{"ok":true,"closedness":{"closed":true,"generator_in_span":true,"mode":"annihilator","products_checked":63260},"failures":[],"content_sha256":"086ff0a58171b1c28980539e65c6100bc83f5f95e2c38c1c1b86807e82d0dffc"}
+basis of X=4272, checked with the true generator (X=4271):
+{"ok":false,"closedness":{"closed":true,"generator_in_span":false,"mode":"annihilator","products_checked":63260},"failures":["generator in span"]}

@@ -1,0 +1,22 @@
+running 20 tests
+test cryptanalysis::hky_fp_tower::tests::resuming_at_a_later_degree_gives_the_same_last_fall ... ok
+test cryptanalysis::hky_fp_tower::tests::fall_degrees_with_reports_every_closure_before_returning ... ok
+test cryptanalysis::hky_fp_tower_fast2::opt_tests::variable_products_commute ... ok
+test cryptanalysis::hky_fp_tower_fast2::opt_tests::the_closedness_check_passes_and_sees_a_fault ... ok
+test cryptanalysis::hky_fp_tower_fast2::opt_tests::epochs_and_sweep_do_the_same_reductions ... ok
+test cryptanalysis::hky_fp_tower_fast2::tests::v2_equals_the_reference_on_general_rules ... ok
+test cryptanalysis::hky_fp_tower_fast2::tests::v2_faults_are_detected_on_a_consistent_system ... ok
+test cryptanalysis::hky_fp_tower_fast2::opt_tests::the_skip_keeps_the_space ... ok
+test cryptanalysis::hky_fp_tower_fast2::tests::v2_schedule_does_not_depend_on_the_thread_count ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::a_consistent_system_never_contains_one ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::a_false_symmetry_is_rejected_and_the_answer_is_unchanged ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::dense_kernel_matches_the_definition ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::every_variant_equals_the_reference_on_general_rules ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::every_variant_equals_the_reference_on_kummer_towers ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::free_variables_and_three_blocks ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::level_zero_counts_what_the_reference_counts ... ok
+test cryptanalysis::hky_fp_tower_fast::tests::the_comparison_detects_a_faulty_engine ... ok
+test cryptanalysis::hky_fp_tower_fast2::tests::v2_equals_the_reference_on_kummer_towers ... ok
+test cryptanalysis::hky_fp_tower_fast2::tests::v2_free_variables_and_three_blocks ... ok
+test cryptanalysis::hky_fp_tower_fast2::tests::v2_equals_the_reference_without_one ... ok
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 11.47s
