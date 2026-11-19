@@ -1,0 +1,35 @@
+{
+  "status": "unit-witness",
+  "p": 65537,
+  "m": 2,
+  "k": 2,
+  "D": 4,
+  "derived_rank": 16,
+  "contains_one": true,
+  "products": 44,
+  "terms": 105,
+  "muladds": 2444,
+  "seconds": 0.000421,
+  "replay": {
+    "derived_rank": 16,
+    "contains_one": true,
+    "closed_check": false,
+    "one_excluded": null,
+    "scope": "derived rows contained in V_D; no completeness claim"
+  },
+  "reference": {
+    "contains_one": true,
+    "dim_V_D": 16
+  },
+  "artifact_sha256": {
+    "input.txt": "d833b1add25d85539cef0c8796a68b0f8399a1bd0ecc4e4cb62ab7df3adb0e73",
+    "derivations.txt": "63fbb6f4b7056b7642abceaa72a2c83e762e32d8b8174ec1a3ef66f2ab3a0219",
+    "basis.txt": "7e05b48e11b983c4cae740ca0df5f9647b848176e56ee0efd7fdb6f9e8dccede"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "8fe54ce66fe5fcd3a64f71b90b38d8cdfbe1d9c7d8237ce9fbce4625f4b43bd4"
+  },
+  "runner_source_snapshot": "initial-runner.py.txt"
+}

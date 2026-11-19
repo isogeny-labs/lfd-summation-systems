@@ -1,0 +1,37 @@
+{
+  "status": "closed",
+  "p": 114689,
+  "m": 5,
+  "k": 3,
+  "D": 7,
+  "derived_rank": 27838,
+  "contains_one": false,
+  "products": 106110,
+  "terms": 3540684,
+  "muladds": 291236708,
+  "seconds": 29.43732,
+  "artifact_sha256": {
+    "input.txt": "8523eeee5fd23df8ae825d4b85850677c7b010721da27530208a0b9eefd9f3ad",
+    "derivations.txt": "15238ee6845ddd48b91ea9dbdbd3b7cda4c13c3684c35d394d6dc3a1202559e8",
+    "basis.txt": "5b1719f13a98b39b011bd34ec8387be8ea9b81b6bf02831c57302e9f1c68850e"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "144071850636e93f51ce781c53c8eaf70d5d87d0e0955cfa80c01a80a2c375b3"
+  },
+  "independent_rust_replay": {
+    "status": "passed",
+    "derived_rank": 27838,
+    "contains_one": false,
+    "closed_check": true,
+    "replay_muladds": 50173170,
+    "seconds": 50.432899,
+    "verifier_source_sha256": "c5122d816b63c3036acdfd99847ce8e61e22bceb2a33d206637cd84312b8aa19",
+    "input_target_sha256": {
+      "input.txt": "8523eeee5fd23df8ae825d4b85850677c7b010721da27530208a0b9eefd9f3ad",
+      "derivations.txt": "15238ee6845ddd48b91ea9dbdbd3b7cda4c13c3684c35d394d6dc3a1202559e8",
+      "basis.txt": "5b1719f13a98b39b011bd34ec8387be8ea9b81b6bf02831c57302e9f1c68850e"
+    }
+  }
+}

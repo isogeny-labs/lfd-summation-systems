@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+"""Source-bound local sparse closure experiments; retains caps and replay receipts."""
+import argparse,hashlib,json,os,subprocess,sys,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'scripts'))
+from csd import ic_bounds_lift_independent as IL
+from csd import ic_fall_certificates as REF
+from csd import ic_bounds_split_m as SPLIT
+from replay import replay
+HERE=Path(__file__).resolve().parent
+
+
+def encode(g,r):
+    return {mask+sum(e<<(r+6*i) for i,e in enumerate(es)):c for (mask,es),c in g.items()}
+
+
+def run_case(tag,p,m,k,a,D,gens,*,seconds=60,max_rows=100000,max_terms=10000000,check=True,reference=False):
+    dest=HERE/'runs'/tag;dest.mkdir(parents=True,exist_ok=True)
+    inp=dest/'input.txt';ledger=dest/'derivations.txt';basis=dest/'basis.txt'
+    lines=[f'{p} {m} {k} {a} {D} {seconds} {max_rows} {max_terms}',str(len(gens))]
+    for g in gens:lines.append(str(len(g))+' '+ ' '.join(f'{x} {c}' for x,c in sorted(g.items())))
+    inp.write_text('\n'.join(lines)+'\n')
+    cmd=['/tmp/lfd-sparse-producer',str(inp),str(ledger),str(basis)]
+    with (dest/'stderr.log').open('w') as stream:
+        try:r=subprocess.run(cmd,capture_output=False,stdout=subprocess.PIPE,stderr=stream,text=True,timeout=seconds+120,check=True)
+        except subprocess.TimeoutExpired:
+            out=dict(status='external-timeout',scope='partial files retained; no complete closure claim')
+        else:out=json.loads(r.stdout)
+    hashes={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [inp,ledger,basis]}
+    if check and out['status']!='external-timeout':
+        out['replay']=replay(inp,ledger,basis,hashes['basis.txt'],closed=out['status']=='closed')
+        assert out['derived_rank']==out['replay']['derived_rank'] and out['contains_one']==out['replay']['contains_one']
+    if reference and out['status'] in ['closed','unit-witness']:
+        if a: ref=SPLIT.closure([{(x%2**(m*k),tuple((x>>(m*k+6*j))%64 for j in range(a))):c for x,c in g.items()} for g in gens],m,k,p,D)
+        else:
+            C=REF.chain_degree_closure(gens,m,k,p,D);ref=dict(contains_one=C.contains_one,dim_V_D=C.quotient_rank)
+        assert ref['contains_one']==out['contains_one']
+        if not out['contains_one']:assert ref['dim_V_D']==out['derived_rank']
+        out['reference']=ref
+    out.update(artifact_sha256=hashes,source_sha256={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [HERE/'sparse_producer.rs',HERE/'replay.py',Path(__file__)]})
+    (dest/'result.json').write_text(json.dumps(out,indent=2)+'\n');print(tag,json.dumps({k:v for k,v in out.items() if k not in ['source_sha256','artifact_sha256','reference']}),flush=True)
+    return out
+
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--suite',choices=['gate','split','depth14'],default='gate');a=ap.parse_args()
+    subprocess.run(['rustc','-O',str(HERE/'sparse_producer.rs'),'-o','/tmp/lfd-sparse-producer'],check=True)
+    if a.suite=='gate':
+        for k,D,X in [(2,3,4271),(2,4,4271),(3,4,4271),(4,4,4271),(6,4,4271)]:
+            g={(i|(j<<k)):c for (i,j),c in IL.s3_generator(65537,1,0,X,k).items()}
+            run_case(f'gate-k{k}-D{D}',65537,2,k,0,D,[g],reference=True)
+        from run_ic_split_m import unit_instance
+        for m,k,D in [(3,2,5),(4,2,5),(5,2,5),(5,2,6),(5,3,5)]:
+            E,inst=unit_instance(114689,m,k,0);gs,_=SPLIT.split_generators_m(E,inst['t'],k,m)
+            run_case(f'gate-m{m}-k{k}-D{D}',114689,m,k,m-2,D,[encode(g,m*k) for g in gs],reference=True)
+    elif a.suite=='split':
+        from run_ic_split_m import unit_instance
+        E,inst=unit_instance(114689,5,3,0);gs,_=SPLIT.split_generators_m(E,inst['t'],3,5)
+        for D in [6,7,8]:
+            out=run_case(f'split-m5-k3-D{D}',114689,5,3,3,D,[encode(g,15) for g in gs],seconds=600,max_rows=230000,max_terms=150000000,check=D<7)
+            if out['status'] not in ['closed','unit-witness']:break
+    else:
+        k=10;g={(i|(j<<k)):c for (i,j),c in IL.s3_generator(65537,1,0,4271,k).items()}
+        run_case('certificate-scale-k10-D5',65537,2,k,0,5,[g],seconds=600,max_rows=25000,max_terms=50000000,check=False)
+if __name__=='__main__':main()

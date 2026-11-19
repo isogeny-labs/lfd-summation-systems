@@ -1,0 +1,50 @@
+{
+  "status": "closed",
+  "p": 114689,
+  "m": 5,
+  "k": 2,
+  "D": 5,
+  "derived_rank": 637,
+  "contains_one": false,
+  "products": 1339,
+  "terms": 12651,
+  "muladds": 72161,
+  "seconds": 0.002786,
+  "replay": {
+    "derived_rank": 637,
+    "contains_one": false,
+    "closed_check": true,
+    "one_excluded": true,
+    "scope": "derived rows contained in V_D; exact closure checked"
+  },
+  "reference": {
+    "D": 5,
+    "monomials_le_D": 3598,
+    "inputs_used": 4,
+    "dim_V_D": 637,
+    "low_profile": [
+      0,
+      0,
+      0,
+      8,
+      103,
+      637
+    ],
+    "contains_one": false,
+    "verified_closed": true,
+    "engine": "InPlaceClosure",
+    "batches": 8,
+    "seconds": 0.393
+  },
+  "artifact_sha256": {
+    "input.txt": "568c97ec0b42718204aef9fe4b1f5e1a857ad0396b6d2590e9f36d9e3059dcff",
+    "derivations.txt": "d7c533f663bef7e194990bab00b8f1b18db6b59932b46d6eed2389bf66e12d09",
+    "basis.txt": "8c4c99cf78579bb017c47e3c8ca09bcc3a4fb6b610ee036da2c1cc2b077f80bd"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "8fe54ce66fe5fcd3a64f71b90b38d8cdfbe1d9c7d8237ce9fbce4625f4b43bd4"
+  },
+  "runner_source_snapshot": "initial-runner.py.txt"
+}
