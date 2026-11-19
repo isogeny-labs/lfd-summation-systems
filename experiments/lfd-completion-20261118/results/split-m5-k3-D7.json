@@ -33,5 +33,21 @@
       "derivations.txt": "15238ee6845ddd48b91ea9dbdbd3b7cda4c13c3684c35d394d6dc3a1202559e8",
       "basis.txt": "5b1719f13a98b39b011bd34ec8387be8ea9b81b6bf02831c57302e9f1c68850e"
     }
-  }
+  },
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "15238ee6845ddd48b91ea9dbdbd3b7cda4c13c3684c35d394d6dc3a1202559e8",
+      "archive_sha256": "a0738570ed10bc50eaf1d782edd14af88717579c32a12abc690b8495d1c949c6",
+      "bytes": 1109899
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "5b1719f13a98b39b011bd34ec8387be8ea9b81b6bf02831c57302e9f1c68850e",
+      "archive_sha256": "2b03d9f384ce6089800dc1f9002249c897818c04a4e2dc0c2f920225032458c3",
+      "bytes": 19839881
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff",
+  "runner_source_snapshot": "runner-resource-guard.py.txt"
 }

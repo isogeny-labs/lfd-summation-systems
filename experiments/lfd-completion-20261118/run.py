@@ -15,7 +15,11 @@ def encode(g,r):
 
 
 def run_case(tag,p,m,k,a,D,gens,*,seconds=60,max_rows=100000,max_terms=10000000,check=True,reference=False):
-    dest=HERE/'runs'/tag;dest.mkdir(parents=True,exist_ok=True)
+    dest=HERE/'runs'/tag
+    if dest.exists() and any(dest.iterdir()):
+        raise FileExistsError(f'refusing to overwrite existing run {dest}; use a fresh tag')
+    dest.mkdir(parents=True,exist_ok=True)
+    source_hashes={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [HERE/'sparse_producer.rs',HERE/'replay.py',Path(__file__)]}
     inp=dest/'input.txt';ledger=dest/'derivations.txt';basis=dest/'basis.txt'
     lines=[f'{p} {m} {k} {a} {D} {seconds} {max_rows} {max_terms}',str(len(gens))]
     for g in gens:lines.append(str(len(g))+' '+ ' '.join(f'{x} {c}' for x,c in sorted(g.items())))
@@ -50,7 +54,7 @@ def run_case(tag,p,m,k,a,D,gens,*,seconds=60,max_rows=100000,max_terms=10000000,
         assert ref['contains_one']==out['contains_one']
         if not out['contains_one']:assert ref['dim_V_D']==out['derived_rank']
         out['reference']=ref
-    out.update(artifact_sha256=hashes,source_sha256={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [HERE/'sparse_producer.rs',HERE/'replay.py',Path(__file__)]})
+    out.update(artifact_sha256=hashes,source_sha256=source_hashes)
     (dest/'result.json').write_text(json.dumps(out,indent=2)+'\n');print(tag,json.dumps({k:v for k,v in out.items() if k not in ['source_sha256','artifact_sha256','reference']}),flush=True)
     return out
 

@@ -35,13 +35,14 @@ control m=5,k=2,D=6 hit its 60-second cap at derived rank 4307; its row
 membership replay passed, but its exact closure and predicted unit result
 were not established by that attempt. A capped gate is not a passing
 complete gate. Other completed gates agree with direct reference closures.
-Five malformed-certificate refusal controls pass.
+Ten replay/refusal/custody tests pass across the Python and Rust checkers.
 
-## Live bounded experiments
+## Bounded experiment outcomes
 
-- D8 on the same fixed split instance: 600-second producer cap, 230000
-  rows, 100 million stored terms. This still needs a checked unit witness,
-  plus the already checked lower ladder, before calling the exact value 8.
+- D8 on the same fixed split instance: stopped at the free-disk floor
+  before its 600-second cap. Last progress record: derived rank 82556,
+  13,887,854 stored terms, 442.5 seconds. These are partial-span counts,
+  not V8 dimensions. No checked unit witness was obtained.
 - Depth-10 D5 certificate-scaling probe: hit its 180-second cap at rank
   12287. The separate Rust verifier replayed all retained rows, without a
   closedness claim. This is a scaling probe, not depth 14.
@@ -50,8 +51,8 @@ Five malformed-certificate refusal controls pass.
   claim. These guards are not permission to discard a censored result.
 
 Check actual processes and result.json files before resuming; do not
-restart because a tool observation timed out. Initial live handles:
-D8 unified session 28633, depth10 session 8269. Successful completion is
+restart because a tool observation timed out. Former handles: D8 unified session 28633, depth10 session 8269. Both
+are terminal. Successful completion is
 not inferred from a stale PID or a log. The results and raw ledger files
 are under runs/<tag>/; the small receipts and exact input files are copied
 to results/ and inputs/ for version control. Large raw files stay local
@@ -93,3 +94,18 @@ remains active.
 completion-requirements.json retains the full target identities and proof
 requirements. Both recorded depth-14 unit inputs and both originally
 planned split instances remain in scope; partial gates do not replace them.
+
+## Lossless raw archival
+
+After all processes exited, archive_raw.py verified every original raw
+SHA256, compressed the ledger and basis, decoded each archive to verify
+the same SHA256, then removed only the duplicate uncompressed copy.
+Receipts retain both the decoded and compressed identities. Raw .gz files
+remain local under runs/. This is lossless storage reduction, not a new
+certificate check or experiment completion. Future engines should stream
+compressed output to avoid the old uncompressed disk peak.
+
+The runner now refuses to overwrite any existing run directory. It captures
+source hashes before launching each child. runner-resource-guard.py.txt
+preserves the exact prior runner used for D6/D7/D8 and the depth10 probe;
+initial-runner.py.txt remains the source of the first gate suite.

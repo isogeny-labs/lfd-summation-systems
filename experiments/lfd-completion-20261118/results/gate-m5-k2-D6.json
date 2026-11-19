@@ -31,5 +31,20 @@
   "provenance_correction": {
     "previous_disk_snapshot_sha256": "144071850636e93f51ce781c53c8eaf70d5d87d0e0955cfa80c01a80a2c375b3",
     "reason": "The original gate process loaded its runner before the resource watchdog edit; post-run disk hashing saw the newer file. The executed source is preserved in initial-runner.py.txt."
-  }
+  },
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "7bec6c7bce8f8e59bf94a3382fd6f8d22256873e19336f9a843a755ce54a6ffa",
+      "archive_sha256": "9d135af17048c98ac383cda6c22400f72c1b476ea5c6b1fcba6776f1dac5d7ae",
+      "bytes": 1634373
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "b0a1d9d3f644f7a99fc80cd00fdfd18161c28552b6650c6e63840245bacd88c0",
+      "archive_sha256": "8ce338065461baefce9951d5296e6d7192ffdc682dbac0d18e54eb067a60963c",
+      "bytes": 9366352
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff"
 }

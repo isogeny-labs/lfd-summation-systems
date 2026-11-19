@@ -31,5 +31,20 @@
     "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
     "run.py": "8fe54ce66fe5fcd3a64f71b90b38d8cdfbe1d9c7d8237ce9fbce4625f4b43bd4"
   },
-  "runner_source_snapshot": "initial-runner.py.txt"
+  "runner_source_snapshot": "initial-runner.py.txt",
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "42855e2c78be0cd305676c54376aa036c7f30d77c7cabdb13d6cc9f748ca6c22",
+      "archive_sha256": "b4c07fc0e729c13fe8ff2477334536295c6ae045fd6bf2ae2e6ea3efd91622a1",
+      "bytes": 3439
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "c5805d7abac4d18253459101d850fc9f11acb1d65aabd0a3912f21e1bba56607",
+      "archive_sha256": "961af9e2fc296e744bb2837ce2bc1738b9e07f01ad680a42637e81ae63faf96c",
+      "bytes": 2675
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff"
 }

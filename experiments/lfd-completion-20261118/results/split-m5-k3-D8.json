@@ -1,0 +1,30 @@
+{
+  "status": "free-disk-floor",
+  "scope": "partial files retained; no complete closure claim",
+  "artifact_sha256": {
+    "input.txt": "de63da2d681b213b0d624f6969a4c40286c56665484992dc4e6665f75a267a70",
+    "derivations.txt": "76c279fc899d708b9bc17dde84f73357f716360432e7b47bbd40cd440ba0fb82",
+    "basis.txt": "45dac1ba4ad2139224a2ef4a350fbee1075c205ff9509a6fb004da0718e10671"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "144071850636e93f51ce781c53c8eaf70d5d87d0e0955cfa80c01a80a2c375b3"
+  },
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "76c279fc899d708b9bc17dde84f73357f716360432e7b47bbd40cd440ba0fb82",
+      "archive_sha256": "e5ef02afd17eabc629265f645b8b37fe541fb6fd60d01371eaf39afb7c38fe76",
+      "bytes": 6107685
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "45dac1ba4ad2139224a2ef4a350fbee1075c205ff9509a6fb004da0718e10671",
+      "archive_sha256": "1953c73980a8f1b9e64eadc326d115720782e409b7694617ec8f4622ac906ae3",
+      "bytes": 91295495
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff",
+  "runner_source_snapshot": "runner-resource-guard.py.txt"
+}

@@ -72,3 +72,12 @@ def test_rust_checker_refuses_corruption(tmp_path,rust_checker,corrupt):
         t=inp.read_text().split();t[4]='2';inp.write_text(' '.join(t)+'\n')
     r=subprocess.run([str(rust_checker),str(inp),str(ledger),str(basis)],capture_output=True,text=True)
     assert r.returncode!=0
+
+
+def test_runner_refuses_existing_artifact_directory(tmp_path,monkeypatch):
+    import run as runner
+    monkeypatch.setattr(runner,'HERE',tmp_path)
+    old=tmp_path/'runs'/'existing';old.mkdir(parents=True);(old/'result.json').write_text('preserve me')
+    with pytest.raises(FileExistsError,match='refusing to overwrite'):
+        runner.run_case('existing',17,2,2,0,3,[{0:1}])
+    assert (old/'result.json').read_text()=='preserve me'
