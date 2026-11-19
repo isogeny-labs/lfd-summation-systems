@@ -16,6 +16,8 @@ _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
 
+- [ ] Complete depth-14 input certificate, split degree-8 computation and depth-18 breakpoint, local-only (Codex, started 2026-11-18, branch research/lfd-completion-20261118)
+
 - [x] Reconcile and merge the open submission PRs (#27, #28, #30, #31); rebuild and verify the manuscript (opencode, started 2026-11-18, branch paper/finalize-submission-20261118, PR #32)
 - [x] Paper update: second-engine depth-14 closures, depth-15/16 values, k>=17 out-of-reach statement, cross-engine evidence (claude, started 2026-11-18, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #30)
 - [x] GPU path for split-presentation closures with m >= 4 summands: dense device engine built and gated on CPU; verdict: it does not beat the sparse CPU engine; no GPU run made (claude, started 2026-11-17, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #30)
