@@ -19,7 +19,7 @@ author must agree.
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (57 pages) |
+| Content | `../curve-lfd-bounds.pdf` (59 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -30,8 +30,8 @@ ORCID and ROR identifiers are optional.
 
 ## Source snapshot
 
-Regenerated on 18 November 2026 from the combined evidence snapshot of the
-manuscript merged in PR #32, which includes the merged manuscript and proof
+Regenerated on 19 November 2026 (revision below) on top of the combined
+evidence snapshot of the manuscript merged in PR #32, which includes the merged manuscript and proof
 work, the completed split-presentation records, the capped five-summand run,
 both second-implementation depth-14 lift records in PR #24, the full proof of
 the growth theorem (Appendix C), and the validation follow-ups of PR #31.
@@ -47,13 +47,26 @@ on the use of AI tools, and the second engine's degree-6 closure at k = 14 on
 the unit instance over p = 65537 (a corroboration from the `isogeny-labs/crypto`
 records at commit `98b7d87`, not a certificate; `../latest-update-20261118.md`).
 
+Revision of 19 November 2026 (abstract unchanged): the remaining results of
+the runs `paper-runs-20261118` from the `isogeny-labs/crypto` records at
+commit `12308b4`, each a corroboration and not a certificate: a third,
+separately written degree lift on the second engine's k = 14 spaces on
+both unit instances (1 in V_7, same dimensions as the recorded lifts; the
+p = 163841 lift from the records at commit `6fc6ccf`); the second
+engine's k = 14 closure on the unit instance over p = 163841; degree-6
+closures without 1 at k = 15 (p = 65537) and k = 16 (new unit instance over
+p = 786433), whose profiles follow the recursion predicted on 10 November;
+the prediction scoring, limitations and future directions updated
+accordingly (`../latest-update-20261119.md`).
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `4f3626e2f0473086498c565ac888c26cfdfc83ac28b3f2dede91d13317fbcd2e` |
-| `paper/curve-lfd-bounds.tex` | `68196eae4a02733f3eaf46632429c7a61d02adbd9465bb0088a0075e7bf6b351` |
+| `paper/curve-lfd-bounds.pdf` | `d0a446b77f66a796f2ec939cda98cddb9943dfd11d7dc6ce1561403027883546` |
+| `paper/curve-lfd-bounds.tex` | `988a501f22215650cb4d8e07f13d36a7b6c65a385b2da6cd8168ca16e3fddc69` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
-The PDF and figures were regenerated on 18 November 2026 with Tectonic 0.16.9 by
+The PDF and figures were regenerated on 19 November 2026 with Tectonic 0.17.0
+(conda-forge; bundle `tlextras-2022.0r0`) by
 `python3 scripts/build_ic_curve_paper.py`. The PDF producer is xdvipdfmx
 (0.1). This replaces the earlier, incorrect pdfTeX build attribution.
 The artifact hashes above identify the submitted files; no byte-for-byte
@@ -72,7 +85,7 @@ added later.
 - PDF builds without LaTeX warnings, unresolved references or overfull boxes.
 - A4, author email on page 1, PDF metadata title matches the manuscript.
 - Abstract agrees with the LaTeX source.
-- Form constraints checked on 15 November 2026 and again on the texts of 16 and 18 November: the abstract is ASCII (the earlier texts had one "ö", in
+- Form constraints checked on 15 November 2026 and again on the texts of 16, 18 and 19 November: the abstract is ASCII (the earlier texts had one "ö", in
   "Gröbner"), with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
   for at least 64 characters), and every keyword phrase is at most 40 characters.
 - Mathematical and reproducibility limits: see `../README.md` and

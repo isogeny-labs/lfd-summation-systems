@@ -33,7 +33,7 @@
 \setlength{\emergencystretch}{3em}
 \title{Last fall degrees of elliptic curve summation systems:\\ machine-checked bounds and exact values}
 \author{Adam Buran\\ \texttt{adam@isogenylabs.io}}
-\date{18 November 2026}
+\date{19 November 2026}
 \input{curve-sweep-data}
 \input{solving-degree-data}
 \begin{document}
@@ -153,7 +153,10 @@ draft are marked as such and are not claimed here (Remark~\ref{rem:binarydraft})
 \item \emph{A conjecture} (Section~\ref{sec:conjecture}):
  $\lfd(k)=\lfloor(k+14)/4\rfloor$ for generic two-summand prime chain
  systems; six predictions were recorded before the computations: three
- held in full, two agree with every value computed, one is untested.
+ held in full, two agree with every value computed, and of the sixth the
+ recursion of the degree-$6$ profile held at $k=15$ and $16$ in single
+ runs of one engine, not certified, while its closedness clauses are
+ untested.
 \item \emph{Empirical accounts}: the step at depth $6$, first observed in
  the degree of regularity~\cite[Table~4]{pkm}, is the crossover of a
  generic quadratic closure dimension with the quartic dimension of the
@@ -1277,14 +1280,15 @@ certificate, and beyond $k=12$ the system over $\F_{12289}$ is no longer a
 subgroup system ($2^{13}\nmid p-1$), so there the statement concerns the
 same polynomial system over an extension field.
 
-\subsection{Depths eleven to fourteen}\label{sec:depth14}
+\subsection{Depths eleven to sixteen}\label{sec:depth14}
 Two sets of closures extend the depth-ten measurement: closures of the
 reference engine at depths $11$ to $13$ over $p=12289$ and $p=40961$, and
 closures of the third engine (Appendix~\ref{app:engines}) at depths $10$ to
 $16$ over $p=65537$ and at depths $13$ and $14$ over $p=114689$ and
-$p=163841$. A closure engine of another repository adds a random curve at
-each of the depths $13$ (two targets) and $14$ over a fourth prime, without
-certificates.
+$p=163841$. A closure engine of another repository adds, without
+certificates, a random curve at each of the depths $13$ (two targets) and
+$14$ over a fourth prime, both unit instances at depth $14$, and
+degree-$6$ closures at depths $15$ and $16$.
 
 \paragraph{The reference engine.} It reproduces $\dim V_5=18{,}569$ on
 all three depth-ten instances. On two instances per depth, the curves
@@ -1529,17 +1533,143 @@ This run corroborates $1\notin V_6(14)$ and the dimension; it is not one of
 our certificates: the check has the form of the sweep of
 Section~\ref{sec:certs} but runs inside the engine, on its own arithmetic,
 our checker has not read the exported basis, the closure was run once,
-and the other repository records the result as unverified. It bears on
-the input assumption of the lift (Section~\ref{sec:limitations}). Our
-checker shows $W\supseteq V_6(14)$ with $\dim W=448{,}922$; so if the
-second engine's space lies in $V_6(14)$, that is, if this engine adds only
-the generator and admissible products, then $\dim V_6(14)\ge448{,}922$
-and $W=V_6(14)$. The input containment therefore holds if either of two
-separately written engines adds only admissible products; neither
-property is certified. The canonical basis hashes of the two engines
-have not been compared, and the second implementation of the lift has not
-finished on this basis, so the run does not settle $W=V_6(14)$ or the
-upper bound $\lfd\le7$.
+and the other repository records the result as unverified.
+
+% Lift on the second engine's basis (J1 lift) and run J2: isogeny-labs/crypto, branch
+% claude/lfd-ffd-paper-eprint-status-qq8fit, commit 12308b4877 (merge of wt/paper-engine b4aba21adf),
+% research/hky_paper_runs_20261118/: results/J1/lift/lift_ref.rust.json (fields dim_VD, dim_VD1, dim_low, falls,
+% falls_new_per_round, profile, input_checks, counts.madds_total, timing_s.total, maxrss_mb, binary_sha256,
+% input.file_sha256), lift_ref.verify.json (all_equal against experiments/ic-bounds-k14/runs/
+% lift-unit-p65537-k14-D6to7.json; the regular-top count is informational, a different notion), j1_tail.log;
+% lift tool tools/hky_lift (Rust, commits 7ca693ea52, ab6ba13436); results/J2/record.json, job.json,
+% basis.bin.json; pod/LAUNCH.md. [pcc:unverified] there.
+\paragraph{A third lift, on the second engine's space.}
+A separately written implementation of the degree lift in the other
+repository (\code{tools/\allowbreak{}hky\_lift}, in Rust, binary SHA-256
+\code{6824a8bd\ldots}; records at commit \code{12308b4}), which works in
+ordinary monomial coordinates without the swap split and shares no code
+with the two lifts of Appendix~\ref{app:checks}, was run on the basis
+exported by this run (SHA-256 \code{06fdd4e4\ldots}). It first checked
+that the $4$ generators lie in the space and that $84$ shifted random
+combinations of its rows stay in it. It reached its fixed point in four
+rounds ($551$, $9166$, $35{,}167$ and $5372$ new falls), with
+$\dim F=50{,}256$ falls in all (every free column, as in the first lift),
+$\dim(V_7\cap M_{\le6})=499{,}178$ and
+$\dim V_7=1{,}683{,}218=|M_{\le7}|$, so $1\in V_7(14)$; these values and
+the profile $\dim(V_7\cap M_{\le j})$, $j\le7$, equal the record of the
+first lift field by field. It took $5.6\cdot10^{14}$ multiply-adds and
+about $3.7$~h ($13{,}374$~s) on $32$ virtual CPUs, with a recorded peak
+resident set of $234{,}285$~MB. With the closure above, this is a second,
+separately written implementation of both halves of $\lfd(14)=7$ on the
+unit instance over $p=65537$: the exclusion $1\notin V_6(14)$ by another
+engine, and the inclusion $1\in V_7(14)$ by another lift of that engine's
+space. Each half is a corroboration, not a certificate. The closure is
+qualified as above; the lift was run once, ends without a sweep in
+$M_{\le7}$ and without a basis of $V_7$, rests on the same written theorem
+as the other two lifts, and lifts the second engine's space $S$, so it needs
+$S\subseteq V_6(14)$.
+
+This bears on the input assumption of the lift
+(Section~\ref{sec:limitations}). Our checker shows $W\supseteq V_6(14)$
+with $\dim W=448{,}922=\dim S$. If the second engine adds only the
+generator and admissible products, then $S\subseteq V_6(14)\subseteq W$,
+hence $S=V_6(14)=W$, and every lift above starts from $V_6(14)$; if the
+third engine does, then $W=V_6(14)$ and the first two lifts do. The upper
+bound $\lfd\le7$ on this instance therefore holds, given the lift theorem,
+if either of two separately written engines adds only admissible
+products; neither property is certified. The canonical basis hashes of
+$S$ and $W$ have not been compared, so the runs do not settle
+$W=V_6(14)$ or give the upper bound a certificate.
+
+\paragraph{The second engine on the unit instance over $p=163841$.}
+The same binary computed the degree-$6$ closure at $k=14$ on the other
+unit instance, $y^2=x^3+3x$ over $p=163841$ with target $(73730,28291)$,
+also read from our instance file and checked against our generator. In
+$499{,}178$ columns it ends without $1$, with dimension $448{,}922$,
+profile $(0,0,2,154,4451,73587,448922)$ and part ranks
+$224{,}688+224{,}234$ in parts of $249{,}824$ and $249{,}354$ columns: the
+values of the third engine. Its closedness check reduced $4{,}120{,}873$
+products, all to zero. The run took $49{,}797$~s on $32$ shared virtual
+CPUs of a loaded host, with a peak resident set of $73{,}998{,}080$~KiB
+(about $71$~GiB), and exported its basis (SHA-256 \code{3d1f2996\ldots}).
+The qualifications of the run over $p=65537$ apply unchanged (one run,
+engine-internal check, our checker has not read the basis, recorded as
+unverified), and so does the conditional containment of the previous
+paragraph, with this run's space in place of $S$.
+% J2 lift: isogeny-labs/crypto, branch claude/lfd-ffd-paper-eprint-status-qq8fit (PR #4735), commit 6fc6ccf847
+% (merge of wt/paper-engine 752424ef08), research/hky_paper_runs_20261118/results/J2/lift/: lift_ref.rust.json
+% (dim_VD, dim_VD1, dim_low, falls, falls_new_per_round, rounds, profile, input_checks, counts.madds_total,
+% timing_s.total = 21,198.5 s, maxrss_mb = 234,298.7, threads = 32, binary_sha256 6824a8bd...,
+% input.file_sha256 3d1f2996...), lift_ref.verify.json (all_equal against
+% experiments/ic-bounds-k14/runs/lift-unit-p163841-k14-D6to7.json; regular-top count 1,166,824 against
+% 1,173,002 is informational, a different notion), lift_ref.stdout, lift_ref.inputs.sha256. [pcc:unverified] there.
+The same lift program was then run on this basis. It checked that the $4$
+generators lie in the space and that $84$ shifted random combinations of
+its rows stay in it, and reached its fixed point in four rounds ($551$,
+$9166$, $35{,}167$ and $5372$ new falls), with $\dim F=50{,}256$,
+$\dim(V_7\cap M_{\le6})=499{,}178$ and
+$\dim V_7=1{,}683{,}218=|M_{\le7}|$, so $1\in V_7(14)$; these values and
+the profile equal the record of the first lift on this instance field by
+field. It took $5.6\cdot10^{14}$ multiply-adds and about $5.9$~h
+($21{,}199$~s) on $32$ virtual CPUs, with a recorded peak resident set of
+$234{,}299$~MB (records at commit \code{6fc6ccf}). The second, separately
+written implementation of both halves of $\lfd(14)=7$ thus holds on both
+unit instances, with the qualifications stated above for $p=65537$: each
+half is a corroboration, not a certificate, the lift was run once, and the
+canonical basis hashes of this space and $W$ have not been compared.
+
+% Runs J3 (k = 15) and J4s (k = 16): isogeny-labs/crypto commit 12308b4877, research/hky_paper_runs_20261118/:
+% results/J3/record.json, job.json, basis.bin.json (basis sha256 5da602a8..., not kept on disk);
+% results/J4s/record.json, job.json (no basis export, no closedness check); instance
+% instances/unit-p786433-a1-s10-k16.json (sha256 341d79d8...; unit-ness checks in README.md section 6 and
+% gate/unitness_786433*.log); pod/LAUNCH.md. J3 binary 39acdeac..., J4s binary 36a047ff... (commit 43d5c40d1f,
+% flags --hky3-skip on --hky3-skip-witness leads); skip criterion: research/hky_engine_skip_20261118/PROOF.md and
+% README.md (gate: 110 reference cells equal, paper gate 11/11; seeded fault 7 not detected). J4s wall
+% 10,238 s against a prediction of 230,000 s (band 100,000-950,000 s) written before the run (PREDICTIONS.md):
+% below the band, not explained there. Lift memory at k = 15 (about 540 GB) and k = 16 (about 1.2 TB):
+% estimates of the other repository. [pcc:unverified] there.
+\paragraph{Degree six at depths fifteen and sixteen (one engine, not certified).}
+The second engine also computed degree-$6$ closures beyond depth $14$.
+At $k=15$, on the unit instance over $p=65537$ (a unit ideal by
+Lemma~\ref{lem:unit}), the closure in $|M_{\le6}|=768{,}212$ columns ends
+without $1$, with dimension $600{,}547$, profile
+$(0,0,2,158,4761,82643,600547)$ and part ranks $300{,}535+300{,}012$; its
+closedness check reduced $4{,}958{,}581$ products, all to zero, and the
+peak resident set was $79{,}614{,}980$~KiB (about $76$~GiB); after two
+host restarts the run was resumed from checkpoints. The exclusion
+$1\notin V_6(15)$ adds no lower bound: it already follows from the
+certified $1\notin V_6(14)$ by Theorem~\ref{thm:restrict}.
+
+At $k=16$ the prime $65537$ has no primitive $2^{17}$-th root of unity, so
+Lemma~\ref{lem:unit} does not apply, and the run used a new instance:
+$p=786433=3\cdot2^{18}+1$, the smallest prime with $2^{17}\mid p-1$,
+$y^2=x^3+x$ and target $(485051,497175)$, drawn by our instance recipe
+with seed $10$. The abscissa is a non-residue and the ordinate is nonzero,
+so the ideal is the unit ideal for $k\le17$ by Lemma~\ref{lem:unit}; the
+other repository also enumerated no scalar solution at $k=16$. In
+$|M_{\le6}|=1{,}149{,}017$ columns the closure ends without $1$, with
+dimension $770{,}594$, profile $(0,0,2,162,5079,92323,770594)$ and part
+ranks $385{,}594+385{,}000$, in $10{,}238$~s on $32$ virtual CPUs with a
+peak resident set of $51{,}529{,}076$~KiB (about $49$~GiB). This run is
+weaker than the others: it omits products by a criterion that is proved,
+in a written proof of the other repository, to leave the final span
+unchanged, and that passes a gate of $110$ reference closures (one of its
+seeded faults was not detected), and it ran without a closedness check.
+Since the prime differs, Theorem~\ref{thm:restrict} does not carry the
+certified exclusion at $k=14$ to this instance: $1\notin V_6(16)$ is a
+single-engine reading, and with the unit ideal it would give $\lfd\ge7$ on
+this instance, without a certificate.
+
+Neither run reaches degree $7$. The other repository estimates that the
+degree lift needs about $540$~GB of memory at $k=15$ and about $1.2$~TB at
+$k=16$, beyond the hosts used, so $\lfd\le7$ at these depths is open. Both
+profiles equal, entry by entry, the recursion
+$p_j(k+1)=p_j(k)+2p_{j-1}(k)+p_{j-2}(k)$ of Section~\ref{sec:recursion}
+applied once and twice to the certified profile of $V_6(14)$, for instance
+$448{,}922+2\cdot73{,}587+4451=600{,}547$ and
+$600{,}547+2\cdot82{,}643+4761=770{,}594$; the recursion for $V_6$ from
+$k=14$ was recorded as a prediction before these runs
+(Section~\ref{sec:conjecture}).
 
 \subsection{The recursion of the degree-five closures}\label{sec:recursion}
 Write $p_j(k)=\dim(V_5(k)\cap M_{\le j})$. On the random curve over
@@ -1577,7 +1707,11 @@ $V_5(k)\subseteq W_k(V_5(11))$, the construction of the theorem with $D=5$
 and base depth $11$, for every $k\ge12$ on those instances, as polynomial
 systems; over $p=12289$ they are subgroup systems only for $k\le12$. So the
 free-extension structure of $V_5$ starts at depth $11$ as a base, and the
-recursion of dimensions starts one depth earlier.
+recursion of dimensions starts one depth earlier. For $D=6$ the profiles
+of the second engine at $k=15$ and $16$ (Section~\ref{sec:depth14}; single
+runs, not certified) satisfy the same recursion from the certified profile
+at $k=14$; whether the free extension of $V_6$ is closed at those depths
+was not computed.
 
 % Figure closures: (a) dim V_4 from experiments/ic-depth-step/growth.json (p = 12289, y^2 = x^3 + x, |Z| = 0, k = 3..10);
 % dim V_5 at k = 6, 8, 9 from experiments/ic-bounds-d5/runs/k6-p12289-s10-D5-split.json, k8-...-full.json,
@@ -1927,9 +2061,9 @@ Table~\ref{tab:profile} collects the two-summand prime chain profile.
 
 \begin{table}[tp]
 \centering
-\small
+\footnotesize
 \newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
-\setlength{\tabcolsep}{3pt}\begin{tabular}{@{}lR{3.1cm}rR{2.0cm}R{5.6cm}l@{}}
+\setlength{\tabcolsep}{3pt}\begin{tabular}{@{}lR{3.0cm}rR{2.0cm}R{6.2cm}l@{}}
 \toprule
 $k$ & LFD (exact unless marked) & $\dim V_5$ & $V_6$ & evidence & PKM\\
 \midrule
@@ -1941,8 +2075,9 @@ $10$ & $6$ ($\ge6$ on two more instances) & $18{,}569$ & full & unit instances o
 $11$ & $6$ & $25{,}033$ & full & unit instance, $p=65537$ (third engine); $\ge6$ on two instances, $p=12289$ & $6$\\
 $12$ & $6$ & $32{,}057$ & full & as $k=11$ & ---\\
 $13$ & $6$ & $39{,}657$ & full & unit instance, $p=65537$; $\ge6$ on two instances, $p=40961$; random curve, $p=65537$: $V_6=I\cap M_{\le6}$; second engine, two targets, $p=2013265921$: same values (one run each) & ---\\
-$14$ & $7$ ($\ge7$ certified; $\le7$ lifted, no certificate) & $47{,}849$ & closed, $1\notin V_6$ & unit instances, $p=65537$ and $163841$, random curves, $p=65537$ and $114689$: $\dim V_6=448{,}922$; independent checker on three; lift on three: $V_7$ is the degree-$7$ part of the ideal; second engine, random curve, $p=2013265921$: same $\dim V_6$ and profile (one run, no sweep); its later version, unit instance, $p=65537$: same $\dim V_6$, profile and part ranks (one run, engine-internal closedness check, not certified) & ---\\
-$15$ & $\ge7$ & $56{,}649$ & $1\notin V_6$ & unit instance, $p=65537$; Theorem~\ref{thm:restrict} & ---\\
+$14$ & $7$ ($\ge7$ certified; $\le7$ lifted, no certificate) & $47{,}849$ & closed, $1\notin V_6$ & unit instances, $p=65537$ and $163841$, random curves, $p=65537$ and $114689$: $\dim V_6=448{,}922$; independent checker on three; lift on three: $V_7$ is the degree-$7$ part of the ideal; second engine, random curve, $p=2013265921$: same $\dim V_6$ and profile (one run, no sweep); its later version, both unit instances: same $\dim V_6$, profile and part ranks (one run each, engine-internal closedness check); a third lift of its space, both unit instances: $1\in V_7$ (one run each); not certified & ---\\
+$15$ & $\ge7$ ($\le7$ open) & $56{,}649$ & $1\notin V_6$; $\dim 600{,}547$ & unit instance, $p=65537$; Theorem~\ref{thm:restrict}; $\dim V_6$: second engine, one run, internal closedness check, not certified & ---\\
+$16$ & $\ge7$ (one engine, not certified) & $66{,}073$ & $1\notin V_6$; $\dim 770{,}594$ & unit instance, $p=786433$: second engine, one run, no closedness check, not certified; $\dim V_5$: random curve, $p=65537$ & ---\\
 every $k\ge2$ & $\ge4$ if $3t^2+a\ne0$, unit ideal & & & Lean (Theorem~\ref{thm:three}) & ---\\
 every $k\ge2$ & $\le2k+1$ & & & Lean (Corollary~\ref{cor:m2}) & ---\\
 \bottomrule
@@ -1953,10 +2088,13 @@ computed instances (Section~\ref{sec:computations}); the upper bound in row
 $14$ is lifted (the degree lift, which has a written proof and no
 certificate), so the value $7$ is not exact in the sense of our labels; the
 last two rows are kernel-checked for every instance. The second-engine
-entries in rows $13$ and $14$ concern other instances, except the run on the
-unit instance over $p=65537$ in row $14$; all are corroborations, not
-certificates (Section~\ref{sec:depth14}). The columns $\dim V_5$ and $V_6$ give the
-closures of the unit instance over $p=65537$ for $k\ge10$; ``full'' means
+entries in rows $13$ and $14$ concern other instances, except the runs on the
+two unit instances in row $14$; these entries and those of rows $15$ and
+$16$ are corroborations, not certificates (Section~\ref{sec:depth14}). The columns $\dim V_5$ and $V_6$ give the
+closures of the unit instance over $p=65537$ for $10\le k\le15$ (at
+$k=15$ the dimension of $V_6$ is the second engine's); at $k=16$ they give
+$V_5$ on the random curve over $p=65537$ and $V_6$ on the unit instance
+over $p=786433$, both from single runs; ``full'' means
 $V_6=M_{\le6}\ni1$, so that the unit ideal is derived at degree $6$;
 dashes: not needed, since the value is decided at degree $4$ or $5$. The
 last column is the averaged corrected degree of regularity of Petit,
@@ -2009,8 +2147,17 @@ ideals. The same statements hold at the depths computed on the unit
 instance over $p=163841$. Two were tested only in part and agree with
 every value computed: the closed form for $\dim V_5(k)$ (through $k=16$)
 and the table of values of the law (through $k=14$, where the upper bound
-$7$ was later obtained by the lift). The sixth, that the recursion holds for
-$V_6$ from $k=14$, is untested.
+$7$ was later obtained by the lift; at $k=15$ and $16$ only the lower
+bound $7$ is known). The sixth (\code{d6-base-15}) states that the free
+extension of $V_6(14)$ to depth $15$ is not closed, that the free extension
+of $V_6(15)$ to depth $16$ is closed and equals $V_6(16)$, and that the
+recursion holds for $V_6$ from $k=14$. Its recursion clause held on the
+instances computed: the profiles of $V_6(15)$ on the unit instance over
+$p=65537$ and of $V_6(16)$ on the unit instance over $p=786433$ equal, entry
+by entry, the recursion applied to the certified profile of $V_6(14)$
+(Section~\ref{sec:depth14}). These are single runs of one engine, the
+second without a closedness check, and not certified. Its two closedness
+clauses are untested.
 That the predictions preceded the runs
 rests on the dates recorded in the files. What remains untested is listed in
 Section~\ref{sec:limitations}.
@@ -2670,10 +2817,13 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  closed degree-$6$ closures of four instances from one engine (on each unit
  instance two runs with equal basis hashes and an independent check of the
  stored basis; on the random curve over $p=114689$ one run with that check;
- on the random curve over $p=65537$ one run). The upper bound $\lfd\le7$ is
+ on the random curve over $p=65537$ one run), corroborated without
+ certificates on both unit instances by a second engine. The upper bound $\lfd\le7$ is
  the degree lift, run once on each of three instances, without a final sweep
- in $M_{\le7}$ or a basis of $V_7$, and repeated on both unit instances over
- $p=65537$ and $p=163841$ by a second implementation that agrees with it; the value $7$
+ in $M_{\le7}$ or a basis of $V_7$, repeated on both unit instances over
+ $p=65537$ and $p=163841$ by a second implementation that agrees with it,
+ and on both unit instances by a third implementation, which
+ lifts the second engine's space and agrees field by field; the value $7$
  therefore has no
  independent certificate and rests on the written proof of the lift, the
  assertions of the runs, the agreement of the two implementations, the
@@ -2685,22 +2835,22 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  $W\subseteq V_6$, which the check does not show: it holds if the
  degree-$6$ engine added only the generator and admissible products. A
  later version of the second engine has computed the degree-$6$ closure of
- the unit instance over $p=65537$ at $k=14$, once, with the same
- dimension, profile and part ranks and an engine-internal closedness check
- (Section~\ref{sec:depth14}). On that instance $W\supseteq V_6$ and $\dim W$
+ both unit instances at $k=14$, once each, with the same dimension,
+ profile and part ranks and an engine-internal closedness check
+ (Section~\ref{sec:depth14}). On each instance $W\supseteq V_6$ and $\dim W$
  equals that dimension, so $W\subseteq V_6$ also follows if that engine added
- only admissible products; the containment thus rests on either of two
+ only admissible products, and then the second engine's space is $V_6$
+ as well; the containment thus rests on either of two
  separately written engines, and neither is certified to have this
- property. The canonical basis hashes have not been compared, the second
- lift on that engine's basis is not available, and on the unit instance
- over $p=163841$ no second engine has computed the closure at $k=14$; an
- earlier version computed it on another instance, over $p=2013265921$,
- with the same dimension and profile, which says nothing about $W$.
- The second
+ property. The canonical basis hashes of the two engines' spaces have not
+ been compared. The second
  implementation of the lift starts from a stored basis of the same engine
- (recomputed, with equal hashes), so it tests the lift and leaves this
- dependence in place; the two implementations also rest on one written
- theorem.
+ as the first (recomputed, with equal hashes), so it tests the lift and
+ leaves this dependence in place. The third implementation lifts the
+ second engine's space instead, so on both unit instances the
+ upper bound has been computed along two chains of separately written
+ programs, each needing its own engine to add only admissible products.
+ All three implementations rest on one written theorem.
 \item \emph{Second engines.} For $D=6$ the reference engine confirms the
  full closure at $k=10$ and $11$ only. The $k=14$ degree-$6$ bases were kept
  for the checker and the lift but not archived; the hashes and the
@@ -2714,15 +2864,23 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  $k=13$ and $14$ on other instances, in single runs without a closedness
  sweep, and a later version of that engine, with an engine-internal
  closedness check, reproduces the degree-$6$ dimension, profile and part
- ranks at $k=14$ on the unit instance over $p=65537$ in one run, after
- reproducing $11$ recorded closures of this paper
+ ranks at $k=14$ on both unit instances in one run each, after
+ reproducing $11$ recorded closures of this paper; a separately written
+ lift of its space reproduces the recorded lift on both unit instances
  (Section~\ref{sec:depth14}); these are corroborations, not certificates. The binary and Koblitz replication at
  $k\ge11$ uses the same engine.
-\item \emph{Depth.} Beyond $k=14$ only degree-$5$ closures were computed
- ($k=15$ on two instances, $k=16$ on one), so no exact value is known
- beyond $14$ and $V_6$, $V_7$ are known there only through
- Theorem~\ref{thm:restrict}. The recursion of Section~\ref{sec:recursion}
- is untested beyond $k=16$.
+\item \emph{Depth.} Beyond $k=14$ our engines computed only degree-$5$
+ closures ($k=15$ on two instances, $k=16$ on one). The second engine
+ computed degree-$6$ closures without $1$ at $k=15$ on the unit instance
+ over $p=65537$ and at $k=16$ on a unit instance over $p=786433$, in single
+ runs without certificates, the second without a closedness check
+ (Section~\ref{sec:depth14}). No degree-$7$ closure or lift was computed
+ beyond $k=14$ (the lift is estimated to need about $540$~GB of memory at
+ $k=15$ and $1.2$~TB at $k=16$), so no exact value is known beyond $14$:
+ at $k=15$ the lower bound $7$ is certified through
+ Theorem~\ref{thm:restrict}, at $k=16$ it rests on the single run, and
+ the upper bound $7$ is open at both. The recursion of
+ Section~\ref{sec:recursion} is untested beyond $k=16$.
  No closure was attempted at $k\ge17$, and these depths, including
  $k=18$, the first depth at which Conjecture~\ref{conj:law} predicts the
  value $8$, are beyond the closure methods used here.
@@ -2731,7 +2889,8 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  columns at $k=15$, $16$, $17$, $18$ and $20$, against $499{,}178$ at
  $k=14$, where one closure took $28{,}747$~s and about $22$~GiB on $32$
  virtual CPUs with the second engine, and its later version took
- $26{,}723$~s and about $70$~GiB including its closedness check
+ $26{,}723$~s and about $70$~GiB including its closedness check, and about
+ $76$~GiB at $k=15$ with the check and $49$~GiB at $k=16$ without it
  (Section~\ref{sec:depth14}); at
  $k=18$ the degree-$7$ space has $|M_{\le7}|=10{,}739{,}176$ columns.
  Deciding $\lfd(18)=8$ on a unit instance needs $1\notin V_7(18)$, from a
@@ -2742,16 +2901,21 @@ records & unit & count & computed & max $\gbdeg$ & $\sd>\lfd$\\
  that system's ideal is the unit ideal. The matching upper bound needs
  $1\in V_8(18)$, with $|M_{\le8}|=40{,}999{,}516$.
 \item \emph{The conjecture.} The law was fitted to the exact values at
- $k\le13$; every depth beyond $14$ (including the prediction that the
- free-extension structure of $V_6$ has base depth $15$, with the recursion of
- dimensions from $k=14$) is untested; at $k=14$ the lift was repeated by a
- second implementation on both unit instances, and a direct closure in $M_{\le7}$
+ $k\le13$. Beyond $14$ no value of the law is known, only the lower
+ bound $7$, certified at $k=15$ and from one engine at $k=16$. Of the prediction that the free-extension
+ structure of $V_6$ has base depth $15$, with the recursion of dimensions
+ from $k=14$, the recursion held at $k=15$ and $16$ on one instance each,
+ in single runs of one engine that are not certified (the run at $k=16$
+ without a closedness check); the closedness of the free extensions is
+ untested. At $k=14$ the lift was repeated by a
+ second implementation on both unit instances and by a third on the
+ second engine's space on both unit instances, and a direct closure in $M_{\le7}$
  was not computed. Uniformity over curves, primes and targets
  rests at degree $6$ (depths $13$ and $14$) on two unit instances with
  $j=1728$ and two random curves over three primes, and at degree $7$ on
  three of these instances; a second engine adds, without certificates, one
  random curve over a fourth prime at each of the two depths and, at
- $k=14$, the unit instance over $p=65537$ (Section~\ref{sec:depth14}).
+ $k=14$, both unit instances (Section~\ref{sec:depth14}).
 \item \emph{The growth theorem} is a written proof, conditional in Lean on
  the curve-model hypothesis (scope in Section~\ref{sec:growth}).
  In characteristic $0$ its analytic input is a published
@@ -2864,13 +3028,17 @@ below, followed by computations that could test the proposed explanations.
  the finite exceptional-prime values in Table~\ref{tab:fermatlfd} do not
  settle that lower bound.
 \item \emph{Larger computations.} The value at $k=14$ by a direct closure in
- $M_{\le7}$, beyond the engines used here, or by a lift from a degree-$6$
- closure of a second engine on the same instance; a certified degree-$8$
+ $M_{\le7}$, beyond the engines used here, or a certificate for the
+ input containment of the lift, for instance by comparing the canonical
+ basis hashes of the two engines' degree-$6$ spaces (a lift of the second
+ engine's space over $p=65537$ agrees, without a certificate); a certified degree-$8$
  closure of the split presentation at $m=5$, $k=3$ (a single-engine
- reading gives $8$); degree-$6$ and degree-$7$ closures at $k\ge15$; second
- engines for $D=6$ at $k\ge12$ on the instances of this paper (one has
- reached $k=14$ on another instance and, without a certificate, on the
- unit instance over $p=65537$); three-summand closures on further instances
+ reading gives $8$); certified degree-$6$ closures at $k\ge15$ (one
+ engine has given uncertified ones at $k=15$ and $16$) and the
+ degree-$7$ step there, which decides $\lfd=7$ at $k=15$ and $16$; a second
+ engine for $D=6$ at $k=13$ on the instances of this paper (one has
+ reproduced $k=10$, $11$, $12$ and reached $k=14$ on another instance and, without a certificate, on
+ both unit instances); three-summand closures on further instances
  at $k=6$ and at $k\ge7$; larger cells with four and five summands.
 \item \emph{Towards cost.} The LFD controls solving only together with the
  number of solutions~\cite[Prop.~2.8]{hkyy}; a cost statement would also
@@ -3734,7 +3902,9 @@ Third engine, depths $10$--$16$; lift & \code{experiments/\allowbreak{}ic-bounds
 Second lift at $k=14$ & \code{experiments/\allowbreak{}ic-bounds-k14-independent/} (\code{PLAN.md}, \code{RESULT-unit-p65537.md}, \code{RESULT-unit-p163841.md}, \code{pod/}, \code{pod-p163841/})\\
 Second engine at $k=13,14$ over $p=2013265921$; later split readings (other repository) & \code{isogeny-labs/crypto} at commit \code{89a2a70}: \code{research/\allowbreak{}hky\_pod\_runs\_20261117/} (\code{RESULTS.md}, \code{LAUNCH.md}; \code{results/t13\_hky2.jsonl}, \code{t14\_hky2.jsonl}, \code{t14\_progress.jsonl}, \code{t14\_rss.log}, \code{prog\_m6-T2.jsonl}, \code{b\_m7-T2.jsonl}, \code{b\_m8-T2.jsonl}, \code{prog\_m9-T2-cols12M.jsonl}); engine \code{research/\allowbreak{}hky\_engine\_speed\_20261117/README.md}, \code{src/cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast.rs}, generator \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}\\
 Second engine, later version, at $k=14$ on the unit instance over $p=65537$ (other repository) & \code{isogeny-labs/crypto} at commit \code{98b7d87}: \code{research/\allowbreak{}hky\_paper\_runs\_20261118/} (\code{README.md}, \code{pod/LAUNCH.md}; \code{results/J1/record.json}, \code{job.json}, \code{basis.bin.json}); engine \code{src/cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast2.rs}, \code{research/\allowbreak{}hky\_engine\_opt\_20261118/README.md}; generator \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}\\
-Free extension, predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/} (\code{records/}; \code{predictions-2026-11-10.json}, ids \code{d5-14}, \code{d6-full-through-13}, \code{d6-falls-at-14}; \code{outcomes-2026-11-10.json})\\
+Third lift at $k=14$ over $p=65537$; second engine at $k=14$ over $p=163841$, at $k=15$ and at $k=16$ over $p=786433$ (other repository) & \code{isogeny-labs/crypto} at commit \code{12308b4}, \code{research/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J1/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}); \code{results/J2/}, \code{results/J3/}, \code{results/J4s/} (\code{record.json}, \code{job.json}); \code{instances/\allowbreak{}unit-p786433-a1-s10-k16.json}; \code{PREDICTIONS.md}, \code{pod/LAUNCH.md}; lift \code{tools/hky\_lift/}; skip criterion \code{research/\allowbreak{}hky\_engine\_skip\_20261118/} (\code{PROOF.md}, \code{README.md})\\
+Third lift at $k=14$ over $p=163841$ (other repository) & \code{isogeny-labs/crypto} at commit \code{6fc6ccf}, \code{research/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J2/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}, \code{lift\_ref.stdout}, \code{lift\_ref.inputs.sha256}); \code{pod/LAUNCH.md}\\
+Free extension, predictions & \code{experiments/\allowbreak{}ic-bounds-freeext/} (\code{records/}; \code{predictions-2026-11-10.json}, ids \code{d5-14}, \code{d5-closed-form}, \code{d6-full-through-13}, \code{d6-falls-at-14}, \code{d6-base-15}, \code{lfd-table}; \code{outcomes-2026-11-10.json})\\
 Three summands & \code{experiments/\allowbreak{}ic-bounds-m3/}, \code{experiments/\allowbreak{}ic-bounds-m3-depth/} (\code{closures.jsonl}, record \code{p7681-r}); Table~\ref{tab:splitm}: \code{experiments/\allowbreak{}ic-bounds-split-m/}, \code{experiments/\allowbreak{}crossrepo-pkm-stage-b/}\\
 Three to eight summands (generator degrees, Table~\ref{tab:msum}) & \code{experiments/\allowbreak{}ic-bounds-msum/}\\
 Four and five summands (exact closures) & \code{experiments/\allowbreak{}ic-bounds-msummands/}\\

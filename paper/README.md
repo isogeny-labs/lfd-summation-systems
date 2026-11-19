@@ -1,6 +1,6 @@
 # Main manuscript: ePrint preparation
 
-**Status, 18 November 2026:** ready for submission; what remains is the
+**Status, 19 November 2026:** ready for submission; what remains is the
 author's own confirmation of the ePrint form (license, publication
 information, authorship) and the submission itself, which only an author can
 make. The cleanup of
@@ -10,7 +10,13 @@ must confirm its wording before submission) and removed wording about
 earlier drafts. The revision of 18 November shortened the abstract further,
 added a significance paragraph in the introduction, and added the
 second-engine corroboration at depth 14 on the unit instance over p = 65537
-([update note](latest-update-20261118.md)). It
+([update note](latest-update-20261118.md)). The revision of 19 November
+(abstract unchanged) adds the remaining corroborations of those runs: a
+third, separately written lift of the second engine's depth-14 spaces on
+both unit instances (1 in V_7), its depth-14 closure over p = 163841, and degree-6 closures
+without 1 at depths 15 and 16 whose profiles follow the recursion predicted
+on 10 November; none is a certificate, and LFD <= 7 at depths 15 and 16 is
+open ([update note](latest-update-20261119.md)). It
 combines the rational prime-field growth results, the solving-degree section
 and the kernel-checked function field and pole orders for targets that are
 not of order two (Proposition "Function field and pole orders"). No ePrint
@@ -43,7 +49,8 @@ closure; the independent closed-space check proves the reverse inclusion.
 There is no independent certificate for that input containment; since 18 November
 it also follows if the later version of the second engine, whose degree-6 closure of
 the unit instance over p = 65537 has the same dimension (one run, not certified),
-adds only admissible products. Binary replications
+adds only admissible products. Since 19 November a third, separately written lift of
+that engine's space over p = 65537 also gives 1 in V_7 (one run, not certified). Binary replications
 use the same engine. These qualifications are part of the paper's claims.
 The manuscript makes no discrete-logarithm cost claim.
 
