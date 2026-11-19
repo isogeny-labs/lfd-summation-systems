@@ -15,7 +15,7 @@ PR, not in this file.
 _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
-- [ ] Paper: second engine at depth 14 on both unit instances (closures + lifts), V_6 at depth 15 and 16 against the frozen recursion (Claude, started 2026-11-19, branch claude/lfd-ffd-paper-eprint-status-qq8fit)
+- [x] Paper: second engine at depth 14 on both unit instances (closures + lifts), V_6 at depth 15 and 16 against the frozen recursion (Claude, started 2026-11-19, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #34)
 
 - [x] Reconcile and merge the open submission PRs (#27, #28, #30, #31); rebuild and verify the manuscript (opencode, started 2026-11-18, branch paper/finalize-submission-20261118, PR #32)
 - [x] Paper update: second-engine depth-14 closures, depth-15/16 values, k>=17 out-of-reach statement, cross-engine evidence (claude, started 2026-11-18, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #30)
