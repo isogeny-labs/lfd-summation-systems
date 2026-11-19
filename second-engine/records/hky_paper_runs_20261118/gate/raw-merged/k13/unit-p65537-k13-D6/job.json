@@ -1,0 +1,18 @@
+{
+ "schema": "hky_paper_runs.pod_job/v1",
+ "job": "unit-p65537-k13-D6",
+ "status": "censored_memory_guard_soft",
+ "rc": 101,
+ "instance": "/home/user/lfd-summation-systems/experiments/ic-bounds-k14/instances/unit-p65537-a1-s10-k13.json",
+ "instance_sha256": "caf4232d7db7f787fbf938284c0837e585533b2fde39a63deb3a46c0c1832631",
+ "D": 6,
+ "binary_sha256": "0dfbffadf7bf4c18762cc53b2aac28f51e3e6de7bfb183bbd34511d011903c08",
+ "wall_s_this_attempt": 2314,
+ "peak_rss_kb_this_attempt": 13097980,
+ "memory_limit_kb": 14500000,
+ "guard": "memory_guard_soft",
+ "basis_sha256": "",
+ "host": {"cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz", "nproc": 4, "mem_total_kb": 16473760, "cgroup_max": "9223372036854771712", "kernel": "6.18.44-fc-v595", "simd": "avx2 avx512f "},
+ "checkpoint_meta": null,
+ "engine_record": "record.json"
+}

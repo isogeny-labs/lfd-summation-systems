@@ -1,0 +1,85 @@
+hky3 c=2 sym=split parts=[3, 1] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=3 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=3 peak_words=3
+hky3 c=3 sym=split parts=[3, 1] rank=[3, 1] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=3 rounds=3 irs=0 muladds=21 ir_muladds=0 products=5 zero=1 reducers=3 dense=4 sparse=0 words=7 peak_words=7
+kummer   m=2 tower  t= 1 hky d_F=Some(3) ffd=Some(3) falls=[3] censored_at=None 1 ms
+kummer   m=2 tower  t= 1 N= 2 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      0.7 ms
+hky3 c=2 sym=split parts=[3, 1] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=3 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=3 peak_words=3
+hky3 c=3 sym=split parts=[3, 1] rank=[3, 1] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=3 rounds=3 irs=0 muladds=21 ir_muladds=0 products=5 zero=1 reducers=3 dense=4 sparse=0 words=7 peak_words=7
+kummer   m=2 tower  t= 1 hky d_F=Some(3) ffd=Some(3) falls=[3] censored_at=None 0 ms
+kummer   m=2 tower  t= 1 N= 2 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      0.3 ms
+hky3 c=2 sym=split parts=[7, 4] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=6 peak_words=6
+hky3 c=3 sym=split parts=[9, 6] rank=[3, 2] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=100 ir_muladds=0 products=5 zero=0 reducers=2 dense=5 sparse=0 words=34 peak_words=34
+hky3 c=4 sym=split parts=[10, 6] rank=[10, 6] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=5 rounds=9 irs=0 muladds=667 ir_muladds=0 products=23 zero=2 reducers=59 dense=16 sparse=0 words=76 peak_words=76
+kummer   m=2 tower  t= 2 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 1 ms
+kummer   m=2 tower  t= 2 N= 4 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      1.2 ms
+hky3 c=2 sym=split parts=[7, 4] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=6 peak_words=6
+hky3 c=3 sym=split parts=[9, 6] rank=[3, 2] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=100 ir_muladds=0 products=5 zero=0 reducers=2 dense=5 sparse=0 words=34 peak_words=34
+hky3 c=4 sym=split parts=[10, 6] rank=[10, 6] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=5 rounds=9 irs=0 muladds=667 ir_muladds=0 products=23 zero=2 reducers=59 dense=16 sparse=0 words=76 peak_words=76
+kummer   m=2 tower  t= 2 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 1 ms
+kummer   m=2 tower  t= 2 N= 4 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      1.3 ms
+hky3 c=2 sym=split parts=[13, 9] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=7 peak_words=7
+hky3 c=3 sym=split parts=[23, 19] rank=[4, 3] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=150 ir_muladds=0 products=7 zero=0 reducers=2 dense=7 sparse=0 words=95 peak_words=95
+hky3 c=4 sym=split parts=[32, 25] rank=[32, 25] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=8 rounds=22 irs=0 muladds=10337 ir_muladds=0 products=105 zero=21 reducers=574 dense=56 sparse=1 words=830 peak_words=830
+kummer   m=2 tower  t= 3 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 3 ms
+kummer   m=2 tower  t= 3 N= 6 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      2.7 ms
+hky3 c=2 sym=split parts=[13, 9] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=7 peak_words=7
+hky3 c=3 sym=split parts=[23, 19] rank=[4, 3] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=150 ir_muladds=0 products=7 zero=0 reducers=2 dense=7 sparse=0 words=95 peak_words=95
+hky3 c=4 sym=split parts=[32, 25] rank=[32, 25] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=8 rounds=22 irs=0 muladds=10337 ir_muladds=0 products=105 zero=21 reducers=574 dense=56 sparse=1 words=830 peak_words=830
+kummer   m=2 tower  t= 3 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 3 ms
+kummer   m=2 tower  t= 3 N= 6 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      2.7 ms
+hky3 c=2 sym=split parts=[21, 16] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=8 peak_words=8
+hky3 c=3 sym=split parts=[49, 44] rank=[5, 4] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=186 ir_muladds=0 products=9 zero=0 reducers=2 dense=5 sparse=4 words=127 peak_words=127
+hky3 c=4 sym=split parts=[87, 76] rank=[86, 76] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=10 rounds=42 irs=0 muladds=82409 ir_muladds=0 products=271 zero=34 reducers=3059 dense=127 sparse=35 words=5130 peak_words=5130
+kummer   m=2 tower  t= 4 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 6 ms
+kummer   m=2 tower  t= 4 N= 8 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      5.7 ms
+hky3 c=2 sym=split parts=[21, 16] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=8 peak_words=8
+hky3 c=3 sym=split parts=[49, 44] rank=[5, 4] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=186 ir_muladds=0 products=9 zero=0 reducers=2 dense=5 sparse=4 words=127 peak_words=127
+hky3 c=4 sym=split parts=[87, 76] rank=[86, 76] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=10 rounds=42 irs=0 muladds=82409 ir_muladds=0 products=271 zero=34 reducers=3059 dense=127 sparse=35 words=5130 peak_words=5130
+kummer   m=2 tower  t= 4 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 5 ms
+kummer   m=2 tower  t= 4 N= 8 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0      4.6 ms
+hky3 c=2 sym=split parts=[31, 25] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=9 peak_words=9
+hky3 c=3 sym=split parts=[91, 85] rank=[6, 5] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=222 ir_muladds=0 products=11 zero=0 reducers=2 dense=1 sparse=10 words=95 peak_words=95
+hky3 c=4 sym=split parts=[201, 185] rank=[201, 185] par=0.00s second=0.01s serial=0.00s ir=0.00s batches=15 rounds=85 irs=1 muladds=606049 ir_muladds=60124 products=637 zero=129 reducers=14033 dense=370 sparse=16 words=15244 peak_words=15244
+kummer   m=2 tower  t= 5 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 12 ms
+kummer   m=2 tower  t= 5 N=10 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0     11.7 ms
+hky3 c=2 sym=split parts=[31, 25] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=9 peak_words=9
+hky3 c=3 sym=split parts=[91, 85] rank=[6, 5] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=222 ir_muladds=0 products=11 zero=0 reducers=2 dense=1 sparse=10 words=95 peak_words=95
+hky3 c=4 sym=split parts=[201, 185] rank=[201, 185] par=0.00s second=0.01s serial=0.00s ir=0.00s batches=15 rounds=85 irs=1 muladds=606049 ir_muladds=60124 products=637 zero=129 reducers=14033 dense=370 sparse=16 words=15244 peak_words=15244
+kummer   m=2 tower  t= 5 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 12 ms
+kummer   m=2 tower  t= 5 N=10 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0     12.1 ms
+hky3 c=2 sym=split parts=[43, 36] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=10 peak_words=10
+hky3 c=3 sym=split parts=[153, 146] rank=[7, 6] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=258 ir_muladds=0 products=13 zero=0 reducers=2 dense=1 sparse=12 words=114 peak_words=114
+hky3 c=4 sym=split parts=[408, 386] rank=[312, 293] par=0.01s second=0.01s serial=0.00s ir=0.00s batches=24 rounds=74 irs=2 muladds=2716024 ir_muladds=395001 products=1213 zero=452 reducers=43519 dense=541 sparse=64 words=52051 peak_words=52051
+hky3 c=5 sym=split parts=[804, 782] rank=[752, 730] par=0.03s second=0.03s serial=0.01s ir=0.02s batches=45 rounds=203 irs=5 muladds=9813742 ir_muladds=2940200 products=3355 zero=1299 reducers=112506 dense=1475 sparse=7 words=61356 peak_words=144961
+kummer   m=2 tower  t= 6 hky d_F=Some(5) ffd=Some(4) falls=[4, 5] censored_at=None 108 ms
+kummer   m=2 tower  t= 6 N=12 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0    107.9 ms
+hky3 c=2 sym=split parts=[43, 36] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=10 peak_words=10
+hky3 c=3 sym=split parts=[153, 146] rank=[7, 6] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=258 ir_muladds=0 products=13 zero=0 reducers=2 dense=1 sparse=12 words=114 peak_words=114
+hky3 c=4 sym=split parts=[408, 386] rank=[312, 293] par=0.01s second=0.01s serial=0.00s ir=0.00s batches=24 rounds=74 irs=2 muladds=2716024 ir_muladds=395001 products=1213 zero=452 reducers=43519 dense=541 sparse=64 words=52051 peak_words=52051
+hky3 c=5 sym=split parts=[804, 782] rank=[752, 730] par=0.02s second=0.03s serial=0.01s ir=0.01s batches=45 rounds=203 irs=5 muladds=9813742 ir_muladds=2940200 products=3355 zero=1299 reducers=112506 dense=1475 sparse=7 words=61356 peak_words=144961
+kummer   m=2 tower  t= 6 hky d_F=Some(5) ffd=Some(4) falls=[4, 5] censored_at=None 93 ms
+kummer   m=2 tower  t= 6 N=12 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0     93.0 ms
+hky3 c=2 sym=split parts=[57, 49] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=11 peak_words=11
+hky3 c=3 sym=split parts=[239, 231] rank=[8, 7] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=294 ir_muladds=0 products=15 zero=0 reducers=2 dense=1 sparse=14 words=133 peak_words=133
+hky3 c=4 sym=split parts=[750, 721] rank=[425, 404] par=0.01s second=0.01s serial=0.00s ir=0.00s batches=28 rounds=76 irs=3 muladds=3114537 ir_muladds=544420 products=1443 zero=496 reducers=44839 dense=518 sparse=311 words=104809 peak_words=104809
+hky3 c=5 sym=split parts=[1751, 1722] rank=[1656, 1626] par=0.09s second=0.04s serial=0.02s ir=0.02s batches=98 rounds=425 irs=8 muladds=50126678 ir_muladds=13718552 products=7621 zero=3190 reducers=401923 dense=2907 sparse=375 words=470100 peak_words=663977
+kummer   m=2 tower  t= 7 hky d_F=Some(5) ffd=Some(4) falls=[4, 5] censored_at=None 197 ms
+kummer   m=2 tower  t= 7 N=14 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0    197.2 ms
+hky3 c=2 sym=split parts=[57, 49] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=11 peak_words=11
+hky3 c=3 sym=split parts=[239, 231] rank=[8, 7] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=294 ir_muladds=0 products=15 zero=0 reducers=2 dense=1 sparse=14 words=133 peak_words=133
+hky3 c=4 sym=split parts=[750, 721] rank=[425, 404] par=0.01s second=0.01s serial=0.00s ir=0.00s batches=28 rounds=76 irs=3 muladds=3114537 ir_muladds=544420 products=1443 zero=496 reducers=44839 dense=518 sparse=311 words=104809 peak_words=104809
+hky3 c=5 sym=split parts=[1751, 1722] rank=[1656, 1626] par=0.08s second=0.07s serial=0.02s ir=0.03s batches=98 rounds=425 irs=8 muladds=50126678 ir_muladds=13718552 products=7621 zero=3190 reducers=401923 dense=2907 sparse=375 words=470100 peak_words=663977
+kummer   m=2 tower  t= 7 hky d_F=Some(5) ffd=Some(4) falls=[4, 5] censored_at=None 215 ms
+kummer   m=2 tower  t= 7 N=14 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0    215.4 ms
+hky3 c=2 sym=split parts=[73, 64] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=12 peak_words=12
+hky3 c=3 sym=split parts=[353, 344] rank=[9, 8] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=330 ir_muladds=0 products=17 zero=0 reducers=2 dense=1 sparse=16 words=152 peak_words=152
+hky3 c=4 sym=split parts=[1277, 1240] rank=[542, 519] par=0.01s second=0.01s serial=0.01s ir=0.00s batches=32 rounds=79 irs=3 muladds=2655709 ir_muladds=361810 products=1681 zero=476 reducers=41896 dense=126 sparse=935 words=83049 peak_words=83049
+hky3 c=5 sym=split parts=[3461, 3424] rank=[3459, 3422] par=0.36s second=0.17s serial=0.05s ir=0.14s batches=192 rounds=897 irs=12 muladds=391611486 ir_muladds=108414996 products=16395 zero=7507 reducers=1695844 dense=6874 sparse=7 words=237258 peak_words=2374907
+kummer   m=2 tower  t= 8 hky d_F=Some(5) ffd=Some(4) falls=[4, 5] censored_at=None 705 ms
+kummer   m=2 tower  t= 8 N=16 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0    705.1 ms
+hky3 c=2 sym=split parts=[73, 64] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=12 peak_words=12
+hky3 c=3 sym=split parts=[353, 344] rank=[9, 8] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=330 ir_muladds=0 products=17 zero=0 reducers=2 dense=1 sparse=16 words=152 peak_words=152
+hky3 c=4 sym=split parts=[1277, 1240] rank=[542, 519] par=0.01s second=0.01s serial=0.01s ir=0.00s batches=32 rounds=79 irs=3 muladds=2655709 ir_muladds=361810 products=1681 zero=476 reducers=41896 dense=126 sparse=935 words=83049 peak_words=83049
+hky3 c=5 sym=split parts=[3461, 3424] rank=[3459, 3422] par=0.37s second=0.16s serial=0.06s ir=0.13s batches=192 rounds=897 irs=12 muladds=391611486 ir_muladds=108414996 products=16395 zero=7507 reducers=1695844 dense=6874 sparse=7 words=237258 peak_words=2374907
+kummer   m=2 tower  t= 8 hky d_F=Some(5) ffd=Some(4) falls=[4, 5] censored_at=None 699 ms
+kummer   m=2 tower  t= 8 N=16 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0    699.1 ms
+{"budget_seconds":1800,"p":2013265921,"planted_per_cell":0,"planted_violations":0,"random_per_cell":2,"rows":16,"seed":1347112276,"wall_seconds":2.077134687}

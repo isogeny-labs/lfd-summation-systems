@@ -1,0 +1,8 @@
+paper instance: p=65537 k=10 a=1 b=0 X_R=4271 D=5 generator terms=9 file_generator_match=Some(true) control=false
+hky3 resume: raw/ckpt-skip-k10D5-t3/ckpt-TERM/state.ckpt batch 408 rank 14679 sha256 56236f8fab3affa5d27b3756e02be5aac095c8fa7e82a7c35f165a5204a299ac (0.2 s)
+hky3 checkpoint: 25015519 bytes, batch 409, rank 14699, queued 4419, 0.1 s
+hky3 checkpoint: 28393991 bytes, batch 434, rank 15365, queued 3674, 0.1 s
+hky3 checkpoint: 32759496 bytes, batch 459, rank 16141, queued 3664, 0.1 s
+hky3 checkpoint: 43843224 bytes, batch 484, rank 17718, queued 3956, 0.2 s
+hky3 checkpoint: 46559152 bytes, batch 509, rank 18331, queued 2392, 0.2 s
+paper closure: k=10 D=5 cols=21700 profile=[0, 0, 2, 138, 3163, 18569] one=false censored=None muladds=16075815269 wall=9.3s

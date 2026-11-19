@@ -1,0 +1,12 @@
+reference:  {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16075815269,"rows_reduced":26538,"sha":"74ec316e3283f4e937b794f699f5c0b27fd3af3a77b7c94bdac59dd2e399ca77","file_sha":"053dfa3630c045006a02f25259d11afdb911eb5d6c948946371974ba76ca4381","ckpts":0,"resumes":0,"resumed_at_batch":0}
+KILL: first process rc=137 after 17 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"13eb1d86b211c741cab4135ebbf376ee57c7151205d7728c6d26d70ad327838a","bytes":27139088,"batches":425,"rank":15113,"queued":3674,"muladds":1714562199,"elapsed_s":2.6,"write_s":0.10,"fingerprint":"d908145e15e73b10e1cb0683c9ee3bdb826e7651d60bc3ea286851cbc7495a95","unix_s":1794988531}
+KILL resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16075815269,"rows_reduced":26538,"sha":"74ec316e3283f4e937b794f699f5c0b27fd3af3a77b7c94bdac59dd2e399ca77","file_sha":"053dfa3630c045006a02f25259d11afdb911eb5d6c948946371974ba76ca4381","ckpts":21,"resumes":1,"resumed_at_batch":425}
+KILL identical to reference: true
+KILL basis files byte-identical: true
+TERM: first process rc=3 after 17 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"56236f8fab3affa5d27b3756e02be5aac095c8fa7e82a7c35f165a5204a299ac","bytes":24909719,"batches":408,"rank":14679,"queued":4451,"muladds":1304850550,"elapsed_s":2.2,"write_s":0.14,"fingerprint":"d908145e15e73b10e1cb0683c9ee3bdb826e7651d60bc3ea286851cbc7495a95","unix_s":1794988543}
+TERM resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16075815269,"rows_reduced":26538,"sha":"74ec316e3283f4e937b794f699f5c0b27fd3af3a77b7c94bdac59dd2e399ca77","file_sha":"053dfa3630c045006a02f25259d11afdb911eb5d6c948946371974ba76ca4381","ckpts":22,"resumes":1,"resumed_at_batch":408}
+TERM identical to reference: true
+TERM basis files byte-identical: true
+basis bytes: 216606192 raw/ckpt-skip-k10D5-t3/KILL.basis
+basis bytes: 216606192 raw/ckpt-skip-k10D5-t3/TERM.basis
+basis bytes: 216606192 raw/ckpt-skip-k10D5-t3/ref.basis

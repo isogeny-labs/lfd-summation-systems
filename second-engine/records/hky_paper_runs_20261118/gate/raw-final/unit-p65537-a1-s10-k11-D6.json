@@ -1,0 +1,128 @@
+{
+  "D": 6,
+  "binary_sha256": "39acdeac81689a49fa98a9b71e9924bdc29418d80247bece72e372aa41cac74f",
+  "censored": null,
+  "closed": true,
+  "closure_ms_this_process": 103715.786449,
+  "columns": 110056,
+  "contains_one": true,
+  "control": null,
+  "engine": {
+    "batches": 3186,
+    "core_muladds": 183290193948,
+    "final_row_bytes": 1190063092,
+    "interreduce_s": 3.823796904,
+    "interreductions": 23,
+    "name": "hky_fp_tower_fast2",
+    "options": {
+      "batch_max": 256,
+      "batch_min": 32,
+      "bitmap": true,
+      "deg_weight": 1,
+      "dense": [
+        1,
+        3
+      ],
+      "interreduce": 0.25,
+      "interreduce_block": 256,
+      "interreduce_min": 256,
+      "np_epochs": true,
+      "par_second": true,
+      "rebucket": true,
+      "sweep": true,
+      "sweep_max_words": 268435456,
+      "sweep_ratio": 4,
+      "sweep_tile_bytes": 1048576,
+      "target_pivots": 32,
+      "verify_closed": false
+    },
+    "parallel_s": 97.30886996300013,
+    "part_cols": [
+      55144,
+      54912
+    ],
+    "part_rank": [
+      54684,
+      54451
+    ],
+    "peak_words": 234183313,
+    "products": 515081,
+    "second_s": 2.558153403,
+    "simd": "avx512",
+    "stored_words": 234183313,
+    "sweep_bytes": 80517120,
+    "swept_batches": 1097,
+    "symmetry": "split",
+    "threads": 4,
+    "verify_nonzero": 0,
+    "verify_products": 0,
+    "verify_s": 0.0,
+    "zero": 370446,
+    "zero_muladds": 168347091342
+  },
+  "engine_commit": "450d5b295b",
+  "entries": 143733745,
+  "instance": {
+    "a": 1,
+    "b": 0,
+    "k": 11,
+    "path": "/home/user/lfd-summation-systems/experiments/ic-bounds-k14/instances/unit-p65537-a1-s10-k11.json",
+    "prime": 65537,
+    "seed": 10,
+    "sha256": "90e41b258c98393fb56f570c50d1a47df627aa0ed1a176184843dcf3476864d8",
+    "target": [
+      4271,
+      11720
+    ],
+    "unit_nonresidue": true
+  },
+  "io": {
+    "checkpoint_failures": 0,
+    "checkpoint_s": 0.0,
+    "checkpoints": 0,
+    "elapsed_total_s": 103.715786234,
+    "export": null,
+    "last_checkpoint_bytes": 0,
+    "last_checkpoint_error": null,
+    "resumed_at_batch": 0,
+    "resumed_from": null,
+    "resumes": 0
+  },
+  "maxrss_mb": 1416,
+  "muladds": 321522714727,
+  "profile": [
+    1,
+    23,
+    254,
+    1794,
+    9109,
+    35443,
+    110056
+  ],
+  "rank": 110056,
+  "rayon_threads": 4,
+  "rows_reduced": 257541,
+  "schema": "hky_paper_runs.closure/v1",
+  "system": {
+    "a": 1,
+    "b": 0,
+    "generator_masks": {
+      "0": 1,
+      "1": 56995,
+      "2": 22155,
+      "2048": 56995,
+      "2049": 21225,
+      "2050": 56995,
+      "4096": 22155,
+      "4097": 56995,
+      "4098": 1
+    },
+    "generator_matches_file": true,
+    "generator_matches_pkm_generator": true,
+    "k": 11,
+    "p": 65537,
+    "x_r": 4271,
+    "zeta": 61869
+  },
+  "wall_s_this_process": 103.742088502
+}

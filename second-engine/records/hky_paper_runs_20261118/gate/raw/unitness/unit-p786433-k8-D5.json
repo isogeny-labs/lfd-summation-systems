@@ -1,0 +1,129 @@
+{
+  "D": 5,
+  "binary_sha256": "d31a012b5e5d938b1b7ccb80b227ea6cf4322375b6a1170f1a587482204137bc",
+  "censored": null,
+  "closed": true,
+  "closure_ms_this_process": 1508.2258180000001,
+  "columns": 6885,
+  "contains_one": true,
+  "control": null,
+  "engine": {
+    "batches": 190,
+    "interreduce_s": 0.17088209599999998,
+    "interreductions": 11,
+    "name": "hky_fp_tower_fast2",
+    "options": {
+      "batch_max": 256,
+      "batch_min": 32,
+      "bitmap": true,
+      "deg_weight": 1,
+      "dense": [
+        1,
+        3
+      ],
+      "interreduce": 0.25,
+      "interreduce_block": 256,
+      "interreduce_min": 256,
+      "par_second": true,
+      "rebucket": true,
+      "target_pivots": 32
+    },
+    "parallel_s": 1.1482199740000003,
+    "part_cols": [
+      3461,
+      3424
+    ],
+    "part_rank": [
+      3456,
+      3419
+    ],
+    "peak_words": 1673886,
+    "products": 21617,
+    "second_s": 0.186379543,
+    "simd": "avx512",
+    "stored_words": 1673886,
+    "symmetry": "split",
+    "threads": 4,
+    "zero": 12496
+  },
+  "engine_commit": "50262dc2571d4585947483a989107ce60abadc45",
+  "entries": 1586386,
+  "instance": {
+    "a": 1,
+    "b": 0,
+    "k": 8,
+    "path": "instances/unit-p786433-a1-s10-k8.json",
+    "prime": 786433,
+    "seed": 10,
+    "sha256": "420f76d4944b6edb16d8f1b6427f69e96657a643499821d13d8945d988e0a9b0",
+    "target": [
+      485051,
+      497175
+    ],
+    "unit_nonresidue": true
+  },
+  "io": {
+    "checkpoint_s": 0.0,
+    "checkpoints": 0,
+    "elapsed_total_s": 1.5082253749999999,
+    "export": {
+      "bytes": 110304,
+      "column_order": 1,
+      "contains_one": true,
+      "content_sha256": "43f8b6fc5f31dfd0299e6cab4ca0b83420a83d0e1f7b39d9a91048c021845036",
+      "file_sha256": "c9fa7027a7a1728598d97965c281aaa15782e4497ad824375f604049cf7a8662",
+      "n_cols": 6885,
+      "path": "gate/raw/unitness/unit-p786433-k8-D5.basis",
+      "profile": [
+        1,
+        17,
+        137,
+        697,
+        2517,
+        6885
+      ],
+      "rank": 6885,
+      "seconds": 0.001657253
+    },
+    "last_checkpoint_bytes": 0,
+    "resumed_at_batch": 0,
+    "resumed_from": null,
+    "resumes": 0
+  },
+  "maxrss_mb": 26,
+  "muladds": 410545751,
+  "profile": [
+    1,
+    17,
+    137,
+    697,
+    2517,
+    6885
+  ],
+  "rank": 6885,
+  "rayon_threads": 4,
+  "rows_reduced": 10809,
+  "schema": "hky_paper_runs.closure/v1",
+  "system": {
+    "a": 1,
+    "b": 0,
+    "generator_masks": {
+      "0": 1,
+      "1": 602764,
+      "2": 457723,
+      "256": 602764,
+      "257": 657418,
+      "258": 602764,
+      "512": 457723,
+      "513": 602764,
+      "514": 1
+    },
+    "generator_matches_file": true,
+    "generator_matches_pkm_generator": true,
+    "k": 8,
+    "p": 786433,
+    "x_r": 485051,
+    "zeta": 279886
+  },
+  "wall_s_this_process": 1.509493065
+}

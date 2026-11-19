@@ -1,0 +1,13 @@
+reference:  {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16075815269,"rows_reduced":26538,"sha":"74ec316e3283f4e937b794f699f5c0b27fd3af3a77b7c94bdac59dd2e399ca77","file_sha":"053dfa3630c045006a02f25259d11afdb911eb5d6c948946371974ba76ca4381","ckpts":0,"resumes":0,"resumed_at_batch":0}
+../hky_paper_runs_20261118/gate/ckpt_test.sh: line 24: 17414 Killed                  "$BIN" --instance "$INST" --D "$D" ${EXTRA_FLAGS:-} --checkpoint-dir "$dir" --checkpoint-every-batches 25 --export-basis "$OUT/$sig.basis" --out "$OUT/$sig-first.json" > /dev/null 2> "$OUT/$sig-first.err"
+KILL: first process rc=137 after 7 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"784869232c0b1a46726db86d968646e0a3103c84dc7fdca4a243941bda4d3336","bytes":1979603,"batches":175,"rank":6335,"queued":6920,"muladds":12220081,"elapsed_s":0.2,"write_s":0.02,"fingerprint":"d908145e15e73b10e1cb0683c9ee3bdb826e7651d60bc3ea286851cbc7495a95","unix_s":1794988487}
+KILL resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16075815269,"rows_reduced":26538,"sha":"74ec316e3283f4e937b794f699f5c0b27fd3af3a77b7c94bdac59dd2e399ca77","file_sha":"053dfa3630c045006a02f25259d11afdb911eb5d6c948946371974ba76ca4381","ckpts":21,"resumes":1,"resumed_at_batch":175}
+KILL identical to reference: true
+KILL basis files byte-identical: true
+TERM: first process rc=3 after 7 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"bda420ea3e3c4fe09f7d754be781dc35590c5d27e40dfaf42bd570ea14c1fc98","bytes":1732116,"batches":150,"rank":5577,"queued":9382,"muladds":9177205,"elapsed_s":0.2,"write_s":0.01,"fingerprint":"d908145e15e73b10e1cb0683c9ee3bdb826e7651d60bc3ea286851cbc7495a95","unix_s":1794988498}
+TERM resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16075815269,"rows_reduced":26538,"sha":"74ec316e3283f4e937b794f699f5c0b27fd3af3a77b7c94bdac59dd2e399ca77","file_sha":"053dfa3630c045006a02f25259d11afdb911eb5d6c948946371974ba76ca4381","ckpts":22,"resumes":1,"resumed_at_batch":150}
+TERM identical to reference: true
+TERM basis files byte-identical: true
+basis bytes: 216606192 raw/ckpt-skip-k10D5/KILL.basis
+basis bytes: 216606192 raw/ckpt-skip-k10D5/TERM.basis
+basis bytes: 216606192 raw/ckpt-skip-k10D5/ref.basis

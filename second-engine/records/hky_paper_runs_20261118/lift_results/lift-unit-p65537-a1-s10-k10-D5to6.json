@@ -1,0 +1,195 @@
+{
+  "D": 5,
+  "D_target": 6,
+  "binary_sha256": "6824a8bdd8dd326b18c3e52fa1431c80dcf23582f9c52b3d6f375de51b3b1eaa",
+  "contains_one": true,
+  "counts": {
+    "candidates": 55922,
+    "direct_rows": 8896,
+    "fall_rows": 26546,
+    "follower_builds": 20,
+    "follower_evictions": 0,
+    "follower_sync_madds": 271182200179,
+    "generator_rows": 24576,
+    "madds_total": 446213832347,
+    "seconds_K_insert": 21.574852618999994,
+    "seconds_fall_phase": 4.125799354000001,
+    "seconds_followers": 12.669900397,
+    "seconds_products_incl_followers": 79.91140208899995
+  },
+  "dim_K": 4199,
+  "dim_T": 4199,
+  "dim_VD": 18569,
+  "dim_VD1": 60460,
+  "dim_low": 21700,
+  "falls": 3131,
+  "falls_new_per_round": [
+    2042,
+    1089
+  ],
+  "fixed_point": true,
+  "free_columns_VD": 3131,
+  "free_weight_D_monomials": 98,
+  "input": {
+    "basis": "/tmp/claude-0/-home-user/daf172a2-9908-530c-9c36-29f5d702bf30/scratchpad/lift/runall/eng-unit-p65537-a1-s10-k10-D5.basis",
+    "bytes": 220856336,
+    "column_order": 1,
+    "content_sha256": "5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849",
+    "file_sha256": "16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec",
+    "instance_a_b_X": [
+      1,
+      0,
+      4271
+    ],
+    "nnz_stored": 27566755,
+    "profile_VD": [
+      0,
+      0,
+      2,
+      138,
+      3163,
+      18569
+    ]
+  },
+  "input_checks": {
+    "closed_random": {
+      "leave_VD": 0,
+      "shifted_combinations": 60
+    },
+    "generators": {
+      "not_in_VD": 0,
+      "tested": 4
+    }
+  },
+  "k": 10,
+  "lift": "hky_lift/0.1 (monomial coordinates, no sigma split)",
+  "low_basis_sha256": "d6bed1480b97f56397922560dc5c578e10731279e0bc2fb48d9a76fd55ead49e",
+  "maxrss_mb": 1785.69140625,
+  "memory_bytes": {
+    "B": 232558156,
+    "K_full_width": 70526404,
+    "followers_peak": 1051765520
+  },
+  "n_cols_VD": 21700,
+  "one_in_VD": false,
+  "p": 65537,
+  "profile": [
+    1,
+    21,
+    211,
+    1351,
+    6196,
+    21700,
+    60460
+  ],
+  "regular_tops": 37692,
+  "regular_weight_D_rows": 15406,
+  "rounds": 2,
+  "saturated": true,
+  "seconds": 109.406114536,
+  "settings": "LiftOpts { batch_tops: 4096, fall_every: 1, include_low: false, verify_falls: true, follower_cache_gb: 4.0, work_gb: 2.0, hash: true, parts: false, test_no_fall_shifts: false, test_drop_shift: None }",
+  "sigma_parts": null,
+  "special_tops": 1068,
+  "status": "done",
+  "threads": 4,
+  "timing_s": {
+    "checks": 1.336439893,
+    "lift": 105.227297932,
+    "read": 0.486789965,
+    "rref": 2.3556028760000003,
+    "total": 109.406130847
+  },
+  "verify": {
+    "all_equal": true,
+    "fields": [
+      {
+        "expected": 10,
+        "field": "k",
+        "got": 10,
+        "result": "equal"
+      },
+      {
+        "expected": 5,
+        "field": "D",
+        "got": 5,
+        "result": "equal"
+      },
+      {
+        "expected": 65537,
+        "field": "p",
+        "got": 65537,
+        "result": "equal"
+      },
+      {
+        "expected": 18569,
+        "field": "dim_VD",
+        "got": 18569,
+        "result": "equal"
+      },
+      {
+        "expected": true,
+        "field": "contains_one",
+        "got": true,
+        "result": "equal"
+      },
+      {
+        "expected": true,
+        "field": "fixed_point",
+        "got": true,
+        "result": "equal"
+      },
+      {
+        "expected": 60460,
+        "field": "dim_VD1",
+        "got": 60460,
+        "result": "equal"
+      },
+      {
+        "expected": [
+          1,
+          21,
+          211,
+          1351,
+          6196,
+          21700,
+          60460
+        ],
+        "field": "profile",
+        "got": [
+          1,
+          21,
+          211,
+          1351,
+          6196,
+          21700,
+          60460
+        ],
+        "result": "equal"
+      },
+      {
+        "expected": 3131,
+        "field": "falls (dim F = dim(V_{D+1} n L) - dim V_D)",
+        "got": 3131,
+        "result": "equal"
+      },
+      {
+        "expected": 21700,
+        "field": "dim(V_{D+1} n M_<=D)",
+        "got": 21700,
+        "result": "equal"
+      },
+      {
+        "expected": 37972,
+        "field": "regular_tops (orbit count summed over parts; not the same notion)",
+        "got": 37692,
+        "result": "informational"
+      }
+    ]
+  },
+  "verify_expected_file": "/home/user/lfd-summation-systems/experiments/ic-bounds-k14/runs/lift-unit-p65537-k10-D5to6-gpu.json",
+  "verify_falls": {
+    "nonzero": 0,
+    "ran": true,
+    "rows_checked": 0
+  }
+}

@@ -1,0 +1,19 @@
+paper instance: p=65537 k=10 a=1 b=0 X_R=4271 D=5 generator terms=9 file_generator_match=Some(true) control=false
+hky3 resume: gate/raw/ckpt-k10D5/ckpt-TERM/state.ckpt batch 145 rank 5349 sha256 e7137296e0c356b4c16a2e5f0c98357d458278f053a22adabcbd95d72f0f0699 (0.0 s)
+hky3 checkpoint: 2682284 bytes, batch 146, rank 5383, queued 9875, 0.0 s
+hky3 checkpoint: 3499974 bytes, batch 171, rank 6097, queued 8499, 0.0 s
+hky3 checkpoint: 4626992 bytes, batch 196, rank 7171, queued 6629, 0.0 s
+hky3 checkpoint: 5711786 bytes, batch 221, rank 8037, queued 6367, 0.0 s
+hky3 checkpoint: 6492766 bytes, batch 246, rank 8721, queued 4848, 0.0 s
+hky3 checkpoint: 13022798 bytes, batch 271, rank 9677, queued 6091, 0.1 s
+hky3 checkpoint: 14950938 bytes, batch 296, rank 10449, queued 6328, 0.1 s
+hky3 checkpoint: 16500218 bytes, batch 321, rank 11145, queued 4831, 0.2 s
+hky3 checkpoint: 23038528 bytes, batch 346, rank 12259, queued 4763, 0.1 s
+hky3 checkpoint: 27442316 bytes, batch 371, rank 13031, queued 5124, 0.2 s
+hky3 checkpoint: 31403982 bytes, batch 396, rank 13785, queued 4529, 0.2 s
+hky3 checkpoint: 51536358 bytes, batch 421, rank 14913, queued 3830, 0.2 s
+hky3 checkpoint: 59038508 bytes, batch 446, rank 15607, queued 3447, 0.3 s
+hky3 checkpoint: 72645706 bytes, batch 471, rank 16737, queued 3190, 0.3 s
+hky3 checkpoint: 109578570 bytes, batch 496, rank 18049, queued 3850, 0.7 s
+hky3 checkpoint: 116123474 bytes, batch 521, rank 18545, queued 249, 0.6 s
+paper closure: k=10 D=5 cols=21700 profile=[0, 0, 2, 138, 3163, 18569] one=false censored=None muladds=16024605579 wall=48.0s

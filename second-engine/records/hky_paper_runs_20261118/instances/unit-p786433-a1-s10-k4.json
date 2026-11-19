@@ -1,0 +1,53 @@
+{
+ "k": 4,
+ "prime": 786433,
+ "a": 1,
+ "b": 0,
+ "seed": 10,
+ "want": false,
+ "unit_nonresidue": true,
+ "target": [
+  485051,
+  497175
+ ],
+ "target_x_is_square": false,
+ "attempts": 3,
+ "points": 0,
+ "Z": [],
+ "columns": {
+  "4": 163,
+  "5": 219,
+  "6": 247
+ },
+ "Z_bound_2_2k": 32,
+ "generator": {
+  "0,0": 1,
+  "0,1": 602764,
+  "0,2": 457723,
+  "1,0": 602764,
+  "1,1": 657418,
+  "1,2": 602764,
+  "2,0": 457723,
+  "2,1": 602764,
+  "2,2": 1
+ },
+ "eval_rank_below_D": 0,
+ "onto": true,
+ "eval_rank_D": 6,
+ "source_sha256": {
+  "generator": "c2950458ee21afe2d765803795977691b9e16c04679eb824c7c557155a27990c",
+  "recipe": "lfd-summation-systems scripts/ic_bounds_big_run.py cmd_instance --unit-nonresidue (reimplemented in Rust: research/hky_paper_runs_20261118/tools/hky_paper_instance.rs)"
+ },
+ "unitness": {
+  "lemma": "curve-lfd-bounds.tex lem:unit",
+  "two_pow_k_plus_1_divides_p_minus_1": true,
+  "subgroup_generator": 541396,
+  "subgroup_in_squares": true,
+  "x_nonresidue": true,
+  "target_on_curve": true,
+  "y_nonzero": true,
+  "j_1728": true,
+  "scalar_solutions_enumerated": 0,
+  "unit_ideal": true
+ }
+}

@@ -1,0 +1,4 @@
+hky3 c=5 sym=split parts=[10878, 10822] rank=[666, 651] par=0.01s second=0.00s serial=0.00s ir=0.00s batches=44 rounds=67 irs=4 muladds=54919 ir_muladds=13401 products=2141 zero=790 reducers=2772 dense=21 sparse=1296 words=4483 peak_words=6179
+kummer   m=2 tower  t=10 hky d_F=Some(5) ffd=None falls=[] censored_at=None 14 ms
+kummer   m=2 tower  t=10 N=20 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0     14.2 ms
+{"budget_seconds":200000,"p":2013265921,"planted_per_cell":0,"planted_violations":0,"random_per_cell":1,"rows":1,"seed":1347112276,"wall_seconds":0.015772246}

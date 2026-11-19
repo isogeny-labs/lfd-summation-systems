@@ -1,0 +1,29 @@
+[package]
+name = "hky_lift"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+publish = false
+license = "MIT"
+description = "Degree lift V_D -> V_{D+1} n M_<=D of the two-summand chain system (LIFT.md theorem), from an hky.basis/v1 export"
+
+# Standalone: not a member of the repository's root crate.
+[workspace]
+
+[[bin]]
+name = "hky_lift"
+path = "src/main.rs"
+
+[lib]
+name = "hky_lift"
+path = "src/lib.rs"
+
+[dependencies]
+rayon = "1"
+sha2 = "0.10"
+serde_json = "1"
+
+[profile.release]
+codegen-units = 1
+opt-level = 3
+debug = false

@@ -1,0 +1,65 @@
+{
+  "D": 4,
+  "basis_file": "unit-p786433-k4-D4.basis",
+  "bytes": 2744,
+  "closure": {
+    "muladds": 92320,
+    "resumed": false,
+    "rows_reduced": 157,
+    "seconds": 0.003257901
+  },
+  "column_order": 1,
+  "contains_one": true,
+  "content_sha256": "e678ec33216d1e856ea08669ee60947b52f31d2b47a6ee65dd7f54bded74e5cd",
+  "created_utc_unix_s": 1794973823,
+  "engine": {
+    "binary_sha256": "d31a012b5e5d938b1b7ccb80b227ea6cf4322375b6a1170f1a587482204137bc",
+    "commit": "50262dc2571d4585947483a989107ce60abadc45",
+    "name": "hky_fp_tower_fast2",
+    "options": {
+      "batch_max": 256,
+      "batch_min": 32,
+      "bitmap": true,
+      "deg_weight": 1,
+      "dense": [
+        1,
+        3
+      ],
+      "interreduce": 0.25,
+      "interreduce_block": 256,
+      "interreduce_min": 256,
+      "par_second": true,
+      "rebucket": true,
+      "target_pivots": 32
+    }
+  },
+  "file_sha256": "efb48b30dc07aab048464962d093ead7771857739d77e1ba932ea50d0224fe18",
+  "instance": {
+    "a": 1,
+    "b": 0,
+    "control": null,
+    "k": 4,
+    "path": "instances/unit-p786433-a1-s10-k4.json",
+    "prime": 786433,
+    "sha256": "908e565d2808ceee1b9421abc76cec10bd76a684b15934e4fef6d1a57dc9feef",
+    "target": [
+      485051,
+      497175
+    ]
+  },
+  "k": 4,
+  "m": 2,
+  "mask_encoding": 1,
+  "n_cols": 163,
+  "n_vars": 8,
+  "p": 786433,
+  "profile": [
+    1,
+    9,
+    37,
+    93,
+    163
+  ],
+  "rank": 163,
+  "schema": "hky.basis.sidecar/v1"
+}

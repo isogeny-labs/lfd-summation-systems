@@ -1,0 +1,148 @@
+{
+  "D": 6,
+  "binary_sha256": "39acdeac81689a49fa98a9b71e9924bdc29418d80247bece72e372aa41cac74f",
+  "censored": null,
+  "closed": true,
+  "closure_ms_this_process": 26712403.520405002,
+  "columns": 499178,
+  "contains_one": false,
+  "control": null,
+  "engine": {
+    "batches": 12890,
+    "core_muladds": 51258604237025,
+    "final_row_bytes": 32069780036,
+    "interreduce_s": 364.005396911,
+    "interreductions": 30,
+    "name": "hky_fp_tower_fast2",
+    "options": {
+      "batch_max": 256,
+      "batch_min": 32,
+      "bitmap": true,
+      "deg_weight": 1,
+      "dense": [
+        1,
+        3
+      ],
+      "interreduce": 0.25,
+      "interreduce_block": 256,
+      "interreduce_min": 256,
+      "np_epochs": true,
+      "par_second": true,
+      "rebucket": true,
+      "sweep": true,
+      "sweep_max_words": 268435456,
+      "sweep_ratio": 4,
+      "sweep_tile_bytes": 1048576,
+      "target_pivots": 32,
+      "verify_closed": true
+    },
+    "parallel_s": 7466.241222209982,
+    "part_cols": [
+      249824,
+      249354
+    ],
+    "part_rank": [
+      224688,
+      224234
+    ],
+    "peak_words": 7187824990,
+    "products": 2060437,
+    "second_s": 46.442010674999985,
+    "simd": "avx2",
+    "stored_words": 7187824990,
+    "sweep_bytes": 493291520,
+    "swept_batches": 5396,
+    "symmetry": "split",
+    "threads": 32,
+    "verify_nonzero": 0,
+    "verify_products": 4120873,
+    "verify_s": 18495.157066681,
+    "zero": 1487012,
+    "zero_muladds": 79238392842479
+  },
+  "engine_commit": "450d5b295b",
+  "entries": 4752479934,
+  "instance": {
+    "a": 1,
+    "b": 0,
+    "k": 14,
+    "path": "/workspace/in/code/inst.json",
+    "prime": 65537,
+    "seed": 10,
+    "sha256": "fa06148e0276dd459a45ad45e08b751a699ceb2a9a440a8ee07770a9ebeaa1ab",
+    "target": [
+      4271,
+      11720
+    ],
+    "unit_nonresidue": true
+  },
+  "io": {
+    "checkpoint_failures": 0,
+    "checkpoint_s": 128.77396295900002,
+    "checkpoints": 4,
+    "elapsed_total_s": 26712.403519675,
+    "export": {
+      "bytes": 64798813280,
+      "column_order": 1,
+      "contains_one": false,
+      "content_sha256": "e41b8295509b62df4621c31c67bda81f84f50cc59d9c761a08968a3f18e837b3",
+      "error": null,
+      "file_sha256": "06fdd4e4d00095ad02d9a9cea735ca59eed62843552ee14b43726f76d1ad9d1c",
+      "n_cols": 499178,
+      "path": "/workspace/out/J1-unit-p65537-a1-s10-k14-D6/basis.bin",
+      "profile": [
+        0,
+        0,
+        2,
+        154,
+        4451,
+        73587,
+        448922
+      ],
+      "rank": 448922,
+      "seconds": 211.504321158
+    },
+    "last_checkpoint_bytes": 31874397405,
+    "last_checkpoint_error": null,
+    "resumed_at_batch": 0,
+    "resumed_from": null,
+    "resumes": 0
+  },
+  "maxrss_mb": 72128,
+  "muladds": 107294840912832,
+  "profile": [
+    0,
+    0,
+    2,
+    154,
+    4451,
+    73587,
+    448922
+  ],
+  "rank": 448922,
+  "rayon_threads": 32,
+  "rows_reduced": 1030219,
+  "schema": "hky_paper_runs.closure/v1",
+  "system": {
+    "a": 1,
+    "b": 0,
+    "generator_masks": {
+      "0": 1,
+      "1": 56995,
+      "16384": 56995,
+      "16385": 21225,
+      "16386": 56995,
+      "2": 22155,
+      "32768": 22155,
+      "32769": 56995,
+      "32770": 1
+    },
+    "generator_matches_file": true,
+    "generator_matches_pkm_generator": true,
+    "k": 14,
+    "p": 65537,
+    "x_r": 4271,
+    "zeta": 81
+  },
+  "wall_s_this_process": 26713.373029372
+}

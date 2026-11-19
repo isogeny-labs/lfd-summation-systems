@@ -1,0 +1,10 @@
+reference:  {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":0,"resumes":0,"resumed_at_batch":0}
+./gate/ckpt_test.sh: line 18: 32284 Killed                  "$BIN" --instance "$INST" --D "$D" --checkpoint-dir "$dir" --checkpoint-every-batches 25 --export-basis "$OUT/$sig.basis" --out "$OUT/$sig-first.json" > /dev/null 2> "$OUT/$sig-first.err"
+KILL: first process rc=137 after 5 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"af92183f9a7a46fd0170274967a893ed33fa37b6190185f3672ea09379583b89","bytes":2762676,"batches":150,"rank":5495,"queued":9743,"muladds":7709687,"elapsed_s":0.2,"write_s":0.01,"fingerprint":"98c10ad37488753200919820efacc399e893728a67cca8277dbbd8bf0cc98672","unix_s":1794972816}
+KILL resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":21,"resumes":1,"resumed_at_batch":150}
+KILL identical to reference: true
+KILL basis files byte-identical: true
+TERM: first process rc=3 after 6 checkpoints; state: {"schema":"hky3.checkpoint.meta/v1","sha256":"e7137296e0c356b4c16a2e5f0c98357d458278f053a22adabcbd95d72f0f0699","bytes":2652874,"batches":145,"rank":5349,"queued":9907,"muladds":7199051,"elapsed_s":0.2,"write_s":0.01,"fingerprint":"98c10ad37488753200919820efacc399e893728a67cca8277dbbd8bf0cc98672","unix_s":1794972855}
+TERM resumed: {"columns":21700,"profile":[0,0,2,138,3163,18569],"contains_one":false,"closed":true,"muladds":16024605579,"rows_reduced":31631,"sha":"5fa47095464b6569efaed2e7f9561ebbfd4f232d7a4eebc26d22d2c9a6413849","file_sha":"16108d9055e88f7402793dac165398102fdafb6b4c169473ce77b5f464e870ec","ckpts":22,"resumes":1,"resumed_at_batch":145}
+TERM identical to reference: true
+TERM basis files byte-identical: true

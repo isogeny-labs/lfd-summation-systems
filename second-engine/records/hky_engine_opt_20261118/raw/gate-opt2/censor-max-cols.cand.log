@@ -1,0 +1,13 @@
+hky3 c=2 sym=split parts=[31, 25] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=9 peak_words=9
+hky3 c=3 sym=split parts=[91, 85] rank=[6, 5] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=222 ir_muladds=0 products=11 zero=0 reducers=2 dense=1 sparse=10 words=95 peak_words=95
+hky3 c=4 sym=split parts=[201, 185] rank=[201, 185] par=0.00s second=0.01s serial=0.00s ir=0.00s batches=16 rounds=84 irs=1 muladds=678638 ir_muladds=45589 products=737 zero=183 reducers=15270 dense=363 sparse=23 words=16275 peak_words=16275
+kummer   m=2 tower  t= 5 hky d_F=Some(4) ffd=Some(4) falls=[4] censored_at=None 21 ms
+kummer   m=2 tower  t= 5 N=10 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0     21.3 ms
+hky3 c=2 sym=split parts=[43, 36] rank=[1, 0] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=1 rounds=1 irs=0 muladds=6 ir_muladds=0 products=1 zero=0 reducers=0 dense=1 sparse=0 words=10 peak_words=10
+hky3 c=3 sym=split parts=[153, 146] rank=[7, 6] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=2 rounds=3 irs=0 muladds=258 ir_muladds=0 products=13 zero=0 reducers=2 dense=1 sparse=12 words=114 peak_words=114
+hky3 c=4 sym=split parts=[408, 386] rank=[312, 293] par=0.02s second=0.02s serial=0.00s ir=0.00s batches=24 rounds=70 irs=2 muladds=2897200 ir_muladds=453262 products=1333 zero=531 reducers=45635 dense=541 sparse=64 words=49626 peak_words=56377
+hky3 c=5 sym=off parts=[] rank=[] par=0.00s second=0.00s serial=0.00s ir=0.00s batches=0 rounds=0 irs=0 muladds=0 ir_muladds=0 products=0 zero=0 reducers=0 dense=0 sparse=0 words=0 peak_words=0
+kummer   m=2 tower  t= 6 hky d_F=None ffd=Some(4) falls=[4] censored_at=Some(5) 53 ms
+kummer   m=2 tower  t= 6 N=12 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0     53.0 ms  TIMEOUT
+-- kummer m=2 tower: every run at t = 6 timed out; stopping
+{"budget_seconds":1800,"p":2013265921,"planted_per_cell":0,"planted_violations":0,"random_per_cell":1,"rows":2,"seed":1347112276,"wall_seconds":0.075608728}

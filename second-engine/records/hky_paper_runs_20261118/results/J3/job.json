@@ -1,0 +1,18 @@
+{
+ "schema": "hky_paper_runs.pod_job/v1",
+ "job": "J3-unit-p65537-a1-s10-k15-D6",
+ "status": "ok",
+ "rc": 0,
+ "instance": "/workspace/in/code/inst.json",
+ "instance_sha256": "0629858740bc2d5a2880b4efa64f8d65597999294b294bd75ab584047b3f8f29",
+ "D": 6,
+ "binary_sha256": "39acdeac81689a49fa98a9b71e9924bdc29418d80247bece72e372aa41cac74f",
+ "wall_s_this_attempt": 12205,
+ "peak_rss_kb_this_attempt": 79614980,
+ "memory_limit_kb": 250000000,
+ "guard": "",
+ "basis_sha256": "5da602a87362c843b464605e099a9732e0622f7ec55681adbf3728deb149c4e8",
+ "host": {"cpu": "AMD EPYC 9655 96-Core Processor", "nproc": 32, "mem_total_kb": 1188082312, "cgroup_max": "256000000000", "kernel": "6.8.0-147-generic", "simd": "avx2 avx512f "},
+ "checkpoint_meta": {"schema":"hky3.checkpoint.meta/v1","sha256":"9b620a2874b89c863e135761189baee3e271adff9a0765f0ee73a90b81bc999e","bytes":40507454214,"batches":17129,"rank":598501,"queued":10242,"muladds":107216700974292,"elapsed_s":9089.2,"write_s":41.08,"fingerprint":"1e45ec3a403354e26130e65776f9bdff0ff706185a5f306e1ededfc613fa8757","unix_s":1794998671},
+ "engine_record": "record.json"
+}

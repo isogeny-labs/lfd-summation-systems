@@ -1,0 +1,5 @@
+# bin/pilot_skip_dev --instance <inst> --D <D> --hky3-skip on --export-basis b.bin ; hky_basis_check --basis b.bin --closedness [--exact]
+# (2026-11-18, this machine; independent reader/checker of research/hky_paper_runs_20261118/tools/hky_basis_check.rs)
+unit-p786433-a1-s10-k8 D=4: profile [0,0,2,119,1061] skipped 112 items; closedness exact products=1904 failing=0 generator_in_span=true ok=true
+unit-p786433-a1-s10-k9 D=4: profile [0,0,2,123,1301] skipped 144 items; closedness exact products=2214 failing=0 generator_in_span=true ok=true
+unit-p65537-a1-s10-k10 D=5: profile [0,0,2,138,3163,18569]; closedness annihilator x4 products=63260 failing=0 generator_in_span=true ok=true (content sha256 74ec316e…)

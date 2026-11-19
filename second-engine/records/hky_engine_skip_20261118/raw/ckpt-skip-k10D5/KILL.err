@@ -1,0 +1,17 @@
+paper instance: p=65537 k=10 a=1 b=0 X_R=4271 D=5 generator terms=9 file_generator_match=Some(true) control=false
+hky3 resume: raw/ckpt-skip-k10D5/ckpt-KILL/state.ckpt batch 175 rank 6335 sha256 784869232c0b1a46726db86d968646e0a3103c84dc7fdca4a243941bda4d3336 (0.0 s)
+hky3 checkpoint: 2062898 bytes, batch 176, rank 6461, queued 6851, 0.0 s
+hky3 checkpoint: 2778645 bytes, batch 201, rank 7521, queued 6321, 0.0 s
+hky3 checkpoint: 3254374 bytes, batch 226, rank 8289, queued 5547, 0.0 s
+hky3 checkpoint: 4288756 bytes, batch 251, rank 9177, queued 5874, 0.0 s
+hky3 checkpoint: 5391084 bytes, batch 276, rank 9943, queued 6323, 0.0 s
+hky3 checkpoint: 8006430 bytes, batch 301, rank 10742, queued 5267, 0.0 s
+hky3 checkpoint: 10049492 bytes, batch 326, rank 11820, queued 4238, 0.1 s
+hky3 checkpoint: 12258736 bytes, batch 351, rank 12521, queued 4978, 0.1 s
+hky3 checkpoint: 14535951 bytes, batch 376, rank 13317, queued 4947, 0.1 s
+hky3 checkpoint: 23485872 bytes, batch 401, rank 14350, queued 4375, 0.1 s
+hky3 checkpoint: 27271543 bytes, batch 426, rank 15141, queued 3610, 0.1 s
+hky3 checkpoint: 31270173 bytes, batch 451, rank 15887, queued 3678, 0.1 s
+hky3 checkpoint: 42078113 bytes, batch 476, rank 17268, queued 3472, 0.2 s
+hky3 checkpoint: 45897178 bytes, batch 501, rank 18189, queued 3426, 0.2 s
+paper closure: k=10 D=5 cols=21700 profile=[0, 0, 2, 138, 3163, 18569] one=false censored=None muladds=16075815269 wall=10.9s

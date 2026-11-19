@@ -1,0 +1,195 @@
+{
+  "D": 5,
+  "D_target": 6,
+  "binary_sha256": "6824a8bdd8dd326b18c3e52fa1431c80dcf23582f9c52b3d6f375de51b3b1eaa",
+  "contains_one": false,
+  "counts": {
+    "candidates": 332768,
+    "direct_rows": 81968,
+    "fall_rows": 62340,
+    "follower_builds": 20,
+    "follower_evictions": 0,
+    "follower_sync_madds": 271956549706,
+    "generator_rows": 226152,
+    "madds_total": 454380401475,
+    "seconds_K_insert": 24.71606669500003,
+    "seconds_fall_phase": 4.2826192679999995,
+    "seconds_followers": 11.992088988000003,
+    "seconds_products_incl_followers": 76.56373562400002
+  },
+  "dim_K": 4185,
+  "dim_T": 4199,
+  "dim_VD": 18569,
+  "dim_VD1": 60446,
+  "dim_low": 21686,
+  "falls": 3117,
+  "falls_new_per_round": [
+    2042,
+    1075
+  ],
+  "fixed_point": true,
+  "free_columns_VD": 3131,
+  "free_weight_D_monomials": 98,
+  "input": {
+    "basis": "/tmp/claude-0/-home-user/daf172a2-9908-530c-9c36-29f5d702bf30/scratchpad/lift/runall/eng-proper-p65537-s12-k10-D5.basis",
+    "bytes": 220856304,
+    "column_order": 1,
+    "content_sha256": "2cecc6b84219830613f9356ec092e3be198f19f405f591be22fa96c5c8b58784",
+    "file_sha256": "e85ddac9102354cec9daec72f1f5ef2d12b1b45a98466b8ed12f0724a1221b27",
+    "instance_a_b_X": [
+      4021,
+      9917,
+      1424
+    ],
+    "nnz_stored": 27566751,
+    "profile_VD": [
+      0,
+      0,
+      2,
+      138,
+      3163,
+      18569
+    ]
+  },
+  "input_checks": {
+    "closed_random": {
+      "leave_VD": 0,
+      "shifted_combinations": 60
+    },
+    "generators": {
+      "not_in_VD": 0,
+      "tested": 4
+    }
+  },
+  "k": 10,
+  "lift": "hky_lift/0.1 (monomial coordinates, no sigma split)",
+  "low_basis_sha256": "657af0639aa0195d57f57829c3ed7482debdf918b8b66b7de0518944416ef7c2",
+  "maxrss_mb": 1785.91796875,
+  "memory_bytes": {
+    "B": 232558156,
+    "K_full_width": 70291260,
+    "followers_peak": 1051765520
+  },
+  "n_cols_VD": 21700,
+  "one_in_VD": false,
+  "p": 65537,
+  "profile": [
+    0,
+    7,
+    197,
+    1337,
+    6182,
+    21686,
+    60446
+  ],
+  "regular_tops": 37692,
+  "regular_weight_D_rows": 15406,
+  "rounds": 2,
+  "saturated": false,
+  "seconds": 108.794749831,
+  "settings": "LiftOpts { batch_tops: 4096, fall_every: 1, include_low: false, verify_falls: true, follower_cache_gb: 4.0, work_gb: 2.0, hash: true, parts: false, test_no_fall_shifts: false, test_drop_shift: None }",
+  "sigma_parts": null,
+  "special_tops": 1068,
+  "status": "done",
+  "threads": 4,
+  "timing_s": {
+    "checks": 0.7316375609999999,
+    "lift": 105.81690429300001,
+    "read": 0.39176529,
+    "rref": 1.8544511580000003,
+    "total": 108.794758488
+  },
+  "verify": {
+    "all_equal": true,
+    "fields": [
+      {
+        "expected": 10,
+        "field": "k",
+        "got": 10,
+        "result": "equal"
+      },
+      {
+        "expected": 5,
+        "field": "D",
+        "got": 5,
+        "result": "equal"
+      },
+      {
+        "expected": 65537,
+        "field": "p",
+        "got": 65537,
+        "result": "equal"
+      },
+      {
+        "expected": 18569,
+        "field": "dim_VD",
+        "got": 18569,
+        "result": "equal"
+      },
+      {
+        "expected": false,
+        "field": "contains_one",
+        "got": false,
+        "result": "equal"
+      },
+      {
+        "expected": true,
+        "field": "fixed_point",
+        "got": true,
+        "result": "equal"
+      },
+      {
+        "expected": 60446,
+        "field": "dim_VD1",
+        "got": 60446,
+        "result": "equal"
+      },
+      {
+        "expected": [
+          0,
+          7,
+          197,
+          1337,
+          6182,
+          21686,
+          60446
+        ],
+        "field": "profile",
+        "got": [
+          0,
+          7,
+          197,
+          1337,
+          6182,
+          21686,
+          60446
+        ],
+        "result": "equal"
+      },
+      {
+        "expected": 3117,
+        "field": "falls (dim F = dim(V_{D+1} n L) - dim V_D)",
+        "got": 3117,
+        "result": "equal"
+      },
+      {
+        "expected": null,
+        "field": "dim(V_{D+1} n M_<=D)",
+        "got": 21686,
+        "result": "not in expected record"
+      },
+      {
+        "expected": null,
+        "field": "regular_tops (orbit count summed over parts; not the same notion)",
+        "got": 37692,
+        "result": "informational"
+      }
+    ]
+  },
+  "verify_expected_file": "/home/user/crypto-wt/paper-lift/research/hky_paper_runs_20261118/lift_results/expected-proper-p65537-s12-k10-D5to6.json",
+  "verify_falls": {
+    "nonzero": 0,
+    "ran": true,
+    "rows_checked": 62340
+  }
+}

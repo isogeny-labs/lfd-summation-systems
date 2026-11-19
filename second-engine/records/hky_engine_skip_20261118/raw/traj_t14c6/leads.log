@@ -1,0 +1,5 @@
+hky3 c=6 sym=split parts=[249824, 249354] rank=[171769, 171366] par=848.86s second=30.34s serial=4.02s ir=21.10s batches=9430 rounds=23091 irs=29 muladds=1975760981601 ir_muladds=72897031095 products=951765 zero=492290 reducers=893465486 dense=7360 sparse=335775 words=733436435 peak_words=733436435
+kummer   m=2 tower  t=14 hky d_F=None ffd=None falls=[] censored_at=Some(6) 900658 ms
+kummer   m=2 tower  t=14 N=28 g= 1 random  Dmax=  0 reached=  0 cols_to_sol=      0 cols=      0 900657.8 ms  TIMEOUT
+-- kummer m=2 tower: every run at t = 14 timed out; stopping
+{"budget_seconds":900,"p":2013265921,"planted_per_cell":0,"planted_violations":0,"random_per_cell":1,"rows":1,"seed":1347112276,"wall_seconds":900.675288034}

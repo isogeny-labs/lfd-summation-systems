@@ -1,0 +1,98 @@
+[2026-11-18T06:11:37Z] job=J1-unit-p65537-a1-s10-k14-D6 instance=/workspace/in/code/inst.json (fa06148e0276dd459a45ad45e08b751a699ceb2a9a440a8ee07770a9ebeaa1ab) D=6 binary=39acdeac81689a49fa98a9b71e9924bdc29418d80247bece72e372aa41cac74f
+[2026-11-18T06:11:37Z] host: cpu='AMD EPYC 7713 64-Core Processor' nproc=32 mem_total_kb=1056577912 cgroup_max=256000000000 limit_kb=250000000 disk_free_kb=209606516 kernel=6.8.0-147-generic simd='avx2 ' glibc='ldd (Ubuntu GLIBC 2.39-0ubuntu8.7) 2.39'
+[2026-11-18T06:11:37Z] pid=109 args=--instance /workspace/in/code/inst.json --D 6 --checkpoint-every 30 --out /workspace/out/J1-unit-p65537-a1-s10-k14-D6/record.json --checkpoint-dir /workspace/out/J1-unit-p65537-a1-s10-k14-D6/ckpt --export-basis /workspace/out/J1-unit-p65537-a1-s10-k14-D6/basis.bin --hky3-verify-closed on
+[2026-11-18T13:37:53Z] done status=ok rc=0 wall=26723s peak_rss_kb=73882436 basis_sha256=06fdd4e4d00095ad02d9a9cea735ca59eed62843552ee14b43726f76d1ad9d1c
+6824a8bdd8dd326b18c3e52fa1431c80dcf23582f9c52b3d6f375de51b3b1eaa  /workspace/in/code/hky_lift
+06fdd4e4d00095ad02d9a9cea735ca59eed62843552ee14b43726f76d1ad9d1c  /workspace/out/J1-unit-p65537-a1-s10-k14-D6/basis.bin
+f5e5b9ce3cf40d3f68e4612ba969ff2bc88c405805e3e3fa7a0a431b7c673345  /workspace/in/code/lift_ref.json
+exit 0
+{
+  "all_equal": true,
+  "fields": [
+    {
+      "expected": 14,
+      "field": "k",
+      "got": 14,
+      "result": "equal"
+    },
+    {
+      "expected": 6,
+      "field": "D",
+      "got": 6,
+      "result": "equal"
+    },
+    {
+      "expected": 65537,
+      "field": "p",
+      "got": 65537,
+      "result": "equal"
+    },
+    {
+      "expected": 448922,
+      "field": "dim_VD",
+      "got": 448922,
+      "result": "equal"
+    },
+    {
+      "expected": true,
+      "field": "contains_one",
+      "got": true,
+      "result": "equal"
+    },
+    {
+      "expected": true,
+      "field": "fixed_point",
+      "got": true,
+      "result": "equal"
+    },
+    {
+      "expected": 1683218,
+      "field": "dim_VD1",
+      "got": 1683218,
+      "result": "equal"
+    },
+    {
+      "expected": [
+        1,
+        29,
+        407,
+        3683,
+        24158,
+        122438,
+        499178,
+        1683218
+      ],
+      "field": "profile",
+      "got": [
+        1,
+        29,
+        407,
+        3683,
+        24158,
+        122438,
+        499178,
+        1683218
+      ],
+      "result": "equal"
+    },
+    {
+      "expected": 50256,
+      "field": "falls (dim F = dim(V_{D+1} n L) - dim V_D)",
+      "got": 50256,
+      "result": "equal"
+    },
+    {
+      "expected": 499178,
+      "field": "dim(V_{D+1} n M_<=D)",
+      "got": 499178,
+      "result": "equal"
+    },
+    {
+      "expected": 1173002,
+      "field": "regular_tops (orbit count summed over parts; not the same notion)",
+      "got": 1166824,
+      "result": "informational"
+    }
+  ]
+}
+verify exit 0

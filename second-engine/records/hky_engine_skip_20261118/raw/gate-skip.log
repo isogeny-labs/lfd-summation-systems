@@ -1,0 +1,39 @@
+m2-tower-t1-8          EQUAL: 16 cells, every closure, fall degree and censoring field identical
+                       closedness: 36 closures, 19700 reductions, 0 non-zero; skipped 512 of 4916 items
+m2-tower-planted       EQUAL: 12 cells, every closure, fall degree and censoring field identical
+                       closedness: 48 closures, 165408 reductions, 0 non-zero; skipped 14146 of 41340 items
+m2-null-t2-7           EQUAL: 18 cells, every closure, fall degree and censoring field identical
+                       closedness: 58 closures, 123646 reductions, 0 non-zero; skipped 77186 of 123588 items
+m2-naive-t2-4          EQUAL: 6 cells, every closure, fall degree and censoring field identical
+                       closedness: 17 closures, 109 reductions, 0 non-zero; skipped 10 of 82 items
+m3-tower-t2-3          EQUAL: 12 cells, every closure, fall degree and censoring field identical
+                       closedness: 34 closures, 10739 reductions, 0 non-zero; skipped 956 of 4617 items
+m4-tower-t2-3          EQUAL: 2 cells, every closure, fall degree and censoring field identical
+                       closedness: 7 closures, 12725 reductions, 0 non-zero; skipped 2742 of 7014 items
+m5-tower-t2            EQUAL: 2 cells, every closure, fall degree and censoring field identical
+                       closedness: 7 closures, 23489 reductions, 0 non-zero; skipped 6592 of 14707 items
+m6-tower-t2            EQUAL: 2 cells, every closure, fall degree and censoring field identical
+                       closedness: 8 closures, 65036 reductions, 0 non-zero; skipped 21606 of 44724 items
+m7-tower-t2            EQUAL: 2 cells, every closure, fall degree and censoring field identical
+                       closedness: 8 closures, 101354 reductions, 0 non-zero; skipped 37724 of 73734 items
+p0-kummer-isogeny      EQUAL: 36 cells, every closure, fall degree and censoring field identical
+                       closedness: 86 closures, 184078 reductions, 0 non-zero; skipped 17394 of 45998 items
+censor-max-cols        EQUAL: 2 cells, every closure, fall degree and censoring field identical
+                       closedness: 5 closures, 2713 reductions, 0 non-zero; skipped 60 of 677 items
+neg-fault1             negative control ok: 60 differences over 12 cells (expected)
+                       closedness: 48 closures, 11896 reductions, 2104 non-zero; skipped 770 of 2436 items
+neg-fault2             negative control ok: 40 differences over 12 cells (expected)
+                       closedness: 24 closures, 240 reductions, 44 non-zero; skipped 0 of 54 items
+neg-fault3             negative control ok: 40 differences over 12 cells (expected)
+                       closedness: 24 closures, 240 reductions, 96 non-zero; skipped 0 of 54 items
+neg-fault4             negative control ok: 40 differences over 12 cells (expected)
+                       closedness: 24 closures, 240 reductions, 220 non-zero; skipped 0 of 54 items
+neg-fault5             negative control ok: 36 differences over 12 cells (expected)
+                       closedness: 26 closures, 6682 reductions, 168 non-zero; skipped 168 of 1664 items
+neg-fault6             negative control ok: 22 differences over 12 cells (expected)
+                       closedness: 48 closures, 165208 reductions, 232 non-zero; skipped 18764 of 41290 items
+neg-fault7             NEGATIVE CONTROL FAILED: 12 cells compared equal, a difference was expected
+                       closedness: 48 closures, 165408 reductions, 0 non-zero; skipped 15882 of 41340 items
+neg-fault8             negative control ok: 22 differences over 12 cells (expected)
+                       closedness: 48 closures, 165208 reductions, 24560 non-zero; skipped 25054 of 41290 items
+GATE PASS
