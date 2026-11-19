@@ -439,3 +439,27 @@ the 600-second wall limit. Both complete retained proofs passed independent
 Rust replay (about 1.095 billion multiply-adds each). Neither contains 1;
 neither establishes exclusion or closedness. Original input and adjusted
 budget-input hashes are recorded separately in the receipts.
+
+
+The five follow-up frontier searches are terminal, each at 180 seconds:
+
+| Original task | Retained generators | Retained terms |
+| --- | ---: | ---: |
+| depth14 p=65537, D6 | 1,714 | 4,286,144 |
+| depth14 p=163841, D6 | 1,719 | 4,306,310 |
+| split p=114689, D8 | 1,522 | 5,585,690 |
+| split p=163841, D8 | 1,525 | 5,602,836 |
+| frozen depth18 D8 | 960 | 5,880,578 |
+
+Every retained proof passed independent Rust replay. None contains 1 or
+establishes closedness. Different generator counts and concurrent capped
+wall times are not an exactness or timing comparison. All workers launched
+in this batch are terminal. The original completion requirements remain open.
+
+
+Derived leading coverage for the final frontier depth14 lists is only
+27,751 and 27,756, respectively. Thus their larger generator counts do not
+recover the broad coverage of the earlier degree-first lists (256,042 and
+256,020). This schedule has not improved the archived-basis certificate
+route. It remains an optional witness-search heuristic, with no witnessed
+unit or exactness result in this batch.
