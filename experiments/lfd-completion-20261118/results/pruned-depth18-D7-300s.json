@@ -1,0 +1,51 @@
+{
+  "status": "capped",
+  "contains_one": false,
+  "compact_rows": 1345,
+  "terms": 1150407,
+  "pairs_processed": 23617,
+  "queued": 467812,
+  "coprime_pairs_skipped": 50077,
+  "muladds": 7751444906,
+  "seconds": 300.000074,
+  "claim": "retained polynomial membership independently replayed; compact closedness remains unproved",
+  "producer_claim": "membership pending replay; compact closedness criterion unproved",
+  "pair_strategy": "coprime-pruned",
+  "replay_engine": "rust",
+  "engine": "rust",
+  "budget": {
+    "seconds": 300,
+    "max_rows": 10000,
+    "max_terms": 2000000,
+    "max_queue": 2000000,
+    "proof_byte_cap": 268435456,
+    "rss_cap_bytes": 2147483648
+  },
+  "replay": {
+    "status": "passed",
+    "verified_rows": 1345,
+    "contains_one": false,
+    "closed_check": false,
+    "replay_muladds": 598572365,
+    "seconds": 16.077079,
+    "scope": "independent compact row membership only",
+    "input_sha256": "e6f17135a1c311efeda710b5ea31981a3d6b5f29ecf85420cbc0254374bf1c1e",
+    "proof_sha256": "2cb10a51dbdc63937c7d32b69ed9138884f15f0a1bcd25165d54ad0b70d8af89",
+    "text_sha256": "86cff3517b525fabaaf8a613cac3aa40038cbe51beafce078534e5461093525a",
+    "text_bytes": 61130411,
+    "nodes": 1345,
+    "verifier_source_sha256": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151",
+    "verifier_binary_sha256": "3b4feac9e19e4a47bc53f23edf188bc1537889fa70e3f9e6077af67d037f46eb",
+    "converter_source_sha256": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb"
+  },
+  "source_sha256": {
+    "compact_producer.rs": "a89cef0931fe76e1744274bef88d50f9ff614e80127ed9beb0332ea801548cff",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run_compact.py": "7cd610b4d567d77b6b661bc33b97cd824e4375ed7bfd26fabb952286f943f41c",
+    "compact_replay_rust.py": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb",
+    "compact_replay.rs": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151"
+  },
+  "input_sha256": "e6f17135a1c311efeda710b5ea31981a3d6b5f29ecf85420cbc0254374bf1c1e",
+  "original_input_sha256": "cb641bcd76a65b97763852ba29ddcb96adb20438810e55b0bf0caba27ed4194c",
+  "proof_sha256": "2cb10a51dbdc63937c7d32b69ed9138884f15f0a1bcd25165d54ad0b70d8af89"
+}

@@ -14,6 +14,7 @@ impl Ring{
  fn mul(&self,x:u64,y:u64)->u64{let mask=(1u64<<self.k)-1;let mut z=0;for b in 0..self.m{let shift=b*self.k;z|=((((x>>shift)&mask)+((y>>shift)&mask))&mask)<<shift;}for j in 0..self.a{let shift=self.r+6*j;let e=((x>>shift)&63)+((y>>shift)&63);assert!(e<64);z|=e<<shift;}z}
  fn quotient(&self,x:u64,y:u64)->Option<u64>{let mask=(1u64<<self.r)-1;if (x&y&mask)!=(y&mask){return None;}let mut z=(x^y)&mask;for j in 0..self.a{let shift=self.r+6*j;let ex=(x>>shift)&63;let ey=(y>>shift)&63;if ex<ey{return None;}z|=(ex-ey)<<shift;}Some(z)}
  fn lcm(&self,x:u64,y:u64)->u64{let mut z=(x|y)&((1u64<<self.r)-1);for j in 0..self.a{let shift=self.r+6*j;z|=((x>>shift)&63).max((y>>shift)&63)<<shift;}z}
+ fn coprime(&self,x:u64,y:u64)->bool{if (x&y&((1u64<<self.r)-1))!=0{return false;}for j in 0..self.a{let shift=self.r+6*j;if ((x>>shift)&63)>0&&((y>>shift)&63)>0{return false;}}true}
  fn aux_search(&self,x:u64,prefix:u64,j:u32,lookup:&HashMap<u64,usize>,best:&mut Option<usize>){
   if *best==Some(0){return;}
   if j==self.a{if let Some(&id)=lookup.get(&prefix){if best.map_or(true,|old|id<old){*best=Some(id);}}return;}
@@ -28,7 +29,7 @@ fn inverse(mut a:u64,p:u64)->u32{let mut n=p-2;let mut z=1;while n!=0{if n&1!=0{
 enum Source{Input(usize),Carry(usize,u32),Pair(usize,usize)}
 struct Engine{
  ring:Ring,basis:Vec<Row>,leads:Vec<u64>,lookup:HashMap<u64,usize>,queue:BinaryHeap<Reverse<(u32,u64,u8,usize,usize)>>,
- serial:u64,processed:u64,ops:u64,terms:u64,max_rows:usize,max_terms:u64,max_queue:usize,seconds:u64,start:Instant,log:BufWriter<File>,nodes:usize,
+ serial:u64,processed:u64,ops:u64,terms:u64,prune_coprime:bool,skipped:u64,max_rows:usize,max_terms:u64,max_queue:usize,seconds:u64,start:Instant,log:BufWriter<File>,nodes:usize,
 }
 impl Engine{
  fn budget(&self)->Result<(),()>{if self.start.elapsed().as_secs()>=self.seconds||self.basis.len()>=self.max_rows||self.terms>=self.max_terms||self.queue.len()>=self.max_queue{Err(())}else{Ok(())}}
@@ -57,7 +58,7 @@ impl Engine{
   if lead==0{return Ok(());}
   let degree=ring.degree(lead);
   if degree<ring.d{for v in 0..ring.r{if lead>>v&1!=0{self.enqueue(degree+1,0,i,v as usize)?;}}}
-  for j in 0..i{let deg=ring.degree(ring.lcm(lead,self.leads[j]));if deg<=ring.d{self.enqueue(deg,1,i,j)?;}if j%4096==0{self.budget()?;}}
+  for j in 0..i{let deg=ring.degree(ring.lcm(lead,self.leads[j]));if deg<=ring.d{if self.prune_coprime&&ring.coprime(lead,self.leads[j]){self.skipped+=1;}else{self.enqueue(deg,1,i,j)?;}}if j%4096==0{self.budget()?;}}
   Ok(())
  }
  fn run(&mut self,gens:Vec<Row>)->Result<(),()>{
@@ -73,12 +74,12 @@ impl Engine{
  }
 }
 fn main(){
- let args:Vec<String>=std::env::args().collect();assert!(args.len()==3||args.len()==4,"input proof [max_queue]");let mut text=String::new();File::open(&args[1]).unwrap().read_to_string(&mut text).unwrap();let mut it=text.split_whitespace();
+ let args:Vec<String>=std::env::args().collect();assert!(args.len()>=3&&args.len()<=5,"input proof [max_queue [coprime]]");if args.len()==5{assert_eq!(args[4],"coprime");};let mut text=String::new();File::open(&args[1]).unwrap().read_to_string(&mut text).unwrap();let mut it=text.split_whitespace();
  macro_rules! n{()=>{it.next().unwrap().parse::<u64>().unwrap()};}
  let p=n!() as u32;let m=n!() as u32;let k=n!() as u32;let a=n!() as u32;let d=n!() as u32;let seconds=n!();let max_rows=n!() as usize;let max_terms=n!();let r=m*k;
  assert!(p>3&&p<(1<<24)&&k>0&&r>0&&r+6*a<64&&d<63);let ring=Ring{p,m,k,a,d,r};
  let count=n!();let mut gens=Vec::new();for _ in 0..count{let n=n!();let mut g=Vec::new();for _ in 0..n{let x=n!();let c=n!();assert!(x>>(r+6*a)==0&&c<p as u64);g.push((x,c as u32));}gens.push(g);}assert!(it.next().is_none());
- let mut engine=Engine{ring,basis:Vec::new(),leads:Vec::new(),lookup:HashMap::new(),queue:BinaryHeap::new(),serial:0,processed:0,ops:0,terms:0,max_rows,max_terms,max_queue:if args.len()==4{args[3].parse().unwrap()}else{2_000_000},seconds,start:Instant::now(),log:BufWriter::new(File::create(&args[2]).unwrap()),nodes:0};
+ let mut engine=Engine{ring,basis:Vec::new(),leads:Vec::new(),lookup:HashMap::new(),queue:BinaryHeap::new(),serial:0,processed:0,ops:0,terms:0,prune_coprime:args.len()==5,skipped:0,max_rows,max_terms,max_queue:if args.len()>=4{args[3].parse().unwrap()}else{2_000_000},seconds,start:Instant::now(),log:BufWriter::new(File::create(&args[2]).unwrap()),nodes:0};
  write!(engine.log,"{{\"trace\":[").unwrap();let capped=engine.run(gens).is_err();write!(engine.log,"]}}\n").unwrap();engine.log.flush().unwrap();let one=engine.lookup.contains_key(&0);
- println!("{{\"status\":\"{}\",\"contains_one\":{},\"compact_rows\":{},\"terms\":{},\"pairs_processed\":{},\"queued\":{},\"muladds\":{},\"seconds\":{:.6},\"claim\":\"membership pending replay; compact closedness criterion unproved\"}}",if one{"unit-witness"}else if capped{"capped"}else{"provisional-complete"},one,engine.basis.len(),engine.terms,engine.processed,engine.queue.len(),engine.ops,engine.start.elapsed().as_secs_f64());
+ println!("{{\"status\":\"{}\",\"contains_one\":{},\"compact_rows\":{},\"terms\":{},\"pairs_processed\":{},\"queued\":{},\"coprime_pairs_skipped\":{},\"muladds\":{},\"seconds\":{:.6},\"claim\":\"membership pending replay; compact closedness criterion unproved\"}}",if one{"unit-witness"}else if capped{"capped"}else{"provisional-complete"},one,engine.basis.len(),engine.terms,engine.processed,engine.queue.len(),engine.skipped,engine.ops,engine.start.elapsed().as_secs_f64());
 }

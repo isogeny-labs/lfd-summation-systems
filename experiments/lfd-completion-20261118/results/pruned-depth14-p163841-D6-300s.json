@@ -1,0 +1,51 @@
+{
+  "status": "capped",
+  "contains_one": false,
+  "compact_rows": 1344,
+  "terms": 1147832,
+  "pairs_processed": 23582,
+  "queued": 157806,
+  "coprime_pairs_skipped": 3576,
+  "muladds": 7716163375,
+  "seconds": 300.000044,
+  "claim": "retained polynomial membership independently replayed; compact closedness remains unproved",
+  "producer_claim": "membership pending replay; compact closedness criterion unproved",
+  "pair_strategy": "coprime-pruned",
+  "replay_engine": "rust",
+  "engine": "rust",
+  "budget": {
+    "seconds": 300,
+    "max_rows": 10000,
+    "max_terms": 2000000,
+    "max_queue": 2000000,
+    "proof_byte_cap": 268435456,
+    "rss_cap_bytes": 2147483648
+  },
+  "replay": {
+    "status": "passed",
+    "verified_rows": 1344,
+    "contains_one": false,
+    "closed_check": false,
+    "replay_muladds": 596113560,
+    "seconds": 15.964498,
+    "scope": "independent compact row membership only",
+    "input_sha256": "e5a59b43cd59812587d2d37773d1328f08d1702a9c2b9867fb5a40443a664ff8",
+    "proof_sha256": "b2e984451904589dfb9c53236b847bf2a47a63524c96610880c5216b4a43ac89",
+    "text_sha256": "e1525b85daae495940dbe06c240a6d3e04506b64822ab8e1984ef20739936b19",
+    "text_bytes": 52948248,
+    "nodes": 1344,
+    "verifier_source_sha256": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151",
+    "verifier_binary_sha256": "660d06ce4d83836fbe97d3e768c2b1c9131c1ae0c3ffb7e46782c555cc50ced2",
+    "converter_source_sha256": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb"
+  },
+  "source_sha256": {
+    "compact_producer.rs": "a89cef0931fe76e1744274bef88d50f9ff614e80127ed9beb0332ea801548cff",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run_compact.py": "7cd610b4d567d77b6b661bc33b97cd824e4375ed7bfd26fabb952286f943f41c",
+    "compact_replay_rust.py": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb",
+    "compact_replay.rs": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151"
+  },
+  "input_sha256": "e5a59b43cd59812587d2d37773d1328f08d1702a9c2b9867fb5a40443a664ff8",
+  "original_input_sha256": "a11b35b4252ad5ac43af547beec8cb825d91847f7e81ed23dbf95a02d4b6d3fd",
+  "proof_sha256": "b2e984451904589dfb9c53236b847bf2a47a63524c96610880c5216b4a43ac89"
+}

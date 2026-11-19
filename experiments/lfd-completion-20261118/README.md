@@ -369,3 +369,41 @@ record, including its curve/target checks and required canonical hashes.
 Both original depth14 inputs, both split instances and the frozen
 breakpoint remain in scope. Follow-on depth18 searches use five-minute
 producer caps and retain the same resource guards.
+
+
+## Independent compiled replay and coprime-pair pruning
+
+The independent Rust checker replays compact row identities using decoded
+exponent vectors and records input, proof, converted-text, source and binary
+hashes. It checks membership only. The wrapper freezes verifier source bytes
+before a long producer run and checks that proof conversion preserves its
+bound inputs. Both the Python and Rust checkers passed all 2,075 direct-closure
+controls. The local regression suite has 92 passing tests.
+
+An optional producer variant skips pairs with coprime leading monomials.
+On the same 2,075 controls it skipped 785 pairs, preserved every retained
+trace and agreed with direct closure; both replayers passed. This is a
+falsification result, not a proof of the draft bounded criterion. An
+independent closedness check must still assess every required condition.
+
+The six five-minute pruned searches all passed independent Rust replay:
+
+| Original task | Retained generators | Stop |
+| --- | ---: | --- |
+| depth14 p=65537, D6 | 1,346 | 300 seconds |
+| depth14 p=163841, D6 | 1,344 | 300 seconds |
+| split p=114689, D8 | 790 | 2,000,290 terms |
+| split p=163841, D8 | 790 | 2,000,306 terms |
+| frozen depth18 D7 | 1,345 | 300 seconds |
+| frozen depth18 D8 | 1,345 | 300 seconds |
+
+None contains a retained constant polynomial. These partial lists establish
+neither exclusion of 1 nor exact closure. The depth18 D7 and D8 converted
+proofs are identical at this stopping point: the searches have not yet
+reached work that distinguishes those degree budgets.
+
+Both split inputs are being tested with ten-million-term and 600-second
+caps, preserving the two-GiB RSS, 256-MiB proof and disk guards. Their
+receipts, once terminal and replayed, determine their status. CI run
+44469176506 passed the Python tests and Lean build/axiom audit on fe9ae7d;
+that result does not cover subsequent verifier and pruning changes.

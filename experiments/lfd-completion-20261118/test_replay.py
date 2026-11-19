@@ -367,6 +367,8 @@ def test_compiled_compact_high_chain_wrap_witness(tmp_path,compiled_compact):
     assert result['status']=='unit-witness' and result['contains_one']
     data=json.loads(proof.read_text());data['input_sha256']=hashlib.sha256(inp.read_bytes()).hexdigest();proof.write_text(json.dumps(data))
     assert verify(inp,proof)['contains_one']
+    from compact_replay_rust import verify as rust_verify
+    assert rust_verify(inp,proof)['contains_one']
 
 
 def test_compact_runner_refuses_existing_tag(tmp_path,monkeypatch):
@@ -394,3 +396,41 @@ def test_compiled_compact_three_auxiliary_variables(tmp_path,compiled_compact):
     data['input_sha256']=hashlib.sha256(inp.read_bytes()).hexdigest();proof.write_text(json.dumps(data));assert not verify(inp,proof)['contains_one']
     binary=tmp_path/'reference';subprocess.run(['rustc','-O',str(HERE/'sparse_producer.rs'),'-o',str(binary)],check=True)
     reference=direct(binary,tmp_path,R,gens);assert reference['status']=='closed' and reference['derived_rank']==C.candidate_rank()
+
+
+@pytest.mark.parametrize('bad',[True,'0 999'])
+def test_compact_text_conversion_rejects_token_injection(tmp_path,bad):
+    import json
+    from compact_replay_rust import convert
+    inp=tmp_path/'input';inp.write_bytes((SRC/'input.txt').read_bytes());proof=tmp_path/'proof'
+    proof.write_text(json.dumps({'input_sha256':hashlib.sha256(inp.read_bytes()).hexdigest(),'trace':[{'source':['input',bad],'inverse':1,'reductions':[],'row':[[0,1]]}]}))
+    with pytest.raises(ValueError,match='unsigned integer'):convert(inp,proof,tmp_path/'converted')
+
+
+def test_compact_rust_replay_binds_converted_bytes(tmp_path,monkeypatch):
+    import json
+    import compact_replay_rust as checker
+    from compact_candidate import Ring,Compact
+    inp=tmp_path/'input';inp.write_text('17 1 2 0 2 10 100 10000\n1\n1 2 1\n');C=Compact(Ring(17,1,2,0,2));C.run([{2:1}]);proof=tmp_path/'proof'
+    proof.write_text(json.dumps({'input_sha256':hashlib.sha256(inp.read_bytes()).hexdigest(),'trace':C.trace}))
+    def mutate(input_path,text,binary):
+        text.write_text('changed');return {'status':'passed','verified_rows':2,'contains_one':True}
+    monkeypatch.setattr(checker,'run_backend',mutate)
+    with pytest.raises(ValueError,match='converted text changed'):checker.verify(inp,proof)
+
+
+def test_coprime_pruning_readings_against_direct_closure(tmp_path):
+    import subprocess,sys,json
+    out=tmp_path/'pruned.json'
+    subprocess.run([sys.executable,str(HERE/'compact_falsify.py'),'--trials','64','--compiled','--prune-coprime','--out',str(out)],capture_output=True,text=True,check=True)
+    assert json.loads(out.read_text())['all_agree']
+
+
+def test_coprime_product_pair_is_skipped(tmp_path,compiled_compact):
+    import subprocess,json
+    from compact_replay import verify
+    inp=tmp_path/'input';inp.write_text('17 1 1 2 2 10 100 10000\n2\n2 0 16 2 1\n2 0 16 128 1\n');proof=tmp_path/'proof'
+    result=json.loads(subprocess.run([str(compiled_compact),str(inp),str(proof),'2000000','coprime'],capture_output=True,text=True,check=True).stdout)
+    assert result['status']=='provisional-complete' and result['coprime_pairs_skipped']==1 and result['pairs_processed']==0
+    data=json.loads(proof.read_text());data['input_sha256']=hashlib.sha256(inp.read_bytes()).hexdigest();proof.write_text(json.dumps(data))
+    assert verify(inp,proof)['verified_rows']==2

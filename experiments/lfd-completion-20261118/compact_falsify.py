@@ -17,7 +17,8 @@ def direct(binary,dest,R,gens):
     return out
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--trials',type=int,default=200);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--exhaustive-univariate',action='store_true');ap.add_argument('--compiled',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--trials',type=int,default=200);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--exhaustive-univariate',action='store_true');ap.add_argument('--compiled',action='store_true');ap.add_argument('--prune-coprime',action='store_true');args=ap.parse_args()
+    if args.prune_coprime and not args.compiled:raise ValueError('compiled producer required')
     rng=random.Random(20261119);records=[]
     sources={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'compact_candidate.py',Path(__file__),HERE/'sparse_producer.rs',HERE/'compact_replay.py',HERE/'replay.py',HERE/'compact_producer.rs',HERE/'compact_replay.rs',HERE/'compact_replay_rust.py']}
     with tempfile.TemporaryDirectory(prefix='compact-falsify-') as tmp:
@@ -51,9 +52,11 @@ def main():
             ref=direct(binary,d,R,gens);candidate=Compact(R,seconds=5);out=candidate.run(gens)
             proof=d/'proof.json';trace=candidate.trace;python_out=out;trace_identity=None
             if args.compiled:
-                out=json.loads(subprocess.run([str(compiled),str(d/'input'),str(proof)],capture_output=True,text=True,check=True).stdout)
+                command=[str(compiled),str(d/'input'),str(proof)]
+                if args.prune_coprime:command.extend(['2000000','coprime'])
+                out=json.loads(subprocess.run(command,capture_output=True,text=True,check=True).stdout)
                 trace=json.loads(proof.read_text())['trace'];trace_identity=trace==json.loads(json.dumps(candidate.trace))
-                if not trace_identity:raise AssertionError(f'compiled derivation differs in case {i}')
+                if not trace_identity and not args.prune_coprime:raise AssertionError(f'compiled derivation differs in case {i}')
             proof.write_text(json.dumps({'input_sha256':hashlib.sha256((d/'input').read_bytes()).hexdigest(),'trace':trace}))
             membership=verify(d/'input',proof)
             assert membership['contains_one']==out['contains_one']
@@ -61,6 +64,8 @@ def main():
             if args.compiled:
                 text=d/'proof.txt';convert(d/'input',proof,text);rust_membership=run_backend(d/'input',text,compact_checker)
                 assert rust_membership['contains_one']==membership['contains_one'] and rust_membership['verified_rows']==membership['verified_rows']
+            if args.prune_coprime:
+                candidate.G=[dict(node['row']) for node in trace];candidate.leads=[max(g,key=R.key) for g in candidate.G];candidate.capped=out['status']=='capped'
             rank=None if out['contains_one'] else candidate.candidate_rank() if not candidate.capped else None
             ok=not candidate.capped and out['contains_one']==ref['contains_one'] and (out['contains_one'] or rank==ref['derived_rank'])
             rec={'case':i,'parameters':vars(R),'input_sha256':hashlib.sha256(text_input(R,gens).encode()).hexdigest(),'candidate':out,'python_candidate':python_out,'compiled_trace_identity':trace_identity,'candidate_rank':rank,'reference':ref,'membership_replay':membership,'rust_membership_replay':rust_membership,'agrees':ok}

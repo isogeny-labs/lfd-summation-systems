@@ -3,6 +3,7 @@ import argparse,hashlib,json,subprocess,tempfile
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 CONVERTER_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+BACKEND_SOURCE_BYTES=(HERE/'compact_replay.rs').read_bytes()
 
 def convert(inp,proof,dest):
     inp=Path(inp);proof=Path(proof);body=proof.read_bytes();data=json.loads(body);input_sha=hashlib.sha256(inp.read_bytes()).hexdigest()
@@ -42,7 +43,7 @@ def verify(inp,proof):
     inp=Path(inp);proof=Path(proof);source=HERE/'compact_replay.rs'
     with tempfile.TemporaryDirectory(prefix='compact-check-',dir=proof.parent) as tmp:
         tmp=Path(tmp);text=tmp/'proof.txt';binding=convert(inp,proof,text);binary=tmp/'checker'
-        source_bytes=source.read_bytes();source_sha=hashlib.sha256(source_bytes).hexdigest();snapshot=tmp/'compact_replay.rs';snapshot.write_bytes(source_bytes);subprocess.run(['rustc','-O',str(snapshot),'-o',str(binary)],check=True)
+        source_bytes=BACKEND_SOURCE_BYTES;source_sha=hashlib.sha256(source_bytes).hexdigest();snapshot=tmp/'compact_replay.rs';snapshot.write_bytes(source_bytes);subprocess.run(['rustc','-O',str(snapshot),'-o',str(binary)],check=True)
         binary_sha=hashlib.sha256(binary.read_bytes()).hexdigest();result=run_backend(inp,text,binary)
         if hashlib.sha256(text.read_bytes()).hexdigest()!=binding['text_sha256']:raise ValueError('converted text changed during replay')
     if hashlib.sha256(proof.read_bytes()).hexdigest()!=binding['proof_sha256']:raise ValueError('proof changed during replay')
