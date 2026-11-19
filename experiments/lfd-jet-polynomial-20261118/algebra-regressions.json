@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "scope": "exact symbolic identities and finite Frobenius checks, not an asymptotic closure computation",
+  "cells": [
+    {
+      "k": 2,
+      "p": 17,
+      "frobenius_factor_fixed": true,
+      "proper_grid_point": [
+        4,
+        4
+      ]
+    },
+    {
+      "k": 3,
+      "p": 257,
+      "frobenius_factor_fixed": true,
+      "proper_grid_point": [
+        4,
+        4
+      ]
+    },
+    {
+      "k": 4,
+      "p": 65537,
+      "frobenius_factor_fixed": true,
+      "proper_grid_point": [
+        4,
+        4
+      ]
+    },
+    {
+      "k": 5,
+      "p": 641,
+      "frobenius_factor_fixed": true,
+      "proper_grid_point": [
+        4,
+        4
+      ]
+    },
+    {
+      "k": 6,
+      "p": 274177,
+      "frobenius_factor_fixed": true,
+      "proper_grid_point": [
+        4,
+        4
+      ]
+    }
+  ],
+  "negative_controls": [
+    "altered-factor-square",
+    "witness-derivative-does-not-vanish"
+  ],
+  "source_sha256": "ab930b336e5374059cda7bf1449eec0084006cc8476c567e987bfe1d7d172f3f"
+}

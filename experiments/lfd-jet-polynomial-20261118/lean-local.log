@@ -1,0 +1,23 @@
+'ICFallDegrees.GrowthJetPolynomial.coeff_euler' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.boxed_euler' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.euler_topPart' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.euler_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.derivative_shift_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.jetSpace_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.normalized_mem_jetSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.closure_normalForm_mem_jetSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.lfd_gt_of_derivative_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6_input_jet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6Witness_mem_ideal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6Witness_reduced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.expand_e6Witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6Witness_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.euler_e6Factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6_derivative_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6_prime_lfd_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ICFallDegrees.GrowthJetPolynomial.e6_prime_lfd_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
