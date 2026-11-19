@@ -109,3 +109,37 @@ The runner now refuses to overwrite any existing run directory. It captures
 source hashes before launching each child. runner-resource-guard.py.txt
 preserves the exact prior runner used for D6/D7/D8 and the depth10 probe;
 initial-runner.py.txt remains the source of the first gate suite.
+
+## Heap accumulator and streaming compressed proofs
+
+`heap_producer.rs` retains the same immutable row schedule and proof format,
+using a reusable hash accumulator and a lazy leading-term heap. On the
+recorded p=114689 split degree-7 input it produced byte-identical ledger
+and basis files to `sparse_producer.rs`: 27,838 rows and 106,110 products.
+The local comparison measured 27.36 seconds for the baseline and 11.67
+seconds for the heap version. These are single local timings, not an
+end-to-end solver comparison. `results/heap-D7-comparison.json` binds the
+outputs and sources; `heap_accumulator_only.rs.txt` preserves that exact
+pre-compression source.
+
+The current producer streams `.gz` output through gzip and waits for both
+compressors before reporting success. `run_heap.py INPUT TAG --seconds N`
+compiles a source-bound binary into a fresh run directory, records compressed
+and decoded SHA256 values separately, and enforces the existing disk floor,
+artifact size and external time guards. It changes only the input time budget.
+The independent Rust replayer accepts these compressed files directly and
+requires successful gzip decoding, including the end-of-stream checksum.
+
+The 21 local tests cover plain and compressed production, exact agreement
+with the original producer on both chain and split systems, independent
+replay, forged rows, invalid degree shifts, future references, truncated
+gzip files and overwrite refusal. Production and full replay of the degree-7
+compressed certificate have separate receipts. This engineering work does
+not supply the outstanding degree-8 witness, depth-14 input bindings or
+depth-18 breakpoint.
+
+The same refusal suite is wired into the Python CI job. Local success is
+recorded separately from the CI result on the pushed commit. The second
+planned prime, p=163841, now also has a complete degree-7 certificate:
+27,838 rows, independently replayed with full closedness and exclusion of 1.
+The frozen seed-0 input identity is in split-p163841-instance-identity.json.

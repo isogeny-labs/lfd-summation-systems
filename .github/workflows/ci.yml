@@ -30,6 +30,10 @@ jobs:
         run: python -m compileall -q csd scripts experiments tests
       - name: Unit tests of the certificate code
         run: python -m pytest -q tests
+      - name: Sparse LFD derivations, compressed proofs and refusal controls
+        run: |
+          rustc --version
+          python -m pytest -q experiments/lfd-completion-20261118/test_replay.py
       - name: Saved hashes, audit report, sweep counts, submission abstract and PDF metadata
         # Before the steps below, which rewrite a timing field and redraw figures in the checkout.
         run: |

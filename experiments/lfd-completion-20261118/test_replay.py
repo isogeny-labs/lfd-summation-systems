@@ -81,3 +81,71 @@ def test_runner_refuses_existing_artifact_directory(tmp_path,monkeypatch):
     with pytest.raises(FileExistsError,match='refusing to overwrite'):
         runner.run_case('existing',17,2,2,0,3,[{0:1}])
     assert (old/'result.json').read_text()=='preserve me'
+
+@pytest.fixture(scope='module')
+def heap_producer(tmp_path_factory):
+    import subprocess
+    out=tmp_path_factory.mktemp('heap-producer')/'producer'
+    subprocess.run(['rustc','-O',str(HERE/'heap_producer.rs'),'-o',str(out)],check=True)
+    return out
+
+
+@pytest.mark.parametrize('compressed',[False,True])
+def test_heap_certificate_matches_sample(tmp_path,heap_producer,compressed):
+    import subprocess,gzip,json
+    inp,ledger,basis=clone(tmp_path)
+    expected=[ledger.read_bytes(),basis.read_bytes()]
+    paths=[tmp_path/('new-'+name+('.gz' if compressed else '')) for name in ['derivations.txt','basis.txt']]
+    r=subprocess.run([str(heap_producer),str(inp),*map(str,paths)],capture_output=True,text=True,check=True)
+    assert json.loads(r.stdout)['status']=='closed'
+    decoded=[gzip.decompress(p.read_bytes()) if compressed else p.read_bytes() for p in paths]
+    assert decoded==expected
+    for path,data in zip([ledger,basis],decoded):path.write_bytes(data)
+    assert replay(inp,ledger,basis,hashlib.sha256(basis.read_bytes()).hexdigest(),closed=True)['one_excluded']
+
+
+def test_rust_gzip_replay_and_truncation(tmp_path,rust_checker):
+    import gzip,subprocess
+    inp,ledger,basis=clone(tmp_path)
+    paths=[]
+    for p in [ledger,basis]:
+        dest=p.with_suffix('.txt.gz');dest.write_bytes(gzip.compress(p.read_bytes()));paths.append(dest)
+    cmd=[str(rust_checker),str(inp),*map(str,paths),'closed']
+    assert subprocess.run(cmd,capture_output=True).returncode==0
+    paths[0].write_bytes(paths[0].read_bytes()[:-8])
+    assert subprocess.run(cmd,capture_output=True).returncode!=0
+
+
+@pytest.mark.parametrize('name',['gate-k2-D4','gate-k3-D4','gate-m3-k2-D5','gate-m4-k2-D5','gate-m5-k3-D5'])
+def test_heap_matches_baseline_on_chain_and_split_inputs(tmp_path,heap_producer,rust_checker,name):
+    import subprocess,json
+    baseline=tmp_path/'baseline-producer'
+    subprocess.run(['rustc','-O',str(HERE/'sparse_producer.rs'),'-o',str(baseline)],check=True)
+    inp=HERE/'inputs'/(name+'.txt')
+    results=[]
+    for tag,binary in [('baseline',baseline),('heap',heap_producer)]:
+        ledger=tmp_path/(tag+'.ledger');basis=tmp_path/(tag+'.basis')
+        result=json.loads(subprocess.run([str(binary),str(inp),str(ledger),str(basis)],capture_output=True,text=True,check=True).stdout)
+        assert result['status'] in ['closed','unit-witness']
+        results.append((ledger.read_bytes(),basis.read_bytes(),result['contains_one']))
+    assert results[0]==results[1]
+    cmd=[str(rust_checker),str(inp),str(tmp_path/'heap.ledger'),str(tmp_path/'heap.basis')]
+    if not results[1][2]:cmd.append('closed')
+    assert subprocess.run(cmd,capture_output=True).returncode==0
+
+
+@pytest.mark.parametrize('corrupt',['input','compressed','decoded'])
+def test_compressed_receipt_binding_refuses_mutation(tmp_path,corrupt):
+    import gzip,json
+    from verify_compressed import verify
+    inp,ledger,basis=clone(tmp_path)
+    artifacts={}
+    for p in [ledger,basis]:
+        dest=p.with_suffix('.txt.gz');dest.write_bytes(gzip.compress(p.read_bytes()))
+        artifacts[dest.name]={'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'decoded_sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+    receipt={'input_sha256':hashlib.sha256(inp.read_bytes()).hexdigest(),'artifacts':artifacts}
+    if corrupt=='input':inp.write_text(inp.read_text()+' 99')
+    elif corrupt=='compressed':(tmp_path/'basis.txt.gz').write_bytes(b'changed')
+    else:receipt['artifacts']['basis.txt.gz']['decoded_sha256']='wrong'
+    (tmp_path/'result.json').write_text(json.dumps(receipt))
+    with pytest.raises(ValueError,match='digest mismatch'):verify(tmp_path)

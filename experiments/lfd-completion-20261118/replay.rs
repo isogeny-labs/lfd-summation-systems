@@ -4,6 +4,13 @@ use std::io::{BufRead,BufReader,Read};
 use std::fs::File;
 use std::time::Instant;
 type Poly=Vec<(u64,u32)>;
+fn proof_reader(path:&str)->(Box<dyn Read>,Option<std::process::Child>){
+ if path.ends_with(".gz"){
+  let mut child=std::process::Command::new("gzip").args(["-d","-c",path])
+   .stdout(std::process::Stdio::piped()).spawn().unwrap();
+  let output=child.stdout.take().unwrap();(Box::new(output),Some(child))
+ }else{(Box::new(File::open(path).unwrap()),None)}
+}
 fn numbers(s:&str)->Vec<u64>{s.split_whitespace().map(|v|v.parse().expect("integer")).collect()}
 fn deg(x:u64,r:u32,a:u32)->u32{
  let chain=x%(1u64<<r);let mut w=chain.count_ones();let mut aux=x>>r;
@@ -45,7 +52,8 @@ fn main(){
  let mut trial=2;while trial*trial<=p{assert_ne!(p%trial,0,"not prime");trial+=1;}
  let ng=data[8] as usize;let mut at=9;let mut gens=Vec::new();
  for _ in 0..ng{let n=data[at] as usize;at+=1;let mut v=Vec::new();for _ in 0..n{let x=data[at];let c=data[at+1];at+=2;assert!(c>0&&c<p);v.push((x,c as u32));}gens.push(v);}assert_eq!(at,data.len());
- let logs=BufReader::new(File::open(&args[2]).unwrap());let mut rows=BufReader::new(File::open(&args[3]).unwrap()).lines();
+ let (log_reader,log_child)=proof_reader(&args[2]);let (row_reader,row_child)=proof_reader(&args[3]);
+ let logs=BufReader::new(log_reader);let mut rows=BufReader::new(row_reader).lines();
  let mut basis:Vec<Poly>=Vec::new();let mut piv=HashMap::new();let mut ops=0u64;
  for (id,line) in logs.lines().enumerate(){
   let line=line.unwrap();let toks:Vec<&str>=line.split_whitespace().collect();assert!(toks.len()>=6);
@@ -70,6 +78,7 @@ fn main(){
   if id%10000==9999{eprintln!("checked={} replay_muladds={} seconds={:.2}",id+1,ops,start.elapsed().as_secs_f64());}
  }
  assert!(rows.next().is_none(),"extra basis row");
+ for child in [log_child,row_child]{if let Some(mut c)=child{assert!(c.wait().unwrap().success(),"gzip decode failed");}}
  let check=args.len()==5;let one=piv.contains_key(&0);
  if check{
   for g in gens{if g.iter().all(|&(x,_)|deg(x,r,a)<=d){assert!(closed_residual(g,&basis,&piv,p,r,a),"missing input");}}
