@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "source_sha256": "f00acfce246e1238f00ee31bd13affa530eb025d34c781f79b1a97c183cfcd8c",
+  "printed_declarations": 19,
+  "axioms": {
+    "ICFallDegrees.GrowthJetPolynomial.coeff_euler": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.boxed_euler": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.euler_topPart": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.euler_mul": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.derivative_shift_mem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.jetSpace_closed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.normalized_mem_jetSpace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.closure_normalForm_mem_jetSpace": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.lfd_gt_of_derivative_witness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6_square": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6_input_jet": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6Witness_mem_ideal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6Witness_reduced": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.expand_e6Witness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6Witness_degree": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.euler_e6Factor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6_derivative_outside": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6_prime_lfd_gt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ICFallDegrees.GrowthJetPolynomial.e6_prime_lfd_linear": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "local Lean check, final exact-head CI required"
+}
