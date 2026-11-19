@@ -1,0 +1,35 @@
+{
+  "status": "closed",
+  "p": 114689,
+  "m": 5,
+  "k": 3,
+  "D": 7,
+  "derived_rank": 27838,
+  "contains_one": false,
+  "products": 106110,
+  "terms": 3495358,
+  "muladds": 266882308,
+  "seconds": 2.848248,
+  "schedule_products": null,
+  "resume_from": null,
+  "engine": "priority",
+  "source_sha256": {
+    "priority_producer.rs": "8bdc85698811899135a99953797e56400d67fb1a8934b375c2ddd50e58ee73e9",
+    "run_heap.py": "6fae1da487e624c4b8ed86a40c237d720cc73d845db412afef711e2b429d0298"
+  },
+  "input_sha256": "05dfe6365c9cadab0c90b532bb07832e6d8f9ee5ac3e6d50882157c51f16daa0",
+  "original_input_sha256": "8523eeee5fd23df8ae825d4b85850677c7b010721da27530208a0b9eefd9f3ad",
+  "elapsed_seconds": 2.972186958999373,
+  "artifacts": {
+    "derivations.txt.gz": {
+      "sha256": "74071d09130f1c4f36e2c106fcc53f19e97135bb5bea768e794f4f914a1cd579",
+      "bytes": 699238,
+      "decoded_sha256": "24ac4afdf1fd08eb0ba7e95ebe7ca006504dbae772052014e398610d60cfa4ee"
+    },
+    "basis.txt.gz": {
+      "sha256": "8ad140bec49ae77176dd184c1983ae8f39f0a24f8c847a5d3e15c10c73ddc55e",
+      "bytes": 19301588,
+      "decoded_sha256": "fde65b941d37c468b03d399789ef80d46509bc2b8e1fae6997d2d247ffdc26c6"
+    }
+  }
+}

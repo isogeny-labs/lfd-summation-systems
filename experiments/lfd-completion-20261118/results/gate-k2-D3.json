@@ -1,0 +1,50 @@
+{
+  "status": "closed",
+  "p": 65537,
+  "m": 2,
+  "k": 2,
+  "D": 3,
+  "derived_rank": 5,
+  "contains_one": false,
+  "products": 4,
+  "terms": 40,
+  "muladds": 18,
+  "seconds": 8e-05,
+  "replay": {
+    "derived_rank": 5,
+    "contains_one": false,
+    "closed_check": true,
+    "one_excluded": true,
+    "scope": "derived rows contained in V_D; exact closure checked"
+  },
+  "reference": {
+    "contains_one": false,
+    "dim_V_D": 5
+  },
+  "artifact_sha256": {
+    "input.txt": "7706c98d4249a9babdfe139421071655c53d7bf9bbdbd340185c01a7ed0bf97a",
+    "derivations.txt": "37edaf08a152f79dfc092fd676d1bbaef42d8b8e89b3769d8ce5b086ae409d2c",
+    "basis.txt": "4bd010dabdd415a72aa231f4a1c8f21d47758a9c08c503098c205d6d66ab12d3"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "8fe54ce66fe5fcd3a64f71b90b38d8cdfbe1d9c7d8237ce9fbce4625f4b43bd4"
+  },
+  "runner_source_snapshot": "initial-runner.py.txt",
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "37edaf08a152f79dfc092fd676d1bbaef42d8b8e89b3769d8ce5b086ae409d2c",
+      "archive_sha256": "cf46d0b4b4d4229c53c39fc987ab6a99667d4cf5a7a9b24dd52201b56f63bef7",
+      "bytes": 76
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "4bd010dabdd415a72aa231f4a1c8f21d47758a9c08c503098c205d6d66ab12d3",
+      "archive_sha256": "1da0a37f9c57bd764c8be822e7085dc1ee83c466ebd5fe1839db191cae6df4df",
+      "bytes": 178
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff"
+}

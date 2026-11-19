@@ -1,0 +1,36 @@
+{
+  "status": "capped",
+  "contains_one": false,
+  "compact_rows": 414,
+  "terms": 108812,
+  "pairs_processed": 6444,
+  "queued": 67540,
+  "muladds": 229062175,
+  "seconds": 30.000109,
+  "claim": "membership pending replay; compact closedness criterion unproved",
+  "engine": "rust",
+  "budget": {
+    "seconds": 30,
+    "max_rows": 5000,
+    "max_terms": 2000000,
+    "max_queue": 2000000,
+    "proof_byte_cap": 268435456,
+    "rss_cap_bytes": 2147483648
+  },
+  "replay": {
+    "status": "passed",
+    "verified_rows": 414,
+    "contains_one": false,
+    "closed_check": false,
+    "scope": "row membership only; no compact closedness claim"
+  },
+  "source_sha256": {
+    "compact_producer.rs": "15e9407bf95cc66360d83f8d0b49734bd811e8f858aced40c24d5c05fd7f3e1d",
+    "compact_replay.py": "798c589949f8a64be156b1e1c3c52092a81ea32ed90ffd3c9adcf38e35b14bd0",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run_compact.py": "0160386707215f6f4862f48dec4cb4a00974be1e955b58d5d4833f28b7025706"
+  },
+  "input_sha256": "eaa6d030d804e5c5ab26272a233adb1d95929ff617c03c337ab3cb047b34a033",
+  "original_input_sha256": "cb641bcd76a65b97763852ba29ddcb96adb20438810e55b0bf0caba27ed4194c",
+  "proof_sha256": "0df06c4c49d3d53f43fab3f9bbaadfed5eed4fc8c69b6ffa50b2e563c83944c0"
+}

@@ -1,0 +1,76 @@
+// Sparse immutable echelon closure with a replayable derivation for every pivot.
+// Input format: p m k auxiliaries D max_seconds max_rows max_terms
+// followed by generator count and (term count, code coefficient pairs) per input.
+use std::collections::{BTreeMap,HashMap,VecDeque};
+use std::io::{self,Read,Write,BufWriter};
+use std::fs::File;
+use std::time::Instant;
+type Row=Vec<(u64,u32)>;
+fn weight(x:u64,r:u32,a:u32)->u32 {
+ let mut w=(x&((1u64<<r)-1)).count_ones();
+ for j in 0..a {w+=((x>>(r+6*j))&63) as u32;} w
+}
+fn power(mut a:u64,mut n:u64,p:u64)->u32 {let mut z=1;while n>0 {if n&1!=0 {z=z*a%p;}a=a*a%p;n>>=1;} z as u32}
+fn insert(v:&mut BTreeMap<(u32,u64),u32>,x:u64,c:u32,p:u32,r:u32,a:u32) {
+ let key=(weight(x,r,a),x);let z=((v.get(&key).copied().unwrap_or(0) as u64+c as u64)%p as u64) as u32;
+ if z==0 {v.remove(&key);}else {v.insert(key,z);}
+}
+fn shifted(x:u64,v:u32,m:u32,k:u32)->u64 {
+ let r=m*k;
+ if v<r {let off=(v/k)*k;let mask=((1u64<<k)-1)<<off;
+ (x&!mask)|(((((x>>off)&((1u64<<k)-1))+(1u64<<(v%k)))&((1u64<<k)-1))<<off)
+ }else {x+(1u64<<(r+6*(v-r)))}
+}
+fn absorb(raw:Row,source:(&str,usize,u32),p:u32,r:u32,a:u32,d:u32,
+ basis:&mut Vec<Row>,piv:&mut HashMap<u64,usize>,queue:&mut VecDeque<usize>,
+ log:&mut BufWriter<File>,out:&mut BufWriter<File>)->(bool,u64) {
+ let mut row=BTreeMap::new();for (x,c) in raw {insert(&mut row,x,c,p,r,a);}
+ let mut reductions=Vec::new();let mut ops=0;
+ while let Some((&(_,x),&c))=row.last_key_value() {
+  if let Some(&i)=piv.get(&x) {
+   reductions.push((i,c));
+   for &(y,b) in &basis[i] {
+    let z=(c as u64*b as u64%p as u64) as u32;
+    insert(&mut row,y,if z==0 {0}else{p-z},p,r,a);ops+=1;
+   }
+  }else{break;}
+ }
+ if row.is_empty(){return (false,ops);}
+ let (&(w,x),&c)=row.last_key_value().unwrap();let inv=power(c as u64,p as u64-2,p as u64);
+ let new:Row=row.into_iter().rev().map(|((_,x),v)|(x,(v as u64*inv as u64%p as u64) as u32)).collect();
+ let id=basis.len();piv.insert(x,id);if w<d {queue.push_back(id);}
+ write!(log,"{} {} {} {} {} {}",id,source.0,source.1,source.2,inv,reductions.len()).unwrap();
+ for (i,c) in reductions{write!(log," {} {}",i,c).unwrap();}writeln!(log).unwrap();
+ write!(out,"{} {}",id,new.len()).unwrap();for (x,c) in &new {write!(out," {} {}",x,c).unwrap();}writeln!(out).unwrap();
+ basis.push(new);(x==0,ops)
+}
+fn main(){
+ let args:Vec<String>=std::env::args().collect();assert_eq!(args.len(),4,"input ledger basis");
+ let mut s=String::new();File::open(&args[1]).unwrap().read_to_string(&mut s).unwrap();let mut it=s.split_whitespace();
+ macro_rules! n {()=>{it.next().unwrap().parse::<u64>().unwrap()};}
+ let p=n!() as u32;let m=n!() as u32;let k=n!() as u32;let a=n!() as u32;let d=n!() as u32;
+ let seconds=n!();let max_rows=n!() as usize;let max_terms=n!();let r=m*k;
+ assert!(p>3&&p<1<<24&&r>0&&r+6*a<64&&d<63&&k>0);
+ let ng=n!();let mut gens=Vec::new();for _ in 0..ng {let nt=n!();let mut row=Vec::new();for _ in 0..nt {let x=n!();let c=n!();assert!(c<p as u64);row.push((x,c as u32));}gens.push(row);}
+ assert!(it.next().is_none());
+ let mut log=BufWriter::new(File::create(&args[2]).unwrap());let mut out=BufWriter::new(File::create(&args[3]).unwrap());
+ let mut basis:Vec<Row>=Vec::new();let mut piv=HashMap::new();let mut queue=VecDeque::new();let start=Instant::now();let mut one=false;let mut ops=0;let mut stored=0u64;
+ for (i,g) in gens.into_iter().enumerate(){if g.iter().any(|&(x,_)|weight(x,r,a)>d){continue;}
+ let (hit,o)=absorb(g,("input",i,0),p,r,a,d,&mut basis,&mut piv,&mut queue,&mut log,&mut out);one|=hit;ops+=o;}
+ let mut products=0;let mut status="closed";
+ 'outer:while !one {
+  let id=match queue.pop_front(){Some(i)=>i,None=>break};
+  for v in 0..r+a {
+   if start.elapsed().as_secs()>=seconds||basis.len()>=max_rows||stored>=max_terms {status="capped";break 'outer;}
+   let old_len=basis.len();let raw=basis[id].iter().map(|&(x,c)|(shifted(x,v,m,k),c)).collect();
+   let (hit,o)=absorb(raw,("shift",id,v),p,r,a,d,&mut basis,&mut piv,&mut queue,&mut log,&mut out);one|=hit;ops+=o;products+=1;
+   if basis.len()>old_len{stored+=basis.last().unwrap().len() as u64;}
+   if one{break;}
+   if products%10000==0 {eprintln!("products={} rank={} terms={} queued={} seconds={:.1}",products,basis.len(),stored,queue.len(),start.elapsed().as_secs_f64());log.flush().unwrap();out.flush().unwrap();}
+  }
+ }
+ if one{status="unit-witness";}
+ log.flush().unwrap();out.flush().unwrap();
+ println!("{{\"status\":\"{}\",\"p\":{},\"m\":{},\"k\":{},\"D\":{},\"derived_rank\":{},\"contains_one\":{},\"products\":{},\"terms\":{},\"muladds\":{},\"seconds\":{:.6}}}",status,p,m,k,d,basis.len(),one,products,stored,ops,start.elapsed().as_secs_f64());
+ io::stdout().flush().unwrap();
+}

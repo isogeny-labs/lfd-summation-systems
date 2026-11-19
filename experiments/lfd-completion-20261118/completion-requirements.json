@@ -1,0 +1,43 @@
+{
+  "depth14_input_certificates": [
+    {
+      "prime": 65537,
+      "k": 14,
+      "D": 6,
+      "basis_sha256": [
+        "eeac52ef422214ffe21d411fa9b6da488de2b63e20871875dbd94e81cb3d8c38",
+        "a58c6c7d982c6f3e1144d8a79223e23aeba34bd965f940ffe8a9182defd0fb24"
+      ],
+      "required": "replay all input-basis derivations or certify a replacement and rerun/bind the lift",
+      "complete": false
+    },
+    {
+      "prime": 163841,
+      "k": 14,
+      "D": 6,
+      "basis_sha256": [
+        "e0c4afd72517d56c3b0f78369ce9aaee4a7872b087cdaf383b4c682e5676c170",
+        "44a89923b4cee5ef2a831892a83a24f0df98a325fbcbafbc70ec0bb77efde905"
+      ],
+      "required": "replay all input-basis derivations or certify a replacement and rerun/bind the lift",
+      "complete": false
+    }
+  ],
+  "split_degree8": {
+    "m": 5,
+    "k": 3,
+    "primes": [
+      114689,
+      163841
+    ],
+    "seed": 0,
+    "required": "completed exact reading with checked lower closures and degree8 witness, or a verified contrary result; retain both planned instances",
+    "completed": false
+  },
+  "depth18_breakpoint": {
+    "instance": "experiments/lfd-followups-20261117/depth18-instance.json",
+    "required": "checked degree7 exclusion and degree8 witness for prediction8, or complete verified contrary exact reading",
+    "complete": false
+  },
+  "goal_status": "active"
+}

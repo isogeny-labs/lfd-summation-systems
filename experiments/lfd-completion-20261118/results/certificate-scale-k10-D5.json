@@ -1,0 +1,48 @@
+{
+  "status": "capped",
+  "p": 65537,
+  "m": 2,
+  "k": 10,
+  "D": 5,
+  "derived_rank": 12287,
+  "contains_one": false,
+  "products": 38054,
+  "terms": 3544428,
+  "muladds": 1389159075,
+  "seconds": 180.133276,
+  "artifact_sha256": {
+    "input.txt": "c7ddfcfffe84c1e4a0807f489e3d8457e2f1c31d9a29f653f906fbb81b1a0564",
+    "derivations.txt": "6e97a2caf08da84f49fd4425b925e29ab116d5d112a55586ead8ef299f9bfd3a",
+    "basis.txt": "4b9674ec638109c7840b26c555e584fe282d046d49d6735cc415b63af41ddae7"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "144071850636e93f51ce781c53c8eaf70d5d87d0e0955cfa80c01a80a2c375b3"
+  },
+  "independent_rust_replay": {
+    "status": "passed",
+    "derived_rank": 12287,
+    "contains_one": false,
+    "closed_check": false,
+    "replay_muladds": 102115999,
+    "seconds": 17.296815,
+    "verifier_source_sha256": "c5122d816b63c3036acdfd99847ce8e61e22bceb2a33d206637cd84312b8aa19"
+  },
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "6e97a2caf08da84f49fd4425b925e29ab116d5d112a55586ead8ef299f9bfd3a",
+      "archive_sha256": "e1c0a956f27e06752db15fd4c6021f423e62f13a313e04fe927e49caa729ebf2",
+      "bytes": 4644208
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "4b9674ec638109c7840b26c555e584fe282d046d49d6735cc415b63af41ddae7",
+      "archive_sha256": "595dc55ca289a19d03f9a0c9708c1885ca29614cadf6d6e9af2a507f0a0f8b83",
+      "bytes": 19200098
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff",
+  "runner_source_snapshot": "runner-resource-guard.py.txt"
+}

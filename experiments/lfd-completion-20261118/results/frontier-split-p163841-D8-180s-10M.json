@@ -1,0 +1,52 @@
+{
+  "status": "capped",
+  "contains_one": false,
+  "compact_rows": 1525,
+  "terms": 5602836,
+  "pairs_processed": 2050,
+  "queued": 7900,
+  "coprime_pairs_skipped": 3,
+  "muladds": 2816114688,
+  "seconds": 180.000072,
+  "claim": "retained polynomial membership independently replayed; compact closedness remains unproved",
+  "producer_claim": "membership pending replay; compact closedness criterion unproved",
+  "queue_order": "frontier",
+  "pair_strategy": "coprime-pruned",
+  "replay_engine": "rust",
+  "engine": "rust",
+  "budget": {
+    "seconds": 180,
+    "max_rows": 10000,
+    "max_terms": 10000000,
+    "max_queue": 2000000,
+    "proof_byte_cap": 268435456,
+    "rss_cap_bytes": 2147483648
+  },
+  "replay": {
+    "status": "passed",
+    "verified_rows": 1525,
+    "contains_one": false,
+    "closed_check": false,
+    "replay_muladds": 2186273286,
+    "seconds": 18.175185,
+    "scope": "independent compact row membership only",
+    "input_sha256": "2cf28d346fbf976570a7530dc97f71c4ed7c7e6f9fe95d2d744a915d862f4f8e",
+    "proof_sha256": "5a3f0bf363bc804c8e73a4378a87aed2bac8851443e893acb737ca82cd6c71df",
+    "text_sha256": "69b2c251cea07b229a04b5ce0365a43aeca46b8d0c8b2005f10b2b3627172f9e",
+    "text_bytes": 98128257,
+    "nodes": 1525,
+    "verifier_source_sha256": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151",
+    "verifier_binary_sha256": "cdf8ff04f1c8b528e9a4463965da0dfb7cdc24d5bbbcf8f9d9d20ea5b52702cd",
+    "converter_source_sha256": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb"
+  },
+  "source_sha256": {
+    "compact_producer.rs": "85321e3760bfd3d5108ae71d24914915a35821e3bb7c39ddda0c02a297c56b3f",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run_compact.py": "7d8c4dffc096ada669f80b40a913d2f97e411052cdb7558dc814048e436700b8",
+    "compact_replay_rust.py": "519c4f14ec75e5d458bcbb236e3c4ade47ad1b5bee2fcbacd207f824f1fcf9eb",
+    "compact_replay.rs": "51fd8d750a741413fa2e9eb56a6a422dba7b5f57c6f6f258d43c3e4abd405151"
+  },
+  "input_sha256": "2cf28d346fbf976570a7530dc97f71c4ed7c7e6f9fe95d2d744a915d862f4f8e",
+  "original_input_sha256": "ce040735cc7c230bba8550195cd42b024d1aa088a3bfc0de05de5a67b4aaaf25",
+  "proof_sha256": "5a3f0bf363bc804c8e73a4378a87aed2bac8851443e893acb737ca82cd6c71df"
+}

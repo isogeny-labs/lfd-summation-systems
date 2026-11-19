@@ -1,0 +1,40 @@
+{
+  "status": "capped",
+  "p": 163841,
+  "m": 5,
+  "k": 3,
+  "D": 8,
+  "derived_rank": 107024,
+  "contains_one": false,
+  "products": 19185,
+  "terms": 300041189,
+  "muladds": 119154353570,
+  "seconds": 593.432247,
+  "schedule_products": 523653,
+  "resume_from": {
+    "run_dir": "/Volumes/SSD990-2/lfd-summation-systems/experiments/lfd-completion-20261118/runs/split-p163841-m5-k3-D8-indexed",
+    "result_sha256": "ecc5e0b1f3aa5cdfbdda24e794fc5029595bceb376e3b8da15d520b87924d9dd",
+    "verification_sha256": "2eda6e07d44c10c376bc67c7cbac39e6632159edafa8323368fe0c06187a6d79",
+    "schedule_products": 504468
+  },
+  "engine": "restart",
+  "source_sha256": {
+    "restart_producer.rs": "05e3f5000aefee5618937e63cf85df6cbdcdd93e7f3e97ff0a6d1c82f81f0d22",
+    "run_heap.py": "5dcc294ebddd26d75a56124eb86d0f07905715eeb7eba937400a2f83031aeb25"
+  },
+  "input_sha256": "80af6d7a81aa803e3ba8ea6b731bc411eff4d2c021f33e1f68543e49609558b0",
+  "original_input_sha256": "80af6d7a81aa803e3ba8ea6b731bc411eff4d2c021f33e1f68543e49609558b0",
+  "elapsed_seconds": 593.7074989169996,
+  "artifacts": {
+    "derivations.txt.gz": {
+      "sha256": "62fb0d6faef337a5a4778315dc3ef11bf2a74021f397c82f1c70f85addf0a2d9",
+      "bytes": 58568436,
+      "decoded_sha256": "eaae518d9811dd58062a92b802ee266d5a6eb136fbbeab957c2ebd78c40d631f"
+    },
+    "basis.txt.gz": {
+      "sha256": "a998ef8b7c4114ed3b4371a6c090b160fb3b2243e16231a21741fddc2da8583e",
+      "bytes": 1824643592,
+      "decoded_sha256": "489ddd905a21901d2479df75ef5b791ad32fa82c4685f5df6b9d6dcd9857e280"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "status": "capped",
+  "p": 114689,
+  "m": 5,
+  "k": 2,
+  "D": 6,
+  "derived_rank": 4307,
+  "contains_one": false,
+  "products": 12345,
+  "terms": 1763057,
+  "muladds": 313222853,
+  "seconds": 60.286005,
+  "replay": {
+    "derived_rank": 4307,
+    "contains_one": false,
+    "closed_check": false,
+    "one_excluded": null,
+    "scope": "derived rows contained in V_D; no completeness claim"
+  },
+  "artifact_sha256": {
+    "input.txt": "92684ba426828482a67a456f26cbc9dcb164c2d72a4ff702035234dafcd91380",
+    "derivations.txt": "7bec6c7bce8f8e59bf94a3382fd6f8d22256873e19336f9a843a755ce54a6ffa",
+    "basis.txt": "b0a1d9d3f644f7a99fc80cd00fdfd18161c28552b6650c6e63840245bacd88c0"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "8fe54ce66fe5fcd3a64f71b90b38d8cdfbe1d9c7d8237ce9fbce4625f4b43bd4"
+  },
+  "runner_source_snapshot": "initial-runner.py.txt",
+  "provenance_correction": {
+    "previous_disk_snapshot_sha256": "144071850636e93f51ce781c53c8eaf70d5d87d0e0955cfa80c01a80a2c375b3",
+    "reason": "The original gate process loaded its runner before the resource watchdog edit; post-run disk hashing saw the newer file. The executed source is preserved in initial-runner.py.txt."
+  },
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "7bec6c7bce8f8e59bf94a3382fd6f8d22256873e19336f9a843a755ce54a6ffa",
+      "archive_sha256": "9d135af17048c98ac383cda6c22400f72c1b476ea5c6b1fcba6776f1dac5d7ae",
+      "bytes": 1634373
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "b0a1d9d3f644f7a99fc80cd00fdfd18161c28552b6650c6e63840245bacd88c0",
+      "archive_sha256": "8ce338065461baefce9951d5296e6d7192ffdc682dbac0d18e54eb067a60963c",
+      "bytes": 9366352
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff"
+}

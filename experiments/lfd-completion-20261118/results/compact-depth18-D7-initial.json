@@ -1,0 +1,28 @@
+{
+  "status": "capped",
+  "contains_one": false,
+  "compact_rows": 135,
+  "terms": 13433,
+  "pairs_processed": 734,
+  "seconds": 30.000563834000786,
+  "claim": "candidate only; compact closedness criterion unproved",
+  "budget": {
+    "seconds": 30,
+    "max_rows": 500
+  },
+  "replay": {
+    "status": "passed",
+    "verified_rows": 135,
+    "contains_one": false,
+    "closed_check": false,
+    "scope": "row membership only; no compact closedness claim"
+  },
+  "source_sha256": {
+    "compact_candidate.py": "512ac6f860d094b262748483e11459b97c37abd8d1938eed24b7058a57be5b18",
+    "compact_replay.py": "798c589949f8a64be156b1e1c3c52092a81ea32ed90ffd3c9adcf38e35b14bd0",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run_compact.py": "117521e93b100aa4eaf17ea1e2160015bda3edd304ad41bee9a48db96de10ddb"
+  },
+  "input_sha256": "cb641bcd76a65b97763852ba29ddcb96adb20438810e55b0bf0caba27ed4194c",
+  "proof_sha256": "e9e9187c321c780dd602258e7179206159bf8ef020e2f92f6a1ddcc86c47f2aa"
+}

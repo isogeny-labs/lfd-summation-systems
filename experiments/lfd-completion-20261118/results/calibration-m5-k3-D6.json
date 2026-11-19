@@ -1,0 +1,46 @@
+{
+  "status": "closed",
+  "p": 114689,
+  "m": 5,
+  "k": 3,
+  "D": 6,
+  "derived_rank": 5243,
+  "contains_one": false,
+  "products": 14814,
+  "terms": 223801,
+  "muladds": 3202996,
+  "seconds": 0.73263,
+  "replay": {
+    "derived_rank": 5243,
+    "contains_one": false,
+    "closed_check": true,
+    "one_excluded": true,
+    "scope": "derived rows contained in V_D; exact closure checked"
+  },
+  "artifact_sha256": {
+    "input.txt": "a34b725aff183a4b8302ed6081d6f232f286863742d6da9f27fc8e1b931b55af",
+    "derivations.txt": "d1565c82a2f16e7de785fded4133f93e9aa01354c5eecb940d17554ca935d83e",
+    "basis.txt": "5940498d0892bf21a1cfff515b6a7f3e398eed749443f69623c9d49ee3ec05f6"
+  },
+  "source_sha256": {
+    "sparse_producer.rs": "89fb461db39204f7fd18be54457fcaeb1cbaee4166bb8d69fb46d092cd147453",
+    "replay.py": "f46e3cf558db8e7bd07792caf62e7b4878e0306c1f0a1dc7d844907b7d4ed495",
+    "run.py": "144071850636e93f51ce781c53c8eaf70d5d87d0e0955cfa80c01a80a2c375b3"
+  },
+  "archives": {
+    "derivations.txt": {
+      "file": "derivations.txt.gz",
+      "decoded_sha256": "d1565c82a2f16e7de785fded4133f93e9aa01354c5eecb940d17554ca935d83e",
+      "archive_sha256": "d9fc7cf2e9f95630a440ddcbd67507d47979b12b42f31caa153097698992ffcc",
+      "bytes": 55298
+    },
+    "basis.txt": {
+      "file": "basis.txt.gz",
+      "decoded_sha256": "5940498d0892bf21a1cfff515b6a7f3e398eed749443f69623c9d49ee3ec05f6",
+      "archive_sha256": "38e2ad151fd698356223699990c0b2c0f09b82ae18736dfccaf73a8d38b6863a",
+      "bytes": 1149413
+    }
+  },
+  "archive_tool_sha256": "1a11644e49d0cc37d190e0021356f56fb1d9bc219d3aeff4454f24fe66f7c9ff",
+  "runner_source_snapshot": "runner-resource-guard.py.txt"
+}
