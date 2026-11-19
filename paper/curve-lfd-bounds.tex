@@ -169,36 +169,40 @@ cost of a discrete logarithm would also require relation yields and ranks,
 which we do not measure.
 
 \paragraph{Why this matters.}
-Whether summation-polynomial index calculus can compete with Pollard rho,
-which needs about the square root of the group order in group operations,
-is decided by the relation search, and the complexity estimates for that
-search rest on heuristic assumptions about the degree a solver reaches as
-the factor base grows (Section~\ref{sec:related}). The LFD is a
-solver-independent form of that degree: with the number of solutions it
-controls linear-algebra solving~\cite[Prop.~2.8]{hkyy}, and it bounds the
-solving degree from below (Section~\ref{sec:solving}). Our results replace
-part of the heuristic by proofs, from both sides. From above, the
-kernel-checked bound $\lfd\le k+2$ holds for every two-summand prime chain
-system on a nonsingular curve, generic or not, about half the dimension
-bound $2k+1$, and with Theorem~\ref{thm:sd} (written proof) the solving
-degree of these systems is at most $k+2$. From below, the
-degree grows with the depth, although the first fall degree stays at $3$
-or $4$ at every depth (Section~\ref{sec:ffd}): an exclusion $1\notin V_D$ at one depth
-persists at every larger depth (Theorem~\ref{thm:restrict}, kernel-checked),
-the certified lower bounds rise to $7$ at $k=14$, and the written growth
+Whether summation-polynomial index calculus can compete with Pollard rho is
+decided by the relation search. Pollard rho needs about the square root of
+the group order in group operations; the competing estimates for the
+relation search rest on heuristic assumptions about the degree a solver
+reaches as the factor base grows (Section~\ref{sec:related}). The last fall
+degree is a solver-independent form of that degree: with the number of
+solutions it controls linear-algebra solving~\cite[Prop.~2.8]{hkyy}, and it
+bounds the solving degree from below (Section~\ref{sec:solving}). Our results
+replace part of the heuristic by proofs, from both sides.
+
+\emph{From above,} the kernel-checked bound $\lfd\le k+2$ holds for every
+two-summand prime chain system on a nonsingular curve, generic or not---about
+half the dimension bound $2k+1$. With Theorem~\ref{thm:sd} (written proof)
+the solving degree of these systems is at most $k+2$ as well.
+
+\emph{From below,} the degree grows with the depth, even though the first
+fall degree stays at $3$ or $4$ at every depth (Section~\ref{sec:ffd}). Three
+results establish the growth: an exclusion $1\notin V_D$ at one depth
+persists at every larger depth (Theorem~\ref{thm:restrict}, kernel-checked);
+the certified lower bounds rise to $7$ at $k=14$; and the written growth
 theorem gives a lower bound of slope $1/14$ for unit-ideal instances with
-$t\ne0$ in characteristic $0$
-or $p>2^{k+1}$, a condition met by the primes $p\ge2^{2k}$ of Petit,
-Kosters and Messeng (Theorem~\ref{thm:growth}). This rules out, for unit-ideal
-instances of these systems, any complexity analysis that takes the solver's degree to be
-bounded independently of the factor-base size, as an estimate from the
-first fall degree would. Between the proved slopes $1/14$ and $1$, the
-certified profile and Conjecture~\ref{conj:law} place the degree near
-$k/4$; at any degree growing linearly in $k$, the number of square-free
-monomials of at most that degree in the $2k$ chain variables grows exponentially in $k$. Turning
-these degrees into a cost comparison with Pollard rho also needs the
-relation yield, the rank and the sparsity of the matrices, which we leave
-open (Section~\ref{sec:limitations}).
+$t\ne0$, in characteristic $0$ or $p>2^{k+1}$---a condition met by the primes
+$p\ge2^{2k}$ of Petit, Kosters and Messeng (Theorem~\ref{thm:growth}). For
+unit-ideal instances of these systems this rules out any complexity analysis
+that takes the solver's degree to be bounded independently of the
+factor-base size, as an estimate from the first fall degree would.
+
+Between the proved slopes $1/14$ and $1$, the certified profile and
+Conjecture~\ref{conj:law} place the degree near $k/4$; at any degree growing
+linearly in $k$, the number of square-free monomials of at most that degree
+in the $2k$ chain variables grows exponentially in $k$. Turning these degrees
+into a cost comparison with Pollard rho also needs the relation yield, the
+rank and the sparsity of the matrices, which we leave open
+(Section~\ref{sec:limitations}).
 
 \paragraph{Organization.} We introduce the background in Section~\ref{sec:background} and define
 the systems in Section~\ref{sec:systems}. Sections~\ref{sec:bounds}
@@ -220,10 +224,77 @@ values end with certificates, and the written proofs are given in the
 paper or in the files it cites. The author is responsible for all content.
 
 \section{Background}\label{sec:background}
+Index calculus reduces a discrete logarithm to solving many small
+polynomial systems (Section~\ref{sec:ic}). For the linear-algebra
+Gr\"obner-basis solvers used on these systems, the running time is governed
+by one quantity: the degree the computation must reach before it closes
+(Section~\ref{sec:gb}). Three invariants describe that degree, and the
+difference between them is the subject of this paper (Figure~\ref{fig:degrees}).
+The \emph{first fall degree} (Section~\ref{sec:ffd}) is the first degree at
+which the computation makes any progress at all; it is easy to bound and has
+been used as a heuristic proxy, but it can sit far below the degree that is
+actually needed. The \emph{last fall degree} (Section~\ref{sec:lfd}), the
+invariant we compute, is the first degree past which no further progress is
+possible---above it the degree-$D$ computation already captures every ideal
+element of degree at most $D$---and, unlike a solver's own readout, it does
+not depend on the algorithm. The \emph{solving degree}
+(Section~\ref{sec:solving}) is the degree a concrete solver must reach; a
+theorem of Caminata and Gorla~\cite{cg} ties it to the last fall degree. The
+phenomenon we establish is that for the elliptic-curve systems studied here
+the first fall degree stays at $3$ or $4$ while the last fall degree---and
+with it the solving degree---grows with the factor-base size.
+
+\begin{figure}[tbp]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize,
+  deg/.style={draw, line width=0.7pt, rounded corners=2.5pt, align=flush left,
+    inner sep=5pt, text width=3.6cm, minimum height=3.05cm, anchor=north},
+  rel/.style={-{Stealth[length=2mm]}, semithick, black!65}]
+\node[deg, draw=oigreen!70!black, fill=oigreen!5] (ffd) at (0,0)
+  {\textbf{First fall degree}\\[1pt] $\ffd(F)$\\[4pt]
+   {\scriptsize First degree at which the Macaulay computation makes
+   \emph{any} progress---a non-trivial syzygy, hence a degree fall. Cheap to
+   bound; a heuristic proxy that can lie far below the truth.}};
+\node[deg, draw=oiblue!75!black, fill=oiblue!6, right=13mm of ffd.north east, anchor=north west] (lfd)
+  {\textbf{Last fall degree}\\[1pt] $\lfd(F)$\\[4pt]
+   {\scriptsize The \emph{last} such fall: past it the degree-$D$ closure
+   already equals $\Id\cap M_{\le D}$. A property of the input list, not of
+   any solver. The invariant computed here.}};
+\node[deg, draw=oiverm!75!black, fill=oiverm!5, right=13mm of lfd.north east, anchor=north west] (sd)
+  {\textbf{Solving degree}\\[1pt] $\sd_\sigma(F)$\\[4pt]
+   {\scriptsize Degree a Macaulay/XL-type solver must reach; it enters the
+   cost exponent. By Caminata--Gorla,
+   $\sd_\sigma=\max\!\bigl(\lfd,\gbdeg_\sigma\bigr)$.}};
+\draw[rel, dashed] (ffd.east) -- node[above=0pt, font=\scriptsize, black!55]{gap} (lfd.west);
+\draw[rel] (lfd.east) -- node[above=0pt, font=\scriptsize]{$\le$} (sd.west);
+\node[anchor=north west, align=flush left, text width=14.0cm, inner sep=4pt,
+      fill=black!3, rounded corners=2pt, font=\scriptsize] at ([yshift=-4mm]ffd.south west)
+  {\textbf{For the two-summand prime chain systems of this paper:}
+   $\ffd\in\{3,4\}$ is \emph{flat} in the depth $k$, while $\lfd$ rises
+   ($4,5,6,7,\dots$; Theorem~\ref{thm:growth} makes it grow without bound)
+   and $\sd_\sigma=\lfd$ on the unit instances.};
+\end{tikzpicture}
+\caption{The three degrees that describe a linear-algebra Gr\"obner-basis
+computation, and how they relate. The last fall degree $\lfd$ and the
+Gr\"obner degree $\gbdeg_\sigma$ determine the solving degree
+$\sd_\sigma=\max(\lfd,\gbdeg_\sigma)$~\cite[Thm.~3.1]{cg}, so every lower
+bound on $\lfd$ is a lower bound on $\sd_\sigma$. The first fall degree is a
+cheaper but weaker proxy: it need not equal the last fall degree, and for
+the systems studied here it stays at $3$ or $4$ while $\lfd$ and $\sd_\sigma$
+grow with the depth. The \emph{degree of regularity} read from a particular
+solver run~\cite{pkm,gg} is algorithm-specific and distinct from all three
+(Section~\ref{sec:gb}); the corrected value of Petit, Kosters and
+Messeng~\cite{pkm} coincides with the exact $\lfd$ computed here
+(Section~\ref{sec:related}).}
+\label{fig:degrees}
+\end{figure}
 
 \subsection{Index calculus and summation polynomials}\label{sec:ic}
-Let $E$ be an elliptic curve over a finite field $K$, and $P,Q$ points with
-$Q$ in the subgroup generated by $P$. Index calculus fixes a factor base
+Index calculus trades a single hard discrete logarithm for many easier point
+\emph{decompositions}. Let $E$ be an elliptic curve over a finite field $K$,
+and $P,Q$ points with $Q$ in the subgroup generated by $P$. The method fixes
+a factor base
 $\mathcal F\subset E(K)$ and collects relations: for random integers
 $\alpha,\beta$ it tries to write $R=\alpha P+\beta Q$ as a sum
 $R=P_1+\cdots+P_m$ with $P_i\in\mathcal F$, which gives a linear relation
@@ -281,6 +352,13 @@ verbose output, and a \emph{corrected} value from which Petit, Kosters and
 Messeng remove the steps in which no pair was reduced. Either describes a
 run of a particular algorithm.
 
+What lets the matrix at a fixed budget do more than Gaussian elimination on
+the inputs is a \emph{degree fall}: a combination $\sum_i g_if_i$ whose
+top-degree terms cancel, so its degree drops below $\max_i\deg(g_if_i)$ and
+feeds a new, lower-degree row back into the computation. The two invariants
+of the next two subsections record the first budget at which a fall occurs
+and the last.
+
 \subsection{The first fall degree}\label{sec:ffd}
 For $f\in A$ write $f^{\mathrm{top}}$ for its homogeneous component of top
 degree. A \emph{homogeneous syzygy of degree $d$} of $F$ is a tuple
@@ -303,7 +381,8 @@ definition differ in which syzygies count as trivial (for Boolean systems,
 for example, those coming from the field equations). The first fall degree
 is often much easier to bound than the solving degree, and a heuristic used
 in parts of the literature on binary index calculus assumes that the two are
-close. The experiments show a gap between the two degrees. Kosters and Yeo~\cite{ky} show that the
+close. The experiments show a gap between the two degrees
+(Figure~\ref{fig:degrees}). Kosters and Yeo~\cite{ky} show that the
 first fall degree of the Weil descent of ordinary binary $S_3$ systems is
 $2$ in general, and observe in experiments that the degree of regularity
 grows with $n$. The systems of this paper show the same: for two-summand
@@ -331,7 +410,8 @@ Write $M_{\le D}$ for the span of the monomials of degree at most $D$.
 Always $V_{F,D}\subseteq\Id\cap M_{\le D}$, and the definition says exactly
 that $\lfd(F)$ is the least $d$ with $V_{F,D}=\Id\cap M_{\le D}$ for every
 $D\ge d$: above the last fall degree every ideal element is derived within
-its own degree, and no further degree fall is needed. Two consequences are
+its own degree, and no further degree fall is needed
+(Figure~\ref{fig:fall}). Two consequences are
 used throughout. If $\Id$ is the unit ideal, $\lfd(F)$ is the least $D$
 with $1\in V_{F,D}$. In general, a degree $D$ is a \emph{strict fall} when
 $V_{F,D}\cap M_{\le D-1}\ne V_{F,D-1}$; once a certificate shows that the
@@ -358,6 +438,46 @@ syzygy of degree $3$ of the tops $x^2,xy$, and every Koszul combination is
 a multiple of $x\,(y,-x)$, so $\ffd(F)=3$. The input list $F\cup\{x\}$ has
 the same ideal and $\lfd=2$.
 \end{example}
+
+\begin{figure}[tbp]
+\centering
+\begin{tikzpicture}[font=\footnotesize, x=1.5cm, y=1cm]
+  \draw[-{Stealth[length=2mm]},black!70] (1.55,0)--(8.95,0)
+    node[right,font=\scriptsize]{computation budget $D$};
+  \foreach \d in {2,...,8}
+    \draw[black!70] (\d,0.07)--(\d,-0.07) node[below=2pt,font=\scriptsize]{$\d$};
+  % intermediate possible falls
+  \foreach \d in {5,6}
+    \draw[-{Stealth[length=1.3mm]},black!35] (\d,0.6)--(\d,0.28);
+  % first fall
+  \draw[-{Stealth[length=1.6mm]},oigreen!65!black,semithick] (4,0.9)--(4,0.12);
+  \node[draw=oigreen!70!black,fill=oigreen!16,diamond,inner sep=1.7pt] at (4,0){};
+  \node[oigreen!50!black,font=\scriptsize,anchor=south,align=center] at (4,0.92)
+    {\textbf{first fall}\\$=\ffd$};
+  % last fall
+  \draw[-{Stealth[length=1.6mm]},oiverm!80!black,semithick] (7,0.9)--(7,0.12);
+  \node[draw=oiverm!80!black,fill=oiverm!16,inner sep=2pt] at (7,0){};
+  \node[oiverm!65!black,font=\scriptsize,anchor=south,align=center] at (7,0.92)
+    {\textbf{last fall}\\$=\lfd$};
+  % under-segments
+  \draw[oiorange!85!black,line width=1.5pt] (4,-0.55)--(6.9,-0.55);
+  \node[oiorange!60!black,font=\scriptsize,anchor=north] at (5.45,-0.6)
+    {not yet closed: $V_{F,D}\subsetneq\Id\cap M_{\le D}$};
+  \draw[oiblue!80!black,line width=1.5pt] (7.1,-0.55)--(8.8,-0.55);
+  \node[oiblue!65!black,font=\scriptsize,anchor=north,align=center] at (7.95,-0.6)
+    {closed for good:\\$V_{F,D}=\Id\cap M_{\le D}$};
+\end{tikzpicture}
+\caption{The last fall degree reads off the \emph{falls}. As the budget $D$
+grows, the closure $V_{F,D}$ gains rows; a \emph{strict fall} is a budget at
+which a new element of degree below $D$ appears (Example~\ref{ex:lfd} shows
+one, $y\,x^2-x(xy-1)=x$, a drop from degree $3$ to $1$). The first fall is
+the first fall degree; the last fall is the last fall degree, past which the
+degree-$D$ computation has captured all of $\Id\cap M_{\le D}$ and no further
+fall occurs. The values marked are the unit instance of
+Section~\ref{sec:depth14} at $k=14$ ($\ffd=4$, $\lfd=7$); faint arrows mark
+that falls may also occur in between.}
+\label{fig:fall}
+\end{figure}
 
 For two-summand prime chain systems the LFD agrees with the first fall
 degree at depth $k=2$ on all systems computed ($4$ when $3t^2+a\ne0$ and $3$ otherwise;
