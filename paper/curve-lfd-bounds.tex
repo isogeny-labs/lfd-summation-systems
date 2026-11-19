@@ -300,7 +300,50 @@ $\alpha,\beta$ it tries to write $R=\alpha P+\beta Q$ as a sum
 $R=P_1+\cdots+P_m$ with $P_i\in\mathcal F$, which gives a linear relation
 among the discrete logarithms of the factor-base elements; once about
 $|\mathcal F|$ independent relations are known, linear algebra yields the
-logarithm of $Q$. Finding a decomposition is the expensive step.
+logarithm of $Q$. Finding a decomposition is the expensive step
+(Figure~\ref{fig:ic}).
+
+\begin{figure}[tbp]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize,
+  stg/.style={draw, line width=0.7pt, rounded corners=2.5pt, align=flush left,
+    inner sep=5pt, text width=3.5cm, minimum height=1.95cm, anchor=north},
+  fl/.style={-{Stealth[length=2mm]}, semithick, black!70}]
+\node[stg] (dl) at (0,0)
+  {\textbf{Discrete logarithm}\\[2pt]
+   {\scriptsize Given $P$ and $Q=\ell P$ on $E(K)$, recover $\ell$.}};
+\node[stg, draw=oiorange!80!black, fill=oiorange!8,
+      right=9mm of dl.north east, anchor=north west] (rs)
+  {\textbf{Relation search}\\[2pt]
+   {\scriptsize Random $R=\alpha P+\beta Q$; decompose $R=P_1+\cdots+P_m$ with
+    $P_i\in\mathcal F$.}};
+\node[stg, right=9mm of rs.north east, anchor=north west] (la)
+  {\textbf{Linear algebra}\\[2pt]
+   {\scriptsize About $|\mathcal F|$ relations determine $\ell$.}};
+\draw[fl] (dl) -- (rs);
+\draw[fl] (rs) -- (la);
+\draw[fl] (rs.north west) to[out=125,in=55]
+  node[above,font=\scriptsize]{repeat $\approx|\mathcal F|$ times} (rs.north east);
+\node[below=10mm of rs.south, anchor=north, draw=oiblue!70!black, fill=oiblue!5,
+      rounded corners=2.5pt, inner sep=6pt, align=flush left, text width=9.1cm,
+      font=\scriptsize] (det)
+  {\textbf{Inside each attempt.} The decomposition $R=P_1+\cdots+P_m$ is the
+   solution set of a \emph{Semaev system} $S_{m+1}(x_1,\ldots,x_m,t)=0$
+   ($t=x(R)$), with each $x_i$ in the abscissas of $\mathcal F$. Solved by
+   linear-algebra Gr\"obner methods, its cost grows with the degree the
+   computation must reach---the \textbf{last fall degree}, the subject of this
+   paper.};
+\draw[fl] (rs.south) -- (det.north);
+\end{tikzpicture}
+\caption{Index calculus at a glance, and where this paper sits. The relation
+search is the expensive stage; each attempt solves a summation-polynomial
+system, and the degree a linear-algebra solver must reach---the last fall
+degree---governs that cost. Whether the method competes with Pollard rho,
+which needs about $\sqrt{|E(K)|}$ group operations, turns on how cheap the
+relation search is (Section~\ref{sec:related}).}
+\label{fig:ic}
+\end{figure}
 
 Semaev~\cite{semaev} expresses the decomposition condition as a polynomial equation. For a curve
 $y^2=x^3+ax+b$ the polynomial $S_n\in K[x_1,\ldots,x_n]$ vanishes at

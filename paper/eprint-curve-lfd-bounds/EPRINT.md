@@ -79,8 +79,8 @@ recorded closures that fit in 16 GB (`second-engine/gate-20261119/`).
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `59b2793922147752fd6408c6ced106730ef4de764a7a28bb330962da08804f78` |
-| `paper/curve-lfd-bounds.tex` | `6df5d420ad8310c88e0d7b8b47ea5c9d7a3c9cfd2bba1effa059613c0dbde059` |
+| `paper/curve-lfd-bounds.pdf` | `e2e74e06a936d174c49148b1386c9b7e65afbce4957994697051ccd9eae40e25` |
+| `paper/curve-lfd-bounds.tex` | `887050974f5e6d6930edf8a2c6735002fb4e0567b7a40c04650a260e2ccf56cb` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
 The PDF and figures were regenerated on 19 November 2026 with Tectonic 0.17.0
