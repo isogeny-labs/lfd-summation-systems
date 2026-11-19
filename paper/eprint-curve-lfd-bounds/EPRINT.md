@@ -59,16 +59,27 @@ p = 786433), whose profiles follow the recursion predicted on 10 November;
 the prediction scoring, limitations and future directions updated
 accordingly (`../latest-update-20261119.md`).
 
+Revision of 19 November 2026, later the same day (abstract unchanged):
+merged the E6 proper-ideal growth theorem (PR #33) into item (5) of
+the target-of-order-two growth theorem: for $E_6$ over $\F_p$, every $k\ge38$ and
+every prime $p$ with $2^{k+1}\mid p-1$, the lower bound
+$\lfd>\lfloor(k-10)/14\rfloor$ holds whether or not the ideal is the
+unit ideal, by a degree-two ideal witness rather than the unit-ideal
+step. This also decides the Fermat-factor caveat of item (4) for
+$k\ge38$. The capped local searches of PR #35 were merged as a record;
+they do not change any manuscript claim.
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `d0a446b77f66a796f2ec939cda98cddb9943dfd11d7dc6ce1561403027883546` |
-| `paper/curve-lfd-bounds.tex` | `988a501f22215650cb4d8e07f13d36a7b6c65a385b2da6cd8168ca16e3fddc69` |
+| `paper/curve-lfd-bounds.pdf` | `c3cc7e43d4405097414136997c091d4a9e6ac38106072187ddae3ef4c466533d` |
+| `paper/curve-lfd-bounds.tex` | `f6de88099b50a4fdfbb6d6b9e724a59bace98d0da2d150cfa636b275d10728eb` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `081f075e151196e44eb685d80e59293385d1f7c06fdcae68850b145d48ca7c43` |
 
 The PDF and figures were regenerated on 19 November 2026 with Tectonic 0.17.0
-(conda-forge; bundle `tlextras-2022.0r0`) by
+(Homebrew formula `tectonic`, default bundle) by
 `python3 scripts/build_ic_curve_paper.py`. The PDF producer is xdvipdfmx
-(0.1). This replaces the earlier, incorrect pdfTeX build attribution.
+(0.1). Earlier rebuilds used the conda-forge package of the same version;
+this replaces the earlier, incorrect pdfTeX build attribution.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 

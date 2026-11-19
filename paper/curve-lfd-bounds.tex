@@ -2274,8 +2274,14 @@ $E_a$ and $t=1$.
 \item For $E_6$ and every $k\ge2$, every prime factor $p$ of $2^{2^k}+1$
  satisfies $p\equiv1\pmod{2^{k+1}}$ and $p>2^{k+1}$, and over $\F_p$ the
  ideal at depth $k$ is a proper ideal. At these primes the unit-ideal
- argument does not establish the numerical lower bound of (3); whether
- that bound holds remains undecided.
+ argument does not establish the numerical lower bound of (3); for
+ $k\ge38$ item (5) supplies it, and for $2\le k<38$ whether that bound
+ holds remains undecided.
+\item For $E_6$ over $\F_p$, every $k\ge38$ and every prime $p$ with
+ $2^{k+1}\mid p-1$, the last fall degree satisfies
+ $\lfd>\lfloor(k-10)/14\rfloor$ whether or not the ideal is the unit
+ ideal. (Here $p>2^{k+1}$ follows from the divisibility.) This is the
+ lower bound of (3) without the unit-ideal premise.
 \end{enumerate}
 \end{theorem}
 \begin{proof}[Proof sketch]
@@ -2321,6 +2327,13 @@ For (4), $2$ has order $2^{k+1}$ modulo a
 prime factor $p$ of $2^{2^k}+1$, so $4$ has order $2^k$; setting
 $x_1=x_2=4$ and every chain variable to the corresponding power $4^{2^j}$
 solves the chain equations, and there $(x_1-1)x_2-x_1-8=12-4-8=0$.
+For (5), the kernel exhibits the degree-two element
+$h=(x_1-1)x_2-x_1-8$ of the actual input ideal, which lies there even when
+the ideal is proper, and proves that its Euler derivative with respect to
+the second variable is nonzero on the rational-function model. A first-jet
+closure derived from the polynomial lift identity then rules out a
+derivation of $1$ of degree at most $\lfloor(k-10)/14\rfloor$; no
+unit-ideal premise is used.
 \end{proof}
 
 The theorem is weaker than Theorem~\ref{thm:growth} in its range and
@@ -2331,7 +2344,7 @@ the genus-one bound that Theorem~\ref{thm:growth} needs for general
 targets, and that theorem stays a written proof, conditional in Lean
 (Section~\ref{sec:growthnontorsion} gives the part of the genus-one
 construction that is kernel-checked).
-Item (1) covers a one-parameter family of curves. Items (2) to (4) give
+Item (1) covers a one-parameter family of curves. Items (2) to (5) give
 the sharper fixed-$E_6$ statements; Corollary~\ref{cor:rationalprime}
 below extends prime-field growth to the rational-parameter family. Item (3) has the explicit sufficient cutoff
 $B_k$, rather than an unspecified integer from a B\'ezout identity; the
@@ -2339,7 +2352,8 @@ general column bound gives $2^{2^k}9^{4^k}$, and the nonnegativity of the
 entries removes the factor $2^{2^k}$. The cutoff remains loose; no least suitable prime is computed. The statement
 concerns pairs $(p,k)$, with $p$ allowed to grow with $k$. By (4), the unit-ideal hypothesis fails for some primes
 $p\equiv1\pmod{2^{k+1}}$ at every depth (Remark~\ref{rem:fermatbad});
-this does not decide whether their LFD satisfies the numerical bound of (3). Item (2) holds for every prime $p>2^{k+1}$,
+for $k\ge38$ item (5) nevertheless gives them the numerical bound of (3),
+and below $k=38$ this does not decide whether their LFD satisfies it. Item (2) holds for every prime $p>2^{k+1}$,
 and on the primes of (4) it carries no information, the ideal being proper
 there. On the unit-ideal instances of (1) and (3), $3t^2+a=3+a\ne0$,
 so Theorem~\ref{thm:three} already gives $\lfd\ge4$; the lower bound of
@@ -3183,7 +3197,7 @@ $1\in V_4$ on the $(0,0)$ family & \code{PrimeM2Sharp.one\_at\_four}\\
 Local-to-global criterion & \code{LocalReductionBound.lfd\_bound\_of\_local}\\
 Quotient exclusion principle & module \code{QuotientLowerBound}\\
 Theorem~\ref{thm:growth} (conditional) & \code{GrowthMain.CurveModel}, \code{growth\_theorem}, \code{growth\_theorem\_linear}, \code{growth\_lfd\_window}, \code{GrowthExistence.growth\_instance\_window}, \code{GrowthCriterion.closed\_iff\_fei}\\
-Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.unit\_complex\_of\_norm\_gt}, \code{GrowthTwoTorsionFamily.exists\_lfd\_linear\_window}, \code{GrowthRationalParameterClassification.exists\_lfd\_linear\_window}, \code{grid\_zero\_iff}; (2) \code{GrowthPrimeE6NativeNonmembership.e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthSharpPrimeBound.prime\_lfd\_window}, \code{eliminant\_det\_bound}, \code{GrowthExplicitPrimeBound.exists\_prime\_window\_above}, \code{GrowthFixedE6PrimeSequence.exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.e6\_not\_unit\_of\_fermat\_factor}\\
+Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.unit\_complex\_of\_norm\_gt}, \code{GrowthTwoTorsionFamily.exists\_lfd\_linear\_window}, \code{GrowthRationalParameterClassification.exists\_lfd\_linear\_window}, \code{grid\_zero\_iff}; (2) \code{GrowthPrimeE6NativeNonmembership.e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthSharpPrimeBound.prime\_lfd\_window}, \code{eliminant\_det\_bound}, \code{GrowthExplicitPrimeBound.exists\_prime\_window\_above}, \code{GrowthFixedE6PrimeSequence.exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.e6\_not\_unit\_of\_fermat\_factor}; (5) \code{GrowthJetPolynomial.e6\_prime\_lfd\_linear}\\
 Corollary~\ref{cor:rationalprime} & \code{GrowthRationalPrimeCutoff.rational\_prime\_growth}, \code{denominator\_and\_parameter\_guards}, \code{matrix\_det\_ne\_zero}; \code{GrowthRationalPrimeNative.not\_one\_of\_large\_prime}\\
 \bottomrule
 \end{tabular}
