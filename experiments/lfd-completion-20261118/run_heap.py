@@ -11,7 +11,15 @@ def digest(path,decoded=False):
     return h.hexdigest()
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed'],default='heap');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('input',type=Path);ap.add_argument('tag');ap.add_argument('--seconds',type=int,default=1800);ap.add_argument('--engine',choices=['heap','indexed','restart'],default='heap');ap.add_argument('--resume',type=Path);args=ap.parse_args()
+    resume_record=None
+    if args.resume:
+        if args.engine!='restart':raise ValueError('--resume requires --engine restart')
+        from verify_compressed import verify
+        verify(args.resume)
+        old=(args.resume/'input.txt').read_text().split();new=args.input.read_text().split()
+        if old[:5]!=new[:5] or old[8:]!=new[8:]:raise ValueError('resume changes the polynomial system or degree')
+        resume_record={'run_dir':str(args.resume.resolve()),'result_sha256':digest(args.resume/'result.json')}
     dest=HERE/'runs'/args.tag
     if dest.exists():raise FileExistsError(dest)
     if shutil.disk_usage(HERE).free<3*2**30:raise RuntimeError('need at least 3 GiB free before launch')
@@ -22,7 +30,9 @@ def main():
     binary=dest/'producer';subprocess.run(['rustc','-O',str(source),'-o',str(binary)],check=True)
     outputs=[dest/'derivations.txt.gz',dest/'basis.txt.gz'];start=time.monotonic();reason=None
     with (dest/'stderr.log').open('w') as err:
-        child=subprocess.Popen([str(binary),str(dest/'input.txt'),*map(str,outputs)],stdout=subprocess.PIPE,stderr=err,text=True,start_new_session=True)
+        command=[str(binary),str(dest/'input.txt'),*map(str,outputs)]
+        if args.resume:command.extend(str(args.resume/name) for name in ['derivations.txt.gz','basis.txt.gz'])
+        child=subprocess.Popen(command,stdout=subprocess.PIPE,stderr=err,text=True,start_new_session=True)
         while True:
             try:
                 stdout,_=child.communicate(timeout=2)
@@ -39,7 +49,7 @@ def main():
                     try:child.communicate(timeout=5)
                     except subprocess.TimeoutExpired:os.killpg(child.pid,signal.SIGKILL);child.communicate()
                     result={'status':reason,'scope':'partial compressed files; no complete closure claim'};break
-    result.update(engine=args.engine,source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
+    result.update(resume_from=resume_record,engine=args.engine,source_sha256=source_hashes,input_sha256=digest(dest/'input.txt'),original_input_sha256=digest(args.input),elapsed_seconds=time.monotonic()-start)
     result['artifacts']={p.name:{'sha256':digest(p),'bytes':p.stat().st_size} for p in outputs}
     if not reason:
         for p in outputs:result['artifacts'][p.name]['decoded_sha256']=digest(p,True)

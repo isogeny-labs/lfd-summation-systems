@@ -1,0 +1,37 @@
+{
+  "status": "closed",
+  "p": 114689,
+  "m": 5,
+  "k": 3,
+  "D": 7,
+  "derived_rank": 27838,
+  "contains_one": false,
+  "products": 106110,
+  "terms": 3540732,
+  "muladds": 291985684,
+  "seconds": 4.634595,
+  "resume_from": {
+    "run_dir": "/Volumes/SSD990-2/lfd-summation-systems/experiments/lfd-completion-20261118/runs/restart-check-D7-seed",
+    "result_sha256": "d71938cc0d244b0903aa2e165a08c48709731ceac194c8c55c5737056c069275"
+  },
+  "engine": "restart",
+  "source_sha256": {
+    "restart_producer.rs": "aada6558b6e4287d643464bb3d1a81fb6d770e13ba6c0a902cab2ab8968064ce",
+    "run_heap.py": "2f378556bf65646f2c4f39f336a7d33c2865a6c56d2848ca154fac0d4f881d80"
+  },
+  "input_sha256": "c65f519e1f93a78e2419c292f78209bfbd6d68593669af81d79acc5150c053c7",
+  "original_input_sha256": "8523eeee5fd23df8ae825d4b85850677c7b010721da27530208a0b9eefd9f3ad",
+  "elapsed_seconds": 4.6972605000009935,
+  "artifacts": {
+    "derivations.txt.gz": {
+      "sha256": "256898f477092e05b31db39f0c2b075cf29c842c54ed240e122ed4179fcee58a",
+      "bytes": 1109899,
+      "decoded_sha256": "15238ee6845ddd48b91ea9dbdbd3b7cda4c13c3684c35d394d6dc3a1202559e8"
+    },
+    "basis.txt.gz": {
+      "sha256": "e5f990074f2c3de72424f48b09abba1b51e5874db4bed0ab5eac990826b5516a",
+      "bytes": 19839881,
+      "decoded_sha256": "5b1719f13a98b39b011bd34ec8387be8ea9b81b6bf02831c57302e9f1c68850e"
+    }
+  }
+}

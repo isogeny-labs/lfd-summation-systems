@@ -167,3 +167,26 @@ Both engines run through the same byte-agreement and replay tests. There
 are now 29 distinct local tests, including an oversized-domain refusal
 check. The p=163841 degree-8 computation uses the indexed engine while the
 already running p=114689 heap computation retains its original sources.
+
+## Restarting a capped certificate
+
+`restart_producer.rs` can load a verified plain or gzip proof prefix. It
+preserves every seed row and ledger entry, requeues all seed rows of degree
+below D, and processes the original generators again. Replaying the full
+queue avoids relying on a saved cursor or on the absence of zero products
+from the ledger. The original proof is retained; no prefix is rewritten.
+
+`run_heap.py --engine restart --resume RUN_DIR` first independently replays
+the seed and checks that the new input has the same field, variables, degree
+and generators. Only resource budgets may differ. The combined proof must
+be independently replayed again before accepting a scientific result.
+
+On the recorded p=114689 degree-7 case, a one-second cap retained 19,635
+rows. Restart completed all 27,838 rows, and full independent replay checked
+membership, closedness and exclusion of 1. The final decoded ledger and
+basis hashes equal those of the uninterrupted checked run. Receipts are
+`results/restart-check-D7-{seed,completed}*.json`. Restart resource term
+counts include the seed's initial-generator terms, which the first
+producer's runtime counter omitted; this is not a change in mathematical
+rank. The restart and wrapper refusal checks bring the local suite to 32
+tests. These controls validate restart mechanics, not the open larger cells.

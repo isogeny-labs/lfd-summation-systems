@@ -160,3 +160,52 @@ def test_indexed_engine_refuses_oversized_domain_before_writing(tmp_path):
     result=subprocess.run([str(binary),str(inp),str(ledger),str(basis)],capture_output=True,text=True)
     assert result.returncode!=0 and 'indexed-space cap exceeded' in result.stderr
     assert not ledger.exists() and not basis.exists()
+
+
+@pytest.fixture(scope='module')
+def restart_producer(tmp_path_factory):
+    import subprocess
+    binary=tmp_path_factory.mktemp('restart')/'producer'
+    subprocess.run(['rustc','-O',str(HERE/'restart_producer.rs'),'-o',str(binary)],check=True)
+    return binary
+
+
+def test_capped_proof_resumes_to_checked_closure(tmp_path,restart_producer,rust_checker):
+    import subprocess,json,gzip
+    # Stop after the generator; restart must discover additional independent
+    # shifts and prove closure rather than merely re-label the seed as exact.
+    inp,_,_=clone(tmp_path);tokens=inp.read_text().split();original=tokens[:];tokens[6]='1';inp.write_text(' '.join(tokens)+'\n')
+    ledger=tmp_path/'seed.ledger.gz';basis=tmp_path/'seed.basis.gz'
+    first=json.loads(subprocess.run([str(restart_producer),str(inp),str(ledger),str(basis)],capture_output=True,text=True,check=True).stdout)
+    assert first['status']=='capped' and first['derived_rank']==1
+    assert subprocess.run([str(rust_checker),str(inp),str(ledger),str(basis)],capture_output=True).returncode==0
+    inp.write_text(' '.join(original)+'\n');outledger=tmp_path/'resumed.ledger.gz';outbasis=tmp_path/'resumed.basis.gz'
+    second=json.loads(subprocess.run([str(restart_producer),str(inp),str(outledger),str(outbasis),str(ledger),str(basis)],capture_output=True,text=True,check=True).stdout)
+    assert second['status']=='closed' and second['derived_rank']==5
+    assert gzip.decompress(outledger.read_bytes()).startswith(gzip.decompress(ledger.read_bytes()))
+    assert gzip.decompress(outbasis.read_bytes()).startswith(gzip.decompress(basis.read_bytes()))
+    assert subprocess.run([str(rust_checker),str(inp),str(outledger),str(outbasis),'closed'],capture_output=True).returncode==0
+
+
+def test_forged_seed_is_refused_by_independent_final_replay(tmp_path,restart_producer,rust_checker):
+    import subprocess,gzip
+    inp,ledger,basis=clone(tmp_path)
+    lines=basis.read_text().splitlines();row=lines[0].split();row[-1]=str((int(row[-1])+1)%65537);lines[0]=' '.join(row)
+    seed=tmp_path/'forged.gz';seed.write_bytes(gzip.compress(('\n'.join(lines)+'\n').encode()))
+    outledger=tmp_path/'output.ledger.gz';outbasis=tmp_path/'output.basis.gz'
+    result=subprocess.run([str(restart_producer),str(inp),str(outledger),str(outbasis),str(ledger),str(seed)],capture_output=True)
+    if result.returncode==0:
+        assert subprocess.run([str(rust_checker),str(inp),str(outledger),str(outbasis),'closed'],capture_output=True).returncode!=0
+
+
+def test_restart_wrapper_refuses_different_polynomial_system(tmp_path,monkeypatch):
+    import sys
+    import run_heap as runner
+    import verify_compressed
+    seed=tmp_path/'seed';seed.mkdir();original=(SRC/'input.txt').read_text();(seed/'input.txt').write_text(original)
+    inp=tmp_path/'changed-input';tokens=original.split();tokens[-1]=str((int(tokens[-1])+1)%65537);inp.write_text(' '.join(tokens)+'\n')
+    monkeypatch.setattr(verify_compressed,'verify',lambda path:None)
+    monkeypatch.setattr(runner,'HERE',tmp_path)
+    monkeypatch.setattr(sys,'argv',['run_heap.py',str(inp),'new-run','--engine','restart','--resume',str(seed)])
+    with pytest.raises(ValueError,match='polynomial system or degree'):runner.main()
+    assert not (tmp_path/'runs'/'new-run').exists()
