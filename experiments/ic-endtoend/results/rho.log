@@ -1,0 +1,16 @@
+b=20 neg=true ok=400/400 mean GA=7261 ratio=7.544 0.2s
+b=20 neg=false ok=400/400 mean GA=6431 ratio=4.725 0.2s
+b=24 neg=true ok=400/400 mean GA=8566 ratio=2.012 0.2s
+b=24 neg=false ok=400/400 mean GA=10194 ratio=1.693 0.3s
+b=28 neg=true ok=400/400 mean GA=25537 ratio=1.330 0.8s
+b=28 neg=false ok=400/400 mean GA=33236 ratio=1.224 0.9s
+b=32 neg=true ok=400/400 mean GA=69191 ratio=1.178 2.2s
+b=32 neg=false ok=400/400 mean GA=87204 ratio=1.049 2.7s
+b=36 neg=true ok=400/400 mean GA=254881 ratio=1.095 9.1s
+b=36 neg=false ok=400/400 mean GA=313957 ratio=0.954 11.1s
+b=40 neg=true ok=400/400 mean GA=923474 ratio=0.994 37.4s
+b=40 neg=false ok=400/400 mean GA=1296000 ratio=0.986 48.9s
+
+real	1m53.905s
+user	4m4.538s
+sys	0m0.171s
