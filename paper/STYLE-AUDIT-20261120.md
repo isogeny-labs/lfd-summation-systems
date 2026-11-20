@@ -145,3 +145,90 @@ the sharpest open question is.
    repeating `sec:computations`.
 7. No change to any theorem-environment body, table, figure, label,
    citation, number or evidence status. Abstract untouched.
+
+## Result of the rewrite
+
+Before: 62 pages, 34,311 words of non-comment source, 41,960 words of
+extracted PDF text. After: 60 pages, 33,082 words of source, 40,521 words of
+PDF text. The page target (15-25% fewer) was not reached: about 45% of the
+pages are theorem and proof environments, tables, figures, the generated
+sweep tables, the Lean declaration table, the growth proof and the
+bibliography, none of which may change, and the hard rule that every number
+of the old body survives leaves little prose that can be deleted rather than
+rewritten.
+
+Pattern counts in the body (before the appendices, comments excluded):
+
+| Pattern (body, before the appendices) | Before | After |
+|---|---|---|
+| wall times/memory/hosts in body | 46 | 0 |
+| SHA-256 / hash prefixes in body | 8 | 0 |
+| file paths (\code) in body | 22 | 3 |
+| "not certified"/"not a certificate"/"corroborat-" | 29 | 19 |
+| "single run"/"one run"/"run once"/"one engine" | 37 | 13 |
+| "later"/"before the run"/"first version" | 11 | 1 |
+| semicolons | 451 | 407 |
+
+The three remaining `\code{}` uses in the body are inside the proof of
+Theorem `thm:sd` (unchanged by rule), the prediction name `d6-base-15`, and
+the caption of Table `tab:fermatlfd` (unchanged by rule). The remaining
+"one run"/"not certified" occurrences are mostly inside Table `tab:profile`
+(unchanged by rule) and in the single place where each status is stated.
+
+New section outline: Introduction (question, prior belief, findings,
+evidence labels, contributions, organization); Background; Systems and
+notation; Proved bounds (the ceiling $k+2$ and the floors); Exact
+computations (sweep; depths 8-9; the step at depth 6; depth 10; depths
+11-16 and the frontier at $k=14$, with the degree lift and the
+corroboration collected in one place; the recursion; the profile and the
+conjecture, moved here from the end of the section; three to eight summands;
+binary and Koblitz curves); Growth in the depth; The solving degree; What
+the results mean, and what they do not (new); Limitations; Future
+directions; Conclusion; appendices, with a new subsection "Computational
+record" (`app:record`) holding the run logistics moved out of the body.
+
+## Invariants
+
+Mechanical comparison of `origin/main` (`1ff74a7`) against this branch
+(scratch script, not committed). Theorem-type environments, proofs, tables,
+figures and equations are compared as byte-identical multisets of
+`\begin{...}...\end{...}` blocks; numbers are all digit tokens of the old
+non-comment source (thousands separators normalised, bibliography
+excluded), searched in the whole new file.
+
+```
+labels old 111 new 113 removed [] added ['app:record', 'sec:meaning']
+cite keys old 28 new 28 removed []
+bibitems identical True
+refs to undefined labels in new []
+env theorem: old 16 new 16 identical-as-multiset True
+env lemma: old 11 new 11 identical-as-multiset True
+env corollary: old 3 new 3 identical-as-multiset True
+env proposition: old 2 new 2 identical-as-multiset True
+env conjecture: old 1 new 1 identical-as-multiset True
+env definition: old 3 new 3 identical-as-multiset True
+env example: old 1 new 1 identical-as-multiset True
+env remark: old 3 new 3 identical-as-multiset True
+env proof: old 28 new 28 identical-as-multiset True
+env table: old 10 new 10 identical-as-multiset True
+env figure: old 10 new 10 identical-as-multiset True
+env equation: old 4 new 4 identical-as-multiset True
+env thebibliography: old 1 new 1 identical-as-multiset True
+abstract identical True
+AI-use paragraph identical True
+distinct numeric tokens in old body 518 missing from new file 0 []
+of which missing from new body (non-comment) []
+```
+
+Exceptions: none. No label or citation was removed; two labels were added
+(`sec:meaning`, `app:record`). Every theorem, lemma, corollary,
+proposition, conjecture, definition, example and remark body, every proof,
+every table and every figure is byte-identical (the subsection
+`sec:conjecture`, with Table `tab:profile` and Figure `fig:lfddepth`, moved
+as a block). The abstract and the "Use of AI tools" paragraph are
+byte-identical. All 518 distinct numeric tokens of the old body occur in
+the new body (outside comments).
+
+Build: Tectonic 0.17, producer xdvipdfmx, 0 warnings, 0 overfull boxes,
+no "??" in the text. `scripts/check_publication_artifacts.py`: passed,
+439 checks.
