@@ -1,4 +1,4 @@
-⚠ [1151/1205] Replayed ICFallDegrees.QuadraticFamily
+⚠ [1155/1412] Replayed ICFallDegrees.QuadraticFamily
 warning: ././././ICFallDegrees/QuadraticFamily.lean:143:2: try 'simp at hd' instead of 'simpa using hd'
 note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
 warning: ././././ICFallDegrees/QuadraticFamily.lean:150:40: try 'simp' instead of 'simpa'
@@ -19,10 +19,10 @@ warning: ././././ICFallDegrees/QuadraticFamily.lean:177:80: Used `tac1 <;> tac2`
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 warning: ././././ICFallDegrees/QuadraticFamily.lean:182:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [1152/1205] Replayed ICFallDegrees.RawPresentation
+⚠ [1156/1412] Replayed ICFallDegrees.RawPresentation
 warning: ././././ICFallDegrees/RawPresentation.lean:83:2: try 'simp at he' instead of 'simpa using he'
 note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [1290/1356] Replayed ICFallDegrees.BinaryFamily
+⚠ [1290/1412] Replayed ICFallDegrees.BinaryFamily
 warning: ././././ICFallDegrees/BinaryFamily.lean:115:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryFamily.normalized_lfd_three':
   [CharP K 2]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -38,7 +38,7 @@ warning: ././././ICFallDegrees/BinaryFamily.lean:140:0: automatically included s
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [CharP K 2] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1409/1537] Replayed ICFallDegrees.SparseCoefficient
+⚠ [1409/1642] Replayed ICFallDegrees.SparseCoefficient
 warning: ././././ICFallDegrees/SparseCoefficient.lean:25:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparsePolynomial.meaning_coefficient':
   [DecidableEq K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -49,13 +49,13 @@ warning: ././././ICFallDegrees/SparseCoefficient.lean:39:0: automatically includ
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [DecidableEq K] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1410/1537] Replayed ICFallDegrees.FilteredSpan
+⚠ [1410/1642] Replayed ICFallDegrees.FilteredSpan
 warning: ././././ICFallDegrees/FilteredSpan.lean:23:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.FilteredSpan.coefficient_rowMap':
   [Nontrivial K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [Nontrivial K] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1411/1537] Replayed ICFallDegrees.SparseLowerCertificate
+⚠ [1411/1642] Replayed ICFallDegrees.SparseLowerCertificate
 warning: ././././ICFallDegrees/SparseLowerCertificate.lean:41:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.SparseLowerCertificate.meaning_project':
   [Nontrivial K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -66,10 +66,10 @@ warning: ././././ICFallDegrees/SparseLowerCertificate.lean:59:0: automatically i
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [Nontrivial K] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1412/1537] Replayed ICFallDegrees.SparseDAG
+⚠ [1412/1642] Replayed ICFallDegrees.SparseDAG
 warning: ././././ICFallDegrees/SparseDAG.lean:173:38: try 'simp' instead of 'simpa'
 note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [1413/1537] Replayed ICFallDegrees.LowerCertificateSupport
+⚠ [1413/1642] Replayed ICFallDegrees.LowerCertificateSupport
 warning: ././././ICFallDegrees/LowerCertificateSupport.lean:40:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.LowerCertificateSupport.rowSpace_coefficient_zero':
   [Nontrivial K]
   [DecidableEq K]
@@ -81,13 +81,13 @@ warning: ././././ICFallDegrees/LowerCertificateSupport.lean:49:0: automatically 
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [DecidableEq K] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1425/1537] Replayed ICFallDegrees.HomogeneousFirstFall
+⚠ [1425/1642] Replayed ICFallDegrees.HomogeneousFirstFall
 warning: ././././ICFallDegrees/HomogeneousFirstFall.lean:119:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.HomogeneousFirstFall.degree_and_top_of_add':
   [Nontrivial K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [Nontrivial K] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1426/1537] Replayed ICFallDegrees.QuadraticHomogeneousFamily
+⚠ [1426/1642] Replayed ICFallDegrees.QuadraticHomogeneousFamily
 warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:28:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.QuadraticHomogeneousFamily.coefficient_pivots':
   [Nontrivial K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -113,7 +113,7 @@ warning: ././././ICFallDegrees/QuadraticHomogeneousFamily.lean:79:0: automatical
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [Nontrivial K] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1427/1537] Replayed ICFallDegrees.PrimeM2Homogeneous
+⚠ [1427/1642] Replayed ICFallDegrees.PrimeM2Homogeneous
 warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:28:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.PrimeM2Homogeneous.raw_normalization_identity':
   [Nontrivial K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -131,7 +131,23 @@ consider restructuring your `variable` declarations so that the variables are no
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
 warning: ././././ICFallDegrees/PrimeM2Homogeneous.lean:56:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [1673/1703] Replayed ICFallDegrees.BinaryS3Bounds
+⚠ [1665/1885] Replayed ICFallDegrees.BinaryExtensionFields
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:19:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:20:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:21:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:22:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/BinaryExtensionFields.lean:29:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1671/1885] Replayed ICFallDegrees.BinaryDimensionTwoCurves
+warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:2: 'all_goals rfl' tactic does nothing
+note: this linter can be disabled with `set_option linter.unusedTactic false`
+warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:12: this tactic is never executed
+note: this linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [1688/1885] Replayed ICFallDegrees.BinaryS3Bounds
 warning: ././././ICFallDegrees/BinaryS3Bounds.lean:31:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryS3Bounds.affine_degree':
   [Algebra (ZMod 2) K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -157,13 +173,26 @@ warning: ././././ICFallDegrees/BinaryS3Bounds.lean:91:0: automatically included 
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [Algebra (ZMod 2) K] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1681/1703] Replayed ICFallDegrees.BinaryTriple
+⚠ [1696/1885] Replayed ICFallDegrees.BinaryTriple
 warning: ././././ICFallDegrees/BinaryTriple.lean:123:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [1682/1703] Replayed ICFallDegrees.PresentationTransport
+⚠ [1697/1885] Replayed ICFallDegrees.SplitChainLower
+warning: ././././ICFallDegrees/SplitChainLower.lean:34:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:37:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:53:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:109:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:117:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/SplitChainLower.lean:225:16: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1698/1885] Replayed ICFallDegrees.PresentationTransport
 warning: ././././ICFallDegrees/PresentationTransport.lean:17:12: try 'simp' instead of 'simpa'
 note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [1683/1703] Replayed ICFallDegrees.BinaryInverseCoordinates
+⚠ [1699/1885] Replayed ICFallDegrees.BinaryInverseCoordinates
 warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:24:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.BinaryInverseCoordinates.form_degree':
   [CharP K 2]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -213,44 +242,15 @@ warning: ././././ICFallDegrees/BinaryInverseCoordinates.lean:154:0: automaticall
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [Nontrivial K] [CharP K 2] in theorem ...
 note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [1684/1703] Replayed ICFallDegrees.ScalarExtensionTransport
+⚠ [1700/1885] Replayed ICFallDegrees.ScalarExtensionTransport
 warning: ././././ICFallDegrees/ScalarExtensionTransport.lean:73:6: try 'simp' instead of 'simpa'
 note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [1690/1884] Replayed ICFallDegrees.BinaryExtensionFields
-warning: ././././ICFallDegrees/BinaryExtensionFields.lean:19:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/BinaryExtensionFields.lean:20:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/BinaryExtensionFields.lean:21:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/BinaryExtensionFields.lean:22:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/BinaryExtensionFields.lean:29:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [1691/1884] Replayed ICFallDegrees.BinaryDimensionTwoCurves
-warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:2: 'all_goals rfl' tactic does nothing
-note: this linter can be disabled with `set_option linter.unusedTactic false`
-warning: ././././ICFallDegrees/BinaryDimensionTwoCurves.lean:83:12: this tactic is never executed
-note: this linter can be disabled with `set_option linter.unreachableTactic false`
-⚠ [1701/1884] Replayed ICFallDegrees.SplitChainLower
-warning: ././././ICFallDegrees/SplitChainLower.lean:34:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/SplitChainLower.lean:37:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/SplitChainLower.lean:53:85: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/SplitChainLower.lean:109:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/SplitChainLower.lean:117:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/SplitChainLower.lean:225:16: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [2783/2826] Replayed ICFallDegrees.GrowthSecant
+⚠ [2781/2802] Replayed ICFallDegrees.GrowthSecant
 warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: 'ring' tactic does nothing
 note: this linter can be disabled with `set_option linter.unusedTactic false`
 warning: ././././ICFallDegrees/GrowthSecant.lean:96:26: this tactic is never executed
 note: this linter can be disabled with `set_option linter.unreachableTactic false`
-⚠ [2955/3045] Replayed ICFallDegrees.GrowthRationalLogNumerator
+⚠ [2956/3114] Replayed ICFallDegrees.GrowthRationalLogNumerator
 warning: ././././ICFallDegrees/GrowthRationalLogNumerator.lean:48:4: try 'simp' instead of 'simpa'
 note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
 warning: ././././ICFallDegrees/GrowthRationalLogNumerator.lean:48:43: 'simp' tactic does nothing
@@ -261,108 +261,34 @@ warning: ././././ICFallDegrees/GrowthRationalLogNumerator.lean:48:43: this tacti
 note: this linter can be disabled with `set_option linter.unreachableTactic false`
 warning: ././././ICFallDegrees/GrowthRationalLogNumerator.lean:49:10: this tactic is never executed
 note: this linter can be disabled with `set_option linter.unreachableTactic false`
-⚠ [2968/3045] Replayed ICFallDegrees.GrowthRatFuncModel
-warning: ././././ICFallDegrees/GrowthRatFuncModel.lean:61:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-ℹ [2971/3045] Replayed ICFallDegrees.GrowthBoxSpread
-info: ././././ICFallDegrees/GrowthBoxSpread.lean:150:0: 'ICFallDegrees.GrowthBoxSpread.circuit_sigma_lt_box' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthBoxSpread.lean:151:0: 'ICFallDegrees.GrowthBoxSpread.fei_of_box_spread' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2972/3045] Replayed ICFallDegrees.GrowthFixedE6IntegralInputs
-warning: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:60:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-warning: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:60:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-info: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:76:0: 'ICFallDegrees.GrowthFixedE6IntegralInputs.map_chain_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:77:0: 'ICFallDegrees.GrowthFixedE6IntegralInputs.map_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:78:0: 'ICFallDegrees.GrowthFixedE6IntegralInputs.map_e6_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2976/3045] Replayed ICFallDegrees.GrowthCharZeroDeterminant
-warning: ././././ICFallDegrees/GrowthCharZeroDeterminant.lean:62:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.GrowthCharZeroDeterminant.multiplierMatrix_eq':
-  [Fintype ι]
-consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
-  omit [Fintype ι] in theorem ...
-note: this linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [2977/3045] Replayed ICFallDegrees.GrowthCharZeroComplexUnit
-warning: ././././ICFallDegrees/GrowthCharZeroComplexUnit.lean:71:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [2978/3045] Replayed ICFallDegrees.GrowthCharZeroSeparatedFamily
-warning: ././././ICFallDegrees/GrowthCharZeroSeparatedFamily.lean:45:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-ℹ [2979/3045] Replayed ICFallDegrees.GrowthFiniteStabilization
-info: ././././ICFallDegrees/GrowthFiniteStabilization.lean:81:0: 'ICFallDegrees.GrowthFiniteStabilization.exists_stationary_step' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthFiniteStabilization.lean:82:0: 'ICFallDegrees.GrowthFiniteStabilization.eventual_stabilization' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-ℹ [2980/3045] Replayed ICFallDegrees.GrowthBoundedDegreeLeastClosure
-info: ././././ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean:82:0: 'ICFallDegrees.GrowthBoundedDegreeLeastClosure.exists_least_stable' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean:83:0: 'ICFallDegrees.GrowthBoundedDegreeLeastClosure.degreeWindow_finite' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean:84:0: 'ICFallDegrees.GrowthBoundedDegreeLeastClosure.exists_least_bounded_degree_stable' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-ℹ [2981/3045] Replayed ICFallDegrees.GrowthConcreteClosureStep
-info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:137:0: 'ICFallDegrees.GrowthConcreteClosureStep.step_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:138:0: 'ICFallDegrees.GrowthConcreteClosureStep.step_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:139:0: 'ICFallDegrees.GrowthConcreteClosureStep.exists_concrete_least_stable' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:140:0: 'ICFallDegrees.GrowthConcreteClosureStep.least_stable_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [2982/3045] Replayed ICFallDegrees.GrowthConcreteClosureEquivalence
-info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:108:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.mem_embedded_iff' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:109:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.actual_le_of_step_closed' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:110:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.actual_least_stable' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:111:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.exists_finite_exact_closure' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-ℹ [2983/3045] Replayed ICFallDegrees.GrowthConcreteClosureStages
-info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:90:0: 'ICFallDegrees.GrowthConcreteClosureStages.stages_increasing' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:91:0: 'ICFallDegrees.GrowthConcreteClosureStages.stages_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:92:0: 'ICFallDegrees.GrowthConcreteClosureStages.stages_exact_by_finrank' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:93:0: 'ICFallDegrees.GrowthConcreteClosureStages.inClosure_iff_finite_stage' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-ℹ [2984/3045] Replayed ICFallDegrees.GrowthPrimeIntegralUnit
-info: ././././ICFallDegrees/GrowthPrimeIntegralUnit.lean:53:0: 'ICFallDegrees.GrowthPrimeIntegralUnit.square_diff_char_two' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: ././././ICFallDegrees/GrowthPrimeIntegralUnit.lean:54:0: 'ICFallDegrees.GrowthPrimeIntegralUnit.eliminant_mod_two_eq_one' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-⚠ [2994/3205] Replayed ICFallDegrees.GrowthRatFuncHigherLeibniz
+⚠ [2969/3114] Replayed ICFallDegrees.GrowthRatFuncHigherLeibniz
 warning: ././././ICFallDegrees/GrowthRatFuncHigherLeibniz.lean:71:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 warning: ././././ICFallDegrees/GrowthRatFuncHigherLeibniz.lean:71:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-ℹ [3000/3205] Replayed ICFallDegrees.GrowthPolynomialWronskianBasis
+ℹ [2976/3114] Replayed ICFallDegrees.GrowthPolynomialWronskianBasis
 info: ././././ICFallDegrees/GrowthPolynomialWronskianBasis.lean:244:0: 'ICFallDegrees.GrowthPolynomialWronskianBasis.polynomial_wronskian_ne_zero_of_basis_char_bound' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthPolynomialWronskianBasis.lean:245:0: 'ICFallDegrees.GrowthPolynomialWronskianBasis.polynomial_wronskian_ne_zero_of_basis' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3003/3205] Replayed ICFallDegrees.GrowthPrimeBoundedRationalWronskian
+ℹ [2979/3114] Replayed ICFallDegrees.GrowthPrimeBoundedRationalWronskian
 info: ././././ICFallDegrees/GrowthPrimeBoundedRationalWronskian.lean:94:0: 'ICFallDegrees.GrowthPrimeBoundedRationalWronskian.polynomial_wronskian_ne_zero_of_independent_degree_bound' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthPrimeBoundedRationalWronskian.lean:95:0: 'ICFallDegrees.GrowthPrimeBoundedRationalWronskian.rational_wronskian_ne_zero_of_bounded_polynomial_representatives' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3011/3205] Replayed ICFallDegrees.GrowthActualCofactorQuotient
+⚠ [2981/3114] Replayed ICFallDegrees.GrowthRatFuncModel
+warning: ././././ICFallDegrees/GrowthRatFuncModel.lean:61:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2990/3114] Replayed ICFallDegrees.GrowthActualCofactorQuotient
 warning: ././././ICFallDegrees/GrowthActualCofactorQuotient.lean:105:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 warning: ././././ICFallDegrees/GrowthActualCofactorQuotient.lean:112:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3018/3205] Replayed ICFallDegrees.GrowthPrimeE6BoxClearing
+⚠ [2997/3114] Replayed ICFallDegrees.GrowthPrimeE6BoxClearing
 warning: ././././ICFallDegrees/GrowthPrimeE6BoxClearing.lean:83:46: this tactic is never executed
 note: this linter can be disabled with `set_option linter.unreachableTactic false`
 warning: ././././ICFallDegrees/GrowthPrimeE6BoxClearing.lean:83:46: 'ring' tactic does nothing
@@ -383,14 +309,14 @@ info: ././././ICFallDegrees/GrowthPrimeE6BoxClearing.lean:175:0: 'ICFallDegrees.
 info: ././././ICFallDegrees/GrowthPrimeE6BoxClearing.lean:176:0: 'ICFallDegrees.GrowthPrimeE6BoxClearing.box_wronskian_ne_zero_of_degree_bound' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3019/3205] Replayed ICFallDegrees.GrowthPrimeE6BoxCofactor
+ℹ [2998/3114] Replayed ICFallDegrees.GrowthPrimeE6BoxCofactor
 info: ././././ICFallDegrees/GrowthPrimeE6BoxCofactor.lean:64:0: 'ICFallDegrees.GrowthPrimeE6BoxCofactor.e6_cofactor_ne_zero_of_box' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthPrimeE6BoxCofactor.lean:65:0: 'ICFallDegrees.GrowthPrimeE6BoxCofactor.e6_cofactor_nonzero_and_degree_of_box' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3020/3205] Replayed ICFallDegrees.GrowthPrimeE6BoxCofactorRatio
+⚠ [2999/3114] Replayed ICFallDegrees.GrowthPrimeE6BoxCofactorRatio
 warning: ././././ICFallDegrees/GrowthPrimeE6BoxCofactorRatio.lean:91:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 warning: ././././ICFallDegrees/GrowthPrimeE6BoxCofactorRatio.lean:100:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
@@ -398,36 +324,39 @@ note: this linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 info: ././././ICFallDegrees/GrowthPrimeE6BoxCofactorRatio.lean:102:0: 'ICFallDegrees.GrowthPrimeE6BoxCofactorRatio.e6_cofactor_ratio_of_box_replacement' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3021/3205] Replayed ICFallDegrees.GrowthPrimeE6BoxReplacementGap
+ℹ [3000/3114] Replayed ICFallDegrees.GrowthPrimeE6BoxReplacementGap
 info: ././././ICFallDegrees/GrowthPrimeE6BoxReplacementGap.lean:61:0: 'ICFallDegrees.GrowthPrimeE6BoxReplacementGap.e6_box_replacement_l1_le_four_budget' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3022/3205] Replayed ICFallDegrees.GrowthCircuitErasedBasis
+⚠ [3002/3114] Replayed ICFallDegrees.GrowthCircuitErasedBasis
 warning: ././././ICFallDegrees/GrowthCircuitErasedBasis.lean:47:5: unused variable `hx`
 note: this linter can be disabled with `set_option linter.unusedVariables false`
-ℹ [3025/3205] Replayed ICFallDegrees.GrowthPrimeE6BoxCircuitPair
+ℹ [3005/3114] Replayed ICFallDegrees.GrowthPrimeE6BoxCircuitPair
 info: ././././ICFallDegrees/GrowthPrimeE6BoxCircuitPair.lean:73:0: 'ICFallDegrees.GrowthPrimeE6BoxCircuitPair.e6_bounded_circuit_pair_le_four_budget' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3026/3205] Replayed ICFallDegrees.GrowthCircuitPairBound
+ℹ [3006/3114] Replayed ICFallDegrees.GrowthBoxSpread
+info: ././././ICFallDegrees/GrowthBoxSpread.lean:150:0: 'ICFallDegrees.GrowthBoxSpread.circuit_sigma_lt_box' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthBoxSpread.lean:151:0: 'ICFallDegrees.GrowthBoxSpread.fei_of_box_spread' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3007/3114] Replayed ICFallDegrees.GrowthCircuitPairBound
 warning: ././././ICFallDegrees/GrowthCircuitPairBound.lean:57:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-ℹ [3028/3205] Replayed ICFallDegrees.GrowthPrimeE6NativeBoxSpread
+ℹ [3009/3114] Replayed ICFallDegrees.GrowthPrimeE6NativeBoxSpread
 info: ././././ICFallDegrees/GrowthPrimeE6NativeBoxSpread.lean:71:0: 'ICFallDegrees.GrowthPrimeE6NativeBoxSpread.e6_native_box_spread' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3029/3205] Replayed ICFallDegrees.GrowthPrimeBoxCircuitTransfer
+ℹ [3010/3114] Replayed ICFallDegrees.GrowthPrimeBoxCircuitTransfer
 info: ././././ICFallDegrees/GrowthPrimeBoxCircuitTransfer.lean:56:0: 'ICFallDegrees.GrowthPrimeBoxCircuitTransfer.fixed_e6_box_spread_of_circuit_transfer' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3030/3205] Replayed ICFallDegrees.GrowthPrimeBoxNonmembership
+ℹ [3011/3114] Replayed ICFallDegrees.GrowthPrimeBoxNonmembership
 info: ././././ICFallDegrees/GrowthPrimeBoxNonmembership.lean:89:0: 'ICFallDegrees.GrowthPrimeBoxNonmembership.e6_not_one_of_box_spread' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthPrimeBoxNonmembership.lean:90:0: 'ICFallDegrees.GrowthPrimeBoxNonmembership.e6_not_one_of_bounded_circuit_transfer' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3031/3205] Replayed ICFallDegrees.GrowthPrimeE6NativeNonmembership
+⚠ [3012/3114] Replayed ICFallDegrees.GrowthPrimeE6NativeNonmembership
 warning: ././././ICFallDegrees/GrowthPrimeE6NativeNonmembership.lean:45:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 info: ././././ICFallDegrees/GrowthPrimeE6NativeNonmembership.lean:62:0: 'ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_native_box_spread_large_prime' depends on axioms: [propext,
@@ -436,14 +365,34 @@ info: ././././ICFallDegrees/GrowthPrimeE6NativeNonmembership.lean:62:0: 'ICFallD
 info: ././././ICFallDegrees/GrowthPrimeE6NativeNonmembership.lean:63:0: 'ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3034/3205] Replayed ICFallDegrees.GrowthPrimeRationalSeed
+⚠ [3013/3114] Replayed ICFallDegrees.GrowthFixedE6IntegralInputs
+warning: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:60:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:60:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:76:0: 'ICFallDegrees.GrowthFixedE6IntegralInputs.map_chain_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:77:0: 'ICFallDegrees.GrowthFixedE6IntegralInputs.map_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthFixedE6IntegralInputs.lean:78:0: 'ICFallDegrees.GrowthFixedE6IntegralInputs.map_e6_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3017/3114] Replayed ICFallDegrees.GrowthCharZeroDeterminant
+warning: ././././ICFallDegrees/GrowthCharZeroDeterminant.lean:62:0: automatically included section variable(s) unused in theorem 'ICFallDegrees.GrowthCharZeroDeterminant.multiplierMatrix_eq':
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3018/3114] Replayed ICFallDegrees.GrowthCharZeroComplexUnit
+warning: ././././ICFallDegrees/GrowthCharZeroComplexUnit.lean:71:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3019/3114] Replayed ICFallDegrees.GrowthCharZeroSeparatedFamily
+warning: ././././ICFallDegrees/GrowthCharZeroSeparatedFamily.lean:45:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [3022/3114] Replayed ICFallDegrees.GrowthPrimeRationalSeed
 info: ././././ICFallDegrees/GrowthPrimeRationalSeed.lean:69:0: 'ICFallDegrees.GrowthPrimeRationalSeed.rational_e6_not_one_linear' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthPrimeRationalSeed.lean:70:0: 'ICFallDegrees.GrowthPrimeRationalSeed.rational_e6_not_one_at_linear_window' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3036/3205] Replayed ICFallDegrees.GrowthFieldCoefficientRetraction
+⚠ [3024/3114] Replayed ICFallDegrees.GrowthFieldCoefficientRetraction
 warning: ././././ICFallDegrees/GrowthFieldCoefficientRetraction.lean:37:44: try 'simp at hz' instead of 'simpa using hz'
 note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
 warning: ././././ICFallDegrees/GrowthFieldCoefficientRetraction.lean:105:6: try 'simp' instead of 'simpa'
@@ -457,13 +406,13 @@ info: ././././ICFallDegrees/GrowthFieldCoefficientRetraction.lean:134:0: 'ICFall
 info: ././././ICFallDegrees/GrowthFieldCoefficientRetraction.lean:135:0: 'ICFallDegrees.GrowthFieldCoefficientRetraction.rationalRetraction_lift' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3037/3205] Replayed ICFallDegrees.GrowthRationalE6Unit
+ℹ [3025/3114] Replayed ICFallDegrees.GrowthRationalE6Unit
 info: ././././ICFallDegrees/GrowthRationalE6Unit.lean:139:0: 'ICFallDegrees.GrowthRationalE6Unit.finite_span_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthRationalE6Unit.lean:140:0: 'ICFallDegrees.GrowthRationalE6Unit.unit_descends_from_field_extension' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthRationalE6Unit.lean:141:0: 'ICFallDegrees.GrowthRationalE6Unit.rational_e6_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3038/3205] Replayed ICFallDegrees.GrowthRationalPolynomialDenominators
+⚠ [3026/3114] Replayed ICFallDegrees.GrowthRationalPolynomialDenominators
 warning: ././././ICFallDegrees/GrowthRationalPolynomialDenominators.lean:51:72: 'rfl' tactic does nothing
 note: this linter can be disabled with `set_option linter.unusedTactic false`
 warning: ././././ICFallDegrees/GrowthRationalPolynomialDenominators.lean:53:80: 'rfl' tactic does nothing
@@ -483,7 +432,7 @@ note: this linter can be disabled with `set_option linter.unreachableTactic fals
 info: ././././ICFallDegrees/GrowthRationalPolynomialDenominators.lean:66:0: 'ICFallDegrees.GrowthRationalPolynomialDenominators.clear_denominator' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3039/3205] Replayed ICFallDegrees.GrowthRationalBezoutIntegerLift
+⚠ [3027/3114] Replayed ICFallDegrees.GrowthRationalBezoutIntegerLift
 warning: ././././ICFallDegrees/GrowthRationalBezoutIntegerLift.lean:49:73: 'rfl' tactic does nothing
 note: this linter can be disabled with `set_option linter.unusedTactic false`
 warning: ././././ICFallDegrees/GrowthRationalBezoutIntegerLift.lean:62:73: 'rfl' tactic does nothing
@@ -498,18 +447,18 @@ info: ././././ICFallDegrees/GrowthRationalBezoutIntegerLift.lean:74:0: 'ICFallDe
 info: ././././ICFallDegrees/GrowthRationalBezoutIntegerLift.lean:75:0: 'ICFallDegrees.GrowthRationalBezoutIntegerLift.clear_denominators_finite' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3040/3205] Replayed ICFallDegrees.GrowthRationalBezoutCertificate
+ℹ [3028/3114] Replayed ICFallDegrees.GrowthRationalBezoutCertificate
 info: ././././ICFallDegrees/GrowthRationalBezoutCertificate.lean:57:0: 'ICFallDegrees.GrowthRationalBezoutCertificate.integer_multiple_of_rational_bezout' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [3041/3205] Replayed ICFallDegrees.GrowthFixedE6IntegralBezout
+ℹ [3029/3114] Replayed ICFallDegrees.GrowthFixedE6IntegralBezout
 info: ././././ICFallDegrees/GrowthFixedE6IntegralBezout.lean:64:0: 'ICFallDegrees.GrowthFixedE6IntegralBezout.exists_integer_e6_bezout' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthFixedE6IntegralBezout.lean:65:0: 'ICFallDegrees.GrowthFixedE6IntegralBezout.exists_e6_unit_specialization_scalar' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [3042/3205] Replayed ICFallDegrees.GrowthFixedE6NativeUnit
+⚠ [3030/3114] Replayed ICFallDegrees.GrowthFixedE6NativeUnit
 warning: ././././ICFallDegrees/GrowthFixedE6NativeUnit.lean:45:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 warning: ././././ICFallDegrees/GrowthFixedE6NativeUnit.lean:45:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
@@ -523,14 +472,65 @@ info: ././././ICFallDegrees/GrowthFixedE6NativeUnit.lean:98:0: 'ICFallDegrees.Gr
 info: ././././ICFallDegrees/GrowthFixedE6NativeUnit.lean:99:0: 'ICFallDegrees.GrowthFixedE6NativeUnit.exists_actual_e6_prime_unit_bound' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6858/6871] Replayed ICFallDegrees.GrowthIntegralBezoutTransfer
+ℹ [3031/3114] Replayed ICFallDegrees.GrowthFiniteStabilization
+info: ././././ICFallDegrees/GrowthFiniteStabilization.lean:81:0: 'ICFallDegrees.GrowthFiniteStabilization.exists_stationary_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthFiniteStabilization.lean:82:0: 'ICFallDegrees.GrowthFiniteStabilization.eventual_stabilization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3032/3114] Replayed ICFallDegrees.GrowthBoundedDegreeLeastClosure
+info: ././././ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean:82:0: 'ICFallDegrees.GrowthBoundedDegreeLeastClosure.exists_least_stable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean:83:0: 'ICFallDegrees.GrowthBoundedDegreeLeastClosure.degreeWindow_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthBoundedDegreeLeastClosure.lean:84:0: 'ICFallDegrees.GrowthBoundedDegreeLeastClosure.exists_least_bounded_degree_stable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3033/3114] Replayed ICFallDegrees.GrowthConcreteClosureStep
+info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:137:0: 'ICFallDegrees.GrowthConcreteClosureStep.step_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:138:0: 'ICFallDegrees.GrowthConcreteClosureStep.step_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:139:0: 'ICFallDegrees.GrowthConcreteClosureStep.exists_concrete_least_stable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureStep.lean:140:0: 'ICFallDegrees.GrowthConcreteClosureStep.least_stable_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3034/3114] Replayed ICFallDegrees.GrowthConcreteClosureEquivalence
+info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:108:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.mem_embedded_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:109:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.actual_le_of_step_closed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:110:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.actual_least_stable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureEquivalence.lean:111:0: 'ICFallDegrees.GrowthConcreteClosureEquivalence.exists_finite_exact_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3035/3114] Replayed ICFallDegrees.GrowthConcreteClosureStages
+info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:90:0: 'ICFallDegrees.GrowthConcreteClosureStages.stages_increasing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:91:0: 'ICFallDegrees.GrowthConcreteClosureStages.stages_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:92:0: 'ICFallDegrees.GrowthConcreteClosureStages.stages_exact_by_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ././././ICFallDegrees/GrowthConcreteClosureStages.lean:93:0: 'ICFallDegrees.GrowthConcreteClosureStages.inClosure_iff_finite_stage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3036/3114] Replayed ICFallDegrees.GrowthPrimeIntegralUnit
+info: ././././ICFallDegrees/GrowthPrimeIntegralUnit.lean:53:0: 'ICFallDegrees.GrowthPrimeIntegralUnit.square_diff_char_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././ICFallDegrees/GrowthPrimeIntegralUnit.lean:54:0: 'ICFallDegrees.GrowthPrimeIntegralUnit.eliminant_mod_two_eq_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [6859/6872] Replayed ICFallDegrees.GrowthIntegralBezoutTransfer
 info: ././././ICFallDegrees/GrowthIntegralBezoutTransfer.lean:70:0: 'ICFallDegrees.GrowthIntegralBezoutTransfer.unit_image_ideal_of_bezout' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthIntegralBezoutTransfer.lean:71:0: 'ICFallDegrees.GrowthIntegralBezoutTransfer.field_image_ideal_of_bezout' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [6859/6871] Replayed ICFallDegrees.GrowthPrimeNativeWindow
+⚠ [6860/6872] Replayed ICFallDegrees.GrowthPrimeNativeWindow
 warning: ././././ICFallDegrees/GrowthPrimeNativeWindow.lean:35:29: unused variable `hk`
 note: this linter can be disabled with `set_option linter.unusedVariables false`
 info: ././././ICFallDegrees/GrowthPrimeNativeWindow.lean:140:0: 'ICFallDegrees.GrowthPrimeNativeWindow.exists_lfd_window_of_native_certificates' depends on axioms: [propext,
@@ -545,26 +545,26 @@ info: ././././ICFallDegrees/GrowthPrimeNativeWindow.lean:142:0: 'ICFallDegrees.G
 info: ././././ICFallDegrees/GrowthPrimeNativeWindow.lean:143:0: 'ICFallDegrees.GrowthPrimeNativeWindow.fixed_e6_prime_theta_of_native_certificates' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6860/6871] Replayed ICFallDegrees.GrowthPrimeAdmissible
+ℹ [6861/6872] Replayed ICFallDegrees.GrowthPrimeAdmissible
 info: ././././ICFallDegrees/GrowthPrimeAdmissible.lean:24:0: 'ICFallDegrees.GrowthPrimeAdmissible.exists_admissible_prime_above' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6861/6871] Replayed ICFallDegrees.GrowthFixedE6PrimeTheta
+ℹ [6862/6872] Replayed ICFallDegrees.GrowthFixedE6PrimeTheta
 info: ././././ICFallDegrees/GrowthFixedE6PrimeTheta.lean:85:0: 'ICFallDegrees.GrowthFixedE6PrimeTheta.exists_actual_prime_theta_above' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6862/6871] Replayed ICFallDegrees.GrowthFixedE6PrimeSequence
+ℹ [6863/6872] Replayed ICFallDegrees.GrowthFixedE6PrimeSequence
 info: ././././ICFallDegrees/GrowthFixedE6PrimeSequence.lean:86:0: 'ICFallDegrees.GrowthFixedE6PrimeSequence.exists_actual_growing_prime_theta_sequence' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6863/6871] Replayed ICFallDegrees.GrowthTwoTorsionFamily
+ℹ [6864/6872] Replayed ICFallDegrees.GrowthTwoTorsionFamily
 info: ././././ICFallDegrees/GrowthTwoTorsionFamily.lean:110:0: 'ICFallDegrees.GrowthTwoTorsionFamily.model' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthTwoTorsionFamily.lean:111:0: 'ICFallDegrees.GrowthTwoTorsionFamily.lfd_gt_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthTwoTorsionFamily.lean:112:0: 'ICFallDegrees.GrowthTwoTorsionFamily.lfd_linear_window' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthTwoTorsionFamily.lean:113:0: 'ICFallDegrees.GrowthTwoTorsionFamily.exists_lfd_linear_window' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6864/6871] Replayed ICFallDegrees.GrowthFermatDiagonalObstruction
+ℹ [6865/6872] Replayed ICFallDegrees.GrowthFermatDiagonalObstruction
 info: ././././ICFallDegrees/GrowthFermatDiagonalObstruction.lean:166:0: 'ICFallDegrees.GrowthFermatDiagonalObstruction.e6_diagonal_grid_root' depends on axioms: [propext, Quot.sound]
 info: ././././ICFallDegrees/GrowthFermatDiagonalObstruction.lean:167:0: 'ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat' depends on axioms: [propext,
  Classical.choice,
@@ -575,7 +575,7 @@ info: ././././ICFallDegrees/GrowthFermatDiagonalObstruction.lean:168:0: 'ICFallD
 info: ././././ICFallDegrees/GrowthFermatDiagonalObstruction.lean:169:0: 'ICFallDegrees.GrowthFermatDiagonalObstruction.exists_bad_admissible_prime' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6865/6871] Replayed ICFallDegrees.GrowthRationalParameterClassification
+ℹ [6866/6872] Replayed ICFallDegrees.GrowthRationalParameterClassification
 info: ././././ICFallDegrees/GrowthRationalParameterClassification.lean:284:0: 'ICFallDegrees.GrowthRationalParameterClassification.parameter_of_grid_zero' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
@@ -600,7 +600,7 @@ info: ././././ICFallDegrees/GrowthRationalParameterClassification.lean:290:0: 'I
 info: ././././ICFallDegrees/GrowthRationalParameterClassification.lean:291:0: 'ICFallDegrees.GrowthRationalParameterClassification.excluded_members' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6866/6871] Replayed ICFallDegrees.GrowthExplicitPrimeBound
+ℹ [6867/6872] Replayed ICFallDegrees.GrowthExplicitPrimeBound
 info: ././././ICFallDegrees/GrowthExplicitPrimeBound.lean:367:0: 'ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthExplicitPrimeBound.lean:368:0: 'ICFallDegrees.GrowthExplicitPrimeBound.eliminant_mod_two' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthExplicitPrimeBound.lean:369:0: 'ICFallDegrees.GrowthExplicitPrimeBound.eliminant_det_ne_zero' depends on axioms: [propext,
@@ -618,7 +618,7 @@ info: ././././ICFallDegrees/GrowthExplicitPrimeBound.lean:374:0: 'ICFallDegrees.
 info: ././././ICFallDegrees/GrowthExplicitPrimeBound.lean:375:0: 'ICFallDegrees.GrowthExplicitPrimeBound.exists_prime_window_above' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6867/6871] Replayed ICFallDegrees.GrowthSharpPrimeBound
+ℹ [6868/6872] Replayed ICFallDegrees.GrowthSharpPrimeBound
 info: ././././ICFallDegrees/GrowthSharpPrimeBound.lean:242:0: 'ICFallDegrees.GrowthSharpPrimeBound.eliminant_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthSharpPrimeBound.lean:243:0: 'ICFallDegrees.GrowthSharpPrimeBound.eliminant_column_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthSharpPrimeBound.lean:244:0: 'ICFallDegrees.GrowthSharpPrimeBound.eliminant_det_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -627,14 +627,14 @@ info: ././././ICFallDegrees/GrowthSharpPrimeBound.lean:246:0: 'ICFallDegrees.Gro
 info: ././././ICFallDegrees/GrowthSharpPrimeBound.lean:247:0: 'ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window_of_det' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthSharpPrimeBound.lean:248:0: 'ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthSharpPrimeBound.lean:249:0: 'ICFallDegrees.GrowthSharpPrimeBound.strict_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [6868/6871] Built ICFallDegrees.GrowthRationalPrimeNative
+ℹ [6869/6872] Replayed ICFallDegrees.GrowthRationalPrimeNative
 info: ././././ICFallDegrees/GrowthRationalPrimeNative.lean:462:0: 'ICFallDegrees.GrowthRationalPrimeNative.parameter_native_box_spread' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: ././././ICFallDegrees/GrowthRationalPrimeNative.lean:463:0: 'ICFallDegrees.GrowthRationalPrimeNative.not_one_of_large_prime' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [6869/6871] Built ICFallDegrees.GrowthRationalPrimeCutoff
+ℹ [6870/6872] Replayed ICFallDegrees.GrowthRationalPrimeCutoff
 info: ././././ICFallDegrees/GrowthRationalPrimeCutoff.lean:376:0: 'ICFallDegrees.GrowthRationalPrimeCutoff.matrix_det_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././ICFallDegrees/GrowthRationalPrimeCutoff.lean:377:0: 'ICFallDegrees.GrowthRationalPrimeCutoff.value_ne_zero_complex' depends on axioms: [propext,
  Classical.choice,
@@ -651,5 +651,4 @@ info: ././././ICFallDegrees/GrowthRationalPrimeCutoff.lean:382:0: 'ICFallDegrees
 info: ././././ICFallDegrees/GrowthRationalPrimeCutoff.lean:383:0: 'ICFallDegrees.GrowthRationalPrimeCutoff.rational_prime_growth' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-✔ [6870/6871] Built ICFallDegrees
 Build completed successfully.

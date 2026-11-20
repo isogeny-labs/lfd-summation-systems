@@ -1,5 +1,5 @@
 {
-  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
   "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
   "build": "passed",
   "audited_declarations": {
@@ -2304,6 +2304,46 @@
       "Quot.sound",
       "propext"
     ],
+    "ICFallDegrees.CarryAllM.weight_le_pred": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryAllM.weight_two_pow_sub_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryAllM.lift_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryAllM.carry_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryAllM.lfd_ge_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryAllM.lfd_eq_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryAllM.lfd_ge_onset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ICFallDegrees.CarryAllM.m3_onset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "ICFallDegrees.ChainClosureBridge.mem_closure_iff": [
       "Classical.choice",
       "Quot.sound",
@@ -3476,7 +3516,7 @@
     "split_lower": "Every base-F2 normalized split chain with m>=4 and either target bit has LFD>=4; upper4 remains written"
   },
   "source_sha256": {
-    "formal/ICFallDegrees.lean": "4c838b4d5369f52301eaf7e452ff9ffc92f607aeb4f90c737c40f06de002bf17",
+    "formal/ICFallDegrees.lean": "7ba14b9d4826c0bd043b4de5d5989494c85205a89df56364f4d0ec14963457aa",
     "formal/N8ActualCircuitSpreadAudit.lean": "1de48da30f3a0f1f40888cfc04d305a641f4341833ce7f03bfca43fd23b9de15",
     "formal/N8ActualCofactorCrossAudit.lean": "c719879862b7a7f488eebdce8ee9f31afafad3e7d5734741199e0314e82c73ef",
     "formal/N8ActualCofactorNonzeroAudit.lean": "ade9264de4c0a358052f11409a285ec66bb1ce4d1748f0bd48b812f4b5408f1d",
@@ -3497,6 +3537,7 @@
     "formal/N8FixedE6GrowthAudit.lean": "79086149fb40e6cbeb1029417e119a3930001c1b27025840361dbd38286d8ed9",
     "formal/N8GeneralRationalWronskianAudit.lean": "4eab905516765434fedee1bd617b67b35dac62c7836e580b0ca5fc63a093739a",
     "formal/N8InfinityCofactorDegreeAudit.lean": "d9f91549ea30d81913ac16186e55ee1e083d51ccbd27f023f05cf35d4b76d2da",
+    "formal/N8NonTwoTorsionPolesAudit.lean": "186708bc243cbefb0d9879876146e51c672d60829027f0d04e58bf264bfc1f9e",
     "formal/N8PolynomialQuotientBridgeAudit.lean": "08b52fdfc2112c99b86fc01d96513738973a57277600f3efd3e4b971e94070a4",
     "formal/N8PolynomialWronskianBasisAudit.lean": "b5a9ea690f0da64fd71355b32a973e424d4191034659c54633b0b9f9e5130357",
     "formal/N8PolynomialWronskianDistinctDegreeAudit.lean": "70177f0e02fbca5f04cf75d3e9f5dacdc8c898ac9cf8235e477f3fa5169e8f60",
@@ -3525,7 +3566,7 @@
     "formal/N8RationalCoordinateAudit.lean": "ff74e46e2b2ac6b9e020cb1449f0bfa0d752b8d1e053ee3572dbc002b834e4d1",
     "formal/N8RationalMobiusAudit.lean": "fcdd8ea9656a110bf99d0bb969f4bf900f352f8b0fcc54e3e9bb6b6d59259b30",
     "formal/ICFallDegrees/AffineTransport.lean": "1c0ab711a9c71e406278fcdd178c18b5f6674e22f57ddd1c3d7e4fc4c2b42698",
-    "formal/ICFallDegrees/Audit.lean": "8c36b30e3eded567368c9a31472327ac4ffd64157aa88e72a8cd43b4d4b7c3a7",
+    "formal/ICFallDegrees/Audit.lean": "c7cc0a22cc8969d64ef824b43cfd5d0e40d8086af5e8e082c1bee4e259848ccd",
     "formal/ICFallDegrees/BinaryDescent.lean": "c7314353211179ca0b8c26c38232eca258be0bef99794c36a60f05b02f0e4aeb",
     "formal/ICFallDegrees/BinaryDimensionTwoBases.lean": "9e634c9166e5cdbe37da6af2771964f4bd406495a0e36053df5ebe5c98c76212",
     "formal/ICFallDegrees/BinaryDimensionTwoCurves.lean": "1f1470946768011ab5537f5587da16b2b7f7b59fa701dba7f6415c214b670ff0",
@@ -3540,6 +3581,7 @@
     "formal/ICFallDegrees/BooleanPair.lean": "1b43cc894be78a1d7944096257868dc2392fc63f25c9bfb8cca6a03f9fb1ab03",
     "formal/ICFallDegrees/BooleanRaw.lean": "83c99d55ba5d58aad2759854da8d839d075806ab7996a9697c5e213f6270a5f8",
     "formal/ICFallDegrees/BooleanSharp.lean": "eb079c0aff2e19495aa885277c499d699c8e5647523d7591a07c411fe72e4b90",
+    "formal/ICFallDegrees/CarryAllM.lean": "f055227215fe5204e0df7e3d923f72109cfeba2011036f776a22de17dbad6625",
     "formal/ICFallDegrees/CarryLower.lean": "5d8cac6e51c0d9aa02b488f79b55b05493a777ebf1bf863d78913666dd5bc08c",
     "formal/ICFallDegrees/Certificate.lean": "b4ce9b32c96bd023feb413c281ecf71532a9b3fd823c01edcbaca74d653eaac5",
     "formal/ICFallDegrees/ChainClosureBridge.lean": "691f5c51695e43132722a05c03d2730e5dd14e4edd39a8ed59b8a9f5a4577a74",
@@ -3618,7 +3660,18 @@
     "formal/ICFallDegrees/GrowthInfinityCofactorDegree.lean": "bd1c34187117f526b83faa7414e00e09b820ccd544589a9eb1ae00ea70a86b75",
     "formal/ICFallDegrees/GrowthIntegralBezoutSpecialization.lean": "debdf741edb98f4eca7157b7730c89ada7aa35c26f4d14fa286ef2a4123195f2",
     "formal/ICFallDegrees/GrowthIntegralBezoutTransfer.lean": "115056b4e73f87206f5ac087badf180041b63edce041817d4c3189ec2adf840b",
+    "formal/ICFallDegrees/GrowthJetClosure.lean": "b972efb1e73c37190625f6ed64e6f3dc975c77ebe2a34fd9aeca0f61016fe9af",
+    "formal/ICFallDegrees/GrowthJetPolynomial.lean": "f00acfce246e1238f00ee31bd13affa530eb025d34c781f79b1a97c183cfcd8c",
+    "formal/ICFallDegrees/GrowthJetPrototype.lean": "47be9c2b71cbe417f35bb0f8411ad21c43e2604b704b27b89095728231b7ab6c",
     "formal/ICFallDegrees/GrowthMain.lean": "60f076a7c00b8d1424a8293d3893aa8cdd393984181a6f50b16959ed4241f46f",
+    "formal/ICFallDegrees/GrowthNonTorsionBridge.lean": "1c9964466bba66481ad4e177bb86006f1ddbf5c4a06053d0efa70b5ca09e0568",
+    "formal/ICFallDegrees/GrowthNonTorsionFunctionField.lean": "376da5d7d0799d38418fe6a322b3c94f63a1c8e5c7bdf3961990f596f8d157fa",
+    "formal/ICFallDegrees/GrowthNonTorsionInfinity.lean": "e636204e179b096002c89e0fd4fe4d9f1a9faa36d99713b64293d392b302d988",
+    "formal/ICFallDegrees/GrowthNonTorsionInfinitySecant.lean": "589badb7b2b1cf4ed6178fd6532c17e49b78089a9d36d9470711419dba2e5935",
+    "formal/ICFallDegrees/GrowthNonTorsionRationalObstruction.lean": "361a2801033b7f365f313df16a056581dcba82501a0bdd5a9bac44d489afedf3",
+    "formal/ICFallDegrees/GrowthNonTorsionTargetLocal.lean": "1fb1bd5b64ecefb0c7329abbed6c6bb28806ae9eb80d296f3796cdeb92f5c0ee",
+    "formal/ICFallDegrees/GrowthNonTorsionTargetSecant.lean": "593abd6ae1f4a1bcbc7ccc14c9582b60d3d3b34e6a2394e3bc50f71e2eb63a80",
+    "formal/ICFallDegrees/GrowthNonTorsionTargetValuation.lean": "8043b46e873f385022d444bef5694899d7c1a1b979e4e735dbd8254f2ec33e11",
     "formal/ICFallDegrees/GrowthPoleArithmetic.lean": "2e266bcc965ab1a76dfd83ba75ea61f4bab2e412991e314de0d5c2196f3835b7",
     "formal/ICFallDegrees/GrowthPolynomialQuotientBridge.lean": "4780355481ddf594aee24cf4d83ec866e10415251352fe0d9f9509c87157d8ad",
     "formal/ICFallDegrees/GrowthPolynomialWronskianBasis.lean": "2702600607364232c162fe50868dd1c9b6215d0f3d42f3fabd2cd3e46967c08e",

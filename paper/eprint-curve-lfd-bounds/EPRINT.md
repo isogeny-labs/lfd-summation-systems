@@ -161,7 +161,7 @@ one sentence (1796 characters; previously 1622); the manuscript is 63 pages
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `c224c7b5d1a530800e0671bdb3d3c6b70e17789702ec11be3d1a2b9283adfb66` |
+| `paper/curve-lfd-bounds.pdf` | `6101ef01a791b21a61d7b7d9189a147fd5bf1486381620e74061751a53dabc47` |
 | `paper/curve-lfd-bounds.tex` | `008d0f93c529ab727b3c0c542ccc03f899d7ebd66f1e2a50f50d2a0ccf9e8574` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `9e0d3d96f5b162a70c137cd82a854eaff59f2c54e4c788d16cadc8d814549151` |
 
@@ -175,7 +175,7 @@ also used Tectonic 0.17.0.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 
-Lean: the saved default audit reports 671 declarations. Final PR CI builds
+Lean: the saved default audit reports 679 declarations (taken on 20 November 2026 from the CI artifact `lean-audit` of run 44815755702 on commit 13415c6, artifact digest sha256:269350ad…4c58; it adds the eight `CarryAllM` declarations). Final PR CI builds
 all modules and checks every printed axiom list with
 `python3 scripts/lean_check_all.py`, including the non-two-torsion modules
 outside the older default audit, and the modules added by PR #31. The merge
