@@ -472,6 +472,7 @@ import ICFallDegrees
 #print axioms ICFallDegrees.CarryAllM.lift_congr
 #print axioms ICFallDegrees.CarryAllM.carry_congr
 #print axioms ICFallDegrees.CarryAllM.lfd_ge_full
+#print axioms ICFallDegrees.CarryAllM.lfd_eq_full
 #print axioms ICFallDegrees.CarryAllM.lfd_ge_onset
 #print axioms ICFallDegrees.CarryAllM.m3_onset
 #print axioms ICFallDegrees.ChainClosureBridge.mem_closure_iff

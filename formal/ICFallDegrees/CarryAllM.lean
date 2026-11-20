@@ -416,6 +416,20 @@ theorem lfd_ge_full (two_ne : (2 : K)≠0) (m k : ℕ) (hk : 0<k) (S : Z m K) (i
   apply (lift_totalDegree_le m k k _ (fun s _ i => weight_le k (s i))).trans
   exact le_refl _
 
+/-- **Exact value `m k + 1`.** Under the hypotheses of `lfd_ge_full`, the last fall degree of
+`chains ∪ {g}` is exactly `m k + 1`: the upper bound is `ChainQuotient.reduced_inputs_lfd_bound`. -/
+theorem lfd_eq_full (two_ne : (2 : K)≠0) (m k : ℕ) (hk : 0<k) (S : Z m K) (i : Fin m)
+    (full : (lift m k S).totalDegree=m*k)
+    (not_multiple : ∀ c : K, lift m k (X i*S)≠c • lift m k S) :
+    IsLastFallDegree (chainInputs K m k∪{lift m k S}) (m*k+1) := by
+  refine ⟨?_, ?_⟩
+  · apply reduced_inputs_lfd_bound m k two_ne
+    rintro f hf
+    rw [Set.mem_singleton_iff.mp hf]
+    exact lift_reduced m k S
+  · intro e he
+    exact lfd_ge_full two_ne m k hk S i full not_multiple e (by omega)
+
 /-! ## The onset bound -/
 
 /-- The exponent `(2^(m-1)-1, …, 2^(m-1)-1)`. -/
