@@ -1,0 +1,147 @@
+# Style audit of `curve-lfd-bounds.tex` (20 November 2026)
+
+Scope: the manuscript `paper/curve-lfd-bounds.tex` as on `origin/main` at
+`1ff74a7` (4283 lines, 35,161 words of source, 62 pages). Line numbers below
+refer to that version. Counts exclude LaTeX comment lines. The abstract
+(lines 41-60) was approved separately and is out of scope.
+
+The mathematics, the numbers and the evidence distinctions are not in
+question here. The problem is the prose: the paper reads as a log of runs
+and review rounds layered on top of a mathematics paper. The patterns below
+are listed in order of how much they cost the reader.
+
+## 1. Run logistics in the body
+
+The body carries the operational detail of individual runs, which a reader
+of the mathematics does not need and which belongs in the data appendix.
+
+| Pattern | Count | Examples |
+|---|---|---|
+| Wall times (`~s`, `~h`, CPU-hours) | 12 on 10 lines | 1697 "took $28{,}747$~s on $32$ shared virtual CPUs"; 1746 "The run took $26{,}723$~s ... $18{,}495$~s of it in the check"; 1779 "about $3.7$~h ($13{,}374$~s)"; 1831; 1870; 1434 "about $52$ CPU-hours" |
+| Memory (KiB, GiB, MB, GB, TB, "resident set") | 27 on 17 lines | 1698 "peak resident set of $23{,}129{,}176$~KiB (about $22$~GiB)"; 1747; 1780 "$234{,}285$~MB"; 1811; 1833; 1856; 1871; 1883 "about $540$~GB ... $1.2$~TB" |
+| Hosts, CPUs, GPUs, restarts | 15 lines | 1701 "also on a second host"; 1811 "on $32$ shared virtual CPUs of a loaded host"; 1857 "after two host restarts the run was resumed from checkpoints"; 3674 "a provider restart interrupted the first attempt" |
+| Hashes and SHA-256 prefixes | 33 on 32 lines | 1748 "(SHA-256 \code{06fdd4e4\ldots})"; 1765 "binary SHA-256 \code{6824a8bd\ldots}"; 1770; 1812 "\code{3d1f2996\ldots}"; 3523 "basis hash \code{d4fe1334\ldots}" |
+| File and directory paths in running text (`\code{...}`) | 308 on 102 lines (most in the appendix tables, where they belong) | body: 1668, 1721-1724, 1735-1737, 1766, 1833, 1874, 2854, 2859, 2972, 2988 |
+| Engine names, binary names, job names | — | 1721 "\code{hky\_fp\_tower\_fast2.rs}, with the instance loader of its generator \code{pkm\_tower\_pilot.rs}"; job names J1-J4s appear in comments 1708-1848 and in the data table |
+| Machine-checked counts of internal operations | — | 1745 "all $4{,}120{,}873$ reductions gave zero"; 1778 "$5.6\cdot10^{14}$ multiply-adds" |
+
+## 2. Process narration
+
+The text tells the history of how results were obtained rather than stating
+them.
+
+| Pattern | Count | Examples |
+|---|---|---|
+| "later", "first version", "had previously", "since kernel-checked", "after the snapshot" | 19 lines | 1037 "an independent check of $292$ random generators made later"; 1106 "which had previously been checked only numerically"; 1720 "A later version of the second engine"; 2031 "Later readings of one engine"; 2369 "where the upper bound $7$ was later obtained by the lift"; 3630 "(since kernel-checked, Theorem~\ref{thm:bridge})"; 3717 "Its first version failed on 29 of the 40" |
+| Prediction/preregistration bookkeeping in the body | 13 lines | 1890, 1912, 1986, 2189-2191 (a disclosed exception about smoke tests), 2223, 2236, 2380 "That the predictions preceded the runs rests on the dates recorded in the files" |
+| Process sequences ("Before the run, the same binary reproduced ...", "It first checked that ...", "The same lift program was then run") | — | 1731-1737, 1770-1772, 1824-1826 |
+| Review history inside results | 6 lines | 1030-1040 "A review of the written proof by a separate AI session ... made before the formalization"; 2475 |
+
+## 3. The same evidence hedge restated sentence by sentence
+
+The paper defines evidence labels in the introduction (lines 82-93), then
+restates the status of the same result in almost every sentence that touches
+it.
+
+| Hedge | Count |
+|---|---|
+| "not certified", "not a certificate", "corroborat-" | 29 on 23 lines |
+| "single run", "one run", "run once", "one engine", "single-engine" | 37 on 32 lines |
+| "unverified" | 3 |
+| "kernel-checked" | 77 lines |
+| "written proof" | 31 lines |
+
+The $k=14$ upper bound alone ("lifted", "no independent certificate",
+"rests on the lift") is qualified in the abstract, the evidence labels, the
+contributions list, Figures `fig:fall` and `fig:pipeline`, Section `sec:computations` (six times), the caption of Table `tab:profile`,
+the conjecture paragraph, two Limitations bullets (lines 3067-3104 and
+3105-3122, together 56 lines), Future directions and the conclusion. The
+word "lift" occurs 45 times in Section `sec:computations` and 17 times in Limitations;
+"second engine" 19 times in Section `sec:computations` and 14 times in Limitations.
+
+## 4. Redundant restatement across sections
+
+Each of these results is stated in full in at least four places:
+
+- $\mathrm{LFD}\le k+2$: introduction (contributions and "Why this
+  matters"), Section `sec:bounds` roadmap, Theorem `thm:selector` and its afterword,
+  Table `tab:twosided`, Section `sec:solving`, Conclusion.
+- The profile 4, 5, 6, (7): contributions, the box of Figure `fig:degrees`,
+  the last paragraph of `sec:lfd`, the comparison in `sec:related`,
+  `sec:depth10`, the summary paragraph of `sec:depth14`, Table `tab:profile`,
+  the conjecture paragraph, `sec:solving`, Conclusion.
+- The growth slope $1/14$: contributions, "Why this matters", Theorem `thm:growth`
+  afterword, "Scope" paragraph, the end of `app:growthproof`, Conclusion.
+- Second-engine runs at $k=14$-$16$: `sec:depth14` (five paragraphs), the $k=14$ row of `tab:profile`,
+  Limitations (three bullets), Future directions.
+
+## 5. Sentence and paragraph shape
+
+- Semicolons: 537 in the body. Typical chain (line 1040): "The bound is
+  attained at $k=2$, where ... ; for unit ideals ... is kernel-checked. For
+  $k\ge3$ no computed system attains it (...), so it is not claimed to be
+  sharp. For singular ..."
+- Stacked parentheticals: 1479 opening parentheses in the body. Example
+  (line 1115): "(one per block) on the levels ... (in the notation of ...)".
+- 143 sentences longer than 45 words (math counted as one word).
+- Paragraphs above 250 words: 27. The longest prose blocks are the
+  Limitations list (1762 words as one list), Future directions (935), the
+  "second engine on a fourth prime" paragraph (706), the "Observations"
+  paragraph of the sweep (374) and the depth-step paragraph (350).
+- Bullet-like prose: the "Status" paragraph of `sec:growth` and the Limitations
+  bullets are lists of clauses joined by semicolons rather than arguments.
+
+## 6. Meta-commentary and boilerplate
+
+The usual filler words ("we note that", "importantly", "crucially",
+"notably", "it is worth") do not occur. The equivalent here is defensive
+meta-text:
+
+- "This paper neither claims nor verifies these statements, and we do not
+  list them as bounds" (line 983).
+- "This search does not establish that none exists" (line 588).
+- "These data refute the tested solution-count law; they do not rule out
+  other bounds in the solution count" (line 2229).
+- "These observations distinguish coordinate-space classes on the computed
+  instances; they do not exclude other universal upper bounds" (caption of Figure `fig:binarydeep`).
+- "Within these limits, ..." closing paragraph of Limitations, which
+  repeats the evidence legend.
+
+## 7. Terminology drift
+
+- The same programs are called "the reference engine", "the third engine",
+  "a closure engine of another repository", "the second engine", "a later
+  version of the second engine", "the faster closure engine of the same
+  repository", "the same binary".
+- "lift", "degree lift", "first lift", "second implementation of the
+  lift", "third lift", "the same lift program".
+- "unit instance", "the unit instance over $p=65537$", "both unit
+  instances", "the paper's own unit instance".
+- "certified", "exact", "certified exact", "exact computation", "exact
+  (one instance, one engine)".
+
+## 8. Narrative
+
+The introduction lists results but does not state the question they answer.
+The result sections often open with the machinery ("The dense chain closure
+does not reach $k=8$; a shift engine ... does") and give the finding at the
+end. The conclusion summarises rather than saying what has changed and what
+the sharpest open question is.
+
+## Plan
+
+1. Introduction: open with the question (does the solver degree stay
+   bounded as the factor base grows?), what was believed, what we find,
+   and what it does and does not mean. Contributions list kept, shortened.
+2. One evidence legend, defined once; each status stated once where the
+   result is introduced; the $k=14$ qualifications collected in one place
+   (`sec:depth14`) and referenced elsewhere.
+3. Run logistics (times, memory, hosts, hashes, binaries, file paths, job
+   names) moved to a new "Computational record" subsection of the data
+   appendix; the body keeps instance, computation, result and status.
+4. Process narration removed from the body.
+5. Sections lead with the finding; bridging sentences at section starts.
+6. Limitations and Future directions rewritten as short paragraphs without
+   repeating `sec:computations`.
+7. No change to any theorem-environment body, table, figure, label,
+   citation, number or evidence status. Abstract untouched.
