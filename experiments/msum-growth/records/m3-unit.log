@@ -95,3 +95,7 @@ exit=143 args=--m 3 --k 7 --p 2013265921 --seed 0 --D 8 --budget 7200 --tag m3-u
 QUEUE3-DONE
 censored-by-operator: m=3 k=7 D=8 U1 killed at VmHWM 13532024 kB after 10:33 wall (over the 12 GB cap of the preregistration); no closure line; bounds nothing
 interrupted: container restart killed QUEUE4 before m=3 k=6 D=8 on 469762049 seed 0 started; rerun below
+instance m=3 k=6 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=8: cols=106762 profile=[1, 19, 172, 988, 4048, 12616, 31180, 63004, 106762] one=true censored=None verify_nonzero=0 1277.1s
+exit=0 args=--m 3 --k 6 --p 469762049 --seed 0 --D 8 --tag m3-unit
+QUEUE5-DONE
