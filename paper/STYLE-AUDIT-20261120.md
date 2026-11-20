@@ -232,3 +232,115 @@ the new body (outside comments).
 Build: Tectonic 0.17, producer xdvipdfmx, 0 warnings, 0 overfull boxes,
 no "??" in the text. `scripts/check_publication_artifacts.py`: passed,
 439 checks.
+
+## Second pass (20 November 2026)
+
+A sharper pass on top of the first rewrite (branch head `945ea83`), with the
+same hard rules: no theorem/lemma/definition/proposition/conjecture body,
+proof, table value, figure, `\label` or `\cite` changed; abstract and the
+"Use of AI tools" paragraph byte-identical; every numeric value of the
+pre-pass body still present somewhere. The first pass had removed the worst
+slop and added the story arc and `sec:meaning` but only reached 60 pages and
+left some mechanical reporting prose.
+
+### What was condensed or cut (prose only; all numbers preserved)
+
+- **Larger split-cell readings m=6–9** (`sec:msummands`, "Larger cells
+  (corroboration)"): multi-clause narration of the not-certified readings
+  replaced by one compact table (`tab:splitlarge`, 7 cells in a 3-wide
+  layout) plus two sentences; all column counts and readings moved into the
+  table/caption. ~20 prose lines → table + 2 sentences.
+- **Depth-11-to-16 corroboration** (`sec:depth14`): the intro, "A fourth
+  prime", "The two unit instances", "A third lift", "Degree six at depths
+  fifteen and sixteen", "The input of the lift", "A random curve",
+  "Two more primes" paragraphs tightened sentence by sentence (dropped the
+  engine-hardware aside; merged restated "same as the unit instance"
+  clauses); every dimension, profile, part rank and the evidence-status
+  reasoning kept. ~16 lines.
+- **Decomposition without a Gröbner basis** (`sec:future`): derivation prose
+  tightened to its essential claim; all measurements (293×, 94 s, 1.85 µs,
+  one core-year, 110→6) kept. ~5 lines.
+- **Exploratory items**: "Towards genericity" (`sec:depthsix`), "Generic
+  closure dimensions" and "What remains" (`sec:blockfour`,
+  `sec:growthnontorsion`), "Exact closures with four and five summands"
+  (`sec:msummands`) — connective/analysis prose trimmed, numbers kept. ~8
+  lines.
+- **Cross-section de-duplication**: the depth-ten profile restatement
+  "4 for k=2..5, 5 for k=6..9, 6 at k=10" replaced by a reference to
+  `tab:profile`; the conclusion and the depth-14 engine-roadmap sentence
+  tightened (each result now stated fully once in the body and referenced).
+  ~12 lines.
+- **Appendix padding** (`app:engines`, `app:checks`, `app:data`,
+  `app:record`): the third-engine and reference-engine validation prose, the
+  proof-review and second-lift notes, the data-intro, and the per-job record
+  bullets (factored out the repeated "32 shared virtual CPUs"/"peak resident
+  set" framing) tightened; all times, memory figures and hashes kept. ~12
+  lines.
+
+### Before / after
+
+| | original `1ff74a7` | first pass `945ea83` | second pass |
+|---|---|---|---|
+| pages | 62 | 60 | **59** |
+| PDF-text words | 41,960 | 40,521 | **39,835** |
+| source words (non-comment) | 34,311 | 33,082 | **32,440** |
+| non-comment semicolons | — | 503 | 497 |
+
+The page count floor is 59: ~45% of the pages are theorem/proof
+environments, the 10 figures, the 11 tables (incl. the generated sweep and
+Lean-declaration tables), the growth proof and the bibliography, none of
+which may change, and the rule that every number of the pre-pass body
+survives caps prose-only cuts. A further page reduction needs a decision to
+remove a *result* (candidates below), which was not taken.
+
+### Result-removal candidates NOT acted on (owner decision)
+
+These would each save roughly a third to a half page but remove reported
+content, so they were left in place:
+
+1. The not-certified larger split-cell readings m=6–9 (`tab:splitlarge`) —
+   external corroboration, not a result of this paper; could be dropped
+   rather than tabulated.
+2. The "decomposition without a Gröbner basis" item (`sec:future`) — an
+   exploratory benchmark unrelated to the LFD results.
+3. The "Blocks of four: conjectural remarks" subsection (`sec:blockfour`,
+   "nothing in it is proved") — could move to a companion note.
+4. The depth-six "Towards genericity" written-analysis enumerate and the
+   binary/Koblitz statistical "Observations" (associations on small strata,
+   not causal) — could be cut to their headline claims.
+5. One of the four depth-14 corroborating instances (the certified
+   `LFD ≥ 7` is established on four instances over three primes; reporting
+   fewer would thin the evidence and was not done).
+
+### Invariants (scratch script, not committed; `945ea83` vs this pass)
+
+```
+env theorem:   old 16 new 16 identical True
+env lemma:     old 11 new 11 identical True
+env corollary: old 3  new 3  identical True
+env proposition: old 2 new 2 identical True
+env conjecture: old 1 new 1  identical True
+env definition: old 3 new 3  identical True
+env example:   old 1  new 1  identical True
+env remark:    old 3  new 3  identical True
+env proof:     old 28 new 28 identical True
+env table:     old 10 new 11 (added tab:splitlarge; none removed or altered)
+env figure:    old 10 new 10 identical True
+env equation:  old 4  new 4  identical True
+env thebibliography: identical True
+labels old 113 new 114  removed []  added ['tab:splitlarge']
+cite keys old 26 new 26  removed []  added []
+refs to undefined labels in new: []
+abstract identical: True
+AI-use paragraph identical: True
+distinct numeric token-values in old body: 543; missing from new file: 0
+```
+
+Exceptions: one table added (`tab:splitlarge`), holding the relocated m=6–9
+readings; no existing table, figure, theorem, proof or equation changed. No
+label or citation removed. Abstract and AI-use paragraph byte-identical.
+All 543 distinct numeric tokens of the pre-pass body occur in the new file.
+
+Build: Tectonic 0.17.0, producer xdvipdfmx, 0 warnings, 0 overfull boxes,
+no "??" in the text; 59 pages A4. `scripts/check_publication_artifacts.py`:
+passed, 439 checks. `EPRINT.md` page count and PDF/tex digests updated.

@@ -19,7 +19,7 @@ author must agree.
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (60 pages) |
+| Content | `../curve-lfd-bounds.pdf` (59 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -103,10 +103,21 @@ manuscript body and the Lean sources. The text contains one non-ASCII
 character, the "ö" of "Gröbner" (UTF-8). The manuscript body is unchanged;
 `../proof-status.json` now lists the kernel-checked bounds the paper claims.
 
+Revision of 20 November 2026, second cleanup pass (abstract unchanged): a
+sharper prose pass removed remaining mechanical phrasing and tightened the
+reporting text throughout, chiefly the depth-11-to-16 corroboration, the
+multi-summand and depth-six accounts, the conclusion and the computational
+appendices, and moved the not-certified larger split-cell readings into a
+compact table. No theorem, lemma, definition, proposition, conjecture body,
+proof, table value, figure, label, citation or evidence label changed, and
+every numeric value of the previous version is preserved somewhere in the
+text. The manuscript is now 59 pages (previously 60). The abstract and the
+"Use of AI tools" paragraph are byte-identical to the previous version.
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `0788c20b919a4f7f5c9cb3ae57fdadf4c4f063d8314d36aec03d9aa9cdee111e` |
-| `paper/curve-lfd-bounds.tex` | `8d286ab9eb21bae680789d34077b2048c5e6d9378718bc9897de12fbe6cb8836` |
+| `paper/curve-lfd-bounds.pdf` | `3af44c2218fdc952f2f572480ebe87d371842e6b9dd34b5c002aed586170abc9` |
+| `paper/curve-lfd-bounds.tex` | `f45ffef603030f281ee83f7dc64b80828b56493db9cd884a1020bef30d965130` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `d4da696991e8a11ea0209960b0c48ddfd5f6b0bd2146f583b776de49d447906a` |
 
 The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0
