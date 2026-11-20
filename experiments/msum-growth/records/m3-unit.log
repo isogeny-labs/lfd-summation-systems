@@ -1,0 +1,97 @@
+instance m=3 k=2 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=64, |Z|=0, c333=Null
+closure D=6: cols=64 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 2 --p 2013265921 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=2 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=64, |Z|=0, c333=Null
+closure D=7: cols=64 profile=[1, 7, 22, 42, 57, 63, 64, 64] one=true censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 2 --p 2013265921 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=2 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=64, |Z|=0, c333=Null
+closure D=6: cols=64 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 2 --p 998244353 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=2 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=64, |Z|=0, c333=Null
+closure D=7: cols=64 profile=[1, 7, 22, 42, 57, 63, 64, 64] one=true censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 2 --p 998244353 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=2 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=64, |Z|=0, c333=Null
+closure D=6: cols=64 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 2 --p 469762049 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=2 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=64, |Z|=0, c333=Null
+closure D=7: cols=64 profile=[1, 7, 22, 42, 57, 63, 64, 64] one=true censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 2 --p 469762049 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=3 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=6: cols=466 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 3 --p 2013265921 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=3 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=7: cols=502 profile=[1, 10, 46, 130, 256, 382, 466, 502] one=true censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 3 --p 2013265921 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=3 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=6: cols=466 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 3 --p 998244353 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=3 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=7: cols=502 profile=[1, 10, 46, 130, 256, 382, 466, 502] one=true censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 3 --p 998244353 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=3 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=6: cols=466 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 3 --p 469762049 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=3 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=7: cols=502 profile=[1, 10, 46, 130, 256, 382, 466, 502] one=true censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 3 --p 469762049 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=4 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=6: cols=2510 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 4 --p 2013265921 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=4 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=7: cols=3302 profile=[1, 13, 79, 299, 794, 1586, 2510, 3302] one=true censored=None verify_nonzero=0 0.4s
+exit=0 args=--m 3 --k 4 --p 2013265921 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=4 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=6: cols=2510 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 4 --p 998244353 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=4 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=7: cols=3302 profile=[1, 13, 79, 299, 794, 1586, 2510, 3302] one=true censored=None verify_nonzero=0 0.4s
+exit=0 args=--m 3 --k 4 --p 998244353 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=4 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=6: cols=2510 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 4 --p 469762049 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=4 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=7: cols=3302 profile=[1, 13, 79, 299, 794, 1586, 2510, 3302] one=true censored=None verify_nonzero=0 0.3s
+exit=0 args=--m 3 --k 4 --p 469762049 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=5 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=6: cols=9949 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 5 --p 2013265921 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=5 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=7: cols=16384 profile=[1, 16, 121, 576, 1941, 4944, 9949, 16384] one=true censored=None verify_nonzero=0 12.4s
+exit=0 args=--m 3 --k 5 --p 2013265921 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=5 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=6: cols=9949 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 5 --p 998244353 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=5 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=7: cols=16384 profile=[1, 16, 121, 576, 1941, 4944, 9949, 16384] one=true censored=None verify_nonzero=0 12.6s
+exit=0 args=--m 3 --k 5 --p 998244353 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=5 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=6: cols=9949 profile=[0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 3 --k 5 --p 469762049 --seed 0 --D 6 --tag m3-unit
+instance m=3 k=5 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=7: cols=16384 profile=[1, 16, 121, 576, 1941, 4944, 9949, 16384] one=true censored=None verify_nonzero=0 15.5s
+exit=0 args=--m 3 --k 5 --p 469762049 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=6 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=7: cols=63004 profile=[0, 0, 0, 0, 0, 3, 2375, 19958] one=false censored=None verify_nonzero=0 312.6s
+exit=0 args=--m 3 --k 6 --p 2013265921 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=6 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=7: cols=63004 profile=[0, 0, 0, 0, 0, 3, 2375, 19958] one=false censored=None verify_nonzero=0 330.0s
+exit=0 args=--m 3 --k 6 --p 998244353 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=6 p=469762049 a=64397718 b=173339033 t=415975955: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(351828460), "expected_up_to_scalar": Number(351828460), "ratio": Number(1)}
+closure D=7: cols=63004 profile=[0, 0, 0, 0, 0, 3, 2375, 19958] one=false censored=None verify_nonzero=0 320.4s
+exit=0 args=--m 3 --k 6 --p 469762049 --seed 0 --D 7 --tag m3-unit
+instance m=3 k=6 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=8: cols=106762 profile=[1, 19, 172, 988, 4048, 12616, 31180, 63004, 106762] one=true censored=None verify_nonzero=0 1425.0s
+exit=0 args=--m 3 --k 6 --p 2013265921 --seed 0 --D 8 --tag m3-unit
+QUEUE1-DONE
+instance m=3 k=6 p=998244353 a=538530846 b=574242499 t=522220447: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(693583979), "expected_up_to_scalar": Number(693583979), "ratio": Number(1)}
+closure D=8: cols=106762 profile=[1, 19, 172, 988, 4048, 12616, 31180, 63004, 106762] one=true censored=None verify_nonzero=0 1256.9s
+exit=0 args=--m 3 --k 6 --p 998244353 --seed 0 --D 8 --tag m3-unit
+instance m=3 k=7 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+closure D=7: cols=198440 profile=[0, 0, 0, 0, 0, 3, 2384, 27092] one=false censored=None verify_nonzero=0 205.5s
+exit=0 args=--m 3 --k 7 --p 2013265921 --seed 0 --D 7 --tag m3-unit
+QUEUE2-DONE
+instance m=3 k=7 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=6, terms=125, |Z|=0, c333=Object {"coef": Number(1647146800), "expected_up_to_scalar": Number(1647146800), "ratio": Number(1)}
+exit=143 args=--m 3 --k 7 --p 2013265921 --seed 0 --D 8 --budget 7200 --tag m3-unit
+QUEUE3-DONE
+censored-by-operator: m=3 k=7 D=8 U1 killed at VmHWM 13532024 kB after 10:33 wall (over the 12 GB cap of the preregistration); no closure line; bounds nothing
+interrupted: container restart killed QUEUE4 before m=3 k=6 D=8 on 469762049 seed 0 started; rerun below
