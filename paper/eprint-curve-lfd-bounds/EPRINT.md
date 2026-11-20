@@ -15,11 +15,11 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io |
-| Abstract | paste `eprint-abstract.txt` (1599 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (1278 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (61 pages) |
+| Content | `../curve-lfd-bounds.pdf` (62 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -90,18 +90,32 @@ limitations, future directions and conclusion; one parenthesis in the future
 directions now names both unit instances for the third lift, as Section 5.5
 already did. No bound, label, citation or evidence label changed.
 
+Revision of 20 November 2026, later the same day (abstract changed): the
+abstract was rewritten for accuracy and readability after an independent
+claim-by-claim audit (1278 characters; previously 1599). It now states the
+assumption under test (a roughly constant solver degree as the factor base
+grows), the kernel-checked bound $\mathrm{LFD}\le k+2$ at every depth
+$k\ge2$, the exact values by depth range with the instances that carry them,
+the corrected breakpoints of Petit, Kosters and Messeng, that the law
+$\lfloor(k+14)/4\rfloor$ was fitted on $k\le13$, and the hypothesis
+$p>2^{k+1}$ of the growth theorem; every clause was checked against the
+manuscript body and the Lean sources. The text contains one non-ASCII
+character, the "ö" of "Gröbner" (UTF-8). The manuscript body is unchanged;
+`../proof-status.json` now lists the kernel-checked bounds the paper claims.
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `c11b138a00f24fb43cd40a697b97ca772f78c3dba4e1455572eb500a979a304a` |
-| `paper/curve-lfd-bounds.tex` | `a9c36a1abe61c8d70c676cf3f16ffcce7f6e37bfd8f7aa860144a41a954cecdd` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `71a53dfe7c8f1e51e7dd6b1d69d6c5f23868874327b399efe3fe99f141b5e99c` |
+| `paper/curve-lfd-bounds.pdf` | `b6f5be351662077236b7898be05f7222c81cfa9e2713c04e5c3dff7ec16d0979` |
+| `paper/curve-lfd-bounds.tex` | `846f21d664da950e928824f30dc788e3eb5e919966fa6439a20d5cd4d9f1deaa` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `d4da696991e8a11ea0209960b0c48ddfd5f6b0bd2146f583b776de49d447906a` |
 
-The PDF was regenerated on 20 November 2026 with pdfTeX 1.40.25 (TeX Live
-2023, Debian packages) by `python3 scripts/build_ic_curve_paper.py`, which uses
-pdfLaTeX when it is installed; the PDF producer is pdfTeX-1.40.25 and the
-figures are byte-identical to the previous build. The versions of 19 November
-were built with Tectonic 0.17.0 (producer xdvipdfmx). The author may rebuild
-with Tectonic before submission; the digests above must then be updated.
+The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0
+(conda-forge; bundle `tlextras-2022.0r0`) by
+`python3 scripts/build_ic_curve_paper.py`, run with only Tectonic on the
+`PATH` (the script prefers pdfLaTeX when it is installed); the PDF producer is
+xdvipdfmx and the figures are byte-identical to the previous build. The
+earlier build of 20 November used pdfTeX 1.40.25; the versions of 19 November
+also used Tectonic 0.17.0.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 
@@ -118,8 +132,8 @@ added later.
 - PDF builds without LaTeX warnings, unresolved references or overfull boxes.
 - A4, author email on page 1, PDF metadata title matches the manuscript.
 - Abstract agrees with the LaTeX source.
-- Form constraints checked on 15 November 2026 and again on the texts of 16, 18, 19 and 20 November: the abstract is ASCII (the earlier texts had one "ö", in
-  "Gröbner"), with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
+- Form constraints checked on 15 November 2026 and again on the texts of 16, 18, 19 and 20 November: the abstract is ASCII except the "ö" of
+  "Gröbner" in the text of 20 November (later), as in the texts before 16 November, with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
   for at least 64 characters), and every keyword phrase is at most 40 characters.
 - Mathematical and reproducibility limits: see `../README.md` and
   `../../docs/reviews-publication-20261114.md`.
