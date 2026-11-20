@@ -36,14 +36,13 @@ _(none pinned — set one with `/goal <text>`)_
 - [x] Standardize the repository CI check contract (Codex, started 2026-11-17, branch codex/standard-ci-check, PR #29)
 
 - [x] Manuscript cleanup before ePrint: full growth proof in an appendix, shorter abstract, AI-assistance disclosure, no revision-history wording (Claude, started 2026-11-17, branch claude/ecstatic-dirac-7f5qyt, PR #27)
-- [ ] Verify the theorem, definition, table and section numbers cited in the LFD paper against the primary sources, and fix any that are wrong (Claude, started 2026-11-20, branch claude/index-calculus-root-finding-e95kd6, PR #42; blocked, see below)
+- [ ] Verify the theorem, definition, table and section numbers cited in the LFD paper against the primary sources, and fix any that are wrong (Claude, started 2026-11-20, branch claude/index-calculus-root-finding-e95kd6, PR #42)
 
 <!-- One line per task, added as the task's first step with its draft PR:
 - [ ] <task> (<runtime>, started YYYY-MM-DD, branch <branch>, PR #<n>) -->
 
 ## Blocked / questions for the owner
 
-- Citation check (PR #42) is blocked on access to the sources. The environment now allows arxiv.org, eprint.iacr.org, tosc.iacr.org, people.maths.ox.ac.uk, zbmath.org, link.springer.com and dacox.people.amherst.edu (20 Nov 2026), but shell downloads of the PDFs were refused by the session permission check and the web-fetch tool's own domain allowlist rejects these hosts. Owner decision: allow either the PDF download in the shell or web fetching for these domains. Open copies: Caminata-Gorla arXiv:2112.05579, Steiner arXiv:2310.03637, Gorla-Mueller-Petit arXiv:2011.01050 / ePrint 2020/1376, Huang-Kosters-Yang-Yeo arXiv:1505.02532, Petit-Kosters-Messeng people.maths.ox.ac.uk/petit/files/16PKC_primeECDLP.pdf. Unverified leads: Cox-Little-O'Shea 4th ed. may have the coprime criterion in Ch. 2 Sec. 10, not Sec. 9; an older note recorded Gorla-Mueller-Petit numbering as Thm 11 / Cor 1, not Thm 4.
 
 - PR #27: the author must confirm the wording of the "Use of AI tools" paragraph (it names Claude and Codex) before submission.
 - PR #31 / PR #35: full depth-14 certificate, split D8, and depth-18 breakpoint remain open; local probes finished with explicit caps (RAM/scratch limits). PR #35 was merged on 2026-11-19 as a record of the capped searches; the merge does not claim any of the three obligations complete.
