@@ -75,6 +75,7 @@ import ICFallDegrees.CurveBounds
 import ICFallDegrees.PrimeM2Lower
 import ICFallDegrees.CarryLower
 import ICFallDegrees.M3CarryLower
+import ICFallDegrees.CarryAllM
 import ICFallDegrees.ChainClosureBridge
 import ICFallDegrees.BinaryWeight
 import ICFallDegrees.DepthReduction

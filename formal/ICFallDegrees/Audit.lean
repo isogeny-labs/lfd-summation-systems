@@ -467,6 +467,13 @@ import ICFallDegrees
 #print axioms ICFallDegrees.M3CarryLower.carry_not_multiple
 #print axioms ICFallDegrees.M3CarryLower.m3_lfd_ge_seven
 #print axioms ICFallDegrees.M3CarryLower.prime_field_m3_lfd_ge_seven
+#print axioms ICFallDegrees.CarryAllM.weight_le_pred
+#print axioms ICFallDegrees.CarryAllM.weight_two_pow_sub_one
+#print axioms ICFallDegrees.CarryAllM.lift_congr
+#print axioms ICFallDegrees.CarryAllM.carry_congr
+#print axioms ICFallDegrees.CarryAllM.lfd_ge_full
+#print axioms ICFallDegrees.CarryAllM.lfd_ge_onset
+#print axioms ICFallDegrees.CarryAllM.m3_onset
 #print axioms ICFallDegrees.ChainClosureBridge.mem_closure_iff
 #print axioms ICFallDegrees.ChainClosureBridge.one_mem_iff
 #print axioms ICFallDegrees.ChainClosureBridge.not_one_of_witness
