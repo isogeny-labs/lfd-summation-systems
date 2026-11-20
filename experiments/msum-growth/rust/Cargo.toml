@@ -1,0 +1,26 @@
+# Driver of the m-summand direct chain presentation on the extracted hky3 engine
+# (`second-engine/engine`, unchanged). See ../PREREGISTRATION.md.
+[package]
+name = "msum-direct"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+publish = false
+license = "MIT"
+
+[workspace]
+
+[[bin]]
+name = "msum_direct"
+path = "src/main.rs"
+
+[dependencies]
+hky3-engine = { path = "../../../second-engine/engine" }
+rayon = "1.10"
+serde_json = "1.0"
+sha2 = "0.10"
+rand = "0.8"
+
+[profile.release]
+debug = false
+incremental = false
