@@ -59,7 +59,7 @@ arbitrary generator, and the three-summand instance) are formalized in
 Lean and Mathlib (Section~\ref{sec:lean}). The facts about $S_{m+1}$ in
 Section~\ref{sec:summation} (the shape of $c_m$, the identity on the
 cuspidal cubic and $\kappa_m\ne0$) are written proofs, checked numerically
-for $m\le5$ (Section~\ref{sec:numerics}); they are not
+for $m\le5$ (and $m=6$ at $a=b=0$; Section~\ref{sec:numerics}); they are not
 formalized.
 
 \section{Setting}
@@ -372,7 +372,7 @@ $[\mathbf x^\tau]$ by tensor Lagrange interpolation on $2^{m-1}+1$ nodes per
 variable. It reproduces $-8(5t^3+3at+6b)$ at five points; the four
 (resp.\ five) weighted coefficients of $c_4$ (resp.\ $c_5$) were solved from
 four (five) random points and confirmed at two more each. Its value of $c_m(0,0,1)$ equals the
-$\kappa_m$ of the partition formula for $m=2,3,4,5$ ($-2,-40,-752,-190336$).
+$\kappa_m$ of the partition formula for $m=2,3,4,5$ ($-2,-40,-752,-190336$), and for $m=6$ ($c_6(0,0,1)=255410944=\kappa_6$ over $\F_{2^{31}-1}$, one evaluation on $33^6$ grid points).
 On the recorded
 four-summand instances it gives $c_4\ne0$: U1 ($p=2013265921$) $c_4=431449230$
 (the program and the closed form agree), U2 ($p=998244353$) $430513295$,
