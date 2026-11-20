@@ -184,6 +184,143 @@ so LAW and CEIL equal enumeration alone, which is at least
 LB + onset already keeps it out, and the onset is `m(m-1)+1`, with the paper's
 `7` and `13` for `m = 3, 4`.
 
+## LB-proved: the all-`m` carry bound as the degree floor (2026-11-20) `[pcc:unverified]`
+
+**New input.** For the direct `m`-summand system with `m >= 3`,
+`lfd >= m min(k, m-1) + 1 = deg g + 1`
+(`lfd-wt/carry-allm/paper/notes/carry-allm.tex`, Theorem `thm:main`). Status:
+**written proof, under review**. The abstract core (`lfd_ge_onset`,
+`lfd_ge_full`) is kernel-checked in `formal/ICFallDegrees/CarryAllM.lean`.
+Proposition `prop:grid` and the facts about `S_{m+1}` for `m >= 4` (shape of
+`c_m`, `kappa_m != 0`) are not formalized. Hypotheses:
+
+* `k >= m`: `c_m(a,b,t) != 0`. This excludes at most `m` targets per curve.
+  The bound is charged on every attempt.
+* `k <= m-1`: `gamma_{m,k} != 0` and the grid condition. `gamma_{m,k}` is
+  nonzero outside a proper Zariski-closed set of `(a,b,t)`. That is generic,
+  not "at most `m` per curve", and the model assumes it holds. The grid
+  condition is proved on unit ideals, i.e. on failed attempts. As for `m = 2`,
+  successes are charged 1, which favours the attacker.
+
+**Scenario.** LB-proved is LB with the `m >= 3` degree replaced by
+`m min(k, m-1) + 1`. `m = 2` keeps its proved per-failed-attempt floor.
+Route (a), enumeration, stays available. The solver floor is the cheapest-solver
+`C(mk, D)`, kept with the monotone convention of the LB + onset row (deviation 2):
+`C(mk, min(D, floor(mk/2)))`, the largest layer `<= D`. It equals `C(mk, D)`
+wherever `D <= mk/2`, and it is still at most `|M_<=D|`. The literal top
+layer `C(mk, min(D, mk))` is reported as a sensitivity row. It is not monotone
+in `D`. At the forced full degree `D = mk + 1` (every `k <= m - 1`) it charges
+**1** per attempt, less than `D = 2` does. The optimizer exploits exactly that.
+
+**Correction to the premise.** The old "LB + measured onset" row did *not*
+use `m(m-1)+1` at every `k`. For `m >= 5` the code used `mk + 1` for
+`k < m - 1` and `m(m-1) + 1` otherwise, which is already `m min(k, m-1) + 1`.
+For `m = 3, 4` it used the LB values: 7 for `k >= 3` and 13 for `k >= 4`, else 2.
+So LB-proved differs from LB + onset only at `m = 3, k = 2` (7 instead of 2),
+at `m = 4, k = 2, 3` (9 and 13 instead of 2), and in charging successes 1 at
+`k <= m - 1`. None of these cells is ever a minimizer. **Across all 651
+cell-prices (`log2 N` 40 to 256, three prices), LB-proved equals LB + onset
+exactly.** Every earlier scenario is unchanged too: 3906 of 3906 rows of
+`sweep.jsonl` are identical, and the validation still passes with the same
+numbers.
+
+Re-sweep: every integer `log2 N` from 40 to 256, `m = 2..8`, `k` free, prices
+0 / 0.1 / 1. The validation gate runs first and passes. The tables are in
+`results/headline.md`.
+
+| log2 N | log2 rho | LB | LAW | CEIL | LB + onset | **LB-proved** | LB-proved, literal top layer |
+|---|---|---|---|---|---|---|---|
+| 40 | 19.8 | -7.7 / -5.6 / -3.9 | -7.7 / +2.7 / +2.7 | -7.7 / +2.7 / +2.7 | -7.7 / +2.7 / +2.7 | **-7.7 / +2.7 / +2.7** | -7.7 / -6.6 / -5.9 |
+| 64 | 31.8 | -18.4 / -12.8 / -10.9 | -18.4 / +4.0 / +3.7 | -18.4 / +4.0 / +3.7 | -18.4 / +3.3 / +3.7 | **-18.4 / +3.3 / +3.7** | -18.4 / -2.3 / -1.9 |
+| 80 | 39.8 | -25.1 / -17.2 / -15.3 | -25.1 / +4.3 / +4.4 | -25.1 / +4.3 / +4.4 | -25.1 / +3.3 / +4.0 | **-25.1 / +3.3 / +4.0** | -25.1 / +3.3 / +4.0 |
+| 128 | 63.8 | -43.6 / -30.2 / -28.3 | -43.6 / +6.9 / +6.5 | -43.6 / +6.9 / +6.5 | -43.6 / +3.3 / +4.0 | **-43.6 / +3.3 / +4.0** | -43.6 / +3.3 / +4.0 |
+| 160 | 79.8 | -55.6 / -39.3 / -37.3 | -55.6 / +7.8 / +7.3 | -55.6 / +7.8 / +7.3 | -55.6 / +3.3 / +4.0 | **-55.6 / +3.3 / +4.0** | -55.6 / +3.3 / +4.0 |
+| 192 | 95.8 | -67.6 / -47.4 / -45.5 | -67.6 / +8.0 / +7.7 | -67.6 / +8.0 / +7.7 | -67.6 / +3.3 / +4.1 | **-67.6 / +3.3 / +4.1** | -67.6 / +3.3 / +4.1 |
+| 256 | 127.8 | -91.6 / -65.4 / -63.5 | -91.6 / +10.0 / +10.3 | -91.6 / +10.0 / +10.3 | -91.6 / +4.3 / +5.0 | **-91.6 / +4.3 / +5.0** | -91.6 / +4.3 / +5.0 |
+| IC beats rho (all three prices) | | 217 of 217 sizes | none | none | none | **none** | `log2 N` 40 to 67 (28 sizes) |
+
+Entries: `log2(IC/rho)` at price 0 / 0.1 / 1.
+
+**Where IC beats rho under LB-proved at prices 0.1 and 1: nowhere** for
+`log2 N` 40 to 256 and `m = 2..8`. The distance remaining is `+2.69` bits at
+the closest (price 0.1, `2^40`) and `+2.64` (price 1, `2^43`). The minimizers
+are these:
+
+* `2^40`: `m = 7, k = 5`, enumeration `a = 7`, at both prices.
+* `2^64`: `m = 2, k = 35`, Groebner `D = 4` at 0.1, and `m = 7, k = 7`,
+  `a = 7` at 1.
+* `2^80` to `2^256`: the `m = 2` proved floor, Groebner at both prices, with
+  `k = 43, 67, 83, 99, 132` and `D = 4, 6, 7, 8, 11`.
+
+For `m >= 3` the cheapest route is enumeration at every size, with these
+exceptions:
+
+* `m = 3`: Groebner at `D = 7` is cheaper at `2^192` (price 0.1 only,
+  `+18.4`) and at `2^256` (`+19.8` / `+21.7`).
+* `m = 4`: Groebner at `D = 13` is cheaper at `2^256` (`+4.9` / `+6.8`).
+
+All of these stay above rho.
+
+Price 0 is below rho everywhere in every scenario, since the solver is free.
+That is the band's artifact (P3) and is not a win.
+
+**Literal top layer.** Wins at all three prices for `log2 N` 40 to 67, only
+through `m = 8`, Groebner at `k = 6` (`D = 49`) or `k = 7` (`D = 57`). Both are
+cells with `k <= m - 1`, where `D = mk + 1` exceeds the `mk` variables and
+`C(mk, mk) = 1`. A Macaulay solve at that degree has `|M_<=D| = 2^{mk}`
+columns (`2^48`, `2^56`), so these wins come from the non-monotone floor and
+not from the theorem. Under the monotone floor no `m = 8` Groebner cell at `2^40`
+comes within `+30.5` bits of rho.
+
+**Margin of the proved floor alone** (`results/headline.md`, "route (b)
+alone"). Without enumeration, the best Groebner cell under LB-proved at
+price 0.1 / 1, at `2^256`, is:
+
+| m | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|
+| bits above rho | +4.3 / +5.0 | +19.8 / +21.7 | +4.9 / +6.8 | +23.0 / +24.9 | +47.4 / +49.3 | +73.9 / +75.8 | +99.3 / +101.2 |
+
+For `m >= 4` the floor is a constant degree, so the margin shrinks with `N`.
+The exploratory `ic-costmodel crossover` command finds where route (b)
+alone, under LB-proved, first falls below rho:
+
+| m | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|
+| price 0.1 | `2^293` | `2^371` | `2^485` | `2^617` | `2^772` |
+| price 1 | `2^316` | `2^380` | `2^492` | `2^624` | `2^780` |
+
+For `m = 2` and `m = 3` there is no crossing up to `2^1024`. For `m = 3` the
+`(0.65 f)^2` linear algebra already forces about `sqrt N`. So the proved floor
+excludes a win only up to about `2^293`, not asymptotically. Beyond that
+the claim would need the growth in `k` that the onset bound does not give (remark
+(ii) of the note: measured `m = 3` reaches 8 at `k = 6`).
+
+**What "IC does not beat rho" (prices 0.1 and 1, `log2 N` 40 to 256, `m <= 8`)
+now rests on:**
+
+* **Proved.** The `m = 2` per-failed-attempt floor (`thm:three`, `thm:growth`).
+  The `m >= 3` floor `m min(k, m-1) + 1`: written proof, under review. Its
+  abstract core is kernel-checked. `prop:grid` and the `S_{m+1}` facts for
+  `m >= 4` are not formalized. For `k <= m - 1` it also needs
+  `gamma_{m,k} != 0`, which is generic and assumed. The route (a) bound
+  `sqrt(2 R N)` is elementary given the yield model.
+* **Modelling assumptions, not theorems.** The solver floor
+  `C(mk, min(D, mk/2))` is "linear in the columns". It is a floor for
+  Macaulay-type solvers on the direct presentation only. It does not cover the
+  split presentation (lower measured degrees, not covered by the bound), hybrid
+  guessing, or non-Groebner solvers. The monotone layer convention is itself a
+  choice: the literal top layer admits wins at `2^40` to `2^67`.
+* **Measured.** The yield law, the relations needed and the linear-algebra
+  constants for `m = 2, 3` at `N <= 2^40`, and rho's constant (Study A,
+  validated in-sample).
+* **Extrapolated.** Every cost above `2^40`; the yield law, the m-XORSAT
+  relation thresholds and the LA constants for `m >= 4`; and `m <= 8` only.
+
+The degree floors that previously came from the measured onset for `m >= 5`
+(LB + onset) are now proved, under review. The conclusion is numerically
+unchanged. Its weakest links are now the solver-cost floor, the presentation
+and the `m >= 4` yield extrapolation, not the degree.
+
 ## Evidence classes
 
 * **Proved** (kernel-checked or written proofs in the paper): the `m = 2`
@@ -192,6 +329,9 @@ LB + onset already keeps it out, and the onset is `m(m-1)+1`, with the paper's
   ceilings `sd <= k + 2` (`m = 2`) and `<= mk + 1` (`thm:sd`, `cor:allm`). The
   bound `sqrt(2 R N)` for route (a) is elementary given the yield model. It
   holds for the enumeration family modelled here, not for every algorithm.
+  Added 2026-11-20, written proof, under review: `lfd >= m min(k, m-1) + 1`
+  for every `m >= 3` (carry-allm note, `thm:main`; core kernel-checked). It
+  is used by the LB-proved scenario.
 * **Measured**: the yield law and relations needed (`m = 2, 3`, `N <= 2^40`),
   the LA constants, rho's constant and bookkeeping (Study A); `m = 3` degrees
   to `k = 6` (exact) and `>= 8` at `k = 7`, `m = 4` to `k = 4`, the closure-cost
@@ -214,6 +354,14 @@ LB + onset already keeps it out, and the onset is `m(m-1)+1`, with the paper's
    `m = 4`, `k = 4..6`.
 3. The "least constant degree" table was not preregistered (exploratory).
 4. No PDF (no SVG converter in the container); the SVG is the visual record.
+5. 2026-11-20: the LB-proved and LB-proved (literal top layer) scenarios,
+   the "route (b) alone" table, `log2 N = 192` in the headline tables and the
+   `crossover` command were added after the fact. None of them was
+   preregistered. The earlier scenarios and the validation are unchanged.
+6. 2026-11-20: `results/sweep.jsonl` used to write `-inf` for
+   `log2_mem_bytes` on Groebner rows, which is not valid JSON. It now writes
+   `null`. No number changed. The factorial table now runs to 8192, for the
+   `crossover` command.
 
 ## Limits
 
@@ -244,6 +392,7 @@ cargo build --release --offline
 ./target/release/ic-costmodel kd         # k_D table and degree formulas
 ./target/release/ic-costmodel validate   # results/validation.md (reads ../ic-endtoend/results)
 ./target/release/ic-costmodel sweep      # validation + results/{sweep.jsonl,headline.md,fig-cost.svg}, about 20 s
+./target/release/ic-costmodel crossover  # exploratory: first log2 N <= 1024 where LB-proved route (b) alone falls below rho
 ```
 
 Deterministic: no randomness, no measurement.

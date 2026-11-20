@@ -63,11 +63,15 @@ fn d_ceil(m: usize, k: usize) -> usize { if m == 2 { k + 2 } else { m * k + 1 } 
 fn d_lb(m: usize, k: usize, kd: &[usize]) -> usize {
     match m { 2 => d_lb2(kd, k), 3 => if k >= 3 { 7 } else { 2 }, 4 => if k >= 4 { 13 } else { 2 }, _ => 2 }
 }
+/// LB-proved (2026-11-20): m = 2 keeps the proved per-failed-attempt floor; m >= 3 uses the carry bound for every m
+/// (written proof, under review): lfd >= m min(k, m-1) + 1 = deg g + 1 (k >= m: c_m != 0, all but <= m targets per curve;
+/// k <= m-1: gamma_{m,k} != 0 and the grid condition, which holds on unit ideals).
+fn d_lb_proved(m: usize, k: usize, kd: &[usize]) -> usize { if m == 2 { d_lb2(kd, k) } else { m * k.min(m - 1) + 1 } }
 
 #[derive(Clone, Copy, PartialEq, Debug)]
-enum Sc { Lb, Law, Ceil, LawDense, EnumOnly, LbOnset, Fixed(usize) }
+enum Sc { Lb, Law, Ceil, LawDense, EnumOnly, LbOnset, LbProved, LbProvedTop, Fixed(usize) }
 impl Sc {
-    fn name(self) -> &'static str { match self { Sc::Lb => "LB", Sc::Law => "LAW", Sc::Ceil => "CEIL", Sc::LawDense => "LAW-dense", Sc::EnumOnly => "enum-only", Sc::LbOnset => "LB+onset", Sc::Fixed(_) => "fixed-D" } }
+    fn name(self) -> &'static str { match self { Sc::Lb => "LB", Sc::Law => "LAW", Sc::Ceil => "CEIL", Sc::LawDense => "LAW-dense", Sc::EnumOnly => "enum-only", Sc::LbOnset => "LB+onset", Sc::LbProved => "LB-proved", Sc::LbProvedTop => "LB-proved (literal top layer)", Sc::Fixed(_) => "fixed-D" } }
 }
 
 #[derive(Clone, Debug)]
@@ -121,6 +125,19 @@ fn routes(lf: &Lf, kd: &[usize], n: f64, m: usize, k: usize, sc: Sc, lfc: Option
             let c = if sc == Sc::LbOnset { lf.binom(vars, d.min(vars / 2)) } else { lf.binom(vars, d) };
             let per = if m == 2 { lse(l2(q) + c, l2(1.0 - q)) } else { c };
             (d, per)
+        }
+        Sc::LbProved | Sc::LbProvedTop => {
+            let d_raw = d_lb_proved(m, k, kd);
+            let d = d_raw.min(vars);
+            // LB-proved: the floor C(mk, D) with the monotone convention of the onset row (largest layer <= D,
+            // also a floor on |M_<=D|; equal to C(mk, D) wherever D <= mk/2). The literal variant keeps C(mk, min(D, mk)),
+            // which is not monotone in D (it falls to 1 at the forced full degree mk + 1).
+            let c = if sc == Sc::LbProved { lf.binom(vars, d.min(vars / 2)) } else { lf.binom(vars, d) };
+            // m = 2: proved on failed attempts only. m >= 3, k <= m-1: the grid condition is proved on unit ideals, so
+            // successes are charged 1 (attacker-favourable). m >= 3, k >= m: c_m != 0 on all but <= m targets, all attempts.
+            let failed_only = m == 2 || k + 1 <= m;
+            let per = if failed_only { lse(l2(q) + c, l2(1.0 - q)) } else { c };
+            (d_raw, per)
         }
         Sc::Law => { let d = d_law(m, k); (d, 2.0 * lf.binom_le(vars, d)) }
         Sc::LawDense => { let d = d_law(m, k); (d, DENSE_TO_ONE.log2() + 3.0 * lf.binom_le(vars, d)) }
@@ -253,14 +270,14 @@ fn validate(lf: &Lf, kd: &[usize], dir: &str) -> (String, bool) {
 }
 
 // ---------- sweep, tables and figure ----------
-const SCEN: [Sc; 3] = [Sc::Lb, Sc::Law, Sc::Ceil];
-const HEAD_N: [usize; 6] = [40, 64, 80, 128, 160, 256];
+const SCEN: [Sc; 5] = [Sc::Lb, Sc::Law, Sc::Ceil, Sc::LbProved, Sc::LbProvedTop];
+const HEAD_N: [usize; 7] = [40, 64, 80, 128, 160, 192, 256];
 
 fn sweep(lf: &Lf, kd: &[usize], pass: bool) -> (String, String, BTreeMap<(usize, usize, usize), f64>) {
     let all_m: Vec<usize> = (2..=8).collect();
     let mut jl = String::new();
     let mut curve: BTreeMap<(usize, usize, usize), f64> = BTreeMap::new(); // (scen idx, price idx, n) -> log2
-    let scen_all = [Sc::Lb, Sc::Law, Sc::Ceil, Sc::LawDense, Sc::EnumOnly, Sc::LbOnset];
+    let scen_all = [Sc::Lb, Sc::Law, Sc::Ceil, Sc::LawDense, Sc::EnumOnly, Sc::LbOnset, Sc::LbProved, Sc::LbProvedTop];
     for n in 40..=256usize {
         for (si, &sc) in scen_all.iter().enumerate() {
             for (pi_i, &pi) in PRICES.iter().enumerate() {
@@ -271,8 +288,8 @@ fn sweep(lf: &Lf, kd: &[usize], pass: bool) -> (String, String, BTreeMap<(usize,
                     let bm = best_at(lf, kd, n, &[m], sc, pi);
                     write!(per_m, "{}\"{m}\":{{\"log2\":{:.3},\"k\":{},\"route\":\"{}\"}}", if m > 2 { "," } else { "" }, bm.total, bm.k, bm.route).unwrap();
                 }
-                writeln!(jl, "{{\"log2N\":{n},\"scenario\":\"{}\",\"price\":{pi},\"log2_ic\":{:.3},\"log2_rho\":{:.3},\"m\":{},\"k\":{},\"route\":\"{}\",\"D\":{},\"log2_ga\":{:.3},\"log2_native\":{:.3},\"log2_attempts\":{:.3},\"log2_la\":{:.3},\"log2_mem_bytes\":{:.3},\"per_m\":{{{}}}}}",
-                    sc.name(), b.total, rho_cost(n as f64, pi), b.m, b.k, b.route, b.d, b.ga, b.nat, b.attempts, b.la, b.mem, per_m).unwrap();
+                writeln!(jl, "{{\"log2N\":{n},\"scenario\":\"{}\",\"price\":{pi},\"log2_ic\":{:.3},\"log2_rho\":{:.3},\"m\":{},\"k\":{},\"route\":\"{}\",\"D\":{},\"log2_ga\":{:.3},\"log2_native\":{:.3},\"log2_attempts\":{:.3},\"log2_la\":{:.3},\"log2_mem_bytes\":{},\"per_m\":{{{}}}}}",
+                    sc.name(), b.total, rho_cost(n as f64, pi), b.m, b.k, b.route, b.d, b.ga, b.nat, b.attempts, b.la, if b.mem.is_finite() { format!("{:.3}", b.mem) } else { "null".to_string() }, per_m).unwrap();
             }
         }
     }
@@ -284,6 +301,8 @@ fn sweep(lf: &Lf, kd: &[usize], pass: bool) -> (String, String, BTreeMap<(usize,
     writeln!(s, "Entry: `log2(IC / rho)` (negative = IC cheaper) and the minimizer `m, k, route`. rho = `sqrt(pi N/4)(1 + 2.25 price)`.\n").unwrap();
     for (si, &sc) in scen_all.iter().enumerate() {
         writeln!(s, "### {}\n", sc.name()).unwrap();
+        if sc == Sc::LbProved { writeln!(s, "Added 2026-11-20 (not preregistered). LB with the `m >= 3` degree floor replaced by the carry bound `m min(k, m-1) + 1` (written proof, under review); `m = 2` keeps its proved per-failed-attempt floor. Floor `C(mk, min(D, floor(mk/2)))` (equal to `C(mk, D)` wherever `D <= mk/2`; the convention of LB+onset). For `k <= m-1` successes are charged 1 (the grid condition is proved on unit ideals).\n").unwrap(); }
+        if sc == Sc::LbProvedTop { writeln!(s, "Added 2026-11-20 (not preregistered). As LB-proved with the literal top layer `C(mk, min(D, mk))`, which is not monotone in `D`: at the forced full degree `D = mk + 1` (`k <= m - 1`) it charges 1 per attempt. Reported to show what the degenerate floor admits.\n").unwrap(); }
         writeln!(s, "| log2 N | log2 rho @0 | price 0 | price 0.1 | price 1 | IC beats rho (all three prices) |").unwrap();
         writeln!(s, "|---|---|---|---|---|---|").unwrap();
         for &n in &HEAD_N {
@@ -343,6 +362,34 @@ fn sweep(lf: &Lf, kd: &[usize], pass: bool) -> (String, String, BTreeMap<(usize,
         }
         writeln!(s, "| {n} | {} |", cells.join(" | ")).unwrap();
     }
+    // LB-proved, route (b) alone: how much margin the proved degree floor leaves without the enumeration alternative
+    writeln!(s, "\n### LB-proved, route (b) alone (no enumeration): `log2(IC/rho)` of the best `k`, price 0.1 / price 1\n").unwrap();
+    writeln!(s, "Diagnostic (added 2026-11-20): the Groebner route with the LB-proved floor, minimized over `k` only. Entry: gap at price 0.1 / price 1 and the minimizing `k` (and `D`) at price 1.\n").unwrap();
+    for &sc in &[Sc::LbProved, Sc::LbProvedTop] {
+        writeln!(s, "#### {}\n", sc.name()).unwrap();
+        writeln!(s, "| log2 N | {} |", all_m.iter().map(|m| format!("m={m}")).collect::<Vec<_>>().join(" | ")).unwrap();
+        writeln!(s, "|---|{}", "---|".repeat(all_m.len())).unwrap();
+        for &n in &HEAD_N {
+            let cells: Vec<String> = all_m.iter().map(|&m| {
+                let mut parts = Vec::new();
+                let mut arg = (0, 0);
+                for &pi in &[0.1, 1.0] {
+                    let mut bt = f64::INFINITY;
+                    for k in 2..=(n - 2) {
+                        for (ga, nat, route, d, ..) in routes(lf, kd, n as f64, m, k, sc, None, None) {
+                            if route != "groebner" { continue; }
+                            let t = total(ga, nat, pi);
+                            if t < bt { bt = t; if pi == 1.0 { arg = (k, d); } }
+                        }
+                    }
+                    parts.push(format!("{:+.1}", bt - rho_cost(n as f64, pi)));
+                }
+                format!("{} (k={}, D={})", parts.join(" / "), arg.0, arg.1)
+            }).collect();
+            writeln!(s, "| {n} | {} |", cells.join(" | ")).unwrap();
+        }
+        writeln!(s).unwrap();
+    }
     (jl, s, curve)
 }
 
@@ -353,8 +400,9 @@ fn figure(curve: &BTreeMap<(usize, usize, usize), f64>) -> String {
     let ymax = 160.0; let ymin = 0.0;
     let xs = |n: f64| (n - 40.0) / 216.0 * pw;
     let ys = |y: f64| ph - (y.clamp(ymin, ymax) - ymin) / (ymax - ymin) * ph;
-    let colors = ["#2b6cb0", "#dd6b20", "#c53030", "#805ad5", "#718096"];
-    let names = ["LB (proved floor)", "LAW (measured, extrapolated)", "CEIL (proved ceiling)", "LAW, dense solver", "enumeration only"];
+    let colors = ["#2b6cb0", "#dd6b20", "#c53030", "#805ad5", "#718096", "", "#2f855a"];
+    let plotted = [0usize, 1, 2, 3, 4, 6];
+    let names = ["LB (proved floor)", "LAW (measured, extrapolated)", "CEIL (proved ceiling)", "LAW, dense solver", "enumeration only", "", "LB-proved (2026-11-20)"];
     let mut s = String::new();
     writeln!(s, "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" font-family=\"sans-serif\" font-size=\"11\">").unwrap();
     writeln!(s, "<rect width=\"100%\" height=\"100%\" fill=\"white\"/>").unwrap();
@@ -370,11 +418,11 @@ fn figure(curve: &BTreeMap<(usize, usize, usize), f64>) -> String {
             writeln!(s, "<line x1=\"{x}\" x2=\"{x}\" y1=\"0\" y2=\"{ph}\" stroke=\"#eee\"/><text x=\"{x}\" y=\"{}\" text-anchor=\"middle\">{t}</text>", ph + 14.0).unwrap(); }
         writeln!(s, "<text x=\"{}\" y=\"{}\" text-anchor=\"middle\">log2 N</text>", pw / 2.0, ph + 30.0).unwrap();
         if pi_i == 0 { writeln!(s, "<text transform=\"translate(-40,{}) rotate(-90)\" text-anchor=\"middle\">log2 cost (GAE)</text>", ph / 2.0).unwrap(); }
-        for si in 0..5 {
+        for &si in &plotted {
             let mut d = String::new();
             for n in 40..=256usize { let v = curve[&(si, pi_i, n)]; write!(d, "{}{:.1},{:.1} ", if n == 40 { "M" } else { "L" }, xs(n as f64), ys(v)).unwrap(); }
-            let dash = if si >= 3 { " stroke-dasharray=\"5,3\"" } else { "" };
-            writeln!(s, "<path d=\"{d}\" fill=\"none\" stroke=\"{}\" stroke-width=\"{}\"{dash}/>", colors[si], if si >= 3 { 1.2 } else { 2.0 }).unwrap();
+            let dash = if si == 3 || si == 4 { " stroke-dasharray=\"5,3\"" } else { "" };
+            writeln!(s, "<path d=\"{d}\" fill=\"none\" stroke=\"{}\" stroke-width=\"{}\"{dash}/>", colors[si], if si == 3 || si == 4 { 1.2 } else { 2.0 }).unwrap();
         }
         let mut d = String::new();
         for n in 40..=256usize { write!(d, "{}{:.1},{:.1} ", if n == 40 { "M" } else { "L" }, xs(n as f64), ys(rho_cost(n as f64, pi))).unwrap(); }
@@ -383,7 +431,7 @@ fn figure(curve: &BTreeMap<(usize, usize, usize), f64>) -> String {
     }
     let ly = h - 22.0;
     let mut x = ml;
-    for si in 0..5 { writeln!(s, "<line x1=\"{x}\" x2=\"{}\" y1=\"{ly}\" y2=\"{ly}\" stroke=\"{}\" stroke-width=\"2\"/><text x=\"{}\" y=\"{}\">{}</text>", x + 20.0, colors[si], x + 24.0, ly + 4.0, names[si]).unwrap(); x += 185.0; }
+    for &si in &plotted { writeln!(s, "<line x1=\"{x}\" x2=\"{}\" y1=\"{ly}\" y2=\"{ly}\" stroke=\"{}\" stroke-width=\"2\"/><text x=\"{}\" y=\"{}\">{}</text>", x + 20.0, colors[si], x + 24.0, ly + 4.0, names[si]).unwrap(); x += if si == 1 { 190.0 } else { 150.0 }; }
     writeln!(s, "<line x1=\"{x}\" x2=\"{}\" y1=\"{ly}\" y2=\"{ly}\" stroke=\"black\" stroke-width=\"2\"/><text x=\"{}\" y=\"{}\">rho sqrt(pi N/4)</text>", x + 20.0, x + 24.0, ly + 4.0).unwrap();
     writeln!(s, "</svg>").unwrap();
     s
@@ -392,11 +440,28 @@ fn figure(curve: &BTreeMap<(usize, usize, usize), f64>) -> String {
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     let cmd = args.get(1).map(|s| s.as_str()).unwrap_or("all");
-    let lf = Lf::new(4096);
+    let lf = Lf::new(8192);
     let kd: Vec<usize> = (0..12).map(|d| if d < 2 { usize::MAX } else { d + lambda_w(&lf, d - 1) }).collect();
     let here = env!("CARGO_MANIFEST_DIR");
     let adir = format!("{here}/../ic-endtoend/results");
     match cmd {
+        "crossover" => {
+            // exploratory: first log2 N (up to 1024) at which LB-proved route (b) alone falls below rho, per m and price
+            for m in 2..=8usize {
+                for &pi in &[0.1, 1.0] {
+                    let first = (40..=1024usize).find(|&n| {
+                        let mut bt = f64::INFINITY;
+                        for k in 2..=(n - 2) {
+                            for (ga, nat, route, ..) in routes(&lf, &kd, n as f64, m, k, Sc::LbProved, None, None) {
+                                if route == "groebner" { bt = bt.min(total(ga, nat, pi)); }
+                            }
+                        }
+                        bt < rho_cost(n as f64, pi)
+                    });
+                    println!("m = {m}, price {pi}: LB-proved route (b) first below rho at log2 N = {}", first.map_or("none <= 1024".into(), |x| x.to_string()));
+                }
+            }
+        }
         "kd" => {
             for d in 2..12 { println!("D = {d}: Lambda(D-1) = {}, k_D = {}, 14D+10 = {}", lambda_w(&lf, d - 1), kd[d], 14 * d + 10); }
             for k in [2, 6, 10, 14, 20, 27, 39, 52, 64, 77, 100, 127, 200, 254] {
