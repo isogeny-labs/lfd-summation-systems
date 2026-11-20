@@ -1,6 +1,11 @@
 # Main manuscript: ePrint preparation
 
-**Status, 19 November 2026:** ready for submission; what remains is the
+**Status, 20 November 2026:** ready for submission. The revision of 20
+November is a readability pass: the abstract now explains what the last
+fall degree is and states the contrast with the first fall degree (both
+already proved in the paper; no new claim), and the manuscript gained three
+conceptual figures in the background and roadmaps for the later sections.
+What remains is the
 author's own confirmation of the ePrint form (license, publication
 information, authorship) and the submission itself, which only an author can
 make. The cleanup of
