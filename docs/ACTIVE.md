@@ -36,6 +36,7 @@ _(none pinned — set one with `/goal <text>`)_
 - [x] Standardize the repository CI check contract (Codex, started 2026-11-17, branch codex/standard-ci-check, PR #29)
 
 - [x] Manuscript cleanup before ePrint: full growth proof in an appendix, shorter abstract, AI-assistance disclosure, no revision-history wording (Claude, started 2026-11-17, branch claude/ecstatic-dirac-7f5qyt, PR #27)
+- [ ] Verify the theorem, definition, table and section numbers cited in the LFD paper against the primary sources, and fix any that are wrong (Claude, started 2026-11-20, branch claude/index-calculus-root-finding-e95kd6)
 
 <!-- One line per task, added as the task's first step with its draft PR:
 - [ ] <task> (<runtime>, started YYYY-MM-DD, branch <branch>, PR #<n>) -->
