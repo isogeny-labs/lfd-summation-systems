@@ -15,11 +15,11 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io |
-| Abstract | paste `eprint-abstract.txt` (1278 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (1622 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (59 pages) |
+| Content | `../curve-lfd-bounds.pdf` (60 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -114,11 +114,30 @@ every numeric value of the previous version is preserved somewhere in the
 text. The manuscript is now 59 pages (previously 60). The abstract and the
 "Use of AI tools" paragraph are byte-identical to the previous version.
 
+Revision of 20 November 2026, discrete-logarithm consequence (abstract
+changed): the blanket sentence "We make no claim about the cost of discrete
+logarithms" is replaced by the consequence the theorems already carry. In
+the two-summand relation search of Petit, Kosters and Messeng, an attempt on
+a target of order greater than two finds no relation exactly when its ideal
+is the unit ideal (a short Frobenius argument, Section "What the results
+mean"); there the solving degree equals the LFD, which the growth theorem
+bounds by at least floor((k-10)/14)+1 for t != 0 and p > 2^(k+1). Each such
+attempt therefore costs a Macaulay-matrix solver at least
+binom(2k, floor((k-10)/14)+1) = 2^((0.44+o(1))k) columns, and estimates that
+assume a bounded solver degree understate the relation-search cost by a
+factor exponential in k. The abstract, introduction, contributions, the
+section "What the results mean, and what they do not" and the conclusion
+state this; the paragraph "What does not follow" now limits the claim to
+the relation search (no total discrete-logarithm cost, no comparison with
+Pollard rho). No theorem, lemma, definition, proposition, conjecture body,
+proof, table value, figure, label or citation changed. The manuscript is now
+60 pages (previously 59); the abstract is 1622 characters.
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `3af44c2218fdc952f2f572480ebe87d371842e6b9dd34b5c002aed586170abc9` |
-| `paper/curve-lfd-bounds.tex` | `f45ffef603030f281ee83f7dc64b80828b56493db9cd884a1020bef30d965130` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `d4da696991e8a11ea0209960b0c48ddfd5f6b0bd2146f583b776de49d447906a` |
+| `paper/curve-lfd-bounds.pdf` | `2912633f886dc8598011a1c774cd84388c2f3729e6a1b173b2745e2d24827fa0` |
+| `paper/curve-lfd-bounds.tex` | `5195ac0851909f0ad14563ba2cc4aecbd6dd735bbf3282ad1c2d7beb300bea57` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `35d4028ee813c0bad789921ae116e44c79785bcfa1a81aeb28123fd266af70c2` |
 
 The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0
 (conda-forge; bundle `tlextras-2022.0r0`) by

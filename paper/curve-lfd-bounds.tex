@@ -54,9 +54,14 @@ $k=14$ we certify $\mathrm{LFD}\ge7$, with $\mathrm{LFD}\le7$ resting on a
 degree lift with a written proof. These values match the corrected
 breakpoints of Petit, Kosters and Messeng and the law
 $\mathrm{LFD}(k)=\lfloor(k+14)/4\rfloor$, fitted on $k\le13$. A written
-proof shows that the LFD is unbounded in $k$ for unit-ideal instances with
-$t\ne0$ when $p>2^{k+1}$. The degree therefore grows with the factor base,
-though slowly. We make no claim about the cost of discrete logarithms.
+proof shows that the LFD of unit-ideal instances with $t\ne0$, which equals
+their solving degree, is unbounded in $k$ when $p>2^{k+1}$. The degree
+therefore grows with the factor base, though slowly. For the ECDLP this
+bounds the cost of these attacks from below: in the two-summand relation
+search of Petit, Kosters and Messeng, the attempts that find no relation
+each cost a Macaulay-matrix solver an amount exponential in $k$, so
+complexity estimates that assume a bounded solver degree understate the
+cost of the relation search by a factor exponential in $k$.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -93,8 +98,12 @@ but slowly. For two-summand prime systems there is a proved ceiling, $\lfd\le k+
 certified values rise in single steps, $4$, $5$, $6$, to at least $7$ at
 $k=14$, consistent with the law $\lfloor(k+14)/4\rfloor$; and a written proof shows
 that the LFD of unit-ideal instances is unbounded in $k$, while the first
-fall degree stays at $3$ or $4$. Section~\ref{sec:meaning} states what this
-changes and what it does not.
+fall degree stays at $3$ or $4$. For the ECDLP this is a lower bound on the
+cost of these attacks: in the two-summand relation search of Petit, Kosters
+and Messeng, an attempt on a target of order greater than two finds no
+relation exactly when its ideal is the unit ideal, and then it costs a
+Macaulay-matrix solver an amount exponential in $k$.
+Section~\ref{sec:meaning} states what this changes and what it does not.
 
 \paragraph{Evidence labels.} Each result carries one of five labels, stated
 where the result is introduced: \emph{kernel-checked} (proved in Lean~4
@@ -147,6 +156,15 @@ about binary curves from an unpublished draft are not claimed here
  with~\cite{cg} and Lemma~\ref{lem:cube}); the two degrees agree on
  \SDEQUAL{} of \SDKNOWN{} settled systems and differ by one or two on eight
  (Table~\ref{tab:sd}).
+\item \emph{Consequence for the ECDLP} (written proof;
+ Section~\ref{sec:meaning}): in the two-summand relation search of Petit,
+ Kosters and Messeng with $p>2^{k+1}$, every attempt that finds no
+ relation on a target of order greater than two with $t\ne0$ has solving
+ degree at least $\lfloor(k-10)/14\rfloor+1$, so it costs a Macaulay-matrix
+ solver
+ $2^{(0.44+o(1))k}$ or more, and estimates that assume a bounded solver
+ degree understate the cost of the relation search by a factor exponential
+ in $k$.
 \item \emph{A conjecture} (Section~\ref{sec:conjecture}):
  $\lfd(k)=\lfloor(k+14)/4\rfloor$ for generic two-summand prime chain
  systems; of six predictions recorded before the computations at $k\ge14$,
@@ -2970,13 +2988,47 @@ Conjecture~\ref{conj:law} place the degree near $k/4$; at any degree linear
 in $k$, the number of square-free monomials of at most that degree in the
 $2k$ chain variables grows exponentially in $k$.
 
-\paragraph{What does not follow.} We make no claim about the cost of a
-discrete logarithm and no comparison with Pollard rho. Both would need the
-relation yield, the rank and the sparsity of the matrices, which are not
-studied here. Nothing is claimed for other factor-base families, for
-summand counts beyond the bounds and instances stated, or for curves of
-cryptographic size: the exact values concern the instances computed, at
-depths up to $16$.
+\paragraph{What follows for the discrete logarithm.} In the relation search
+of Petit, Kosters and Messeng~\cite{pkm}, each attempt solves a two-summand
+chain system for a target $R$ with $t=x(R)$; their System~(4) has the LFD of
+the normalized presentation at every depth compared
+(Section~\ref{sec:depth10}). The chain equations put every abscissa in the
+group of $2^k$-th roots of unity, which lies in $\F_p$, so each summand of a
+solution over the algebraic closure lies in $E(\F_p)$ or in the quadratic
+twist, on which Frobenius acts as $-1$. A single summand in the twist
+outside $E(\F_p)$ would then have order two, which is impossible for a point
+with abscissa in $\F_p$, and two such summands would give $R=-R$. Hence, if
+$R$ has order greater than two, every solution is a decomposition of $R$
+over $\F_p$, and an attempt finds no relation exactly when its ideal is the
+unit ideal. There
+the solving degree equals the LFD (Section~\ref{sec:solving}), and for
+$t\ne0$ and $p>2^{k+1}$ Theorem~\ref{thm:growth} gives
+\[
+ \sd_\sigma=\lfd\;\ge\;\Bigl\lfloor\frac{k-10}{14}\Bigr\rfloor+1
+\]
+for every degree-compatible order $\sigma$ (written proofs). The Macaulay
+matrix at this degree has at least
+$\binom{2k}{\lfloor(k-10)/14\rfloor+1}=2^{(0.44+o(1))k}$ columns, so each
+attempt that finds no relation costs a Macaulay or MutantXL-type solver an
+amount exponential in $k$, a positive power of the factor-base size $2^k$;
+plain XL needs a larger degree still (Section~\ref{sec:solving}). A bounded
+solver degree would make this cost polynomial in $k$, so complexity
+estimates for the method that assume one understate the cost of the
+relation search by a factor exponential in $k$. The certified values and
+Conjecture~\ref{conj:law} place the degree near $k/4$, which gives
+$2^{(1.09+o(1))k}$ columns, and the ceiling $\sd_\sigma\le k+2$ of
+Theorem~\ref{thm:sd} keeps the cost of an attempt at $2^{O(k)}$.
+
+\paragraph{What does not follow.} These are lower bounds on one step, the
+relation search, for solvers in the Macaulay model, on the attempts that
+find no relation. We do not compute the total cost of a discrete logarithm
+and do not compare the method with Pollard rho: that needs the relation
+yield, the linear-algebra stage and, for attacks with more than two
+summands, the growth of the solving degree, which is established here only
+as the constant bound $\lfd\ge7$ for three summands. The theorems hold for
+every prime $p>2^{k+1}$, including primes of cryptographic size; the exact
+values concern the instances computed, at depths up to $16$. Nothing is
+claimed for other factor-base families.
 
 \paragraph{The evidence boundary.} The kernel-checked upper bounds of
 Table~\ref{tab:twosided} hold for every instance without genericity
@@ -3162,7 +3214,11 @@ explanations.
 We asked whether the degree a linear-algebra solver needs for a
 summation-polynomial system stays bounded as the factor base grows. For the
 systems studied here it does not, but it grows slowly, and the slow growth is
-now partly proved and partly computed rather than assumed.
+now partly proved and partly computed rather than assumed. For the ECDLP the
+consequence is concrete: in the two-summand relation search of Petit,
+Kosters and Messeng, every attempt that finds no relation costs a
+Macaulay-matrix solver an amount exponential in the depth, so the cost of
+that search cannot be estimated with a bounded solver degree.
 
 From above, Lean checks the finite-quotient bound $mk+1$ for all three
 families and, for two-summand prime chains on nonsingular curves, the bound
