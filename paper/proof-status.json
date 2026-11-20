@@ -58,7 +58,21 @@
       "chain subsystem reduced-ideal trivial (every m,k, 2 != 0)",
       "LFD <= max(m*k+1, delta) for every input list containing the chains",
       "LFD <= 2k+1 for the normalized two-summand prime presentation at every depth",
-      "binary/Koblitz descended S3 systems LFD <= r+1"
+      "binary/Koblitz descended S3 systems LFD <= r+1",
+      "LFD <= k+2 for the normalized two-summand chain presentation on every nonsingular cubic, every target and every depth k >= 2, over every field with 2 != 0 (Theorem thm:selector); LFD = 4 at k = 2 for unit ideals with 3t^2+a != 0",
+      "LFD >= 4 for every unit-ideal two-summand chain system with 3t^2+a != 0, at every depth k >= 2 (Theorem thm:three)",
+      "LFD >= 7 for three-summand chain systems with the chain normal form of S_4, at every depth k >= 3, when 5t^3+3at+6b != 0 (Theorem thm:carry)",
+      "first fall degree of the two-summand prime systems is 3 or 4 at every depth k >= 2 (an FFD statement, not an LFD one)",
+      "an exclusion of 1 from the degree-D closure at depth k persists at every larger depth, so unit-ideal instances there have LFD > D (Theorem thm:restrict)"
+    ],
+    "kernel_components": [
+      "ICFallDegrees.SelectorExtension.lfd_le_depth_add_two_of_two_ne",
+      "ICFallDegrees.SelectorExtension.exact_lfd_four_at_depth_two",
+      "ICFallDegrees.PrimeM2Lower.lfd_ge_four_of_unit",
+      "ICFallDegrees.M3CarryLower.m3_lfd_ge_seven",
+      "ICFallDegrees.M3CarryLower.prime_field_m3_lfd_ge_seven",
+      "ICFallDegrees.PrimeM2General.exact_ordinary_ffd",
+      "ICFallDegrees.DepthRestrictionM2.lfd_gt_of_le"
     ],
     "written_only": [
       "the local-to-global rank certificate for prime chains is the same argument as the Boolean one and is instantiated in Python, not in Lean",
