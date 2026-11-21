@@ -182,6 +182,14 @@ def cmd_model(a):
         print(f"required speed-up of the relation finder to reach rho (k re-optimized): 2^{sp['factor_log2']:.1f} "
               f"= {2.0 ** sp['factor_log2']:.3g}x, i.e. t_lin <= {sp.get('t_lin_ns_needed', p.t_lin_ns):.3g} ns, "
               f"break-even at k = {sp.get('k_at_break_even', best['k'])}")
+    ob = model.oracle_budget(p)
+    if ob["k"] is None:
+        print("per-target budget for ANY relation finder: none (the algebra stage alone exceeds rho at every k)")
+    else:
+        print(f"per-target budget for ANY relation finder (all decompositions of one R, one core), best k = {ob['k']}: "
+              f"{fmt_t(ob['scan_s'])}  (mu = 2^{ob['mu_log2']:.1f}, 2^{ob['relations_log2']:.1f} relations, "
+              f"{fmt_t(ob['scan_s'] / 2.0 ** ob['mu_log2'])} per relation)"
+              + ("" if ob["feasible"] else f"  -- shorter than forming the target ({fmt_t(ob['t_new_s'])}): infeasible"))
     print("Assumptions: |FB| = 2^k, mu = |FB|^m/(m! 2^n), t_la is not measured, kernel limits (e.g. the Rust kernel "
           "needs k >= 35 at n = 131) are not modelled.")
 

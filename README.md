@@ -40,6 +40,7 @@ record behind the numbers in the paper. The paper is `paper/curve-lfd-bounds.pdf
 | `experiments/ic-curve-validation/` | independent implementation of the closure in the ordinary ring |
 | `experiments/ic-solving-degree/` | solving degree and largest Gröbner-basis degree of every exact-LFD system, with the Singular, PolyBoRi and mutant-closure checks (Section 7) |
 | `experiments/ic-rootfind/` | point decomposition on binary curves by linear algebra and one quadratic instead of a Gröbner basis (`csd/ic_rootfind.py`; Rust kernel for multi-word fields in `rust/ic_rootfind/`, measured at n = 131), measured against enumeration, meet in the middle and MutantXL |
+| `csd/bench/`, `scripts/bench.py`, `experiments/ic-bench/` | benchmark harness for relation finders (LRF, enumeration, meet in the middle, MutantXL): isolated runs with timeouts and cross-checks, A/A noise floor, statistics, and a cost model against Pollard rho; protocol, calibration records and results in `experiments/ic-bench/` |
 | `second-engine/` | the second closure engine (written in `isogeny-labs/crypto`, moved here 19 November 2026): records of its runs and of the third lift (`records/`), the Rust lift (`lift/`), a standalone Rust extract of the engine that reproduces the paper's instance closures (`engine/`), its local gate (`gate-20261119/`); `README.md` and `PROVENANCE.md` |
 | `experiments/ic-bounds-solving/` | the static (plain XL) Macaulay degree study behind `SD1-solving-degree.md`, and its independent validation (`validation/VALIDATOR_REPORT.md`) |
 

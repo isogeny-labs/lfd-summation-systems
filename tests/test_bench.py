@@ -214,6 +214,20 @@ def test_model_floor_and_required_speedup_are_consistent():
     assert abs(model.optimize_k(q)["log2_total_s"] - model.rho_stage_log2s(q)) < 0.05
 
 
+def test_oracle_budget_is_solver_agnostic_and_consistent():
+    b3 = model.oracle_budget(model.ecc2k130(m=3))
+    assert not b3["feasible"]                                  # below the cost of forming the target
+    b4 = model.oracle_budget(model.ecc2k130(m=4))
+    assert b4["feasible"] and 1e-3 < b4["scan_s"] < 1.0       # tens of milliseconds per target
+    # spending exactly the budget at the best k gives total == rho
+    from dataclasses import replace
+    p = model.ecc2k130(m=4)
+    k = b4["k"]
+    need = 2.0 ** b4["relations_log2"]
+    rel = need * b4["scan_s"] / 2.0 ** b4["mu_log2"]
+    assert abs(math.log2(rel + 2.0 ** model.la_stage_log2s(p, k)) - model.rho_stage_log2s(p)) < 1e-6
+
+
 def test_model_from_records_reads_the_n131_record():
     kw = model.from_records(ROOT / "experiments" / "ic-rootfind" / "n131.jsonl")
     assert 1700 < kw["t_lin_ns"] < 2000 and 100 < kw["t_add_ns"] < 200

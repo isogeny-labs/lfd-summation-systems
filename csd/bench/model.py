@@ -153,6 +153,27 @@ def required_speedup(p: Params) -> dict:
                 t_lin_ns_needed=p.t_lin_ns * 2.0 ** -hi)
 
 
+def oracle_budget(p: Params) -> dict:
+    """Solver-agnostic requirement: the longest time (core-seconds) a relation finder may spend on ONE target R, over
+    all its decompositions, for the total to equal rho.  For each k: the relations stage may use 2^rho - 2^algebra
+    seconds, divided by the relations needed, times mu (decompositions per target, so one relation costs
+    budget / mu).  Maximised over k.  Any solver can be compared with this number at its own (m, k): a Groebner basis
+    of the Weil descent, a root finder, a SAT call.  `feasible` is False when even forming the target takes longer."""
+    rho = 2.0 ** rho_stage_log2s(p)
+    t_new = (p.t_add_ns if p.t_new_ns is None else p.t_new_ns) * 1e-9
+    best = None
+    for k in range(2, p.n // 2 + 1):
+        la = 2.0 ** la_stage_log2s(p, k)
+        if la >= rho:
+            continue
+        need = 2.0 ** (log2fb(k) + math.log2(1 + p.slack) - math.log2(p.neg_identify))
+        scan = (rho - la) / need * 2.0 ** mu_log2(p, k)
+        if best is None or scan > best["scan_s"]:
+            best = dict(k=k, scan_s=scan, mu_log2=mu_log2(p, k), relations_log2=math.log2(need),
+                        feasible=scan > t_new, t_new_s=t_new)
+    return best or dict(k=None, scan_s=0.0, feasible=False, t_new_s=t_new)
+
+
 def from_records(path, form="rows", threads=1) -> dict:
     """t_lin_ns and t_add_ns from a record in the format of experiments/ic-rootfind/n131.jsonl (median over rows)."""
     lin, add = [], []

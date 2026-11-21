@@ -1,0 +1,31 @@
+ECC2K-130 cost model, floor = best total with a FREE relation finder (t_lin = 0), log2 core-seconds; rho = 38.1
+floor - rho (log2): negative means index calculus could beat rho if the relation finder were fast enough
+ m  t_la_ns  t_new_ns  floor k  floor-rho    required t_lin (ns)
+ 3        1        15       34        1.5          none suffices
+ 3        1       150       35        3.2          none suffices
+ 3        1      1500       36        5.0          none suffices
+ 3       10        15       33        3.2          none suffices
+ 3       10       150       34        4.9          none suffices
+ 3       10      1500       35        6.6          none suffices
+ 3      100        15       32        5.0          none suffices
+ 3      100       150       33        6.6          none suffices
+ 3      100      1500       34        8.2          none suffices
+ 4        1        15       31       -3.6                3.9e-11
+ 4        1       150       31       -3.6                3.9e-11
+ 4        1      1500       31       -3.6                3.9e-11
+ 4       10        15       30       -2.5                1.3e-11
+ 4       10       150       30       -2.5                1.3e-11
+ 4       10      1500       30       -2.5                1.3e-11
+ 4      100        15       29       -1.3                3.8e-12
+ 4      100       150       29       -1.3                3.8e-12
+ 4      100      1500       29       -1.3                3.8e-12
+ 5        1        15       32       -1.8                6.4e-12
+ 5        1       150       32       -1.8                6.4e-12
+ 5        1      1500       32       -1.8                6.4e-12
+ 5       10        15       30       -0.7                2.4e-12
+ 5       10       150       30       -0.7                2.4e-12
+ 5       10      1500       30       -0.7                2.4e-12
+ 5      100        15       29        0.4          none suffices
+ 5      100       150       29        0.4          none suffices
+ 5      100      1500       29        0.4          none suffices
+m=3: floor reaches rho only if t_la <= 0.00829 ns per sparse entry update (t_new = 150 ns)

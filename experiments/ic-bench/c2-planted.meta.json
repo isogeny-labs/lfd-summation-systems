@@ -1,0 +1,48 @@
+{
+ "aa": true,
+ "affinity": [
+  0,
+  1
+ ],
+ "argv_solvers": [
+  "py_ref",
+  "enum",
+  "lrf",
+  "mitm4",
+  "mutantxl"
+ ],
+ "cc": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+ "commit": "b6bd7eee3e723b4d83329ff034f15ffd1223dbf7",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "dirty": true,
+ "governor": "",
+ "loadavg_start": [
+  0.21630859375,
+  0.26318359375,
+  0.15087890625
+ ],
+ "n_specs": 12,
+ "nproc": 2,
+ "numpy": "2.5.3",
+ "order_seed": 0,
+ "pin": [
+  0
+ ],
+ "python": "3.13.18",
+ "reps": 2,
+ "sources": {
+  "__init__.py": "cd1fbf075bb1aafd",
+  "_rootfind.c": "7b09ef3b21f24896",
+  "grids.py": "dc613b3a7715c3a3",
+  "ic_dreg.py": "0e5a650d3717ac02",
+  "ic_rootfind.py": "ef0335bf39e1c54c",
+  "model.py": "7327789783931d75",
+  "runner.py": "d6f7eff66e7c1a96",
+  "solvers.py": "0b64f69c14faf83a",
+  "spec.py": "888572204ceaf3e6",
+  "stats.py": "b540e17fcaa2ceb9"
+ },
+ "threads": 1,
+ "timeout": 120.0,
+ "utc": "2026-11-21T02:38:32Z"
+}

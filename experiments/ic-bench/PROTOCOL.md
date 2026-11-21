@@ -104,3 +104,15 @@ test):
 - **P2b.** LRF slope over `k = 9..12` in [0.85, 1.25]; enumeration unchanged (about 1.9).
 - **P3b.** A/A band replicates C1: 5th percentile in [0.70, 0.85], 95th in [1.20, 1.40] for times above 1 ms.
 - **P4b.** All rows `ok`.
+
+## Amendment 2: outcome of C1b and C2, and a retraction (written after the runs; the predictions above are unchanged)
+
+C1b (72 rows) and C2 (84 `ok` rows) are in `RESULTS.md` with every verdict. Two corrections to Amendment 1:
+
+1. **Retraction.** Amendment 1 said the recorded speed-ups of `scaling-m3.jsonl` at `k = 9..11` are "understated or
+   noisy by up to 10x at the median". The record is a minimum of three runs and C1b reproduces it
+   (speed-ups 35, 66, 135 against 38, 66, 145). The allocator artifact biases measurements that are medians, or
+   repeated calls in a long-lived process, or runs whose allocator state is not controlled; it does not
+   invalidate the record. What C1 shows is only that the harness, run without the fix, did not reproduce the
+   record at `k <= 11`.
+2. **Two predictions of C1b were falsified** (P3b, and the enumeration part of P6); see `RESULTS.md`.
