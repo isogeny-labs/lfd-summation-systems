@@ -54,6 +54,22 @@ def _fb_estimate(spec):
     return 2.0 ** spec.k
 
 
+CAPS = (1 << 12, 1 << 16, 1 << 20)     # row capacities tried in turn (see _with_cap)
+
+
+def _with_cap(call):
+    """csd.ic_rootfind's methods allocate an output buffer of `cap` rows per call (default 2^20 rows, 48 MB at m = 3).
+    That allocation is not part of the algorithm: glibc serves it by mmap on the first call and from the heap with a
+    48 MB memset afterwards, 0.07 to 2 ms depending on allocator state, which dominates the 0.1 to 1 ms searches
+    of k <= 11 (experiments/ic-bench/RESULTS.md, C1).  Start small and retry on overflow; the cap used is recorded."""
+    for cap in CAPS:
+        try:
+            return call(cap), cap
+        except OverflowError:
+            continue
+    raise OverflowError("more rows than the largest cap")
+
+
 class _RootfindBase(Solver):
     def available(self):
         try:
@@ -80,8 +96,8 @@ class LRF(_RootfindBase):
     oracle_rank = 3
 
     def run(self, ctx, inst, threads=1):
-        decs, st, rows = ctx.lrf(inst.spec.m, inst.R, threads=threads)
-        return decs, dict(st, nfb=ctx.nfb, dimV2=ctx.dimV2, rows_found=rows)
+        (decs, st, rows), cap = _with_cap(lambda c: ctx.lrf(inst.spec.m, inst.R, cap=c, threads=threads))
+        return decs, dict(st, nfb=ctx.nfb, dimV2=ctx.dimV2, rows_found=rows, cap=cap)
 
 
 @register
@@ -100,8 +116,8 @@ class Enum(_RootfindBase):
         return True, ""
 
     def run(self, ctx, inst, threads=1):
-        decs, cnt = ctx.brute(inst.spec.m, inst.R, threads=threads)
-        return decs, dict(nfb=ctx.nfb, rows_found=cnt)
+        (decs, cnt), cap = _with_cap(lambda c: ctx.brute(inst.spec.m, inst.R, cap=c, threads=threads))
+        return decs, dict(nfb=ctx.nfb, rows_found=cnt, cap=cap)
 
 
 @register
@@ -118,8 +134,8 @@ class MITM4(_RootfindBase):
         return True, ""
 
     def run(self, ctx, inst, threads=1):
-        decs, cnt, table_bytes = ctx.mitm4(inst.R)
-        return decs, dict(nfb=ctx.nfb, rows_found=cnt, table_bytes=table_bytes)
+        (decs, cnt, table_bytes), cap = _with_cap(lambda c: ctx.mitm4(inst.R, cap=c))
+        return decs, dict(nfb=ctx.nfb, rows_found=cnt, table_bytes=table_bytes, cap=cap)
 
 
 @register
