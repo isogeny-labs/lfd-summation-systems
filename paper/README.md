@@ -133,6 +133,9 @@ retain its logs rather than overwriting the archived audit.
   the result; the qualified preprint does not claim to have one.
 - The author confirms authorship, publication information and the ePrint
   distribution license. The earlier sheet's CC BY entry is a proposal.
+- Every located citation (theorem, definition, lemma, table and section numbers)
+  was checked against its source on 20 November 2026; see "Citation check"
+  below. One item rests on the section titles only (Cox, Little and O'Shea).
 
 The existing `paper/` layout is retained to preserve this companion repository's
 published paths; this change adds no separate research manuscript.
@@ -216,3 +219,25 @@ this paper update.
 The prose pass retains the isogenylabs.io-only contact. The solving-degree
 section and the kernel-checked non-two-torsion function field and pole
 orders from the combined manuscript are preserved.
+
+## Citation check, 20 November 2026
+
+Each citation with a locator (`\cite[...]`) was checked against the source text,
+and the paper's description of the cited result against its statement.
+
+| Citation | Version read | Verdict |
+|---|---|---|
+| Caminata–Gorla [Def. 1.1] | arXiv:2112.05579v2 (1 Jun 2022) | Correct: solving degree = least d with rowsp(M_d) containing a Gröbner basis, M_d the iterated (Lazard-strategy) Macaulay matrix of Section 1. |
+| Caminata–Gorla [Thm. 3.1] | same | Correct: for every degree-compatible σ, sd_σ(F) = max{d_F, max.GB.deg_σ(F)}. |
+| Steiner [Lemma 7.4] | arXiv:2310.03637v2 and the ToSC 2024(1) PDF (pp. 357–411) | Correct in both: sd_DRL(F) ≤ max{d_F, max.GB.deg_DRL(F)}, with d_F defined from W_{F,d}, the row space of the single (non-iterated) Macaulay matrix (Def. 7.2). |
+| Gorla–Mueller–Petit [Thm. 4] | arXiv:2011.01050v1 (only version) | Correct: systems with a simple zero; sd = least e with n independent linear forms in V_{E,e}, independent of coordinates and degree-compatible order. (Theorem 11 and Corollary 1, recorded in an older note, are the HFE bounds of the same paper.) |
+| Huang–Kosters–Yang–Yeo [Prop. 2.8] | arXiv:1505.02532v2 | Correct; the proposition assumes the ideal radical, now said in the introduction ("zero-dimensional radical systems"). |
+| Petit–Kosters–Messeng [§3.3], [Table 4] | author PDF, people.maths.ox.ac.uk | Table 4 ("Prime case, p − 1 subgroups") correct, and the paper's PKM column (4, 4, 5, 5, 5, 6, 6 for k = 2–5, 6–7, 8, 9, 10, 11) and the description of its set-up match. System (4) is defined in §3.1 and specialized to subgroups in §3.3: citation changed to [§§3.1, 3.3]. |
+| Voloch 1985 [Theorem 4] | zbMATH review Zbl 0612.10011 (J. H. Silverman) | Correct: "The main result of this paper (theorem 4)", the S-unit bound m(m−1)(2g−2+|S|) over ℂ, found independently by Brownawell–Masser, improving Mason. |
+| Garcia–Voloch 1987 [Theorem 1] | quotation "[Th. 1, GV87]" in arXiv:2107.11266, Thm. 3.1 (the article is paywalled) | Correct: linear independence over p^s-th powers iff a Hasse-derivative Wronskian is nonzero. Secondary source. |
+| Silverman [Ch. II, §2] | citing literature (arXiv:2005.02920: [Sil09, Ch. II, Cor. 2.12]) | Correct at section level: §2 has the Frobenius map, purely inseparable of degree q. Secondary source. |
+| Cox–Little–O'Shea [Ch. 2, §9] | authors' 4th-edition table of contents | 4th ed.: §9 "Refinements of the Buchberger Criterion" (new), §10 "Improvements on Buchberger's Algorithm" (the 3rd edition's §9, where the coprime criterion was Prop. 4). The book text was not available, so the citation is now [Ch. 2, §§9–10]; pin the proposition from the book if wanted. |
+
+Not checked against the published journal versions of Caminata–Gorla, Gorla–Mueller–Petit and
+Huang–Kosters–Yang–Yeo (paywalled); their numbering may differ from the preprints read.
+

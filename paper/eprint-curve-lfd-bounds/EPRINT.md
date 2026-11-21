@@ -135,8 +135,8 @@ proof, table value, figure, label or citation changed. The manuscript is now
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `2912633f886dc8598011a1c774cd84388c2f3729e6a1b173b2745e2d24827fa0` |
-| `paper/curve-lfd-bounds.tex` | `5195ac0851909f0ad14563ba2cc4aecbd6dd735bbf3282ad1c2d7beb300bea57` |
+| `paper/curve-lfd-bounds.pdf` | `b0a723ea94ffa97ad76731b391a9d26b73e0e1a393b33e3f05958ad1895e338f` |
+| `paper/curve-lfd-bounds.tex` | `7db350ee60f375b01c9a1328b314c5b91c54836350d68dd38811bb809a096a57` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `35d4028ee813c0bad789921ae116e44c79785bcfa1a81aeb28123fd266af70c2` |
 
 The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0
@@ -146,6 +146,11 @@ The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0
 xdvipdfmx and the figures are byte-identical to the previous build. The
 earlier build of 20 November used pdfTeX 1.40.25; the versions of 19 November
 also used Tectonic 0.17.0.
+After the citation check of 20 November (three citation locators corrected; see
+`../README.md`, "Citation check"), the PDF was rebuilt with Tectonic 0.17.0 built
+from crates.io (`cargo install tectonic --version 0.17.0 --locked`), again with
+only Tectonic on the `PATH`; the producer is xdvipdfmx and the figures are
+byte-identical to the previous build.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 
