@@ -90,7 +90,7 @@ degree a solver needs (Section~\ref{sec:ffd}). We work instead with the last
 fall degree (LFD), introduced by Huang, Kosters and Yeo~\cite{hky15} and
 developed by Huang, Kosters, Yang and Yeo~\cite{hkyy}. It is an invariant of
 the input list, not of a solver, and together with the number of solutions
-it controls linear-algebra solving of zero-dimensional
+it controls linear-algebra solving of zero-dimensional radical
 systems~\cite[Prop.~2.8]{hkyy}.
 
 We study the LFD as a function of the size of the factor base. Over prime
@@ -526,8 +526,9 @@ number of systems and the linear-algebra cost for subfield and Koblitz
 curves.
 
 \paragraph{Prime fields.} The two-power subgroup presentation is due to
-Petit, Kosters and Messeng~\cite[\S3.3]{pkm}: their System~(4) consists of
-the chains $x_{i,j+1}=x_{i,j}^2$, $0=1-x_{i,n_1}^2$ and the unreduced
+Petit, Kosters and Messeng~\cite[\S\S3.1, 3.3]{pkm}: their System~(4)
+(\S3.1), with the maps of \S3.3 for the subgroup of order $2^{n_1}$ of
+their experiments, consists of the chains $x_{i,j+1}=x_{i,j}^2$, $0=1-x_{i,n_1}^2$ and the unreduced
 summation polynomial $S_{m+1}(x_{11},\ldots,x_{m1},X)$, of degree $4$ for
 $m=2$. Their Table~4 reports, for $m=2$, averages over $100$ random
 instances per depth (the smallest prime $p$ with $2^{n_1}\mid p-1$ and
@@ -840,7 +841,7 @@ is injective, so every coefficient of $h$ vanishes.
 The proof assumes no Gr\"obner basis, normal form, closure rank or solution
 count. The summation polynomial plays no role, so the bound holds for every
 input list. The statement is the Gr\"obner-basis property of a system with
-coprime leading terms~\cite[Ch.~2, \S9]{clo15}; the new part is a
+coprime leading terms~\cite[Ch.~2, \S\S9--10]{clo15}; the new part is a
 kernel-checked statement of its consequence for the LFD.
 
 \begin{theorem}[Chain bound; kernel-checked]\label{thm:chain}
