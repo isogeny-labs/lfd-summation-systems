@@ -16,11 +16,11 @@ Obtain a measured improvement in relation yield per linear system for the linear
 
 ## Active items (top = next)
 - [ ] Relation yield per linear system for LRF: baseline, factor-base / summand-count variants and a Frobenius-orbit (Koblitz) variant at prime n, each measured against the baseline on the same instances (Claude, started 2026-11-21, branch claude/index-calculus-root-finding-e95kd6, PR #44)
-  - [ ] 1. Baseline: relations per linear system and per second, matched instances, seeds frozen
-  - [ ] 2. Yield model: expected relations per system as a function of (k, dim V2, n, m), checked against counts
-  - [ ] 3. Summand-count / factor-base variants (m = 4 by linear pairing, non-monomial V with small V2), measured
-  - [ ] 4. Koblitz: Frobenius-orbit factor base and orbit-reduced relation counting at prime n, measured
-  - [ ] 5. Report, graph and PDF; extrapolation to n = 131 with its gap to rho
+  - [x] 1. Baseline funnel + cost model (m=3/m=4, monomial V), 5 seeds, LRF cross-checked vs enumeration (0 mismatches)
+  - [x] 2. Determinacy model delta=k+dimV2-n; optimal operating point is a square system (delta in {0,1}), m=3
+  - [x] 3. m=4 strictly worse than m=3; found_per_cand intrinsic to (delta,n), independent of LRF-feasible basis (no exponent lever)
+  - [x] 4. Koblitz NO-GO at prime n (measured): realizable orbit reduction -> 1 (monomial) vs dim V2 -> n (Frobenius-span); the dim-V2/Frobenius tension is the mechanism
+  - [x] 5. Report, graph (yield_report.svg/png) and PDF (report.pdf); verdict: neither lever improves the n=131 relation stage (already at delta=0 optimum)
 - [ ] ECDLP claim evidence: end-to-end yield/LA vs rho (ic-endtoend), fully charged cost model to 2^256 (ic-costmodel), m>=3 depth growth (msum-growth, m=3 k=7 pod D=8 running), validated all-m carry bound LFD >= m min(k,m-1)+1 with Lean core (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #41)
 - [x] Paper: style pass on curve-lfd-bounds.tex (remove agent-output patterns, move run logistics to the appendix, cut repetition, narrative arc, "What the results mean" section; no mathematical, numeric or evidence-status change), with a style audit and invariant check (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #40)
 - [x] Paper: replace the abstract with the owner-approved text, resync the ePrint abstract and sheet, list the kernel-checked bounds in proof-status.json, rebuild with Tectonic (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #39)
@@ -53,3 +53,8 @@ Obtain a measured improvement in relation yield per linear system for the linear
 
 - PR #27: the author must confirm the wording of the "Use of AI tools" paragraph (it names Claude and Codex) before submission.
 - PR #31 / PR #35: full depth-14 certificate, split D8, and depth-18 breakpoint remain open; local probes finished with explicit caps (RAM/scratch limits). PR #35 was merged on 2026-11-19 as a record of the capped searches; the merge does not claim any of the three obligations complete.
+- PR #44 (relation yield for LRF): measured result is a cost model + optimal operating point
+  (square system, m=3) + two mechanistic NO-GOs (m=4 worse; Frobenius unusable at prime n due to
+  the dim-V2 vs Frobenius-structure tension). Neither pinned lever improves the n=131 relation
+  stage. The only remaining exponent lever is found_per_cand (a decomposition relation that
+  constrains the roots, not just their symmetric functions) — untested, owner to steer.

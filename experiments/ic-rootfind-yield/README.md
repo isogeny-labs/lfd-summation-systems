@@ -78,8 +78,55 @@ which is why `V = <1, w, ...>` is not Frobenius-stable. But index calculus needs
   orbits** (only `0, 1` are fixed).
 
 So `F = union_i V^(i)` is a Frobenius-stable factor base, each piece individually LRF-solvable with
-the same `dim V2`, and its points partition into size-`n` orbits. The orbit-reduced relation
-accounting is measured in `frobenius_*` (see that section when it lands).
+the same `dim V2`, and its points partition into size-`n` orbits.
+
+### Lever (b) is a no-go at prime n (measured), with a mechanism
+
+`frob_orbits.py` runs real LRF on the Koblitz curve `y^2 + xy = x^3 + 1` (a=0, matches ECC2K-130),
+collects decompositions, canonicalises every point to its Frobenius orbit, and measures the column
+reduction over the true `E[ell]` (tau = Frobenius eigenvalue). The `n` Frobenius images of one
+decomposition are `tau^j .(one orbit row)` -- scalar multiples, rank 1 -- so the win can only be the
+column reduction, not extra relations per search.
+
+| n | k | ideal `|F|/|orbits|` | per-point cols | orbit cols | realizable reduction |
+|---|---|---|---|---|---|
+| 11 | 4 | 9.0 | 21 | 15 | 1.40 |
+| 13 | 5 | 11.6 | 33 | 25 | 1.32 |
+| 17 | 6 | 16.2 | 65 | 57 | 1.14 |
+| 19 | 7 | 18.6 | 139 | 121 | 1.15 |
+| 23 | 8 | 22.7 | 275 | 253 | **1.09** |
+
+The *ideal* reduction grows toward `n`, but the *realizable* one **decays toward 1**. Reason: LRF over
+one subspace `V^(0)` produces only abscissas in `V`, and those points lie in **distinct** Frobenius
+orbits, so `#V-points ~= #orbits-touched`. Populating the Frobenius closure needs the `n-1` conjugate
+subspaces, whose decompositions are Frobenius *images* -- the same orbit rows, **no new rank** -- so
+they are wasted.
+
+A Frobenius-*structured* factor base (`frob_span.py`, sliding window `V = <w, w^2, ..., w^(2^(k-1))>`)
+does give real orbit sharing: `phi(V) cap V` has dimension `k-1`, and about half of `V` squares back
+into `V`. But then `dim V2` saturates at `n` for every `k >= ~sqrt(2n)` (measured), far below the
+yield-necessary `k ~= n/3`, so LRF is infeasible. **The LRF condition `dim span(V.V) < n` and Frobenius
+structure are in irreducible tension** -- the real obstruction at prime `n`, sharper than
+`koblitz_invariant_dims`'s "no proper invariant subspace".
+
+### found_per_cand is intrinsic (measured)
+
+`found_per_cand` is the same narrow band for every LRF-feasible basis at a given `(delta, n)`
+(monomial, `w^2`-powers, shifted all within noise; random bases have `dim V2 = n` and are infeasible;
+"far-out" bases only raise `delta`, re-tracing the baseline tradeoff). Fixing `e1 in V`, `e2 in
+span(V.V)` does not force the two roots into `V`, and no factor-base choice changes that. So the
+`~2^(0.7 n)` cost/relation exponent is intrinsic to LRF decomposition; only a decomposition relation
+that constrains the roots themselves (not merely their symmetric functions) could move it.
+
+Data: `frobenius.jsonl` (orbit reduction), and the basis comparison is reproducible from
+`frob_span.py`. Figure: `yield_report.{svg,png}`; write-up: `report.pdf` / `report.tex`.
+
+## Verdict for ECC2K-130 (n = 131)
+
+For `m = 3`, any non-negligible yield forces `k ~= 44`, which is exactly `delta = 0` -- the measured
+optimal operating point. **The current method is already at that optimum; neither pinned lever improves
+the n = 131 relation stage.** This is a measured negative result with mechanisms, not an absence of
+effort; it redirects the search to the `found_per_cand` term.
 
 ## Gap to rho
 

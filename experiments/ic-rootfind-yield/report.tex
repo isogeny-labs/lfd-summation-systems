@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,amsmath,amssymb,booktabs}
+\title{Relation yield per linear system for linearized root finding\\(binary-curve index calculus)}
+\author{Isogeny Labs}
+\date{21 November 2026}
+\begin{document}
+\maketitle
+
+\section*{Question}
+The linearized root-finding (LRF) kernel made the point-\emph{decomposition} step fast. For index
+calculus end to end the step speed is no longer the bottleneck; the \textbf{relation yield per linear
+system} is. We measure it, locate where it is lost, and test the two pinned levers: (a) factor bases /
+summand counts that raise relations per linear system; (b) the Koblitz / Frobenius structure at prime
+$n$. All quantities are counts, measured in exact arithmetic at small prime $n$ where the LRF
+decomposition set is cross-checked against enumeration (0 mismatches on every row).
+
+\section*{The funnel}
+For $m=3$ and $V=\langle 1,w,\dots,w^{k-1}\rangle$, LRF scans each abscissa $x_3\in V$ and solves one
+$\mathbb F_2$-linear system. The funnel is
+\[
+\text{targets (systems)} \to \text{lin\_solvable} \to \text{lin\_candidates} \to \text{found (relations)},
+\]
+and $\text{yield/system} = \text{solvable\_rate}\times\text{cand\_per\_solvable}\times\text{found\_per\_cand}$.
+The determinacy knob is $\delta = k+\dim V_2-n$; for monomial $V$, $\dim V_2 = 2k-1$, so $\delta=3k-1-n$
+and the system is square at $\delta=0$.
+
+\begin{center}\includegraphics[width=\textwidth]{yield_report.png}\end{center}
+
+\section*{Findings}
+\begin{enumerate}
+\item \textbf{The optimal operating point is a square system} ($\delta\in\{0,1\}$, $m=3$), not high $\delta$
+(Panel A). High $\delta$ maximises yield \emph{per system} but the candidate processing and the $2^k$
+factor-base size dominate the cost. \textbf{$m=4$ is strictly worse than $m=3$} at every matched $(n,k)$.
+A clean negative result for the summand-count half of lever (a).
+\item \textbf{The yield loss is intrinsic} (Panel B). $\text{found\_per\_cand}$ --- the chance a
+candidate quadratic's two roots land in $V$ --- collapses with $n$ at fixed $\delta$, and it is the
+\emph{same} for every LRF-feasible basis (monomial, $w^2$-powers, shifted): fixing the symmetric
+functions $e_1\in V$, $e_2\in\mathrm{span}(V\!\cdot\!V)$ does not force the roots into $V$. Random bases
+have $\dim V_2=n$ (LRF-infeasible). So cost/relation grows $\approx 2^{0.7\,n}$ and \textbf{no factor-base
+or summand choice changes that exponent}; only a different decomposition relation could.
+\item \textbf{Frobenius is a no-go at prime $n$} (Panel C), with a precise mechanism. The $n$
+squaring-conjugates $V^{(i)}$ of a monomial $V$ share $\dim V_2$ and tile a Frobenius-closed factor base
+in size-$n$ orbits, so an \emph{ideal} column reduction $|F|/|{\rm orbits}|\to n$ exists. But LRF search
+over one subspace $V^{(0)}$ produces only points with abscissa in $V$, which lie in \emph{distinct}
+orbits; the realizable reduction is $1.40,1.32,1.14,1.15,1.09$ for $n=11,\dots,23$ --- \textbf{decaying to
+$1$}. A Frobenius-structured $V$ (sliding window $\langle w,w^2,\dots,w^{2^{k-1}}\rangle$) does give real
+orbit sharing ($\varphi(V)\cap V$ has dimension $k-1$; $\sim$half of $V$ squares back into $V$) but then
+$\dim V_2$ saturates at $n$, making LRF infeasible for every $k\gtrsim\sqrt{2n}$, far below the
+yield-necessary $k\approx n/3$. The LRF efficiency condition ($\dim\mathrm{span}(V\!\cdot\!V)<n$) and
+Frobenius structure are in irreducible tension.
+\end{enumerate}
+
+\section*{Consequence for ECC2K-130 ($n=131$) and gap to rho}
+For $m=3$, any non-negligible yield forces $k\approx 44$, which is exactly $\delta=0$ --- the measured
+optimal operating point. The current method is therefore \emph{already} at that optimum; neither pinned
+lever improves the $n=131$ relation stage. The matched Pollard-rho reference is about $2^{61}$ group
+operations; the baseline cost model is the honest distance-remaining denominator. The only remaining lever
+that could change the exponent is the $\text{found\_per\_cand}$ term, which requires a decomposition
+relation that constrains the roots themselves, not merely their symmetric functions.
+\end{document}
