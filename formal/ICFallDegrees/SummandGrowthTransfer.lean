@@ -1,6 +1,8 @@
 import ICFallDegrees.AffineTransport
 import ICFallDegrees.GrowthRationalUnit
 import ICFallDegrees.GrowthRationalPrimeNative
+import ICFallDegrees.ChainClosureBridge
+import ICFallDegrees.BinaryWeight
 
 /-!
 Degree-controlled specialization for growth lower bounds.
@@ -170,6 +172,110 @@ theorem normalized_square_tower (F : Set (MvPolynomial σ K))
       rw [identity] at next
       simpa only [max_eq_right (by omega : 2 ≤ 4*(n+1))] using next
 
+section ActualNormalForms
+open FiniteQuotient ChainClosureBridge
+variable {r : ℕ} {L : Type*} [Field L]
+
+theorem nf_square (G : Set (P r L)) (nz : (0 : P r L) ∉ G)
+    (z : ReducedIdealTrivial G) (p : P r L) :
+    normalForm G nz ((normalForm G nz p)^2) = normalForm G nz (p^2) := by
+  have h1 := normalForm_mul_normalForm G nz z p p
+  have h2 := normalForm_mul_normalForm G nz z (normalForm G nz p) p
+  calc
+    normalForm G nz ((normalForm G nz p)^2) =
+        normalForm G nz (normalForm G nz p * p) := by
+      simpa only [pow_two] using h2.symm
+    _ = normalForm G nz (p * normalForm G nz p) := by rw [mul_comm]
+    _ = normalForm G nz (p^2) := by simpa only [pow_two] using h1.symm
+
+/-- The normalization corrections are constructed by graded division, not
+supplied as closure assumptions. Only the support-degree estimate remains. -/
+theorem actual_normal_power_tower (G F : Set (P r L))
+    (nz : (0 : P r L) ∉ G) (z : ReducedIdealTrivial G) (included : G ⊆ F)
+    (g : P r L) (base : InClosure F 2 (normalForm G nz g))
+    (degree : ∀ j, (normalForm G nz (g^(2^j))).totalDegree ≤ 2*(j+1))
+    (n : ℕ) : InClosure F (max 2 (4*n)) (normalForm G nz (g^(2^n))) := by
+  induction n with
+  | zero => simpa using base
+  | succ n ih =>
+    let h := normalForm G nz (g^(2^n))
+    have prior : InClosure F (4*(n+1)) h := ih.mono (by omega)
+    have hd : h.totalDegree ≤ 2*(n+1) := degree n
+    have budget : (h^2).totalDegree ≤ 4*(n+1) := by
+      have := totalDegree_mul h h
+      rw [← pow_two] at this
+      omega
+    have square : InClosure F (4*(n+1)) (h^2) := by
+      simpa only [pow_two] using prior.mul h (by omega)
+    have correction : InClosure F (4*(n+1)) (h^2-normalForm G nz (h^2)) :=
+      InClosure.transport budget
+        (fun f hf hdeg => .input (included hf) (hdeg.trans budget))
+        (normalForm_reduction G nz (h^2))
+    have next := square.sub correction
+    have id : h^2-(h^2-normalForm G nz (h^2)) = normalForm G nz (h^2) := by ring
+    rw [id] at next
+    dsimp only [h] at next
+    rw [nf_square G nz z, ← pow_mul, ← pow_succ] at next
+    simpa only [max_eq_right (by omega : 2 ≤ 4*(n+1))] using next
+end ActualNormalForms
+
+section DigitBounds
+open BinaryWeight
+
+theorem binary_weight_lt_two_pow (j n : ℕ) (hn : n < 2^j) : wt n ≤ j := by
+  induction j generalizing n with
+  | zero =>
+    have : n = 0 := by simpa using hn
+    subst n
+    simp
+  | succ j ih =>
+    rw [wt_eq]
+    have hd : n / 2 < 2^j := by rw [pow_succ] at hn; omega
+    have := ih (n/2) hd
+    have := Nat.mod_lt n (by omega : 0 < 2)
+    omega
+
+theorem binary_weight_mod_le (k n : ℕ) : wt (n % 2^k) ≤ wt n := by
+  have h := wt_add_mul_two_pow k (n % 2^k) (n / 2^k)
+    (Nat.mod_lt n (Nat.two_pow_pos k))
+  rw [Nat.mod_add_div] at h
+  omega
+
+/-- The support estimate needed at squaring level j, including cyclic wrap. -/
+theorem binary_weight_power_support (j k n : ℕ) (hn : n ≤ 2^(j+1)) :
+    wt (n % 2^k) ≤ j+1 := by
+  apply (binary_weight_mod_le k n).trans
+  rcases lt_or_eq_of_le hn with h | rfl
+  · exact binary_weight_lt_two_pow (j+1) n h
+  · have h := wt_two_pow_add (j+1) 0 (Nat.two_pow_pos (j+1))
+    simp only [Nat.add_zero, wt_zero, zero_add] at h
+    omega
+end DigitBounds
+
+section PrimeInputPowers
+open FiniteQuotient ChainQuotient ChainClosureBridge PrimeM2General
+variable {L : Type*} [Field L]
+
+/-- The real normalized two-summand input supplies the base and the chain
+corrections. The sole remaining estimate is the support degree of its powers. -/
+theorem prime_input_power_tower (two_ne : (2 : L) ≠ 0)
+    (k : ℕ) (hk : 2 ≤ k) (a b t : L)
+    (degree : ∀ j, (normalForm (chainInputs L 2 k) (chainInputs_nonzero 2 k)
+      ((normalized k hk a b t)^(2^j))).totalDegree ≤ 2*(j+1))
+    (n : ℕ) : InClosure (Set.range (inputs k hk a b t)) (max 2 (4*n))
+      (normalForm (chainInputs L 2 k) (chainInputs_nonzero 2 k)
+        ((normalized k hk a b t)^(2^n))) := by
+  apply actual_normal_power_tower (chainInputs L 2 k)
+    (Set.range (inputs k hk a b t)) (chainInputs_nonzero 2 k)
+    (reduced_chain_ideal_trivial 2 k two_ne) (chainInputs_two_subset k hk a b t)
+    (normalized k hk a b t) _ degree n
+  rw [ChainModelMap.normalForm_normalized two_ne k hk a b t]
+  have hd := (degree_and_top k hk a b t (Fin.last (2*k))).1.le
+  have hd' : (normalized k hk a b t).totalDegree ≤ 2 := by
+    simpa only [inputs, Fin.lastCases_last] using hd
+  exact .input ⟨Fin.last (2*k), by simp only [inputs, Fin.lastCases_last]⟩ hd'
+end PrimeInputPowers
+
 #print axioms map_closure_budget
 #print axioms not_one_of_specialization
 #print axioms no_lfd_bound_of_specialization
@@ -179,4 +285,8 @@ theorem normalized_square_tower (F : Set (MvPolynomial σ K))
 #print axioms card_sumTargets_le
 #print axioms exists_target_outside_sums
 #print axioms normalized_square_tower
+#print axioms nf_square
+#print axioms actual_normal_power_tower
+#print axioms binary_weight_power_support
+#print axioms prime_input_power_tower
 end ICFallDegrees.SummandGrowthTransfer

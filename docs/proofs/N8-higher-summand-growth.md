@@ -308,3 +308,33 @@ The integer support bound was checked exhaustively on e=0..2^(j+1),
 j=0..16, with residues modulo 2^k for k=2,3,5,8,12,20: 1,572,954 checks
 passed. This is arithmetic falsification evidence, not a closure certificate
 and not a proof for arbitrary j and k.
+
+
+## Constructed normalization corrections and exact binary bound
+
+The corrections are no longer an assumed closure-membership interface in
+`actual_normal_power_tower`. The proof uses the repository's existing
+`normalForm_reduction`, which derives p-NF(p) from the reducing inputs
+at the literal budget deg(p). Normal-form uniqueness proves
+NF(NF(p)^2)=NF(p^2), so at each step p=h_j^2 gives exactly the required
+correction, not an independently postulated replacement row.
+
+`prime_input_power_tower` instantiates this construction with the actual
+normalized `PrimeM2General.inputs` at arbitrary depth and characteristic
+other than two. The chain subset, degree-two base membership, and reduced
+base identity are discharged by existing kernel theorems. Its remaining
+hypothesis is the uniform support-degree estimate for NF(g^(2^j)).
+
+`binary_weight_power_support` now proves the integer assertion for every
+j,k,n with n<=2^(j+1): wt(n mod 2^k)<=j+1. The proof establishes the
+below-power bound by binary recursion, handles equality to the power
+separately, and uses the low/high weight decomposition for cyclic reduction.
+It does not rely on the finite arithmetic checks in the previous section.
+
+All these statements passed local Lean elaboration and printed only propext,
+Classical.choice, and Quot.sound. The step still to formalize is the
+connection from the raw polynomial's per-coordinate degree bound to the
+support of its chain normal form. Thus C_m=4(m-2) and the improved numerical
+thresholds remain provisional. The concrete square corrections and base
+input are now constructed; the polynomial support bound, universal Semaev
+identity, and actual elliptic-curve counting instantiation are the open gates.
