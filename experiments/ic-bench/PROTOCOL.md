@@ -65,3 +65,42 @@ figures is in `tests/test_bench.py::test_model_reproduces_the_readme_figures`.
 No ECDLP speed claim. Timings are single-core wall clock on one machine; the C kernel stops at `n = 63`, so the
 `n = 131` per-target cost comes from the Rust record, not from this harness. The cost model's linear-algebra constant
 is an assumption, and its answer for `m = 4, 5` depends on it (see `RESULTS.md`, sensitivity).
+
+## Amendment 1: outcome of C1 and the successor run C1b (written before C1b was run)
+
+C1 was run as specified (records `c1-calib.jsonl`, `c1-calib-k11-12.jsonl`, meta files alongside; 72 rows, all `ok`).
+Against the predictions above:
+
+| | outcome | verdict |
+|---|---|---|
+| P1 | enumeration `k >= 9`: ratios 1.17, 1.14, 1.19, 0.91. LRF: 1.97, 2.32, 1.56, 1.09 for `k = 9..12` | **enumeration confirmed, LRF falsified** (`k = 9, 10, 11` above 1.5) |
+| P2 | slope over `k = 9..12`: enumeration 1.90 [1.86, 2.06]; LRF 0.66 [0.55, 0.76] | enumeration confirmed, **LRF falsified** (interval excludes 1.0) |
+| P3 | A/A median 0.993; 5th to 95th percentile 0.777 to 1.287 for times above 1 ms (19 pairs) | median confirmed, **band falsified** (wider than 0.8 to 1.25) |
+| P4 | 72 of 72 rows `ok` | confirmed for C1 (C2 pending) |
+| P5 | peak RSS 74.8 to 75.2 MiB for both solvers across `k = 7..12` | confirmed |
+
+Diagnosis of the LRF falsification (diagnostic run, not a record: the script was `/tmp/iso.py`, numbers quoted
+here): the in-process, forked, pinned and GC-off variants of the same call all agree, so fork, pinning and GC are
+not the cause. `Solver.lrf` allocates a `2^20`-row output buffer per call (48 MB at `m = 3`) with `np.zeros`. That
+allocation alone takes 73 microseconds at its fastest and 2.3 ms at its median (glibc serves the first one by
+`mmap`, later ones from the heap with a 48 MB memset), against a raw `rf_lrf` call of 233 microseconds at `k = 10`.
+The recorded minimum of three runs caught the fast path (185 microseconds); a median does not. With `cap = 2^12`
+the call takes 145 microseconds (min) and 151 (median). So at `k <= 11` the recorded and the C1 LRF timings both
+contain a size-independent allocator artifact, and the speed-ups of `scaling-m3.jsonl` at `k = 9..11` are
+therefore not clean: they are understated or noisy by up to 10x at the median. This does not touch the algorithm
+or the claims at `k >= 12` (ratio 1.09 there).
+
+Remedy in the harness only (the library is untouched): the solver adapters call with `cap = 2^12` and retry at
+`2^16`, `2^20` on overflow (`csd/bench/solvers.py::_with_cap`); the cap used is in each row's counters.
+
+### Run C1b (same grids, same seeds, same flags as C1; records `c1b-calib.jsonl`, `c1b-calib-k11-12.jsonl`)
+
+Predictions, fixed before C1b (informed by the diagnosis above, so P6 is a check of the diagnosis, not a blind
+test):
+
+- **P1b.** `k = 9..12`: LRF median ratio harness/record in [0.4, 1.5]; enumeration in [0.67, 1.5].
+- **P6.** Cell medians of `t_min(C1b) / t_min(C1)`: LRF at most 0.6 for `k = 7..10` and at least 0.8 at `k = 12`;
+  enumeration at most 0.9 for `k = 7, 8` and in [0.9, 1.1] for `k >= 10`.
+- **P2b.** LRF slope over `k = 9..12` in [0.85, 1.25]; enumeration unchanged (about 1.9).
+- **P3b.** A/A band replicates C1: 5th percentile in [0.70, 0.85], 95th in [1.20, 1.40] for times above 1 ms.
+- **P4b.** All rows `ok`.
