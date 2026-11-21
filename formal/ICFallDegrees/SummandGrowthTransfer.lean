@@ -276,6 +276,92 @@ theorem prime_input_power_tower (two_ne : (2 : L) ≠ 0)
   exact .input ⟨Fin.last (2*k), by simp only [inputs, Fin.lastCases_last]⟩ hd'
 end PrimeInputPowers
 
+section BinaryLift
+open FiniteQuotient ChainTranslation ChainModelMap
+open scoped BigOperators
+variable {m : ℕ} {L : Type*} [Field L]
+
+/-- Explicit termwise binary representative of a raw polynomial.
+Its equality with graded-division normal form is not built into this definition. -/
+def binaryLift (k : ℕ) (p : MvPolynomial (Fin m) L) : P (m*k) L :=
+  ∑ e ∈ p.support,
+    monomial (digits k (fun i => e i % 2^k)) (coeff e p)
+
+theorem binaryLift_degree (k j : ℕ) (p : MvPolynomial (Fin m) L)
+    (box : ∀ e ∈ p.support, ∀ i, e i ≤ 2^(j+1)) :
+    (binaryLift k p).totalDegree ≤ m*(j+1) := by
+  classical
+  unfold binaryLift
+  apply totalDegree_finsetSum_le
+  intro e he
+  apply (totalDegree_monomial_le _ _).trans
+  change (digits k (fun i => e i % 2^k)).degree ≤ m*(j+1)
+  rw [digits_degree _ (fun i => Nat.mod_lt _ (Nat.two_pow_pos k))]
+  calc
+    (∑ i : Fin m, BinaryWeight.wt (e i % 2^k)) ≤ ∑ _i : Fin m, (j+1) :=
+      Finset.sum_le_sum (fun i _ => binary_weight_power_support j k (e i) (box e he i))
+    _ = m*(j+1) := by simp
+
+theorem binaryLift_reduced (k : ℕ) (p : MvPolynomial (Fin m) L) :
+    binaryLift k p ∈ reducedSpace (ChainQuotient.chainInputs L m k) := by
+  classical
+  unfold binaryLift
+  apply (reducedSpace _).sum_mem
+  intro e _
+  exact digits_reduced _ _
+
+theorem s3_coordinate_degree (a b t : L) (i : Fin 2) :
+    (GrowthReduction.S3poly a b t).degreeOf i ≤ 2 := by
+  classical
+  have hx : (X (0 : Fin 2) : MvPolynomial (Fin 2) L).degreeOf i ≤ 1 := by
+    rw [degreeOf_X]; split_ifs <;> omega
+  have hy : (X (1 : Fin 2) : MvPolynomial (Fin 2) L).degreeOf i ≤ 1 := by
+    rw [degreeOf_X]; split_ifs <;> omega
+  have hxy : ((X 0 : MvPolynomial (Fin 2) L)*X 1).degreeOf i ≤ 1 := by
+    apply (degreeOf_mul_le i _ _).trans
+    fin_cases i <;> norm_num [degreeOf_X]
+  have hsum : ((X 0 : MvPolynomial (Fin 2) L)+X 1).degreeOf i ≤ 1 :=
+    (degreeOf_add_le i _ _).trans (max_le hx hy)
+  have hsub : ((X 0 : MvPolynomial (Fin 2) L)-X 1).degreeOf i ≤ 1 :=
+    (degreeOf_sub_le i _ _).trans (max_le hx hy)
+  have hpa : ((X 0*X 1 : MvPolynomial (Fin 2) L)+C a).degreeOf i ≤ 1 := by
+    exact (degreeOf_add_le i _ _).trans (max_le hxy (by simp))
+  have hma : ((X 0*X 1 : MvPolynomial (Fin 2) L)-C a).degreeOf i ≤ 1 := by
+    exact (degreeOf_sub_le i _ _).trans (max_le hxy (by simp))
+  have hm : (((X 0+X 1)*(X 0*X 1+C a) : MvPolynomial (Fin 2) L)+C (2*b)).degreeOf i ≤ 2 := by
+    apply (degreeOf_add_le i _ _).trans
+    apply max_le
+    · exact (degreeOf_mul_le i _ _).trans (by omega)
+    · simp only [degreeOf_C]
+      omega
+  have hfirst : (((X 0-X 1)^2 : MvPolynomial (Fin 2) L)*C (t^2)).degreeOf i ≤ 2 := by
+    apply (degreeOf_mul_C_le _ i _).trans
+    exact (degreeOf_pow_le i _ 2).trans (by omega)
+  have hsecond : ((2 : MvPolynomial (Fin 2) L)*((X 0+X 1)*(X 0*X 1+C a)+C (2*b))*C t).degreeOf i ≤ 2 := by
+    apply (degreeOf_mul_C_le _ i _).trans
+    change (C (2:L)*_).degreeOf i ≤ 2
+    exact (degreeOf_C_mul_le _ i _).trans hm
+  have hthird : (((X 0*X 1-C a)^2 : MvPolynomial (Fin 2) L)).degreeOf i ≤ 2 :=
+    (degreeOf_pow_le i _ 2).trans (by omega)
+  have hlast : ((C (4*b)*(X 0+X 1) : MvPolynomial (Fin 2) L)).degreeOf i ≤ 2 :=
+    (degreeOf_C_mul_le _ i _).trans (hsum.trans (by omega))
+  unfold GrowthReduction.S3poly
+  exact (degreeOf_sub_le i _ _).trans (max_le
+    ((degreeOf_add_le i _ _).trans (max_le
+      ((degreeOf_sub_le i _ _).trans (max_le hfirst hsecond)) hthird)) hlast)
+
+theorem binaryLift_s3_power_degree (k j : ℕ) (a b t : L) :
+    (binaryLift k ((GrowthReduction.S3poly a b t)^(2^j))).totalDegree ≤ 2*(j+1) := by
+  apply binaryLift_degree
+  intro e he i
+  have h := (degreeOf_le_iff.mp (degreeOf_pow_le i (GrowthReduction.S3poly a b t) (2^j))) e he
+  have h2 := s3_coordinate_degree a b t i
+  have h3 : 2^j * (GrowthReduction.S3poly a b t).degreeOf i ≤ 2^j*2 :=
+    Nat.mul_le_mul_left _ h2
+  rw [← pow_succ] at h3
+  exact h.trans h3
+end BinaryLift
+
 #print axioms map_closure_budget
 #print axioms not_one_of_specialization
 #print axioms no_lfd_bound_of_specialization
@@ -289,4 +375,7 @@ end PrimeInputPowers
 #print axioms actual_normal_power_tower
 #print axioms binary_weight_power_support
 #print axioms prime_input_power_tower
+#print axioms binaryLift_degree
+#print axioms binaryLift_reduced
+#print axioms binaryLift_s3_power_degree
 end ICFallDegrees.SummandGrowthTransfer
