@@ -211,6 +211,27 @@ engine, and the slope beyond one step needs either a structural argument (the cl
 are instance independent, so the obstruction is combinatorial) or a different
 instrument.
 
+### The pod runs (2026-11-20): undecided
+
+Both attempts at `m = 3`, `k = 7`, `D = 8` on U1 ran on one 32-vCPU, 256 GB RunPod CPU
+host (pod `yn1hjuubx6pstv`, US$1.76/h, same binary, SHA-256 `f8ba1a3e…3920d`), and
+neither produced a closure.
+
+* Run 1 (16:20 UTC) stopped at the driver's default `max_entries` of 1.2e9 and was
+  recorded as censored (`records/pod-m3k7/`). The job script then ran `D = 9`
+  unconditionally, which was also censored; the host idled for about two hours.
+* Run 2 (18:12 UTC, `--max-entries 1.8e10`, `--budget 64800`) was still in the closure
+  at 20:19 UTC (resident set 74 GB, only the instance header written: `deg g = 6`, 125
+  terms, `|Z| = 0`, the leading coefficient check at ratio 1). The pod was terminated
+  by the provider at about 22:35 UTC; every other pod on the account stopped in the
+  same hour, consistent with the account balance running out (not confirmed). The
+  output lived on the pod's container disk, so the run left no record. It had run
+  about 4 h 20 min, inside the 2.5–5.5 h estimate above.
+
+`LFD(3,7) >= 8` therefore stands as certified and `LFD(3,7) = 8` (P4) against `>= 9`
+remains open. A rerun should write its output to a network volume or copy it off the
+host periodically, and the job script must stop on a censored record.
+
 ## Files
 
 * [`PREREGISTRATION.md`](PREREGISTRATION.md): instances, quantity, predictions, written
