@@ -8,4 +8,5 @@
     grids.py    named parameter grids
 
 Driver: scripts/bench.py.  Protocol and records: experiments/ic-bench/.
+fixtures  frozen instance sets with expected solutions and recorded reference timings
 """

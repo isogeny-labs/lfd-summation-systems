@@ -14,3 +14,12 @@ record (commit, CPU, load, source hashes). Each JSONL row is one (instance, solv
 
 Adding a solver: subclass `csd.bench.solvers.Solver` (`available`, `applicable`, `prepare`, `run`), decorate with
 `@register`; return decompositions as tuples of `(x, y)` so the runner can re-add them to `R` and compare sets.
+
+## Fixtures
+
+`fixtures/` holds nine frozen instance sets (smoke, m3-natural, m3-planted, m3-large-planted, m4, basis-cliff,
+regime-k12, koblitz-invariant, rust-records) with the expected decomposition sets, cross-verified by independent
+solvers, and the timings recorded earlier for the same instances. Format and commands: `fixtures/SCHEMA.md`.
+A fixture run fails a solver (`mismatch`) whose output differs from the frozen set, so the fixtures double as a
+regression test; `ratio_to_reference` compares this machine with the one that recorded the reference, and is not
+a result by itself.

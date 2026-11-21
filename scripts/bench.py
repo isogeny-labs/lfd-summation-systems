@@ -21,7 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from csd.bench import grids, model, runner, solvers, stats      # noqa: E402
+from csd.bench import fixtures, grids, model, runner, solvers, stats      # noqa: E402
 from csd.bench.spec import Spec                                  # noqa: E402
 
 
@@ -45,14 +45,22 @@ def cmd_run(a):
     for n in names:
         if n not in solvers.REGISTRY:
             sys.exit(f"unknown solver {n!r}; see `solvers`")
-    if a.cell:
+    if a.fixture:
+        specs = []
+        for name in a.fixture.split(","):
+            specs += fixtures.specs(name)
+        if a.filter:
+            specs = [s for s in specs if a.filter in s.fixture]
+        if a.seeds_max is not None:
+            specs = [s for s in specs if s.seed < a.seeds_max]
+    elif a.cell:
         specs = [Spec.parse(c) for c in a.cell]
     else:
         specs = grids.GRIDS[a.grid](seeds=a.seeds)
         if a.plant:
             specs = [Spec(**{**s.as_dict(), "plant": True}) for s in specs]
     pin = None if a.pin is None else [int(c) for c in a.pin.split(",")]
-    out = Path(a.out or f"experiments/ic-bench/{a.grid or 'cell'}.jsonl")
+    out = Path(a.out or f"experiments/ic-bench/{a.grid or (a.fixture or 'cell').replace(',', '+')}.jsonl")
     bad = runner.run_grid(specs, names, out, reps=a.reps, timeout=a.timeout, threads=a.threads, pin=pin, aa=a.aa,
                           resume=a.resume, order_seed=a.order_seed)
     print(f"wrote {out} and {out.with_suffix('.meta.json')}")
@@ -128,6 +136,17 @@ def cmd_summarize(a):
         f = stats.fit_log2(ks, [sorted(grp[key][k])[len(grp[key][k]) // 2] for k in ks])
         if "slope" in f:
             print(f"| {key[0]} | {key[1]} | {key[2]} | {f['slope']:.2f} | {f['lo']:.2f}–{f['hi']:.2f} | {f['r2']:.3f} | {f['n']} |")
+    refrows = [r for r in ok if r.get("ratio_to_reference")]
+    if refrows:
+        print("\n## Ratio to the recorded reference (same instance, experiments/ic-rootfind/): median over instances [min–max]\n")
+        print("| solver | k | instances | ratio |")
+        print("|---|---|---|---|")
+        g = defaultdict(list)
+        for r in refrows:
+            g[(r["solver"], r["k"])].append(r["ratio_to_reference"])
+        for key in sorted(g):
+            v = g[key]
+            print(f"| {key[0]} | {key[1]} | {len(v)} | {sorted(v)[len(v) // 2]:.2f} [{min(v):.2f}–{max(v):.2f}] |")
     arms = defaultdict(dict)
     for r in rows:
         if r["status"] == "ok":
@@ -147,6 +166,32 @@ def cmd_summarize(a):
             skipped[r["solver"]].add(r.get("reason", ""))
     for s, why in sorted(skipped.items()):
         print(f"\nskipped {s}: " + "; ".join(sorted(why))[:300])
+
+
+def cmd_fixtures(a):
+    if a.what == "list":
+        man = json.loads((fixtures.DIR / "MANIFEST.json").read_text())
+        desc = {n: d for n, (d, _, _) in fixtures._sets().items()}
+        desc["rust-records"] = "Rust-kernel instances up to n = 163 with their recorded cost per target (no expected set)."
+        print("| set | rows | complete | with a decomposition | has reference | description |")
+        print("|---|---|---|---|---|---|")
+        for n in fixtures.available():
+            rows = fixtures.load(n)
+            print(f"| {n} | {len(rows)} | {sum(1 for r in rows if r['expected'].get('complete'))} | "
+                  f"{sum(1 for r in rows if r['expected'].get('count', 0) > 0)} | {sum(1 for r in rows if r['reference'])} | "
+                  f"{desc.get(n, '')} |")
+    elif a.what == "make":
+        for n in (a.set.split(",") if a.set else fixtures.SET_NAMES):
+            rows = fixtures.generate(n, log=(lambda *_: None))
+            fixtures.write(n, rows)
+            print(f"wrote {fixtures.path(n)} ({len(rows)} rows)")
+    else:
+        bad = fixtures.verify(a.set.split(",") if a.set else None, deep=a.deep)
+        drift = fixtures.rng_drift(a.set.split(",") if a.set else None)
+        if drift:
+            print(f"note: {len(drift)} instance(s) differ from what the current random stream builds (fixtures do not depend on it): {drift[:3]}")
+        if bad:
+            sys.exit(1)
 
 
 def cmd_model(a):
@@ -200,6 +245,9 @@ def main():
     sub.add_parser("solvers").set_defaults(f=cmd_solvers)
     r = sub.add_parser("run")
     r.add_argument("--grid", choices=sorted(grids.GRIDS), default=None)
+    r.add_argument("--fixture", default=None, help="frozen set(s), comma separated: see `fixtures list`")
+    r.add_argument("--filter", default=None, help="with --fixture: keep ids containing this text")
+    r.add_argument("--seeds-max", type=int, default=None, help="with --fixture: keep seeds below this")
     r.add_argument("--cell", action="append", help="n=25,k=9,m=3[,basis=,j=,curve=,seed=,plant=1] (repeatable)")
     r.add_argument("--solvers", default="py_ref,enum,lrf")
     r.add_argument("--seeds", type=int, default=3)
@@ -217,6 +265,11 @@ def main():
     s.add_argument("records", nargs="+")
     s.add_argument("--baseline", default=None)
     s.set_defaults(f=cmd_summarize)
+    fx = sub.add_parser("fixtures", help="list / make / verify the frozen instance sets")
+    fx.add_argument("what", choices=["list", "make", "verify"])
+    fx.add_argument("--set", default=None, help="comma separated set names (default: all)")
+    fx.add_argument("--deep", action="store_true", help="verify: re-run every solver that verified a row (minutes)")
+    fx.set_defaults(f=cmd_fixtures)
     m = sub.add_parser("model")
     m.add_argument("--n", type=int, default=131)
     m.add_argument("--m", type=int, default=3)
@@ -231,8 +284,8 @@ def main():
     m.add_argument("--window", type=int, default=4, help="show k within this distance of the optimum")
     m.set_defaults(f=cmd_model)
     a = ap.parse_args()
-    if a.cmd == "run" and not a.grid and not a.cell:
-        ap.error("run needs --grid or --cell")
+    if a.cmd == "run" and not a.grid and not a.cell and not a.fixture:
+        ap.error("run needs --grid, --cell or --fixture")
     a.f(a)
 
 

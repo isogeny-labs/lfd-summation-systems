@@ -186,6 +186,18 @@ def run_instance(spec: Spec, solver_names, *, reps=3, timeout=120.0, threads=1, 
                 row.update(status="invalid", reason=bad)
             else:
                 results.setdefault(name, out["decs"])
+                if spec.fixture:
+                    from . import fixtures
+                    fbad = fixtures.check_result(spec.fixture, out["decs"])
+                    row["fixture_check"] = "match" if fbad is None else fbad
+                    if fbad:
+                        row.update(status="mismatch", reason="fixture: " + fbad)
+        if spec.fixture and row["status"] == "ok":
+            from . import fixtures
+            ref = (fixtures.row(spec.fixture).get("reference") or {})
+            rt = ref.get({"lrf": "t_lrf", "enum": "t_brute", "mitm4": "t_mitm"}.get(name, ""))
+            if rt:
+                row.update(reference_t=rt, ratio_to_reference=row["t_min"] / rt)
         elif solver.kind == "algebraic" and not out["counters"].get("closed", False):
             row.update(status="no_close", reason="closure did not reach the target")
         rows.append(row)

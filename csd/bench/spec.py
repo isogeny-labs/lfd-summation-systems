@@ -25,6 +25,8 @@ class Spec:
     curve: str = "random"         # random: a in {0,1}, b random; koblitz: a in {0,1}, b = 1
     plant: bool = False           # R = sum of m random factor-base points: at least one decomposition exists, so the
                                   # cross-check of the solvers is not an agreement on the empty set
+    fixture: str | None = None    # "set/id": take the curve, V and R from the frozen row (csd.bench.fixtures), not from
+                                  # the random stream; the other fields are then labels
 
     def __post_init__(self):
         if self.basis not in BASES:
@@ -43,7 +45,7 @@ class Spec:
         return (self.n, self.k, self.m, self.basis, self.j, self.curve, self.plant)
 
     def key(self) -> str:
-        return f"n{self.n}-k{self.k}-m{self.m}-{self.basis}{'' if self.j is None else self.j}-{self.curve}{'-planted' if self.plant else ''}-s{self.seed}"
+        return f"n{self.n}-k{self.k}-m{self.m}-{self.basis}{'' if self.j is None else self.j}-{self.curve}{'-planted' if self.plant else ''}-s{self.seed}{'' if self.fixture is None else '@' + self.fixture}"
 
     def as_dict(self) -> dict:
         return asdict(self)
@@ -52,6 +54,8 @@ class Spec:
     def parse(text: str) -> "Spec":
         """'n=25,k=9,m=3,basis=standard,seed=0' (j and curve optional)."""
         kv = dict(p.split("=", 1) for p in text.split(",") if p)
+        if "fixture" in kv and kv["fixture"] == "":
+            del kv["fixture"]
         if "plant" in kv:
             kv["plant"] = kv["plant"].lower() in ("1", "true", "yes")
         for f in ("n", "k", "m", "seed", "j"):
@@ -71,6 +75,9 @@ class Instance:
 
 
 def build(spec: Spec) -> Instance:
+    if spec.fixture:
+        from . import fixtures
+        return fixtures.instance(spec)
     n, k = spec.n, spec.k
     F = I.binary_field(n)
     if spec.curve == "random" and spec.basis != "invariant":
@@ -110,11 +117,11 @@ def build(spec: Spec) -> Instance:
     return Instance(spec, E, list(basis), tuple(R))
 
 
-def _planted(E, basis, spec):
-    """R = P_1 + ... + P_m with x(P_i) uniform in V (and a random sign); resampled if the sum is O."""
+def _planted_with_points(E, basis, spec):
+    """(R, [P_1..P_m]) with R = P_1 + ... + P_m, x(P_i) uniform in V and a random sign; resampled if the sum is O."""
     rng = random.Random(f"ic-bench/plant/{spec.key()}")
     while True:
-        acc = None
+        acc, pts = None, []
         for _ in range(spec.m):
             P = None
             while P is None:
@@ -123,6 +130,18 @@ def _planted(E, basis, spec):
                     if rng.getrandbits(1):
                         x ^= v
                 P = E.lift_x(x)
-            acc = E.add(acc, P if rng.getrandbits(1) else E.neg(P))
+            P = P if rng.getrandbits(1) else E.neg(P)
+            pts.append(tuple(P))
+            acc = E.add(acc, P)
         if acc is not None:
-            return acc
+            return tuple(acc), pts
+
+
+def _planted(E, basis, spec):
+    return _planted_with_points(E, basis, spec)[0]
+
+
+def planted_points(spec: Spec):
+    """The planted summands of a spec built from the random stream (used to write fixtures)."""
+    inst = build(Spec(**{**spec.as_dict(), "plant": False, "fixture": None}))
+    return _planted_with_points(inst.E, inst.basis, spec)[1]

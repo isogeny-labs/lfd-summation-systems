@@ -244,3 +244,57 @@ def test_driver_run_and_summarize(tmp_path):
     assert s.returncode == 0 and "A/A noise floor" in s.stdout and "Speed-up of lrf" in s.stdout, s.stdout + s.stderr
     m = subprocess.run(cmd + ["model", "--preset", "ecc2k130", "--window", "1"], capture_output=True, text=True, timeout=60)
     assert m.returncode == 0 and "floor with a FREE relation finder" in m.stdout
+
+
+# ------------------------------------------------------------------------------------------------- fixtures
+from csd.bench import fixtures                                   # noqa: E402
+
+
+def test_fixture_manifest_and_instances():
+    man = json.loads((fixtures.DIR / "MANIFEST.json").read_text())
+    assert set(man["files"]) == set(fixtures.available()) == set(fixtures.SET_NAMES)
+    for name, meta in man["files"].items():
+        assert len(fixtures.load(name)) == meta["rows"]
+    assert fixtures.verify(["smoke", "m3-planted"], log=lambda *_: None) == 0
+    for r in fixtures.load("smoke"):
+        inst = fixtures.instance(r["id"])
+        assert inst.E.on_curve(inst.R)
+
+
+def test_fixture_tamper_is_detected(tmp_path, monkeypatch):
+    import shutil
+    shutil.copytree(fixtures.DIR, tmp_path / "f")
+    monkeypatch.setattr(fixtures, "DIR", tmp_path / "f")
+    p = tmp_path / "f" / "smoke.jsonl"
+    p.write_text(p.read_text().replace('"seed": 0', '"seed": 9', 1))
+    msgs = []
+    assert fixtures.verify(["smoke"], log=msgs.append) == 1
+    assert "MANIFEST" in msgs[0]
+
+
+@pytest.mark.parametrize("name", ["smoke", "m3-planted", "m4", "basis-cliff", "koblitz-invariant"])
+def test_fixture_lrf_matches_frozen_set(name):
+    solver = solvers.REGISTRY["lrf"]
+    rows = fixtures.load(name)
+    assert rows
+    for r in rows:
+        spec = Spec(**{**r["spec"], "fixture": r["id"]})
+        if not solver.applicable(spec)[0]:
+            continue
+        inst = fixtures.instance(spec)
+        decs, _ = solver.run(solver.prepare(inst), inst, 1)
+        assert fixtures.check_result(r["id"], solvers.canon(decs)) is None, r["id"]
+
+
+def test_fixture_check_catches_a_wrong_set():
+    r = next(r for r in fixtures.load("m3-planted") if r["expected"]["count"] > 0)
+    assert fixtures.check_result(r["id"], []) is not None
+
+
+def test_fixture_run_through_runner(tmp_path):
+    specs = fixtures.specs("smoke")[:2]
+    out = tmp_path / "fx.jsonl"
+    runner.run_grid(specs, ["lrf", "enum"], out, reps=1, timeout=60, log=lambda *_: None)
+    rows = [json.loads(l) for l in out.read_text().splitlines()]
+    assert rows and all(r["status"] == "ok" for r in rows)
+    assert all(r.get("fixture_check") == "match" for r in rows)
