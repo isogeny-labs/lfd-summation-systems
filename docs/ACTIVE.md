@@ -15,6 +15,7 @@ PR, not in this file.
 _(none pinned — set one with `/goal <text>`)_
 
 ## Active items (top = next)
+- [ ] Prove prime-field growth beyond depth 14 and for m > 4; distinguish proven bounds from the conjectured sharp law (Codex, started 2026-11-21, branch formal/higher-summand-growth-20261121)
 - [ ] ECDLP claim evidence: end-to-end yield/LA vs rho (ic-endtoend), fully charged cost model to 2^256 (ic-costmodel), m>=3 depth growth (msum-growth, m=3 k=7 pod D=8 running), validated all-m carry bound LFD >= m min(k,m-1)+1 with Lean core (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #41)
 - [x] Paper: style pass on curve-lfd-bounds.tex (remove agent-output patterns, move run logistics to the appendix, cut repetition, narrative arc, "What the results mean" section; no mathematical, numeric or evidence-status change), with a style audit and invariant check (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #40)
 - [x] Paper: replace the abstract with the owner-approved text, resync the ePrint abstract and sheet, list the kernel-checked bounds in proof-status.json, rebuild with Tectonic (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #39)
