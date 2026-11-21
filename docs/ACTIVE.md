@@ -12,9 +12,15 @@ PR, not in this file.
 
 ## Current goal
 
-_(none pinned — set one with `/goal <text>`)_
+Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
+- [ ] Relation yield per linear system for LRF: baseline, factor-base / summand-count variants and a Frobenius-orbit (Koblitz) variant at prime n, each measured against the baseline on the same instances (Claude, started 2026-11-21, branch claude/index-calculus-root-finding-e95kd6)
+  - [ ] 1. Baseline: relations per linear system and per second, matched instances, seeds frozen
+  - [ ] 2. Yield model: expected relations per system as a function of (k, dim V2, n, m), checked against counts
+  - [ ] 3. Summand-count / factor-base variants (m = 4 by linear pairing, non-monomial V with small V2), measured
+  - [ ] 4. Koblitz: Frobenius-orbit factor base and orbit-reduced relation counting at prime n, measured
+  - [ ] 5. Report, graph and PDF; extrapolation to n = 131 with its gap to rho
 - [ ] ECDLP claim evidence: end-to-end yield/LA vs rho (ic-endtoend), fully charged cost model to 2^256 (ic-costmodel), m>=3 depth growth (msum-growth, m=3 k=7 pod D=8 running), validated all-m carry bound LFD >= m min(k,m-1)+1 with Lean core (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #41)
 - [x] Paper: style pass on curve-lfd-bounds.tex (remove agent-output patterns, move run logistics to the appendix, cut repetition, narrative arc, "What the results mean" section; no mathematical, numeric or evidence-status change), with a style audit and invariant check (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #40)
 - [x] Paper: replace the abstract with the owner-approved text, resync the ePrint abstract and sheet, list the kernel-checked bounds in proof-status.json, rebuild with Tectonic (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #39)
