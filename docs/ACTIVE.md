@@ -56,5 +56,9 @@ Obtain a measured improvement in relation yield per linear system for the linear
 - PR #44 (relation yield for LRF): measured result is a cost model + optimal operating point
   (square system, m=3) + two mechanistic NO-GOs (m=4 worse; Frobenius unusable at prime n due to
   the dim-V2 vs Frobenius-structure tension). Neither pinned lever improves the n=131 relation
-  stage. The only remaining exponent lever is found_per_cand (a decomposition relation that
-  constrains the roots, not just their symmetric functions) — untested, owner to steer.
+  stage. The found_per_cand lever is now also measured dead: the good candidate (roots in V) is an
+  unstructured singleton in the kernel coset (ANF degree ~ delta, density ~ 2^-delta at delta=6,9,12),
+  so it cannot be found output-sensitively. Every lever (factor base, summand count, Frobenius,
+  candidate structure) leaves the ~2^(n/3) cost/relation exponent unchanged; an improvement needs a
+  genuinely different relation, not LRF tuning. Also corrected the exponent in the record from a wrong
+  2^(0.7 n) to the measured/analytic 2^(n/3).

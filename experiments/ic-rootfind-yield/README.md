@@ -62,7 +62,7 @@ per distinct relation; it is the objective to minimise.
 3. **`found_per_cand` collapses as `n` grows** at fixed `delta` (0.026 at `n = 11` to 0.0019 at
    `n = 23`, `delta = 3`). This is the dominant yield loss and it is intrinsic: fixing the symmetric
    functions `e1 in V`, `e2 in span(V.V)` does not force the two roots into `V`. `cost/rel` at the
-   optimal `delta` grows about `2^(0.7 n)`. **A faster kernel cannot change this exponent;** only the
+   optimal `delta` grows about `2^(n/3)` (measured fit 2^(0.333 n), matching the analytic systems/relation = 2^(n-2k) at delta=0). **A faster kernel cannot change this exponent;** only the
    factor-base structure can.
 
 ## Lever (b): Koblitz / Frobenius — structure probe
@@ -115,11 +115,36 @@ structure are in irreducible tension** -- the real obstruction at prime `n`, sha
 (monomial, `w^2`-powers, shifted all within noise; random bases have `dim V2 = n` and are infeasible;
 "far-out" bases only raise `delta`, re-tracing the baseline tradeoff). Fixing `e1 in V`, `e2 in
 span(V.V)` does not force the two roots into `V`, and no factor-base choice changes that. So the
-`~2^(0.7 n)` cost/relation exponent is intrinsic to LRF decomposition; only a decomposition relation
+`~2^(n/3)` cost/relation exponent is intrinsic to LRF decomposition; only a decomposition relation
 that constrains the roots themselves (not merely their symmetric functions) could move it.
 
 Data: `frobenius.jsonl` (orbit reduction), and the basis comparison is reproducible from
 `frob_span.py`. Figure: `yield_report.{svg,png}`; write-up: `report.pdf` / `report.tex`.
+
+### Can the good candidate be found without scanning? No (measured)
+
+At high `delta` the 2-summand system has a `delta`-dim affine solution space (`2^delta` candidates);
+only the ones whose quadratic has both roots in `V` are relations. If that "good" set were an
+algebraically structured subset of the kernel (low `F_2` ANF-degree / affine), it could be enumerated
+output-sensitively and we could run at large `k` (relation density `~1` per solvable system) without the
+`2^delta` candidate blow-up. `goodset_structure.py` builds the Boolean good-indicator over the `delta`
+kernel coordinates and measures its ANF degree and density.
+
+| n | k | delta | ANF degree (mean/max) | density | good set |
+|---|---|---|---|---|---|
+| 23 | 10 | 6 | 5.98 / 6 | 0.0160 ~ 2^-6 | singleton |
+| 23 | 11 | 9 | 8.84 / 9 | 0.0023 ~ 2^-9 | singleton |
+| 29 | 12 | 6 | 6.00 / 6 | 0.0156 = 2^-6 | singleton |
+| 29 | 13 | 9 | 8.96 / 9 | 0.0020 ~ 2^-9 | singleton |
+| 29 | 14 | 12 | 11.88 / 12 | 0.00028 ~ 2^-12 | singleton |
+
+The ANF degree is **maximal (`~delta`, random-like)** and the density is **`~2^(-delta)`**: there is on
+average **one good candidate per system**, an unstructured singleton (trivially "affine" because it is a
+single point, but carrying no exploitable structure). So the good candidate cannot be found faster than
+scanning the kernel or solving the original nonlinear roots-in-`V` equation. Raising `delta` (bigger `k`)
+therefore buys `~1` relation per solvable system at a `2^delta` candidate cost, which is why small
+`delta` (0--1) is optimal -- the baseline operating point. **The found_per_cand loss is not recoverable
+by cleverer candidate selection.**
 
 ## Verdict for ECC2K-130 (n = 131)
 

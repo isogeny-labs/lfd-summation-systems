@@ -37,7 +37,7 @@ A clean negative result for the summand-count half of lever (a).
 candidate quadratic's two roots land in $V$ --- collapses with $n$ at fixed $\delta$, and it is the
 \emph{same} for every LRF-feasible basis (monomial, $w^2$-powers, shifted): fixing the symmetric
 functions $e_1\in V$, $e_2\in\mathrm{span}(V\!\cdot\!V)$ does not force the roots into $V$. Random bases
-have $\dim V_2=n$ (LRF-infeasible). So cost/relation grows $\approx 2^{0.7\,n}$ and \textbf{no factor-base
+have $\dim V_2=n$ (LRF-infeasible). So cost/relation grows $\approx 2^{n/3}$ (measured fit $2^{0.333\,n}$, matching the analytic systems/relation $=2^{n-2k}$ at $\delta=0$) and \textbf{no factor-base
 or summand choice changes that exponent}; only a different decomposition relation could.
 \item \textbf{Frobenius is a no-go at prime $n$} (Panel C), with a precise mechanism. The $n$
 squaring-conjugates $V^{(i)}$ of a monomial $V$ share $\dim V_2$ and tile a Frobenius-closed factor base
@@ -55,7 +55,18 @@ Frobenius structure are in irreducible tension.
 For $m=3$, any non-negligible yield forces $k\approx 44$, which is exactly $\delta=0$ --- the measured
 optimal operating point. The current method is therefore \emph{already} at that optimum; neither pinned
 lever improves the $n=131$ relation stage. The matched Pollard-rho reference is about $2^{61}$ group
-operations; the baseline cost model is the honest distance-remaining denominator. The only remaining lever
-that could change the exponent is the $\text{found\_per\_cand}$ term, which requires a decomposition
-relation that constrains the roots themselves, not merely their symmetric functions.
+operations; the baseline cost model is the honest distance-remaining denominator.
+
+\paragraph{The found\_per\_cand lever is also measured dead.} The last candidate was a decomposition
+relation that constrains the roots themselves. We tested whether the ``good'' candidates (roots in $V$)
+form a structured subset of the $\delta$-dimensional kernel coset that could be enumerated
+output-sensitively. Building the Boolean good-indicator over the kernel coordinates
+(\texttt{goodset\_structure.py}) gives ANF degree $\approx\delta$ (maximal, random-like) and density
+$\approx 2^{-\delta}$ at $\delta=6,9,12$: on average \emph{one} good candidate per system, an unstructured
+singleton. It cannot be found faster than scanning the kernel or solving the original nonlinear
+roots-in-$V$ equation. So raising $\delta$ buys $\sim 1$ relation per solvable system at a $2^{\delta}$
+candidate cost, and small $\delta$ is optimal --- the baseline operating point. Every lever examined ---
+factor base, summand count, Frobenius orbits, and candidate structure --- leaves the $\sim 2^{n/3}$
+cost/relation exponent unchanged. An improvement must come from a genuinely different relation, not from
+tuning LRF.
 \end{document}
