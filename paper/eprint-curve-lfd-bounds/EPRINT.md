@@ -15,11 +15,11 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io |
-| Abstract | paste `eprint-abstract.txt` (1622 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (1796 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else |
-| Content | `../curve-lfd-bounds.pdf` (60 pages) |
+| Content | `../curve-lfd-bounds.pdf` (63 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY proposed in the earlier form; author must choose and confirm |
@@ -133,11 +133,37 @@ Pollard rho). No theorem, lemma, definition, proposition, conjecture body,
 proof, table value, figure, label or citation changed. The manuscript is now
 60 pages (previously 59); the abstract is 1622 characters.
 
+Revision of 20 November 2026, more summands and a cost model (abstract
+changed): Section 5.8 now states the carry bound for every number of
+summands (Theorem "Carry bound for every number of summands"): for the
+direct m-summand presentation, m >= 3, LFD >= m min(k, m-1) + 1; the exact
+value mk + 1 for k <= m-1 (kernel-checked for an arbitrary generator,
+`CarryAllM.lfd_eq_full`; the grid step is a written proof); the onset
+m(m-1) + 1 for k >= m when c_m(a,b,t) != 0 (kernel-checked for m = 3,
+`CarryAllM.m3_onset`; for m >= 4 a written proof with a kernel-checked core,
+the step outside Lean being the degree bound of S_{m+1} in each variable);
+and genericity (at most m excluded targets per curve when char K = 0 or
+char K does not divide kappa_m), with a proof sketch citing the validated
+note `../notes/carry-allm.tex`. The second engine's depth-growth closures
+(`experiments/msum-growth/`) are added as corroborations, not certificates:
+three summands 7 at k = 2..5, 8 at k = 6, >= 8 at k = 7; four summands 13 at
+k = 4, >= 13 at k = 5. Section "What the results mean" adds the m-summand
+consequence of the proved floor and, as a clearly labelled model-based
+conclusion, the fully charged cost model (`experiments/ic-endtoend/`,
+`experiments/ic-costmodel/`): with the solver charged at the proved degree
+floor, index calculus with m <= 8 does not beat Pollard rho between 2^40 and
+2^256 (2.6 to 5.0 bits above rho at prices 0.1 and 1 GAE), with its
+assumptions and the excluded literal-top-layer convention. "What does not
+follow", the limitations, future directions, conclusion, contributions, the
+Lean table and the data tables were updated accordingly. The abstract gains
+one sentence (1796 characters; previously 1622); the manuscript is 63 pages
+(previously 60).
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `b0a723ea94ffa97ad76731b391a9d26b73e0e1a393b33e3f05958ad1895e338f` |
-| `paper/curve-lfd-bounds.tex` | `7db350ee60f375b01c9a1328b314c5b91c54836350d68dd38811bb809a096a57` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `35d4028ee813c0bad789921ae116e44c79785bcfa1a81aeb28123fd266af70c2` |
+| `paper/curve-lfd-bounds.pdf` | `06b412be4aa5ae7bf0454e859494e5b9632eb8ed2d7e6e11a76810d3f55f99b7` |
+| `paper/curve-lfd-bounds.tex` | `419f70bd1434780158ceaeb116cc55ee42eced0a2484829c3202fa555afca9e2` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `9e0d3d96f5b162a70c137cd82a854eaff59f2c54e4c788d16cadc8d814549151` |
 
 The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0
 (conda-forge; bundle `tlextras-2022.0r0`) by
@@ -154,7 +180,7 @@ byte-identical to the previous build.
 The artifact hashes above identify the submitted files; no byte-for-byte
 reproducibility claim is made for other TeX engines.
 
-Lean: the saved default audit reports 671 declarations. Final PR CI builds
+Lean: the saved default audit reports 679 declarations (taken on 20 November 2026 from the CI artifact `lean-audit` of run 44815755702 on commit 13415c6, artifact digest sha256:269350ad…4c58; it adds the eight `CarryAllM` declarations). Final PR CI builds
 all modules and checks every printed axiom list with
 `python3 scripts/lean_check_all.py`, including the non-two-torsion modules
 outside the older default audit, and the modules added by PR #31. The merge
@@ -167,7 +193,7 @@ added later.
 - PDF builds without LaTeX warnings, unresolved references or overfull boxes.
 - A4, author email on page 1, PDF metadata title matches the manuscript.
 - Abstract agrees with the LaTeX source.
-- Form constraints checked on 15 November 2026 and again on the texts of 16, 18, 19 and 20 November: the abstract is ASCII except the "ö" of
+- Form constraints checked on 15 November 2026 and again on the texts of 16, 18, 19 and 20 November (including the revision adding more summands): the abstract is ASCII except the "ö" of
   "Gröbner" in the text of 20 November (later), as in the texts before 16 November, with `$…$` math only (no `\emph`, `\cite` or other text commands; the form asks
   for at least 64 characters), and every keyword phrase is at most 40 characters.
 - Mathematical and reproducibility limits: see `../README.md` and

@@ -1,0 +1,9 @@
+instance m=4 k=4 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=12, terms=6561, |Z|=0, c333=Null
+closure D=12: cols=64839 profile=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] one=false censored=None verify_nonzero=0 0.0s
+exit=0 args=--m 4 --k 4 --p 2013265921 --seed 0 --D 12 --tag m4-unit
+instance m=4 k=4 p=2013265921 a=137549545 b=257513864 t=171427433: deg g=12, terms=6561, |Z|=0, c333=Null
+closure D=13: cols=65399 profile=[1, 17, 137, 697, 2517, 6885, 14893, 26333, 39203, 50643, 58651, 63019, 64839, 65399] one=true censored=None verify_nonzero=0 905.5s
+exit=0 args=--m 4 --k 4 --p 2013265921 --seed 0 --D 13 --tag m4-unit
+instance m=4 k=4 p=998244353 a=538530846 b=574242499 t=522220447: deg g=12, terms=6561, |Z|=0, c333=Null
+closure D=13: cols=65399 profile=[1, 17, 137, 697, 2517, 6885, 14893, 26333, 39203, 50643, 58651, 63019, 64839, 65399] one=true censored=None verify_nonzero=0 912.9s
+exit=0 args=--m 4 --k 4 --p 998244353 --seed 0 --D 13 --tag m4-unit

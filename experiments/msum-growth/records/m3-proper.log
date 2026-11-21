@@ -1,0 +1,11 @@
+instance m=3 k=6 p=7681 a=1876 b=2678 t=6223: deg g=6, terms=125, |Z|=48, c333=Object {"coef": Number(3340), "expected_up_to_scalar": Number(3340), "ratio": Number(1)}
+closure D=8: cols=106762 profile=[0, 0, 124, 940, 4000, 12568, 31132, 62956, 106714] one=false censored=None verify_nonzero=0 2176.0s
+exit=0 args=--m 3 --k 6 --p 7681 --a 1876 --b 2678 --t 6223 --y 7322 --ev-ranks 8 --D 8 --tag m3-proper-p7681-r
+instance m=3 k=6 p=65537 a=54337 b=33232 t=33146: deg g=6, terms=125, |Z|=6, c333=Object {"coef": Number(61496), "expected_up_to_scalar": Number(61496), "ratio": Number(1)}
+closure D=7: cols=63004 profile=[0, 0, 0, 0, 0, 3, 2375, 19958] one=false censored=None verify_nonzero=0 147.1s
+exit=0 args=--m 3 --k 6 --p 65537 --seed 0 --ev-ranks 8 --D 7 --tag m3-proper-65537-s0
+instance m=3 k=6 p=65537 a=54337 b=33232 t=33146: deg g=6, terms=125, |Z|=6, c333=Object {"coef": Number(61496), "expected_up_to_scalar": Number(61496), "ratio": Number(1)}
+interrupted: container restart killed m=3 k=6 D=8 on 65537 seed 0 (no closure line); rerun below
+instance m=3 k=6 p=65537 a=54337 b=33232 t=33146: deg g=6, terms=125, |Z|=6, c333=Object {"coef": Number(61496), "expected_up_to_scalar": Number(61496), "ratio": Number(1)}
+closure D=8: cols=106762 profile=[0, 14, 166, 982, 4042, 12610, 31174, 62998, 106756] one=false censored=None verify_nonzero=0 1667.3s
+exit=0 args=--m 3 --k 6 --p 65537 --seed 0 --ev-ranks 8 --D 8 --tag m3-proper-65537-s0

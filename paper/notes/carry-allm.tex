@@ -1,0 +1,502 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\F}{\mathbb F}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\lfd}{\operatorname{LFD}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{The carry lower bound for every number of summands}
+\date{Working note, 2026-11-20}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{abstract}
+For the direct $m$-summand two-power-subgroup chain presentation
+$G_{m,k}\cup\{\NF(S_{m+1}(x_1,\ldots,x_m,t))\}$ of the
+Petit--Kosters--Messeng summation system on $y^2=x^3+ax+b$, we prove
+\[
+ \lfd\ \ge\ m\cdot\min(k,m-1)+1 ,
+\]
+for every $m\ge3$ and every depth $k\ge1$, over every field with $2\ne0$,
+under explicit nondegeneracy hypotheses. For $k\ge m$ the only hypothesis
+is $c_m(a,b,t)\ne0$, where $c_m$ is the coefficient of
+$x_1^{2^{m-1}-1}\cdots x_m^{2^{m-1}-1}$ in $S_{m+1}(x_1,\ldots,x_m,t)$; it
+generalizes $c_3=-8(5t^3+3at+6b)$ of the three-summand theorem. For
+$k\le m-1$ the bound is the exact value $mk+1$ when the normal form has its
+full degree $mk$ and $S_{m+1}(\cdot,t)$ is nonzero at two or more points
+of the grid $\mu_{2^k}^m$ (for instance on every unit ideal). We show that $c_m$ has the form
+$\kappa_m t^m+(\text{terms with }a\text{ or }b)$ with
+$\kappa_m=[s_1^2\cdots s_m^2]\prod_{\varepsilon\in\{\pm1\}^m}(1+\varepsilon\cdot
+s)\ne0$, so for every curve at most $m$ targets are excluded (over $\Q$, and
+over $\F_p$ whenever $p\nmid\kappa_m$). We list
+$c_2,\ldots,c_5$ explicitly ($c_4,c_5$ computed by exact modular
+interpolation, not proved), test the statements against the independent
+certified closures (the 461 seeded three-summand cases, 12 depth instances,
+six certified instances per cell for $m=4$, $k=2,3,4$ and $m=5$, $k=2,3$, and
+the named instances U1--U3, P1, the $p=65537$ instance and the four-summand
+U1, U2), and formalize the abstract core for every $m$ in Lean. The
+48-instance counts for $m=3,\ldots,8$ at $k\le m-1$ and every $m\ge6$ value
+were derived from the carry lemma; they confirm $\deg g=mk$ but are not
+independent measurements.
+\end{abstract}
+
+\paragraph{Status.} Every statement below has a complete written proof.
+The abstract theorems (Theorems~\ref{thm:onset} and~\ref{thm:full} for an
+arbitrary generator, and the three-summand instance) are formalized in
+\code{formal/ICFallDegrees/CarryAllM.lean}, which builds sorry-free against the pinned
+Lean and Mathlib (Section~\ref{sec:lean}). The facts about $S_{m+1}$ in
+Section~\ref{sec:summation} (the shape of $c_m$, the identity on the
+cuspidal cubic and $\kappa_m\ne0$) are written proofs, checked numerically
+for $m\le5$ (and $m=6$ at $a=b=0$; Section~\ref{sec:numerics}); they are not
+formalized.
+
+\paragraph{Validation.} An independent validator review (2026-11-20) of this
+note and \code{formal/ICFallDegrees/CarryAllM.lean} at commit \code{ca9c8c2}
+returned the disposition \emph{validated}: every part (onset bound,
+full-degree bound, genericity of $c_m$ and $\kappa_m\ne0$, the Lean file) is
+VALID, and no measured cell contradicts the theorem. The Lean modules were
+rebuilt from source (Lean 4.19.0, Mathlib \code{v4.19.0}); every declaration
+rests only on \code{propext}, \code{Classical.choice} and \code{Quot.sound}.
+The review re-derived the written proofs, recomputed $c_2,\ldots,c_5$,
+$\kappa_1,\ldots,\kappa_8$, the cusp identity and $c_6(0,0,1)$ with its own code,
+and asked for the presentational corrections made in this version. Its labels:
+Lemmas~\ref{lem:nf}, \ref{lem:carry}, \ref{lem:weights} and
+Theorems~\ref{thm:onset}, \ref{thm:full} (for an arbitrary generator,
+including the exact value $mk+1$) and Theorem~\ref{thm:main}(1) for $m=3$ are
+kernel-checked; Theorem~\ref{thm:main}(1) for $m\ge4$ and
+Theorem~\ref{thm:main}(2) are written proofs with a kernel-checked core (the
+bridge through the multidegree bound of $S_{m+1}$, resp.\
+Proposition~\ref{prop:grid}, is written, not formal);
+Propositions~\ref{prop:cusp}, \ref{prop:kappa} and Corollary~\ref{cor:generic}
+are written proofs checked numerically; $c_2$ is checked by hand, $c_3$ is
+kernel-checked, and $c_4,c_5$ are computed.
+
+\section{Setting}
+Let $K$ be a field with $2\ne0$, $m,k\ge1$. The chain ring has variables
+$u_{i,j}$, $1\le i\le m$, $0\le j<k$, and the chain equations
+\[
+ G_{m,k}=\{u_{i,j}^2-u_{i,j+1}\ (j+1<k),\quad u_{i,k-1}^2-1\}.
+\]
+A polynomial is \emph{reduced} if all its monomials are squarefree. By the
+kernel-checked chain theorem of the paper (Theorem \emph{Chain subsystem}, label \code{thm:reduced},
+\code{ChainQuotient.reduced\_chain\_ideal\_trivial}) a reduced polynomial in
+$\langle G_{m,k}\rangle$ is zero, so every polynomial $f$ has a unique reduced
+$\NF(f)\equiv f$ modulo the chains. For an exponent $e\in\Z_{\ge0}$ write
+$\beta_j(e)\in\{0,1\}$ for its binary digits and
+$\wt_k(e)=\sum_{j<k}\beta_j(e)$.
+
+For $S\in K[x_1,\ldots,x_m]$ we write $\NF(S)$ for the normal form of
+$S(u_{1,0},\ldots,u_{m,0})$. The direct presentation of $m$ summands with
+target abscissa $t$ is $F_{m,k}=G_{m,k}\cup\{g\}$, $g=\NF(S_{m+1}(x_1,\ldots,x_m,t))$.
+The last fall degree $\lfd(F)$ is that of~\cite{hkyy} as in the paper:
+the least $d$ such that every $h\in\langle F\rangle$ lies in the degree-$\max(d,\deg h)$ closure
+$V_{F,\max(d,\deg h)}$.
+
+\begin{lemma}[Normal form of a monomial]\label{lem:nf}
+For every exponent vector $e$ and $k\ge1$,
+\[
+ \NF\Bigl(\prod_i x_i^{e_i}\Bigr)=\prod_{i=1}^m\prod_{j<k}u_{i,j}^{\beta_j(e_i)} ,
+\]
+a squarefree monomial of degree $\sum_i\wt_k(e_i)$. On exponents with all
+$e_i<2^k$ the map $e\mapsto\NF(x^e)$ is injective.
+\end{lemma}
+\begin{proof}
+Modulo the chains $u_{i,0}^{2^j}\equiv u_{i,j}$ for $j<k$ (induction on $j$
+with $u_{i,j}^2\equiv u_{i,j+1}$) and $u_{i,0}^{2^k}\equiv u_{i,k-1}^2\equiv1$.
+Hence $u_{i,0}^{e}\equiv u_{i,0}^{e\bmod 2^k}=\prod_{j<k}(u_{i,0}^{2^j})^{\beta_j(e)}
+\equiv\prod_{j<k}u_{i,j}^{\beta_j(e)}$, since the digits $j<k$ of $e$ and of
+$e\bmod2^k$ agree. The right side is squarefree, hence the normal form. A
+number below $2^k$ is determined by its digits below $k$.
+\end{proof}
+
+\begin{lemma}[Carry lemma; kernel-checked]\label{lem:carry}
+Let $g$ be reduced of degree $d$ and $h$ reduced of degree at most $d$ with
+$h\equiv A g$ modulo the chains for some polynomial $A$, and $h\ne cg$ for
+every $c\in K$. Then $\lfd(G_{m,k}\cup\{g\})\ge d+1$.
+\end{lemma}
+This is the first statement of the paper's carry theorem (\code{thm:carry})
+(\code{CarryLower.chain\_carry\_lower}). Proof in one line: $V_d$ lies in
+$(\langle G_{m,k}\rangle\cap M_{\le d})+Kg$, because a row of degree $<d$
+in that space is already in $\langle G_{m,k}\rangle$; the ideal element $h$
+of degree $\le d$ would then satisfy $h-cg\in\langle G_{m,k}\rangle$ with
+$h-cg$ reduced, so $h=cg$.
+
+\begin{lemma}[Digit weights]\label{lem:weights}
+Let $n\le k$. Then $\wt_k(2^n-1)=n$, and every $x<2^n$ with $x\ne2^n-1$ has
+$\wt_k(x)\le n-1$. For $m\ge3$ every $x\le2^{m-1}+1$ satisfies
+$x<2^m-1$, hence $\wt_k(x)\le m-1$ when $k\ge m$.
+\end{lemma}
+\begin{proof}
+Digits at or above $n$ of $x<2^n$ vanish, so $\wt_k(x)=\wt_n(x)$. If all
+$n$ low digits of $x$ are $1$ then $x=2^n-1$. For $m\ge3$,
+$2^m-1-(2^{m-1}+1)=2^{m-1}-2>0$.
+\end{proof}
+
+\section{The two bounds for an arbitrary generator}
+
+\begin{theorem}[Onset bound; kernel-checked as \code{CarryAllM.lfd\_ge\_onset}]\label{thm:onset}
+Let $m\ge3$, $k\ge m$, and let $S\in K[x_1,\ldots,x_m]$ have degree at most
+$2^{m-1}$ in each variable, with a nonzero coefficient at
+$\mathbf x^{\tau}=x_1^{2^{m-1}-1}\cdots x_m^{2^{m-1}-1}$. Then
+$g=\NF(S)$ has degree exactly $m(m-1)$, and
+\[
+ \lfd\bigl(G_{m,k}\cup\{g\}\bigr)\ \ge\ m(m-1)+1 .
+\]
+\end{theorem}
+\begin{proof}
+Take $h=\NF(x_1S)\equiv u_{1,0}\,g$ and apply Lemma~\ref{lem:carry} with
+$A=u_{1,0}$ and $d=m(m-1)$. Three facts are needed.
+
+\emph{$\deg g=m(m-1)$.} Every exponent of $S$ has $e_i\le2^{m-1}$, so by
+Lemmas~\ref{lem:nf} and~\ref{lem:weights} every monomial of $g$ has
+degree $\sum_i\wt_k(e_i)\le m(m-1)$. All exponents are below $2^{m-1}+1<2^k$,
+so the monomials $\NF(x^e)$ are distinct and the coefficient of
+$\NF(\mathbf x^\tau)$ in $g$ equals $[\mathbf x^\tau]S\ne0$; that monomial has
+degree $m\,\wt_k(2^{m-1}-1)=m(m-1)$ because $m-1\le k$.
+
+\emph{$\deg h\le m(m-1)$.} Exponents of $x_1S$ satisfy $e_1\le2^{m-1}+1$ and
+$e_i\le2^{m-1}$ otherwise, so each block has weight at most $m-1$ by
+Lemma~\ref{lem:weights} (this is where $m\ge3$ and $k\ge m$ enter).
+
+\emph{$h\ne cg$.} All exponents of $S$ and $x_1S$ are below $2^m\le2^k$, so
+$\NF$ is injective on their supports (Lemma~\ref{lem:nf}) and $h=cg$ would give
+$x_1S=cS$ as polynomials, i.e.\ $(x_1-c)S=0$, so $S=0$, contradicting
+$[\mathbf x^\tau]S\ne0$.
+\end{proof}
+
+\begin{theorem}[Full-degree bound; kernel-checked as \code{CarryAllM.lfd\_ge\_full} and \code{CarryAllM.lfd\_eq\_full}]\label{thm:full}
+Let $m,k\ge1$, $S\in K[x_1,\ldots,x_m]$ arbitrary and $g=\NF(S)$. If
+$\deg g=mk$ and $\NF(x_iS)$ is not a scalar multiple of $g$ for some $i$,
+then $\lfd(G_{m,k}\cup\{g\})=mk+1$ exactly.
+\end{theorem}
+\begin{proof}
+$h=\NF(x_iS)\equiv u_{i,0}g$ is reduced, so $\deg h\le mk$; apply
+Lemma~\ref{lem:carry} with $d=mk$, which gives $\lfd\ge mk+1$. The upper
+bound $\lfd\le mk+1$ is the paper's kernel-checked chain bound
+(\code{thm:chain}, \code{ChainQuotient.reduced\_inputs\_lfd\_bound}), which
+holds over any field with $2\ne0$ for the chains together with any reduced
+inputs; $g$ is reduced.
+\end{proof}
+
+\begin{proposition}[When the second hypothesis holds]\label{prop:grid}
+Suppose $\deg g=mk$, let $\bar K$ be an algebraic closure of $K$ and
+$H=\mu_{2^k}(\bar K)$, a group of order $2^k$. If $S$ is nonzero at two
+distinct points of $H^m$ (equivalently, the system has at most $2^{mk}-2$
+solutions on $H^m$; for instance any unit ideal), then $\NF(x_iS)\notin Kg$
+for some $i$, and $\lfd=mk+1$.
+\end{proposition}
+\begin{proof}
+Normal forms commute with the extension $K\subset\bar K$ (they are
+computed by Lemma~\ref{lem:nf}), so it suffices to work over $\bar K$.
+Under $u_{i,j}\mapsto x_i^{2^j}$, reduced polynomials correspond bijectively to
+polynomials of degree $<2^k$ in each $x_i$ (binary digits), and these are
+determined by their values on $H^m$ (grid vanishing; $|H|=2^k$ because
+$2\ne0$). A polynomial and its normal form agree on $H^m$, since the chain
+equations vanish there. If $\NF(x_iS)=c_ig$ for every $i$, then
+$(x_i-c_i)S$ vanishes on $H^m$ for every $i$. Let $P\ne Q$ be points of
+$H^m$ with $S(P)S(Q)\ne0$ and choose $i$ with $P_i\ne Q_i$; then
+$c_i=P_i$ and $c_i=Q_i$, a contradiction.
+\end{proof}
+
+\section{The summation polynomial}\label{sec:summation}
+Define $S_3$ as in the paper and, for $n\ge3$,
+\[
+ S_{n+1}(x_1,\ldots,x_n,x_{n+1})=\Res_X\bigl(S_n(x_1,\ldots,x_{n-1},X),\,S_3(x_n,x_{n+1},X)\bigr),
+\]
+the Sylvester resultant with formal degrees $2^{n-2}$ and $2$. Then
+$S_{n+1}\in\Z[a,b][x_1,\ldots,x_{n+1}]$ has degree at most $2^{n-1}$ in each
+variable (by induction: the resultant is homogeneous of degree $2$ in the coefficients of
+its first argument and of degree $2^{n-2}$ in those of its second, and $S_3$ is quadratic in each argument). The theorem fixes this recursion,
+so the order of the resultants carries no weight below. Numerically, the
+other orders used in the experiments give the identical polynomial (ratio
+exactly $1$ on random curves over $\F_{2^{61}-1}$): $\Res(S_3,S_4)$ and
+$\Res(S_4,S_3)$ for $S_5$, and $\Res(S_4,S_4)$ and $\Res(S_3,S_5)$ for $S_6$
+(independent review, 2026-11-20). We do not prove order independence in
+general. The numerics of Section~\ref{sec:numerics} use this recursion, which
+agrees with the paper's $S_4$ exactly.
+
+\begin{definition}
+For $m\ge2$ let $\mathbf x^\tau=\prod_{i\le m}x_i^{2^{m-1}-1}$ and
+\[
+ c_m(a,b,t)=[\mathbf x^\tau]\,S_{m+1}(x_1,\ldots,x_m,t)\in\Z[a,b,t],
+\qquad
+ \gamma_{m,k}(a,b,t)=\sum_{\substack{0\le e_i\le2^{m-1}\\ e_i\equiv-1\ (2^k)}}[\mathbf x^e]\,S_{m+1}(x,t).
+\]
+\end{definition}
+Since $2^{m-1}-1$ is the only exponent $\le2^{m-1}$ of weight $m-1$, for
+$k\ge m-1$ we have $\deg\NF(S_{m+1})=m(m-1)$ if and only if $c_m\ne0$, and
+$\gamma_{m,m-1}=c_m$. For $k\le m-1$ the coefficient of the full monomial
+$\prod u_{i,j}$ in $g$ is $\gamma_{m,k}$ (Lemma~\ref{lem:nf}), so
+$\deg g=mk$ if and only if $\gamma_{m,k}\ne0$.
+
+\paragraph{Weights.} Give $x_i,t$ weight $1$, $a$ weight $2$ and $b$ weight $3$.
+The scaling $(x,y)\mapsto(\lambda^2x,\lambda^3y)$, $(a,b)\mapsto(\lambda^4a,\lambda^6b)$
+shows that $S_3$ is weighted homogeneous of weight $4$; a resultant of
+weighted homogeneous polynomials of weights $w_A,w_B$ and $X$-degrees
+$n_A,n_B$ ($X$ of weight $1$) is weighted homogeneous of weight
+$n_B(w_A-n_A)+n_Aw_B$, so $S_{m+1}$ has weight $m2^{m-1}$ by induction.
+Hence $c_m$ is weighted homogeneous of weight $m$ in $(t,a,b)$, and its
+coefficient of $t^m$ is its value at $a=b=0$, $t=1$. Explicitly ($c_4$ and
+$c_5$ are computed by exact modular interpolation, not proved; computed
+with exact interpolation over $\F_{2^{31}-1}$ at random $(a,b,t)$, solved on a weighted-monomial basis and
+checked at two further points, and reproduced independently over
+$\F_{2^{61}-1}$; Section~\ref{sec:numerics}):
+\begin{align*}
+ c_2&=-2\,(t^2+a),\\
+ c_3&=-8\,(5t^3+3at+6b),\\
+ c_4&=-16\,(47t^4+84at^2-12bt-3a^2),\\
+ c_5&=-128\,(1487t^5-365at^3+1545bt^2+318a^2t+57ab).
+\end{align*}
+$c_2$ is checked by hand and $c_3$ is the kernel-checked
+\code{M3CarryLower.coeff\_s4\_333}.
+
+\begin{proposition}[The cuspidal cubic]\label{prop:cusp}
+Let $N_m(s_0;s_1,\ldots,s_m)=\prod_{\varepsilon\in\{\pm1\}^m}(s_0+\varepsilon_1s_1+\cdots+\varepsilon_ms_m)\in\Z[s]$.
+At $a=b=0$, for every $m\ge2$,
+\[
+ \Bigl(\prod_{i=0}^m s_i^{2^m}\Bigr)\,S_{m+1}\bigl(s_1^{-2},\ldots,s_m^{-2},s_0^{-2}\bigr)=N_m(s_0;s_1,\ldots,s_m).
+\]
+Consequently $c_m(0,0,t)=\kappa_m t^m$ with
+$\kappa_m=[s_1^2\cdots s_m^2]\,N_m(1;s_1,\ldots,s_m)$.
+\end{proposition}
+\begin{proof}
+For $m=2$ both sides equal
+$s_0^4+s_1^4+s_2^4-2s_0^2s_1^2-2s_0^2s_2^2-2s_1^2s_2^2$ (direct expansion;
+$N_2=((s_0+s_1)^2-s_2^2)((s_0-s_1)^2-s_2^2)$).
+Assume the identity for $m$. Fix representatives $\varepsilon_c$ of the
+$2^{m-1}$ classes $c$ of $\{\pm1\}^m/\pm$ and write $\ell_c=\varepsilon_c\cdot s$.
+Pairing $\varepsilon$ with $-\varepsilon$, $N_m(\sigma;s)=\prod_c(\sigma^2-\ell_c^2)$, so
+with $x_i=s_i^{-2}$ the hypothesis reads, as an identity of polynomials in $X$,
+\begin{align*}
+ A(X):=S_{m+1}(x_1,\ldots,x_m,X)&=\prod_{i\le m}x_i^{2^{m-1}}\prod_c(1-\ell_c^2X)
+ =L\prod_c\bigl(X-\ell_c^{-2}\bigr),\\
+ L&=\prod_{i\le m}x_i^{2^{m-1}}\prod_c(-\ell_c^2).
+\end{align*}
+With $B(X)=S_3(x_{m+1},x_0,X)$ and the case $m=2$ (and the symmetry of $S_3$),
+$B(\ell_c^{-2})=N_2(\ell_c;s_{m+1},s_0)\,s_{m+1}^{-4}s_0^{-4}\ell_c^{-4}$. The resultant
+formula $\Res_X(A,B)=L^2\prod_cB(\ell_c^{-2})$ holds over $\Q(s)$ because
+$L\ne0$. The $2^{m+1}$ linear forms $\ell_c+\delta s_{m+1}+\delta's_0$
+($c$, $\delta,\delta'\in\{\pm1\}$) are $\delta'(s_0+\varepsilon''\cdot(s_1,\ldots,s_{m+1}))$
+with $\varepsilon''$ running once through $\{\pm1\}^{m+1}$, and each sign
+$\delta'$ occurs $2^m$ times, so $\prod_cN_2(\ell_c;s_{m+1},s_0)=N_{m+1}(s_0;s_1,\ldots,s_{m+1})$.
+Multiplying out,
+$\Res_X(A,B)=N_{m+1}\big/\bigl(s_0^{2^{m+1}}\prod_{i=1}^{m+1}s_i^{2^{m+1}}\bigr)$,
+the identity for $m+1$.
+
+For the coefficient: the monomial $\prod_{i=0}^ms_i^{2d_i}$ of $N_m$
+($\sum d_i=2^{m-1}$; $N_m$ is even in each $s_i$ and homogeneous of degree $2^m$)
+corresponds to $\prod_{i\ge1}x_i^{2^{m-1}-d_i}\,t^{2^{m-1}-d_0}$. The exponent
+$\tau$ is $d_1=\cdots=d_m=1$, which forces $d_0=2^{m-1}-m$ and the power
+$t^m$; dehomogenizing at $s_0=1$ gives $\kappa_m$.
+\end{proof}
+
+\begin{proposition}[$\kappa_m\ne0$]\label{prop:kappa}
+For $m\ge1$,
+\[
+ \kappa_m=2^{-m}\sum_{\pi}\ (-2^m)^{|\pi|}\prod_{B\in\pi}(2|B|-1)! ,
+\]
+the sum over the set partitions $\pi$ of $\{1,\ldots,m\}$. For $m\ge2$,
+$v_2(\kappa_m)=v_2((2m-1)!)=2m-1-s_2(2m-1)$, where $s_2$ is the binary
+digit sum; in particular $\kappa_m\ne0$.
+The first values are $\kappa_2=-2$, $\kappa_3=-40=-2^3\cdot5$,
+$\kappa_4=-752=-2^4\cdot47$, $\kappa_5=-190336=-2^7\cdot1487$,
+$\kappa_6=255410944=2^8\cdot997699$, $\kappa_7=-2^{10}\cdot13^2\cdot9470731$,
+$\kappa_8=2^{11}\cdot4969\cdot3677156909$.
+\end{proposition}
+\begin{proof}
+Put $y_i=s_i^2$ and $P=N_m(1;s)=\prod_\varepsilon(1+\varepsilon\cdot s)\in1+s\Q[[s]]$.
+Averaging over $\varepsilon$ kills the odd powers:
+$\log P=\sum_{n\ge1}\frac{(-1)^{n+1}}n\sum_\varepsilon(\varepsilon\cdot s)^n
+=-2^m\sum_{j\ge1}\frac1{2j}\sum_{|\alpha|=j}\frac{(2j)!}{\prod(2\alpha_i)!}y^\alpha$.
+The coefficient of the squarefree monomial $\prod_{i\in B}y_i$ in $\log P$ is
+$-2^m(2|B|-1)!/2^{|B|}$, and the coefficient of $y_1\cdots y_m$ in
+$P=\exp(\log P)$ is the sum over set partitions of the products of these block
+coefficients, which is the formula.
+
+In $2^m\kappa_m=\sum_\pi(-2^m)^{|\pi|}\prod(2|B|-1)!$ the partition into $q$
+blocks of sizes $j_1,\ldots,j_q$ contributes a term of $2$-adic valuation
+$mq+\sum_l v_2((2j_l-1)!)=mq+2m-q-\sum_ls_2(2j_l-1)$ (Legendre). For the
+single block ($q=1$) this is $3m-1-s_2(2m-1)$. The difference for $q\ge2$ is
+\[
+ (m-1)(q-1)+s_2(2m-1)-\sum_l s_2(2j_l-1)\ \ge\ (m-1)(q-2)+s_2(2m-1)-1 ,
+\]
+using $s_2(2j-1)\le j$ ($2j-1<2^j$) and $\sum j_l=m$. For $q\ge3$ this is at
+least $m-1\ge1$; for $q=2$ it is at least $s_2(2m-1)-1\ge1$, because $2m-1\ge3$
+is odd and not a power of two. So the single-block term has strictly
+smallest valuation and determines $v_2(2^m\kappa_m)$.
+\end{proof}
+
+\begin{corollary}[The hypotheses are generic]\label{cor:generic}
+Let $m\ge3$ and $p$ the characteristic of $K$ ($p=0$ or $p\nmid2\kappa_m$).
+\begin{enumerate}
+\item For every $a,b\in K$, $c_m(a,b,t)$ is a polynomial of degree exactly $m$ in
+$t$ with leading coefficient $\kappa_m$; so at most $m$ targets $t$ violate
+$c_m\ne0$.
+\item For every $1\le k\le m-1$, $\gamma_{m,k}\not\equiv0$: at $a=b=0$ the coefficient of
+$t^m$ in $\gamma_{m,k}$ is $\kappa_m$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(1) By weighted homogeneity of weight $m$, $t^m$ is the only monomial of
+$c_m$ free of $a,b$, and its coefficient is $c_m(0,0,1)=\kappa_m$.
+(2) At $a=b=0$, $S_{m+1}$ is homogeneous of degree $m2^{m-1}$ in $(x,t)$,
+so $[\mathbf x^e]S_{m+1}(x,t)$ is a multiple of $t^{m2^{m-1}-|e|}$. Exponents
+with $e_i\equiv-1\pmod{2^k}$ and $e_i\le2^{m-1}$ satisfy $e_i\le2^{m-1}-1$,
+with $|e|=m(2^{m-1}-1)$ only for $e=\tau$; so only $\tau$ contributes to
+$t^m$, with $\kappa_m$ (Proposition~\ref{prop:cusp}).
+\end{proof}
+
+\section{The theorem for summation systems}
+\begin{theorem}[Carry bound for every number of summands]\label{thm:main}
+Let $K$ be a field with $2\ne0$, $m\ge3$, $a,b,t\in K$, $k\ge1$, and
+$F_{m,k}=G_{m,k}\cup\{\NF(S_{m+1}(x_1,\ldots,x_m,t))\}$.
+\begin{enumerate}
+\item (Onset, $k\ge m$.) If $c_m(a,b,t)\ne0$, then $\lfd(F_{m,k})\ge m(m-1)+1$.
+\item (Full degree, $k\le m-1$.) If $\gamma_{m,k}(a,b,t)\ne0$ and $S_{m+1}(\cdot,t)$ is
+nonzero at two distinct points of $\mu_{2^k}(\bar K)^m$, then $\lfd(F_{m,k})=mk+1$.
+\end{enumerate}
+In both cases $\lfd(F_{m,k})\ge m\min(k,m-1)+1$, and this is
+$\deg\NF(S_{m+1})+1$. At $k=m-1$ the two parts agree ($\gamma_{m,m-1}=c_m$).
+If $\operatorname{char}K=0$ or $\operatorname{char}K\nmid\kappa_m$, then by
+Corollary~\ref{cor:generic} part~1 excludes at most $m$ targets for each
+curve, and in part~2 the condition $\gamma_{m,k}\ne0$ fails only on a proper
+Zariski-closed subset of the $(a,b,t)$-space. The characteristic condition
+is needed: in characteristic $5$ with $m=3$, $\kappa_3=-2^3\cdot5$ vanishes and
+$c_3\equiv-8(3at+b)$, which is identically zero in $t$ when $a=b=0$. The
+excluded odd primes are $5$ ($m=3$), $47$ ($m=4$), $1487$ ($m=5$), $997699$
+($m=6$), $13$ and $9470731$ ($m=7$), $4969$ and $3677156909$ ($m=8$); none is a
+prime used in the experiments. The grid condition holds on every unit ideal
+(more generally whenever at most $2^{mk}-2$ grid points are solutions).
+\end{theorem}
+\begin{proof}
+Part~1 is Theorem~\ref{thm:onset} with $S=S_{m+1}(x,t)$, which has degree
+$\le2^{m-1}$ in each $x_i$ and $[\mathbf x^\tau]S=c_m\ne0$. Part~2 is
+Theorem~\ref{thm:full} with Proposition~\ref{prop:grid}.
+\end{proof}
+
+\begin{remark}[What the theorem does not give]
+(i) It is a statement about the direct presentation; the split presentation
+with auxiliary abscissae has smaller measured values (paper,
+Table \code{tab:splitm}) and is not covered. (ii) For $k\ge m$ it is only a
+lower bound; the upper bound is $mk+1$. The measured values exceed it at
+$m=3$, $k\ge6$ ($8$), so the onset bound is not the growth law. (iii) On the
+locus $c_m=0$ (for $k\ge m$) the theorem is silent; for $m=3$ the measured value
+there is still $7=\deg g+2$ at $k=3,4$. (iv) For $k\ge m$ the multiplier
+$u_{1,0}$ is essential: a larger multiplier can raise the degree of $h$
+above $\deg g$.
+\end{remark}
+
+\section{Numerical validation}\label{sec:numerics}
+\paragraph{Coefficients.} The values in this paragraph are
+\emph{computed}, not proved: $c_4$, $c_5$ and $c_6(0,0,1)$ are results of
+exact modular interpolation. The producer's program was a scratch C program
+that was not committed (the repository forbids new Python, and this computation is a
+check, not a result); in proof-carrying-claim terms its outputs alone would be
+unverified assertions. They were reproduced by the independent review
+(2026-11-20) with two independent implementations of the recursion over
+$\F_{2^{61}-1}$ (Sylvester determinants by Gaussian elimination, and the
+norm formula $\Res=b_2^{\,n}A(\theta_1)A(\theta_2)$), which agree at three random
+points for each $m=2,\ldots,6$; tensor interpolation at three random
+$(a,b,t)$ gives exactly the closed forms of $c_2,\ldots,c_5$ above, with
+weighted homogeneity $c_m(\lambda^2a,\lambda^3b,\lambda t)=\lambda^mc_m$ for
+$m=2,\ldots,5$; an inverse DFT of grid values over small primes cross-checks
+$\gamma_{4,3}=c_4$ (56 instances) and $\gamma_{5,4}=c_5$ (8 instances); and a
+direct $33^6$-grid extraction gives $c_6(0,0,1)=255410944=\kappa_6$ over
+$\F_{2^{61}-1}$. The producer's program evaluates $S_{m+1}$ by the recursion over $\F_p$ and extracts
+$[\mathbf x^\tau]$ by tensor Lagrange interpolation on $2^{m-1}+1$ nodes per
+variable. It reproduces $-8(5t^3+3at+6b)$ at five points; the four
+(resp.\ five) weighted coefficients of $c_4$ (resp.\ $c_5$) were solved from
+four (five) random points and confirmed at two more each. Its value of $c_m(0,0,1)$ equals the
+$\kappa_m$ of the partition formula for $m=2,3,4,5$ ($-2,-40,-752,-190336$), and for $m=6$ ($c_6(0,0,1)=255410944=\kappa_6$ over $\F_{2^{31}-1}$, one evaluation on $33^6$ grid points).
+On the recorded
+four-summand instances it gives $c_4\ne0$: U1 ($p=2013265921$) $c_4=431449230$
+(the program and the closed form agree), U2 ($p=998244353$) $430513295$,
+$P$-m4k3-p193 ($a=b=167$, $t=116$) $164$ (program and closed form agree), consistent
+with the measured $\deg g=12$ (U1, U2 at $k=4,5$; the $p=193$ instance at $k=3$).
+
+\paragraph{Measured values.} Every exact value or certified lower bound of
+the paper and of the four-summand growth study, against the
+prediction of Theorem~\ref{thm:main} (``pred.'').
+\begin{center}\small
+\begin{tabular}{ccp{2.1cm}p{6.0cm}p{2.6cm}}
+\toprule
+$m$ & $k$ & pred. & measured & agreement\\
+\midrule
+3 & 2 & $=7$ (part 2) & $7$ on $105/116$ seeded (the others have $c_3=0$, $\deg g=5$); $48/48^\dagger$ & yes; silent where $c_3=0$\\
+3 & 3,4,5 & $\ge7$ & $7$ ($213$ seeded with $c_3\ne0$ at $k=3,4$; $12$ depth instances; U1--U3) & yes (tight)\\
+3 & 3,4 on $c_3=0$ & silent & $7$ ($\deg g=5$) & ---\\
+3 & 6 & $\ge7$ & $8$ (U1--U3, two proper instances) & yes (not tight)\\
+3 & 7 & $\ge7$ & $\ge8$ & yes\\
+4 & 2 & $=9$ & $9$ (six certified; $48/48^\dagger$) & yes\\
+4 & 3 & $=13$ & $13$ (six certified; $47/48^\dagger$, the other has $\deg g=11$) & yes\\
+4 & 4 & $\ge13$ & $13$ (six certified: five proper, one unit; U1, U2) & yes (tight)\\
+4 & 5 & $\ge13$ & $\ge13$ (U1, U2) & yes\\
+5 & 2,3,4 & $=11,16,21$ & $11,16$ (six certified each at $k=2,3$); $11,16,21^\dagger$ & yes\\
+6 & 2,3,4 & $=13,19,25$ & $13,19,25^\dagger$ & derived\\
+7 & 2,3 & $=15,22$ & $15,22^\dagger$ ($47/48$ at $k=2$) & derived\\
+8 & 2,3 & $=17,25$ & $17,25^\dagger$ ($47/48$ at $k=2$) & derived\\
+5--8 & $\ge m$ & $\ge m(m-1)+1$ & not computed ($>2^{24}$ grid points) & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+$^\dagger$Derived, not measured independently: the 48-instance counts for
+$m=3,\ldots,8$ at $k\le m-1$ and every $m\ge6$ value were recorded from the
+carry lemma once $\deg g=mk$ was found (the study's records call them
+``forced''). They confirm $\deg g=mk$ but cannot test the conclusion. The
+independent closure tests are the $461$ seeded three-summand cases (at
+$k=1,\ldots,4$), the $12$ depth instances, six certified instances per cell for
+$m=4$, $k=2,3,4$ and $m=5$, $k=2,3$, and the named instances U1--U3, P1, the
+$p=65537$ instance and the four-summand U1, U2.
+
+No measured value contradicts the theorem. The three exceptions of the
+paper's Table \code{tab:msum} have $\deg g=mk-1$, i.e.\ $\gamma_{m,k}=0$, where the
+theorem makes no claim. The paper's tables of $m$-summand values for
+$k\le m-1$ were recorded as ``$\deg g=mk$ and the hypotheses on $h$ hold
+computationally''; Theorem~\ref{thm:main}(2) replaces the second hypothesis by
+the grid condition, which every unit instance satisfies.
+
+\section{Lean status}\label{sec:lean}
+\code{formal/ICFallDegrees/CarryAllM.lean} proves, for every $m$:
+\code{lift\_congr} (Lemma~\ref{lem:nf} for every exponent),
+\code{weight\_two\_pow\_sub\_one}, \code{weight\_le\_pred} (Lemma~\ref{lem:weights}),
+\code{lfd\_ge\_onset} (Theorem~\ref{thm:onset}), \code{lfd\_ge\_full}
+(Theorem~\ref{thm:full}, lower half), \code{lfd\_eq\_full} (Theorem~\ref{thm:full},
+the exact value $mk+1$ with \code{ChainQuotient.reduced\_inputs\_lfd\_bound}) and \code{m3\_onset} (the three-summand
+case recovered from the general theorem with \code{M3CarryLower.coeff\_s4\_333}).
+Not formalized: Proposition~\ref{prop:grid}, Section~\ref{sec:summation}
+(the definition of $S_{m+1}$ for general $m$, the multidegree bound, the
+cusp identity and $\kappa_m\ne0$), and therefore the specialization of
+\code{lfd\_ge\_onset} to $S_{m+1}$ for $m\ge4$.
+
+The file was built with Lean 4.19.0 and Mathlib \code{v4.19.0} (the
+repository pins) by \code{lake build ICFallDegrees.CarryAllM}; it contains no
+\code{sorry}, \code{axiom} or \code{native\_decide}, and \code{\#print axioms} reports only
+\code{propext}, \code{Classical.choice} and \code{Quot.sound} for every
+declaration listed above. The module is imported by the root file and its
+main declarations are added to \code{Audit.lean}; the full repository build
+(all modules) was not rerun locally.
+
+\begin{thebibliography}{9}
+\bibitem{hkyy} M.-D.~Huang, M.~Kosters, Y.~Yang, S.~L.~Yeo, On the last fall degree of zero-dimensional Weil descent systems, J.~Symbolic Comput.\ 87 (2018).
+\bibitem{semaev} I.~Semaev, Summation polynomials and the discrete logarithm problem on elliptic curves, IACR ePrint 2004/031.
+\end{thebibliography}
+\end{document}

@@ -61,7 +61,10 @@ bounds the cost of these attacks from below: in the two-summand relation
 search of Petit, Kosters and Messeng, the attempts that find no relation
 each cost a Macaulay-matrix solver an amount exponential in $k$, so
 complexity estimates that assume a bounded solver degree understate the
-cost of the relation search by a factor exponential in $k$.
+cost of the relation search by a factor exponential in $k$. For the direct
+presentation with $m\ge3$ summands, a written proof with a kernel-checked
+core gives $\mathrm{LFD}\ge m\min(k,m-1)+1$ under explicit nondegeneracy
+conditions.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -131,7 +134,10 @@ about binary curves from an unpublished draft are not claimed here
 \item \emph{Lower bounds} (kernel-checked; Section~\ref{sec:bounds}):
  $\lfd\ge4$ at every depth for unit-ideal two-summand systems with
  $3t^2+a\ne0$ (Theorem~\ref{thm:three}); $\lfd\ge7$ for three summands when
- $5t^3+3at+6b\ne0$ (Theorem~\ref{thm:carry}); $\lfd\ge5$ at every depth
+ $5t^3+3at+6b\ne0$ (Theorem~\ref{thm:carry}), extended to
+ $\lfd\ge m\min(k,m-1)+1$ for every $m\ge3$ under explicit nondegeneracy
+ conditions (Theorem~\ref{thm:allm}; written proof with a kernel-checked
+ core); $\lfd\ge5$ at every depth
  $k\ge8$ for two concrete systems (Theorem~\ref{thm:reduction}); $\lfd=5$ on
  one instance at depth $6$ (Theorem~\ref{thm:exactsix}); persistence of
  exclusions in the depth (Theorem~\ref{thm:restrict}); unit-ideal
@@ -2105,9 +2111,40 @@ at most $7$ lies outside $V_7$, and
 for this instance (exact). This is the first depth
 at which our data establish a three-summand value above $7$. It is also
 the depth at which the two-summand degree-$4$ closure first falls behind
-the ideal. The exact value at $k=6$ would need the degree-$8$ closure
-($|M_{\le8}|=106{,}762$ columns), which was not computed, and the only upper
-bound there is the kernel-checked $3k+1=19$.
+the ideal. The certified upper bound there is the kernel-checked
+$3k+1=19$; the degree-$8$ closure ($|M_{\le8}|=106{,}762$ columns) was not
+computed with the engines of this paper.
+
+\paragraph{Depth growth with three and four summands (corroboration).}
+The second engine of Section~\ref{sec:depth14}, run on the direct
+presentation with $mk$ chain variables under a preregistered protocol,
+computed the closures that decide the next values. The instances are three
+unit instances U1, U2, U3 over $p=2013265921$, $998244353$, $469762049$
+(random curves and targets, unit ideals at every depth computed), the
+instance $p=7681$ above and a proper instance over $p=65537$ with $|Z|=6$
+at $k=6$. Every closure that ended without $1$ passed the engine's
+closedness check, and the engine reproduced the recorded values and
+profiles of the instance $p=7681$ at $k=2,\ldots,6$.
+\begin{itemize}
+\item Three summands: $\lfd=7$ at $k=2,3,4,5$ on U1, U2, U3. At $k=6$ the
+ degree-$7$ closure has dimension $19{,}958$ and the same profile on all
+ five instances, without $1$; $1\in V_8$ on U1, U2, U3, and on the two
+ proper instances $\dim V_8=|M_{\le8}|-|Z|$ with $M_{<8}$ evaluating onto
+ $Z$, so $\lfd=8$ on all five. At $k=7$ the degree-$7$ closure of U1
+ (dimension $27{,}092$, $198{,}440$ columns) is closed without $1$, so
+ $\lfd\ge8$; the degree-$8$ closure ($401{,}930$ columns) did not finish.
+\item Four summands, on U1 and U2: $\lfd=13$ at $k=4$ ($V_{12}$ is spanned
+ by $g$ and $1\in V_{13}$), and $\lfd\ge13$ at $k=5$ ($V_{12}$ is spanned by
+ $g$; $V_{13}$, about $10^6$ columns, was not computed).
+\end{itemize}
+These are measured closures of one engine on one host, without our
+certificates and without an independent replay; we count them as
+corroborations (\code{experiments/msum-growth/}). They agree with
+Theorem~\ref{thm:allm} in every cell and show that its onset bound is not
+the growth law: the three-summand value leaves $m(m-1)+1=7$ at $k=6$, the
+depth at which the two-summand value steps from $4$ to $5$, and at
+$k=2,\ldots,6$ it is the two-summand value plus three. Two depths above the
+onset do not determine a rate.
 
 \paragraph{More summands.}
 The two bounds used for three summands apply to every $m$.
@@ -2117,7 +2154,95 @@ $\lfd\ge\deg g+1$ whenever $\deg h\le\deg g$ and $h$ is not a constant
 multiple of $g$. By Lemma~\ref{lem:degree}, $\deg g\le m\min(k,m-1)$, so the
 two bounds can meet only for $k\le m-1$, and they do meet when $g$ has the
 full degree $mk$, that is, when the product of all $mk$ chain variables
-occurs in $g$.
+occurs in $g$. Theorem~\ref{thm:allm} states when these hypotheses hold.
+
+Define $S_{n+1}=\operatorname{Res}_X\bigl(S_n(x_1,\ldots,x_{n-1},X),S_3(x_n,x_{n+1},X)\bigr)$
+for $n\ge3$ (Sylvester resultant with formal degrees $2^{n-2}$ and $2$; for
+$n=3$ this is the $S_4$ above). Write
+$\mathbf x^\tau=\prod_{i\le m}x_i^{2^{m-1}-1}$ and let $c_m(a,b,t)$ be the
+coefficient of $\mathbf x^\tau$ in $S_{m+1}(x_1,\ldots,x_m,t)$; thus
+$c_3=-8(5t^3+3at+6b)$. Let
+$\kappa_m=[s_1^2\cdots s_m^2]\prod_{\varepsilon\in\{\pm1\}^m}(1+\varepsilon_1s_1+\cdots+\varepsilon_ms_m)$,
+an integer; $\kappa_3=-40$, $\kappa_4=-752$, $\kappa_5=-190336$.
+
+\begin{theorem}[Carry bound for every number of summands; written proof, core kernel-checked]\label{thm:allm}
+Let $K$ be a field with $2\ne0$, $m\ge3$, $k\ge1$, $a,b,t\in K$, and
+$F_{m,k}=G_{m,k}\cup\{g\}$ with $g=\NF(S_{m+1}(x_1,\ldots,x_m,t))$ the direct
+presentation.
+\begin{enumerate}
+\item \emph{Exact value, $k\le m-1$.} If $\deg g=mk$ and
+ $S_{m+1}(\cdot,t)$ is nonzero at two distinct points of
+ $\mu_{2^k}(\bar K)^m$ (for instance, if $\langle F_{m,k}\rangle$ is the unit
+ ideal), then $\lfd(F_{m,k})=mk+1$.
+\item \emph{Onset, $k\ge m$.} If $c_m(a,b,t)\ne0$, then $\deg g=m(m-1)$ and
+ $\lfd(F_{m,k})\ge m(m-1)+1$.
+\item \emph{Genericity.} $c_m=\kappa_mt^m+(\text{terms divisible by }a\text{ or }b)$
+ and $\kappa_m\ne0$. If $\operatorname{char}K=0$ or
+ $\operatorname{char}K\nmid\kappa_m$, then for every curve at most $m$
+ targets $t$ have $c_m(a,b,t)=0$, and for each $k\le m-1$ the condition
+ $\deg g=mk$ fails only on a proper Zariski-closed subset of the
+ $(a,b,t)$-space.
+\end{enumerate}
+Under the hypotheses of~(1) or~(2),
+$\lfd(F_{m,k})\ge m\min(k,m-1)+1=\deg g+1$.
+\end{theorem}
+
+\paragraph{Status of Theorem~\ref{thm:allm}.} The two statements for an
+arbitrary generator $S$ are kernel-checked: $\lfd=mk+1$ when $\deg\NF(S)=mk$
+and some $\NF(x_iS)$ is not a multiple of $\NF(S)$
+(\code{CarryAllM.lfd\_eq\_full}), and, for $k\ge m\ge3$,
+$\lfd\ge m(m-1)+1$ when $S$ has degree at most $2^{m-1}$ in each variable
+and a nonzero coefficient at $\mathbf x^\tau$ (\code{CarryAllM.lfd\_ge\_onset}).
+Part~(1) adds a grid step with a written proof. Part~(2) is kernel-checked
+for $m=3$ (\code{CarryAllM.m3\_onset}, with the kernel expansion of $S_4$);
+for $m\ge4$ it is a written proof with a kernel-checked core, the step
+outside Lean being the bound $2^{m-1}$ on the degree of $S_{m+1}$ in each
+variable. Part~(3) is a written proof, checked numerically for $m\le5$ and,
+at $a=b=0$, for $m=6$. The characteristic condition is needed: in
+characteristic $5$, $\kappa_3=0$ and $c_3$ vanishes identically in $t$ when
+$a=b=0$. The odd primes dividing $\kappa_m$ are $5$, $47$ and $1487$ for
+$m=3,4,5$; none is a prime of our computations. An independent review
+(by an AI session) re-derived the written proofs, recomputed
+$\kappa_2,\ldots,\kappa_8$ and the coefficients $c_2,\ldots,c_5$, and
+rebuilt the Lean module.
+
+\begin{proof}[Proof sketch]
+The complete proofs are in \code{paper/notes/carry-allm.tex}. A monomial
+$\prod_ix_i^{e_i}$ reduces modulo the chains to the squarefree chain monomial
+whose digit sets are the binary digits of the $e_i$ below $k$; on exponents
+below $2^k$ this map is injective.
+
+(2) Every exponent of $S_{m+1}$ is at most $2^{m-1}$, and for $m\ge3$ every
+exponent at most $2^{m-1}+1$ has at most $m-1$ binary digits equal to $1$,
+the value $2^{m-1}-1$ being the only one at most $2^{m-1}$ with exactly
+$m-1$. Hence
+$g$ has degree $m(m-1)$ with top coefficient $c_m$, and $h=\NF(x_1S_{m+1})$,
+congruent to $u_{1,0}g$, has degree at most $m(m-1)$. All exponents involved
+are below $2^m\le2^k$, so $h=cg$ would force $(x_1-c)S_{m+1}=0$.
+Theorem~\ref{thm:carry} gives $\lfd\ge m(m-1)+1$.
+
+(1) With $\deg g=mk$, Theorem~\ref{thm:carry} applies as soon as some
+$\NF(x_iS_{m+1})$ is not a multiple of $g$, and Corollary~\ref{cor:allm}
+gives the upper bound. Reduced polynomials are determined by their values on
+the grid $\mu_{2^k}(\bar K)^m$, where they agree with the polynomials they
+reduce. If $\NF(x_iS_{m+1})=c_ig$ for every $i$, then $(x_i-c_i)S_{m+1}$
+vanishes on the grid for every $i$, which is impossible when
+$S_{m+1}(\cdot,t)$ is nonzero at two grid points that differ in some
+coordinate $i$.
+
+(3) With weights $1$ for $x_i$ and $t$, $2$ for $a$ and $3$ for $b$,
+$S_{m+1}$ is weighted homogeneous, so $c_m$ is weighted homogeneous of
+weight $m$ and its only monomial free of $a,b$ is $c_m(0,0,1)\,t^m$. At
+$a=b=0$ the substitution $x_i=s_i^{-2}$, $t=s_0^{-2}$ turns $S_{m+1}$, up to
+a monomial factor, into $\prod_\varepsilon(s_0+\varepsilon_1s_1+\cdots+\varepsilon_ms_m)$
+(induction on $m$ through the resultant), which gives $c_m(0,0,1)=\kappa_m$.
+Expanding the logarithm of that product writes $\kappa_m$ as a sum over set
+partitions of $\{1,\ldots,m\}$, and the single-block term has strictly
+smallest $2$-adic valuation, so $v_2(\kappa_m)=v_2((2m-1)!)$ and
+$\kappa_m\ne0$. The same homogeneity argument shows that the coefficient
+whose vanishing means $\deg g<mk$ has $t^m$-coefficient $\kappa_m$ at
+$a=b=0$.
+\end{proof}
 
 We computed $g$ exactly for $m=3,\ldots,8$, that is for the summation
 polynomials $S_4$ to $S_9$, without expanding $S_{m+1}$. Modulo the chains a
@@ -2164,7 +2289,13 @@ Table~\ref{tab:profile}) it stays far below.}
 
 On $409$ of the $412$ instances with $2\le k\le m-1$ the generator has
 degree $mk$ and the two hypotheses on $h$ hold, so $\lfd=mk+1$ exactly
-(Table~\ref{tab:msum}, Figure~\ref{fig:variables}). The dimension bound is
+(Table~\ref{tab:msum}, Figure~\ref{fig:variables}). The hypothesis on $h$
+was checked by computation on each instance; Theorem~\ref{thm:allm}(1) now
+derives it from the grid condition, which every unit instance satisfies.
+The counts of Table~\ref{tab:msum} were recorded from the carry argument
+once $\deg g=mk$ was found, so they
+confirm the generator degree but do not test the conclusion independently;
+the independent closures are those of the next paragraph. The dimension bound is
 therefore attained by summation systems themselves for every $m$ from $3$
 to $8$, with values up to $25$, and not only by the abstract Boolean family
 of Table~\ref{tab:bounds}. The attainment is of the simplest kind. At
@@ -2180,9 +2311,8 @@ For $k\ge m$ the generator has degree $m(m-1)$ on every instance computed,
 which gives $\lfd\ge m(m-1)+1$: the bound $7$ for three summands at
 $k=3,4$ ($96$ instances), in agreement with the exact values above, and
 $\lfd\ge13$ for four summands at $k=4,5$ ($56$ instances), where the upper
-bounds are $17$ and $21$. For $m\ge4$ these lower bounds use the
-kernel-checked statement with hypotheses established by exact computation,
-not by the kernel. The largest cases rest on few instances (sixteen with
+bounds are $17$ and $21$. These are instances of Theorem~\ref{thm:allm}(2);
+on each, $c_m\ne0$ was established by exact computation of $g$. The largest cases rest on few instances (sixteen with
 $2^{20}$ or $2^{21}$ grid points, four with $2^{24}$); depths with more than
 $2^{24}$ grid points were not computed.
 
@@ -2904,7 +3034,9 @@ The written proofs are in
 With Theorem~\ref{thm:growth}, the solving degree of the unit-ideal
 instances of that theorem is unbounded in the depth. With
 Theorem~\ref{thm:carry}, the solving degree of three-summand systems is at
-least $7$ at every $k\ge3$ when $5t^3+3at+6b\ne0$. Both hold for every
+least $7$ at every $k\ge3$ when $5t^3+3at+6b\ne0$, and with
+Theorem~\ref{thm:allm} that of direct $m$-summand systems is at least
+$m\min(k,m-1)+1$ under its hypotheses. These hold for every
 degree-compatible order.
 
 \paragraph{The systems of this paper.} We applied
@@ -3020,13 +3152,80 @@ Conjecture~\ref{conj:law} place the degree near $k/4$, which gives
 $2^{(1.09+o(1))k}$ columns, and the ceiling $\sd_\sigma\le k+2$ of
 Theorem~\ref{thm:sd} keeps the cost of an attempt at $2^{O(k)}$.
 
-\paragraph{What does not follow.} These are lower bounds on one step, the
-relation search, for solvers in the Macaulay model, on the attempts that
-find no relation. We do not compute the total cost of a discrete logarithm
-and do not compare the method with Pollard rho: that needs the relation
-yield, the linear-algebra stage and, for attacks with more than two
-summands, the growth of the solving degree, which is established here only
-as the constant bound $\lfd\ge7$ for three summands. The theorems hold for
+With $m\ge3$ summands on the direct presentation, Theorem~\ref{thm:allm}
+and Theorem~\ref{thm:cg} give
+\[
+ \sd_\sigma\;\ge\;m\min(k,m-1)+1
+\]
+for every degree-compatible order: for $k\ge m$ on every attempt with
+$c_m(a,b,t)\ne0$, which excludes at most $m$ targets per curve when
+$\operatorname{char}\F_p\nmid\kappa_m$, whether or not the attempt finds a
+relation; for $k\le m-1$ on every attempt with $\deg g=mk$ that satisfies
+the grid condition, in particular every unit ideal, and there
+$\sd_\sigma=mk+1$ by Theorem~\ref{thm:sd}(3). For $k\le m-1$ the Macaulay
+space at that degree contains all $2^{mk}$ squarefree chain monomials, as
+many columns as there are $m$-tuples of factor-base abscissae. For $k\ge m$
+the proved degree is the constant $m(m-1)+1$, so the proved part of the cost
+of an attempt is at least $\binom{mk}{m(m-1)+1}$ columns: for fixed $m$ a
+polynomial in $k$ of degree $m(m-1)+1$, growing with $m$ but not
+exponentially in $k$. The three-summand values above the onset
+(Section~\ref{sec:msummands}) are measured, not proved.
+
+\paragraph{A cost model (a model-based conclusion, not a theorem).} The
+bounds above concern one step. To compare the whole attack with Pollard rho
+we combined them with measurements in a fully charged cost model
+(\code{experiments/ic-endtoend/}, \code{experiments/ic-costmodel/}). An
+end-to-end implementation of the attack with $m=2,3$ on prime-order curves
+with $N$ from $2^{20}$ to $2^{40}$ verified $99$ logarithms. It measured the
+relation yield, which equals the random-set value
+$1-\exp(-|\mathcal F|^m/(m!\,N))$ for a factor base $\mathcal F$ (pooled
+ratios $0.98$ to $1.04$ per size), the number of relations needed ($0.53f$
+for $m=2$, $0.92f$ for $m=3$, with $f=2^{k-1}$) and the linear algebra; in
+all $33$ cells it was more expensive than rho at every price. The model
+charges a group addition $1$ group-addition equivalent (GAE) and every other
+operation $0$, $0.1$ or $1$ GAE, and charges rho the same way. Per attempt it takes the
+cheaper of exact enumeration with a table of signed sums and a Macaulay solve
+on the direct presentation at the proved degree $D$: for $m=2$ the
+per-failed-attempt floor above, for $m\ge3$ the bound
+$m\min(k,m-1)+1$ of Theorem~\ref{thm:allm}. The solve is charged
+$\binom{mk}{\min(D,\lfloor mk/2\rfloor)}$ operations, the largest layer of
+the Macaulay space up to degree $D$. The model minimizes over $m=2,\ldots,8$,
+$k$ and the route, and reproduces the $33$ measured cells within factors
+$0.96$ to $1.42$ (an in-sample check). For $\log_2N$ from $40$ to $256$ and
+primes with $2^k\mid p-1$, its minimum cost at prices $0.1$ and $1$ lies
+$2.6$ to $5.0$ bits above rho; at price $0$, where the solver costs
+nothing, it lies below rho. Ranking two methods only where their order holds
+at all three prices, index calculus with at most eight summands does not
+beat Pollard rho in this model anywhere between $2^{40}$ and $2^{256}$.
+
+The conclusion rests on these assumptions. (i) The solver floor is a
+convention: linear in the columns of one layer, and a floor only for
+Macaulay-type solvers on the direct presentation; the split presentation,
+hybrid guessing and solvers that are not Gr\"obner-basis algorithms are not
+covered. (ii) Yield, relations needed and the linear-algebra constants are
+measured only for $m=2,3$ and $N\le2^{40}$, and are extrapolated beyond
+$2^{40}$ and to $m\ge4$. (iii) Memory and the construction of the factor base
+are not charged, which favours index calculus. We exclude the literal top
+layer $\binom{mk}{\min(D,mk)}$ as the solver charge: it is not monotone in
+$D$ and charges $1$ per attempt at the forced degree $D=mk+1$, and with it
+the model puts index calculus below rho at all three prices for
+$\log_2N\le67$, through $m=8$ at $k=6,7$, where the Macaulay space has
+$2^{48}$ and $2^{56}$ columns. With the degree law measured for $m=2,3$ and
+extrapolated in place of the proved floor, the gap is $2.7$ bits at $2^{40}$
+and $10.3$ bits at $2^{256}$. The proved constant floor alone keeps the
+Macaulay route for $m=4$ above rho only up to about $2^{293}$; beyond that
+the comparison would need growth in $k$ for $m\ge3$, which is not proved.
+
+\paragraph{What does not follow.} The theorems are lower bounds on one
+step, the relation search, for solvers in the Macaulay model: for two
+summands on the attempts that find no relation, for more summands on the
+attempts that meet the hypotheses of Theorem~\ref{thm:allm}. We prove no
+lower bound on the total cost of a discrete logarithm. The comparison with
+Pollard rho is model-based: it rests on measured constants at
+$N\le2^{40}$, their extrapolation and a solver-cost convention, and covers
+only enumeration and Macaulay-type solvers on the direct presentation, at
+most eight summands and primes with $2^k\mid p-1$. For more than two
+summands the proved degree is constant in $k$ once $k\ge m$. The theorems hold for
 every prime $p>2^{k+1}$, including primes of cryptographic size; the exact
 values concern the instances computed, at depths up to $16$. Nothing is
 claimed for other factor-base families.
@@ -3102,10 +3301,23 @@ presentations of the function field are not identified in Lean
 $(m,k)=(4,2)$, $(4,3)$, $(5,2)$ and on two at $(3,5)$, $(4,4)$, $(6,2)$,
 all unit instances over subgroup bases computed with one engine, and a
 containing closure is accepted on the engine's arithmetic without a separate
-verification pass. The bound $\lfd\ge8$ at $k=6$ for three summands is one
-instance. For $m=3,\ldots,8$ at $k\le m-1$ the attainment of $mk+1$ uses
-hypotheses (the generator degree and $h\ne cg$) established by exact
-computation, not by the kernel.
+verification pass. The certified bound $\lfd\ge8$ at $k=6$ for three
+summands is one instance; the value $8$ on five instances, $\lfd\ge8$ at
+$k=7$ and the four-summand values at $k=4,5$ on U1, U2 come from one engine
+on one host, without certificates or replay. Theorem~\ref{thm:allm} is
+kernel-checked only for an arbitrary generator and, in part~(2), for $m=3$;
+for $m\ge4$ the degree bound on $S_{m+1}$, the grid step and the genericity
+statement are written proofs, reviewed by an AI session and by no human
+referee. The generator degree on each instance is established by exact
+computation.
+
+\paragraph{The cost model.} The comparison with Pollard rho in
+Section~\ref{sec:meaning} is a model, not a measurement above $2^{40}$: the
+yield law, the relation counts and the linear-algebra constants are measured
+for $m=2,3$ at $N\le2^{40}$ only, the solver charge is a convention, and
+the scenario with the proved floor for $m\ge3$ was added after the model's
+preregistration. No independent replay of the model or of the end-to-end
+measurements exists.
 
 \paragraph{Scope.} Exact values concern the instances computed, and the
 exceptional set is known only at $k=6$, $p=193$. Not kernel-checked: the
@@ -3179,12 +3391,19 @@ explanations.
  degree-$6$ spaces; certified degree-$6$ closures at $k\ge15$ and the
  degree-$7$ step there, which decides $\lfd=7$ at $k=15$ and $16$; a
  certified degree-$8$ closure of the split presentation at $m=5$, $k=3$; a
- second engine of this paper for $D=6$ at $k=13$; three-summand closures on
- further instances at $k=6$ and at $k\ge7$, and larger cells with four and
- five summands.
+ second engine of this paper for $D=6$ at $k=13$; the three-summand
+ degree-$8$ closure at $k=7$ ($401{,}930$ columns), which decides between one
+ step per four depths and a slope-one growth from $k=5$, certified
+ three-summand closures at $k\ge6$, and larger cells with four and five
+ summands, beginning with $V_{13}$ at $m=4$, $k=5$.
 \item \emph{Towards cost.} The LFD controls solving only together with the
- number of solutions~\cite[Prop.~2.8]{hkyy}; a cost statement would also
- need relation yield and rank, which are not studied here.
+ number of solutions~\cite[Prop.~2.8]{hkyy}. The cost model of
+ Section~\ref{sec:meaning} uses relation yield and linear algebra measured
+ at $N\le2^{40}$ for $m\le3$; missing are proofs of the yield law,
+ measurements for $m\ge4$ and above $2^{40}$, a solver charge that covers the
+ split presentation and hybrid methods, and a lower bound growing in $k$ for
+ $m\ge3$, without which the proved floor keeps the four-summand Macaulay
+ route above rho only up to about $2^{293}$.
 \item \emph{Decomposition without a Gr\"obner basis.} On the binary curves
  of Section~\ref{sec:presentations} a second route to the decomposition step
  needs no Gr\"obner basis. If $P_1+P_2=T$ with $x_T\ne0$, then $P_1,P_2,-T$
@@ -3219,7 +3438,12 @@ now partly proved and partly computed rather than assumed. For the ECDLP the
 consequence is concrete: in the two-summand relation search of Petit,
 Kosters and Messeng, every attempt that finds no relation costs a
 Macaulay-matrix solver an amount exponential in the depth, so the cost of
-that search cannot be estimated with a bounded solver degree.
+that search cannot be estimated with a bounded solver degree. A fully
+charged cost model built on the proved degree floors and on yield and linear
+algebra measured up to $2^{40}$ finds no size between $2^{40}$ and $2^{256}$
+at which index calculus with at most eight summands beats Pollard rho; this
+is a model-based conclusion with the assumptions of Section~\ref{sec:meaning},
+not a theorem.
 
 From above, Lean checks the finite-quotient bound $mk+1$ for all three
 families and, for two-summand prime chains on nonsingular curves, the bound
@@ -3236,7 +3460,11 @@ last depth $11$, for a presentation with the same LFD, fit the law
 $\lfloor(k+14)/4\rfloor$, and refute none of the six advance predictions.
 With three to eight summands the bound $mk+1$ is attained at $k\le m-1$ on
 $409$ of $412$ instances because the generator already has full degree, while
-at $m=4$, $k=4$ the value is $13$, below $17$. For binary curves every law
+at $m=4$, $k=4$ the value is $13$, below $17$. For every $m\ge3$ the
+direct presentation has $\lfd\ge m\min(k,m-1)+1$ under explicit
+nondegeneracy conditions (written proof with a kernel-checked core), a
+floor that is constant in $k$ once $k\ge m$; for three summands the
+second engine measures $8$ at $k=6$ and at least $8$ at $k=7$. For binary curves every law
 recorded in advance has been refuted.
 
 From below, the first fall degree stays at $3$ or $4$ (kernel-checked), so an
@@ -3285,7 +3513,12 @@ uncertified depth-$14$ lift. The eight modules
 imported by the root module and are not among the \LEANDECLS{}
 declarations: a separate workflow (\code{non-torsion-bridge.yml}) builds
 them and allows only the three foundational axioms for $58$ of their
-theorems (run 43814371146 of that workflow passed).
+theorems (run 43814371146 of that workflow passed). The module
+\code{CarryAllM.lean} of Theorem~\ref{thm:allm} was added after the
+receipt of commit \code{1c929ae}; it was built from source with the pinned
+Lean and Mathlib, contains no \code{sorry}, \code{axiom} or
+\code{native\_decide}, and its declarations print only the three
+foundational axioms.
 
 Table~\ref{tab:lean} maps each statement of the paper to its declarations,
 named relative to the root namespace \code{ICFallDegrees}; in each cell a
@@ -3310,6 +3543,7 @@ First fall degree $3$ or $4$ & \code{PrimeM2General.exact\_ordinary\_ffd}, \code
 Theorem~\ref{thm:selector} & \code{SelectorBound.lfd\_le\_depth\_add\_two}, \code{SelectorExtension.lfd\_le\_depth\_add\_two\_of\_two\_ne} (six modules \code{Selector*.lean}); value $4$ at $k=2$: \code{SelectorExtension.exact\_lfd\_four\_at\_depth\_two}\\
 Theorem~\ref{thm:three} & \code{QuadraticNoLow.no\_one\_at\_three}, \code{GeneralQuadratic\allowbreak{}Classification.\allowbreak{}degree\_three\_syzygy\_zero} (module \code{HomogeneousFirstFall} for the syzygy classification), \code{PrimeM2Lower.no\_one\_at\_three}, \code{lfd\_ge\_four\_of\_unit}\\
 Theorem~\ref{thm:carry} & \code{FiniteQuotient.closure\_le\_quotient\_span} (file \code{QuotientLowerBound.lean}), \code{CarryLower.not\_hasLFDBound\_of\_carry}, \code{chain\_carry\_lower}, \code{M3CarryLower.m3\_lfd\_ge\_seven}, \code{prime\_field\_m3\_lfd\_ge\_seven}\\
+Theorem~\ref{thm:allm} (core) & \code{CarryAllM.lift\_congr}, \code{weight\_two\_pow\_sub\_one}, \code{weight\_le\_pred}, \code{lfd\_ge\_full}, \code{lfd\_eq\_full}, \code{lfd\_ge\_onset}, \code{m3\_onset}; \code{M3CarryLower.coeff\_s4\_333}\\
 Theorem~\ref{thm:bridge} & \code{ChainClosureBridge.chain\_mem\_closure\_iff}\\
 Theorem~\ref{thm:reduction} & \code{DepthReduction.W} (the space $W^{k_0,D}_k(S)$), \code{W\_closed}, \code{single\_zero\_mem\_W\_iff}, \code{ChainModelMap.n5\_lfd\_ge\_five}, \code{prime\_field\_n5\_lfd\_ge\_five}\\
 Depth-$7$ instances & \code{N5CertInstanceP40961.not\_one\_in\_closure}, \code{N5CertInstanceP11.not\_one\_in\_closure}; $\lfd\ge5$: \code{lfd\_ge\_five} in \code{N5CertWitnessInstanceP40961} and \code{N5CertWitnessInstanceP11}; schema \code{GrowthSchema.growth\_schema}\\
@@ -4019,6 +4253,7 @@ Explicit prime cutoffs and rational-family replay & \code{experiments/explicit-p
 Function field and pole orders for $Y\ne0$ (Proposition~\ref{prop:nontorsion}) & \code{formal/ICFallDegrees/GrowthNonTorsion*.lean}, \code{formal/N8NonTwoTorsionPolesAudit.lean}; notes \code{docs/proofs/N8-non-t*.md}; local kernel receipts \code{experiments/non-two-torsion-*/}\\
 Depth-$7$ and depth-$6$ kernel certificates & \code{experiments/\allowbreak{}ic-bounds-cert/}, \code{experiments/\allowbreak{}ic-bounds-exact-k6/}\\
 Written proofs & \code{docs/proofs/U1-upper-bounds.md} (selector), \code{N5-reduction.md}, \code{N6-genericity.md}, \code{N8-growth.md}; notes on Theorem~\ref{thm:growthfixed}: \code{N8-two-torsion-rational-route.md}, \code{N8-rational-unit-family.md}, \code{N8-prime-specialization-20261113.md}, \code{N8-fermat-diagonal-obstruction-20261114.md} and the other \code{N8-*.md}; reviews of the written growth proof: \code{N8-growth-review.md}, \code{N8-growth-review-redteam.md}\\
+Theorem~\ref{thm:allm} (after the snapshot) & note \code{paper/notes/carry-allm.tex} (complete written proofs, coefficients $c_2,\ldots,c_5$, values $\kappa_2,\ldots,\kappa_8$, numerical checks); Lean core \code{formal/ICFallDegrees/CarryAllM.lean}\\
 Selector-bound test (summaries) & \code{experiments/\allowbreak{}ic-bounds-upper/}, \code{experiments/\allowbreak{}ic-bounds-upper-redteam/}\\
 Genericity denominator, twists & \code{experiments/\allowbreak{}ic-bounds-genericity/}\\
 Reviews & \code{docs/reviews-papers-proofs-20261112.md} and \code{docs/reviews-20261112/} (internal AI referee reports), \code{docs/reviews-paper-audit-20261112.md}, \code{docs/reviews-curve-lfd-redteam-20261105.md}, \code{docs/reviews-curve-lfd-novelty-20261105.md}, \code{docs/reviews-U1-upper-bound-redteam-20261110.md}, \code{docs/reviews-N8-growth-redteam-20261112.md}, \code{docs/reviews-N8-growth-redteam2-20261112.md}\\
@@ -4045,6 +4280,8 @@ Reference engine, depths $10$--$13$ & \code{experiments/\allowbreak{}ic-bounds-d
 Third engine, depths $10$--$16$; lift & \code{experiments/\allowbreak{}ic-bounds-k14/} (\code{RESULTS.md}, \code{README.md}, \code{LIFT.md}, \code{CERTCHECK.md}; \code{runs/lift-unit-p65537-k14-D6to7.json}, \code{runs/lift-unit-p163841-k14-D6to7.json}, \code{runs/lift-proper-p114689-k14-D6to7.json}, \code{runs/reference-engine-unit-p65537-k14-D5.json} with \code{-k10-D6.json} and \code{-k11-D6.json}, \code{validation/lift-k10d5-proper.json}; instances in \code{instances/})\\
 Second lift at $k=14$ & \code{experiments/\allowbreak{}ic-bounds-k14-independent/} (\code{PLAN.md}, \code{RESULT-unit-p65537.md}, \code{RESULT-unit-p163841.md}, \code{pod/}, \code{pod-p163841/})\\
 Second engine: records, standalone extract, lift and local gate (written in another repository; after the snapshot) & \code{second-engine/} (\code{README.md}, \code{PROVENANCE.md}; \code{engine/}, \code{lift/}, \code{records/}, \code{gate-20261119/})\\
+Depth growth with three and four summands (after the snapshot) & \code{experiments/\allowbreak{}msum-growth/} (\code{README.md}, \code{PREREGISTRATION.md}, driver \code{rust/}, \code{records/})\\
+End-to-end attack and cost model (Section~\ref{sec:meaning}; after the snapshot) & \code{experiments/\allowbreak{}ic-endtoend/} (\code{README.md}, \code{PREREGISTRATION.md}, \code{results/summary.md}); \code{experiments/\allowbreak{}ic-costmodel/} (\code{README.md}, \code{PREREGISTRATION.md}, \code{results/headline.md}, \code{results/sweep.jsonl}, \code{results/validation.md})\\
 Second engine at $k=13,14$ over $p=2013265921$; later split readings & \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_pod\_runs\_20261117/} (\code{RESULTS.md}, \code{LAUNCH.md}; \code{results/t13\_hky2.jsonl}, \code{t14\_hky2.jsonl}, \code{t14\_progress.jsonl}, \code{t14\_rss.log}, \code{prog\_m6-T2.jsonl}, \code{b\_m7-T2.jsonl}, \code{b\_m8-T2.jsonl}, \code{prog\_m9-T2-cols12M.jsonl}); engine \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_engine\_speed\_20261117/README.md}, \code{second-engine/\allowbreak{}engine/\allowbreak{}src/\allowbreak{}cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast.rs}\\
 Second engine, later version, at $k=14$ on the unit instance over $p=65537$ & \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_paper\_runs\_20261118/} (\code{README.md}, \code{pod/LAUNCH.md}; \code{results/J1/record.json}, \code{job.json}, \code{basis.bin.json}); engine \code{second-engine/\allowbreak{}engine/} (\code{src/\allowbreak{}cryptanalysis/\allowbreak{}hky\_fp\_tower\_fast2.rs}, \code{examples/\allowbreak{}pkm\_tower\_pilot.rs}), \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_engine\_opt\_20261118/README.md}\\
 Third lift at $k=14$ over $p=65537$; second engine at $k=14$ over $p=163841$, at $k=15$ and at $k=16$ over $p=786433$ & \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_paper\_runs\_20261118/}: \code{results/J1/lift/} (\code{lift\_ref.rust.json}, \code{lift\_ref.verify.json}); \code{results/J2/}, \code{results/J3/}, \code{results/J4s/} (\code{record.json}, \code{job.json}); \code{instances/\allowbreak{}unit-p786433-a1-s10-k16.json}; \code{PREDICTIONS.md}, \code{pod/LAUNCH.md}; lift \code{second-engine/\allowbreak{}lift/}; skip criterion \code{second-engine/\allowbreak{}records/\allowbreak{}hky\_engine\_skip\_20261118/} (\code{PROOF.md}, \code{README.md})\\

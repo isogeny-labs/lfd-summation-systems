@@ -1,0 +1,12 @@
+[package]
+name = "ic-costmodel"
+version = "0.1.0"
+edition = "2021"
+description = "Fully charged cost model of PKM prime-field index calculus against Pollard rho"
+license = "MIT"
+
+[dependencies]
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
