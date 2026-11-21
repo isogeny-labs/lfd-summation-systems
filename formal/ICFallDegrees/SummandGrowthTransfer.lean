@@ -115,10 +115,68 @@ theorem pairIterate_closed (c s : K) (r : ℕ) :
       have h2 : 4^r*4 = 4^(r+1) := by rw [pow_succ]
       rw [h1, h2]
 
+section Counting
+variable {A : Type*} [AddCommMonoid A] [DecidableEq A]
+
+/-- The points in B need not be rational over the field of the target set. -/
+def sumTargets (B : Finset A) (m : ℕ) : Finset A := by
+  classical
+  exact Finset.univ.image (fun xs : Fin m → {x // x ∈ B} => ∑ i, (xs i : A))
+
+theorem card_sumTargets_le (B : Finset A) (m : ℕ) :
+    (sumTargets B m).card ≤ B.card ^ m := by
+  classical
+  unfold sumTargets
+  calc
+    _ ≤ (Finset.univ : Finset (Fin m → {x // x ∈ B})).card := Finset.card_image_le
+    _ = B.card ^ m := by simp
+
+theorem exists_target_outside_sums (B Q Z : Finset A) (m : ℕ)
+    (enough : B.card ^ m + Z.card < Q.card) :
+    ∃ R ∈ Q, R ∉ Z ∧ ∀ xs : Fin m → {x // x ∈ B}, (∑ i, (xs i : A)) ≠ R := by
+  classical
+  have not_subset : ¬ Q ⊆ sumTargets B m ∪ Z := by
+    intro h
+    have h1 := Finset.card_le_card h
+    have h2 := Finset.card_union_le (sumTargets B m) Z
+    have h3 := card_sumTargets_le B m
+    omega
+  obtain ⟨R, hR, outside⟩ := Finset.not_subset.mp not_subset
+  have hsum : R ∉ sumTargets B m := fun h => outside (Finset.mem_union_left Z h)
+  have hZ : R ∉ Z := fun h => outside (Finset.mem_union_right _ h)
+  refine ⟨R, hR, hZ, ?_⟩
+  intro xs eq
+  apply hsum
+  unfold sumTargets
+  exact Finset.mem_image.mpr ⟨xs, Finset.mem_univ _, eq⟩
+end Counting
+
+/-- Repeated squaring pays the maximum degree budget, not the sum of all
+budgets. Concrete chain-normal-form corrections must still be supplied. -/
+theorem normalized_square_tower (F : Set (MvPolynomial σ K))
+    (h : ℕ → MvPolynomial σ K)
+    (degree : ∀ j, (h j).totalDegree ≤ 2*(j+1))
+    (base : InClosure F 2 (h 0))
+    (correction : ∀ j, InClosure F (4*(j+1)) (h j ^ 2 - h (j+1)))
+    (n : ℕ) : InClosure F (max 2 (4*n)) (h n) := by
+  induction n with
+  | zero => simpa using base
+  | succ n ih =>
+      have prior : InClosure F (4*(n+1)) (h n) := ih.mono (by omega)
+      have square : InClosure F (4*(n+1)) (h n ^ 2) := by
+        simpa only [pow_two] using prior.mul (h n) (by have := degree n; omega)
+      have next := square.sub (correction n)
+      have identity : h n ^ 2 - (h n ^ 2 - h (n+1)) = h (n+1) := by ring
+      rw [identity] at next
+      simpa only [max_eq_right (by omega : 2 ≤ 4*(n+1))] using next
+
 #print axioms map_closure_budget
 #print axioms not_one_of_specialization
 #print axioms no_lfd_bound_of_specialization
 #print axioms prime_growth_transfer
 #print axioms order_two_pair_specialization
 #print axioms pairIterate_closed
+#print axioms card_sumTargets_le
+#print axioms exists_target_outside_sums
+#print axioms normalized_square_tower
 end ICFallDegrees.SummandGrowthTransfer

@@ -263,3 +263,48 @@ Source for the standard summation-polynomial properties: Igor Semaev,
 [Summation polynomials and the discrete logarithm problem on elliptic curves](https://eprint.iacr.org/2004/031),
 Theorem 1. The new written argument above must be reviewed separately from
 that source and from the repository's existing two-summand proof.
+
+
+## Formal counting and a sharper preprocessing candidate
+
+`card_sumTargets_le` now proves the finite counting inequality
+|{sum of m points from B}| <= |B|^m in any additive commutative monoid.
+`exists_target_outside_sums` proves that |Q| > |B|^m+|Z| yields a target
+in Q outside both those sums and Z. B and Q are independent finite sets
+in the same ambient group: there is no hypothesis that the points of B
+are rational whenever Q is the rational target set. Both lemmas passed
+local Lean elaboration and axiom printing. Applying them to the actual
+elliptic curve still requires its finite algebraic-closure factor-base set,
+the fiber bound 2N, and Hasse's inequality; these are not hidden assumptions
+of a claimed Lean elliptic-curve theorem.
+
+There is also a sharper written preprocessing candidate. Let h_j be the
+chain normal form of raw S3 raised to 2^j, for the appropriate specialized
+two-summand target. Its degree in each raw coordinate is at most 2^(j+1).
+Every integer exponent e<=2^(j+1) has binary weight at most j+1; reducing
+e modulo 2^k also satisfies that bound. Therefore deg(h_j)<=2(j+1).
+A square of h_j has ordinary chain degree at most 4(j+1), and its
+normalization correction h_j^2-h_{j+1} is derivable from the chains
+within that same budget.
+
+Starting from the normalized S3 input h_0 at degree two and normalizing
+after each square would thus derive h_n at max(2,4n), rather than at the
+raw total degree 4*2^n. Both parity formulas require n=m-2. This proposes
+
+    C_m = 4(m-2), m>=3,
+
+which would reduce the sufficient initial depth to 178 for m=5 and 234
+for m=6. These sharper thresholds do not replace the conservative theorem
+candidate above until the concrete normalization and support claims have
+been independently checked and formally instantiated.
+
+`normalized_square_tower` formalizes the degree-budget induction: given
+the actual degree estimates and degree-charged normalization corrections,
+it derives h_n at max(2,4n). It does not assume an oracle identifying a
+normal form with a closure element. The remaining work is to construct
+those corrections and support estimates for the actual two-chain input.
+
+The integer support bound was checked exhaustively on e=0..2^(j+1),
+j=0..16, with residues modulo 2^k for k=2,3,5,8,12,20: 1,572,954 checks
+passed. This is arithmetic falsification evidence, not a closure certificate
+and not a proof for arbitrary j and k.
