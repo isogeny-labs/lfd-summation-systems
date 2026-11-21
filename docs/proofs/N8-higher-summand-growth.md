@@ -4,6 +4,24 @@ Status: work in progress, PR #45. The higher-summand growth theorem is not
 proved. The transfer statements below have passed the local Lean elaborator;
 their CI validation is tracked on the PR. No new exact closure is asserted.
 
+## Current preprocessing status
+
+The target-side linear preprocessing bound is now proved in Lean.
+`normalForm_rawEmbed` identifies the explicit binary lift of every raw
+polynomial with its actual chain normal form. `actual_s3_power_degree`
+then proves deg NF(g^(2^j)) <= 2(j+1) for the actual normalized two-summand
+generator g, for every depth k>=2 and every field of characteristic other
+than two. `prime_input_power_derived` constructs its degree-charged derivation
+at max(2,4n), without a support or correction hypothesis.
+
+Thus the target-side cost for the powers in the written specialization is
+C_m=4(m-2) for m>=3. The old exponential cost below is retained as a
+conservative derivation and for comparison; the linear cost supersedes it
+on the target side. The source-side universal Semaev specialization,
+commutation with fixing the extra chains, and actual elliptic-curve target
+counting still need formalization and independent review. Consequently the
+full higher-summand growth theorem remains a written proof candidate.
+
 ## What is already proved at arbitrary depth
 
 `GrowthRationalPrimeNative.not_one_of_large_prime` excludes 1 from the
@@ -338,3 +356,32 @@ support of its chain normal form. Thus C_m=4(m-2) and the improved numerical
 thresholds remain provisional. The concrete square corrections and base
 input are now constructed; the polynomial support bound, universal Semaev
 identity, and actual elliptic-curve counting instantiation are the open gates.
+
+
+## Identification with the actual normal form
+
+`rawEmbed` substitutes the first variable of each chain for the corresponding
+raw coordinate. The proof of `normalForm_rawEmbed` starts with monomials of
+coefficient one. The existing `normalForm_X_mul_monomial` carry theorem
+handles one multiplication by a base chain variable, including top wrap.
+Finsupp induction builds arbitrary exponents; linearity then handles every
+coefficient and sums of monomials. This proves the actual normal form is
+exactly `binaryLift`, rather than merely a reduced polynomial with the desired
+degree. The proof applies to arbitrary positive depths and arbitrary block
+counts, with characteristic other than two.
+
+For S3, `rawEmbed_s3` checks the polynomial substitution and
+`raw_normalized_congr` proves its difference from the normalized generator
+belongs to the chain ideal, using the explicit degree-four normalization
+identity. `nf_pow_of_congr` transports that congruence through arbitrary
+powers via the ideal quotient. Together with the binary lift bound these
+prove `actual_s3_power_degree`, and finally `prime_input_power_derived`.
+The final result has no support-degree hypothesis and no supplied correction
+rows. All statements passed local elaboration and printed only propext,
+Classical.choice and Quot.sound.
+
+Under the remaining written source-specialization argument, the sufficient
+initial depth becomes k>=56(m-2)+10: 178 for m=5 and 234 for m=6. These are
+sufficient thresholds in a proof candidate, not exact breakpoints, measured
+values, or claims about every rational target. The sharper slope 1/4 is still
+open. CI on this source snapshot is separate from local elaboration.

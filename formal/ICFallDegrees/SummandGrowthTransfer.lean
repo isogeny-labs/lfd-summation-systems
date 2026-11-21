@@ -379,3 +379,184 @@ end BinaryLift
 #print axioms binaryLift_reduced
 #print axioms binaryLift_s3_power_degree
 end ICFallDegrees.SummandGrowthTransfer
+
+namespace ICFallDegrees.SummandGrowthTransfer
+open MvPolynomial FiniteQuotient ChainQuotient ChainTranslation ChainModelMap ChainClosureBridge
+open scoped BigOperators
+noncomputable section
+variable {m : ℕ} {L : Type*} [Field L]
+
+def rawEmbed (k : ℕ) (hk : 0 < k) :
+    MvPolynomial (Fin m) L →ₐ[L] P (m*k) L :=
+  aeval (fun i => X (var m k i ⟨0,hk⟩))
+
+theorem nf_raw_monomial_one (two_ne : (2:L) ≠ 0) (k : ℕ) (hk : 0 < k)
+    (e : Fin m →₀ ℕ) :
+    normalForm (chainInputs L m k) (chainInputs_nonzero m k)
+      (rawEmbed k hk (monomial e 1)) =
+    monomial (digits k (fun i => e i % 2^k)) 1 := by
+  classical
+  let G := chainInputs L m k
+  let nz := chainInputs_nonzero (K:=L) m k
+  let z := reduced_chain_ideal_trivial m k two_ne
+  let P := fun e : Fin m →₀ ℕ =>
+    normalForm G nz (rawEmbed k hk (monomial e 1)) =
+      monomial (digits k (fun i => e i % 2^k)) 1
+  have step (e : Fin m →₀ ℕ) (i : Fin m) (ih : P e) : P (e+Finsupp.single i 1) := by
+    have raw : rawEmbed k hk (monomial (e+Finsupp.single i 1) (1:L)) =
+        X (var m k i ⟨0,hk⟩) * rawEmbed k hk (monomial e 1) := by
+      have id : monomial (e+Finsupp.single i 1) (1:L) = X i * monomial e 1 := by
+        rw [X, monomial_mul, one_mul, add_comm]
+      rw [id, map_mul]
+      simp [rawEmbed]
+    change normalForm G nz _ = _
+    rw [raw, normalForm_mul_normalForm G nz z]
+    rw [show normalForm G nz (rawEmbed k hk (monomial e 1)) =
+      monomial (digits k (fun q => e q % 2^k)) 1 from ih]
+    rw [normalForm_X_mul_monomial two_ne i ⟨0,hk⟩ _
+      (fun q => Nat.mod_lt _ (Nat.two_pow_pos k))]
+    apply congrArg (fun b : Fin m → ℕ => monomial (digits k b) (1:L))
+    funext q
+    by_cases h : q=i
+    · subst q
+      simp [Nat.add_mod]
+    · simp [Function.update_of_ne h, Finsupp.single_apply, h, Ne.symm h]
+  change P e
+  induction e using Finsupp.induction with
+  | zero =>
+    change normalForm G nz (rawEmbed k hk (monomial 0 1)) = _
+    have dz : digits k (fun _ : Fin m => 0) = 0 := by
+      ext v
+      simp [digits_apply, bit]
+    simp only [Finsupp.zero_apply, Nat.zero_mod, dz]
+    rw [show (monomial (0 : Fin m →₀ ℕ) (1:L)) = 1 by rfl, map_one]
+    exact normalForm_one G nz z (chain_one_reduced m k)
+  | single_add i n e _ hn ih =>
+    clear hn
+    induction n with
+    | zero => simpa using ih
+    | succ n ihn =>
+      have h := step (Finsupp.single i n + e) i ihn
+      have eq : Finsupp.single i n + e + Finsupp.single i 1 =
+          Finsupp.single i (n+1) + e := by
+        ext q
+        simp [Finsupp.single_add, add_assoc, add_comm, add_left_comm]
+      simpa only [eq] using h
+
+theorem nf_raw_monomial (two_ne : (2:L) ≠ 0) (k : ℕ) (hk : 0 < k)
+    (e : Fin m →₀ ℕ) (c : L) :
+    normalForm (chainInputs L m k) (chainInputs_nonzero m k)
+      (rawEmbed k hk (monomial e c)) =
+    monomial (digits k (fun i => e i % 2^k)) c := by
+  have scalar : monomial e c = c • monomial e (1:L) := by simp only [smul_monomial, smul_eq_mul, mul_one]
+  rw [scalar, map_smul, normalForm_smul _ _ (reduced_chain_ideal_trivial m k two_ne),
+    nf_raw_monomial_one two_ne k hk]
+  simp only [smul_monomial, smul_eq_mul, mul_one]
+
+theorem normalForm_rawEmbed (two_ne : (2:L) ≠ 0) (k : ℕ) (hk : 0 < k)
+    (p : MvPolynomial (Fin m) L) :
+    normalForm (chainInputs L m k) (chainInputs_nonzero m k) (rawEmbed k hk p) =
+      binaryLift k p := by
+  classical
+  let G := chainInputs L m k
+  let nz := chainInputs_nonzero (K:=L) m k
+  let z := reduced_chain_ideal_trivial m k two_ne
+  have expansion : rawEmbed k hk p =
+      ∑ e ∈ p.support, rawEmbed k hk (monomial e (coeff e p)) := by
+    conv_lhs => rw [p.as_sum]
+    rw [map_sum]
+  rw [expansion]
+  change nfMap G nz z (∑ e ∈ p.support, rawEmbed k hk (monomial e (coeff e p))) = _
+  rw [map_sum]
+  unfold binaryLift
+  apply Finset.sum_congr rfl
+  intro e _
+  exact nf_raw_monomial two_ne k hk e (coeff e p)
+#print axioms normalForm_rawEmbed
+end
+end ICFallDegrees.SummandGrowthTransfer
+
+namespace ICFallDegrees.SummandGrowthTransfer
+open MvPolynomial FiniteQuotient ChainQuotient ChainClosureBridge
+noncomputable section
+variable {L : Type*} [Field L]
+
+theorem rawEmbed_s3 (k : ℕ) (hk : 2 ≤ k) (a b t : L) :
+    rawEmbed k (by omega : 0 < k) (GrowthReduction.S3poly a b t) =
+      PrimeM2General.rawS3 k hk a b t := by
+  have hv0 : var 2 k 0 ⟨0, by omega⟩ = PrimeM2General.active k hk 0 := by
+    apply Fin.ext
+    simp [var_val, PrimeM2General.active]
+  have hv1 : var 2 k 1 ⟨0, by omega⟩ = PrimeM2General.active k hk 2 := by
+    apply Fin.ext
+    simp [var_val, PrimeM2General.active]
+  simp only [GrowthReduction.S3poly, PrimeM2General.rawS3, map_sub, map_add,
+    map_mul, map_pow, map_ofNat, rawEmbed, aeval_X, aeval_C, hv0, hv1,
+    MvPolynomial.algebraMap_eq]
+
+theorem raw_normalized_congr (k : ℕ) (hk : 2 ≤ k) (a b t : L) :
+    PrimeM2General.rawS3 k hk a b t - PrimeM2General.normalized k hk a b t ∈
+      Ideal.span (chainInputs L 2 k) := by
+  have chains (i : Fin 2) :
+      (X (var 2 k i ⟨0, by omega⟩)^2-X (var 2 k i ⟨1, by omega⟩) : P (2*k) L) ∈
+        Ideal.span (chainInputs L 2 k) := by
+    have h := Ideal.subset_span (show chainPolynomial L 2 k (var 2 k i ⟨0, by omega⟩) ∈
+      chainInputs L 2 k from ⟨_, rfl⟩)
+    simpa only [chainPolynomial, chainTail, row_var, depth_var,
+      dif_pos (by omega : (0:ℕ)+1 < k)] using h
+  have hv0 : var 2 k 0 ⟨0, by omega⟩ = PrimeM2General.active k hk 0 := by
+    apply Fin.ext; simp [var_val, PrimeM2General.active]
+  have hv1 : var 2 k 0 ⟨1, by omega⟩ = PrimeM2General.active k hk 1 := by
+    apply Fin.ext; simp [var_val, PrimeM2General.active]
+  have hv2 : var 2 k 1 ⟨0, by omega⟩ = PrimeM2General.active k hk 2 := by
+    apply Fin.ext; simp [var_val, PrimeM2General.active]
+  have hv3 : var 2 k 1 ⟨1, by omega⟩ = PrimeM2General.active k hk 3 := by
+    apply Fin.ext; simp [var_val, PrimeM2General.active]; omega
+  have h0 := chains 0
+  have h1 := chains 1
+  rw [hv0, hv1] at h0
+  rw [hv2, hv3] at h1
+  rw [PrimeM2General.raw_normalization_identity]
+  exact (Ideal.span _).add_mem ((Ideal.span _).mul_mem_left _ h0)
+    ((Ideal.span _).mul_mem_left _ h1)
+
+theorem nf_pow_of_congr {r : ℕ} (G : Set (P r L)) (nz : (0 : P r L) ∉ G)
+    (z : ReducedIdealTrivial G) (p q : P r L) (hpq : p-q ∈ Ideal.span G) (n : ℕ) :
+    normalForm G nz (p^n) = normalForm G nz (q^n) := by
+  apply normalForm_eq_of G nz z (normalForm_reduced G nz _)
+  have hq : Ideal.Quotient.mk (Ideal.span G) p = Ideal.Quotient.mk (Ideal.span G) q :=
+    Ideal.Quotient.eq.mpr hpq
+  have hpow : Ideal.Quotient.mk (Ideal.span G) (p^n) =
+      Ideal.Quotient.mk (Ideal.span G) (q^n) := by
+    simpa only [map_pow] using congrArg (fun x => x^n) hq
+  have diff : p^n-q^n ∈ Ideal.span G := Ideal.Quotient.eq.mp hpow
+  have id : p^n-normalForm G nz (q^n) =
+      (p^n-q^n)+(q^n-normalForm G nz (q^n)) := by ring
+  rw [id]
+  exact (Ideal.span G).add_mem diff (sub_normalForm_mem G nz _)
+
+/-- The actual normal-form support bound, with no support or correction hypothesis. -/
+theorem actual_s3_power_degree (two_ne : (2:L) ≠ 0)
+    (k : ℕ) (hk : 2 ≤ k) (a b t : L) (j : ℕ) :
+    (normalForm (chainInputs L 2 k) (chainInputs_nonzero 2 k)
+      ((PrimeM2General.normalized k hk a b t)^(2^j))).totalDegree ≤ 2*(j+1) := by
+  have hc := raw_normalized_congr k hk a b t
+  rw [← rawEmbed_s3 k hk a b t] at hc
+  have eq := nf_pow_of_congr (chainInputs L 2 k) (chainInputs_nonzero 2 k)
+    (reduced_chain_ideal_trivial 2 k two_ne) _ _ hc (2^j)
+  rw [← eq, ← map_pow, normalForm_rawEmbed two_ne k (by omega)]
+  exact binaryLift_s3_power_degree k j a b t
+
+/-- Kernel derivation of the required powers at a budget linear in their logarithm. -/
+theorem prime_input_power_derived (two_ne : (2:L) ≠ 0)
+    (k : ℕ) (hk : 2 ≤ k) (a b t : L) (n : ℕ) :
+    InClosure (Set.range (PrimeM2General.inputs k hk a b t)) (max 2 (4*n))
+      (normalForm (chainInputs L 2 k) (chainInputs_nonzero 2 k)
+        ((PrimeM2General.normalized k hk a b t)^(2^n))) :=
+  prime_input_power_tower two_ne k hk a b t (actual_s3_power_degree two_ne k hk a b t) n
+
+#print axioms raw_normalized_congr
+#print axioms actual_s3_power_degree
+#print axioms prime_input_power_derived
+end
+end ICFallDegrees.SummandGrowthTransfer
