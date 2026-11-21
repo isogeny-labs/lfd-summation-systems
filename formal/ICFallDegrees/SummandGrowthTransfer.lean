@@ -97,9 +97,28 @@ theorem order_two_pair_specialization (a x y : K) :
   unfold quadraticSylvester
   ring
 
+/-- Scalar recurrence produced by repeatedly removing two order-two arguments.
+The connection to universal Semaev polynomials is a separate written argument. -/
+def pairIterate (c s : K) : ℕ → K
+  | 0 => s
+  | r+1 => c^(4^(r+1)) * pairIterate c s r ^ 4
+
+theorem pairIterate_closed (c s : K) (r : ℕ) :
+    pairIterate c s r = c^(r*4^r) * s^(4^r) := by
+  induction r with
+  | zero => simp [pairIterate]
+  | succ r ih =>
+      rw [pairIterate, ih, mul_pow, ← pow_mul, ← pow_mul, ← mul_assoc, ← pow_add]
+      have h1 : 4^(r+1) + r*4^r*4 = (r+1)*4^(r+1) := by
+        rw [pow_succ]
+        ring
+      have h2 : 4^r*4 = 4^(r+1) := by rw [pow_succ]
+      rw [h1, h2]
+
 #print axioms map_closure_budget
 #print axioms not_one_of_specialization
 #print axioms no_lfd_bound_of_specialization
 #print axioms prime_growth_transfer
 #print axioms order_two_pair_specialization
+#print axioms pairIterate_closed
 end ICFallDegrees.SummandGrowthTransfer

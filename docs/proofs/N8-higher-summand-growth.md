@@ -108,3 +108,158 @@ prove it. It also does not rule out other targets or families for odd m.
 
 The prior depth-fourteen certificate, split-D8, and depth-eighteen computations
 are not marked complete by these transport lemmas.
+
+
+## Written extension for every fixed m: proof candidate
+
+This section is a written proof candidate, not a Lean theorem about Semaev
+polynomials. It uses the existing written two-summand growth theorem, the
+standard defining zero property of Semaev polynomials, and Hasse's bound.
+The normalization, universal-resultant, and counting arguments below still
+need independent review and formalization before a headline claim is changed.
+The earlier remaining-obligations list records the formalization gates; the
+following argument proposes how to discharge the mathematical ones.
+
+### Two universal resultant identities
+
+Write S_n for the universal, symmetric summation polynomial with its usual
+normalization, S_2(x,y)=x-y, and formal degree 2^(n-2) in each variable.
+These are the polynomials defined before specializing the arguments.
+The recursion with the last two arguments grouped together gives
+
+    S_n(U,u,v) = Res_z(S_{n-1}(U,z), S_3(u,v,z)).
+
+There are n-2 arguments in U and the first polynomial has degree
+ d=2^(n-3) in z. As a polynomial in v, the coefficient of v^2 in
+S_3(u,v,z) is (z-u)^2. Homogeneity of the Sylvester determinant in its
+second input therefore gives
+
+    [v^(2d)] S_n(U,u,v) = Res_z(S_{n-1}(U,z), (z-u)^2)
+                             = S_{n-1}(U,u)^2.
+
+This is an identity of universal coefficients, so it remains valid when
+specialization makes that coefficient zero. Equivalently, the leading
+formal coefficient of S_{n-1}(U,z) is S_{n-2}(U)^2.
+
+For E_a and c=(a+3)^2, S_3(1,1,z)=c. The formal-degree Sylvester determinant
+with a second input specialized to a constant has value LC(P)^2*c^d.
+Consequently, for n>=4,
+
+    S_n(U,1,1) = c^(2^(n-3)) * S_{n-2}(U)^4.                 (A)
+
+For one order-two argument and t!=1, put u=(t+a+2)/(t-1). Directly,
+
+    S_3(1,t,z) = ((t-1)*z-(t+a+2))^2,
+    S_4(x,y,1,t) = (t-1)^4 * S_3(x,y,u)^2.                  (B)
+
+The second equality follows by taking the resultant against that squared
+linear polynomial. No new curve is introduced: u is the abscissa of R+T
+on E_a when t is the abscissa of R.
+
+Applying (A) repeatedly gives these exact formulas:
+
+* m=2r+2: S_{m+1}(x,y,1,...,1,t)
+      = c^(r*4^r) * S_3(x,y,t)^(4^r).
+* m=2r+3, t!=1: the same specialization equals
+      c^(2*r*4^r) * (t-1)^(4^(r+1)) * S_3(x,y,u)^(2*4^r).
+
+The even scalar recurrence is separately checked in Lean by
+`pairIterate_closed`; that lemma does not itself define Semaev polynomials.
+Exact arithmetic using the existing formal-degree resultant engine agreed
+with both formulas in 252 cases: m=2..8, primes 257 and 65537, parameters
+0 and 6, (x,y)=(2,3),(1,2),(7,7), and t=3,5,11. These checks include
+vanishing intermediate leading coefficients. Separately 126 checks at
+t=1, including a=-3, agreed with the torsion/diagonal formulas. These are
+polynomial identity checks, not closure computations or an induction proof.
+
+### An explicit preprocessing cost independent of depth
+
+A deliberately loose total-degree bound for S_{m+1} is
+
+    C_m = (m-1)*2^m,  m>=2.
+
+To check it without using a sharp degree formula: S_3 has total degree at
+most 4. If S_{n-1} has total degree at most delta, its resultant with S_3
+has total degree at most 2*delta+4*2^(n-3), since each determinant term uses
+two coefficients of S_{n-1} and 2^(n-3) coefficients of S_3. Induction gives
+S_n total degree at most (n-2)*2^(n-1).
+
+Every binary-chain normalization step replaces a square by its successor
+(or by 1) and does not raise ordinary degree. The difference between a raw
+polynomial of degree at most C_m and its chain normal form is therefore
+derivable from the chains at degree C_m. This holds before and after fixing
+extra chains to 1, and the resulting normal form commutes with that fixing.
+
+The right side of either specialization formula is a scalar times a power
+of a raw S_3. That power has total degree at most 2^m <= C_m. Its derivation
+from the normalized two-summand S_3 and the two chains stays within C_m:
+first recover raw S_3 using its degree-four normalization identity, multiply
+by its remaining power with the literal product-degree budget, then normalize
+again. Scalars involving t are constants of the coefficient field.
+Thus the specialized-input condition in the transport theorem holds at
+max(D,C_m). This does not assert that the source generator has small degree
+at every D: if its degree exceeds D it is not an available input, exactly
+as the transport hypothesis specifies.
+
+### Conditional lower bound for the actual direct m-summand input
+
+Let E_a be nonsingular, t!=0,1, and t+a+2!=0. Assume
+
+    k >= 14*max(D,C_m)+10,  D>=1,  p > 2^(k+1).
+
+For even m use the two-summand target t; for odd m use u. Both target
+abscissae are nonzero. The existing written two-summand growth theorem
+excludes 1 at degree max(D,C_m). The specialization and preprocessing
+argument just given then exclude 1 from the degree-D closure of the
+normalized direct m-summand input. If that input is a unit ideal, its
+last fall degree is greater than D. This implication does not assume or
+infer source unit status from a two-dimensional slice.
+
+### Prime-field unit instances exist for every such depth
+
+Take E_0: y^2=x^3-1 over F_p, and H of order N=2^k. In the algebraic
+closure, there are at most 2N affine points whose abscissa belongs to H.
+Therefore the set of sums of m such points has size at most
+
+    B = (2N)^m.
+
+It is closed under negation. By the defining zero property of summation
+polynomials, any rational target R outside this sum set has no zero of
+S_{m+1}(H^m,x(R)). Notice that the summands here range over the algebraic
+closure, not just E(F_p); restricting this count to rational summands would
+not establish unit status of the polynomial system.
+
+Exclude also O and targets of abscissa 0,1,-2, at most seven further points.
+Hasse gives #E(F_p)>=p+1-2*sqrt(p)>p/2 for p>=16. Hence a suitable rational
+target exists whenever
+
+    p > max(16, 4*(B+7)).
+
+For this target, t and (t+2)/(t-1) satisfy all guards above. The chain
+quotient splits as the function algebra on H^m, since p is odd and
+N divides p-1. The nonvanishing summation input is invertible in that
+algebra, so the actual source input generates the unit ideal.
+
+Combining the arguments: for each fixed m>=2, each D>=1, and each depth
+k>=14*max(D,C_m)+10, every prime satisfying
+
+    N divides p-1,
+    p > max(2^(k+1), 16, 4*((2N)^m+7))
+
+admits a rational target on E_0 whose direct m-summand system has LFD>D.
+The standard chain upper bound also gives LFD<=mk+1. Primes in this
+progression are unbounded, so these conditions provide prime-field
+instances at arbitrarily large depths. This is an existence statement
+with targets chosen after p and k; it is not a statement about every target
+or the frozen computational instances.
+
+For k>=14*C_m+10, taking D=floor((k-10)/14) yields the written candidate
+window floor((k-10)/14)+1 <= LFD <= mk+1. Its lower asymptotic slope is 1/14
+for every fixed m. No slope-1/4 claim follows. For example C_5=128 gives
+an initial sufficient depth 1802 and C_6=320 gives 4490; this deliberately
+loose preprocessing bound is far beyond the observed small-depth cells.
+
+Source for the standard summation-polynomial properties: Igor Semaev,
+[Summation polynomials and the discrete logarithm problem on elliptic curves](https://eprint.iacr.org/2004/031),
+Theorem 1. The new written argument above must be reviewed separately from
+that source and from the repository's existing two-summand proof.
