@@ -63,7 +63,9 @@
       "LFD >= 4 for every unit-ideal two-summand chain system with 3t^2+a != 0, at every depth k >= 2 (Theorem thm:three)",
       "LFD >= 7 for three-summand chain systems with the chain normal form of S_4, at every depth k >= 3, when 5t^3+3at+6b != 0 (Theorem thm:carry)",
       "first fall degree of the two-summand prime systems is 3 or 4 at every depth k >= 2 (an FFD statement, not an LFD one)",
-      "an exclusion of 1 from the degree-D closure at depth k persists at every larger depth, so unit-ideal instances there have LFD > D (Theorem thm:restrict)"
+      "an exclusion of 1 from the degree-D closure at depth k persists at every larger depth, so unit-ideal instances there have LFD > D (Theorem thm:restrict)",
+      "for the direct m-summand presentation and an arbitrary generator S: LFD = mk+1 when deg NF(S) = mk and some NF(x_i S) is not a multiple of NF(S); for k >= m >= 3, LFD >= m(m-1)+1 when S has degree at most 2^(m-1) in each variable and a nonzero coefficient at x^tau; the onset for m = 3 with the kernel expansion of S_4 (core of Theorem thm:allm)",
+      "growth for a target of order two (Theorem thm:growthfixed, items 1-5): over C for |a| > 5 and rational a outside {-3,-3/4,-1,1}; for E6 over F_p above the stated cutoffs; properness of the ideal at prime factors of Fermat numbers; for E6, k >= 38 and 2^(k+1) | p-1, LFD > floor((k-10)/14) without a unit-ideal premise"
     ],
     "kernel_components": [
       "ICFallDegrees.SelectorExtension.lfd_le_depth_add_two_of_two_ne",
@@ -72,12 +74,70 @@
       "ICFallDegrees.M3CarryLower.m3_lfd_ge_seven",
       "ICFallDegrees.M3CarryLower.prime_field_m3_lfd_ge_seven",
       "ICFallDegrees.PrimeM2General.exact_ordinary_ffd",
-      "ICFallDegrees.DepthRestrictionM2.lfd_gt_of_le"
+      "ICFallDegrees.DepthRestrictionM2.lfd_gt_of_le",
+      "ICFallDegrees.CarryAllM.lfd_eq_full",
+      "ICFallDegrees.CarryAllM.lfd_ge_onset",
+      "ICFallDegrees.CarryAllM.m3_onset",
+      "ICFallDegrees.GrowthTwoTorsionFamily.exists_lfd_linear_window",
+      "ICFallDegrees.GrowthRationalParameterClassification.exists_lfd_linear_window",
+      "ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime",
+      "ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window",
+      "ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat_factor",
+      "ICFallDegrees.GrowthJetPolynomial.e6_prime_lfd_linear"
     ],
     "written_only": [
       "the local-to-global rank certificate for prime chains is the same argument as the Boolean one and is instantiated in Python, not in Lean",
-      "characteristic-two validity of the chain statement (Buchberger coprime criterion) is not formalized"
+      "characteristic-two validity of the chain statement (Buchberger coprime criterion) is not formalized",
+      "the growth theorem for unit-ideal instances with t != 0 in characteristic 0 or p > 2^(k+1) (Theorem thm:growth): written proof in Appendix C; its Lean reduction (GrowthMain.growth_theorem, growth_lfd_window) keeps the curve model GrowthMain.CurveModel as a hypothesis, discharged in Lean only for targets of order two (Theorem thm:growthfixed)",
+      "LFD <= 7 at depth 14: the degree lift has a written proof and no final closure certificate; DepthFourteen.p65537_summary takes the recorded closures as hypotheses",
+      "Theorem thm:allm outside its kernel core: the grid step of part (1), the bound 2^(m-1) on the degree of S_(m+1) in each variable for m >= 4 in part (2), and the genericity statement of part (3) (paper/notes/carry-allm.tex)",
+      "solving degree = LFD for unit-ideal instances and the solving-degree bounds (Theorem thm:sd): written proof on top of the kernel-checked bounds and the cited theorem of Caminata and Gorla",
+      "the relation-search consequence (Section sec:meaning): an attempt on a target of order greater than two finds no relation exactly when its ideal is the unit ideal (Frobenius argument), so each such attempt costs at least binom(2k, floor((k-10)/14)+1) Macaulay columns"
     ],
-    "independent_review": "not obtained"
+    "independent_review": "not obtained",
+    "kernel_components_note": "Every name above is in the saved default audit experiments/ic-lean/axioms.log (679 declarations) except GrowthJetPolynomial.e6_prime_lfd_linear, whose module is checked by the all-module CI step (scripts/lean_check_all.py) and by experiments/lfd-jet-polynomial-20261118/local-verification.json; all print only propext, Classical.choice and Quot.sound.",
+    "abstract_claims": [
+      {
+        "claim": "LFD <= k+2 for two-summand prime-field systems on nonsingular curves at every depth k >= 2, in Lean 4 with only the standard axioms",
+        "label": "kernel-checked",
+        "source": "Theorem thm:selector; ICFallDegrees.SelectorExtension.lfd_le_depth_add_two_of_two_ne"
+      },
+      {
+        "claim": "LFD = 4 for k <= 5 and 5 for 6 <= k <= 9 on random instances",
+        "label": "exact computation (certificates)",
+        "source": "Sections sec:sweep, sec:depthsix, sec:depth89; Table tab:profile rows 2-9; k = 6 instance also kernel-checked (ExactK6InstanceP1153.exact_lfd_five)"
+      },
+      {
+        "claim": "LFD = 6 for 10 <= k <= 13 on a unit instance over F_65537",
+        "label": "exact computation (certificates)",
+        "source": "Sections sec:depth10, sec:depth14; Table tab:profile rows 10-13; unit ideal kernel-checked (UnitInstance.unit_p65537)"
+      },
+      {
+        "claim": "LFD >= 7 at k = 14 certified; LFD <= 7 rests on a degree lift with a written proof",
+        "label": "exact computation (lower bound); lifted, written proof (upper bound)",
+        "source": "Section sec:depth14; Table tab:profile row 14; not certified: second- and third-engine runs are corroborations"
+      },
+      {
+        "claim": "the values match the corrected breakpoints of Petit, Kosters and Messeng and the law LFD(k) = floor((k+14)/4), fitted on k <= 13",
+        "label": "empirical (conjecture)",
+        "source": "Conjecture conj:law; Table tab:profile, last column [pkm, Table 4]"
+      },
+      {
+        "claim": "the LFD of unit-ideal instances with t != 0, which equals their solving degree, is unbounded in k when p > 2^(k+1)",
+        "label": "written proof",
+        "source": "Theorems thm:growth (Appendix C) and thm:sd; kernel-checked only for targets of order two (Theorem thm:growthfixed)"
+      },
+      {
+        "claim": "in the two-summand relation search of Petit, Kosters and Messeng, attempts that find no relation each cost a Macaulay-matrix solver an amount exponential in k",
+        "label": "written proof",
+        "source": "Section sec:meaning, from Theorems thm:growth and thm:sd; no total discrete-logarithm cost and no comparison with Pollard rho is claimed"
+      },
+      {
+        "claim": "for the direct presentation with m >= 3 summands, LFD >= m min(k,m-1)+1 under explicit nondegeneracy conditions",
+        "label": "written proof with a kernel-checked core",
+        "source": "Theorem thm:allm; CarryAllM.lfd_eq_full, lfd_ge_onset, m3_onset; written steps listed under written_only"
+      }
+    ],
+    "abstract_claims_checked": "2026-11-22, against the abstract of paper/curve-lfd-bounds.tex (sha256 419f70bd...a9e2) and the theorem status paragraphs of the manuscript"
   }
 }

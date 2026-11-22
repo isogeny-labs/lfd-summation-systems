@@ -15,6 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
+- [x] Prepare the LFD paper for ePrint up to the submit button: author block, PDF build and checks, form-ready abstract, field-by-field EPRINT.md, proof-status consistency, and a draft outside-review request (Claude, started 2026-11-22, branch claude/eprint-prep-20261122, PR #46)
 - [ ] Prove prime-field growth beyond depth 14 and for m > 4; distinguish proven bounds from the conjectured sharp law (Codex, started 2026-11-21, branch formal/higher-summand-growth-20261121, PR #45; in progress)
 - [ ] Relation yield per linear system for LRF: baseline, factor-base / summand-count variants and a Frobenius-orbit (Koblitz) variant at prime n, each measured against the baseline on the same instances (Claude, started 2026-11-21, branch claude/index-calculus-root-finding-e95kd6, PR #44)
   - [x] 1. Baseline funnel + cost model (m=3/m=4, monomial V), 5 seeds, LRF cross-checked vs enumeration (0 mismatches)
@@ -51,6 +52,7 @@ Obtain a measured improvement in relation yield per linear system for the linear
 
 ## Blocked / questions for the owner
 
+- PR #46: before submitting to ePrint, decide whether to port the sharper growth constants proved in Lean in ml-cryptanalysis PR #356 (LFD >= floor((k+1)/14)+1 from k = 27) into this paper, or leave them for a revision.
 
 - PR #27: the author must confirm the wording of the "Use of AI tools" paragraph (it names Claude and Codex) before submission.
 - PR #31 / PR #35: full depth-14 certificate, split D8, and depth-18 breakpoint remain open; local probes finished with explicit caps (RAM/scratch limits). PR #35 was merged on 2026-11-19 as a record of the capped searches; the merge does not claim any of the three obligations complete.
