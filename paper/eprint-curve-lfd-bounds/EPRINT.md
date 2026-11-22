@@ -1,8 +1,8 @@
 # IACR ePrint submission: Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values
 
 Reviewed against the [current submission form](https://eprint.iacr.org/submit)
-on 14 November 2026 and again on 15 November 2026 (same fields, categories and
-license options). The abstract, the page count and the digests below are checked
+on 14 November 2026, again on 15 November 2026 and again on 22 November 2026
+(same fields, categories and license options each time). The abstract, the page count and the digests below are checked
 against the manuscript by
 `python3 scripts/check_publication_artifacts.py` (from the repository root).
 Update this sheet after any change to the title, authors, abstract or PDF. Submit at
@@ -14,15 +14,15 @@ author must agree.
 |---|---|
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
-| Affiliation / contact (on page 1) | adam@isogenylabs.io |
+| Affiliation / contact (on page 1) | adam@isogenylabs.io (a contact address; page 1 has no affiliation line, which the archive does not require when a contact address is given) |
 | Abstract | paste `eprint-abstract.txt` (1796 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
-| Publication information | Published nowhere else |
+| Publication information | Published nowhere else (the author confirms; this sheet does not attest it) |
 | Content | `../curve-lfd-bounds.pdf` (63 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
-| License | CC BY proposed in the earlier form; author must choose and confirm |
+| License | CC BY (form option `CC BY: Creative Commons Attribution`), the licence of `paper/` in this repository (CC BY 4.0, `../../LICENSE-CC-BY-4.0.txt`); the author confirms, and checks it against any later venue's copyright agreement |
 | Confirmation | tick after reading the acceptance, license and withdrawal conditions |
 
 Enter each author with an email where known (at least one is required);
@@ -200,6 +200,67 @@ added later.
   `../../docs/reviews-publication-20261114.md`.
 - Publication information and license require the author’s confirmation at submission;
   this sheet does not attest that no other submission or publication exists.
+
+## Pre-submission check, 22 November 2026
+
+No manuscript source, abstract or PDF changed in this check; the digests
+above still match the files.
+
+- **Form.** The submission form and the operations page were re-read on 22
+  November 2026: the same fields, the same seven categories and the same six
+  licences; the PDF must fit A4 or US Letter and include the author emails;
+  the first page must give the title, author names and a contact address or
+  affiliation.
+- **Generator.** `.agents/skills/iacr-eprint/scripts/eprint_form.py`
+  (workspace trunk) run on this manuscript and the committed PDF, with the
+  category, keywords and licence above: every hard rule passes. Its abstract
+  output differs from `eprint-abstract.txt` only in leaving `Gr\"obner`
+  unconverted; paste `eprint-abstract.txt`, which has the UTF-8 "ö".
+- **Build.** A separate build from the same sources with pdfLaTeX (TeX Live
+  2023, pdfTeX 1.40.25, Ubuntu 24.04) passed the build gate of
+  `scripts/build_ic_curve_paper.py`: no LaTeX warnings, no unresolved
+  references or citations, no overfull boxes, 63 A4 pages, figures
+  byte-identical. Its PDF differs in bytes and in some line breaks from the
+  committed Tectonic PDF, as expected across engines; the committed PDF
+  remains the submission file. The text layer of the committed PDF extracts
+  the floor brackets and "≠" as `b c` and `6=`; the pdfLaTeX build extracts
+  them correctly. If that matters for indexing, rebuild with pdfLaTeX and
+  update the digests and this sheet before submitting.
+- **Artifact checks.** `python3 scripts/check_publication_artifacts.py`:
+  452 checks passed (679 audited declarations, 3005 sweep systems).
+- **Page 1.** Inspected: title, "Adam Buran", `adam@isogenylabs.io`, the
+  date and the abstract. PDF metadata: title as above, author "Adam Buran".
+- **Use of AI tools.** The paragraph is present (page 3, end of Section 1);
+  it names the assistants and says that the proof reviews of Appendix B.4
+  ("Independent checks") were AI sessions, not human experts. The author
+  must confirm its wording (open owner question since PR #27).
+- **Claims against `../proof-status.json`.** Every clause of the abstract is
+  mapped there (`curve_bounds_manuscript.abstract_claims`) to its evidence
+  label: one kernel-checked bound (LFD ≤ k+2), exact computations (the values
+  4, 5, 6 and LFD ≥ 7 at k = 14), a lifted upper bound at k = 14, an
+  empirical law, written proofs (growth, solving degree, relation-search
+  cost) and the m-summand bound (written proof, kernel-checked core). The
+  abstract names each label itself, except that the relation-search
+  sentence does not repeat that it rests on the written growth proof of the
+  sentence before it. No independent human review exists
+  (`independent_review: not obtained`).
+- **CI.** The `ci` workflow (Python self-tests, Lean build and axiom audit
+  with `scripts/lean_check_all.py`) passed on `main` at `7a54f8a`, run
+  44864341390. CI on the merge of this sheet's pull request is the check
+  for the submitted commit.
+- **Bundle.** This repository has no `make eprint` target; the form takes
+  only the PDF, and the sources are this repository at the submitted commit.
+
+## Author's steps (only the author)
+
+1. Read the form sheet above and confirm authorship, publication
+   information, licence and the "Use of AI tools" wording.
+2. Optionally send `REVIEW-REQUEST.md` to an outside expert first.
+3. Submit at https://eprint.iacr.org/submit with the fields above, the PDF
+   `../curve-lfd-bounds.pdf` and the abstract `eprint-abstract.txt`.
+4. After acceptance, keep the password, and record the ePrint number in
+   `CITATION.cff` (`preferred-citation`), in `../README.md` and on the
+   website.
 
 ## After acceptance
 

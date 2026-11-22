@@ -44,6 +44,17 @@ bounds and exact values*, Adam Buran.
 - [Review, corrections and remaining evidence gaps](../docs/reviews-publication-20261114.md).
 - [Submission form sheet](eprint-curve-lfd-bounds/EPRINT.md) and
   [plain-text abstract](eprint-curve-lfd-bounds/eprint-abstract.txt).
+- [Draft request for an outside review](eprint-curve-lfd-bounds/REVIEW-REQUEST.md)
+  (recipient to be chosen by the author; not sent).
+
+**Pre-submission check, 22 November 2026** (no source, abstract or PDF
+change): the form was re-read, the skill's form generator and the 452
+publication checks pass, a separate pdfLaTeX build passes the build gate,
+and every clause of the abstract is mapped to its evidence label in
+[`proof-status.json`](proof-status.json) (`abstract_claims`); details in the
+form sheet. Still owed by the author: confirm the form fields and the "Use
+of AI tools" wording, submit, then record the ePrint number in
+`../CITATION.cff`, here and on the website.
 
 ## Scope and evidence
 
