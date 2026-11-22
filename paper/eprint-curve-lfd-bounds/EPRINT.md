@@ -248,13 +248,22 @@ above still match the files.
   with `scripts/lean_check_all.py`) passed on `main` at `7a54f8a`, run
   44864341390. CI on the merge of this sheet's pull request is the check
   for the submitted commit.
+- **Work not in this manuscript.** `isogeny-labs/ml-cryptanalysis` PR #356
+  (merged 22 November 2026) proves sharper growth constants in Lean there,
+  not here: LFD ≥ ⌊(k+1)/14⌋+1 for k ≥ 27 and ⌊(k−5)/13⌋+1 for k ≥ 31
+  under the same curve-model hypothesis, and sharper E6 windows (six modules
+  `Growth*Sharp`, `GrowthSlope`; written parts still unreviewed). This
+  manuscript's weaker statements, ⌊(k−10)/14⌋+1 for k ≥ 38, remain correct.
+  The author decides whether to port that work before submitting or in a
+  revision.
 - **Bundle.** This repository has no `make eprint` target; the form takes
   only the PDF, and the sources are this repository at the submitted commit.
 
 ## Author's steps (only the author)
 
 1. Read the form sheet above and confirm authorship, publication
-   information, licence and the "Use of AI tools" wording.
+   information, licence and the "Use of AI tools" wording; decide whether
+   the sharper constants of ml-cryptanalysis PR #356 go into this version.
 2. Optionally send `REVIEW-REQUEST.md` to an outside expert first.
 3. Submit at https://eprint.iacr.org/submit with the fields above, the PDF
    `../curve-lfd-bounds.pdf` and the abstract `eprint-abstract.txt`.
