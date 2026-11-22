@@ -12,10 +12,16 @@ PR, not in this file.
 
 ## Current goal
 
-_(none pinned — set one with `/goal <text>`)_
+Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
 - [ ] Prove prime-field growth beyond depth 14 and for m > 4; distinguish proven bounds from the conjectured sharp law (Codex, started 2026-11-21, branch formal/higher-summand-growth-20261121, PR #45; in progress)
+- [ ] Relation yield per linear system for LRF: baseline, factor-base / summand-count variants and a Frobenius-orbit (Koblitz) variant at prime n, each measured against the baseline on the same instances (Claude, started 2026-11-21, branch claude/index-calculus-root-finding-e95kd6, PR #44)
+  - [x] 1. Baseline funnel + cost model (m=3/m=4, monomial V), 5 seeds, LRF cross-checked vs enumeration (0 mismatches)
+  - [x] 2. Determinacy model delta=k+dimV2-n; optimal operating point is a square system (delta in {0,1}), m=3
+  - [x] 3. m=4 strictly worse than m=3; found_per_cand intrinsic to (delta,n), independent of LRF-feasible basis (no exponent lever)
+  - [x] 4. Koblitz NO-GO at prime n (measured): realizable orbit reduction -> 1 (monomial) vs dim V2 -> n (Frobenius-span); the dim-V2/Frobenius tension is the mechanism
+  - [x] 5. Report, graph (yield_report.svg/png) and PDF (report.pdf); verdict: neither lever improves the n=131 relation stage (already at delta=0 optimum)
 - [ ] ECDLP claim evidence: end-to-end yield/LA vs rho (ic-endtoend), fully charged cost model to 2^256 (ic-costmodel), m>=3 depth growth (msum-growth, m=3 k=7 pod D=8 running), validated all-m carry bound LFD >= m min(k,m-1)+1 with Lean core (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #41)
 - [x] Paper: style pass on curve-lfd-bounds.tex (remove agent-output patterns, move run logistics to the appendix, cut repetition, narrative arc, "What the results mean" section; no mathematical, numeric or evidence-status change), with a style audit and invariant check (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #40)
 - [x] Paper: replace the abstract with the owner-approved text, resync the ePrint abstract and sheet, list the kernel-checked bounds in proof-status.json, rebuild with Tectonic (Claude, started 2026-11-20, branch claude/lfd-ffd-paper-eprint-status-qq8fit, PR #39)
@@ -48,3 +54,12 @@ _(none pinned — set one with `/goal <text>`)_
 
 - PR #27: the author must confirm the wording of the "Use of AI tools" paragraph (it names Claude and Codex) before submission.
 - PR #31 / PR #35: full depth-14 certificate, split D8, and depth-18 breakpoint remain open; local probes finished with explicit caps (RAM/scratch limits). PR #35 was merged on 2026-11-19 as a record of the capped searches; the merge does not claim any of the three obligations complete.
+- PR #44 (relation yield for LRF): measured result is a cost model + optimal operating point
+  (square system, m=3) + two mechanistic NO-GOs (m=4 worse; Frobenius unusable at prime n due to
+  the dim-V2 vs Frobenius-structure tension). Neither pinned lever improves the n=131 relation
+  stage. The found_per_cand lever is now also measured dead: the good candidate (roots in V) is an
+  unstructured singleton in the kernel coset (ANF degree ~ delta, density ~ 2^-delta at delta=6,9,12),
+  so it cannot be found output-sensitively. Every lever (factor base, summand count, Frobenius,
+  candidate structure) leaves the ~2^(n/3) cost/relation exponent unchanged; an improvement needs a
+  genuinely different relation, not LRF tuning. Also corrected the exponent in the record from a wrong
+  2^(0.7 n) to the measured/analytic 2^(n/3).
