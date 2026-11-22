@@ -15,6 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
+- [ ] Prove prime-field growth beyond depth 14 and for m > 4; distinguish proven bounds from the conjectured sharp law (Codex, started 2026-11-21, branch formal/higher-summand-growth-20261121, PR #45; in progress)
 - [ ] Relation yield per linear system for LRF: baseline, factor-base / summand-count variants and a Frobenius-orbit (Koblitz) variant at prime n, each measured against the baseline on the same instances (Claude, started 2026-11-21, branch claude/index-calculus-root-finding-e95kd6, PR #44)
   - [x] 1. Baseline funnel + cost model (m=3/m=4, monomial V), 5 seeds, LRF cross-checked vs enumeration (0 mismatches)
   - [x] 2. Determinacy model delta=k+dimV2-n; optimal operating point is a square system (delta in {0,1}), m=3
