@@ -155,7 +155,10 @@ about binary curves from an unpublished draft are not claimed here
  admissible prime fields (Theorem~\ref{thm:growthfixed},
  Corollary~\ref{cor:rationalprime}); for targets with nonzero ordinate the
  kernel has the function field and pole orders
- (Proposition~\ref{prop:nontorsion}).
+ (Proposition~\ref{prop:nontorsion}); the same bound, with the same slope,
+ for unit-ideal direct presentations with any fixed number $m\ge3$ of
+ summands, on every nonsingular curve and for all but at most three targets
+ (Corollary~\ref{cor:growthm}, written proof).
 \item \emph{Solving degree} (written proof and exact;
  Section~\ref{sec:solving}): $\sd\le\max(\lfd,k+1)\le k+2$ for two summands
  and $\sd\le mk+1$ for direct $m$-summand systems (Theorem~\ref{thm:sd},
@@ -2446,7 +2449,9 @@ closed until the depth is large compared with $D$, which gives a lower
 bound linear in $k$. Section~\ref{sec:growthfixed} discharges the analytic
 hypothesis of the Lean statement for targets of order two,
 Section~\ref{sec:growthnontorsion} formalizes the function field for
-targets with nonzero ordinate, and Section~\ref{sec:blockfour} collects
+targets with nonzero ordinate, Section~\ref{sec:growthm} carries the bound
+to every number of summands through a two-summand slice, and
+Section~\ref{sec:blockfour} collects
 conjectural remarks on the gap between the proved and the observed slope.
 
 The depth needed for degree $D$ is explicit. For $w\ge1$ let $\Lambda(w)$
@@ -2842,6 +2847,154 @@ powers in positive characteristic, and the link to the Lean growth hypothesis
 are not formalized. No growth statement for a target with $Y\ne0$ is
 kernel-checked, and no closure was computed here.
 
+\subsection{Every number of summands: a two-summand slice}\label{sec:growthm}
+For $m\ge3$ summands Theorem~\ref{thm:allm} gives a floor that stops
+growing once $k\ge m$. The growth theorem extends to every $m$ through a
+slice. Fixing the abscissae of all but two summands to $2^k$-th roots of
+unity is a substitution of constants: it maps the closure of the
+$m$-summand system into the closure of a two-summand system without raising
+any degree. The two-summand generator that comes out is not $S_3$, but the
+proof of Theorem~\ref{thm:growth} never uses that it is: it uses only that
+the generator lies in the prime ideal $\mathfrak p$ of a curve model and has
+weight at most $D$. If the fixed summands come in cancelling pairs $\pm Q$,
+the sliced generator vanishes on the same curve model as $S_3$, and the
+bound of Theorem~\ref{thm:growth} carries over unchanged.
+
+\begin{corollary}[Growth for every number of summands; written proof]\label{cor:growthm}
+Let $K$ be a field of characteristic $0$ or $p>2^{k+1}$, $E\colon
+y^2=x^3+ax+b$ with $4a^3+27b^2\ne0$, $m\ge2$, $k\ge m$, and
+$t\in K$ the abscissa of a point $R\in E(\bar K)$. Suppose that there are
+$q_3,\ldots,q_m\in K$ with $q_i^{2^k}=1$ and points $Q_i\in E(\bar K)$
+with $x(Q_i)=q_i$ such that $R'=R-Q_3-\cdots-Q_m$ satisfies $R'\ne O$ and
+$x(R')\ne0$.
+\begin{enumerate}
+\item For $D\ge2$ and $k\ge k_D$, $1\notin V_D$ for the direct $m$-summand
+ presentation $F_{m,k}$ with target abscissa $t$. If its ideal is the unit
+ ideal, then
+ \[
+ \Bigl\lfloor\frac{k-10}{14}\Bigr\rfloor+1\;\le\;\lfd(F_{m,k})\;\le\;mk+1
+ \qquad(k\ge\max(38,m)).
+ \]
+\item The hypothesis on $R$ holds for even $m$ whenever $t\ne0$ (take every
+ $q_i=1$ and $Q_{2j}=-Q_{2j-1}$, so that $R'=R$), and for odd $m$ for every
+ $R$ outside a set of at most three points (fix a point $Q$ with $x(Q)=1$,
+ pair all but one fixed summand as before, and let the last be $Q$ or $-Q$).
+\item Let $K=\F_p$ with $2^k\mid p-1$ and $p>2^{m(k+1)+1}+12$. On every
+ nonsingular curve over $\F_p$ all but at most $2^{m(k+1)}+6$ rational
+ targets satisfy the hypothesis on $R$ and give a unit ideal; there are
+ such targets, since $\#E(\F_p)>p/2$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+For $m=2$ this is Theorem~\ref{thm:growth}; let $m\ge3$.
+
+\emph{The slice.} Let $\varphi$ substitute $u_{i,j}\mapsto q_i^{2^j}$ for
+$3\le i\le m$ and fix the other variables. It maps the chain equations of
+the blocks $i\ge3$ to $0$, because $q_i^{2^k}=1$, keeps those of the first
+two blocks, and does not raise degrees. Let $F'$ be the set of the images
+of the inputs of $F_{m,k}$ of degree at most $D$. Every derivation step in
+the degree-$D$ closure commutes with $\varphi$, so
+$\varphi(V_D(F_{m,k}))\subset V_D(F')$ and, as $\varphi(1)=1$, $1\in
+V_D(F_{m,k})$ would give $1\in V_D(F')$. This is the kernel-checked
+transfer lemma \code{SummandGrowthTransfer.map\_closure\_budget} with
+preprocessing cost $0$.
+
+\emph{The sliced generator lies on a curve model.} Every exponent of
+$S_{m+1}$ is at most $2^{m-1}<2^k$ (proof of Theorem~\ref{thm:allm}), so
+$g=\NF(S_{m+1})$ is the binary rewriting of $S_{m+1}$ without
+wrap-around, and $\varphi(g)$ is, in the algebra $A_k$ of
+Appendix~\ref{app:growthsetting}, the image of
+\[
+ s(x_1,x_2)=S_{m+1}(x_1,x_2,q_3,\ldots,q_m,t),
+\]
+with all exponents below $2^k$; its lift is $\tilde s=s$. Let $\mathfrak
+p$ be the kernel of $x_1\mapsto x(P)$, $x_2\mapsto x(R'-P)$ into
+$\bar K(E)$. For every $P$ the points $P$, $R'-P$, $Q_3,\ldots,Q_m$ and
+$-R$ sum to $O$, so $s(x(P),x(R'-P))=0$ by the defining property of
+summation polynomials~\cite{semaev}, and $s\in\mathfrak p$.
+
+\emph{The growth argument.} Appendix~\ref{app:growthproof} uses about the
+target only that $R\ne O$ and $x(R)\ne0$ (Lemma~\ref{lem:divisors}); the
+coordinate $x(R)$ need not lie in $K$, since the circuits are taken over
+$F_0\supset\bar K$. About the generator it uses only that it lies in $S_D$
+(Proposition~\ref{prop:feired}); for several inputs, the least closed space
+containing all of them lies in $S_D$ as well. With $R'$ in place of $R$,
+Theorem~\ref{thm:feiholds} gives $V^q_D(F')\subset S_D$ for $k\ge k_D$, so
+$1\notin V^q_D(F')$, and by Theorem~\ref{thm:bridge} (with $m=2$ and any
+input set) $1\notin V_D(F')$. Hence $1\notin V_D(F_{m,k})$. The window
+follows as in the proof of Theorem~\ref{thm:growth}, with
+Corollary~\ref{cor:allm} for the upper bound.
+
+\emph{Part (2).} For even $m$, $R'=R$, which is not $O$ and has $x(R)=t\ne0$.
+For odd $m$, $R'=R\mp Q$; the choice fails for both signs only if $R$ lies
+in $Q+B$ and in $-Q+B$, where $B$ is the set of the at most three points
+that are $O$ or have abscissa $0$.
+
+\emph{Part (3).} The chain variety is $H^m$, with $H=\mu_{2^k}\subset\F_p$.
+Let $\Sigma$ be the set of sums $\pm P_1\pm\cdots\pm P_m$ of points of
+$E(\bar K)$ with abscissae in $H$; $|\Sigma|\le(2^{k+1})^m$. If $R\notin
+\Sigma$, then $S_{m+1}(h,t)\ne0$ for every $h\in H^m$ by the defining
+property, so the normalized generator is a unit in the quotient by the
+chains, which is a product of copies of $\F_p$ indexed by $H^m$; the ideal
+is the unit ideal. Excluding also $\Sigma$, $O$, the points of abscissa $0$
+and, for odd $m$, the three points of part~(2) leaves at least
+$\#E(\F_p)-2^{m(k+1)}-6$ targets, and $\#E(\F_p)\ge p+1-2\sqrt p>p/2$ for
+$p\ge16$.
+\end{proof}
+
+\paragraph{Status.} The corollary is a written proof that rests on the same
+analytic input as Theorem~\ref{thm:growth}, which it uses through its
+proof, not its statement. Its reduction is kernel-checked with that input
+as an explicit hypothesis, as for Theorem~\ref{thm:growth}:
+\code{GrowthSlice.slice\_not\_one} states that a substitution that does not
+raise degrees and sends every input of degree at most $D$ to a two-block
+chain equation or into $S_D$ excludes $1$ from the source closure, given the
+splitting property of Definition~\ref{def:fei}; the generator-independent
+step is \code{GrowthSlice.not\_one\_of\_fei\_inputs}. Not formalized are the
+splitting property itself (as for Theorem~\ref{thm:growth}), the
+identification of $\varphi(g)$ with $s$, and the step $s\in\mathfrak p$,
+which uses the defining property of $S_{m+1}$. Two exact
+checks support the new step (\code{experiments/higher-summand-identities/}):
+over four primes, on random curves with rational points, $s(x(P),x(R'-P))$
+vanished in all $480$ cases for $m=3,\ldots,7$ (cancelling pairs, one
+unpaired summand, and arbitrary $Q_i$), and for a wrong slice target
+$R'+W$ with $W$ random it was nonzero in all $160$ cases. Part~(3) uses the
+kernel-checked counting lemmas \code{card\_sumTargets\_le} and
+\code{exists\_target\_outside\_sums} and Hasse's bound, which is not
+formalized.
+
+\paragraph{Scope.} The slope is $1/14$ for every $m$, as for two summands;
+the sliced system cannot see more than two free summands, so no slope
+growing with $m$ follows. The bound exceeds the constant floor
+$m(m-1)+1$ of Theorem~\ref{thm:allm} only from $k\ge k_{m(m-1)+1}$, that is
+from $k=90,167,270,399,554,736$ for $m=3,\ldots,8$, far beyond the
+computed cells ($k\le7$ for $m=3$). Its content is that for every fixed
+$m$ the LFD of unit-ideal instances is unbounded in $k$. It does not move
+the cost model of Section~\ref{sec:meaning}: with this floor on the
+attempts that find no relation, the first $\log_2N$ at which the Macaulay
+route falls below rho is unchanged for every $m\le8$ up to $\log_2N=1024$
+(an exploratory run, \code{experiments/ic-costmodel/}, command
+\code{crossover-growth}), because the cheapest depths lie below these
+thresholds.
+
+\begin{remark}[A slice through a point of order two]\label{rem:ordertwoslice}
+On $E_a$ the extra summands can instead be fixed to the point $(1,0)$ of
+order two. The sliced generator is then an exact power of $S_3$:
+with $c=(a+3)^2$, $S_{m+1}(x,y,1,\ldots,1,t)=c^{r4^r}S_3(x,y,t)^{4^r}$ for
+$m=2r+2$, and $c^{2r4^r}(t-1)^{4^{r+1}}S_3(x,y,u)^{2\cdot4^r}$ with
+$u=(t+a+2)/(t-1)$ for $m=2r+3$, where the Sylvester resultants must keep
+their formal degrees (substituting first loses the factor $(x-y)^4$ at
+$m=3$). The chain normal form of $S_3^{2^n}$ is derivable at degree
+$\max(2,4n)$, which is kernel-checked
+(\code{SummandGrowthTransfer.prime\_input\_power\_derived}). This route
+needs a rational point of order two and a preprocessing degree $4(m-2)$;
+the slice through cancelling pairs needs neither. Both parity formulas were
+checked with a separately written formal-degree resultant evaluator at
+$504$ points for $m=2,\ldots,8$, together with the two identities they are
+built from and a control in which a wrong scalar exponent is detected
+(\code{experiments/higher-summand-identities/}).
+\end{remark}
+
 \subsection{Blocks of four: conjectural remarks}\label{sec:blockfour}
 The measured profile climbs by one every four depths. This subsection
 collects what the data say about that pattern; nothing in it is proved.
@@ -3168,8 +3321,14 @@ many columns as there are $m$-tuples of factor-base abscissae. For $k\ge m$
 the proved degree is the constant $m(m-1)+1$, so the proved part of the cost
 of an attempt is at least $\binom{mk}{m(m-1)+1}$ columns: for fixed $m$ a
 polynomial in $k$ of degree $m(m-1)+1$, growing with $m$ but not
-exponentially in $k$. The three-summand values above the onset
-(Section~\ref{sec:msummands}) are measured, not proved.
+exponentially in $k$. On the attempts whose ideal is the unit ideal (such
+an attempt finds no relation; for $m\ge3$ the converse can fail, since
+summands in the quadratic twist can cancel in pairs),
+Corollary~\ref{cor:growthm} adds the floor $\lfloor(k-10)/14\rfloor+1$
+(written proof), so their cost is exponential in $k$ for every $m$; this
+floor exceeds $m(m-1)+1$ only from $k=90$ for $m=3$ and $k=167$ for $m=4$.
+The three-summand values above the onset (Section~\ref{sec:msummands}) are
+measured, not proved.
 
 \paragraph{A cost model (a model-based conclusion, not a theorem).} The
 bounds above concern one step. To compare the whole attack with Pollard rho
@@ -3213,8 +3372,11 @@ $\log_2N\le67$, through $m=8$ at $k=6,7$, where the Macaulay space has
 $2^{48}$ and $2^{56}$ columns. With the degree law measured for $m=2,3$ and
 extrapolated in place of the proved floor, the gap is $2.7$ bits at $2^{40}$
 and $10.3$ bits at $2^{256}$. The proved constant floor alone keeps the
-Macaulay route for $m=4$ above rho only up to about $2^{293}$; beyond that
-the comparison would need growth in $k$ for $m\ge3$, which is not proved.
+Macaulay route for $m=4$ above rho only up to about $2^{293}$. Growth in
+$k$ for $m\ge3$ is now proved for unit ideals (Corollary~\ref{cor:growthm}),
+but at slope $1/14$ it moves neither that crossover nor any other for
+$m\le8$ up to $2^{1024}$ (Section~\ref{sec:growthm}); beyond it the
+comparison would need a faster-growing bound.
 
 \paragraph{What does not follow.} The theorems are lower bounds on one
 step, the relation search, for solvers in the Macaulay model: for two
@@ -3225,7 +3387,9 @@ Pollard rho is model-based: it rests on measured constants at
 $N\le2^{40}$, their extrapolation and a solver-cost convention, and covers
 only enumeration and Macaulay-type solvers on the direct presentation, at
 most eight summands and primes with $2^k\mid p-1$. For more than two
-summands the proved degree is constant in $k$ once $k\ge m$. The theorems hold for
+summands the proved degree is constant in $k$ once $k\ge m$, except on
+unit-ideal attempts, where it grows at slope $1/14$ and exceeds that
+constant only from $k=90$ ($m=3$) on. The theorems hold for
 every prime $p>2^{k+1}$, including primes of cryptographic size; the exact
 values concern the instances computed, at depths up to $16$. Nothing is
 claimed for other factor-base families.
@@ -3309,7 +3473,11 @@ kernel-checked only for an arbitrary generator and, in part~(2), for $m=3$;
 for $m\ge4$ the degree bound on $S_{m+1}$, the grid step and the genericity
 statement are written proofs, reviewed by an AI session and by no human
 referee. The generator degree on each instance is established by exact
-computation.
+computation. Corollary~\ref{cor:growthm} is a written proof checked by no
+human referee and not reviewed separately; its new step, the membership of
+the sliced generator in the prime ideal of the curve model, is supported by
+exact checks at random points, not formalized, and it inherits every
+dependency of the growth theorem.
 
 \paragraph{The cost model.} The comparison with Pollard rho in
 Section~\ref{sec:meaning} is a model, not a measurement above $2^{40}$: the
@@ -3401,9 +3569,11 @@ explanations.
  Section~\ref{sec:meaning} uses relation yield and linear algebra measured
  at $N\le2^{40}$ for $m\le3$; missing are proofs of the yield law,
  measurements for $m\ge4$ and above $2^{40}$, a solver charge that covers the
- split presentation and hybrid methods, and a lower bound growing in $k$ for
- $m\ge3$, without which the proved floor keeps the four-summand Macaulay
- route above rho only up to about $2^{293}$.
+ split presentation and hybrid methods, and a lower bound for $m\ge3$ that
+ grows fast enough in $k$ to matter at the cheapest depths: the proved floor
+ keeps the four-summand Macaulay route above rho only up to about $2^{293}$,
+ and the growth of Corollary~\ref{cor:growthm}, at slope $1/14$, does not
+ change that.
 \item \emph{Decomposition without a Gr\"obner basis.} On the binary curves
  of Section~\ref{sec:presentations} a second route to the decomposition step
  needs no Gr\"obner basis. If $P_1+P_2=T$ with $x_T\ne0$, then $P_1,P_2,-T$
@@ -3463,7 +3633,9 @@ $409$ of $412$ instances because the generator already has full degree, while
 at $m=4$, $k=4$ the value is $13$, below $17$. For every $m\ge3$ the
 direct presentation has $\lfd\ge m\min(k,m-1)+1$ under explicit
 nondegeneracy conditions (written proof with a kernel-checked core), a
-floor that is constant in $k$ once $k\ge m$; for three summands the
+floor that is constant in $k$ once $k\ge m$; on unit-ideal instances a
+two-summand slice gives, for every $m$, the same unbounded floor
+$\lfloor(k-10)/14\rfloor+1$ as for two summands (written proof); for three summands the
 second engine measures $8$ at $k=6$ and at least $8$ at $k=7$. For binary curves every law
 recorded in advance has been refuted.
 
@@ -3518,6 +3690,13 @@ theorems (run 43814371146 of that workflow passed). The module
 receipt of commit \code{1c929ae}; it was built from source with the pinned
 Lean and Mathlib, contains no \code{sorry}, \code{axiom} or
 \code{native\_decide}, and its declarations print only the three
+foundational axioms. The modules \code{SummandGrowthTransfer.lean} and
+\code{GrowthSlice.lean} of Corollary~\ref{cor:growthm} are likewise not
+imported by the root module and not among the \LEANDECLS{} declarations;
+the all-module step of the repository's continuous integration
+(\code{scripts/lean\_check\_all.py}) builds them and checks the axioms
+their declarations print, and \code{GrowthSlice.lean} was also built locally from source with the
+pinned Lean and Mathlib; its three declarations print only the three
 foundational axioms.
 
 Table~\ref{tab:lean} maps each statement of the paper to its declarations,
@@ -3558,6 +3737,7 @@ Quotient exclusion principle & module \code{QuotientLowerBound}\\
 Theorem~\ref{thm:growth} (conditional) & \code{GrowthMain.CurveModel}, \code{growth\_theorem}, \code{growth\_theorem\_linear}, \code{growth\_lfd\_window}, \code{GrowthExistence.growth\_instance\_window}, \code{GrowthCriterion.closed\_iff\_fei}\\
 Theorem~\ref{thm:growthfixed} & (1) \code{GrowthCharZeroSeparatedFamily.unit\_complex\_of\_norm\_gt}, \code{GrowthTwoTorsionFamily.exists\_lfd\_linear\_window}, \code{GrowthRationalParameterClassification.exists\_lfd\_linear\_window}, \code{grid\_zero\_iff}; (2) \code{GrowthPrimeE6NativeNonmembership.e6\_not\_one\_of\_large\_prime}; (3) \code{GrowthSharpPrimeBound.prime\_lfd\_window}, \code{eliminant\_det\_bound}, \code{GrowthExplicitPrimeBound.exists\_prime\_window\_above}, \code{GrowthFixedE6PrimeSequence.exists\_actual\_growing\_prime\_theta\_sequence}; (4) \code{GrowthFermatDiagonalObstruction.e6\_not\_unit\_of\_fermat\_factor}; (5) \code{GrowthJetPolynomial.e6\_prime\_lfd\_linear}\\
 Corollary~\ref{cor:rationalprime} & \code{GrowthRationalPrimeCutoff.rational\_prime\_growth}, \code{denominator\_and\_parameter\_guards}, \code{matrix\_det\_ne\_zero}; \code{GrowthRationalPrimeNative.not\_one\_of\_large\_prime}\\
+Corollary~\ref{cor:growthm} (cond.) & \code{GrowthSlice.slice\_not\_one}, \code{not\_one\_of\_fei\_inputs}, \code{slice\_lfd\_gt}; \code{SummandGrowthTransfer.map\_closure\_budget}, \code{exists\_target\_outside\_sums}\\
 \bottomrule
 \end{tabular}
 \caption{Statements and Lean declarations.}

@@ -1,0 +1,37 @@
+# Local Lean build, 2026-11-23 (PR #49)
+toolchain: leanprover/lean4:v4.19.0; command: (cd formal && lake exe cache get && lake build ICFallDegrees.GrowthSlice)
+GrowthSlice.lean sha256: 4aa2d99ef9cf5e4d0cc651b87bba8ff8648e976ec3ddb59c8cc86516efe280d0
+SummandGrowthTransfer.lean sha256: 5fcbe02db2f9388009b3713a5d31b964547fae36a717b6ccf77f3353606d5635
+
+ICFallDegrees/SummandGrowthTransfer.lean:365:0: 'ICFallDegrees.SummandGrowthTransfer.map_closure_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:366:0: 'ICFallDegrees.SummandGrowthTransfer.not_one_of_specialization' depends on axioms: [propext,
+ Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:367:0: 'ICFallDegrees.SummandGrowthTransfer.no_lfd_bound_of_specialization' depends on axioms: [propext,
+ Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:368:0: 'ICFallDegrees.SummandGrowthTransfer.prime_growth_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:369:0: 'ICFallDegrees.SummandGrowthTransfer.order_two_pair_specialization' depends on axioms: [propext, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:370:0: 'ICFallDegrees.SummandGrowthTransfer.pairIterate_closed' depends on axioms: [propext]
+ICFallDegrees/SummandGrowthTransfer.lean:371:0: 'ICFallDegrees.SummandGrowthTransfer.card_sumTargets_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:372:0: 'ICFallDegrees.SummandGrowthTransfer.exists_target_outside_sums' depends on axioms: [propext,
+ Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:373:0: 'ICFallDegrees.SummandGrowthTransfer.normalized_square_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:374:0: 'ICFallDegrees.SummandGrowthTransfer.nf_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:375:0: 'ICFallDegrees.SummandGrowthTransfer.actual_normal_power_tower' depends on axioms: [propext,
+ Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:376:0: 'ICFallDegrees.SummandGrowthTransfer.binary_weight_power_support' depends on axioms: [propext,
+ Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:377:0: 'ICFallDegrees.SummandGrowthTransfer.prime_input_power_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:378:0: 'ICFallDegrees.SummandGrowthTransfer.binaryLift_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:379:0: 'ICFallDegrees.SummandGrowthTransfer.binaryLift_reduced' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:380:0: 'ICFallDegrees.SummandGrowthTransfer.binaryLift_s3_power_degree' depends on axioms: [propext,
+ Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:475:0: 'ICFallDegrees.SummandGrowthTransfer.normalForm_rawEmbed' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:558:0: 'ICFallDegrees.SummandGrowthTransfer.raw_normalized_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:559:0: 'ICFallDegrees.SummandGrowthTransfer.actual_s3_power_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/SummandGrowthTransfer.lean:560:0: 'ICFallDegrees.SummandGrowthTransfer.prime_input_power_derived' depends on axioms: [propext,
+ Quot.sound]
+ℹ [2935/2935] Built ICFallDegrees.GrowthSlice
+ICFallDegrees/GrowthSlice.lean:71:0: 'ICFallDegrees.GrowthSlice.not_one_of_fei_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/GrowthSlice.lean:72:0: 'ICFallDegrees.GrowthSlice.slice_not_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ICFallDegrees/GrowthSlice.lean:73:0: 'ICFallDegrees.GrowthSlice.slice_lfd_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully.
