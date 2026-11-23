@@ -83,7 +83,8 @@
       "ICFallDegrees.GrowthPrimeE6NativeNonmembership.e6_not_one_of_large_prime",
       "ICFallDegrees.GrowthSharpPrimeBound.prime_lfd_window",
       "ICFallDegrees.GrowthFermatDiagonalObstruction.e6_not_unit_of_fermat_factor",
-      "ICFallDegrees.GrowthJetPolynomial.e6_prime_lfd_linear"
+      "ICFallDegrees.GrowthJetPolynomial.e6_prime_lfd_linear",
+      "ICFallDegrees.GrowthSlice.slice_not_one"
     ],
     "written_only": [
       "the local-to-global rank certificate for prime chains is the same argument as the Boolean one and is instantiated in Python, not in Lean",
@@ -92,10 +93,11 @@
       "LFD <= 7 at depth 14: the degree lift has a written proof and no final closure certificate; DepthFourteen.p65537_summary takes the recorded closures as hypotheses",
       "Theorem thm:allm outside its kernel core: the grid step of part (1), the bound 2^(m-1) on the degree of S_(m+1) in each variable for m >= 4 in part (2), and the genericity statement of part (3) (paper/notes/carry-allm.tex)",
       "solving degree = LFD for unit-ideal instances and the solving-degree bounds (Theorem thm:sd): written proof on top of the kernel-checked bounds and the cited theorem of Caminata and Gorla",
-      "the relation-search consequence (Section sec:meaning): an attempt on a target of order greater than two finds no relation exactly when its ideal is the unit ideal (Frobenius argument), so each such attempt costs at least binom(2k, floor((k-10)/14)+1) Macaulay columns"
+      "the relation-search consequence (Section sec:meaning): an attempt on a target of order greater than two finds no relation exactly when its ideal is the unit ideal (Frobenius argument), so each such attempt costs at least binom(2k, floor((k-10)/14)+1) Macaulay columns",
+      "growth for every number of summands (Corollary cor:growthm): for unit-ideal direct m-summand presentations, LFD >= floor((k-10)/14)+1 for k >= max(38, m) under the hypotheses of Theorem thm:growth with R' = R - Q_3 - ... - Q_m in place of R; written proof that uses the proof of Theorem thm:growth (same analytic input), the defining zero property of S_(m+1) (not formalized; exact checks in experiments/higher-summand-identities/) and, for unit instances, Hasse's bound; the slice transfer and the generator-independent exclusion are GrowthSlice.slice_not_one and GrowthSlice.not_one_of_fei_inputs, with the splitting hypothesis FEI explicit as in GrowthReduction.not_one_of_fei"
     ],
     "independent_review": "not obtained",
-    "kernel_components_note": "Every name above is in the saved default audit experiments/ic-lean/axioms.log (679 declarations) except GrowthJetPolynomial.e6_prime_lfd_linear, whose module is checked by the all-module CI step (scripts/lean_check_all.py) and by experiments/lfd-jet-polynomial-20261118/local-verification.json; all print only propext, Classical.choice and Quot.sound.",
+    "kernel_components_note": "Every name above is in the saved default audit experiments/ic-lean/axioms.log (679 declarations) except GrowthJetPolynomial.e6_prime_lfd_linear and GrowthSlice.slice_not_one, whose modules are checked by the all-module CI step (scripts/lean_check_all.py) and by experiments/lfd-jet-polynomial-20261118/local-verification.json and experiments/higher-summand-identities/lean-local-20261123.txt respectively; all print only propext, Classical.choice and Quot.sound.",
     "abstract_claims": [
       {
         "claim": "LFD <= k+2 for two-summand prime-field systems on nonsingular curves at every depth k >= 2, in Lean 4 with only the standard axioms",
