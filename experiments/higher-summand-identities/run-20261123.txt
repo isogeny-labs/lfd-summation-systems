@@ -1,0 +1,40 @@
+UNIT: p=2081, |H-points rational|=3, outside sampled=40, units among them=40; inside sampled=7, with zero=7
+{
+ "SYM": {
+  "passed": 96,
+  "total": 96
+ },
+ "A": {
+  "passed": 432,
+  "total": 432
+ },
+ "A_mutant_detected": {
+  "passed": 360,
+  "total": 360
+ },
+ "B": {
+  "passed": 72,
+  "total": 72
+ },
+ "EVEN": {
+  "passed": 288,
+  "total": 288
+ },
+ "ODD": {
+  "passed": 216,
+  "total": 216
+ },
+ "TRAP_detects": {
+  "passed": 24,
+  "total": 24
+ },
+ "UNIT_exists": {
+  "passed": 1,
+  "total": 1
+ },
+ "UNIT_inside_has_zero": {
+  "passed": 1,
+  "total": 1
+ }
+}
+ALL PASS
