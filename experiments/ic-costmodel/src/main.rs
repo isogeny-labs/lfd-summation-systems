@@ -69,9 +69,9 @@ fn d_lb(m: usize, k: usize, kd: &[usize]) -> usize {
 fn d_lb_proved(m: usize, k: usize, kd: &[usize]) -> usize { if m == 2 { d_lb2(kd, k) } else { m * k.min(m - 1) + 1 } }
 
 #[derive(Clone, Copy, PartialEq, Debug)]
-enum Sc { Lb, Law, Ceil, LawDense, EnumOnly, LbOnset, LbProved, LbProvedTop, Fixed(usize) }
+enum Sc { Lb, Law, Ceil, LawDense, EnumOnly, LbOnset, LbProved, LbProvedTop, LbGrowth, Fixed(usize) }
 impl Sc {
-    fn name(self) -> &'static str { match self { Sc::Lb => "LB", Sc::Law => "LAW", Sc::Ceil => "CEIL", Sc::LawDense => "LAW-dense", Sc::EnumOnly => "enum-only", Sc::LbOnset => "LB+onset", Sc::LbProved => "LB-proved", Sc::LbProvedTop => "LB-proved (literal top layer)", Sc::Fixed(_) => "fixed-D" } }
+    fn name(self) -> &'static str { match self { Sc::Lb => "LB", Sc::Law => "LAW", Sc::Ceil => "CEIL", Sc::LawDense => "LAW-dense", Sc::EnumOnly => "enum-only", Sc::LbOnset => "LB+onset", Sc::LbProved => "LB-proved", Sc::LbProvedTop => "LB-proved (literal top layer)", Sc::LbGrowth => "LB-growth (2026-11-23)", Sc::Fixed(_) => "fixed-D" } }
 }
 
 #[derive(Clone, Debug)]
@@ -138,6 +138,16 @@ fn routes(lf: &Lf, kd: &[usize], n: f64, m: usize, k: usize, sc: Sc, lfc: Option
             let failed_only = m == 2 || k + 1 <= m;
             let per = if failed_only { lse(l2(q) + c, l2(1.0 - q)) } else { c };
             (d_raw, per)
+        }
+        Sc::LbGrowth => {
+            // Added 2026-11-23 (exploratory, not preregistered): LB-proved plus the all-m growth corollary
+            // (paper, Corollary "Growth for every number of summands"; written proof): on a unit-ideal (failed)
+            // attempt the m-summand LFD is at least the m = 2 growth floor d_lb2. Successes keep LB-proved.
+            let d_succ = d_lb_proved(m, k, kd);
+            let d_fail = d_succ.max(d_lb2(kd, k));
+            let c_fail = lf.binom(vars, d_fail.min(vars).min(vars / 2));
+            let c_succ = if m == 2 || k + 1 <= m { 0.0 } else { lf.binom(vars, d_succ.min(vars).min(vars / 2)) };
+            (d_fail, lse(l2(q) + c_fail, l2(1.0 - q) + c_succ))
         }
         Sc::Law => { let d = d_law(m, k); (d, 2.0 * lf.binom_le(vars, d)) }
         Sc::LawDense => { let d = d_law(m, k); (d, DENSE_TO_ONE.log2() + 3.0 * lf.binom_le(vars, d)) }
@@ -459,6 +469,28 @@ fn main() {
                         bt < rho_cost(n as f64, pi)
                     });
                     println!("m = {m}, price {pi}: LB-proved route (b) first below rho at log2 N = {}", first.map_or("none <= 1024".into(), |x| x.to_string()));
+                }
+            }
+        }
+        "crossover-growth" => {
+            // exploratory (2026-11-23): as `crossover`, LB-proved against LB-growth, with k_D tabulated to D = 80
+            let kd_ext: Vec<usize> = (0..81).map(|d| if d < 2 { usize::MAX } else { d + lambda_w(&lf, d - 1) }).collect();
+            for m in 2..=8usize {
+                for &pi in &[0.1, 1.0] {
+                    let mut firsts = Vec::new();
+                    for sc in [Sc::LbProved, Sc::LbGrowth] {
+                        let first = (40..=1024usize).find(|&n| {
+                            let mut bt = f64::INFINITY;
+                            for k in 2..=(n - 2) {
+                                for (ga, nat, route, ..) in routes(&lf, &kd_ext, n as f64, m, k, sc, None, None) {
+                                    if route == "groebner" { bt = bt.min(total(ga, nat, pi)); }
+                                }
+                            }
+                            bt < rho_cost(n as f64, pi)
+                        });
+                        firsts.push(first.map_or("none <= 1024".to_string(), |x| x.to_string()));
+                    }
+                    println!("m = {m}, price {pi}: route (b) first below rho at log2 N = {} (LB-proved) / {} (LB-growth)", firsts[0], firsts[1]);
                 }
             }
         }
