@@ -110,6 +110,14 @@ def main():
     checks["sqrt(-7) in Q(zeta_131)"] = (131 % 7 == 0)
     checks["CM_field"] = "Q(zeta_131, sqrt(-7)), degree 260"
     checks["modp_factor_degrees"] = {p: frob_order(PA, p) for p in (3, 5, 13)}
+    g = 130
+    checks["weil_functional_eq a_i=2^(g-i)a_{2g-i}"] = all(PA[i] == 2**(g-i)*PA[2*g-i] for i in range(g+1))
+    try:
+        import flint
+        fac = flint.fmpz_poly(PA).factor()
+        checks["flint_irreducible (1 factor deg 260)"] = (len(fac[1]) == 1 and fac[1][0][0].degree() == 260)
+    except Exception as e:
+        checks["flint_irreducible"] = f"flint unavailable: {e}"
 
     here = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(here, "P_A.json"), "w") as f:

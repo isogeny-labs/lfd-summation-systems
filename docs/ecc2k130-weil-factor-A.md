@@ -34,12 +34,19 @@ Everything below is computed exactly and cross-checked:
 | CM field | `K = Q(zeta_131, sqrt(-7))`, degree 260 (`sqrt(-7) ∉ Q(zeta_131)` since `7 ∤ 131`) |
 | `P_A` mod 3, 5, 13 | two irreducible factors of degree 130 each |
 
-**`A` is simple** (direct proof, not Honda-Tate by citation): the only `sigma ∈ Gal(K/Q)` that could
-fix `alpha·zeta` would need `alpha/beta = (-3 - sqrt(-7))/4` to be a 131st root of unity; it has trace
-`-3/2`, so it is not an algebraic integer, hence not a root of unity. So `alpha·zeta` has trivial
-stabiliser, `[Q(alpha·zeta):Q] = 260 = deg P_A`, and `P_A` is irreducible. (Consistent with the mod-p
-pattern: `Gal(K/Q) ≅ C_130 x C_2` is non-cyclic, so `P_A` never factors into a single piece mod `p`,
-but always into equal-degree pieces — degree 130 at `p = 3, 5, 13`.)
+**`A` is simple** (two independent proofs):
+- *Direct* (not Honda-Tate by citation): the only `sigma ∈ Gal(K/Q)` that could fix `alpha·zeta` would
+  need `alpha/beta = (-3 - sqrt(-7))/4` to be a 131st root of unity; it has trace `-3/2`, so it is not an
+  algebraic integer, hence not a root of unity. So `alpha·zeta` has trivial stabiliser,
+  `[Q(alpha·zeta):Q] = 260 = deg P_A`, and `P_A` is irreducible.
+- *By CAS*: `python-flint` factors `P_A` over `Z` into a single irreducible factor of degree 260.
+
+(Consistent with the mod-p pattern: `Gal(K/Q) ≅ C_130 x C_2` is non-cyclic, so `P_A` never factors into
+a single piece mod `p`, but always into equal-degree pieces — degree 130 at `p = 3, 5, 13`.)
+
+`P_A` is a genuine Weil polynomial for `q = 2`: all 260 complex roots satisfy `|root| = sqrt(2)`
+(checked numerically), and the coefficients obey the functional equation `a_i = 2^(g-i) a_{2g-i}`
+(`g = 130`), verified exactly.
 
 ### What this settles
 
