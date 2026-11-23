@@ -47,6 +47,10 @@ jobs:
             python "$script"
             echo "::endgroup::"
           done
+      - name: Growth for every number of summands (slice membership, order-two identities)
+        run: |
+          python experiments/higher-summand-identities/check_slice_membership.py > /dev/null
+          python experiments/higher-summand-identities/check_identities.py 2 6 > /dev/null
       - name: Three to eight summands (second implementation against the records)
         run: python scripts/ic_bounds_msum.py selftest
       - name: Split presentation against the second instrument (recorded values of both sides)

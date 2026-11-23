@@ -19,7 +19,7 @@ author must agree.
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else (the author confirms; this sheet does not attest it) |
-| Content | `../curve-lfd-bounds.pdf` (63 pages) |
+| Content | `../curve-lfd-bounds.pdf` (66 pages) |
 | Additional notes (public) | empty for a first version; on a revision, what changed |
 | Message to editors (private) | empty unless something needs explaining |
 | License | CC BY (form option `CC BY: Creative Commons Attribution`), the licence of `paper/` in this repository (CC BY 4.0, `../../LICENSE-CC-BY-4.0.txt`); the author confirms, and checks it against any later venue's copyright agreement |
@@ -159,10 +159,23 @@ Lean table and the data tables were updated accordingly. The abstract gains
 one sentence (1796 characters; previously 1622); the manuscript is 63 pages
 (previously 60).
 
+**Revision of 23 November 2026** (PR #49; abstract and `eprint-abstract.txt`
+unchanged). New Section 6.3 with Corollary "Growth for every number of
+summands" (written proof; reduction kernel-checked with the splitting
+property as a hypothesis, `formal/ICFallDegrees/GrowthSlice.lean`, built
+locally and by the all-module CI step) and Remark 28 (the PR #45 route
+through a point of order two); matching updates in the contributions, the
+ECDLP section, limitations, future directions, conclusion and the Lean
+table. The manuscript is 66 pages (previously 63). The PDF was rebuilt by
+`python3 scripts/build_ic_curve_paper.py` with Tectonic 0.15.0 as the only
+TeX engine on the `PATH`; before the edit, the same build reproduced the
+committed PDF of 20 November byte for byte. Figures are byte-identical. The
+digests below are those of this revision.
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `06b412be4aa5ae7bf0454e859494e5b9632eb8ed2d7e6e11a76810d3f55f99b7` |
-| `paper/curve-lfd-bounds.tex` | `419f70bd1434780158ceaeb116cc55ee42eced0a2484829c3202fa555afca9e2` |
+| `paper/curve-lfd-bounds.pdf` | `ed3e7f4fadda5a0e16f1fc096e1cc6d77c459df2a33a662ff5ae85c5d8ec576c` |
+| `paper/curve-lfd-bounds.tex` | `b03d3dff4737fed224951f838d471b7c062d0ff7e930c0dcb6be1fc6a028abe5` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `9e0d3d96f5b162a70c137cd82a854eaff59f2c54e4c788d16cadc8d814549151` |
 
 The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0

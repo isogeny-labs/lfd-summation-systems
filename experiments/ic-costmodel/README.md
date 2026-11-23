@@ -396,3 +396,25 @@ cargo build --release --offline
 ```
 
 Deterministic: no randomness, no measurement.
+
+## Growth for every m (exploratory, 2026-11-23, not preregistered)
+
+`cargo run --release -- crossover-growth` repeats the `crossover` diagnostic
+(route (b) alone, first `log2 N` up to 1024 at which it falls below rho) with
+scenario `LB-growth`: LB-proved, plus, on the attempts that find no relation,
+the floor `max(m min(k,m-1)+1, D_LB(m=2))` of the paper's Corollary
+`cor:growthm` (written proof). Output: `results/crossover-growth-20261123.txt`.
+
+| m | price 0.1 | price 1 |
+|---|---|---|
+| 2, 3 | none (both) | none (both) |
+| 4 | 293 / 293 | 316 / 316 |
+| 5 | 371 / 371 | 380 / 380 |
+| 6 | 485 / 485 | 492 / 492 |
+| 7 | 617 / 617 | 624 / 624 |
+| 8 | 772 / 772 | 780 / 780 |
+
+(LB-proved / LB-growth.) No crossover moves: the growth floor exceeds the
+carry floor only from `k = 90` (m = 3) and `k = 167` (m = 4), above the
+cheapest depths. The sweep outputs (`headline.md`, `sweep.jsonl`, the figure)
+were not regenerated and are unchanged.

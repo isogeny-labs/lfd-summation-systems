@@ -56,6 +56,25 @@ form sheet. Still owed by the author: confirm the form fields and the "Use
 of AI tools" wording, submit, then record the ePrint number in
 `../CITATION.cff`, here and on the website.
 
+**Revision, 23 November 2026** (PR #49; abstract unchanged, owner-approved
+text kept). New Section 6.3, Corollary "Growth for every number of
+summands" (written proof): fixing all but two summands to cancelling pairs
+of factor-base points maps the m-summand closure into a two-summand closure
+whose generator lies on the same curve model, so the growth bound
+floor((k-10)/14)+1 holds for unit-ideal direct presentations with any fixed
+m, on every nonsingular curve and for all but at most three targets, with
+unit instances on every curve once p > 2^(m(k+1)+1)+12. The reduction is
+kernel-checked with the splitting property as a hypothesis
+(`formal/ICFallDegrees/GrowthSlice.lean`); the membership of the sliced
+generator in the curve-model ideal uses the defining property of S_(m+1)
+and is checked numerically (`../experiments/higher-summand-identities/`).
+The bound exceeds the constant floor m(m-1)+1 only from k = 90 (m = 3) and
+k = 167 (m = 4), and with it no cost-model crossover moves up to 2^1024
+(exploratory, `../experiments/ic-costmodel/`). Remark 28 records the PR #45
+route through a point of order two (identities re-checked independently).
+The ECDLP section, limitations, future directions, conclusion and the Lean
+table were updated to match.
+
 ## Scope and evidence
 
 The manuscript gives bounds on specified polynomial presentations, exact
