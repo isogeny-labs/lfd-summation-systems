@@ -30,6 +30,11 @@ jobs:
         run: python -m compileall -q csd scripts experiments tests
       - name: Unit tests of the certificate code
         run: python -m pytest -q tests
+      - name: ECC2K-130 integral symmetry and all-degree zeta certificate
+        run: |
+          python experiments/ecc2k130-weil-factor/integral_symmetry.py
+          python experiments/ecc2k130-weil-factor/verify_integral_symmetry.py
+          git diff --exit-code -- experiments/ecc2k130-weil-factor/integral_symmetry.json
       - name: Sparse LFD derivations, compressed proofs and refusal controls
         run: |
           rustc --version

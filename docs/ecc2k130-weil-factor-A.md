@@ -58,23 +58,24 @@ a single piece mod `p`, but always into equal-degree pieces — degree 130 at `p
 
 ## Where the window question stands
 
-`A` carries a rational order-131 automorphism `rho` (the `Gal(F_2^131 / F_2)` action on the Weil
-restriction, defined over `F_2`). This is **consistent** with `A` being a Jacobian factor: a genus-130
-cyclic cover of `P^1` of degree 131 exists by Riemann–Hurwitz (`2·130 - 2 = 131·(-2) + 130·r` gives
-`r = 4` branch points), and its Jacobian carries exactly such a `rho`. So `rho` is not by itself an
-obstruction — `A` even has one.
+The actual trace-zero representative `A` is **not F2-isomorphic to a genus-130 Jacobian**.
+Its rational integral order-131 action preserves every F2-polarization (Rosati is complex
+conjugation on its CM endomorphism field). Torelli would force a rational order-131 action
+on the curve. Riemann–Hurwitz then requires four branch points, while Frobenius orbits
+of branch points must have length divisible by `ord_131(2)=130`. This is impossible.
+The earlier claim that Riemann–Hurwitz alone made this cover consistent over F2
+omitted this descent constraint.
 
-The open, discriminating question is therefore a **CM-type match**: does the CM type of `A` (which 130
-of the 260 embeddings `K -> C` are the Frobenius half) coincide with the CM type of a degree-131 cyclic
-cover's Jacobian factor (fixed by the branch exponents `a_1 + ... + a_4 ≡ 0 mod 131` via
-Shimura–Taniyama)? `A`'s CM field `Q(zeta_131, sqrt(-7))` strictly contains `Q(zeta_131)`, so the extra
-`sqrt(-7)` (from `E`'s CM) must also be produced by the cover — which is exactly the constraint that, in
-`crypto/research/.../RESEARCH_ECC2K130_CURVE_CONSTRUCTION.md`, pushes any carrier with an order-131
-symmetry to genus ≥ 394, outside the usable window. Reconciling that bound against this CM-type
-computation is the next concrete step; it is a finite check, not a run.
+The isogeny question is different. The isogeny class **contains a principally polarized
+variety**, by Howe's Theorem 1.1 with an explicit inert prime above
+`146505763881528721` dividing `F-V`. The order-131 symmetry is not forced integrally
+by `Z[F,V]`; a reduction modulo 263 proves this directly. Thus the symmetry argument
+does not exclude a Jacobian elsewhere in the class. Proofs and reproducible arithmetic
+certificates are in [the integral-symmetry follow-up](ecc2k130-integral-symmetry.md).
 
 ## Honest status
 
-This note does **not** resolve whether `A` is a Jacobian; that remains the open window question. It
-provides the exact data any resolution must match, proves `A` is simple and ordinary (ruling out the
-easy splits), and reduces the remaining question to a specific CM-type comparison.
+The exact representative `A` is excluded as a genus-130 Jacobian. Its isogeny class is
+principally polarizable; whether that class contains a genus-130 Jacobian, or occurs
+as a factor in a usable larger-genus Jacobian, remains unresolved. Checking only
+cyclic-cover CM types cannot decide members whose integral cyclotomic action is absent.
