@@ -51,3 +51,58 @@ construction target is a principally polarized module exploiting the
 inert-prime witness, then an actual curve or a Torelli obstruction.
 This is a mathematical/construction gap, not a request for user permission
 or an assertion that all other routes have been exhausted.
+
+## Continuation: solve the isogeny-class problem
+
+The user explicitly requested a solution of the remaining isogeny-class
+question. The full Jacobian verdict has not been obtained. The following
+successor work was executed, rather than left as a proposed next step.
+
+1. Proved an isogeny-degree obstruction: for every principally polarized
+   target B/F2 and every isogeny f:A->B, the valuation of deg(f) at
+   ell=146505763881528721 is odd. The proof uses local polarization
+   kernel lengths and Artin reciprocity, with exact conductor inputs.
+   Maximal-order representatives cannot be principally polarized.
+2. Proved that every principally polarized member is geometrically
+   indecomposable, so decomposability cannot close the remainder.
+3. Excluded every hyperelliptic curve in the class by #C(F4)=2, since
+   each rational point of its degree-two genus-zero quotient has a
+   point above it over F4, requiring at least three points.
+4. Constructed an explicit principally polarized Deligne module. A
+   circular-unit signature computation has rank 129; an explicit
+   product of 69 units corrects all 130 signs of the trial form.
+   Rational interval arithmetic certifies the signs. Polynomial
+   expansion gives the actual 260 unit coefficients. A cyclic quotient
+   lattice of degree 263*ell carries a positive integral alternating
+   form with determinant one by an exact norm/index identity. Frobenius
+   compatibility and lattice stability are checked. Its endomorphism
+   order has index ell in O_K.
+
+Artifacts: docs/ecc2k130-isogeny-class-obstruction.md,
+docs/ecc2k130-explicit-ppav.md, local_orders.py / local_orders.json,
+ppav_unit.py, construct_ppav.py / explicit_ppav.json in the existing
+ecc2k130-weil-factor experiment directory. The full principal matrix
+is reconstructible; its SHA-256 (decimal rows) is
+4ab7dd31504657e5ad4f180a96dbd9e5838d4cfaeb9c7fe7fccde26b988b94a4.
+
+Verification: both new producers pass; independent full FLINT modular
+factorizations match the Frobenius-gcd factor-pattern checks. FLINT's
+integer polynomial discriminant matches the stated index identity.
+The positive-unit signs are exact; an off-kernel generator negative
+control is rejected. Existing independent SymPy certificate passes.
+Repository tests after installing FLINT: 53 passed, 1 skipped, 16.09s.
+No new Lean formalization was made.
+
+Two optional exploratory computations were stopped without results:
+a dense alternating determinant after about 84 seconds and a generic
+HNF basis computation after about 63 seconds. The final certificate
+uses exact unit/norm/index identities and an explicit cyclic basis;
+it does not claim either abandoned computation succeeded.
+
+The remaining failure to solve the original objective is specific:
+no characteristic-two Torelli-locus certificate or curve realization
+has been implemented for this module, and a verdict for this one
+candidate would not classify all polarized representatives. ThetAV's
+documented genus-2 conversions and the complex numerical Fay method
+were investigated and do not provide the needed finite-field verdict.
+No curve, pointwise cryptanalytic transfer, or ECDLP improvement is claimed.

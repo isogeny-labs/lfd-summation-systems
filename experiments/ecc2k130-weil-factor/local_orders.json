@@ -1,0 +1,44 @@
+{
+  "schema": "ecc2k130.local-orders.v1",
+  "field_discriminant_factorization": {
+    "7": 130,
+    "131": 258
+  },
+  "power_order_index_factorization": {
+    "2": 8385,
+    "263": 129,
+    "146505763881528721": 129
+  },
+  "frobenius_verschiebung_order_index_factorization": {
+    "263": 129,
+    "146505763881528721": 129
+  },
+  "zeta_reconstruction_t_coefficients_constant_alpha": [
+    -15203668605084075622,
+    -19265507950421026811
+  ],
+  "modular_factor_patterns": {
+    "263": {
+      "linear_factors_multiplicity_1": 2,
+      "linear_factors_multiplicity_2": 129,
+      "quadratic_factors_multiplicity_1": 0,
+      "quadratic_factors_multiplicity_2": 0
+    },
+    "146505763881528721": {
+      "linear_factors_multiplicity_1": 0,
+      "linear_factors_multiplicity_2": 1,
+      "quadratic_factors_multiplicity_1": 1,
+      "quadratic_factors_multiplicity_2": 64
+    }
+  },
+  "K_over_Kplus_at_131": "unramified inert, residue degree 2/1",
+  "K_over_Kplus_at_263": "split at every prime",
+  "K_over_Kplus_at_ell": "inert at all 130 primes of Kplus, residue degree 2/1",
+  "natural_polarization_kernel": "E[131], one simple O_K module of length 1",
+  "written_proof_consequence": {
+    "for": "every F2-isogeny f:A->B with B principally polarized over F2",
+    "condition": "v_146505763881528721(deg(f)) is odd",
+    "maximal_order_representative_principally_polarizable": false,
+    "jacobian_in_isogeny_class": "unresolved"
+  }
+}

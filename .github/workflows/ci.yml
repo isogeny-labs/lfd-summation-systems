@@ -35,6 +35,11 @@ jobs:
           python experiments/ecc2k130-weil-factor/integral_symmetry.py
           python experiments/ecc2k130-weil-factor/verify_integral_symmetry.py
           git diff --exit-code -- experiments/ecc2k130-weil-factor/integral_symmetry.json
+      - name: ECC2K-130 local orders and explicit principally polarized module
+        run: |
+          python experiments/ecc2k130-weil-factor/local_orders.py
+          python experiments/ecc2k130-weil-factor/construct_ppav.py
+          git diff --exit-code -- experiments/ecc2k130-weil-factor/local_orders.json experiments/ecc2k130-weil-factor/explicit_ppav.json
       - name: Sparse LFD derivations, compressed proofs and refusal controls
         run: |
           rustc --version

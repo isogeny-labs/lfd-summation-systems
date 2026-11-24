@@ -17,6 +17,13 @@ There are three distinct conclusions:
    unresolved. The first conclusion does not extend automatically to every
    member of the class: the order-131 action is not forced by Z[F,V].
 
+Continuation: [the isogeny-class obstruction](ecc2k130-isogeny-class-obstruction.md)
+shows that every isogeny from A to a principally polarized member has an odd
+valuation at 146505763881528721 in its degree. An
+[explicit principally polarized Deligne module](ecc2k130-explicit-ppav.md)
+has now been constructed, with endomorphism-order index that prime.
+Its Jacobian status remains undetermined.
+
 If the letter A is used only for a Weil polynomial or an unspecified
 member of its isogeny class, conclusion 1 must not be read as an
 isogeny-class exclusion. It refers to the concrete kernel defined below.
