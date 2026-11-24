@@ -110,6 +110,36 @@ running index calculus needs the *explicit* curve `C` and an *evaluatable* isoge
 existence alone does not provide. This is a cost model, not a validated run (no replay/validation-gate
 evidence), and claims nothing about `A` being a Jacobian.
 
+## Solved sub-result: cyclic covers cannot realize A in-window
+
+The natural way to construct a Jacobian with prescribed CM is a cyclic (superelliptic) cover of `P^1`;
+this is the family the crypto notes' genus >= 394 bound targets. It is now **rigorously excluded**
+(`experiments/ecc2k130-weil-factor/cyclic_cover_exclusion.py`):
+
+- *Mechanism.* For an abelian cover `C -> P^1` with Galois group of exponent `N` (char 2, `N` odd),
+  every Frobenius eigenvalue on `Jac(C)` is a Jacobi sum, so lies in `Q(zeta_N)` (Weil). If `A` were an
+  isogeny factor, its eigenvalues would lie in `Q(zeta_N)`, forcing the CM field
+  `K = Q(zeta_131, sqrt(-7))` (which `A`'s eigenvalues generate, `A` being simple) into `Q(zeta_N)`,
+  i.e. `conductor(K) = lcm(131, 7) = 917 | N`.
+- *The obstruction is `sqrt(-7)`.* `A`'s base-change eigenvalues to `F_{2^130}` are
+  `alpha^130 * zeta_131^{-j}` with `alpha = (-1 + sqrt(-7))/2`. Computed exactly,
+  `alpha^130 = (73000192456347156057 - 4061839345336951189 sqrt(-7))/2`, which has a **nonzero
+  `sqrt(-7)` component**, so `alpha^130 notin Q(zeta_131)` (because `Q(sqrt(-7)) cap Q(zeta_131) = Q`,
+  as `7 nmid 131`). A pure `Z/131` cover has all eigenvalues in `Q(zeta_131)` and therefore cannot carry
+  `A`. The `sqrt(-7)` that `A` inherits from `E`'s CM is exactly what a `Z/131` cover lacks.
+- *Genus consequence.* Supplying `sqrt(-7)` needs `7 | N` (since `sqrt(-7) in Q(zeta_7)`, `7 ≡ 3 mod 4`),
+  so `917 | N`. A tame `Z/917` cover of `P^1` has genus `>= 458` (`r = 3` branch points; more branch
+  points only raise it) -- far above the usable window (`~130`-`300`). So **no cyclic cover realizes `A`
+  at usable genus.** This gives a clean mechanism for, and sharpens, the crypto notes' `>= 394` bound.
+
+For contrast, a `Z/131` cover with 4 branch points has genus exactly 130 (in-window) -- but its
+eigenvalues live in `Q(zeta_131)`, so it carries a *different* (no-`sqrt(-7)`) abelian variety, not `A`.
+
+This closes every abelian/cyclic-cover construction (the ones anyone would use to build the curve
+explicitly). It does **not** close the fully general case: `A` could still be a Jacobian of a curve with
+no useful automorphism group, where no CM-compatibility argument applies and there is no known decision
+procedure at dimension 130.
+
 ## Honest status
 
 This is a **necessary, not sufficient**, result. Passing the point- and place-count tests does not
