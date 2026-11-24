@@ -90,6 +90,26 @@ identities, cross-checked against the exact `p_k = -s_k^E` for `131 ∤ k`, `130
 So **`A` passes every cheap decisive test**: its virtual zeta function is that of a genuine genus-130
 curve candidate. There is no point-count or place-count obstruction to `A` being a Jacobian.
 
+## What is at stake: index-calculus cost if A is a Jacobian
+
+To make the window question's payoff precise, `experiments/ecc2k130-weil-factor/ic_cost_model.py`
+computes the standard smooth-divisor index-calculus cost for the *hypothetical* genus-130 curve `C`
+(whose place counts `a_d` and effective-divisor counts `B_m` are fixed by `P_A`). Factor base = places
+of degree `<= t`; a relation is a `t`-smooth reduced divisor of degree `~ g`; cost = `N(t)/P_smooth`
+trials plus sparse linear algebra `~ N(t) g`.
+
+- Effective-divisor counts `B_m` are all `>= 0` (a further consistency check).
+- Optimal `t = 24`, `|FB| ~ 1.46e6`: relation collection `~ 2^33` trials (`~ 2^47` operations with a
+  conservative `g^2 ~ 2^14` per-trial smoothness-test factor), sparse linear algebra `~ 2^27.5`.
+- So, **conditional on `A ~ Jac(C)`, ECDLP on ECC2K-130 would cost about `2^33`-`2^47`, i.e. 14 to 28
+  bits below the matched Pollard rho reference (`~ 2^61`).** This refines the `2^37.17` figure in the
+  crypto notes with exact counts.
+
+Two hard caveats: (1) this is **conditional** on the open window question; (2) even if `A ~ Jac(C)`,
+running index calculus needs the *explicit* curve `C` and an *evaluatable* isogeny `A -> Jac(C)`, which
+existence alone does not provide. This is a cost model, not a validated run (no replay/validation-gate
+evidence), and claims nothing about `A` being a Jacobian.
+
 ## Honest status
 
 This is a **necessary, not sufficient**, result. Passing the point- and place-count tests does not
