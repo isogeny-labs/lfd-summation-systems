@@ -68,3 +68,13 @@ def test_descent_on_every_boolean_assignment():
                         I.s3_binary_value(E.F, E.b, u, z, r) == 0)
             want = zero and all(t in liftable for t in (x, y, z))
             assert all(M.eval_boolean(p, mask) == 0 for p in eqs) == want
+
+
+def test_saved_matched_record():
+    """Measured-source hashes, exact audit replay, case selection and saved summaries."""
+    from pathlib import Path
+    import subprocess
+    import sys
+    root = Path(__file__).resolve().parents[1]
+    subprocess.run([sys.executable, str(root/'scripts/check_semaev_matched.py')],
+                   cwd=root, check=True, capture_output=True, text=True)
