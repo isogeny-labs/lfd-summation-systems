@@ -110,7 +110,36 @@ running index calculus needs the *explicit* curve `C` and an *evaluatable* isoge
 existence alone does not provide. This is a cost model, not a validated run (no replay/validation-gate
 evidence), and claims nothing about `A` being a Jacobian.
 
-## Sub-result: cyclic covers OF P^1 cannot realize A in-window
+## CORRECTION / RETRACTION (2026-11-24, red-team catch)
+
+An independent red-team review found a genuine error in the `sqrt(-7)` argument used below and in
+`not_a_jacobian.py`. **It is RETRACTED.** The error: I claimed the Frobenius eigenvalues of a `mu_131`
+cyclic cover of `P^1` lie in `Q(zeta_131)`. That holds only for 1-dimensional character eigenspaces
+(3 branch points). With 4 branch points (the genus-130 case, forced by Riemann-Hurwitz), each nontrivial
+character eigenspace is **2-dimensional** (Chevalley-Weil), Frobenius acts as a 2x2 block, and only the
+*characteristic polynomial coefficients* (trace, determinant) are forced into `Q(zeta_131)` -- the
+eigenvalues may lie in a quadratic extension. And `A` satisfies exactly this: its eigenvalue pairs
+`{alpha^130 zeta^-m, beta^130 zeta^-m}` have `sum = s_130 zeta^-m` and `prod = 2^130 zeta^-2m` with
+`s_130 = alpha^130+beta^130 = 73000192456347156057` an integer, both in `Q(zeta_131)`; the discriminant
+is `-7 (c zeta^-m)^2`, a non-square in `Q(zeta_131)`, so the eigenvalues carry `sqrt(-7)` -- perfectly
+compatible with a 2-dim eigenspace of a 4-branch-point `P^1` cover. **So the `sqrt(-7)` "obstruction" is
+illusory**, the P^1-cover exclusion and the genus `>= 458`/`917 | N` bound below are NOT established,
+and the not-a-Jacobian theorem's step 5 fails. `A` being the Jacobian of a 4-branch-point cyclic cover
+of `P^1` is NOT ruled out by the field argument -- it is attack-relevant and open.
+
+A possible *eigenvalue-independent* rescue (class field theory): an `F_2`-rational order-131 automorphism
+makes the deck group the constant group scheme `Z/131`, and a constant-`Z/131` cover of `P^1` with branch
+total degree 4 needs `131 | |Cl^0_m(P^1)|`, but `|Cl^0_m|` is coprime to 131 for every degree-4 branch
+configuration (it needs a degree-130 place, `ord_131(2) = 130`). If sound, this would re-close the
+isomorphism case -- but it is a CANDIDATE pending independent review, not a claim, and it does not touch
+the isogeny case. The ray-class cover-of-E result (`rayclass_cover_E.py`) uses the same mechanism and is
+likewise downgraded to "candidate, pending re-review". The decisive test the red-team recommends: compute
+the 2x2 Frobenius block of an explicit 4-branch-point cover via Jacobi sums and check whether any matches
+`A`'s `{alpha^130 zeta^-m, beta^130 zeta^-m}`.
+
+---
+
+## (RETRACTED) Sub-result: cyclic covers OF P^1 cannot realize A in-window
 
 **Scope correction (2026-11-24).** An earlier version of this note claimed this result closed "every
 construction with abelian symmetry". That was an overstatement: the argument below rules out cyclic /
@@ -143,7 +172,7 @@ eigenvalues live in `Q(zeta_131)`, so it carries a *different* (no-`sqrt(-7)`) a
 This closes the `P^1`-based cyclic/abelian covers. It does **not** close covers of `E`, nor the fully
 general case.
 
-## Cover of E / Prym route: CLOSED for cyclic covers (class field theory)
+## Cover of E / Prym route: CANDIDATE closure (class field theory), PENDING RE-REVIEW
 
 The natural carrier for `A` is a cyclic cover of `E` itself, not of `P^1`. A degree-131 cover
 `C -> E` totally ramified at a degree-2 conductor has genus 131 (`2g-2 = 131(2*1-2) + 130*2 = 260`),
@@ -170,7 +199,8 @@ appears when the conductor contains a degree-130 place (`ord_131(2) = 130`, so `
 cover is Galois iff cyclic since 131 is prime, and `A`'s `zeta_131`-eigenvalue structure requires the
 cyclic one.)
 
-So the **cover-of-E route is closed**, by the same `ord_131(2) = 130` prime-degree obstruction that
+So the cover-of-E route is a **candidate** closure (pending review -- same mechanism as the retracted-and-
+candidate P^1 ray-class rescue), by the same `ord_131(2) = 130` prime-degree obstruction that
 governs every other level of this problem -- now realized as the ray class group lacking 131-torsion
 below a degree-130 conductor. Correcting the record: an earlier version called this route "open"; class
 field theory closes it. What remains genuinely open is only the fully general case -- `A` as the
@@ -211,7 +241,9 @@ escapes (splitting, a p-rank obstruction, a negative virtual count) are closed. 
 **The "no automorphism" case turns out to be constrained.** The natural model of `A` (with its full CM
 ring `End(A) = O_K`) carries a rational order-131 automorphism `rho = zeta_131` (the Weil-restriction
 deck transformation), and `rho` preserves every polarization (Rosati = complex conjugation on `K`,
-`zeta * conj(zeta) = 1`). So **`A` is not ISOMORPHIC to a Jacobian** (`not_a_jacobian.py`): if
+`zeta * conj(zeta) = 1`). The earlier `sqrt(-7)` proof that **`A` is not isomorphic to a Jacobian is
+RETRACTED** (see CORRECTION above; the eigenvalue-field step was wrong). A candidate ray-class rescue of
+the isomorphism case is noted there, pending review. The sketch below is kept only to show the structure; if
 `(A, theta) ~= (Jac C, theta_C)`, Torelli forces an order-131 automorphism of the genus-130 curve `C`,
 Riemann-Hurwitz forces `C -> P^1` cyclic degree-131 (the unique solution is `g_D = 0`, 4 branch points),
 and then `Jac(C)`'s eigenvalues lie in `Q(zeta_131)` -- contradicting `A`'s `sqrt(-7)`. The "curve with

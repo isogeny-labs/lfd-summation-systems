@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# RETRACTED 2026-11-24 (red-team catch): the sqrt(-7) eigenvalue-field argument is INVALID.
+# For a 4-branch-point mu_131 cover of P^1 the character eigenspaces are 2-dimensional, so only
+# the char-poly COEFFICIENTS (trace, det) lie in Q(zeta_131), not the eigenvalues; A satisfies
+# exactly that (sum=s_130*zeta^-m, prod=2^130*zeta^-2m, s_130 integer). So this file DOES NOT
+# establish its claim. See the CORRECTION section of docs/ecc2k130-weil-factor-A.md. A possible
+# eigenvalue-independent (ray-class) rescue is a candidate pending review, not proven here.
 """A (natural model) is not isomorphic to a Jacobian -- rigorous; isogeny residue characterized.
 
 THEOREM. Let A be the 130-dimensional factor of Res_{F_2^131/F_2}(E) (ECC2K-130), with its full

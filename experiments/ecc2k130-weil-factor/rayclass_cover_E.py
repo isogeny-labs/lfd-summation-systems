@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# CANDIDATE, PENDING RE-REVIEW 2026-11-24: this uses the same class-field-theory mechanism as the
+# (now candidate) P^1 ray-class rescue. The computation (|Cl^0_m| coprime to 131) is elementary and
+# correct; whether it rigorously excludes every relevant cover (constant-Z/131 vs mu_131 deck group,
+# isomorphism vs isogeny) needs independent review. Not a settled claim. See docs CORRECTION section.
 """Does a genus-131 cyclic cover C -> E realize A as its Prym? Settled by class field theory.
 
 A as the Prym of a degree-131 cyclic cover C -> E (E = ECC2K-130 base, genus 1) forces dim Prym = 130,
