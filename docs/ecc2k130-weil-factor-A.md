@@ -203,3 +203,25 @@ Jacobian") are NOT closed and are attack-relevant; and the fully general case (a
 automorphism group) has no known decision procedure at dimension 130. These are the live questions. An
 earlier summary that called the window "closed / solved in the negative" was wrong and is retracted
 here: the Prym-of-E route in particular is open.
+
+## Cheap obstructions for the cover-of-E route: exhausted (none closes it)
+
+Recording which obstructions were tried and FAIL, so they are not re-attempted:
+
+- **Place / point / divisor counts for W:** all pass (above). Not an obstruction.
+- **The sqrt(-7) field argument:** does not apply to covers of E (E has the CM). Not an obstruction.
+- **A per-character c_1 trace argument** ("the degree-1 trace of L(E, rho^t) must equal zeta^t, a sum of
+  roots of unity that cannot hold"): **INVALID.** It assumes an F_2-rational order-131 Hecke character
+  rho^t, but `ord_131(2) = 130` means the 130 nontrivial order-131 characters form a single Frobenius
+  orbit, so there is NO nontrivial F_2-rational order-131 character; the per-piece trace is only defined
+  over F_{2^130} (a sum over ~2^130 points, with no cheap form). This attempt does not close the route.
+- **E[131] as a Galois module:** `x^2 + x + 2` is irreducible mod 131 (disc `-7` is a non-residue), so
+  E[131] is irreducible over F_2 and **E has no rational 131-isogeny**. This is suggestive *toward* the
+  route staying open: the E<->A gluing inside W cannot split rationally, so W is plausibly
+  *indecomposable* as a ppav (a necessary condition to be a Jacobian) -- but indecomposability is not
+  thereby proven, and it is only necessary, not sufficient.
+
+Net: the cheap obstructions are exhausted and none closes the cover-of-E route. A genuine verdict needs
+explicit cohomology over F_{2^130} (the ramified order-131 twisted L-functions of E) or a
+polarization-lattice computation of W's principal polarization -- real tools beyond cheap counts. The
+route is open.
