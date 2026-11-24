@@ -12,7 +12,7 @@ PR, not in this file.
 
 ## Current goal
 
-Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
+Pursue a significant, correctness-preserving improvement to matched binary Semaev Gröbner solving, with charged costs, exact-output validation, and comparison against existing GB and root-finding methods. Owner request, 2026-11-24. The agent's frozen experimental target and its scope are in `experiments/semaev-preconditioned-20261124/PROTOCOL.md`.
 
 ## Active items (top = next)
 - [ ] Significant Semaev GB improvement: exact affine preconditioning, fresh matched benchmarks against both GB baselines and existing root-finding (Codex, started 2026-11-24, branch codex/semaev-affine-preconditioning-20261124, PR #56; in progress)
