@@ -167,12 +167,28 @@ and it is attack-relevant: a genus-131 curve `C` with `Jac(C) ~ W` would transfe
 genus-131 index calculus (cost on the order of the model in the previous section). This is the correct
 state of the window question; the earlier "every attackable path is closed" summary was wrong.
 
-Known subtleties, not yet resolved here: whether `W` admits an *indecomposable* principal polarization
-(a Jacobian's theta divisor is irreducible; `W` is only *isogenous*, not isomorphic, to `E x A`, so this
-is not settled by the isogeny decomposition), and whether the ramified twisted `L`-functions
-`L(E, rho^t)` of an order-131 character of `E` can equal `A`'s eigenvalue pairs `{alpha zeta^t,
-beta zeta^t}`. These need careful cohomology / polarization computation or a literature result on
-"`Res(E)` as a Jacobian"; the field cannot be brute-forced (it is `F_2^131`).
+**Literature grounding.** Scholten realizes `Res_{L/K}(E)` as a genus-2 Jacobian for quadratic `L/K`;
+genus-3 cover attacks do the analogue for cubic extensions. But Freeman (ePrint 2009/103) notes the Weil
+restriction is *generally not itself a Jacobian* for higher degree -- one must find a curve whose
+Jacobian is isogenous to it -- and the converse direction (a curve with a nonconstant map to `E` has
+Jacobian isogenous to `Res(E)`) is exactly our reduction. The standard GHS cover of `P^1` for ECC2K-130
+is forced to genus `~2^130` or the zero map (the crypto survey), so GHS does not produce the genus-131
+object; whether a *non-GHS* degree-131 cover of `E` does is the open window question, right at the genus
+floor (`>= 130`).
+
+**Why no cheap obstruction (structure).** The Prym eigenvalues come from *ramified* order-131 twists of
+`E`: a nontrivial *unramified* rank-1 local system `L` on the genus-1 curve `E` has `H^1(E, L) = 0`
+(`chi = rank * (2 - 2g) = 0`), so it contributes nothing; a twist ramified at 2 points has
+`chi_c = -2`, contributing exactly 2 eigenvalues per character, `260` total `= dim Prym * 2`. So `A`'s
+eigenvalue pairs `{alpha zeta^t, beta zeta^t}` would have to be the `H^1(E, rho^t)` eigenvalues of a
+*ramified* character -- a concrete existence condition with no a-priori contradiction. (This corrects an
+earlier mistaken intuition that `A`'s eigenvalues carried an "unramified signature".)
+
+Still genuinely open, needing cohomology / polarization theory or a specialized search (the field
+`F_2^131` is too big to brute-force): whether such a ramified character / genus-131 cover exists, and
+whether `W` admits an *indecomposable* principal polarization (a Jacobian's theta divisor is irreducible;
+`W` is only *isogenous*, not isomorphic, to `E x A`, so this is not settled by the isogeny
+decomposition).
 
 ## Honest status
 
