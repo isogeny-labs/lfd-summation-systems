@@ -56,6 +56,12 @@ form sheet. Still owed by the author: confirm the form fields and the "Use
 of AI tools" wording, submit, then record the ePrint number in
 `../CITATION.cff`, here and on the website.
 
+**Revision, 24 November 2026** (PR #58): the abstract gains the
+owner-approved clause on growth with any fixed number of summands
+(Corollary "Growth for every number of summands"); `eprint-abstract.txt`,
+`proof-status.json` (`abstract_claims`) and the submission sheet are
+resynced. No other source change.
+
 **Revision, 23 November 2026** (PR #49; abstract unchanged, owner-approved
 text kept). New Section 6.3, Corollary "Growth for every number of
 summands" (written proof): fixing all but two summands to cancelling pairs
