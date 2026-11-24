@@ -15,7 +15,7 @@ import flint
 from ppav_unit import build_unit
 
 
-def construct():
+def construct(matrix_path=None):
     phi = flint.fmpz_poly([1]*131)
     z = flint.fmpz_poly([0, 1])
     zi = flint.fmpz_poly([-1]*130)
@@ -92,6 +92,7 @@ def construct():
 
     here = Path(__file__).parent
     pa = json.loads((here / "P_A.json").read_text())["P_A_coeffs_low_to_high"]
+    assert gcd(degree, sum(pa)) == 1
     F, V = (zero, z), (-zi, -zi)
 
     def projector(p, root, split=False):
@@ -157,6 +158,18 @@ def construct():
     det_on_O = 131**2*Fraction(degree, 131)**2
     det_on_I = det_on_O/degree**2
     assert det_on_O == degree**2 and det_on_I == 1
+    # Independent modular determinant regressions check the actual matrix.
+    # They support, but do not replace, the exact norm/index proof.
+    modular_determinants = {}
+    principal_entries = [int(c) for c in principal.entries()]
+    for p in (97, 263, 65537, 1000000007, ell):
+        modular = flint.nmod_mat(260, 260, [c % p for c in principal_entries], p)
+        modular_determinants[str(p)] = int(modular.det())
+        assert modular_determinants[str(p)] == 1
+    if matrix_path is not None:
+        with Path(matrix_path).open("w") as out:
+            for i in range(260):
+                out.write(",".join(str(int(principal[i, j])) for j in range(260))+"\n")
     record = {
         "schema": "ecc2k130.explicit-ppav.v1",
         "object": "principally polarized ordinary Deligne module over F2; not a curve",
@@ -180,11 +193,13 @@ def construct():
             "principal_matrix_sha256_decimal_rows": digest(principal),
             "largest_principal_matrix_entry_bits": max(abs(int(c)).bit_length()
                                                         for c in principal.entries()),
+            "independent_modular_determinant_checks": modular_determinants,
         },
         "checks": {
             "all_130_positivity_signs_certified": True,
             "pairing_integral_alternating_on_I": True,
             "F_and_V_preserve_I": True,
+            "isogeny_degree_coprime_to_target_subgroup_order": True,
             "F_transpose_Omega_F_equals_2_Omega": True,
             "off_kernel_generator_negative_control_rejected": True,
             "unimodularity_method": "exact unit/norm/index identity; no approximate determinant",
@@ -195,7 +210,11 @@ def construct():
 
 
 if __name__ == "__main__":
-    record = construct()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--matrix-out", help="optional CSV export of the full principal matrix")
+    args = parser.parse_args()
+    record = construct(args.matrix_out)
     path = Path(__file__).with_name("explicit_ppav.json")
     path.write_text(json.dumps(record, indent=2)+"\n")
     print("Constructed explicit positive, integral, unimodular Deligne module.")

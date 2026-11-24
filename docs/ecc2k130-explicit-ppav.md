@@ -10,6 +10,9 @@ Reproduce with:
 python experiments/ecc2k130-weil-factor/construct_ppav.py
 ```
 
+Use `--matrix-out /tmp/ecc2k130-principal.csv` to export all 260-by-260
+entries in the exact serialization used by the recorded SHA-256.
+
 The saved artifact `experiments/ecc2k130-weil-factor/explicit_ppav.json`
 contains the lattice generator, an explicit positive-unit expression,
 its 260 integer coefficients, and the data reconstructing the principal
@@ -135,6 +138,11 @@ and its polarization description, give a principally polarized B/F2
 with the required Weil polynomial. The inclusion O -> I gives an
 isogeny A -> B of degree a.
 
+Its degree is coprime to r=P_A(1), which the code checks exactly.
+Consequently the isogeny induces an isomorphism on the rational
+prime-order target groups. This is a statement about the constructed
+isogeny, not an implementation for evaluating it on challenge points.
+
 At 263 the new lattice is O-stable. At ell, the new line in F_(ell²)
 is only F_ell-linear; its local multiplier order is Z_ell+ell*O_local.
 Elsewhere the order is maximal. Consequently End_F2(B) has index ell
@@ -146,6 +154,10 @@ The exact checks cover the sign enclosures, unit expansion, integrality,
 alternation, Frobenius compatibility, quotient stability and determinant
 norm/index identity. The matrix SHA-256 is recorded with the decimal-row
 serialization convention, so all 260-by-260 entries can be reproduced.
+Independent determinant calculations of the actual principal matrix
+modulo 97, 263, 65537, 1000000007, and ell all give one. These are
+regressions supplementing the exact norm/index proof, not a substitute
+for it.
 The construction is an algebraic module description; no equations for
 B, no curve equation, and no executable pointwise cryptanalytic transfer
 are supplied.
@@ -184,3 +196,29 @@ has that cost. Nor would excluding this one B exclude
 every polarized member of the isogeny class. The requested isogeny-class
 Jacobian verdict remains unresolved; this construction supplies an
 explicit polarized candidate for further work.
+
+## Bounded elliptic-map obstruction attempt
+
+A further test was executed on this specific principal polarization.
+The O_K-stable Hom(E,B) lattice is
+J=O+Z*(v mod 263)/263. If A_alpha is multiplication by alpha, its
+symmetric Gram form is the restriction of Omega*(2*A_alpha+1) to J.
+Half of a vector's norm is the degree of the corresponding elliptic
+map under a hypothetical Jacobian realization.
+
+A vector of degree 1, or prime degree d in {2,3,5,7,11}, would exclude
+this polarization: x and zeta*x give independent elliptic maps of the
+same degree. For prime d their function fields generate the curve
+field, since a nontrivial common degree would be d and force the
+maps to differ through a genus-one common factor. Castelnuovo--Severi
+then gives g<=d²+1<130. This would test this polarization, not every
+polarization on B or every member of the isogeny class.
+
+The exact-Gram LLL worker reached its 120-second cap without returning
+a result. An adaptive approximate-Gram alternative, retaining exact
+post-verification of any reported vector, reached its separate
+60-second cap. Both outcomes are saved as inconclusive timeouts in
+`elliptic_map_probe.json` and `elliptic_map_probe_approx.json`, with
+the prior protocol in `PROTOCOL_ELLIPTIC_MAPS.md`. No short-vector
+absence, minimum bound, or Jacobian exclusion follows from these
+timeouts. The probes are not rerun by CI.

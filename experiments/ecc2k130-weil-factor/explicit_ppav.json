@@ -975,12 +975,20 @@
     "determinant_on_O_K_from_exact_norm_identity": 1484639186350943173073640265704007426129,
     "determinant_on_I_from_exact_norm_index_identity": 1,
     "principal_matrix_sha256_decimal_rows": "4ab7dd31504657e5ad4f180a96dbd9e5838d4cfaeb9c7fe7fccde26b988b94a4",
-    "largest_principal_matrix_entry_bits": 396
+    "largest_principal_matrix_entry_bits": 396,
+    "independent_modular_determinant_checks": {
+      "97": 1,
+      "263": 1,
+      "65537": 1,
+      "1000000007": 1,
+      "146505763881528721": 1
+    }
   },
   "checks": {
     "all_130_positivity_signs_certified": true,
     "pairing_integral_alternating_on_I": true,
     "F_and_V_preserve_I": true,
+    "isogeny_degree_coprime_to_target_subgroup_order": true,
     "F_transpose_Omega_F_equals_2_Omega": true,
     "off_kernel_generator_negative_control_rejected": true,
     "unimodularity_method": "exact unit/norm/index identity; no approximate determinant"

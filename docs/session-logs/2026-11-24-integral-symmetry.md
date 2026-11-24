@@ -106,3 +106,20 @@ candidate would not classify all polarized representatives. ThetAV's
 documented genus-2 conversions and the complex numerical Fay method
 were investigated and do not provide the needed finite-field verdict.
 No curve, pointwise cryptanalytic transfer, or ECDLP improvement is claimed.
+
+### Additional verification and elliptic-map probe
+
+The actual principal matrix has determinant one modulo five independently
+computed prime moduli, supplementing the exact norm/index proof. A CSV
+export is available through --matrix-out; its SHA-256 matches the record.
+The isogeny degree is checked coprime to the target subgroup order.
+
+A prime-degree elliptic-map obstruction was then tried on the constructed
+polarization. Acceptance and a 120-second exact-Gram LLL cap were written
+before running. That worker timed out without returning a result. After
+recording this, an adaptive approximate-Gram mode with exact final
+vector checks was given a separate 60-second cap and also timed out.
+Both records are preserved, with no claim that the lattice has no short
+vectors. No further unchanged LLL retry was made. The protocol explains
+why a returned degree in {1,2,3,5,7,11} would have excluded this one
+polarization, and why even that would not settle the full isogeny class.
