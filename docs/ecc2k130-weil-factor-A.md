@@ -143,29 +143,39 @@ eigenvalues live in `Q(zeta_131)`, so it carries a *different* (no-`sqrt(-7)`) a
 This closes the `P^1`-based cyclic/abelian covers. It does **not** close covers of `E`, nor the fully
 general case.
 
-## Cover of E / Prym route (open, not closed)
+## Cover of E / Prym route: CLOSED for cyclic covers (class field theory)
 
 The natural carrier for `A` is a cyclic cover of `E` itself, not of `P^1`. A degree-131 cover
-`C -> E` totally ramified at 2 points has genus 131 (`2g-2 = 131(2*1-2) + 2*130 = 260`), in-window,
-with `Jac(C) ~ E x Prym`, `dim Prym = 130`. For `Prym ~ A` we need `Jac(C) ~ E x A = W`, where
-`W = Res_{F_2^131/F_2}(E)` has `P_W = (x^2+x+2) P_A = x^262 - s_131 x^131 + 2^131`. So:
+`C -> E` totally ramified at a degree-2 conductor has genus 131 (`2g-2 = 131(2*1-2) + 130*2 = 260`),
+in-window, with `Jac(C) ~ E x Prym`, `dim Prym = 130`. For `Prym ~ A` we need `Jac(C) ~ E x A = W`,
+where `W = Res_{F_2^131/F_2}(E)` has `P_W = (x^2+x+2) P_A = x^262 - s_131 x^131 + 2^131`. The `P^1` field
+obstruction does **not** apply here (`E` already has CM by `sqrt(-7)`), and `W` passes the place-count
+necessary conditions (`cover_of_E_reduction.py`): all `a_d >= 0`, and strikingly `#C(F_2^k) = 2^k + 1`
+for all `k = 1..130` (the virtual curve is `P^1`-like up to degree 130). So the cheap tests do not close
+it.
 
-> **A is the Prym of a degree-131 cover of E  ==>  W = Res(E) is a genus-131 Jacobian (carrying a
-> degree-131 map to E).**
+But **class field theory does** (`experiments/ecc2k130-weil-factor/rayclass_cover_E.py`). A
+geometrically connected cyclic degree-131 cover of `E` with conductor `m` corresponds to an order-131
+character of the ray class group `Cl_m(E)` that is *nontrivial on the degree-0 part* `Cl^0_m`
+(characters through the degree map give the disconnected constant-field extension `Res(E)` itself, not a
+connected curve). Since `E` has a degree-1 place, `Cl_m = Z (+) Cl^0_m`, so such a character exists
+**iff `131 | |Cl^0_m|`**, and `|Cl^0_m| = #E(F_2) * |ray part|`, `#E(F_2) = 4`, ray part (tame, since
+`131` is coprime to char 2) `= prod_{v|m}(2^deg(v) - 1)` up to a 2-power.
 
-The `P^1` field obstruction does **not** apply here: `E` already has CM by `sqrt(-7)`, so a cover of `E`
-can supply it. Testing the place-count necessary conditions for `W`
-(`experiments/ecc2k130-weil-factor/cover_of_E_reduction.py`):
+`A` as the Prym forces `g_C = 131`, hence conductor of total degree 2. Both cases give
+`|Cl^0_m| in {4, 12}`, **coprime to 131** -- so there is no such character and **no connected cyclic
+degree-131 cover of `E` has genus 131: `A` is not its Prym.** 131-torsion in the ray class group first
+appears when the conductor contains a degree-130 place (`ord_131(2) = 130`, so `131 | 2^d - 1` iff
+`130 | d`), which forces genus `>= 8451` -- astronomically outside the window. (A connected degree-131
+cover is Galois iff cyclic since 131 is prime, and `A`'s `zeta_131`-eigenvalue structure requires the
+cyclic one.)
 
-- All place counts `a_d >= 0` (`d = 1..399`).
-- Strikingly, **`#C(F_2^k) = 2^k + 1` for all `k = 1..130`** -- the virtual curve looks exactly like
-  `P^1` up to degree 130, revealing its genus only at degree 131.
-
-So **`W` passes the cheap necessary conditions and the cover-of-E route is open** -- it is not ruled out.
-Whether `W` is actually a genus-131 Jacobian (hence whether the cover exists) is the real open question,
-and it is attack-relevant: a genus-131 curve `C` with `Jac(C) ~ W` would transfer the ECC2K-130 DLP to
-genus-131 index calculus (cost on the order of the model in the previous section). This is the correct
-state of the window question; the earlier "every attackable path is closed" summary was wrong.
+So the **cover-of-E route is closed**, by the same `ord_131(2) = 130` prime-degree obstruction that
+governs every other level of this problem -- now realized as the ray class group lacking 131-torsion
+below a degree-130 conductor. Correcting the record: an earlier version called this route "open"; class
+field theory closes it. What remains genuinely open is only the fully general case -- `A` as the
+Jacobian of a curve with *no* cover structure or useful symmetry -- which has no known decision
+procedure at dimension 130 and, lacking any construction, carries no attack.
 
 **Literature grounding.** Scholten realizes `Res_{L/K}(E)` as a genus-2 Jacobian for quadratic `L/K`;
 genus-3 cover attacks do the analogue for cubic extensions. But Freeman (ePrint 2009/103) notes the Weil
@@ -198,11 +208,14 @@ field `Q(zeta_131, sqrt(-7))`, and is **not ruled out** by any computable zeta-f
 escapes (splitting, a p-rank obstruction, a negative virtual count) are closed. Cyclic/abelian covers of
 `P^1` are rigorously excluded (the `sqrt(-7)` obstruction).
 
-**What remains open.** Covers of `E` itself (the Prym route, reducing to "is `W = Res(E)` a genus-131
-Jacobian") are NOT closed and are attack-relevant; and the fully general case (a Jacobian with no useful
-automorphism group) has no known decision procedure at dimension 130. These are the live questions. An
-earlier summary that called the window "closed / solved in the negative" was wrong and is retracted
-here: the Prym-of-E route in particular is open.
+**What remains open.** Cyclic covers of `P^1` (sqrt(-7) obstruction) and cyclic covers of `E` (ray class
+group has no 131-torsion below a degree-130 conductor; `rayclass_cover_E.py`) are both now closed, by the
+same `ord_131(2) = 130` prime-degree obstruction. What is left is only the fully general case -- `A` as
+the Jacobian of a curve with *no* cover structure or useful automorphism group -- which has no known
+decision procedure at dimension 130 and, lacking any construction, carries no attack. (History: an
+earlier summary wrongly called the whole window "closed"; it was then corrected to "cover-of-E open";
+the class-field-theory computation now closes the cover-of-E route specifically. The general no-symmetry
+case stays open.)
 
 ## Cheap obstructions for the cover-of-E route: exhausted (none closes it)
 
@@ -221,7 +234,10 @@ Recording which obstructions were tried and FAIL, so they are not re-attempted:
   *indecomposable* as a ppav (a necessary condition to be a Jacobian) -- but indecomposability is not
   thereby proven, and it is only necessary, not sufficient.
 
-Net: the cheap obstructions are exhausted and none closes the cover-of-E route. A genuine verdict needs
-explicit cohomology over F_{2^130} (the ramified order-131 twisted L-functions of E) or a
-polarization-lattice computation of W's principal polarization -- real tools beyond cheap counts. The
-route is open.
+Net: the *cheap counting* obstructions do not close the cover-of-E route -- but **class field theory
+does** (see "Cover of E / Prym route: CLOSED for cyclic covers" above). The ray class group `Cl^0_m` of
+`E` for a genus-131 conductor has order `4` or `12`, coprime to 131, so no connected cyclic degree-131
+cover of genus 131 exists; 131-torsion needs a degree-130 place in the conductor, forcing genus
+`>= 8451`. The `E[131]`-irreducibility note above was *suggestive toward* openness; the ray class group
+computation is the actual decision, and it closes the route. (The per-character `c_1` attempt remains
+recorded as invalid.)
