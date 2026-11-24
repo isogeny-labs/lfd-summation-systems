@@ -73,8 +73,31 @@ Shimura–Taniyama)? `A`'s CM field `Q(zeta_131, sqrt(-7))` strictly contains `Q
 symmetry to genus ≥ 394, outside the usable window. Reconciling that bound against this CM-type
 computation is the next concrete step; it is a finite check, not a run.
 
+## Jacobian necessary-condition tests (passed)
+
+If `A` were isogenous to the Jacobian of a genus-130 curve `C / F_2`, then `C`'s zeta numerator is the
+reciprocal of `P_A`, and both the point counts `#C(F_{2^k}) = 2^k + 1 - p_k` (`p_k` = power sums of
+`P_A`'s roots) and the closed-place counts `a_d = (1/d) sum_{e|d} mu(d/e) #C(F_{2^e})` must be
+non-negative integers. A single negative value would prove no curve has this zeta function, hence `A`
+is not a Jacobian. Computed in `experiments/ecc2k130-weil-factor/jacobian_tests.py` (`p_k` by Newton's
+identities, cross-checked against the exact `p_k = -s_k^E` for `131 ∤ k`, `130 s_k^E` for `131 | k`):
+
+- `#C(F_2) = 2`, `#C(F_4) = 2`, `#C(F_8) = 14`, `#C(F_16) = 18`; **all `#C(F_{2^k}) ≥ 0`** (min 2,
+  checked `k = 1..1599`).
+- closed-place counts `a_1 = 2, a_2 = 0, a_3 = 4, a_4 = 4, ...`; **all `a_d ≥ 0` integers** (min 0,
+  checked `d = 1..400`).
+
+So **`A` passes every cheap decisive test**: its virtual zeta function is that of a genuine genus-130
+curve candidate. There is no point-count or place-count obstruction to `A` being a Jacobian.
+
 ## Honest status
 
-This note does **not** resolve whether `A` is a Jacobian; that remains the open window question. It
-provides the exact data any resolution must match, proves `A` is simple and ordinary (ruling out the
-easy splits), and reduces the remaining question to a specific CM-type comparison.
+This is a **necessary, not sufficient**, result. Passing the point- and place-count tests does not
+construct a curve; for dimension `g ≥ 4` there is no known decision procedure for "is this simple
+ordinary abelian variety a Jacobian", so the window question stays open. What is now established, by
+direct computation: `A` is simple, ordinary, carries the ECDLP prime, has CM field `Q(zeta_131,
+sqrt(-7))`, and is **not ruled out** by any computable zeta-function obstruction. The easy escapes
+(splitting, a p-rank obstruction, a negative virtual point/place count) are all closed off. The
+remaining route to a verdict is a CM-type / Jacobi-sum comparison against explicit cyclic-cover
+families (`PARI/GP` is now available in-container for this), reconciled with the crypto repo's
+genus ≥ 394 bound.
