@@ -208,14 +208,26 @@ field `Q(zeta_131, sqrt(-7))`, and is **not ruled out** by any computable zeta-f
 escapes (splitting, a p-rank obstruction, a negative virtual count) are closed. Cyclic/abelian covers of
 `P^1` are rigorously excluded (the `sqrt(-7)` obstruction).
 
-**What remains open.** Cyclic covers of `P^1` (sqrt(-7) obstruction) and cyclic covers of `E` (ray class
-group has no 131-torsion below a degree-130 conductor; `rayclass_cover_E.py`) are both now closed, by the
-same `ord_131(2) = 130` prime-degree obstruction. What is left is only the fully general case -- `A` as
-the Jacobian of a curve with *no* cover structure or useful automorphism group -- which has no known
-decision procedure at dimension 130 and, lacking any construction, carries no attack. (History: an
-earlier summary wrongly called the whole window "closed"; it was then corrected to "cover-of-E open";
-the class-field-theory computation now closes the cover-of-E route specifically. The general no-symmetry
-case stays open.)
+**The "no automorphism" case turns out to be constrained.** The natural model of `A` (with its full CM
+ring `End(A) = O_K`) carries a rational order-131 automorphism `rho = zeta_131` (the Weil-restriction
+deck transformation), and `rho` preserves every polarization (Rosati = complex conjugation on `K`,
+`zeta * conj(zeta) = 1`). So **`A` is not ISOMORPHIC to a Jacobian** (`not_a_jacobian.py`): if
+`(A, theta) ~= (Jac C, theta_C)`, Torelli forces an order-131 automorphism of the genus-130 curve `C`,
+Riemann-Hurwitz forces `C -> P^1` cyclic degree-131 (the unique solution is `g_D = 0`, 4 branch points),
+and then `Jac(C)`'s eigenvalues lie in `Q(zeta_131)` -- contradicting `A`'s `sqrt(-7)`. The "curve with
+no useful automorphism group" cannot occur for the natural model: `A`'s own automorphism forces one onto
+any isomorphic curve, collapsing the general case back onto the (excluded) `P^1`-cover case.
+
+**What is genuinely left (isogeny residue).** The ECDLP transfer needs only `A` *isogenous* to a
+Jacobian. A different model `A'` in the isogeny class, with `End(A')` a smaller order NOT containing
+`zeta_131`, would have no forced automorphism and is not excluded by the argument above. So the open
+residue is precisely: **does the minimal endomorphism ring `Z[pi, pi-bar]` contain `zeta_131`?** If yes,
+every isogenous model carries the automorphism and `A` is not isogenous to a Jacobian (full closure); if
+no, a `no-automorphism` model `A'` is not excluded. This is a concrete endomorphism-ring question, not
+resolved here. (History: an earlier summary wrongly called the whole window "closed"; it was corrected
+to "cover-of-E open"; class field theory then closed the cover-of-E route; and the automorphism/Torelli
+argument now closes the isomorphism case, leaving only the isogeny residue above. This result should be
+independently reviewed.)
 
 ## Cheap obstructions for the cover-of-E route: exhausted (none closes it)
 
