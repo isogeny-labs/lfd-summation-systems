@@ -3,7 +3,8 @@
 
 Theorem (this file verifies the computational inputs):
   A is NOT isogenous to a simple factor of the Jacobian of any cyclic (more generally, abelian) cover
-  C -> P^1 of order coprime to 7. For a cyclic cover whose order is divisible by 7 (needed to supply
+  C -> P^1 of order coprime to 7. (Covers of P^1 only; covers of E are a separate, open case -- see
+  cover_of_E_reduction.py.) For a cyclic cover whose order is divisible by 7 (needed to supply
   sqrt(-7)), the order is divisible by lcm(7,131)=917 and the genus is >= 458, far above the usable
   window (~130-300). So no cyclic cover realizes A in-window.
 

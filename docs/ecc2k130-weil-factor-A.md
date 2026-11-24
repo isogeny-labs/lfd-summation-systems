@@ -110,11 +110,16 @@ running index calculus needs the *explicit* curve `C` and an *evaluatable* isoge
 existence alone does not provide. This is a cost model, not a validated run (no replay/validation-gate
 evidence), and claims nothing about `A` being a Jacobian.
 
-## Solved sub-result: cyclic covers cannot realize A in-window
+## Sub-result: cyclic covers OF P^1 cannot realize A in-window
 
-The natural way to construct a Jacobian with prescribed CM is a cyclic (superelliptic) cover of `P^1`;
-this is the family the crypto notes' genus >= 394 bound targets. It is now **rigorously excluded**
-(`experiments/ecc2k130-weil-factor/cyclic_cover_exclusion.py`):
+**Scope correction (2026-11-24).** An earlier version of this note claimed this result closed "every
+construction with abelian symmetry". That was an overstatement: the argument below rules out cyclic /
+abelian covers of **`P^1`** only. Covers of `E` itself (the CM base) escape it entirely and are treated
+in the next section, where the route is *reopened*.
+
+The standard way to build a Jacobian with prescribed CM is a cyclic (superelliptic) cover of `P^1`;
+this is the family the crypto notes' genus >= 394 bound targets. For covers of `P^1` it is **rigorously
+excluded** (`experiments/ecc2k130-weil-factor/cyclic_cover_exclusion.py`):
 
 - *Mechanism.* For an abelian cover `C -> P^1` with Galois group of exponent `N` (char 2, `N` odd),
   every Frobenius eigenvalue on `Jac(C)` is a Jacobi sum, so lies in `Q(zeta_N)` (Weil). If `A` were an
@@ -135,19 +140,50 @@ this is the family the crypto notes' genus >= 394 bound targets. It is now **rig
 For contrast, a `Z/131` cover with 4 branch points has genus exactly 130 (in-window) -- but its
 eigenvalues live in `Q(zeta_131)`, so it carries a *different* (no-`sqrt(-7)`) abelian variety, not `A`.
 
-This closes every abelian/cyclic-cover construction (the ones anyone would use to build the curve
-explicitly). It does **not** close the fully general case: `A` could still be a Jacobian of a curve with
-no useful automorphism group, where no CM-compatibility argument applies and there is no known decision
-procedure at dimension 130.
+This closes the `P^1`-based cyclic/abelian covers. It does **not** close covers of `E`, nor the fully
+general case.
+
+## Cover of E / Prym route (open, not closed)
+
+The natural carrier for `A` is a cyclic cover of `E` itself, not of `P^1`. A degree-131 cover
+`C -> E` totally ramified at 2 points has genus 131 (`2g-2 = 131(2*1-2) + 2*130 = 260`), in-window,
+with `Jac(C) ~ E x Prym`, `dim Prym = 130`. For `Prym ~ A` we need `Jac(C) ~ E x A = W`, where
+`W = Res_{F_2^131/F_2}(E)` has `P_W = (x^2+x+2) P_A = x^262 - s_131 x^131 + 2^131`. So:
+
+> **A is the Prym of a degree-131 cover of E  ==>  W = Res(E) is a genus-131 Jacobian (carrying a
+> degree-131 map to E).**
+
+The `P^1` field obstruction does **not** apply here: `E` already has CM by `sqrt(-7)`, so a cover of `E`
+can supply it. Testing the place-count necessary conditions for `W`
+(`experiments/ecc2k130-weil-factor/cover_of_E_reduction.py`):
+
+- All place counts `a_d >= 0` (`d = 1..399`).
+- Strikingly, **`#C(F_2^k) = 2^k + 1` for all `k = 1..130`** -- the virtual curve looks exactly like
+  `P^1` up to degree 130, revealing its genus only at degree 131.
+
+So **`W` passes the cheap necessary conditions and the cover-of-E route is open** -- it is not ruled out.
+Whether `W` is actually a genus-131 Jacobian (hence whether the cover exists) is the real open question,
+and it is attack-relevant: a genus-131 curve `C` with `Jac(C) ~ W` would transfer the ECC2K-130 DLP to
+genus-131 index calculus (cost on the order of the model in the previous section). This is the correct
+state of the window question; the earlier "every attackable path is closed" summary was wrong.
+
+Known subtleties, not yet resolved here: whether `W` admits an *indecomposable* principal polarization
+(a Jacobian's theta divisor is irreducible; `W` is only *isogenous*, not isomorphic, to `E x A`, so this
+is not settled by the isogeny decomposition), and whether the ramified twisted `L`-functions
+`L(E, rho^t)` of an order-131 character of `E` can equal `A`'s eigenvalue pairs `{alpha zeta^t,
+beta zeta^t}`. These need careful cohomology / polarization computation or a literature result on
+"`Res(E)` as a Jacobian"; the field cannot be brute-forced (it is `F_2^131`).
 
 ## Honest status
 
-This is a **necessary, not sufficient**, result. Passing the point- and place-count tests does not
-construct a curve; for dimension `g ≥ 4` there is no known decision procedure for "is this simple
-ordinary abelian variety a Jacobian", so the window question stays open. What is now established, by
-direct computation: `A` is simple, ordinary, carries the ECDLP prime, has CM field `Q(zeta_131,
-sqrt(-7))`, and is **not ruled out** by any computable zeta-function obstruction. The easy escapes
-(splitting, a p-rank obstruction, a negative virtual point/place count) are all closed off. The
-remaining route to a verdict is a CM-type / Jacobi-sum comparison against explicit cyclic-cover
-families (`PARI/GP` is now available in-container for this), reconciled with the crypto repo's
-genus ≥ 394 bound.
+What is established by direct computation: `A` is simple, ordinary, carries the ECDLP prime, has CM
+field `Q(zeta_131, sqrt(-7))`, and is **not ruled out** by any computable zeta-function obstruction
+(point counts, place counts, effective-divisor counts all pass, for both `A` and `W = E x A`). The easy
+escapes (splitting, a p-rank obstruction, a negative virtual count) are closed. Cyclic/abelian covers of
+`P^1` are rigorously excluded (the `sqrt(-7)` obstruction).
+
+**What remains open.** Covers of `E` itself (the Prym route, reducing to "is `W = Res(E)` a genus-131
+Jacobian") are NOT closed and are attack-relevant; and the fully general case (a Jacobian with no useful
+automorphism group) has no known decision procedure at dimension 130. These are the live questions. An
+earlier summary that called the window "closed / solved in the negative" was wrong and is retracted
+here: the Prym-of-E route in particular is open.
