@@ -1,0 +1,203 @@
+{
+  "cases": [
+    {
+      "baseline": {
+        "lower": 6.796174109000276,
+        "upper": 6.796174109000276
+      },
+      "candidate": {
+        "lower": 1.0391043650006395,
+        "upper": 1.0391043650006395
+      },
+      "gain": {
+        "lower": 6.540415321030909,
+        "upper": 6.540415321030909
+      },
+      "id": "n7-l3-s3-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 7.009224654999343,
+        "upper": 7.009224654999343
+      },
+      "candidate": {
+        "lower": 0.7992803070001173,
+        "upper": 0.7992803070001173
+      },
+      "gain": {
+        "lower": 8.769419931421274,
+        "upper": 8.769419931421274
+      },
+      "id": "n7-l3-s3-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.4593197940002938,
+        "upper": 1.4593197940002938
+      },
+      "candidate": {
+        "lower": 0.49631769400093617,
+        "upper": 0.49631769400093617
+      },
+      "gain": {
+        "lower": 2.94029371033776,
+        "upper": 2.94029371033776
+      },
+      "id": "n7-l3-s4-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.9583294610010853,
+        "upper": 0.9583294610010853
+      },
+      "candidate": {
+        "lower": 0.43800140199891757,
+        "upper": 0.43800140199891757
+      },
+      "gain": {
+        "lower": 2.1879598024744533,
+        "upper": 2.1879598024744533
+      },
+      "id": "n7-l3-s4-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 7.162298920000467,
+        "upper": 7.162298920000467
+      },
+      "candidate": {
+        "lower": 2.072702152999227,
+        "upper": 2.072702152999227
+      },
+      "gain": {
+        "lower": 3.455536971212447,
+        "upper": 3.455536971212447
+      },
+      "id": "n9-l3-s3-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 8.191236174999176,
+        "upper": 8.191236174999176
+      },
+      "candidate": {
+        "lower": 1.3709013680008866,
+        "upper": 1.3709013680008866
+      },
+      "gain": {
+        "lower": 5.975073310302422,
+        "upper": 5.975073310302422
+      },
+      "id": "n9-l3-s3-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 2.2565471229981995,
+        "upper": 2.2565471229981995
+      },
+      "candidate": {
+        "lower": 0.7754920400002447,
+        "upper": 0.7754920400002447
+      },
+      "gain": {
+        "lower": 2.9098262865438147,
+        "upper": 2.9098262865438147
+      },
+      "id": "n9-l3-s4-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.966317428998991,
+        "upper": 1.966317428998991
+      },
+      "candidate": {
+        "lower": 0.6901936449994537,
+        "upper": 0.6901936449994537
+      },
+      "gain": {
+        "lower": 2.8489358649492456,
+        "upper": 2.8489358649492456
+      },
+      "id": "n9-l3-s4-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 2.7609300100002656,
+        "upper": 2.7609300100002656
+      },
+      "candidate": {
+        "lower": 0.6899760229998719,
+        "upper": 0.6899760229998719
+      },
+      "gain": {
+        "lower": 4.001486889350614,
+        "upper": 4.001486889350614
+      },
+      "id": "n11-l3-s3-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.6646326910004063,
+        "upper": 1.6646326910004063
+      },
+      "candidate": {
+        "lower": 0.4827576180005053,
+        "upper": 0.4827576180005053
+      },
+      "gain": {
+        "lower": 3.4481748789278845,
+        "upper": 3.4481748789278845
+      },
+      "id": "n11-l3-s3-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.953502087999368,
+        "upper": 1.953502087999368
+      },
+      "candidate": {
+        "lower": 0.44338814099955925,
+        "upper": 0.44338814099955925
+      },
+      "gain": {
+        "lower": 4.405851008092952,
+        "upper": 4.405851008092952
+      },
+      "id": "n11-l3-s4-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 2.5629214349992253,
+        "upper": 2.5629214349992253
+      },
+      "candidate": {
+        "lower": 1.0415018049989158,
+        "upper": 1.0415018049989158
+      },
+      "gain": {
+        "lower": 2.4607940405843975,
+        "upper": 2.4607940405843975
+      },
+      "id": "n11-l3-s4-no",
+      "primary_complete": true
+    }
+  ],
+  "geometric_mean_gain_lower_bound": 3.813094278977098,
+  "primary_complete_cases": 12,
+  "statuses": {
+    "gb_timeout": 30,
+    "ok": 78
+  },
+  "target_supported": true
+}

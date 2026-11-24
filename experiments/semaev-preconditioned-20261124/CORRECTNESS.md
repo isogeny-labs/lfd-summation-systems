@@ -76,6 +76,9 @@ recovered infinity branch give the full ordered PDP x-coordinate tuples.
 
 - 420 seeded generic Boolean systems, 1 to 7 variables: enumerate every
   original and residual assignment and check exact bijective recovery.
+- 140 satisfiable systems with planted affine maps hidden by invertible row
+  mixing, 2 to 8 variables: force nontrivial elimination and check full
+  bijective recovery, rather than relying only on random dense systems.
 - Explicit hidden-affine and inconsistent systems.
 - Curve addition trace identity, including doubling and inverse cases.
 - Complete small-field PDP oracles versus trace augmentation and reduction.

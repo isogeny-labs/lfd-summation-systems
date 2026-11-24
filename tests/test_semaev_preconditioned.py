@@ -30,3 +30,14 @@ def test_preconditioned_and_baseline_solve_match_point_enumeration():
                     got,metrics=P.solve(E,basis,R,form,pre)
                     assert got==oracle.get(R,set())
                     assert metrics['residual_variables']<=metrics['input']['variables']
+
+
+def test_saved_preconditioning_record_and_warm_confirmation():
+    from pathlib import Path
+    import subprocess
+    import sys
+    root=Path(__file__).resolve().parents[1]
+    subprocess.run([sys.executable,str(root/'scripts/check_semaev_preconditioned.py')],
+                   cwd=root,check=True,capture_output=True,text=True)
+    subprocess.run([sys.executable,str(root/'scripts/run_semaev_preconditioned_warm.py'),'check'],
+                   cwd=root,check=True,capture_output=True,text=True)

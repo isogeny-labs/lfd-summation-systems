@@ -35,6 +35,36 @@ def test_hidden_affine_row_and_contradiction():
     assert reduce_affine([],4).variables==4
 
 
+def test_satisfiable_hidden_affine_maps_after_row_mixing():
+    """Force nontrivial bijections, rather than relying on random unsatisfiable systems."""
+    rng=random.Random(731)
+    for n in range(2,9):
+        for _ in range(20):
+            free=n//2
+            eqs=[]
+            assignment=rng.randrange(1<<free)
+            for j in range(free,n):
+                rhs=[1<<i for i in range(free) if rng.randrange(2)]
+                if rng.randrange(2):
+                    rhs.append(0)
+                if M.eval_boolean(rhs,assignment):
+                    assignment |= 1<<j
+                eqs.append(set([1<<j]+rhs))
+            for _ in range(3):
+                p=set(rng.sample(range(1<<n),min(7,1<<n)))
+                if M.eval_boolean(p,assignment):
+                    p.symmetric_difference_update({0})
+                eqs.append(p)
+            for _ in range(40):
+                a,b=rng.sample(range(len(eqs)),2)
+                eqs[a]=eqs[a]^eqs[b]
+            reduced=reduce_affine(eqs,n)
+            assert not reduced.inconsistent
+            assert reduced.statistics['eliminated']>=n-free
+            got={reduced.recover(v) for v in solutions(reduced.equations,reduced.variables)}
+            assert got==solutions(eqs,n)
+
+
 def test_trace_constraints_on_rational_point_sums():
     for n in (2,3,4):
         E=I.BinaryCurve(I.binary_field(n),1,3)
