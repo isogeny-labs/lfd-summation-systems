@@ -1,0 +1,13 @@
+{
+  "caveat": "observed finite-grid practical significance gate, not an asymptotic or statistical theorem",
+  "explanation": "Strict complete-pair gate retains all baseline censoring; secondary interval analysis is separate.",
+  "heldout_complete_pairs": 2,
+  "heldout_gain": 2.3846830104745855,
+  "met": false,
+  "primary_candidate": "original_preconditioned",
+  "prior_gain": 12.313510347406805,
+  "secondary_interval_target_supported": true,
+  "target": "at least 2x charged geometric-mean gain vs faster original/split GB on each cohort",
+  "warm_confirmation_target_supported": true,
+  "warm_gain_lower_bound": 3.813094278977098
+}

@@ -1,0 +1,839 @@
+{
+  "aggregate": {
+    "all": {
+      "cases": 45,
+      "cases_with_censored_baseline": 10,
+      "exactly_resolved_best_baselines": 45,
+      "geometric_mean_gain_lower_bound": 8.913525187004668,
+      "primary_complete": 45
+    },
+    "heldout": {
+      "cases": 12,
+      "cases_with_censored_baseline": 10,
+      "exactly_resolved_best_baselines": 12,
+      "geometric_mean_gain_lower_bound": 3.665518712635461,
+      "primary_complete": 12
+    },
+    "prior": {
+      "cases": 33,
+      "cases_with_censored_baseline": 0,
+      "exactly_resolved_best_baselines": 33,
+      "geometric_mean_gain_lower_bound": 12.313510347406805,
+      "primary_complete": 33
+    }
+  },
+  "analysis": "secondary conservative intervals; frozen complete-pair gate reported separately",
+  "cases": [
+    {
+      "baseline": {
+        "lower": 0.018763160999696993,
+        "upper": 0.018763160999696993
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.000356037000528886,
+        "upper": 0.000356037000528886
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 52.700031097399105,
+        "upper": 52.700031097399105
+      },
+      "id": "n3-l1-s0-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.017415129000255547,
+        "upper": 0.017415129000255547
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.00031172299895843025,
+        "upper": 0.00031172299895843025
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 55.86732149519047,
+        "upper": 55.86732149519047
+      },
+      "id": "n3-l1-s0-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.019170615001712576,
+        "upper": 0.019170615001712576
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0003500599987091846,
+        "upper": 0.0003500599987091846
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 54.763797841520116,
+        "upper": 54.763797841520116
+      },
+      "id": "n3-l1-s1-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.016601609999270295,
+        "upper": 0.016601609999270295
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.00030108600094536087,
+        "upper": 0.00030108600094536087
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 55.139096295224455,
+        "upper": 55.139096295224455
+      },
+      "id": "n3-l1-s1-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.018622309999955178,
+        "upper": 0.018622309999955178
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.00030625599902123213,
+        "upper": 0.00030625599902123213
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 60.806351743216396,
+        "upper": 60.806351743216396
+      },
+      "id": "n3-l1-s2-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.01637151899831224,
+        "upper": 0.01637151899831224
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0003003649990205304,
+        "upper": 0.0003003649990205304
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 54.505415250440755,
+        "upper": 54.505415250440755
+      },
+      "id": "n3-l1-s2-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.025981018001402845,
+        "upper": 0.025981018001402845
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.02167841699974815,
+        "upper": 0.02167841699974815
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 1.1984739476920607,
+        "upper": 1.1984739476920607
+      },
+      "id": "n3-l2-s0-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.028998322000916232,
+        "upper": 0.028998322000916232
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.023696397000094294,
+        "upper": 0.023696397000094294
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 1.2237439303874273,
+        "upper": 1.2237439303874273
+      },
+      "id": "n3-l2-s0-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.07214329999987967,
+        "upper": 0.07214329999987967
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.039656855999965046,
+        "upper": 0.039656855999965046
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 1.819188591247457,
+        "upper": 1.819188591247457
+      },
+      "id": "n3-l2-s1-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.024357592998967448,
+        "upper": 0.024357592998967448
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.021566186000200105,
+        "upper": 0.021566186000200105
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 1.1294344303040622,
+        "upper": 1.1294344303040622
+      },
+      "id": "n3-l2-s2-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.03294026799903804,
+        "upper": 0.03294026799903804
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.023771070000293548,
+        "upper": 0.023771070000293548
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 1.3857292918926774,
+        "upper": 1.3857292918926774
+      },
+      "id": "n3-l2-s2-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.027386017000026186,
+        "upper": 0.027386017000026186
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0006551710011990508,
+        "upper": 0.0006551710011990508
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 41.79980028100466,
+        "upper": 41.79980028100466
+      },
+      "id": "n4-l2-s0-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.035888829998839356,
+        "upper": 0.035888829998839356
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0005636560008497327,
+        "upper": 0.0005636560008497327
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 63.67151231377931,
+        "upper": 63.67151231377931
+      },
+      "id": "n4-l2-s0-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.0844856300009269,
+        "upper": 0.0844856300009269
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0800589359996593,
+        "upper": 0.0800589359996593
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 1.055292940706662,
+        "upper": 1.055292940706662
+      },
+      "id": "n4-l2-s1-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.08379781899930094,
+        "upper": 0.08379781899930094
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0005784269987998414,
+        "upper": 0.0005784269987998414
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 144.8719011615471,
+        "upper": 144.8719011615471
+      },
+      "id": "n4-l2-s1-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.05180344899963529,
+        "upper": 0.05180344899963529
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.02073316699897987,
+        "upper": 0.02073316699897987
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 2.498578678413393,
+        "upper": 2.498578678413393
+      },
+      "id": "n4-l2-s2-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.03599141700124164,
+        "upper": 0.03599141700124164
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0007069289995342842,
+        "upper": 0.0007069289995342842
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 50.912350497648745,
+        "upper": 50.912350497648745
+      },
+      "id": "n4-l2-s2-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.027772692999860737,
+        "upper": 0.027772692999860737
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0005375489981815917,
+        "upper": 0.0005375489981815917
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 51.66541672258633,
+        "upper": 51.66541672258633
+      },
+      "id": "n5-l2-s0-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.043559222001022135,
+        "upper": 0.043559222001022135
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.000771253999118926,
+        "upper": 0.000771253999118926
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 56.47843907556242,
+        "upper": 56.47843907556242
+      },
+      "id": "n5-l2-s0-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.20002442600161885,
+        "upper": 0.20002442600161885
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.03411767600209714,
+        "upper": 0.03411767600209714
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 5.862779926432379,
+        "upper": 5.862779926432379
+      },
+      "id": "n5-l2-s1-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.0496666870012632,
+        "upper": 0.0496666870012632
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.01798144000076718,
+        "upper": 0.01798144000076718
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 2.7621084295331277,
+        "upper": 2.7621084295331277
+      },
+      "id": "n5-l2-s2-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.04415006999988691,
+        "upper": 0.04415006999988691
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0007632329998159548,
+        "upper": 0.0007632329998159548
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 57.846123019488424,
+        "upper": 57.846123019488424
+      },
+      "id": "n5-l2-s2-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.061450932000298,
+        "upper": 1.061450932000298
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.426359446000788,
+        "upper": 0.426359446000788
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 2.489568231586304,
+        "upper": 2.489568231586304
+      },
+      "id": "n5-l3-s0-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.9700933609992717,
+        "upper": 0.9700933609992717
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.43018473999927664,
+        "upper": 0.43018473999927664
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 2.2550622344272435,
+        "upper": 2.2550622344272435
+      },
+      "id": "n5-l3-s0-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.5861967569999251,
+        "upper": 0.5861967569999251
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0646012110000811,
+        "upper": 0.0646012110000811
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 9.074083100380104,
+        "upper": 9.074083100380104
+      },
+      "id": "n5-l3-s1-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.5090225230005672,
+        "upper": 0.5090225230005672
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.2724602119997144,
+        "upper": 0.2724602119997144
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 1.8682453458602637,
+        "upper": 1.8682453458602637
+      },
+      "id": "n5-l3-s2-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.5291162860003169,
+        "upper": 0.5291162860003169
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.2493911579995256,
+        "upper": 0.2493911579995256
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 2.121632098926793,
+        "upper": 2.121632098926793
+      },
+      "id": "n5-l3-s2-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.09564489599961234,
+        "upper": 0.09564489599961234
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.022603172000344784,
+        "upper": 0.022603172000344784
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 4.231481138937198,
+        "upper": 4.231481138937198
+      },
+      "id": "n7-l2-s0-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.06684056099857116,
+        "upper": 0.06684056099857116
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.02928093699938472,
+        "upper": 0.02928093699938472
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 2.2827329945068247,
+        "upper": 2.2827329945068247
+      },
+      "id": "n7-l2-s0-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.05899747399962507,
+        "upper": 0.05899747399962507
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0009557899993524188,
+        "upper": 0.0009557899993524188
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 61.72639809958037,
+        "upper": 61.72639809958037
+      },
+      "id": "n7-l2-s1-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.07636993100095424,
+        "upper": 0.07636993100095424
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0007559910000054515,
+        "upper": 0.0007559910000054515
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 101.01962986385226,
+        "upper": 101.01962986385226
+      },
+      "id": "n7-l2-s1-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.031980165999812016,
+        "upper": 0.031980165999812016
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.0005683839990524575,
+        "upper": 0.0005683839990524575
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 56.26507089067525,
+        "upper": 56.26507089067525
+      },
+      "id": "n7-l2-s2-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 0.07201603399971646,
+        "upper": 0.07201603399971646
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.00089293600012752,
+        "upper": 0.00089293600012752
+      },
+      "cohort": "prior",
+      "gain": {
+        "lower": 80.65083498641769,
+        "upper": 80.65083498641769
+      },
+      "id": "n7-l2-s2-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 6.89947489000042,
+        "upper": 6.89947489000042
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 1.0544966460001888,
+        "upper": 1.0544966460001888
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 6.542908330880727,
+        "upper": 6.542908330880727
+      },
+      "id": "n7-l3-s3-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 7.1102222119989165,
+        "upper": 7.1102222119989165
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 0.8523003910004263,
+        "upper": 0.8523003910004263
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 8.34238994499694,
+        "upper": 8.34238994499694
+      },
+      "id": "n7-l3-s3-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.5085324260007837,
+        "upper": 1.5085324260007837
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.5472354570001698,
+        "upper": 0.5472354570001698
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 2.7566423313837203,
+        "upper": 2.7566423313837203
+      },
+      "id": "n7-l3-s4-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.0032125730003827,
+        "upper": 1.0032125730003827
+      },
+      "baseline_censored": false,
+      "candidate": {
+        "lower": 0.48630873700039956,
+        "upper": 0.48630873700039956
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 2.0629129124602965,
+        "upper": 2.0629129124602965
+      },
+      "id": "n7-l3-s4-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 7.315503084999364,
+        "upper": 7.315503084999364
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 2.117661872000099,
+        "upper": 2.117661872000099
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 3.454518958727809,
+        "upper": 3.454518958727809
+      },
+      "id": "n9-l3-s3-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 8.279803997001181,
+        "upper": 8.279803997001181
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 1.452978479000194,
+        "upper": 1.452978479000194
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 5.6985042219610715,
+        "upper": 5.6985042219610715
+      },
+      "id": "n9-l3-s3-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 2.387607258000571,
+        "upper": 2.387607258000571
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 0.8322068819998094,
+        "upper": 0.8322068819998094
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 2.869006865532167,
+        "upper": 2.869006865532167
+      },
+      "id": "n9-l3-s4-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 2.0711292100004357,
+        "upper": 2.0711292100004357
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 0.7837097860010545,
+        "upper": 0.7837097860010545
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 2.64272470115315,
+        "upper": 2.64272470115315
+      },
+      "id": "n9-l3-s4-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 2.8491115120004906,
+        "upper": 2.8491115120004906
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 0.7543985429992972,
+        "upper": 0.7543985429992972
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 3.7766662441753214,
+        "upper": 3.7766662441753214
+      },
+      "id": "n11-l3-s3-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.7358899220007515,
+        "upper": 1.7358899220007515
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 0.5062988110012157,
+        "upper": 0.5062988110012157
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 3.4285877910082303,
+        "upper": 3.4285877910082303
+      },
+      "id": "n11-l3-s3-no",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 1.8355207809991043,
+        "upper": 1.8355207809991043
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 0.45501082700138795,
+        "upper": 0.45501082700138795
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 4.034015614739438,
+        "upper": 4.034015614739438
+      },
+      "id": "n11-l3-s4-yes",
+      "primary_complete": true
+    },
+    {
+      "baseline": {
+        "lower": 2.6375697129997207,
+        "upper": 2.6375697129997207
+      },
+      "baseline_censored": true,
+      "candidate": {
+        "lower": 1.0849125049990107,
+        "upper": 1.0849125049990107
+      },
+      "cohort": "heldout",
+      "gain": {
+        "lower": 2.4311358757931596,
+        "upper": 2.4311358757931596
+      },
+      "id": "n11-l3-s4-no",
+      "primary_complete": true
+    }
+  ],
+  "target_supported": true
+}

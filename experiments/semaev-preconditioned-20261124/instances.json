@@ -1,0 +1,1591 @@
+{
+  "cases": [
+    {
+      "a": 0,
+      "b": 3,
+      "basis": [
+        1
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 1,
+      "id": "n3-l1-s0-yes",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "seed": 0,
+      "target": [
+        1,
+        5
+      ]
+    },
+    {
+      "a": 0,
+      "b": 3,
+      "basis": [
+        1
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 1,
+      "id": "n3-l1-s0-no",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [],
+      "seed": 0,
+      "target": [
+        2,
+        0
+      ]
+    },
+    {
+      "a": 0,
+      "b": 7,
+      "basis": [
+        1
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 1,
+      "id": "n3-l1-s1-yes",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "seed": 1,
+      "target": [
+        1,
+        2
+      ]
+    },
+    {
+      "a": 0,
+      "b": 7,
+      "basis": [
+        1
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 1,
+      "id": "n3-l1-s1-no",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [],
+      "seed": 1,
+      "target": [
+        5,
+        3
+      ]
+    },
+    {
+      "a": 0,
+      "b": 7,
+      "basis": [
+        1
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 1,
+      "id": "n3-l1-s2-yes",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "seed": 2,
+      "target": [
+        0,
+        5
+      ]
+    },
+    {
+      "a": 0,
+      "b": 7,
+      "basis": [
+        1
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 1,
+      "id": "n3-l1-s2-no",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [],
+      "seed": 2,
+      "target": [
+        5,
+        6
+      ]
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n3-l2-s0-yes",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "seed": 0,
+      "target": [
+        0,
+        6
+      ]
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n3-l2-s0-no",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [],
+      "seed": 0,
+      "target": [
+        4,
+        6
+      ]
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n3-l2-s1-yes",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "seed": 1,
+      "target": [
+        5,
+        5
+      ]
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n3-l2-s2-yes",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "seed": 2,
+      "target": [
+        0,
+        3
+      ]
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n3-l2-s2-no",
+      "modulus": 11,
+      "n": 3,
+      "oracle": [],
+      "seed": 2,
+      "target": [
+        5,
+        4
+      ]
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n4-l2-s0-yes",
+      "modulus": 19,
+      "n": 4,
+      "oracle": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "seed": 0,
+      "target": [
+        1,
+        0
+      ]
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n4-l2-s0-no",
+      "modulus": 19,
+      "n": 4,
+      "oracle": [],
+      "seed": 0,
+      "target": [
+        10,
+        12
+      ]
+    },
+    {
+      "a": 1,
+      "b": 15,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n4-l2-s1-yes",
+      "modulus": 19,
+      "n": 4,
+      "oracle": [
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      "seed": 1,
+      "target": [
+        4,
+        4
+      ]
+    },
+    {
+      "a": 1,
+      "b": 15,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n4-l2-s1-no",
+      "modulus": 19,
+      "n": 4,
+      "oracle": [],
+      "seed": 1,
+      "target": [
+        10,
+        3
+      ]
+    },
+    {
+      "a": 0,
+      "b": 10,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n4-l2-s2-yes",
+      "modulus": 19,
+      "n": 4,
+      "oracle": [
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "seed": 2,
+      "target": [
+        4,
+        10
+      ]
+    },
+    {
+      "a": 0,
+      "b": 10,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n4-l2-s2-no",
+      "modulus": 19,
+      "n": 4,
+      "oracle": [],
+      "seed": 2,
+      "target": [
+        5,
+        5
+      ]
+    },
+    {
+      "a": 0,
+      "b": 13,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n5-l2-s0-yes",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          0
+        ]
+      ],
+      "seed": 0,
+      "target": [
+        0,
+        16
+      ]
+    },
+    {
+      "a": 0,
+      "b": 13,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n5-l2-s0-no",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [],
+      "seed": 0,
+      "target": [
+        6,
+        31
+      ]
+    },
+    {
+      "a": 1,
+      "b": 6,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n5-l2-s1-yes",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ]
+      ],
+      "seed": 1,
+      "target": [
+        29,
+        24
+      ]
+    },
+    {
+      "a": 0,
+      "b": 30,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n5-l2-s2-yes",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "seed": 2,
+      "target": [
+        22,
+        30
+      ]
+    },
+    {
+      "a": 0,
+      "b": 30,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n5-l2-s2-no",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [],
+      "seed": 2,
+      "target": [
+        31,
+        27
+      ]
+    },
+    {
+      "a": 1,
+      "b": 17,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 3,
+      "id": "n5-l3-s0-yes",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [
+        [
+          4,
+          4,
+          7
+        ],
+        [
+          4,
+          7,
+          4
+        ],
+        [
+          7,
+          4,
+          4
+        ]
+      ],
+      "seed": 0,
+      "target": [
+        28,
+        7
+      ]
+    },
+    {
+      "a": 1,
+      "b": 17,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 3,
+      "id": "n5-l3-s0-no",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [],
+      "seed": 0,
+      "target": [
+        12,
+        31
+      ]
+    },
+    {
+      "a": 1,
+      "b": 24,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 3,
+      "id": "n5-l3-s1-yes",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          3,
+          4,
+          4
+        ],
+        [
+          3,
+          7,
+          7
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          4,
+          3,
+          4
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          7,
+          3,
+          7
+        ],
+        [
+          7,
+          7,
+          3
+        ]
+      ],
+      "seed": 1,
+      "target": [
+        3,
+        8
+      ]
+    },
+    {
+      "a": 0,
+      "b": 4,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 3,
+      "id": "n5-l3-s2-yes",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [
+        [
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          4,
+          7
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          7,
+          4
+        ],
+        [
+          4,
+          0,
+          7
+        ],
+        [
+          4,
+          4,
+          7
+        ],
+        [
+          4,
+          7,
+          0
+        ],
+        [
+          4,
+          7,
+          4
+        ],
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          4
+        ],
+        [
+          7,
+          4,
+          0
+        ],
+        [
+          7,
+          4,
+          4
+        ],
+        [
+          7,
+          7,
+          7
+        ]
+      ],
+      "seed": 2,
+      "target": [
+        7,
+        0
+      ]
+    },
+    {
+      "a": 0,
+      "b": 4,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 3,
+      "id": "n5-l3-s2-no",
+      "modulus": 37,
+      "n": 5,
+      "oracle": [],
+      "seed": 2,
+      "target": [
+        24,
+        5
+      ]
+    },
+    {
+      "a": 1,
+      "b": 58,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n7-l2-s0-yes",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "seed": 0,
+      "target": [
+        30,
+        96
+      ]
+    },
+    {
+      "a": 1,
+      "b": 58,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n7-l2-s0-no",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [],
+      "seed": 0,
+      "target": [
+        23,
+        6
+      ]
+    },
+    {
+      "a": 0,
+      "b": 81,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n7-l2-s1-yes",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "seed": 1,
+      "target": [
+        1,
+        105
+      ]
+    },
+    {
+      "a": 0,
+      "b": 81,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n7-l2-s1-no",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [],
+      "seed": 1,
+      "target": [
+        10,
+        38
+      ]
+    },
+    {
+      "a": 0,
+      "b": 98,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "yes",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n7-l2-s2-yes",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          3,
+          0
+        ]
+      ],
+      "seed": 2,
+      "target": [
+        0,
+        82
+      ]
+    },
+    {
+      "a": 0,
+      "b": 98,
+      "basis": [
+        1,
+        2
+      ],
+      "category": "no",
+      "cohort": "prior",
+      "ell": 2,
+      "id": "n7-l2-s2-no",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [],
+      "seed": 2,
+      "target": [
+        127,
+        72
+      ]
+    },
+    {
+      "a": 0,
+      "b": 125,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n7-l3-s3-yes",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          2,
+          2,
+          5
+        ],
+        [
+          2,
+          5,
+          2
+        ],
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          5,
+          1,
+          3
+        ],
+        [
+          5,
+          2,
+          2
+        ],
+        [
+          5,
+          3,
+          1
+        ]
+      ],
+      "seed": 3,
+      "target": [
+        83,
+        99
+      ]
+    },
+    {
+      "a": 0,
+      "b": 125,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n7-l3-s3-no",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [],
+      "seed": 3,
+      "target": [
+        89,
+        3
+      ]
+    },
+    {
+      "a": 1,
+      "b": 54,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n7-l3-s4-yes",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "seed": 4,
+      "target": [
+        78,
+        17
+      ]
+    },
+    {
+      "a": 1,
+      "b": 54,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n7-l3-s4-no",
+      "modulus": 131,
+      "n": 7,
+      "oracle": [],
+      "seed": 4,
+      "target": [
+        97,
+        88
+      ]
+    },
+    {
+      "a": 0,
+      "b": 251,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n9-l3-s3-yes",
+      "modulus": 515,
+      "n": 9,
+      "oracle": [
+        [
+          1,
+          1,
+          5
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          2,
+          1,
+          6
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          2
+        ],
+        [
+          6,
+          2,
+          1
+        ]
+      ],
+      "seed": 3,
+      "target": [
+        311,
+        10
+      ]
+    },
+    {
+      "a": 0,
+      "b": 251,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n9-l3-s3-no",
+      "modulus": 515,
+      "n": 9,
+      "oracle": [],
+      "seed": 3,
+      "target": [
+        347,
+        198
+      ]
+    },
+    {
+      "a": 1,
+      "b": 364,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n9-l3-s4-yes",
+      "modulus": 515,
+      "n": 9,
+      "oracle": [
+        [
+          1,
+          2,
+          7
+        ],
+        [
+          1,
+          7,
+          2
+        ],
+        [
+          2,
+          1,
+          7
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          7,
+          1,
+          2
+        ],
+        [
+          7,
+          2,
+          1
+        ]
+      ],
+      "seed": 4,
+      "target": [
+        348,
+        46
+      ]
+    },
+    {
+      "a": 1,
+      "b": 364,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n9-l3-s4-no",
+      "modulus": 515,
+      "n": 9,
+      "oracle": [],
+      "seed": 4,
+      "target": [
+        486,
+        245
+      ]
+    },
+    {
+      "a": 1,
+      "b": 1995,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n11-l3-s3-yes",
+      "modulus": 2053,
+      "n": 11,
+      "oracle": [
+        [
+          1,
+          6,
+          6
+        ],
+        [
+          6,
+          1,
+          6
+        ],
+        [
+          6,
+          6,
+          1
+        ]
+      ],
+      "seed": 3,
+      "target": [
+        894,
+        338
+      ]
+    },
+    {
+      "a": 1,
+      "b": 1995,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n11-l3-s3-no",
+      "modulus": 2053,
+      "n": 11,
+      "oracle": [],
+      "seed": 3,
+      "target": [
+        100,
+        1349
+      ]
+    },
+    {
+      "a": 0,
+      "b": 638,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "yes",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n11-l3-s4-yes",
+      "modulus": 2053,
+      "n": 11,
+      "oracle": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          7,
+          7
+        ],
+        [
+          7,
+          1,
+          7
+        ],
+        [
+          7,
+          7,
+          1
+        ]
+      ],
+      "seed": 4,
+      "target": [
+        1,
+        1070
+      ]
+    },
+    {
+      "a": 0,
+      "b": 638,
+      "basis": [
+        1,
+        2,
+        4
+      ],
+      "category": "no",
+      "cohort": "heldout",
+      "ell": 3,
+      "id": "n11-l3-s4-no",
+      "modulus": 2053,
+      "n": 11,
+      "oracle": [],
+      "seed": 4,
+      "target": [
+        1735,
+        132
+      ]
+    }
+  ],
+  "missing_heldout_categories": [],
+  "prior_instances_sha256": "37585351a180e27daf576ac6c643c6d75e67801188452b1249053392f25ce6c8"
+}

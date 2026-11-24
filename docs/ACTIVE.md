@@ -12,9 +12,10 @@ PR, not in this file.
 
 ## Current goal
 
-Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
+Pursue a significant, correctness-preserving improvement to matched binary Semaev Gröbner solving, with charged costs, exact-output validation, and comparison against existing GB and root-finding methods. Owner request, 2026-11-24. The agent's frozen experimental target and its scope are in `experiments/semaev-preconditioned-20261124/PROTOCOL.md`.
 
 ## Active items (top = next)
+- [x] Significant Semaev GB improvement: exact affine preconditioning, fresh matched benchmarks against both GB baselines and existing root-finding (Codex, started 2026-11-24, branch codex/semaev-affine-preconditioning-20261124, PR #56)
 - [x] Matched binary Semaev benchmark: exhaustive solution correspondence, bounded GB comparisons, crossover and solver diagnostics (Codex, started 2026-11-24, branch codex/semaev-matched-benchmark-20261124, PR #55)
 - [x] ECC2K-130 window question: compute the exact Frobenius char polynomial of the 130-dim Weil-restriction factor A, test whether it splits, and establish its CM field / p-rank / simplicity directly (not by citation), as the first rigorous step toward the is-A-a-Jacobian question (Claude, started 2026-11-23, branch claude/index-calculus-root-finding-e95kd6, PR #51)
 - [x] Paper round (LFD/FFD manuscript): growth for every number of summands through a two-summand slice (Corollary cor:growthm), independent checks, GrowthSlice.lean, cost-model null; PR #49 merged the experiments only, the manuscript, Lean and CI parts follow in the next PR (Claude, started 2026-11-23, branch claude/kind-volta-2ddkid, PR #49)
