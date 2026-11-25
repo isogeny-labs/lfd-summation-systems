@@ -15,7 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-- [ ] Matched torsion-symmetrized summation polynomial screen on frozen public fixtures (Codex, started 2026-11-25, branch research/torsion-symm-screen-20261125)
+- [ ] Matched torsion-symmetrized summation polynomial screen on frozen public fixtures (Codex, started 2026-11-25, branch research/torsion-symm-screen-20261125, PR #60)
 - [x] ECC2K-130 window question, part 3: rigorously exclude the cyclic/abelian-cover construction for A via the sqrt(-7) vs Q(zeta_131) field obstruction (cover order must be divisible by 917, genus >=458 >> window); general Jacobian case stays open (Claude, started 2026-11-24, branch claude/index-calculus-root-finding-e95kd6)
 - [x] ECC2K-130 window question, part 2: test the Weil factor A against the computable Jacobian necessary conditions (virtual point counts and Howe-Lauter closed-place counts from P_A); PARI/GP now available in-container (Claude, started 2026-11-24, branch claude/index-calculus-root-finding-e95kd6, PR #53)
 - [x] Paper: add the owner-approved all-m growth clause to the abstract, resync eprint-abstract.txt and the abstract claims, rebuild the PDF for upload (Claude, started 2026-11-24, branch claude/kind-volta-2ddkid, PR #58)
