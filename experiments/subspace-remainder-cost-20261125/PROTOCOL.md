@@ -26,7 +26,7 @@ local Python PRNG seeded 20261125+100n+k, and 16 planted sums of two factor-base
 using seed 20262125+100n+k. Preserve duplicate targets and every failed
 attempt. Target generation and common factor-base construction are reported
 and charged equally to all arms. Record the exact b, modulus, point panel,
-factor-base size, and source/protocol hashes before timing. Only the random
+factor-base size and canonical hash, and source/protocol hashes before timing. Only the random
 subgroup targets enter relation-rank calculation. For their verified pairs,
 cofactor-project the factor-base points, identify P and -P with opposite
 signs, omit columns for [h]P=O, and form rows over F_q with known right-hand

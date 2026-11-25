@@ -55,6 +55,7 @@ def cell(n, k, modulus, b, q, h, cached_g):
             if neg != p:
                 fb.append(neg)
     fb.sort()
+    fb_hash = hashlib.sha256(json.dumps(fb, separators=(',', ':')).encode()).hexdigest()
     assert len(fb) == len(set(fb))
     assert all(E.on_curve(p) and p[0] < (1 << k) for p in fb)
     targets = []
@@ -71,7 +72,8 @@ def cell(n, k, modulus, b, q, h, cached_g):
                         'witness': [as_json_point(p) for p in sorted((a, bpoint))]})
     return {'n': n, 'k': k, 'modulus': modulus, 'b': b, 'order': h*q,
             'q': q, 'cofactor': h, 'G': as_json_point(g), 'Q': as_json_point(Q),
-            'factor_base_points': len(fb), 'targets': targets}
+            'factor_base_points': len(fb), 'factor_base_sha256': fb_hash,
+            'targets': targets}
 
 
 def main():
