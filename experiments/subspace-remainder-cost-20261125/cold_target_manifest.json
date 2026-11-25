@@ -1,0 +1,130 @@
+{
+  "cells": [
+    {
+      "G": [
+        8335612,
+        562255
+      ],
+      "b": 894692,
+      "cofactor": 24,
+      "factor_base_points": 2087,
+      "factor_base_sha256": "e38a86bf4431638ef20ee65036f217721aa9322ba657150a69f174c08b4c24b2",
+      "k": 11,
+      "modulus": 8388641,
+      "n": 23,
+      "order": 8390136,
+      "q": 349589,
+      "targets": [
+        {
+          "Q": [
+            7705146,
+            6601842
+          ],
+          "index": 0,
+          "secret_check_only": 299826
+        },
+        {
+          "Q": [
+            1306638,
+            6605661
+          ],
+          "index": 1,
+          "secret_check_only": 340531
+        },
+        {
+          "Q": [
+            6474944,
+            2171073
+          ],
+          "index": 2,
+          "secret_check_only": 224131
+        }
+      ]
+    },
+    {
+      "G": [
+        90913680,
+        515992
+      ],
+      "b": 326057084,
+      "cofactor": 64,
+      "factor_base_points": 8193,
+      "factor_base_sha256": "931f5eb29fa453552035410139b5b8c72c2aa88162e93a925458808b2499536d",
+      "k": 13,
+      "modulus": 536870917,
+      "n": 29,
+      "order": 536882624,
+      "q": 8388791,
+      "targets": [
+        {
+          "Q": [
+            275857416,
+            297641172
+          ],
+          "index": 0,
+          "secret_check_only": 5924377
+        },
+        {
+          "Q": [
+            313458726,
+            392840858
+          ],
+          "index": 1,
+          "secret_check_only": 5487458
+        },
+        {
+          "Q": [
+            159619185,
+            116653693
+          ],
+          "index": 2,
+          "secret_check_only": 6510701
+        }
+      ]
+    },
+    {
+      "G": [
+        90913680,
+        515992
+      ],
+      "b": 326057084,
+      "cofactor": 64,
+      "factor_base_points": 16337,
+      "factor_base_sha256": "9efcb6e8eb8c63300a5e9babef70fa4502b1ba299638ea1bb4a176d83106c8a3",
+      "k": 14,
+      "modulus": 536870917,
+      "n": 29,
+      "order": 536882624,
+      "q": 8388791,
+      "targets": [
+        {
+          "Q": [
+            275857416,
+            297641172
+          ],
+          "index": 0,
+          "secret_check_only": 5924377
+        },
+        {
+          "Q": [
+            313458726,
+            392840858
+          ],
+          "index": 1,
+          "secret_check_only": 5487458
+        },
+        {
+          "Q": [
+            159619185,
+            116653693
+          ],
+          "index": 2,
+          "secret_check_only": 6510701
+        }
+      ]
+    }
+  ],
+  "parent_manifest_sha256": "d30bf96488e1a382ca85f575ce9134453485a4fbf636bb6c49af33aa91c7f68a",
+  "protocol_sha256": "55e4a0145a8c57ea58074df2e4be36c1aef3700d0ee404ad6a8b5d22cd07c3ce",
+  "source_sha256": "4b9110a1453ebc8252c569cab2997308a6087e6bc83d8464c0ac6356cd1b85ba"
+}

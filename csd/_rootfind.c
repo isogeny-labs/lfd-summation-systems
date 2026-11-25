@@ -12,7 +12,13 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
+#if defined(__aarch64__)
+#include <arm_neon.h>
+#elif defined(__x86_64__)
 #include <immintrin.h>
+#else
+#error "The root-finding kernel requires ARM PMULL or x86 PCLMULQDQ"
+#endif
 
 typedef uint64_t u64;
 typedef struct { u64 t[8][256]; } lmap;
@@ -52,15 +58,31 @@ static void lm_build(lmap *m, const u64 *images, int n)
     }
 }
 
+#if defined(__aarch64__)
+__attribute__((target("aes,neon")))
+#endif
+static inline void carryless_mul64(u64 x, u64 y, u64 *lo, u64 *hi)
+{
+#if defined(__aarch64__)
+    uint64x2_t p = vreinterpretq_u64_p128(vmull_p64((poly64_t)x, (poly64_t)y));
+    *lo = vgetq_lane_u64(p, 0);
+    *hi = vgetq_lane_u64(p, 1);
+#else
+    __m128i p = _mm_clmulepi64_si128(_mm_cvtsi64_si128((long long)x), _mm_cvtsi64_si128((long long)y), 0);
+    *lo = (u64)_mm_cvtsi128_si64(p);
+    *hi = (u64)_mm_extract_epi64(p, 1);
+#endif
+}
+
 static inline u64 fmul(const rf_ctx *c, u64 x, u64 y)
 {
-    __m128i p = _mm_clmulepi64_si128(_mm_cvtsi64_si128((long long)x), _mm_cvtsi64_si128((long long)y), 0);
-    u64 lo = (u64)_mm_cvtsi128_si64(p), hi = (u64)_mm_extract_epi64(p, 1);
+    u64 lo, hi;
+    carryless_mul64(x, y, &lo, &hi);
     u64 h = (hi << (64 - c->n)) | (lo >> c->n);
     lo &= c->mask;
     while (h) {
-        __m128i q = _mm_clmulepi64_si128(_mm_cvtsi64_si128((long long)h), _mm_cvtsi64_si128((long long)c->red), 0);
-        u64 ql = (u64)_mm_cvtsi128_si64(q), qh = (u64)_mm_extract_epi64(q, 1);
+        u64 ql, qh;
+        carryless_mul64(h, c->red, &ql, &qh);
         lo ^= ql & c->mask;
         h = (qh << (64 - c->n)) | (ql >> c->n);
     }
@@ -165,7 +187,7 @@ long rf_fb(const rf_ctx *c, u64 *xs, u64 *ys, long cap)
 #define QCAP 256
 #define QPTS 6
 /* a solution of the linear system, waiting for the quadratic x^2 + e1 x + e2 (inversions of e1 are shared) */
-typedef struct { u64 Tx, ym, e1, e2, lam; int nchosen; pt chosen[QPTS]; } cand;
+typedef struct { u64 Tx, ym, e1, e2, lam; uint32_t vidx; int nchosen; pt chosen[QPTS]; } cand;
 
 typedef struct {
     const rf_ctx *c;
@@ -178,7 +200,33 @@ typedef struct {
     pt chosen[16];
     cand q[QCAP];
     int nq;
+    const u64 *image_table;
 } run;
+
+/* For e1=sum(mask_i*v_i), W_e1={x^2+e1*x:x in V}.  A padded descending-pivot
+ * basis occupies k words per mask.  Membership is exact for distinct and
+ * repeated roots of Z^2+e1 Z+e2.  The latter uses W_0=V^2. */
+long rf_image_table(const rf_ctx *c, u64 *out, long cap)
+{
+    int k = c->k;
+    if (k > 20 || cap < ((long)1 << k) * k) return -1;
+    for (long mask = 0; mask < (1L << k); mask++) {
+        u64 e1 = 0, bits = (u64)mask, piv[64] = {0};
+        while (bits) { e1 ^= c->v[__builtin_ctzll(bits)]; bits &= bits - 1; }
+        for (int j = 0; j < k; j++) {
+            u64 w = fsq(c, c->v[j]) ^ fmul(c, e1, c->v[j]);
+            while (w) {
+                int bit = 63 - __builtin_clzll(w);
+                if (piv[bit]) w ^= piv[bit];
+                else { piv[bit] = w; break; }
+            }
+        }
+        int pos = 0;
+        for (int bit = 63; bit >= 0; bit--) if (piv[bit]) out[mask*k + pos++] = piv[bit];
+        while (pos < k) out[mask*k + pos++] = 0;
+    }
+    return ((long)1 << k) * k * (long)sizeof(u64);
+}
 
 static void emit(run *r, int nchosen, pt P1, pt P2)
 {
@@ -211,6 +259,19 @@ static void flush(run *r)
 {
     const rf_ctx *c = r->c;
     rf_stats *st = r->st;
+    if (r->image_table) {
+        int kept = 0;
+        for (int i = 0; i < r->nq; i++) {
+            const cand *q = &r->q[i];
+            const u64 *basis = r->image_table + (size_t)q->vidx * c->k;
+            u64 value = q->e2;
+            for (int j = 0; j < c->k; j++)
+                if ((value ^ basis[j]) < value) value ^= basis[j];
+            if (value == 0) r->q[kept++] = *q;
+        }
+        r->nq = kept;
+        if (!kept) return;
+    }
     u64 e1[QCAP], ie[QCAP];
     pt save[QPTS];
     memcpy(save, r->chosen, sizeof save);
@@ -284,10 +345,11 @@ static void d2_core(run *r, int nchosen, pt T, u64 ixT)
     for (u64 g = 0; g < (1ULL << nk); g++) {
         if (g) sol ^= kern[__builtin_ctzll(g)];
         st->lin_candidates++;
-        u64 e1 = 0, tm = sol & ((1ULL << k) - 1), eps = (sol >> k) & 1;
+        u64 e1 = 0, tm = sol & ((1ULL << k) - 1), idx = tm, eps = (sol >> k) & 1;
         while (tm) { e1 ^= c->v[__builtin_ctzll(tm)]; tm &= tm - 1; }
         cand *q = &r->q[r->nq++];
         q->Tx = T.x; q->ym = ym; q->e1 = e1;
+        q->vidx = (uint32_t)idx;
         q->lam = lm(&c->Q, e1 ^ c1) ^ eps;
         q->e2 = fmul(c, T.x, q->lam ^ e1 ^ c1) ^ c2;         /* lam^2 = lam + e1 + c1 */
         q->nchosen = nchosen;
@@ -372,11 +434,12 @@ static void rec(run *r, int depth, int nguess, long start, pt S, int linear)
 /* Decompositions R = P_1 + ... + P_m with every x(P_i) in V.  Rows of 2m words (x, y per point); the same
  * multiset can appear more than once.  Outer index range [lo, hi) of the first enumerated point allows the
  * caller to split the work.  Returns the number of rows found (rows beyond cap are counted, not stored). */
-long rf_lrf(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, long nfb,
-            long lo, long hi, u64 *out, long cap, rf_stats *st)
+static long rf_lrf_core(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, long nfb,
+                        long lo, long hi, u64 *out, long cap, rf_stats *st, const u64 *image_table)
 {
     static __thread run r;
     r.c = c; r.m = m; r.fx = fx; r.fy = fy; r.nfb = nfb; r.out = out; r.cap = cap; r.cnt = 0; r.st = st; r.nq = 0;
+    r.image_table = image_table;
     if (m - 2 > QPTS) return -2;
     pt S = {R[0], R[1], 0};
     memset(st, 0, sizeof *st);
@@ -400,6 +463,18 @@ long rf_lrf(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, 
     }
     flush(&r);
     return r.cnt;
+}
+
+long rf_lrf(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, long nfb,
+            long lo, long hi, u64 *out, long cap, rf_stats *st)
+{
+    return rf_lrf_core(c, m, R, fx, fy, nfb, lo, hi, out, cap, st, NULL);
+}
+
+long rf_lrf_image(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, long nfb,
+                  long lo, long hi, u64 *out, long cap, rf_stats *st, const u64 *image_table)
+{
+    return rf_lrf_core(c, m, R, fx, fy, nfb, lo, hi, out, cap, st, image_table);
 }
 
 long rf_brute(const rf_ctx *c, int m, const u64 *R, const u64 *fx, const u64 *fy, long nfb,
