@@ -1,0 +1,63 @@
+{
+  "counts_by_input_weight": {
+    "1": {
+      "66": 131
+    },
+    "2": {
+      "33": 524,
+      "49": 786,
+      "51": 524,
+      "53": 131,
+      "55": 131,
+      "56": 131,
+      "58": 131,
+      "59": 393,
+      "61": 131,
+      "62": 262,
+      "63": 393,
+      "64": 131,
+      "65": 262,
+      "66": 2096,
+      "67": 655,
+      "68": 393,
+      "69": 393,
+      "70": 655,
+      "72": 393
+    }
+  },
+  "field_degree": 131,
+  "first_outside": {
+    "input_onb": "0x1",
+    "input_weight": 1,
+    "reciprocal_onb": "0x333333333333333333333333333333333",
+    "reciprocal_weight": 66
+  },
+  "frobenius_order_mod_131": 130,
+  "independent_polynomial_basis_checks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    131,
+    8645
+  ],
+  "onb_order": 263,
+  "params_sha256": "f41972681d260ef4eeb2fea7441f31859f4a121fdd5f2ecc4ff3dee54082aeae",
+  "protocol": "PROTOCOL_ECC2K130_T2_COMPAT_20261125.md",
+  "reciprocal_weight_at_most_two": 0,
+  "schema": "torsion-symm-ecc2k130-recipe-v1",
+  "source_sha256": "a7893f7e51c758fb5eeb45290bdf0e1e9176ebc36b0f5d1c457ffcadb20c399d",
+  "tested_coordinates": 8646
+}

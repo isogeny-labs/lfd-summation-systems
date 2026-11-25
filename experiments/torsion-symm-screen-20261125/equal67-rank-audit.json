@@ -1,0 +1,312 @@
+{
+  "arms": {
+    "direct": {
+      "admitted_targets": 12,
+      "base_columns": 60,
+      "base_rank": 9,
+      "equations": 12,
+      "rank_through_target": [
+        {
+          "base_rank": 1,
+          "new_rows": 1,
+          "rhs_augmented_rank": 1,
+          "scalar": 1
+        },
+        {
+          "base_rank": 1,
+          "new_rows": 0,
+          "rhs_augmented_rank": 1,
+          "scalar": 2
+        },
+        {
+          "base_rank": 1,
+          "new_rows": 0,
+          "rhs_augmented_rank": 1,
+          "scalar": 3
+        },
+        {
+          "base_rank": 1,
+          "new_rows": 0,
+          "rhs_augmented_rank": 1,
+          "scalar": 4
+        },
+        {
+          "base_rank": 2,
+          "new_rows": 1,
+          "rhs_augmented_rank": 2,
+          "scalar": 5
+        },
+        {
+          "base_rank": 2,
+          "new_rows": 0,
+          "rhs_augmented_rank": 2,
+          "scalar": 6
+        },
+        {
+          "base_rank": 3,
+          "new_rows": 1,
+          "rhs_augmented_rank": 3,
+          "scalar": 7
+        },
+        {
+          "base_rank": 3,
+          "new_rows": 0,
+          "rhs_augmented_rank": 3,
+          "scalar": 8
+        },
+        {
+          "base_rank": 3,
+          "new_rows": 0,
+          "rhs_augmented_rank": 3,
+          "scalar": 9
+        },
+        {
+          "base_rank": 4,
+          "new_rows": 1,
+          "rhs_augmented_rank": 4,
+          "scalar": 10
+        },
+        {
+          "base_rank": 4,
+          "new_rows": 0,
+          "rhs_augmented_rank": 4,
+          "scalar": 11
+        },
+        {
+          "base_rank": 4,
+          "new_rows": 0,
+          "rhs_augmented_rank": 4,
+          "scalar": 12
+        },
+        {
+          "base_rank": 5,
+          "new_rows": 1,
+          "rhs_augmented_rank": 5,
+          "scalar": 13
+        },
+        {
+          "base_rank": 6,
+          "new_rows": 1,
+          "rhs_augmented_rank": 6,
+          "scalar": 14
+        },
+        {
+          "base_rank": 6,
+          "new_rows": 1,
+          "rhs_augmented_rank": 6,
+          "scalar": 15
+        },
+        {
+          "base_rank": 7,
+          "new_rows": 1,
+          "rhs_augmented_rank": 7,
+          "scalar": 16
+        },
+        {
+          "base_rank": 7,
+          "new_rows": 0,
+          "rhs_augmented_rank": 7,
+          "scalar": 17
+        },
+        {
+          "base_rank": 7,
+          "new_rows": 0,
+          "rhs_augmented_rank": 7,
+          "scalar": 18
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 1,
+          "rhs_augmented_rank": 8,
+          "scalar": 19
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 0,
+          "rhs_augmented_rank": 8,
+          "scalar": 20
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 1,
+          "rhs_augmented_rank": 8,
+          "scalar": 21
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 0,
+          "rhs_augmented_rank": 8,
+          "scalar": 22
+        },
+        {
+          "base_rank": 9,
+          "new_rows": 1,
+          "rhs_augmented_rank": 9,
+          "scalar": 23
+        },
+        {
+          "base_rank": 9,
+          "new_rows": 1,
+          "rhs_augmented_rank": 9,
+          "scalar": 24
+        }
+      ]
+    },
+    "symmetrized": {
+      "admitted_targets": 6,
+      "base_columns": 60,
+      "base_rank": 12,
+      "equations": 12,
+      "rank_through_target": [
+        {
+          "base_rank": 0,
+          "new_rows": 0,
+          "rhs_augmented_rank": 0,
+          "scalar": 1
+        },
+        {
+          "base_rank": 0,
+          "new_rows": 0,
+          "rhs_augmented_rank": 0,
+          "scalar": 2
+        },
+        {
+          "base_rank": 0,
+          "new_rows": 0,
+          "rhs_augmented_rank": 0,
+          "scalar": 3
+        },
+        {
+          "base_rank": 0,
+          "new_rows": 0,
+          "rhs_augmented_rank": 0,
+          "scalar": 4
+        },
+        {
+          "base_rank": 2,
+          "new_rows": 2,
+          "rhs_augmented_rank": 2,
+          "scalar": 5
+        },
+        {
+          "base_rank": 2,
+          "new_rows": 0,
+          "rhs_augmented_rank": 2,
+          "scalar": 6
+        },
+        {
+          "base_rank": 4,
+          "new_rows": 2,
+          "rhs_augmented_rank": 4,
+          "scalar": 7
+        },
+        {
+          "base_rank": 6,
+          "new_rows": 2,
+          "rhs_augmented_rank": 6,
+          "scalar": 8
+        },
+        {
+          "base_rank": 6,
+          "new_rows": 0,
+          "rhs_augmented_rank": 6,
+          "scalar": 9
+        },
+        {
+          "base_rank": 6,
+          "new_rows": 0,
+          "rhs_augmented_rank": 6,
+          "scalar": 10
+        },
+        {
+          "base_rank": 6,
+          "new_rows": 0,
+          "rhs_augmented_rank": 6,
+          "scalar": 11
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 2,
+          "rhs_augmented_rank": 8,
+          "scalar": 12
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 0,
+          "rhs_augmented_rank": 8,
+          "scalar": 13
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 0,
+          "rhs_augmented_rank": 8,
+          "scalar": 14
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 0,
+          "rhs_augmented_rank": 8,
+          "scalar": 15
+        },
+        {
+          "base_rank": 8,
+          "new_rows": 0,
+          "rhs_augmented_rank": 8,
+          "scalar": 16
+        },
+        {
+          "base_rank": 10,
+          "new_rows": 2,
+          "rhs_augmented_rank": 10,
+          "scalar": 17
+        },
+        {
+          "base_rank": 12,
+          "new_rows": 2,
+          "rhs_augmented_rank": 12,
+          "scalar": 18
+        },
+        {
+          "base_rank": 12,
+          "new_rows": 0,
+          "rhs_augmented_rank": 12,
+          "scalar": 19
+        },
+        {
+          "base_rank": 12,
+          "new_rows": 0,
+          "rhs_augmented_rank": 12,
+          "scalar": 20
+        },
+        {
+          "base_rank": 12,
+          "new_rows": 0,
+          "rhs_augmented_rank": 12,
+          "scalar": 21
+        },
+        {
+          "base_rank": 12,
+          "new_rows": 0,
+          "rhs_augmented_rank": 12,
+          "scalar": 22
+        },
+        {
+          "base_rank": 12,
+          "new_rows": 0,
+          "rhs_augmented_rank": 12,
+          "scalar": 23
+        },
+        {
+          "base_rank": 12,
+          "new_rows": 0,
+          "rhs_augmented_rank": 12,
+          "scalar": 24
+        }
+      ]
+    }
+  },
+  "field_order": 211,
+  "schema": "torsion-symm-equal67-rank-audit/v1",
+  "script_sha256": "ee9df03747f86626d1b264c0645926110c14858a8f55e59e33207eb238daaa87",
+  "source_sha256": "75291f8313ccc6acde200efd098cea9f8104287d26b273f46798c08be5a40d23"
+}

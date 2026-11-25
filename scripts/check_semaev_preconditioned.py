@@ -23,8 +23,20 @@ from csd import ic_dreg as I
 def main():
     out=RUN.OUT
     env=json.loads((out/'environment.json').read_text())
+    historical_sources=[]
     for path,digest in env['source_sha256'].items():
-        assert hashlib.sha256((RUN.ROOT/path).read_bytes()).hexdigest()==digest,path
+        current=RUN.ROOT/path
+        if hashlib.sha256(current.read_bytes()).hexdigest()==digest:
+            continue
+        # Later source edits do not change the frozen experiment. Check its
+        # archived bytes, while the regenerated inputs below still exercise
+        # the current code separately.
+        frozen=out/'source_snapshot'/path
+        if not frozen.is_file():
+            frozen=out/'frozen-source'/path
+        assert frozen.is_file(),path
+        assert hashlib.sha256(frozen.read_bytes()).hexdigest()==digest,path
+        historical_sources.append(path)
     for path,key in [('PROTOCOL.md','protocol_sha256'),('instances.json','instances_sha256')]:
         assert hashlib.sha256((out/path).read_bytes()).hexdigest()==env[key],path
     inputs=json.loads((out/'instances.json').read_text())
@@ -69,6 +81,7 @@ def main():
         assert analyze(out)==json.loads((out/'timing-bounds.json').read_text())
     print(json.dumps(dict(status='passed',cases=len(inputs['cases']),records=len(runs),
                           statuses=dict(Counter(r['status'] for r in runs)),
+                          historical_source_paths=historical_sources,
                           scope='independent point-oracle scan, source/record/summary integrity; not timing replay')))
 
 

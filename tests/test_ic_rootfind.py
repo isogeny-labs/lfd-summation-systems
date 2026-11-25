@@ -29,6 +29,7 @@ def run(ns, trials, seed):
                     for P in (pt for dec in ref for pt in dec):
                         assert E.on_curve(P)
                     assert S.lrf(m, R)[0] == ref
+                    assert S.lrf_image(m, R)[0] == ref
                     assert S.brute(m, R)[0] == ref
                     if m == 2 and R[0]:
                         assert S.d2_reference(R) == ref
@@ -42,6 +43,30 @@ def run(ns, trials, seed):
 def test_small_instances():
     instances, nonempty = run([7, 8, 9, 11, 12, 13, 16, 17], 6, 1)
     assert instances == 480 and nonempty == 87
+
+
+def test_conditional_image_table_and_diagonal():
+    F = I.binary_field(7)
+    E = I.BinaryCurve(F, 0, 1)
+    basis = I.standard_subspace(F, 3)
+    S = Solver(E, basis)
+    fb = sorted(zip(map(int, S.fx), map(int, S.fy)))
+    P = next(p for p in fb if E.mul(2, p) is not None)
+    R = E.mul(2, P)
+    assert (P, P) in S.lrf_image(2, R)[0]
+    assert S.lrf_image(2, R)[0] == S.lrf(2, R)[0]
+    for mask in range(1 << S.k):
+        e1 = 0
+        for j, v in enumerate(basis):
+            if mask >> j & 1:
+                e1 ^= v
+        image = {F.sq(x) ^ F.mul(e1, x) for x in I.span(basis)}
+        pivots = S._image_table[mask*S.k:(mask+1)*S.k]
+        for e2 in range(1 << F.N):
+            value = e2
+            for pivot in pivots:
+                value = min(value, value ^ int(pivot))
+            assert (value == 0) == (e2 in image)
 
 
 def test_zero_abscissa_target():

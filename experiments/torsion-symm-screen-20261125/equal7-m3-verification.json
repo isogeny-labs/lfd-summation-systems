@@ -1,0 +1,57 @@
+{
+  "arms": {
+    "direct": {
+      "admitted_targets": 12,
+      "base_rank": 6,
+      "checked_ordered_triples": 96,
+      "distinct_rows": 20,
+      "subgroup_log_rows_checked": 20
+    },
+    "symmetrized": {
+      "admitted_targets": 6,
+      "base_rank": 6,
+      "checked_ordered_triples": 96,
+      "distinct_rows": 20,
+      "subgroup_log_rows_checked": 20
+    }
+  },
+  "base_selection_replayed": [
+    1,
+    2,
+    4
+  ],
+  "curve_order": 518,
+  "first_four_root_lifts": [
+    {
+      "direct_group_lifts": 6,
+      "direct_roots": 6,
+      "scalar": 1,
+      "symmetrized_group_lifts": 0,
+      "symmetrized_roots": 0
+    },
+    {
+      "direct_group_lifts": 6,
+      "direct_roots": 6,
+      "scalar": 2,
+      "symmetrized_group_lifts": 0,
+      "symmetrized_roots": 0
+    },
+    {
+      "direct_group_lifts": 0,
+      "direct_roots": 0,
+      "scalar": 3,
+      "symmetrized_group_lifts": 0,
+      "symmetrized_roots": 0
+    },
+    {
+      "direct_group_lifts": 9,
+      "direct_roots": 9,
+      "scalar": 4,
+      "symmetrized_group_lifts": 0,
+      "symmetrized_roots": 0
+    }
+  ],
+  "schema": "torsion-symm-equal7-m3-verification/v1",
+  "script_sha256": "1112f9b138c7e65a872def3a80c7e0581307bd9f1c913dada7383503e2a35654",
+  "source_sha256": "2c22a9d138a0ea5902dbaddeed2b90156f990a8e62f04fac1c906c2ed124aa58"
+}
