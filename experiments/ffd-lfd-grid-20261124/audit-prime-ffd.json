@@ -1,0 +1,94 @@
+{
+  "audit_source_sha256": "790b426517107bbeee9e7b4efc5a3b5b3050bd9b670f9ebccb1e64c33931679f",
+  "cells": [
+    {
+      "ffd_exact_counts": {
+        "3": 2,
+        "4": 185
+      },
+      "field_kind": "prime",
+      "lfd_exact_counts": {
+        "3": 2,
+        "4": 185
+      },
+      "m": 2,
+      "n": 1,
+      "p": 97,
+      "systems": 187
+    },
+    {
+      "ffd_exact_counts": {
+        "3": 2,
+        "4": 219
+      },
+      "field_kind": "prime",
+      "lfd_exact_counts": {
+        "3": 1,
+        "4": 178,
+        "5": 42
+      },
+      "m": 2,
+      "n": 1,
+      "p": 193,
+      "systems": 221
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 285
+      },
+      "field_kind": "prime",
+      "lfd_exact_counts": {
+        "4": 195,
+        "5": 90
+      },
+      "m": 2,
+      "n": 1,
+      "p": 257,
+      "systems": 285
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 281
+      },
+      "field_kind": "prime",
+      "lfd_exact_counts": {
+        "4": 191,
+        "5": 90
+      },
+      "m": 2,
+      "n": 1,
+      "p": 641,
+      "systems": 281
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 286
+      },
+      "field_kind": "prime",
+      "lfd_exact_counts": {
+        "4": 196,
+        "5": 90
+      },
+      "m": 2,
+      "n": 1,
+      "p": 7681,
+      "systems": 286
+    }
+  ],
+  "coset_transport": "nonzero equal scale on both free abscissas; divide S3 by scale^4",
+  "input_sha256": {
+    "cases.jsonl": "8143967bdb69946ec711dda84e5a19684bbbd2bdecedd01230a3e2300b099a2e",
+    "results.jsonl": "b7a88e8831bf432192d864b0950d8eddd284323c9f466ccb5032a97b26b86e44",
+    "systems.jsonl": "99248b4338e1dd133489d95bb85c036394d17870d8d6924a2d93cbac272c260f"
+  },
+  "scope": "frozen prime m=2 sweep systems",
+  "status": "passed",
+  "systems": 1260,
+  "theorem": "ICFallDegrees.PrimeFieldConclusions.ordinary_ffd",
+  "theorem_condition": "FFD=3 iff 3*t^2+a=0 mod p; otherwise FFD=4",
+  "theorem_source_sha256": {
+    "formal/ICFallDegrees/GeneralQuadraticClassification.lean": "2694ecda2209e35625adf4c47b828e9beb4dda8cf91cf6fcf112fe5eff9aae68",
+    "formal/ICFallDegrees/PrimeFieldConclusions.lean": "8145b9223c107042102b14a7a06a2b07eecf75e9333316ad1595c50343003380",
+    "formal/ICFallDegrees/PrimeM2General.lean": "941820f25a42c7179360cafceb205246b6f0ed039a2508ad34366a1bb51297f1"
+  }
+}

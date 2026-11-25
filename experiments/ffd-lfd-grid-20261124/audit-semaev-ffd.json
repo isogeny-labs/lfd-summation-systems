@@ -1,0 +1,55 @@
+{
+  "audit_source_sha256": "2e5edd1fd89fe3cd0b814e1297d0ec10bcf88ef0e19ee7769ea55d65baf612d9",
+  "cases": 1977,
+  "ffd_convention": "homogeneous square-zero Koszul/Frobenius",
+  "ffd_lfd_counts_by_n": {
+    "10": {
+      "2,2": 242,
+      "2,4": 218,
+      "3,3": 1,
+      "3,4": 23
+    },
+    "11": {
+      "2,2": 11,
+      "2,3": 978,
+      "3,3": 2
+    },
+    "6": {
+      "2,4": 26,
+      "3,4": 2
+    },
+    "7": {
+      "2,4": 64,
+      "3,3": 1,
+      "3,4": 6
+    },
+    "8": {
+      "2,4": 136,
+      "3,3": 1,
+      "3,4": 7
+    },
+    "9": {
+      "2,3": 130,
+      "2,4": 126,
+      "3,3": 2,
+      "3,4": 1
+    }
+  },
+  "ffd_receipt_sha256": "ad9fa76ca5d0899ffe181484fabe67ef714582b8541d7a0e8e09f0e7408f030c",
+  "homogeneous_vs_affine_first_fall_mismatches": 218,
+  "inputs_sha256": {
+    "ffd-semaev-fixed-basis-n7n8-np6-20261123.json": "bd20a146b9ca905acb3de9d7c5e3ee3795eb1e134a16252622472252a5a45cf2",
+    "ffd-semaev-fixed-basis-n9n10-np6-20261123.json": "2b23103ba0314f4dc50392d3b9db5ba77ee5904826aad4dbe3ec5b8f32fe4ec5",
+    "ffd-semaev-n11-20261124/fixed-basis-n11-np6.json": "e3290b7b3c7633da31ce91ef57f834e72e1519720d58a313573d9f89416e0c72",
+    "ffd-semaev-n6-sd-input-20261123.json": "759c19f7a7066c6bc146ac46e59b034fa41ecf154e0c7aab5b723d5bb1168595"
+  },
+  "lfd_receipts_sha256": {
+    "ffd-semaev-n11-20261124/exact-sd-n11.jsonl": "d03e4d4d6e125a1ec2739c365ae29fe747ed163c59e2f27ede411e0cdb665f0a",
+    "ffd-semaev-sd-n6-20261123.jsonl": "7b3d25538192da9b5889b251613df71f047b83e9a81183bf183f1e12b87e100a",
+    "ffd-semaev-sd-n7n8-20261123.jsonl": "afdc4503131a6dd569b9d701041a01ce8b3cd8a855cb06ea9881b6c59999c9c2",
+    "ffd-semaev-sd-panel-20261123.jsonl": "f02cfc796c0a3a623a85438a003663b8fc7a22ef1e45c11761477808db9960d2"
+  },
+  "rank_method": "independent integer-bit Gaussian elimination",
+  "scope": "frozen fixed six-coordinate S3 presentation over GF(2^6)..GF(2^11)",
+  "status": "passed"
+}

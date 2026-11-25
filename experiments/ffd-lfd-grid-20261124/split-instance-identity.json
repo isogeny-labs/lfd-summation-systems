@@ -1,0 +1,20 @@
+{
+  "prime": 114689,
+  "m": 5,
+  "k": 3,
+  "curve": [
+    52814,
+    60265
+  ],
+  "target": [
+    52173,
+    107269
+  ],
+  "target_on_curve": true,
+  "system_hash": "723464b8d858065cf28bbaea733e70fe7c41d6db528d6d4f74dc159c1ee3f627",
+  "encoded_generators_match": true,
+  "source_sha256": {
+    "csd/ic_bounds_split_m.py": "8db9f67bb4a98c8cd2e951b070afce20ca77a2d67ba79129dc4acf220e37698d",
+    "csd/ic_bounds_m3.py": "3293bb1c4d215234165f45c2fb8a230358de2fc5bd334179d485347a9da74481"
+  }
+}

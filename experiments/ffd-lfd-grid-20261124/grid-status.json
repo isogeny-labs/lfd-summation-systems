@@ -1,0 +1,1208 @@
+{
+  "audit_source_sha256": "c6b509dd0241a73b1d641b24b22acc7a7b933d2dfb600c4394414255a0d08d50",
+  "constant_input_FFD_undefined_distinct": 64,
+  "constant_input_cell_assignments": 65,
+  "curve_sweep_cell_assignments": 3015,
+  "curve_sweep_distinct_systems": 3005,
+  "frozen_manifest_cells_fully_certified_where_FFD_defined": true,
+  "input_receipt_sha256": {
+    "audit-binary-ffd.json": "34cac30f5ce0dcc5b586f99c8fe6596df124f016c6d0cee36b5b4c1e91723b29",
+    "audit-prime-ffd.json": "4a502f38ed7d894339072501f50adb3586923d8debc355d09ade320420957658",
+    "audit-semaev-ffd.json": "2144c2d70e4a9f459977482c7837009a9a41e5802394f98cba58fbeb949e59c4",
+    "audit-split-ffd.json": "3a084b59a384bae4e23bcab20b3bbc583191e470da9d2d929c7ea2baf4c206a3",
+    "audit-split-m5k3-ffd.json": "80ff6a289a509d28000a9c78c240fcbbb46d4eb80c53fc9d29d5ae96e7f9afdd",
+    "lfd-sweep-replay-20261124.log": "f3120d9356ac48c8f9bf586ac78515e19d4bf327c11f0260a23329a6f36df140"
+  },
+  "missing": [],
+  "scope": "frozen curve sweep, fixed-basis Semaev panel, and frozen split protocol; publication depth14/depth18 continuations tracked separately",
+  "status": "complete",
+  "tracks": {
+    "fixed_basis_semaev": [
+      {
+        "ffd": {
+          "histogram": {
+            "2": 26,
+            "3": 2
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "ffd_lfd_joint": {
+          "2,4": 26,
+          "3,4": 2
+        },
+        "field": "GF(2^6)",
+        "field_kind": "binary-fixed-six-coordinate-S3",
+        "lfd": {
+          "histogram": {
+            "4": 28
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 6,
+        "systems": 28
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 64,
+            "3": 7
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "ffd_lfd_joint": {
+          "2,4": 64,
+          "3,3": 1,
+          "3,4": 6
+        },
+        "field": "GF(2^7)",
+        "field_kind": "binary-fixed-six-coordinate-S3",
+        "lfd": {
+          "histogram": {
+            "3": 1,
+            "4": 70
+          },
+          "lower": 3,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 7,
+        "systems": 71
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 136,
+            "3": 8
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "ffd_lfd_joint": {
+          "2,4": 136,
+          "3,3": 1,
+          "3,4": 7
+        },
+        "field": "GF(2^8)",
+        "field_kind": "binary-fixed-six-coordinate-S3",
+        "lfd": {
+          "histogram": {
+            "3": 1,
+            "4": 143
+          },
+          "lower": 3,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 8,
+        "systems": 144
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 256,
+            "3": 3
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "ffd_lfd_joint": {
+          "2,3": 130,
+          "2,4": 126,
+          "3,3": 2,
+          "3,4": 1
+        },
+        "field": "GF(2^9)",
+        "field_kind": "binary-fixed-six-coordinate-S3",
+        "lfd": {
+          "histogram": {
+            "3": 132,
+            "4": 127
+          },
+          "lower": 3,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 9,
+        "systems": 259
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 460,
+            "3": 24
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "ffd_lfd_joint": {
+          "2,2": 242,
+          "2,4": 218,
+          "3,3": 1,
+          "3,4": 23
+        },
+        "field": "GF(2^10)",
+        "field_kind": "binary-fixed-six-coordinate-S3",
+        "lfd": {
+          "histogram": {
+            "2": 242,
+            "3": 1,
+            "4": 241
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 10,
+        "systems": 484
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 989,
+            "3": 2
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "ffd_lfd_joint": {
+          "2,2": 11,
+          "2,3": 978,
+          "3,3": 2
+        },
+        "field": "GF(2^11)",
+        "field_kind": "binary-fixed-six-coordinate-S3",
+        "lfd": {
+          "histogram": {
+            "2": 11,
+            "3": 980
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "m": 2,
+        "n": 11,
+        "systems": 991
+      }
+    ],
+    "frozen_curve_sweep": [
+      {
+        "ffd": {
+          "histogram": {
+            "1": 2,
+            "2": 35,
+            "3": 15
+          },
+          "lower": 1,
+          "undefined": 0,
+          "upper": 3
+        },
+        "field": "GF(2^5)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "1": 2,
+            "2": 16,
+            "3": 32,
+            "4": 2
+          },
+          "lower": 1,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 5,
+        "systems": 52
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 81,
+            "3": 20,
+            "None": 4
+          },
+          "lower": 2,
+          "undefined": 4,
+          "upper": 3
+        },
+        "field": "GF(2^6)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "0": 4,
+            "2": 33,
+            "3": 53,
+            "4": 15
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 6,
+        "systems": 105
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 83,
+            "3": 22,
+            "None": 9
+          },
+          "lower": 2,
+          "undefined": 9,
+          "upper": 3
+        },
+        "field": "GF(2^7)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "0": 9,
+            "2": 27,
+            "3": 63,
+            "4": 15
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 7,
+        "systems": 114
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "1": 2,
+            "2": 106,
+            "3": 26,
+            "None": 5
+          },
+          "lower": 1,
+          "undefined": 5,
+          "upper": 3
+        },
+        "field": "GF(2^8)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "0": 5,
+            "1": 2,
+            "2": 42,
+            "3": 53,
+            "4": 37
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 8,
+        "systems": 139
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "1": 2,
+            "2": 98,
+            "3": 20,
+            "None": 7
+          },
+          "lower": 1,
+          "undefined": 7,
+          "upper": 3
+        },
+        "field": "GF(2^9)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "0": 7,
+            "1": 2,
+            "2": 38,
+            "3": 56,
+            "4": 24
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 9,
+        "systems": 127
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 105,
+            "3": 16,
+            "None": 4
+          },
+          "lower": 2,
+          "undefined": 4,
+          "upper": 3
+        },
+        "field": "GF(2^10)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "0": 4,
+            "2": 54,
+            "3": 55,
+            "4": 12
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 10,
+        "systems": 125
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 73,
+            "3": 12,
+            "None": 8
+          },
+          "lower": 2,
+          "undefined": 8,
+          "upper": 3
+        },
+        "field": "GF(2^11)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "0": 8,
+            "2": 34,
+            "3": 39,
+            "4": 12
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 11,
+        "systems": 93
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "1": 3,
+            "2": 147,
+            "3": 18,
+            "None": 20
+          },
+          "lower": 1,
+          "undefined": 20,
+          "upper": 3
+        },
+        "field": "GF(2^12)",
+        "field_kind": "binary",
+        "lfd": {
+          "histogram": {
+            "0": 20,
+            "1": 2,
+            "2": 90,
+            "3": 64,
+            "4": 12
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 12,
+        "systems": 188
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 34,
+            "3": 12
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "field": "GF(2^5)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "2": 14,
+            "3": 29,
+            "4": 3
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 5,
+        "systems": 46
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 77,
+            "3": 13
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "field": "GF(2^6)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "0": 1,
+            "2": 29,
+            "3": 45,
+            "4": 15
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 6,
+        "systems": 90
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 82,
+            "3": 14,
+            "None": 4
+          },
+          "lower": 2,
+          "undefined": 4,
+          "upper": 3
+        },
+        "field": "GF(2^7)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "0": 4,
+            "2": 25,
+            "3": 54,
+            "4": 17
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 7,
+        "systems": 100
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 99,
+            "3": 17,
+            "None": 1
+          },
+          "lower": 2,
+          "undefined": 1,
+          "upper": 3
+        },
+        "field": "GF(2^8)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "0": 1,
+            "2": 39,
+            "3": 41,
+            "4": 36
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 8,
+        "systems": 117
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 95,
+            "3": 12,
+            "None": 1
+          },
+          "lower": 2,
+          "undefined": 1,
+          "upper": 3
+        },
+        "field": "GF(2^9)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "0": 1,
+            "2": 35,
+            "3": 47,
+            "4": 25
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 9,
+        "systems": 108
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 94,
+            "3": 11,
+            "None": 1
+          },
+          "lower": 2,
+          "undefined": 1,
+          "upper": 3
+        },
+        "field": "GF(2^10)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "0": 2,
+            "2": 44,
+            "3": 44,
+            "4": 16
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 10,
+        "systems": 106
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "2": 76,
+            "3": 6
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 3
+        },
+        "field": "GF(2^11)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "2": 36,
+            "3": 34,
+            "4": 12
+          },
+          "lower": 2,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 11,
+        "systems": 82
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "1": 4,
+            "2": 140,
+            "3": 18,
+            "None": 1
+          },
+          "lower": 1,
+          "undefined": 1,
+          "upper": 3
+        },
+        "field": "GF(2^12)",
+        "field_kind": "koblitz",
+        "lfd": {
+          "histogram": {
+            "0": 2,
+            "1": 3,
+            "2": 73,
+            "3": 66,
+            "4": 19
+          },
+          "lower": 0,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 12,
+        "systems": 163
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "3": 2,
+            "4": 185
+          },
+          "lower": 3,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(97)",
+        "field_kind": "prime",
+        "lfd": {
+          "histogram": {
+            "3": 2,
+            "4": 185
+          },
+          "lower": 3,
+          "undefined": 0,
+          "upper": 4
+        },
+        "m": 2,
+        "n": 1,
+        "systems": 187
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "3": 2,
+            "4": 219
+          },
+          "lower": 3,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(193)",
+        "field_kind": "prime",
+        "lfd": {
+          "histogram": {
+            "3": 1,
+            "4": 178,
+            "5": 42
+          },
+          "lower": 3,
+          "undefined": 0,
+          "upper": 5
+        },
+        "m": 2,
+        "n": 1,
+        "systems": 221
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 285
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(257)",
+        "field_kind": "prime",
+        "lfd": {
+          "histogram": {
+            "4": 195,
+            "5": 90
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 5
+        },
+        "m": 2,
+        "n": 1,
+        "systems": 285
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 281
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(641)",
+        "field_kind": "prime",
+        "lfd": {
+          "histogram": {
+            "4": 191,
+            "5": 90
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 5
+        },
+        "m": 2,
+        "n": 1,
+        "systems": 281
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 286
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(7681)",
+        "field_kind": "prime",
+        "lfd": {
+          "histogram": {
+            "4": 196,
+            "5": 90
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 5
+        },
+        "m": 2,
+        "n": 1,
+        "systems": 286
+      }
+    ],
+    "frozen_split_protocol": [
+      {
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(114689)",
+        "field_kind": "prime-split-chain",
+        "k": 5,
+        "lfd": {
+          "histogram": {
+            "7": 1
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 3,
+        "n": 1,
+        "systems": 1
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(163841)",
+        "field_kind": "prime-split-chain",
+        "k": 5,
+        "lfd": {
+          "histogram": {
+            "7": 1
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 3,
+        "n": 1,
+        "systems": 1
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(12289)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "6": 2
+          },
+          "lower": 6,
+          "undefined": 0,
+          "upper": 6
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(40961)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "6": 2
+          },
+          "lower": 6,
+          "undefined": 0,
+          "upper": 6
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(7681)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "6": 2
+          },
+          "lower": 6,
+          "undefined": 0,
+          "upper": 6
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(12289)",
+        "field_kind": "prime-split-chain",
+        "k": 3,
+        "lfd": {
+          "histogram": {
+            "7": 2
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(40961)",
+        "field_kind": "prime-split-chain",
+        "k": 3,
+        "lfd": {
+          "histogram": {
+            "7": 2
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(7681)",
+        "field_kind": "prime-split-chain",
+        "k": 3,
+        "lfd": {
+          "histogram": {
+            "7": 2
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(114689)",
+        "field_kind": "prime-split-chain",
+        "k": 4,
+        "lfd": {
+          "histogram": {
+            "7": 1
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 1
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(163841)",
+        "field_kind": "prime-split-chain",
+        "k": 4,
+        "lfd": {
+          "histogram": {
+            "7": 1
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 4,
+        "n": 1,
+        "systems": 1
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(12289)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "6": 2
+          },
+          "lower": 6,
+          "undefined": 0,
+          "upper": 6
+        },
+        "m": 5,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(40961)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "6": 2
+          },
+          "lower": 6,
+          "undefined": 0,
+          "upper": 6
+        },
+        "m": 5,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 2
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(7681)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "6": 2
+          },
+          "lower": 6,
+          "undefined": 0,
+          "upper": 6
+        },
+        "m": 5,
+        "n": 1,
+        "systems": 2
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(114689)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "7": 1
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 6,
+        "n": 1,
+        "systems": 1
+      },
+      {
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(163841)",
+        "field_kind": "prime-split-chain",
+        "k": 2,
+        "lfd": {
+          "histogram": {
+            "7": 1
+          },
+          "lower": 7,
+          "undefined": 0,
+          "upper": 7
+        },
+        "m": 6,
+        "n": 1,
+        "systems": 1
+      },
+      {
+        "D8_input_sha256": "de63da2d681b213b0d624f6969a4c40286c56665484992dc4e6665f75a267a70",
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(114689)",
+        "field_kind": "prime-split-chain",
+        "k": 3,
+        "lfd": {
+          "D7_input_sha256": "8523eeee5fd23df8ae825d4b85850677c7b010721da27530208a0b9eefd9f3ad",
+          "D7_replay_sha256": "6d4cf559d11988151eba12968bf084db9c4d172e9c97eb2f56d15a2dda7f1c59",
+          "lower": 8,
+          "method": "exact F4 trace replay",
+          "producer_sha256": "a3712966cb80c64352b9763d9fcd061dfb2abda04826f0ef3a2bd6ff0dfb6f7a",
+          "replay_sha256": "0e5217121fcd9df08491a1500013c79b74293c0527c9161c0313866d364e2875",
+          "source_sha256": {
+            "f4-linux-x86_64": "60e1fff70e9c67b1dd0ec778d12e5e8566a29e9d30e1d45bd86ea4771f623a11",
+            "f4_min/src/f4_fp_tower.rs": "a4bbf68f23912cbda4e955f83debdd5af2641be05a0aba0f23ce4dbb3bb6e6bb",
+            "f4_min/src/main.rs": "06a47329aa402a02e70589c1c30a5465223a6f17b2a6d2dbb5df5813ec1476b7"
+          },
+          "status": "certified",
+          "trace_sha256": "e72fcf6652a15b58da6901dd5d70d078c16e6a6fbf1d4c1c327733003bd11cbf",
+          "upper": 8
+        },
+        "m": 5,
+        "n": 1,
+        "systems": 1
+      },
+      {
+        "D8_input_sha256": "ce040735cc7c230bba8550195cd42b024d1aa088a3bfc0de05de5a67b4aaaf25",
+        "ffd": {
+          "histogram": {
+            "4": 1
+          },
+          "lower": 4,
+          "undefined": 0,
+          "upper": 4
+        },
+        "field": "GF(163841)",
+        "field_kind": "prime-split-chain",
+        "k": 3,
+        "lfd": {
+          "D7_input_sha256": "6c333d2a83af5d6ada6077b495a299642497967d05e2c34058ba5978618dfa08",
+          "D7_replay_sha256": "3fc2b64ff6ec45671f5c0c470686976a20325b401bd6b3899e4584ead8696e38",
+          "lower": 8,
+          "method": "exact F4 trace replay",
+          "producer_sha256": "7894779734a45098d50f1937929cdd4d1839a1cff55d0e274b9af866e204e025",
+          "replay_sha256": "ed052f3eed1e320b6fbf1a761625e91e18afd2a709fdbb01baab5349a4464dee",
+          "source_sha256": {
+            "f4-linux-x86_64": "60e1fff70e9c67b1dd0ec778d12e5e8566a29e9d30e1d45bd86ea4771f623a11",
+            "f4_min/src/f4_fp_tower.rs": "a4bbf68f23912cbda4e955f83debdd5af2641be05a0aba0f23ce4dbb3bb6e6bb",
+            "f4_min/src/main.rs": "06a47329aa402a02e70589c1c30a5465223a6f17b2a6d2dbb5df5813ec1476b7"
+          },
+          "status": "certified",
+          "trace_sha256": "62930639e49b69eae5ec7a07e0b4b0fa60b18ec147805eda86551e3f36b4c271",
+          "upper": 8
+        },
+        "m": 5,
+        "n": 1,
+        "systems": 1
+      }
+    ]
+  }
+}
