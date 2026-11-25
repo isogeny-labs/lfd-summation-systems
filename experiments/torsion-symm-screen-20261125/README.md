@@ -51,3 +51,16 @@ python3 experiments/torsion-symm-screen-20261125/bench_enumeration.py
 ```
 
 `results.json` binds the screen and group-law source hashes. The timing scripts regenerate their JSON records; timings naturally vary by host and load.
+
+## Equal-size binary Koblitz follow-up
+
+The [frozen equal-67 Koblitz panel](PROTOCOL_EQUAL67_20261125.md) compares
+distinct `x` and torsion-invariant `u` bases of equal rational size on the
+same 24 targets. Its [checked result](EQUAL67_RESULT_20261125.md) finds
+12 admitted targets for the direct base and 6 for the symmetrized base,
+equal final relation rank 12, and equal exact Boolean LFD 3 on each of the
+first four targets. This candidate therefore does not pass the requested
+joint yield-and-degree gate. The result includes complete raw rows, exact
+closure profiles, a separately retained environment-error attempt, and an
+independent group-law/subgroup-log verifier. It is separate from the
+fixed-base ECC2K-130 recipe and the prime-field subgroup systems.
