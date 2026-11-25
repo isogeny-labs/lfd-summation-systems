@@ -184,17 +184,23 @@ def rank(rows, modulus=R):
 
 
 def relation_rank(fb, panel, answers):
-    cols = {p: i for i, p in enumerate(fb)}
+    # Work in the prime-order quotient. A column represents
+    # (1/16) log_G([16]P); P and -P share one column with opposite signs.
+    reps = sorted({min(p, E.neg(p)) for p in fb
+                   if E.mul(16, p) is not None})
+    cols = {p: i for i, p in enumerate(reps)}
     rows = []
     for row, pairs in zip(panel[:256], answers[:256]):
         assert row['kind'] == 'random'
         for a, b in pairs:
-            v = {cols[a]: 1, cols[b]: 1}
-            if a == b:
-                v[cols[a]] = 2
-            # The fixed challenge is (u + 113v)G; projected factor-base
-            # columns represent logs of [16]P in the prime-order subgroup.
-            v[len(fb)] = -(row['u'] + 113*row['v'])
+            v = {}
+            for p in (a, b):
+                rep = min(p, E.neg(p))
+                if rep in cols:
+                    j = cols[rep]
+                    v[j] = v.get(j, 0) + (1 if p == rep else -1)
+            # Q=113G, so the challenge has one known right-hand column.
+            v[len(reps)] = -(row['u'] + 113*row['v'])
             rows.append(v)
     return rank(rows)
 
