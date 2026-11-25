@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+import sympy as sp
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -75,10 +76,23 @@ def check(n: int, modulus: int, k: int):
             'diagonal_member_quadratics': diagonal, 'status': 'passed'}
 
 
+def check_full_two_torsion_quotient():
+    x, i = sp.symbols('x'), sp.I
+    j = (x*x - 1)**2 / (x*(x*x + 1))
+    duplicate_x = (3*x*x + 1)**2 / (4*x*(x*x + 1)) - 2*x
+    transforms = (1/x, i*(x+i)/(x-i), -i*(x-i)/(x+i))
+    assert sp.cancel(j - 4*duplicate_x) == 0
+    assert all(sp.cancel(j.subs(x, t) - j) == 0 for t in transforms)
+    return {'identity': 'J(x)=4*x([2]P)', 'torsion_translations_checked': 3,
+            'status': 'passed'}
+
+
 if __name__ == '__main__':
     rows = [check(5, (1 << 5) | (1 << 2) | 1, 2),
             check(7, (1 << 7) | (1 << 1) | 1, 3)]
     out = Path(__file__).with_name('verification.json')
-    out.write_text(json.dumps({'rows': rows}, indent=2) + '\n')
+    out.write_text(json.dumps({'rows': rows,
+                               'full_two_torsion_quotient': check_full_two_torsion_quotient()},
+                              indent=2) + '\n')
     for row in rows:
         print(row)
