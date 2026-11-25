@@ -134,3 +134,14 @@ binary Edwards design. The remaining scientifically distinct question is
 whether a different equal-size factor-base construction can improve useful
 relation rank **and** reduce the Boolean solver's exact degree on the
 repository's frozen systems, after charging setup and failures.
+
+## Frozen Boolean follow-up
+
+The [separate matched frozen-system replay](FROZEN_BOOLEAN_RESULT_20261125.md)
+tested a two-torsion invariant quotient on the repository's degree-nine
+Koblitz Boolean systems. A boundary branch was necessary to retain the
+frozen base's zero-coordinate decompositions. Its direct exact LFD values
+were 2, 2, and 3; the equivalent boundary-patched presentation gave 6 on
+all three targets, with identical checked relation rows. This is a negative
+degree-and-yield result for that frozen-base presentation, not a complete
+cost or ECC2K-130 result.
