@@ -1,0 +1,291 @@
+{
+  "audit_source_sha256": "9ea62b3601a3fe4b80365193fa84fecc7c43005540faba3bbab3a67722c496aa",
+  "cells": [
+    {
+      "ffd_exact_counts": {
+        "1": 2,
+        "2": 35,
+        "3": 15
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "1": 2,
+        "2": 16,
+        "3": 32,
+        "4": 2
+      },
+      "m": 2,
+      "n": 5,
+      "systems": 52
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 81,
+        "3": 20,
+        "None": 4
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "0": 4,
+        "2": 33,
+        "3": 53,
+        "4": 15
+      },
+      "m": 2,
+      "n": 6,
+      "systems": 105
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 83,
+        "3": 22,
+        "None": 9
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "0": 9,
+        "2": 27,
+        "3": 63,
+        "4": 15
+      },
+      "m": 2,
+      "n": 7,
+      "systems": 114
+    },
+    {
+      "ffd_exact_counts": {
+        "1": 2,
+        "2": 106,
+        "3": 26,
+        "None": 5
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "0": 5,
+        "1": 2,
+        "2": 42,
+        "3": 53,
+        "4": 37
+      },
+      "m": 2,
+      "n": 8,
+      "systems": 139
+    },
+    {
+      "ffd_exact_counts": {
+        "1": 2,
+        "2": 98,
+        "3": 20,
+        "None": 7
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "0": 7,
+        "1": 2,
+        "2": 38,
+        "3": 56,
+        "4": 24
+      },
+      "m": 2,
+      "n": 9,
+      "systems": 127
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 105,
+        "3": 16,
+        "None": 4
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "0": 4,
+        "2": 54,
+        "3": 55,
+        "4": 12
+      },
+      "m": 2,
+      "n": 10,
+      "systems": 125
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 73,
+        "3": 12,
+        "None": 8
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "0": 8,
+        "2": 34,
+        "3": 39,
+        "4": 12
+      },
+      "m": 2,
+      "n": 11,
+      "systems": 93
+    },
+    {
+      "ffd_exact_counts": {
+        "1": 3,
+        "2": 147,
+        "3": 18,
+        "None": 20
+      },
+      "field_kind": "binary",
+      "lfd_exact_counts": {
+        "0": 20,
+        "1": 2,
+        "2": 90,
+        "3": 64,
+        "4": 12
+      },
+      "m": 2,
+      "n": 12,
+      "systems": 188
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 34,
+        "3": 12
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "2": 14,
+        "3": 29,
+        "4": 3
+      },
+      "m": 2,
+      "n": 5,
+      "systems": 46
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 77,
+        "3": 13
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "0": 1,
+        "2": 29,
+        "3": 45,
+        "4": 15
+      },
+      "m": 2,
+      "n": 6,
+      "systems": 90
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 82,
+        "3": 14,
+        "None": 4
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "0": 4,
+        "2": 25,
+        "3": 54,
+        "4": 17
+      },
+      "m": 2,
+      "n": 7,
+      "systems": 100
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 99,
+        "3": 17,
+        "None": 1
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "0": 1,
+        "2": 39,
+        "3": 41,
+        "4": 36
+      },
+      "m": 2,
+      "n": 8,
+      "systems": 117
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 95,
+        "3": 12,
+        "None": 1
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "0": 1,
+        "2": 35,
+        "3": 47,
+        "4": 25
+      },
+      "m": 2,
+      "n": 9,
+      "systems": 108
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 94,
+        "3": 11,
+        "None": 1
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "0": 2,
+        "2": 44,
+        "3": 44,
+        "4": 16
+      },
+      "m": 2,
+      "n": 10,
+      "systems": 106
+    },
+    {
+      "ffd_exact_counts": {
+        "2": 76,
+        "3": 6
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "2": 36,
+        "3": 34,
+        "4": 12
+      },
+      "m": 2,
+      "n": 11,
+      "systems": 82
+    },
+    {
+      "ffd_exact_counts": {
+        "1": 4,
+        "2": 140,
+        "3": 18,
+        "None": 1
+      },
+      "field_kind": "koblitz",
+      "lfd_exact_counts": {
+        "0": 2,
+        "1": 3,
+        "2": 73,
+        "3": 66,
+        "4": 19
+      },
+      "m": 2,
+      "n": 12,
+      "systems": 163
+    }
+  ],
+  "constant_input_convention": "FFD not defined; recorded separately",
+  "ffd_receipt_sha256": "6fcfb222a165ec0a8997fb9e23dbf0da075f4fb7237046e54ae751603fca3542",
+  "input_sha256": {
+    "cases.jsonl": "8143967bdb69946ec711dda84e5a19684bbbd2bdecedd01230a3e2300b099a2e",
+    "results.jsonl": "b7a88e8831bf432192d864b0950d8eddd284323c9f466ccb5032a97b26b86e44",
+    "systems.jsonl": "99248b4338e1dd133489d95bb85c036394d17870d8d6924a2d93cbac272c260f"
+  },
+  "rank_method": "independent integer-bit Gaussian elimination",
+  "scope": "frozen binary and Koblitz m=2 sweep systems",
+  "status": "passed",
+  "systems": 1745
+}

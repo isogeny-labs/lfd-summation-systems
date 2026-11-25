@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "counts": {
+    "curves": 72,
+    "targets": 556,
+    "coordinate_triples": 478208,
+    "raw_direct_zeros": 48840,
+    "raw_split_zeros": 38468,
+    "raw_split_missing": 10372,
+    "raw_split_extra": 0,
+    "nonliftable_direct_zeros": 12218,
+    "pdp_affine_missing": 1966,
+    "pdp_corrected_mismatches": 0,
+    "degree_drop": 3844,
+    "quadratic_gcd_no_k_root": 6528
+  },
+  "witnesses": {
+    "degree_drop": {
+      "n": 2,
+      "modulus": 7,
+      "a": 0,
+      "b": 1,
+      "target": [
+        0,
+        1
+      ],
+      "triple": [
+        0,
+        0,
+        0
+      ],
+      "quadratics": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "gcd_degree": 0,
+      "actual_decomposition": true
+    },
+    "pdp_infinity": {
+      "n": 2,
+      "a": 0,
+      "b": 1,
+      "target": [
+        0,
+        1
+      ],
+      "triple": [
+        0,
+        0,
+        0
+      ]
+    },
+    "quadratic_gcd_no_k_root": {
+      "n": 2,
+      "modulus": 7,
+      "a": 0,
+      "b": 2,
+      "target": [
+        2,
+        1
+      ],
+      "triple": [
+        1,
+        2,
+        1
+      ],
+      "quadratics": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "gcd_degree": 2,
+      "actual_decomposition": false
+    }
+  },
+  "scope": "Exhaustive for the specified finite grid, not a universal proof"
+}

@@ -1,0 +1,23 @@
+{
+  "p": 65537,
+  "k": 14,
+  "D": 6,
+  "a": 1,
+  "b": 0,
+  "target": [
+    4271,
+    11720
+  ],
+  "target_on_curve": true,
+  "target_nonsquare": true,
+  "input_sha256": "a878bcd04861493e4798275f0d69454c1870c4c0d813135b1e9f943675f006bb",
+  "generator_source": "csd/ic_bounds_lift_independent.py",
+  "generator_source_sha256": "035d9c49883009a3e52a9c09916dbf21aae504fdd1f90d345972de03bbc974ad",
+  "archived_record": "experiments/ic-bounds-k14/runs/unit-p65537-k14-D6.json",
+  "archived_record_sha256": "a04379218e676b7dc82d84959644e09d1fa557d3b8b949e03e7a082861bdc660",
+  "target_basis_sha256": [
+    "eeac52ef422214ffe21d411fa9b6da488de2b63e20871875dbd94e81cb3d8c38",
+    "a58c6c7d982c6f3e1144d8a79223e23aeba34bd965f940ffe8a9182defd0fb24"
+  ],
+  "scope": "original depth14 unit input; no completed input-containment claim"
+}

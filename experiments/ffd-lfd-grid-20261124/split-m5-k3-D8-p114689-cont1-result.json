@@ -1,0 +1,40 @@
+{
+  "status": "capped",
+  "p": 114689,
+  "m": 5,
+  "k": 3,
+  "D": 8,
+  "derived_rank": 116718,
+  "contains_one": false,
+  "products": 46828,
+  "terms": 931890974,
+  "muladds": 2693507105589,
+  "seconds": 14401.190103,
+  "schedule_products": 557983,
+  "resume_from": {
+    "run_dir": "/workspace/lfd-summation-systems/experiments/lfd-completion-20261118/runs/gcp-20261123-exact-split-m5-k3-D8-large",
+    "result_sha256": "c0d3a6e9eadf9efa8308e95dee8bf6f844479f92a9ce20f3976e8b246a8f73ac",
+    "verification_sha256": "0ec283551451b17ce4998a58d56bed597413b4ddd5a23554e15b9666575d5466",
+    "schedule_products": 511155
+  },
+  "engine": "restart",
+  "source_sha256": {
+    "restart_producer.rs": "05e3f5000aefee5618937e63cf85df6cbdcdd93e7f3e97ff0a6d1c82f81f0d22",
+    "run_heap_gcp.py": "a7590ddc9d6c298b7c4eb4d8263e4aebf0706aaf5cc8a064ee20c1d76f8ef071"
+  },
+  "input_sha256": "7c0e11f0cf0b6ce899280ee3fa6a9303a735f22f6ca668405ff37cd9448ebc9d",
+  "original_input_sha256": "de63da2d681b213b0d624f6969a4c40286c56665484992dc4e6665f75a267a70",
+  "elapsed_seconds": 14401.377188423001,
+  "artifacts": {
+    "derivations.txt.gz": {
+      "sha256": "ec260736c0073b26b671852d35cc73f4d0240f37082fb160084dae11d0b3cfef",
+      "bytes": 418045644,
+      "decoded_sha256": "8ecf0c5766fd2b669254a3a4d909450e6e936b415409a508af2bbd827e6b0ced"
+    },
+    "basis.txt.gz": {
+      "sha256": "53fd77296dcac9e8dda1da627793f36a999efdf6d099a657d79e26c7c1ab18f8",
+      "bytes": 5546239110,
+      "decoded_sha256": "5cf685ee6d6bf08086a67d2265f5018eb9820ff301802bdca912ab22bcad11b1"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "ecc2k130.integral-symmetry.v1",
+  "order_131_of_2": 130,
+  "riemann_hurwitz_quotient_genus_and_branch_count": [
+    [
+      0,
+      4
+    ]
+  ],
+  "rational_order_131_action_at_genus_130": "excluded by branch orbit lengths",
+  "alpha_power_131": {
+    "alpha_coefficient": 38531015900842053623,
+    "constant": 8123678690673902378,
+    "alpha_coefficient_prime_factors": [
+      263,
+      146505763881528721
+    ]
+  },
+  "howe_theorem_1_1_witness": {
+    "ell": 146505763881528721,
+    "ell_mod_131": 130,
+    "minus_7_is_nonsquare": true,
+    "zeta_coordinates": [
+      139017811438029095,
+      139017811438029095
+    ],
+    "pi_equals_V_coordinates": [
+      14975904886999252,
+      0
+    ],
+    "interpretation": "inert prime of K+ dividing F-V",
+    "conclusion": "the F2-isogeny class contains a principally polarized variety"
+  },
+  "zeta_not_in_Z_F_V_witness": {
+    "modulus": 263,
+    "alpha_images": [
+      139,
+      123
+    ],
+    "zeta_images": [
+      2,
+      122
+    ],
+    "common_F_V_images": [
+      15,
+      193
+    ]
+  },
+  "all_degree_zeta_consistency": {
+    "exact_point_and_place_degrees": [
+      1,
+      31
+    ],
+    "tail_start": 32,
+    "normalized_negative_tail_upper_bound_at_32": "664577/134217728",
+    "effective_divisor_exact_degrees": [
+      0,
+      258
+    ],
+    "effective_divisor_tail": "B_m = P_A(1)*(2^(m-129)-1), m>=259",
+    "conclusion": "all point, place, and effective-divisor counts are nonnegative integers"
+  },
+  "jacobian_in_isogeny_class": "unresolved"
+}

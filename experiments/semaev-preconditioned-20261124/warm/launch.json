@@ -1,0 +1,6 @@
+{
+  "command": "OPENBLAS_NUM_THREADS=1 python3 scripts/run_semaev_preconditioned_warm.py run",
+  "inherited_pythonhashseed": null,
+  "openblas_num_threads": "1",
+  "note": "All warm methods share one process and hash state; fresh workers explicitly set PYTHONHASHSEED=0."
+}
