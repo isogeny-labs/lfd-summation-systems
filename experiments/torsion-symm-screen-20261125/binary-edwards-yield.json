@@ -1,0 +1,1053 @@
+{
+  "cells": [
+    {
+      "admitted_targets": {
+        "baseline": 2,
+        "colored": 0
+      },
+      "cofactor": 4,
+      "columns": [
+        {
+          "color": "B",
+          "point": [
+            10,
+            12
+          ],
+          "t_pair": [
+            6,
+            7
+          ]
+        }
+      ],
+      "curve": "E_(1,1)",
+      "distinct_rows": {
+        "baseline": 2,
+        "colored": 0
+      },
+      "elapsed_s": 0.030899375007720664,
+      "final_rank": {
+        "baseline": 1,
+        "colored": 0
+      },
+      "generator": [
+        4,
+        19
+      ],
+      "group_order": 44,
+      "l": 2,
+      "modulus": 37,
+      "n": 5,
+      "per_target": [
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 1,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 1,
+          "target": [
+            4,
+            19
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 2,
+          "target": [
+            14,
+            27
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 3,
+          "target": [
+            2,
+            30
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 4,
+          "target": [
+            16,
+            8
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 5,
+          "target": [
+            13,
+            10
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 6,
+          "target": [
+            10,
+            13
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 7,
+          "target": [
+            8,
+            16
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 8,
+          "target": [
+            30,
+            2
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 9,
+          "target": [
+            27,
+            14
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 1,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 10,
+          "target": [
+            19,
+            4
+          ]
+        }
+      ],
+      "r": 11,
+      "relation_rows": {
+        "baseline": [
+          [
+            2,
+            1
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "colored": []
+      },
+      "target_count": 10,
+      "torsion_point": [
+        1,
+        0
+      ],
+      "total_columns": 1
+    },
+    {
+      "admitted_targets": {
+        "baseline": 2,
+        "colored": 0
+      },
+      "cofactor": 4,
+      "columns": [
+        {
+          "color": "B",
+          "point": [
+            118,
+            120
+          ],
+          "t_pair": [
+            14,
+            15
+          ]
+        }
+      ],
+      "curve": "E_(1,1)",
+      "distinct_rows": {
+        "baseline": 2,
+        "colored": 0
+      },
+      "elapsed_s": 0.5989352499891538,
+      "final_rank": {
+        "baseline": 1,
+        "colored": 0
+      },
+      "generator": [
+        37,
+        78
+      ],
+      "group_order": 116,
+      "l": 3,
+      "modulus": 131,
+      "n": 7,
+      "per_target": [
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 1,
+          "target": [
+            37,
+            78
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 2,
+          "target": [
+            101,
+            11
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 3,
+          "target": [
+            27,
+            93
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 4,
+          "target": [
+            60,
+            75
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 5,
+          "target": [
+            84,
+            97
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 6,
+          "target": [
+            118,
+            121
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 7,
+          "target": [
+            9,
+            52
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 8,
+          "target": [
+            55,
+            67
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 9,
+          "target": [
+            14,
+            65
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 10,
+          "target": [
+            127,
+            95
+          ]
+        },
+        {
+          "baseline_rank": 0,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 11,
+          "target": [
+            57,
+            113
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 1,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 12,
+          "target": [
+            43,
+            51
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 13,
+          "target": [
+            106,
+            63
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 14,
+          "target": [
+            105,
+            69
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 15,
+          "target": [
+            69,
+            105
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 16,
+          "target": [
+            63,
+            106
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 1,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 17,
+          "target": [
+            51,
+            43
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 18,
+          "target": [
+            113,
+            57
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 19,
+          "target": [
+            95,
+            127
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 20,
+          "target": [
+            65,
+            14
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 21,
+          "target": [
+            67,
+            55
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 22,
+          "target": [
+            52,
+            9
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 23,
+          "target": [
+            121,
+            118
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 0,
+          "colored_rows": 0,
+          "scalar": 24,
+          "target": [
+            97,
+            84
+          ]
+        }
+      ],
+      "r": 29,
+      "relation_rows": {
+        "baseline": [
+          [
+            2,
+            12
+          ],
+          [
+            27,
+            17
+          ]
+        ],
+        "colored": []
+      },
+      "target_count": 24,
+      "torsion_point": [
+        1,
+        0
+      ],
+      "total_columns": 1
+    },
+    {
+      "admitted_targets": {
+        "baseline": 12,
+        "colored": 7
+      },
+      "cofactor": 4,
+      "columns": [
+        {
+          "color": "A",
+          "point": [
+            82,
+            90
+          ],
+          "t_pair": [
+            8,
+            9
+          ]
+        },
+        {
+          "color": "A",
+          "point": [
+            230,
+            236
+          ],
+          "t_pair": [
+            10,
+            11
+          ]
+        },
+        {
+          "color": "B",
+          "point": [
+            458,
+            472
+          ],
+          "t_pair": [
+            18,
+            19
+          ]
+        },
+        {
+          "color": "B",
+          "point": [
+            200,
+            208
+          ],
+          "t_pair": [
+            24,
+            25
+          ]
+        },
+        {
+          "color": "B",
+          "point": [
+            492,
+            502
+          ],
+          "t_pair": [
+            26,
+            27
+          ]
+        },
+        {
+          "color": "B",
+          "point": [
+            8,
+            20
+          ],
+          "t_pair": [
+            28,
+            29
+          ]
+        }
+      ],
+      "curve": "E_(1,1)",
+      "distinct_rows": {
+        "baseline": 13,
+        "colored": 7
+      },
+      "elapsed_s": 19.109980332985288,
+      "final_rank": {
+        "baseline": 6,
+        "colored": 5
+      },
+      "generator": [
+        358,
+        221
+      ],
+      "group_order": 508,
+      "l": 4,
+      "modulus": 515,
+      "n": 9,
+      "per_target": [
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 1,
+          "colored_rank": 1,
+          "colored_rows": 1,
+          "scalar": 1,
+          "target": [
+            358,
+            221
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 1,
+          "colored_rows": 0,
+          "scalar": 2,
+          "target": [
+            474,
+            225
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 1,
+          "colored_rows": 0,
+          "scalar": 3,
+          "target": [
+            360,
+            386
+          ]
+        },
+        {
+          "baseline_rank": 1,
+          "baseline_rows": 0,
+          "colored_rank": 1,
+          "colored_rows": 0,
+          "scalar": 4,
+          "target": [
+            201,
+            208
+          ]
+        },
+        {
+          "baseline_rank": 2,
+          "baseline_rows": 1,
+          "colored_rank": 2,
+          "colored_rows": 1,
+          "scalar": 5,
+          "target": [
+            25,
+            129
+          ]
+        },
+        {
+          "baseline_rank": 2,
+          "baseline_rows": 1,
+          "colored_rank": 2,
+          "colored_rows": 0,
+          "scalar": 6,
+          "target": [
+            65,
+            273
+          ]
+        },
+        {
+          "baseline_rank": 2,
+          "baseline_rows": 0,
+          "colored_rank": 2,
+          "colored_rows": 0,
+          "scalar": 7,
+          "target": [
+            409,
+            31
+          ]
+        },
+        {
+          "baseline_rank": 3,
+          "baseline_rows": 1,
+          "colored_rank": 2,
+          "colored_rows": 0,
+          "scalar": 8,
+          "target": [
+            154,
+            228
+          ]
+        },
+        {
+          "baseline_rank": 4,
+          "baseline_rows": 1,
+          "colored_rank": 3,
+          "colored_rows": 1,
+          "scalar": 9,
+          "target": [
+            356,
+            169
+          ]
+        },
+        {
+          "baseline_rank": 4,
+          "baseline_rows": 1,
+          "colored_rank": 3,
+          "colored_rows": 0,
+          "scalar": 10,
+          "target": [
+            45,
+            438
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 2,
+          "colored_rank": 4,
+          "colored_rows": 1,
+          "scalar": 11,
+          "target": [
+            462,
+            381
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 4,
+          "colored_rows": 0,
+          "scalar": 12,
+          "target": [
+            207,
+            428
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 4,
+          "colored_rows": 0,
+          "scalar": 13,
+          "target": [
+            33,
+            11
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 4,
+          "colored_rows": 0,
+          "scalar": 14,
+          "target": [
+            269,
+            378
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 1,
+          "colored_rank": 4,
+          "colored_rows": 1,
+          "scalar": 15,
+          "target": [
+            231,
+            236
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 1,
+          "colored_rank": 4,
+          "colored_rows": 0,
+          "scalar": 16,
+          "target": [
+            186,
+            286
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 1,
+          "colored_rank": 4,
+          "colored_rows": 1,
+          "scalar": 17,
+          "target": [
+            97,
+            321
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 4,
+          "colored_rows": 0,
+          "scalar": 18,
+          "target": [
+            433,
+            470
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 1,
+          "colored_rank": 5,
+          "colored_rows": 1,
+          "scalar": 19,
+          "target": [
+            322,
+            227
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 5,
+          "colored_rows": 0,
+          "scalar": 20,
+          "target": [
+            493,
+            502
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 5,
+          "colored_rows": 0,
+          "scalar": 21,
+          "target": [
+            91,
+            82
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 5,
+          "colored_rows": 0,
+          "scalar": 22,
+          "target": [
+            394,
+            297
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 0,
+          "colored_rank": 5,
+          "colored_rows": 0,
+          "scalar": 23,
+          "target": [
+            401,
+            362
+          ]
+        },
+        {
+          "baseline_rank": 6,
+          "baseline_rows": 1,
+          "colored_rank": 5,
+          "colored_rows": 0,
+          "scalar": 24,
+          "target": [
+            455,
+            420
+          ]
+        }
+      ],
+      "r": 127,
+      "relation_rows": {
+        "baseline": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            125,
+            116
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            126,
+            0,
+            111
+          ],
+          [
+            0,
+            0,
+            0,
+            125,
+            0,
+            0,
+            119
+          ],
+          [
+            0,
+            0,
+            0,
+            126,
+            126,
+            0,
+            103
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            117
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            126,
+            0,
+            122
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            112
+          ],
+          [
+            0,
+            126,
+            0,
+            1,
+            0,
+            0,
+            116
+          ],
+          [
+            0,
+            126,
+            0,
+            126,
+            0,
+            0,
+            108
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            126
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            110
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            121
+          ],
+          [
+            126,
+            0,
+            1,
+            0,
+            0,
+            0,
+            118
+          ]
+        ],
+        "colored": [
+          [
+            0,
+            1,
+            0,
+            0,
+            126,
+            0,
+            122
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            112
+          ],
+          [
+            0,
+            126,
+            0,
+            1,
+            0,
+            0,
+            116
+          ],
+          [
+            0,
+            126,
+            0,
+            126,
+            0,
+            0,
+            108
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            126
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            110
+          ],
+          [
+            126,
+            0,
+            1,
+            0,
+            0,
+            0,
+            118
+          ]
+        ]
+      },
+      "target_count": 24,
+      "torsion_point": [
+        1,
+        0
+      ],
+      "total_columns": 6
+    }
+  ],
+  "protocol": "PROTOCOL_BINARY_20261125.md",
+  "schema": "torsion-symm-binary-yield/v1",
+  "source_sha256": "b432428a370a6373ca093f269db0d0dcbed8aa969597a60dfa5a8c5461cbb104"
+}

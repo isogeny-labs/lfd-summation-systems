@@ -1,0 +1,1238 @@
+{
+  "cells": [
+    {
+      "bases": {
+        "baseline": {
+          "direct_generator_degrees": [
+            12,
+            12,
+            512,
+            512
+          ],
+          "image_size": 42,
+          "invariant_generator_degrees": [
+            9,
+            8,
+            8,
+            8,
+            8,
+            512,
+            512
+          ],
+          "left_t": [
+            8,
+            9,
+            10,
+            11,
+            18,
+            19,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ],
+          "right_t": [
+            8,
+            9,
+            10,
+            11,
+            18,
+            19,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ],
+          "setup_cpu_s": 0.20378900000000044,
+          "setup_wall_s": 0.4199590000207536
+        },
+        "colored": {
+          "direct_generator_degrees": [
+            4,
+            8,
+            512,
+            512
+          ],
+          "image_size": 16,
+          "invariant_generator_degrees": [
+            5,
+            5,
+            4,
+            512,
+            512
+          ],
+          "left_t": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "right_t": [
+            18,
+            19,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ],
+          "setup_cpu_s": 0.0376489999999996,
+          "setup_wall_s": 0.07374895899556577
+        }
+      },
+      "field_order": 512,
+      "l": 4,
+      "n": 9,
+      "selected_target_scalars": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "targets": [
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.030900000012479722,
+            "lfd": 14,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 1
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 3
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 6
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 10
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 15
+              },
+              {
+                "columns": 55,
+                "degree": 9,
+                "rank": 21
+              },
+              {
+                "columns": 66,
+                "degree": 10,
+                "rank": 28
+              },
+              {
+                "columns": 78,
+                "degree": 11,
+                "rank": 36
+              },
+              {
+                "columns": 91,
+                "degree": 12,
+                "rank": 47
+              },
+              {
+                "columns": 105,
+                "degree": 13,
+                "rank": 61
+              },
+              {
+                "columns": 120,
+                "degree": 14,
+                "rank": 120
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.009971000000000174,
+          "form": "direct",
+          "generator_degrees": [
+            12,
+            12,
+            512,
+            512,
+            4
+          ],
+          "scalar": 2,
+          "wall_s": 0.031232416979037225
+        },
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.0019749579951167107,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 6
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 10
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 15
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 21
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0019940000000002733,
+          "form": "invariant",
+          "generator_degrees": [
+            9,
+            8,
+            8,
+            8,
+            8,
+            512,
+            512,
+            2
+          ],
+          "scalar": 2,
+          "wall_s": 0.0021003330184612423
+        },
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.005101707996800542,
+            "lfd": 14,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 1
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 3
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 6
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 10
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 15
+              },
+              {
+                "columns": 55,
+                "degree": 9,
+                "rank": 21
+              },
+              {
+                "columns": 66,
+                "degree": 10,
+                "rank": 28
+              },
+              {
+                "columns": 78,
+                "degree": 11,
+                "rank": 36
+              },
+              {
+                "columns": 91,
+                "degree": 12,
+                "rank": 47
+              },
+              {
+                "columns": 105,
+                "degree": 13,
+                "rank": 61
+              },
+              {
+                "columns": 120,
+                "degree": 14,
+                "rank": 120
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.00518200000000002,
+          "form": "direct",
+          "generator_degrees": [
+            12,
+            12,
+            512,
+            512,
+            4
+          ],
+          "scalar": 3,
+          "wall_s": 0.0052150419796817005
+        },
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.0017589169729035348,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 6
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 10
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 15
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 21
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0017780000000002794,
+          "form": "invariant",
+          "generator_degrees": [
+            9,
+            8,
+            8,
+            8,
+            8,
+            512,
+            512,
+            2
+          ],
+          "scalar": 3,
+          "wall_s": 0.0018642079958226532
+        },
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.005085958022391424,
+            "lfd": 14,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 1
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 3
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 6
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 10
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 15
+              },
+              {
+                "columns": 55,
+                "degree": 9,
+                "rank": 21
+              },
+              {
+                "columns": 66,
+                "degree": 10,
+                "rank": 28
+              },
+              {
+                "columns": 78,
+                "degree": 11,
+                "rank": 36
+              },
+              {
+                "columns": 91,
+                "degree": 12,
+                "rank": 47
+              },
+              {
+                "columns": 105,
+                "degree": 13,
+                "rank": 61
+              },
+              {
+                "columns": 120,
+                "degree": 14,
+                "rank": 120
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.005163000000000029,
+          "form": "direct",
+          "generator_degrees": [
+            12,
+            12,
+            512,
+            512,
+            4
+          ],
+          "scalar": 4,
+          "wall_s": 0.005193041986785829
+        },
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.0017800829955376685,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 6
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 10
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 15
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 21
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.001799000000000106,
+          "form": "invariant",
+          "generator_degrees": [
+            9,
+            8,
+            8,
+            8,
+            8,
+            512,
+            512,
+            2
+          ],
+          "scalar": 4,
+          "wall_s": 0.0018855829839594662
+        },
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.0050840830081142485,
+            "lfd": 14,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 1
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 3
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 6
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 10
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 15
+              },
+              {
+                "columns": 55,
+                "degree": 9,
+                "rank": 21
+              },
+              {
+                "columns": 66,
+                "degree": 10,
+                "rank": 28
+              },
+              {
+                "columns": 78,
+                "degree": 11,
+                "rank": 36
+              },
+              {
+                "columns": 91,
+                "degree": 12,
+                "rank": 47
+              },
+              {
+                "columns": 105,
+                "degree": 13,
+                "rank": 61
+              },
+              {
+                "columns": 120,
+                "degree": 14,
+                "rank": 120
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0051640000000001685,
+          "form": "direct",
+          "generator_degrees": [
+            12,
+            12,
+            512,
+            512,
+            4
+          ],
+          "scalar": 7,
+          "wall_s": 0.005195541016291827
+        },
+        {
+          "arm": "baseline",
+          "closure": {
+            "elapsed_s": 0.0017839579959399998,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 6
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 10
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 15
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 21
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0018059999999997522,
+          "form": "invariant",
+          "generator_degrees": [
+            9,
+            8,
+            8,
+            8,
+            8,
+            512,
+            512,
+            2
+          ],
+          "scalar": 7,
+          "wall_s": 0.0018945409974548966
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.0010419589816592634,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 2
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 6
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 20
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 28
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0010569999999998636,
+          "form": "direct",
+          "generator_degrees": [
+            4,
+            8,
+            512,
+            512,
+            4
+          ],
+          "scalar": 2,
+          "wall_s": 0.0010741250007413328
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.0003980830078944564,
+            "lfd": 5,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 11
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 21
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.00040499999999976666,
+          "form": "invariant",
+          "generator_degrees": [
+            5,
+            5,
+            4,
+            512,
+            512,
+            2
+          ],
+          "scalar": 2,
+          "wall_s": 0.00042875000508502126
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.0010087499977089465,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 2
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 6
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 20
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 28
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0010220000000003004,
+          "form": "direct",
+          "generator_degrees": [
+            4,
+            8,
+            512,
+            512,
+            4
+          ],
+          "scalar": 3,
+          "wall_s": 0.0010374579869676381
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.00039166701026260853,
+            "lfd": 5,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 11
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 21
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.00039900000000026026,
+          "form": "invariant",
+          "generator_degrees": [
+            5,
+            5,
+            4,
+            512,
+            512,
+            2
+          ],
+          "scalar": 3,
+          "wall_s": 0.00042091700015589595
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.02492745898780413,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 2
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 6
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 20
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 28
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0026720000000000077,
+          "form": "direct",
+          "generator_degrees": [
+            4,
+            8,
+            512,
+            512,
+            4
+          ],
+          "scalar": 4,
+          "wall_s": 0.0250369590066839
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.0013687090249732137,
+            "lfd": 5,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 11
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 21
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0007109999999999062,
+          "form": "invariant",
+          "generator_degrees": [
+            5,
+            5,
+            4,
+            512,
+            512,
+            2
+          ],
+          "scalar": 4,
+          "wall_s": 0.0015526250062976032
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.002989832981256768,
+            "lfd": 8,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 0
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 0
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 2
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 6
+              },
+              {
+                "columns": 28,
+                "degree": 6,
+                "rank": 20
+              },
+              {
+                "columns": 36,
+                "degree": 7,
+                "rank": 28
+              },
+              {
+                "columns": 45,
+                "degree": 8,
+                "rank": 45
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0018220000000002123,
+          "form": "direct",
+          "generator_degrees": [
+            4,
+            8,
+            512,
+            512,
+            4
+          ],
+          "scalar": 7,
+          "wall_s": 0.003056042012758553
+        },
+        {
+          "arm": "colored",
+          "closure": {
+            "elapsed_s": 0.004138958000112325,
+            "lfd": 5,
+            "profile": [
+              {
+                "columns": 1,
+                "degree": 0,
+                "rank": 0
+              },
+              {
+                "columns": 3,
+                "degree": 1,
+                "rank": 0
+              },
+              {
+                "columns": 6,
+                "degree": 2,
+                "rank": 1
+              },
+              {
+                "columns": 10,
+                "degree": 3,
+                "rank": 3
+              },
+              {
+                "columns": 15,
+                "degree": 4,
+                "rank": 11
+              },
+              {
+                "columns": 21,
+                "degree": 5,
+                "rank": 21
+              }
+            ],
+            "status": "exact"
+          },
+          "cpu_s": 0.0007619999999999294,
+          "form": "invariant",
+          "generator_degrees": [
+            5,
+            5,
+            4,
+            512,
+            512,
+            2
+          ],
+          "scalar": 7,
+          "wall_s": 0.0042547919729258865
+        }
+      ]
+    }
+  ],
+  "degree_cap": 18,
+  "protocol": "PROTOCOL_BINARY_20261125.md",
+  "schema": "torsion-symm-binary-degree/v1",
+  "source_sha256": "0f52cbea31e268a135254d15e5d8828ce3ad703180f09d8006199cf39aee9d13",
+  "yield_source_sha256": "b432428a370a6373ca093f269db0d0dcbed8aa969597a60dfa5a8c5461cbb104"
+}
