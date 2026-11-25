@@ -25,14 +25,29 @@ simultaneous-inversion invariants
 
 `s=v+1/v`, `w=u^2/v=x1/x2+x2/x1`.
 
-Then `S3/v=s+z^2*w+z`. The invariant arm consists of the nine coordinate
-equations of `s+z^2*w+z=0`, plus the nonzero guard `v^(2^9-1)=1`.
-Use `inverse(0)=0` only as a total Boolean function for generating the
-coordinate polynomials; the guard excludes that value. Both arms use the
-identical six Boolean variables, field, curve, factor base and target.
+Then `S3/v=s+z^2*w+z`. Use `inverse(0)=0` only as a total Boolean function
+for generating coordinate polynomials. Both arms use the identical six
+Boolean variables, field, curve, factor base and target.
 Check the identity for every pair of the eight base elements and verify
 the two equation systems have exactly the same 64-point Boolean truth table
 before computing degree.
+
+## Pre-degree boundary amendment
+
+The first finite truth-table preflight found two direct solutions at `v=0`
+for the planted target: `(x1,x2)=(0,302),(302,0)`. The proposed nonzero guard
+would delete these valid frozen-base decompositions, so it cannot be used for
+the matched comparison. This was discovered before computing any LFD.
+
+Set `delta=1+v^(2^9-1)`, which is 1 at `v=0` and 0 otherwise. The corrected
+invariant presentation uses the nine coordinate equations of
+
+`H=delta*S3+(1+delta)*(s+z^2*w+z)=0`.
+
+It uses the invariant quotient equation for `v!=0` and the original Semaev
+equation on the boundary `v=0`. This is a patched invariant presentation,
+not a globally torsion-invariant coordinate system on the frozen affine
+base. The truth-table identity and exact solution-set check remain required.
 
 ## Measurements and decision gates
 
