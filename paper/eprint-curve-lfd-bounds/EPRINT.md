@@ -15,7 +15,7 @@ author must agree.
 | Title | Last fall degrees of elliptic curve summation systems: machine-checked bounds and exact values |
 | Authors (in order, UTF-8) | Adam Buran <adam@isogenylabs.io> |
 | Affiliation / contact (on page 1) | adam@isogenylabs.io (a contact address; page 1 has no affiliation line, which the archive does not require when a contact address is given) |
-| Abstract | paste `eprint-abstract.txt` (1796 chars; `$…$` math renders with MathJax) |
+| Abstract | paste `eprint-abstract.txt` (1908 chars; `$…$` math renders with MathJax) |
 | Category | Attacks and cryptanalysis |
 | Keywords | last fall degree, index calculus, summation polynomials, elliptic curve discrete logarithm, Koblitz curves, Groebner bases, Lean formalization |
 | Publication information | Published nowhere else (the author confirms; this sheet does not attest it) |
@@ -172,11 +172,20 @@ TeX engine on the `PATH`; before the edit, the same build reproduced the
 committed PDF of 20 November byte for byte. Figures are byte-identical. The
 digests below are those of this revision.
 
+**Revision of 24 November 2026** (PR #58): the abstract gains the
+owner-approved clause "and a two-summand slice extends the unbounded growth
+to unit-ideal instances with any fixed number of summands" (Corollary
+`cor:growthm`, mapped in `../proof-status.json`, `abstract_claims`);
+`eprint-abstract.txt` is resynced (1908 characters; previously 1796). No
+other source change; 66 pages; rebuilt with Tectonic 0.15.0 by
+`python3 scripts/build_ic_curve_paper.py`. The digests below are those of
+this revision.
+
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `ed3e7f4fadda5a0e16f1fc096e1cc6d77c459df2a33a662ff5ae85c5d8ec576c` |
-| `paper/curve-lfd-bounds.tex` | `b03d3dff4737fed224951f838d471b7c062d0ff7e930c0dcb6be1fc6a028abe5` |
-| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `9e0d3d96f5b162a70c137cd82a854eaff59f2c54e4c788d16cadc8d814549151` |
+| `paper/curve-lfd-bounds.pdf` | `21b00f055d5c46b639d997e1bd59eb95f65477348502e362b356f0e4fa368f82` |
+| `paper/curve-lfd-bounds.tex` | `f9abd5a423394756dc566d27f239310e2b0c6f969635d23c1c34d652beb8d634` |
+| `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `9264a95a970d8cbc4ae87c46dadc09876db04c9affac6a52706bab7677c6d3da` |
 
 The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0
 (conda-forge; bundle `tlextras-2022.0r0`) by

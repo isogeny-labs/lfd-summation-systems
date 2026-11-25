@@ -15,7 +15,10 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-- [ ] Solve the ECC2K-130 isogeny-class Jacobian question: explicit principally polarized Deligne module constructed (degree 263*ell, endomorphism-order index ell); every principal target requires odd ell-valuation in the transfer degree; all hyperelliptic candidates excluded; nonhyperelliptic Jacobian verdict unresolved (Codex, started 2026-11-24, branch research/ecc2k130-integral-symmetry-20261124, PR #57; in progress: recover the elliptic-map search with independent reduction and exact certificates, see docs/ecc2k130-explicit-ppav.md)
+- [x] Matched torsion-symmetrized summation polynomial screen on frozen public fixtures (Codex, started 2026-11-25, branch research/torsion-symm-screen-20261125, PR #60)
+- [x] ECC2K-130 window question, part 3: rigorously exclude the cyclic/abelian-cover construction for A via the sqrt(-7) vs Q(zeta_131) field obstruction (cover order must be divisible by 917, genus >=458 >> window); general Jacobian case stays open (Claude, started 2026-11-24, branch claude/index-calculus-root-finding-e95kd6)
+- [x] ECC2K-130 window question, part 2: test the Weil factor A against the computable Jacobian necessary conditions (virtual point counts and Howe-Lauter closed-place counts from P_A); PARI/GP now available in-container (Claude, started 2026-11-24, branch claude/index-calculus-root-finding-e95kd6, PR #53)
+- [x] Paper: add the owner-approved all-m growth clause to the abstract, resync eprint-abstract.txt and the abstract claims, rebuild the PDF for upload (Claude, started 2026-11-24, branch claude/kind-volta-2ddkid, PR #58)
 - [x] ECC2K-130 window question: compute the exact Frobenius char polynomial of the 130-dim Weil-restriction factor A, test whether it splits, and establish its CM field / p-rank / simplicity directly (not by citation), as the first rigorous step toward the is-A-a-Jacobian question (Claude, started 2026-11-23, branch claude/index-calculus-root-finding-e95kd6, PR #51)
 - [x] Paper round (LFD/FFD manuscript): growth for every number of summands through a two-summand slice (Corollary cor:growthm), independent checks, GrowthSlice.lean, cost-model null; PR #49 merged the experiments only, the manuscript, Lean and CI parts follow in the next PR (Claude, started 2026-11-23, branch claude/kind-volta-2ddkid, PR #49)
 - [x] Survey transfer/cover routes (GHS Weil descent, covers, Jacobian transfers) that could change the group for ECC2K-130 (prime n=131) and pick one measurable next step, after PR #44 ruled out every LRF-internal lever (Claude, started 2026-11-23, branch claude/index-calculus-root-finding-e95kd6, PR #47)
@@ -55,18 +58,6 @@ Obtain a measured improvement in relation yield per linear system for the linear
 - [ ] <task> (<runtime>, started YYYY-MM-DD, branch <branch>, PR #<n>) -->
 
 ## Blocked / questions for the owner
-
-- PR #57 (mathematical gap; no owner decision requested): an explicit principally polarized
-  Deligne module is now constructed and replayable in construct_ppav.py / explicit_ppav.json.
-  The quotient lattice, positive-unit coefficients and unimodular form are supplied; this
-  completes the previously listed module-construction successor. It does not supply a curve.
-  The remaining obligation is a characteristic-two Jacobian realization or exclusion, first
-  for this explicit candidate and ultimately for every polarized member of the class.
-  ThetAV's documented genus-2 conversion and the numerical complex Fay-trisecant method do not
-  provide such a certificate for this genus-130 special fiber. No valid test has been
-  implemented here, and excluding this one candidate would not exclude the full class.
-  The draft remains open with the original objective unticked. See
-  docs/ecc2k130-explicit-ppav.md and docs/ecc2k130-isogeny-class-obstruction.md.
 
 - PR #46: before submitting to ePrint, decide whether to port the sharper growth constants proved in Lean in ml-cryptanalysis PR #356 (LFD >= floor((k+1)/14)+1 from k = 27) into this paper, or leave them for a revision.
 
