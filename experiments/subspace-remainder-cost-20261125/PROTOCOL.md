@@ -40,6 +40,12 @@ record CPU model, OS, compiler, Python and solver versions before the first
 timing. The independent generator uses Python field arithmetic, and the C
 factor-base table must match it exactly. The x86 Rosetta compilation was an
 untimed setup diagnostic and is excluded from comparison receipts.
+Compile the unchanged C source before arm timing as common software setup;
+record its hash and compiler. Each timed arm constructs its own `Solver`
+tables. Deterministic fixture/target generation is timed once per cell,
+reported separately, and added equally to each arm's total. Worker-process
+startup is excluded equally from arm timers; each arm runs in a fresh worker
+so its peak RSS is attributable to that arm.
 
 ## Arms and correctness
 
