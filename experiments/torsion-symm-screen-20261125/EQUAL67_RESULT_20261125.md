@@ -1,8 +1,10 @@
 # Equal-size Koblitz torsion-frame screen — 2026-11-25
 
-**Decision:** this frozen equal-size `x`/`u` comparison does not pass either
-part of the proposed joint gate. The symmetrized base admits fewer of the
-same 24 targets, and exact iterated LFD is equal on the first four targets.
+**Decision:** this frozen equal-size `x`/`u` comparison produces a strict
+factor-base equation-rank gain, but does not pass the joint gate. The
+symmetrized base admits fewer of the same 24 targets, while its checked
+equations have rank 12 rather than 9 on the 60 factor-base columns. Exact
+iterated LFD is equal on the first four targets.
 The earlier binary Edwards colored-base screen, frozen n=9 Boolean screen,
 ECC2K-130 recipe screen, and prime-field subgroup question remain separate.
 
@@ -36,21 +38,32 @@ occurred in this panel.
 
 Both arms attempted all `133²=17,689` ordered signed base pairs and retained
 all 24 target outcomes, including failures. Relation vectors are deduplicated
-modulo 211; the independent verifier re-enumerated unordered pairs, checked
-every saved vector against discrete logs of the cofactor-projected points,
-and recomputed rank modulo 211.
+modulo 211; the independent verifier re-enumerated unordered pairs and checked
+every saved vector against discrete logs of the cofactor-projected points.
+The raw store's `final_rank` includes a separate formal target column for
+each target, giving rank 12 in both arms. For factor-base linear algebra,
+the known cofactor-projected target multiples belong on the right-hand side.
+The independent rank audit removes the formal target columns, checks the
+known right-hand side, and ranks the 60 base columns. Sage independently
+returned ranks 9 and 12 over `GF(211)`. The initial report at commit
+`097ac77` compared only the formal-target-column ranks and therefore
+understated the candidate's equation-rank yield; the raw rows were not
+changed by this correction.
 
-| Arm | Admitted targets / 24 | Failed targets | Distinct checked rows | Final rank |
-|:--|--:|--:|--:|--:|
-| Direct `x` | 12 | 12 | 12 | 12 |
-| Symmetrized `u` | 6 | 18 | 12 | 12 |
+| Arm | Admitted targets / 24 | Failed targets | Distinct checked rows | Base-column rank | Formal-target-column rank |
+|:--|--:|--:|--:|--:|--:|
+| Direct `x` | 12 | 12 | 12 | 9 | 12 |
+| Symmetrized `u` | 6 | 18 | 12 | **12** | 12 |
 
 The direct arm admits scalars `1,5,7,10,13,14,15,16,19,21,23,24`;
 the symmetrized arm admits `5,7,8,12,17,18`. Each arm has 24 checked
 ordered pairs in total, but the candidate concentrates two independent rows
-on each of six targets. Neither admitted-target count nor rank increases.
-These are exact finite-group counts for the frozen target stream, not a
-relation probability estimate on larger fields.
+on each of six targets. Its base-column rank rises by 3, satisfying the
+frozen **rank-or-admission yield criterion**, despite six fewer admitted
+targets. The one-column right-hand-side augmented rank equals the base-column
+rank in both arms; every row is consistent with independently checked
+subgroup logs. These are exact finite-group counts for the frozen target
+stream, not a relation probability estimate on larger fields.
 
 ## Exact LFD on the frozen degree panel
 
@@ -92,8 +105,9 @@ screen, not an end-to-end logarithm cost or an arm-level speed ratio. The
 first degree-run errors are retained separately.
 
 A complete factor-base linear solve, descent and cold same-target rho were
-not run. The candidate already fails the strict yield and LFD gates, so the
-saved component timings do not support a favorable total-cost claim. This
+not run. The candidate passes the rank-yield criterion but fails the strict
+LFD reduction criterion, so the saved component timings do not support a
+favorable total-cost claim. This
 panel does not imply a general obstruction for other torsion-equivariant
 bases or for the prime-field subgroup systems.
 
@@ -105,6 +119,9 @@ bases or for the prime-field subgroup systems.
 - `equal67-verification.json`: curve order, torsion action, subgroup-log row
   checks, rank, and all 24 symmetrized root counts; SHA-256
   `80bc68d15e2fbce24e4578cdc04097607480e581cef79d6735791980e10855c8`.
+- `equal67-rank-audit.json`: base-column and right-hand-side augmented rank
+  through every target; SHA-256
+  `b9fb751891c5d88487f213a18f1f1b7a544ffb75a809bceeb7a394f703e2b5b7`.
 - `equal67-degree.jsonl`: retained macOS limit errors; SHA-256
   `7a8a679b95d3cae710cae369ecf519f462f8e1304e79780ac5e8f7706e303fad`.
 - `equal67-degree-retry.jsonl`: exact LFD profiles and per-cell wall/CPU;
@@ -113,6 +130,7 @@ bases or for the prime-field subgroup systems.
 ```sh
 python3 experiments/torsion-symm-screen-20261125/equal67_koblitz.py
 python3 experiments/torsion-symm-screen-20261125/verify_equal67.py
+python3 experiments/torsion-symm-screen-20261125/equal67_rank_audit.py
 python3 experiments/torsion-symm-screen-20261125/equal67_degree.py \
   --store experiments/torsion-symm-screen-20261125/equal67-degree-retry.jsonl
 ```
