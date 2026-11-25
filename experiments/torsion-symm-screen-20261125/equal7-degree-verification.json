@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "direct": {
+      "6": {
+        "contains_one": false,
+        "normal_form_columns": 466,
+        "rank_history": [
+          9,
+          21,
+          40,
+          45,
+          46
+        ]
+      },
+      "7": {
+        "contains_one": true,
+        "normal_form_columns": 502,
+        "rank_history": [
+          9,
+          90,
+          403
+        ]
+      }
+    },
+    "symmetrized": {
+      "3": {
+        "contains_one": false,
+        "normal_form_columns": 64,
+        "rank_history": [
+          0
+        ]
+      },
+      "4": {
+        "contains_one": true,
+        "normal_form_columns": 99,
+        "rank_history": [
+          9,
+          27,
+          84
+        ]
+      }
+    }
+  },
+  "schema": "torsion-symm-equal7-independent-degree/v1",
+  "script_sha256": "bddc98887c1f03c609251d1dd8c09aaf7c3d8dd85b9c81edd94d82551c3be6c5",
+  "source_sha256": "2c22a9d138a0ea5902dbaddeed2b90156f990a8e62f04fac1c906c2ed124aa58",
+  "target_scalar": 3
+}
