@@ -32,6 +32,13 @@ cofactor-project the factor-base points, identify P and -P with opposite
 signs, omit columns for [h]P=O, and form rows over F_q with known right-hand
 side -h(u+113v). Report the resulting matrix rank, including zero-rank cases.
 
+Execution environment gate: the repository C kernel uses x86 intrinsics and
+cannot load into the local ARM Python process. Run every timed arm on the
+same native x86_64 Linux host or pinned x86_64 container; record CPU model,
+OS, compiler, Python, solver versions, and container digest where applicable
+before the first timing. Local Rosetta compilation is an untimed diagnostic,
+not a comparable benchmark receipt.
+
 ## Arms and correctness
 
 1. Native LRF C kernel, including its table setup, linear solve, all
