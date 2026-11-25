@@ -32,6 +32,8 @@ def main():
         # archived bytes, while the regenerated inputs below still exercise
         # the current code separately.
         frozen=out/'source_snapshot'/path
+        if not frozen.is_file():
+            frozen=out/'frozen-source'/path
         assert frozen.is_file(),path
         assert hashlib.sha256(frozen.read_bytes()).hexdigest()==digest,path
         historical_sources.append(path)
