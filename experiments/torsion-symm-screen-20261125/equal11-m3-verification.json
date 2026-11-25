@@ -1,0 +1,52 @@
+{
+  "arms": {
+    "direct": {
+      "admitted_targets": 24,
+      "base_rank": 10,
+      "checked_ordered_triples": 400,
+      "distinct_rows": 67,
+      "subgroup_log_rows_checked": 67
+    },
+    "symmetrized": {
+      "admitted_targets": 16,
+      "base_rank": 10,
+      "checked_ordered_triples": 348,
+      "distinct_rows": 67,
+      "subgroup_log_rows_checked": 67
+    }
+  },
+  "curve_order": 518,
+  "first_four_root_lifts": [
+    {
+      "direct_group_lifts": 12,
+      "direct_roots": 12,
+      "scalar": 1,
+      "symmetrized_group_lifts": 0,
+      "symmetrized_roots": 0
+    },
+    {
+      "direct_group_lifts": 9,
+      "direct_roots": 9,
+      "scalar": 2,
+      "symmetrized_group_lifts": 0,
+      "symmetrized_roots": 0
+    },
+    {
+      "direct_group_lifts": 46,
+      "direct_roots": 61,
+      "scalar": 3,
+      "symmetrized_group_lifts": 9,
+      "symmetrized_roots": 9
+    },
+    {
+      "direct_group_lifts": 15,
+      "direct_roots": 15,
+      "scalar": 4,
+      "symmetrized_group_lifts": 0,
+      "symmetrized_roots": 0
+    }
+  ],
+  "schema": "torsion-symm-equal11-m3-verification/v1",
+  "script_sha256": "7fb2ba2a920989599de8cbb078860b8b8f10221f60956cf6e8232f0a37a490d5",
+  "source_sha256": "c81944225f8fb2a4ece9030875942cc9fd01dd45ecf8ba6094aa9580ef60b8a2"
+}

@@ -66,3 +66,12 @@ gate. The result includes complete raw rows, exact
 closure profiles, a separately retained environment-error attempt, and an
 independent group-law/subgroup-log verifier. It is separate from the
 fixed-base ECC2K-130 recipe and the prime-field subgroup systems.
+
+The [frozen three-summand equal-11 follow-up](PROTOCOL_EQUAL11_M3_20261125.md)
+tests the native symmetrized `S4`, where the published polynomial-degree
+advantage is sharper. Its [checked result](EQUAL11_M3_RESULT_20261125.md)
+reduces exact Boolean LFD from 7 to 5 on the first four targets, including
+one positive target in both arms. Both bases reach factor-base rank 10, and
+the symmetrized base admits 16 targets versus 24 for direct. Thus the
+degree benefit and rank-yield benefit observed in the two separate panels
+have not coincided on one frozen workload.
