@@ -51,3 +51,34 @@ python3 experiments/torsion-symm-screen-20261125/bench_enumeration.py
 ```
 
 `results.json` binds the screen and group-law source hashes. The timing scripts regenerate their JSON records; timings naturally vary by host and load.
+
+## Equal-size binary Koblitz follow-up
+
+The [frozen equal-67 Koblitz panel](PROTOCOL_EQUAL67_20261125.md) compares
+distinct `x` and torsion-invariant `u` bases of equal rational size on the
+same 24 targets. Its [checked result](EQUAL67_RESULT_20261125.md) finds
+12 admitted targets for the direct base and 6 for the symmetrized base.
+On the 60 factor-base columns, the candidate's checked equation rank is
+12 versus 9 for the control, so it passes the frozen rank-yield criterion
+despite lower target admission. Exact Boolean LFD is 3 in both arms on each
+of the first four targets, so it does not pass the joint yield-and-degree
+gate. The result includes complete raw rows, exact
+closure profiles, a separately retained environment-error attempt, and an
+independent group-law/subgroup-log verifier. It is separate from the
+fixed-base ECC2K-130 recipe and the prime-field subgroup systems.
+
+The [frozen three-summand equal-11 follow-up](PROTOCOL_EQUAL11_M3_20261125.md)
+tests the native symmetrized `S4`, where the published polynomial-degree
+advantage is sharper. Its [checked result](EQUAL11_M3_RESULT_20261125.md)
+reduces exact Boolean LFD from 7 to 5 on the first four targets, including
+one positive target in both arms. Both bases reach factor-base rank 10, and
+the symmetrized base admits 16 targets versus 24 for direct. Thus the
+degree benefit and rank-yield benefit observed in the two separate panels
+have not coincided on one frozen workload.
+
+A [rank-unsaturated equal-7 exploratory follow-up](EQUAL7_M3_RESULT_20261125.md)
+retains the exact `S4` LFD reduction, 7 to 4 on a matched failed target.
+At the same six-column base size, both arms reach rank 6 and the
+symmetrized base admits six targets versus twelve for direct. Its
+predeclared base-size-only selection and all failed attempts are retained;
+this additional panel also fails the joint gate.

@@ -1,0 +1,135 @@
+{
+  "input_sha256": "e6b72dcdb0edf279708773a9e81ff9f71427e854b45d70e4003c0ade8611ef58",
+  "records": [
+    {
+      "case_id": "1bac99e1e73e08b00999",
+      "certificate_degree": 2,
+      "dense_closure_ranks": [
+        0,
+        1,
+        22
+      ],
+      "evaluation_rank_below_certificate": null,
+      "form": "direct",
+      "unit_by_degree": [
+        false,
+        false,
+        true
+      ],
+      "verified_exact_lfd": 2
+    },
+    {
+      "case_id": "1bac99e1e73e08b00999",
+      "certificate_degree": 6,
+      "dense_closure_ranks": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        61,
+        64
+      ],
+      "evaluation_rank_below_certificate": null,
+      "form": "patched_invariant",
+      "unit_by_degree": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "verified_exact_lfd": 6
+    },
+    {
+      "case_id": "a5eb99758876c7f2fee6",
+      "certificate_degree": 2,
+      "dense_closure_ranks": [
+        0,
+        2,
+        22
+      ],
+      "evaluation_rank_below_certificate": null,
+      "form": "direct",
+      "unit_by_degree": [
+        false,
+        false,
+        true
+      ],
+      "verified_exact_lfd": 2
+    },
+    {
+      "case_id": "a5eb99758876c7f2fee6",
+      "certificate_degree": 6,
+      "dense_closure_ranks": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        61,
+        64
+      ],
+      "evaluation_rank_below_certificate": null,
+      "form": "patched_invariant",
+      "unit_by_degree": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "verified_exact_lfd": 6
+    },
+    {
+      "case_id": "7c65f50a88d2c5e980b2",
+      "certificate_degree": 3,
+      "dense_closure_ranks": [
+        0,
+        1,
+        8,
+        30
+      ],
+      "evaluation_rank_below_certificate": 12,
+      "form": "direct",
+      "unit_by_degree": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "verified_exact_lfd": 3
+    },
+    {
+      "case_id": "7c65f50a88d2c5e980b2",
+      "certificate_degree": 6,
+      "dense_closure_ranks": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        41,
+        52
+      ],
+      "evaluation_rank_below_certificate": 12,
+      "form": "patched_invariant",
+      "unit_by_degree": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "verified_exact_lfd": 6
+    }
+  ],
+  "schema": "torsion-symm-frozen-boolean-independent-closure/v1",
+  "source_sha256": "63db1c8edddeffc6aa6b89d9d928450b9512ef2f1098aa143053a3e91c86c790"
+}

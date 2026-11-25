@@ -1,0 +1,89 @@
+{
+  "cases": [
+    {
+      "arm": "baseline",
+      "at_contains_one": true,
+      "at_rank": 120,
+      "below_contains_one": false,
+      "below_rank": 61,
+      "degree": 14,
+      "form": "direct",
+      "groebner_unit": true,
+      "target_scalar": 2
+    },
+    {
+      "arm": "baseline",
+      "at_contains_one": true,
+      "at_rank": 45,
+      "below_contains_one": false,
+      "below_rank": 21,
+      "degree": 8,
+      "form": "invariant",
+      "groebner_unit": true,
+      "target_scalar": 2
+    },
+    {
+      "arm": "colored",
+      "at_contains_one": true,
+      "at_rank": 45,
+      "below_contains_one": false,
+      "below_rank": 28,
+      "degree": 8,
+      "form": "direct",
+      "groebner_unit": true,
+      "target_scalar": 2
+    },
+    {
+      "arm": "colored",
+      "at_contains_one": true,
+      "at_rank": 21,
+      "below_contains_one": false,
+      "below_rank": 11,
+      "degree": 5,
+      "form": "invariant",
+      "groebner_unit": true,
+      "target_scalar": 2
+    }
+  ],
+  "rank_checks": [
+    {
+      "arm": "baseline",
+      "n": 5,
+      "sage_rank": 1,
+      "stored_rank": 1
+    },
+    {
+      "arm": "colored",
+      "n": 5,
+      "sage_rank": 0,
+      "stored_rank": 0
+    },
+    {
+      "arm": "baseline",
+      "n": 7,
+      "sage_rank": 1,
+      "stored_rank": 1
+    },
+    {
+      "arm": "colored",
+      "n": 7,
+      "sage_rank": 0,
+      "stored_rank": 0
+    },
+    {
+      "arm": "baseline",
+      "n": 9,
+      "sage_rank": 6,
+      "stored_rank": 6
+    },
+    {
+      "arm": "colored",
+      "n": 9,
+      "sage_rank": 5,
+      "stored_rank": 5
+    }
+  ],
+  "schema": "torsion-symm-binary-sage-verification/v1",
+  "source_sha256": "e1fb809b1bb38ed37f150186c1992c35495efafbe64dc73c72f5f7f02f8ff0d4",
+  "yield_json_sha256": "d8152ec376bb0a39b6d2e63a59761ef23863007e5bcb46dad5c80ceb17b79381"
+}
