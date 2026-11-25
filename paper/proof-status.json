@@ -138,8 +138,13 @@
         "claim": "for the direct presentation with m >= 3 summands, LFD >= m min(k,m-1)+1 under explicit nondegeneracy conditions",
         "label": "written proof with a kernel-checked core",
         "source": "Theorem thm:allm; CarryAllM.lfd_eq_full, lfd_ge_onset, m3_onset; written steps listed under written_only"
+      },
+      {
+        "claim": "a two-summand slice extends the unbounded growth (LFD >= floor((k-10)/14)+1 for unit ideals) to unit-ideal direct presentations with any fixed number m of summands",
+        "label": "written proof; reduction kernel-checked with the splitting property as a hypothesis",
+        "source": "Corollary cor:growthm; GrowthSlice.slice_not_one, not_one_of_fei_inputs, slice_lfd_gt; SummandGrowthTransfer.map_closure_budget; the membership s in p is written, checked numerically in experiments/higher-summand-identities/"
       }
     ],
-    "abstract_claims_checked": "2026-11-22, against the abstract of paper/curve-lfd-bounds.tex (sha256 419f70bd...a9e2) and the theorem status paragraphs of the manuscript"
+    "abstract_claims_checked": "2026-11-24, against the abstract of paper/curve-lfd-bounds.tex (sha256 f9abd5a4...d634) and the theorem status paragraphs of the manuscript"
   }
 }
