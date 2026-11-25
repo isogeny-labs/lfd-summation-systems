@@ -84,7 +84,12 @@ for the direct arm and 0.1032 / 0.1030 for the symmetrized arm. The four
 bounded closure calls took 0.3723 wall / 0.3532 child-CPU seconds for direct
 and 0.3550 / 0.3411 for symmetrized. These timings charge failed pair
 attempts and setup, but were collected on a shared host and are component
-measurements. The first degree-run errors are retained separately.
+measurements. Summing the saved preflight, both equation/root checks, both
+24-target relation inventories and all eight successful closure calls gives
+1.7458 wall and 1.7110 process/child-CPU seconds for the **combined panel**;
+the source records overlap no timed phases. This is an audit total for the
+screen, not an end-to-end logarithm cost or an arm-level speed ratio. The
+first degree-run errors are retained separately.
 
 A complete factor-base linear solve, descent and cold same-target rho were
 not run. The candidate already fails the strict yield and LFD gates, so the
