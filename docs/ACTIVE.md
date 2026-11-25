@@ -15,6 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
+- [ ] Test exact subspace-remainder solving against native LRF on matched binary relation systems (Codex, started 2026-11-25, branch research/remainder-cost-20261125)
 - [x] Screen next summation-polynomial relation finder for a sound construction and matched full-cost advantage (Codex, started 2026-11-25, branch research/next-summation-20261125, PR #63)
 - [x] Find the matched torsion-symmetrized relation-finding crossover or rule it out in the frozen tested range (Codex, started 2026-11-25, branch research/torsion-crossover-20261125, PR #61)
 - [x] Matched torsion-symmetrized summation polynomial screen on frozen public fixtures (Codex, started 2026-11-25, branch research/torsion-symm-screen-20261125, PR #60)
