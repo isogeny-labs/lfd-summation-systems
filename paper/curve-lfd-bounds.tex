@@ -1281,6 +1281,43 @@ its interval and never as a value.
 
 \SWEEPRESULTS
 
+\paragraph{Joint finite-grid audit.}
+We audited homogeneous first fall and exact last fall degrees against the
+frozen manifests. Table~\ref{tab:ffdlfdgrid} counts field/depth cells;
+the sweep count is a cell-assignment count. In the binary quotient, first
+fall is taken modulo the square-zero Koszul/Frobenius syzygies. A constant
+input has no first fall degree under this convention. The fixed
+six-coordinate $S_3$ panel uses the same homogeneous convention; its first
+fall degree differs from the previously recorded affine first strict fall
+on 218 targets over $\F_{2^{10}}$. These are per-system degrees.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}lrrcc@{}}
+\toprule
+Frozen track & Cells & Systems & $\ffd$ & $\lfd$\\
+\midrule
+Curve sweep, prime and binary & 21 & $3{,}015^{*}$ & $1$--$4^{\dagger}$ & $0$--$5$\\
+Fixed six-coordinate $S_3$, binary & 6 & $1{,}977$ & $2$--$3$ & $2$--$4$\\
+Split prime protocol & 17 & $26$ & $4$ & $6$--$8$\\
+\bottomrule
+\end{tabular}
+\caption{Certified finite FFD/LFD grid. All LFD intervals are singletons.
+$^{*}$The sweep has $3{,}005$ distinct systems; ten occur in both a binary
+and a Koblitz cell. $^{\dagger}$FFD is undefined for 64 distinct
+constant-input systems (65 cell assignments) under the stated convention.
+The split track includes two $m=5$, $k=3$ instances whose degree-$8$
+upper bounds use source-bound exact F4 trace replay. Per-cell histograms,
+input hashes, and audit receipts are in
+\code{experiments/ffd-lfd-grid-20261124/}.}
+\label{tab:ffdlfdgrid}
+\end{table}
+
+This finite grid is distinct from the depth-$14$ and depth-$18$
+publication continuations. Their three frozen prime inputs have exact
+homogeneous FFD $4$; the depth-$14$ input-basis/lift replay and the
+depth-$18$ LFD breakpoint remain open (Section~\ref{sec:limitations}).
+
 \paragraph{Observations.}
 All statements here concern the seeded grids.
 
@@ -1997,10 +2034,12 @@ cases at $k=2$.
 The split presentation generalizes to $m$ summands: $m$ chains, $m-2$ free
 auxiliary abscissae $u_j$ of the partial sums, and the left chain
 $S_3(x_1,x_2,u_1)$, $S_3(u_j,x_{j+2},u_{j+1})$, $S_3(u_{m-2},x_m,t)$. We
-computed its exact LFD on unit instances with the batched closure engine of
+computed its LFD on unit instances with the batched closure engine of
 the three-summand sweep, on a monomial space with several free auxiliaries
 (Table~\ref{tab:splitm}). An entry is the least $D$ with $1\in V_D$, every
-smaller closure verified closed without $1$. The engine was checked against
+smaller closure verified closed without $1$. At $(m,k)=(5,3)$, the
+degree-$7$ exclusions were independently replayed and degree-$8$ unit
+witnesses were replayed by the source-bound F4 trace path. The engine was checked against
 twelve recorded three-summand cases (equal generators, value and quotient
 rank at every degree) and against five planted instances, where no closure
 through degree $7$ contains $1$. The instance rule, the predicted values and
@@ -2014,7 +2053,7 @@ $m$ & $k=2$ & $k=3$ & $k=4$ & $k=5$ & $k=6$\\
 \midrule
 $3$ & $5$ \ ($63$) & $6$ \ ($51$) & $6$ \ ($27$) & $7$ \ ($2$) & $\ge7^{\dagger}$\\
 $4$ & $6$ \ ($6$) & $7$ \ ($6$) & $7$ \ ($2$) & $\ge7^{\dagger}$ & \\
-$5$ & $6$ \ ($6$) & $\ge8$ \ ($1$) & $\ge8^{\dagger}$ & & \\
+$5$ & $6$ \ ($6$) & $8$ \ ($2$) & $\ge8^{\dagger}$ & & \\
 $6$ & $7$ \ ($2$) & & & & \\
 \bottomrule
 \end{tabular}
@@ -2022,9 +2061,9 @@ $6$ & $7$ \ ($2$) & & & & \\
 and $m-2$ free auxiliaries on unit instances, with the number of instances
 in parentheses; every instance of a cell has the value shown. The
 three-summand cells at $k\le4$ are those of the seeded sweep. At $m=5$,
-$k=3$ the closures of degree $3$ to $7$ are verified without $1$ on one
-instance and the degree-$8$ closure ($226{,}325$ columns) did not finish, so
-the entry is a lower bound. Entries marked $\dagger$ are readings of the
+$k=3$ two primes have independently replayed degree-$7$ exclusions and
+source-bound exact F4 trace replays placing $1$ in degree $8$; the original
+batched degree-$8$ closures did not finish. Entries marked $\dagger$ are readings of the
 second instrument only (closures stopped by a resource limit), not computed
 here.}
 \label{tab:splitm}
@@ -2039,8 +2078,8 @@ certified value in every cell of Table~\ref{tab:splitm} with an exact entry,
 on different primes, curves and bases; where both record them, the closure
 dimensions agree as well (at $m=4$, $k=4$: $38$, $530$ and $3672$ at
 degrees $4$, $5$ and $6$). At $m=5$, $k=3$ it reads $8$, from a closure
-without $1$ through degree $7$ and the degree at which F4 ends; our lower
-bound $8$ agrees with it and the upper bound is not certified here.
+without $1$ through degree $7$ and the degree at which F4 ends. Its
+reading agrees with the exact value on our two instances over other primes.
 
 % Later single-engine readings: isogeny-labs/crypto at commit 89a2a70, second-engine/records/hky_pod_runs_20261117/
 % RESULTS.md and LAUNCH.md ("m-sweep"), records results/prog_m6-T2.jsonl (m = 6, k = 2, 3),
@@ -2057,7 +2096,7 @@ closure ended without $1$ and the next did not finish, which bounds the LFD
 only if the ideal is the unit ideal. The reading $7$ at $(6,2)$ is the
 certified value, the readings are nondecreasing in $m$ at $k=2$ ($6$, $6$,
 $7$, $8$, $8$ for $m=4,\ldots,8$), and the summary also records value $8$ at
-$(5,3)$ ($226{,}325$ columns, consistent with our lower bound on another
+$(5,3)$ ($226{,}325$ columns, consistent with our exact values on other
 instance) and agreement on the calibration cells $(4,2)$, $(4,3)$, $(5,2)$,
 for which no per-closure record is committed.
 
@@ -3431,11 +3470,11 @@ only two term orders were computed, and five binary systems with more
 solutions than the frozen cap of $3000$ were computed after the protocol was
 frozen.
 
-\paragraph{Depth.} Beyond $k=14$ no exact value is known: our engines
-computed only degree-$5$ closures there, no degree-$7$ closure or lift was
-computed, and no closure was attempted at $k\ge17$. These depths, including
-$k=18$, the first at which Conjecture~\ref{conj:law} predicts the value $8$,
-are beyond the closure methods used here. The degree-$6$ space has
+\paragraph{Depth.} Beyond $k=14$ no exact value is known. The frozen
+$k=18$ instance has exact homogeneous FFD $4$, but the capped degree-$7$
+and degree-$8$ continuation prefixes are not closed and do not decide its
+LFD. The predicted value $8$ at $k=18$ remains a conjectural breakpoint.
+The degree-$6$ space has
 $|M_{\le6}|=\sum_{w\le6}\binom{2k}{w}=768{,}212$, $1{,}149{,}017$,
 $1{,}676{,}116$, $2{,}391{,}496$ and $4{,}598{,}479$ columns at $k=15$,
 $16$, $17$, $18$ and $20$, against $499{,}178$ at $k=14$, and at $k=18$ the
@@ -3469,7 +3508,11 @@ containing closure is accepted on the engine's arithmetic without a separate
 verification pass. The certified bound $\lfd\ge8$ at $k=6$ for three
 summands is one instance; the value $8$ on five instances, $\lfd\ge8$ at
 $k=7$ and the four-summand values at $k=4,5$ on U1, U2 come from one engine
-on one host, without certificates or replay. Theorem~\ref{thm:allm} is
+on one host, without certificates or replay.
+The two $(5,3)$ unit instances in Table~\ref{tab:splitm} have independently
+replayed degree-$7$ exclusions and source-bound degree-$8$ F4 trace replays;
+the latter share an implementation with their producer.
+Theorem~\ref{thm:allm} is
 kernel-checked only for an arbitrary generator and, in part~(2), for $m=3$;
 for $m\ge4$ the degree bound on $S_{m+1}$, the grid step and the genericity
 statement are written proofs, reviewed by an AI session and by no human
@@ -3559,7 +3602,9 @@ explanations.
  instance by comparing the canonical basis hashes of the two engines'
  degree-$6$ spaces; certified degree-$6$ closures at $k\ge15$ and the
  degree-$7$ step there, which decides $\lfd=7$ at $k=15$ and $16$; a
- certified degree-$8$ closure of the split presentation at $m=5$, $k=3$; a
+ independently written check of the degree-$8$ F4 unit witnesses at
+ $m=5$, $k=3$; the depth-$18$ degree-$7$ exclusion and degree-$8$ upper
+ bound; a
  second engine of this paper for $D=6$ at $k=13$; the three-summand
  degree-$8$ closure at $k=7$ ($401{,}930$ columns), which decides between one
  step per four depths and a slope-one growth from $k=5$, certified
@@ -4453,6 +4498,7 @@ reviews.}
 Result & Location\\
 \midrule
 Seeded sweep (Section~\ref{sec:sweep}) & \code{experiments/\allowbreak{}ic-curve-sweep/} (\code{summary.json} also feeds Figure~\ref{fig:sweep})\\
+Joint finite FFD/LFD grid (Table~\ref{tab:ffdlfdgrid}) & \code{experiments/\allowbreak{}ffd-lfd-grid-20261124/} (\code{grid-status.json}, \code{README.md}, audit receipts, frozen inputs and F4 trace replays)\\
 Depth-$8$ and depth-$9$ arms & \code{experiments/\allowbreak{}ic-chain-depth8/}, \code{experiments/\allowbreak{}ic-chain-depth9/} (replay record \code{replay-20261108.json})\\
 Depth step, $\dim V_3$, $\dim V_4$ & \code{experiments/\allowbreak{}ic-depth-step/}, \code{experiments/\allowbreak{}ic-bounds-fall/}\\
 Exceptional targets at depth $6$ & \code{experiments/\allowbreak{}ic-bounds-locus/}\\

@@ -56,6 +56,12 @@ form sheet. Still owed by the author: confirm the form fields and the "Use
 of AI tools" wording, submit, then record the ePrint number in
 `../CITATION.cff`, here and on the website.
 
+**Revision, 24 November 2026** (PR #59): the finite FFD/LFD grid and two
+exact split (5,3) instances are reported with a portable evidence package in
+`../experiments/ffd-lfd-grid-20261124/`. The depth-14 and depth-18
+publication obligations remain explicit. The manuscript and PDF were rebuilt;
+the abstract is unchanged.
+
 **Revision, 24 November 2026** (PR #58): the abstract gains the
 owner-approved clause on growth with any fixed number of summands
 (Corollary "Growth for every number of summands"); `eprint-abstract.txt`,
