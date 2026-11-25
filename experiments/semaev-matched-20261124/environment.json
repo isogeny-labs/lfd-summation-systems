@@ -1,0 +1,17 @@
+{
+  "cpu": ": AMD EPYC 9V74 80-Core Processor",
+  "gb_timeout_seconds": 5,
+  "instances_sha256": "37585351a180e27daf576ac6c643c6d75e67801188452b1249053392f25ce6c8",
+  "matrix_diagnostics": "not applicable to Buchberger; no matrices constructed",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "process_timeout_seconds": 20,
+  "protocol_sha256": "ad59d8bce89ac9fbaf200da69a1bc66aeaa0083e6c4312d87928c9b73fcff17a",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "source_sha256": {
+    "csd/gf2_ghs.py": "bd0e24d087eab7c9119366c2f7ae0e47d8928bf7f66d32376cf04cba9e650271",
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+    "csd/semaev_matched.py": "eff08b86ae9eb79ed26c68b55cf4c5aa84514e3ff1a2ef551b17e07c86ae2a46",
+    "scripts/run_semaev_matched.py": "c5cccd266effb4343dc7d8f1f68e93084bd5a0586e010921208662fdb63191e9"
+  },
+  "sympy": "1.14.0"
+}
