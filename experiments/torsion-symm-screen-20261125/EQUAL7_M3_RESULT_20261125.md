@@ -46,6 +46,12 @@ solver's total solving degree. The absence of a rank or admission gain
 rules out the requested *joint* improvement for this frozen base and
 target stream, regardless of an unmeasured total solver degree.
 
+An independent bitset Boolean-closure implementation rechecked that
+target's degree boundary. It found no unit in the direct degree-6
+closure and a unit at degree 7; for the symmetrized equations it found
+no unit at degree 3 and a unit at degree 4. The check used the saved
+equations and a separate pivot and monomial-multiplication routine.
+
 The saved shared preflight took 0.0011 wall/CPU seconds; construction and
 exhaustive checking of both first-four systems took 0.0498 wall seconds.
 Full 24-target group checks, failed triple attempts, row deduplication and
@@ -66,9 +72,13 @@ cold same-target rho were not run after the useful-yield gate failed.
 - `equal7-m3-verification.json`: replayed base selection, curve order,
   subgroup-log row checks and root lifts; SHA-256
   `fdcbff714c383775375aad66ca93e3e4ab4afea1d8651cf0b66641213895596c`.
+- `equal7-degree-verification.json`: independent closure ranks and unit
+  decisions at the matched failed target's four boundary degrees;
+  SHA-256 `9294cc9af672469defe8d49d6e4909f8dea27372fcd4ffba751acdcaa2cee734`.
 
 ```sh
 python3 experiments/torsion-symm-screen-20261125/equal7_m3.py
 python3 experiments/torsion-symm-screen-20261125/verify_equal7_m3.py
 python3 experiments/torsion-symm-screen-20261125/equal7_m3_degree.py
+python3 experiments/torsion-symm-screen-20261125/verify_equal7_degree.py
 ```
