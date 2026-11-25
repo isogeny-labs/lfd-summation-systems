@@ -75,3 +75,10 @@ one positive target in both arms. Both bases reach factor-base rank 10, and
 the symmetrized base admits 16 targets versus 24 for direct. Thus the
 degree benefit and rank-yield benefit observed in the two separate panels
 have not coincided on one frozen workload.
+
+A [rank-unsaturated equal-7 exploratory follow-up](EQUAL7_M3_RESULT_20261125.md)
+retains the exact `S4` LFD reduction, 7 to 4 on a matched failed target.
+At the same six-column base size, both arms reach rank 6 and the
+symmetrized base admits six targets versus twelve for direct. Its
+predeclared base-size-only selection and all failed attempts are retained;
+this additional panel also fails the joint gate.
