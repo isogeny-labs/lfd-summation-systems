@@ -1,5 +1,12 @@
 # Relation yield per linear system for LRF (binary curves)
 
+**Interpretation correction (2026-11-25):** high ANF degree of the projected
+candidate-success indicator does not prove that valid candidates require
+exhaustive kernel search. The exact quadratic root-coordinate lift and its
+cost gate are in [the new screen](../quadratic-root-lift-screen-20261125/SCREEN.md).
+The measured counts below are unchanged; statements about optimality and
+prime-degree scaling are limited to the tested configurations.
+
 **Question.** The linearized root-finding (LRF) kernel made the point-decomposition *step* fast
 (`experiments/ic-rootfind/`). For index calculus end to end the step speed is no longer the
 bottleneck; the **relation yield per linear system** is. This directory measures the yield, finds
@@ -52,18 +59,19 @@ per distinct relation; it is the objective to minimise.
 
 ### What the baseline establishes
 
-1. **The optimal operating point is `delta` in {0, 1} (a square system), not high `delta`.** High
+1. **The lowest measured cost per relation occurs at `delta` in {0, 1} (a square system).** High
    `delta` maximises yield *per system* (kernel dimension gives many candidates), but the candidate
    processing and the `2^k` factor-base size dominate the cost. Minimum `cost/rel` sits at the
    square regime at every `n`. This refutes "bigger `k` is always better".
-2. **`m = 4` is strictly worse than `m = 3`** at every matched `(n, k)` (e.g. `n = 13, k = 4`:
+2. **`m = 4` is worse than `m = 3` in the matched cells tested** (e.g. `n = 13, k = 4`:
    310 vs 145 cost/rel) and costs a factor `|FB|` more targets. More summands do not raise yield per
    system here. A clean negative result for one half of lever (a).
-3. **`found_per_cand` collapses as `n` grows** at fixed `delta` (0.026 at `n = 11` to 0.0019 at
-   `n = 23`, `delta = 3`). This is the dominant yield loss and it is intrinsic: fixing the symmetric
+3. **`found_per_cand` falls across the tested `n` values** at fixed `delta` (0.026 at `n = 11` to
+   0.0019 at `n = 23`, `delta = 3`). This is the dominant measured yield loss: fixing the symmetric
    functions `e1 in V`, `e2 in span(V.V)` does not force the two roots into `V`. `cost/rel` at the
-   optimal `delta` grows about `2^(n/3)` (measured fit 2^(0.333 n), matching the analytic systems/relation = 2^(n-2k) at delta=0). **A faster kernel cannot change this exponent;** only the
-   factor-base structure can.
+   tested `delta` fits about `2^(n/3)` (fit `2^(0.333 n)`, consistent with the heuristic
+   systems/relation = `2^(n-2k)` at `delta=0`). A faster residual solver alone does not change
+   the relation count, but its full cost still needs measurement.
 
 ## Lever (b): Koblitz / Frobenius — structure probe
 
@@ -80,7 +88,7 @@ which is why `V = <1, w, ...>` is not Frobenius-stable. But index calculus needs
 So `F = union_i V^(i)` is a Frobenius-stable factor base, each piece individually LRF-solvable with
 the same `dim V2`, and its points partition into size-`n` orbits.
 
-### Lever (b) is a no-go at prime n (measured), with a mechanism
+### The tested Frobenius variant did not improve the measured prime-degree cells
 
 `frob_orbits.py` runs real LRF on the Koblitz curve `y^2 + xy = x^3 + 1` (a=0, matches ECC2K-130),
 collects decompositions, canonicalises every point to its Frobenius orbit, and measures the column
@@ -96,32 +104,33 @@ column reduction, not extra relations per search.
 | 19 | 7 | 18.6 | 139 | 121 | 1.15 |
 | 23 | 8 | 22.7 | 275 | 253 | **1.09** |
 
-The *ideal* reduction grows toward `n`, but the *realizable* one **decays toward 1**. Reason: LRF over
-one subspace `V^(0)` produces only abscissas in `V`, and those points lie in **distinct** Frobenius
-orbits, so `#V-points ~= #orbits-touched`. Populating the Frobenius closure needs the `n-1` conjugate
-subspaces, whose decompositions are Frobenius *images* -- the same orbit rows, **no new rank** -- so
-they are wasted.
+The *ideal* reduction grows with `n`, but the *measured* reduction approaches
+1 across these cells. LRF over one subspace `V^(0)` produces only abscissas
+in `V`; on these fixtures they occupy almost distinct Frobenius orbits.
+The Frobenius images of any one decomposition are scalar multiples of its
+orbit row, so repeating those images alone adds no rank.
 
 A Frobenius-*structured* factor base (`frob_span.py`, sliding window `V = <w, w^2, ..., w^(2^(k-1))>`)
 does give real orbit sharing: `phi(V) cap V` has dimension `k-1`, and about half of `V` squares back
-into `V`. But then `dim V2` saturates at `n` for every `k >= ~sqrt(2n)` (measured), far below the
-yield-necessary `k ~= n/3`, so LRF is infeasible. **The LRF condition `dim span(V.V) < n` and Frobenius
-structure are in irreducible tension** -- the real obstruction at prime `n`, sharper than
-`koblitz_invariant_dims`'s "no proper invariant subspace".
+into `V`. In the measured sliding-window cases, `dim V2` saturates at
+`n` near `k ~ sqrt(2n)`, making those bases infeasible for this LRF
+implementation at the tested yield range. This is a concrete tradeoff for
+the tested construction, not a theorem excluding every Frobenius-stable
+factor-base set.
 
-### found_per_cand is intrinsic (measured)
+### Root-membership loss in the tested bases
 
-`found_per_cand` is the same narrow band for every LRF-feasible basis at a given `(delta, n)`
+`found_per_cand` is in the same narrow band for the LRF-feasible bases tested at a given `(delta, n)`
 (monomial, `w^2`-powers, shifted all within noise; random bases have `dim V2 = n` and are infeasible;
 "far-out" bases only raise `delta`, re-tracing the baseline tradeoff). Fixing `e1 in V`, `e2 in
-span(V.V)` does not force the two roots into `V`, and no factor-base choice changes that. So the
-`~2^(n/3)` cost/relation exponent is intrinsic to LRF decomposition; only a decomposition relation
-that constrains the roots themselves (not merely their symmetric functions) could move it.
+span(V.V)` does not force the two roots into `V`. These measurements do not establish
+a lower bound for every basis or solver. Constraining roots directly is a
+separate formulation whose full cost needs testing.
 
 Data: `frobenius.jsonl` (orbit reduction), and the basis comparison is reproducible from
 `frob_span.py`. Figure: `yield_report.{svg,png}`; write-up: `report.pdf` / `report.tex`.
 
-### Can the good candidate be found without scanning? No (measured)
+### Projected success-indicator structure
 
 At high `delta` the 2-summand system has a `delta`-dim affine solution space (`2^delta` candidates);
 only the ones whose quadratic has both roots in `V` are relations. If that "good" set were an
@@ -138,20 +147,21 @@ kernel coordinates and measures its ANF degree and density.
 | 29 | 13 | 9 | 8.96 / 9 | 0.0020 ~ 2^-9 | singleton |
 | 29 | 14 | 12 | 11.88 / 12 | 0.00028 ~ 2^-12 | singleton |
 
-The ANF degree is **maximal (`~delta`, random-like)** and the density is **`~2^(-delta)`**: there is on
-average **one good candidate per system**, an unstructured singleton (trivially "affine" because it is a
-single point, but carrying no exploitable structure). So the good candidate cannot be found faster than
-scanning the kernel or solving the original nonlinear roots-in-`V` equation. Raising `delta` (bigger `k`)
-therefore buys `~1` relation per solvable system at a `2^delta` candidate cost, which is why small
-`delta` (0--1) is optimal -- the baseline operating point. **The found_per_cand loss is not recoverable
-by cleverer candidate selection.**
+The indicator has near-maximal ANF degree and density about `2^(-delta)`
+on these cells: there is roughly one good candidate per solvable system.
+This describes the projected Boolean function, not the complexity of finding
+its support. Even a unique solution of a linear system has a degree-`delta`
+indicator. The exact quadratic root-coordinate lift in the linked screen
+shows why these data do not rule out a solver that avoids enumerating all
+`2^delta` candidates. Whether such a solver beats the native scan, including
+its extra variables and setup, remains unmeasured.
 
 ## Verdict for ECC2K-130 (n = 131)
 
-For `m = 3`, any non-negligible yield forces `k ~= 44`, which is exactly `delta = 0` -- the measured
-optimal operating point. **The current method is already at that optimum; neither pinned lever improves
-the n = 131 relation stage.** This is a measured negative result with mechanisms, not an absence of
-effort; it redirects the search to the `found_per_cand` term.
+For `m = 3`, the simple yield model places the useful range near `k ~= 44`,
+which is near `delta = 0` for a monomial base at `n = 131`. The measurements
+at smaller fields motivate that operating point; they do not verify an
+`n = 131` optimum or rule out a different root-membership solver.
 
 ## Gap to rho
 
