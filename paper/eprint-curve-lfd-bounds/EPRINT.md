@@ -178,13 +178,14 @@ to unit-ideal instances with any fixed number of summands" (Corollary
 `cor:growthm`, mapped in `../proof-status.json`, `abstract_claims`);
 `eprint-abstract.txt` is resynced (1908 characters; previously 1796). No
 other source change; 66 pages; rebuilt with Tectonic 0.15.0 by
-`python3 scripts/build_ic_curve_paper.py`. The digests below are those of
-this revision.
+`python3 scripts/build_ic_curve_paper.py`. The digests below are for the 24 November certified-grid revision in PR #59.
+The abstract remains unchanged; the manuscript adds the finite FFD/LFD grid,
+the two exact split (5,3) values, and explicit depth-14/depth-18 evidence limits.
 
 | file | SHA-256 |
 |---|---|
-| `paper/curve-lfd-bounds.pdf` | `21b00f055d5c46b639d997e1bd59eb95f65477348502e362b356f0e4fa368f82` |
-| `paper/curve-lfd-bounds.tex` | `f9abd5a423394756dc566d27f239310e2b0c6f969635d23c1c34d652beb8d634` |
+| `paper/curve-lfd-bounds.pdf` | `59ffec43bbd0fd56038a18db2938955f2a5014e9fcdc255ac390fcaaaa67e048` |
+| `paper/curve-lfd-bounds.tex` | `2e5096c14d63368559eb467a5fc037744b1da3ddafb92d9f26d9eadeedf60d69` |
 | `paper/eprint-curve-lfd-bounds/eprint-abstract.txt` | `9264a95a970d8cbc4ae87c46dadc09876db04c9affac6a52706bab7677c6d3da` |
 
 The PDF was regenerated on 20 November 2026 with Tectonic 0.17.0

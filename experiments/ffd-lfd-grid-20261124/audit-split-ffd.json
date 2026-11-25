@@ -1,0 +1,1070 @@
+{
+  "audit_source_sha256": "6c9901aeb764d28615d8f089343e0f7518508f7e34acede67787fea6b39de63c",
+  "cells": [
+    {
+      "ffd_exact_counts": {
+        "4": 2
+      },
+      "fields": {
+        "114689": 1,
+        "163841": 1
+      },
+      "k": 5,
+      "lfd_exact_counts": {
+        "7": 2
+      },
+      "m": 3,
+      "systems": 2
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 6
+      },
+      "fields": {
+        "12289": 2,
+        "40961": 2,
+        "7681": 2
+      },
+      "k": 2,
+      "lfd_exact_counts": {
+        "6": 6
+      },
+      "m": 4,
+      "systems": 6
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 6
+      },
+      "fields": {
+        "12289": 2,
+        "40961": 2,
+        "7681": 2
+      },
+      "k": 3,
+      "lfd_exact_counts": {
+        "7": 6
+      },
+      "m": 4,
+      "systems": 6
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 2
+      },
+      "fields": {
+        "114689": 1,
+        "163841": 1
+      },
+      "k": 4,
+      "lfd_exact_counts": {
+        "7": 2
+      },
+      "m": 4,
+      "systems": 2
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 6
+      },
+      "fields": {
+        "12289": 2,
+        "40961": 2,
+        "7681": 2
+      },
+      "k": 2,
+      "lfd_exact_counts": {
+        "6": 6
+      },
+      "m": 5,
+      "systems": 6
+    },
+    {
+      "ffd_exact_counts": {
+        "4": 2
+      },
+      "fields": {
+        "114689": 1,
+        "163841": 1
+      },
+      "k": 2,
+      "lfd_exact_counts": {
+        "7": 2
+      },
+      "m": 6,
+      "systems": 2
+    }
+  ],
+  "convention": "associated graded chain quotient, Koszul trivial module",
+  "input_sha256": {
+    "cell-m3-k5.jsonl": "c61a2aa3ac46856931246548bf953238d890972c604c4b5b40138b37a0cfb9db",
+    "cell-m4-k2.jsonl": "044a4a28ae65f77fbb100aa7236bf98592ab180c4ae95c280635d1c687cf8dad",
+    "cell-m4-k3.jsonl": "674bcd70d9dea1bb9c7998e615a0802f8d62f5c20cab306571c0d990d6299932",
+    "cell-m4-k4.jsonl": "246904e1d17228a97c0ff65e0b2962187656add3f85beba07e8ca5654c91d343",
+    "cell-m5-k2.jsonl": "3b9550168d7c7188583087fc100e1bf3853e8dc7d79a48478b9364ebacf2da3d",
+    "cell-m6-k2.jsonl": "3d616f99baac276fef3f0cd35ebb370fe64401b5dfa8666a32e5c2be99b2facd"
+  },
+  "reason_lower": "only one degree-3 input, with nonzero top; no degree-3 syzygy",
+  "reason_upper": "explicit nonzero degree-4 annihilator of its two-term top; Koszul degree at least 7",
+  "scope": "six completed frozen split cells",
+  "source_sha256": {
+    "csd/ic_bounds_m3.py": "3293bb1c4d215234165f45c2fb8a230358de2fc5bd334179d485347a9da74481",
+    "csd/ic_bounds_split_m.py": "8db9f67bb4a98c8cd2e951b070afce20ca77a2d67ba79129dc4acf220e37698d",
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1"
+  },
+  "status": "passed",
+  "systems": [
+    {
+      "degree_3_top": [
+        [
+          1024,
+          [
+            2
+          ],
+          56416
+        ],
+        [
+          2048,
+          [
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          1024,
+          56416
+        ],
+        [
+          2048,
+          114688
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 5,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 3,
+      "p": 114689,
+      "seed": 0,
+      "system_hash": "a1b648507fed67977f19f52bf3112cbd009f026eb761a14c45ef54cd852a2e87"
+    },
+    {
+      "degree_3_top": [
+        [
+          1024,
+          [
+            2
+          ],
+          90393
+        ],
+        [
+          2048,
+          [
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          1024,
+          90393
+        ],
+        [
+          2048,
+          163840
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 5,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 3,
+      "p": 163841,
+      "seed": 0,
+      "system_hash": "333ec316e215371d47ef511cd685400076a6c6f1c09907ec867d02c4d78ad93d"
+    },
+    {
+      "degree_3_top": [
+        [
+          64,
+          [
+            0,
+            2
+          ],
+          4021
+        ],
+        [
+          128,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          64,
+          4021
+        ],
+        [
+          128,
+          7680
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 4,
+      "p": 7681,
+      "seed": 0,
+      "system_hash": "adb0d0b3a4faa786219cead53b1677932423cae0a12142d081f3a31ac42a2e9c"
+    },
+    {
+      "degree_3_top": [
+        [
+          64,
+          [
+            0,
+            2
+          ],
+          6685
+        ],
+        [
+          128,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          64,
+          6685
+        ],
+        [
+          128,
+          7680
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 4,
+      "p": 7681,
+      "seed": 1,
+      "system_hash": "2ff5d00b55d3c9e94816b742eb13fe9f3bf31609aa6b0bae193a74c697fda850"
+    },
+    {
+      "degree_3_top": [
+        [
+          64,
+          [
+            0,
+            2
+          ],
+          2509
+        ],
+        [
+          128,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          64,
+          2509
+        ],
+        [
+          128,
+          12288
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 4,
+      "p": 12289,
+      "seed": 0,
+      "system_hash": "b6d0fb08f332215fd97852bf46333991d84a2327842424e17a7ba618032b8dee"
+    },
+    {
+      "degree_3_top": [
+        [
+          64,
+          [
+            0,
+            2
+          ],
+          11069
+        ],
+        [
+          128,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          64,
+          11069
+        ],
+        [
+          128,
+          12288
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 4,
+      "p": 12289,
+      "seed": 1,
+      "system_hash": "077bd1612a0fafc8b5485da5293b3bdb1a6ff02e313f240305b2f8c37c8835ed"
+    },
+    {
+      "degree_3_top": [
+        [
+          64,
+          [
+            0,
+            2
+          ],
+          29888
+        ],
+        [
+          128,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          64,
+          29888
+        ],
+        [
+          128,
+          40960
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 4,
+      "p": 40961,
+      "seed": 0,
+      "system_hash": "4b58459792e25680c3b848345265c0cd292da7c292dd0e5325e5852270821e4b"
+    },
+    {
+      "degree_3_top": [
+        [
+          64,
+          [
+            0,
+            2
+          ],
+          22745
+        ],
+        [
+          128,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          64,
+          22745
+        ],
+        [
+          128,
+          40960
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 4,
+      "p": 40961,
+      "seed": 1,
+      "system_hash": "ff8d222277d102cfaeeedf273991fa8dbd70a4dcc9f0f501258d68021b7e3805"
+    },
+    {
+      "degree_3_top": [
+        [
+          512,
+          [
+            0,
+            2
+          ],
+          136
+        ],
+        [
+          1024,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          512,
+          136
+        ],
+        [
+          1024,
+          7680
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 3,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 7681,
+      "seed": 0,
+      "system_hash": "b6249fa8445156e018345c04d08e0ad881a8625c26445b7d7ae7e29a556ca940"
+    },
+    {
+      "degree_3_top": [
+        [
+          512,
+          [
+            0,
+            2
+          ],
+          52
+        ],
+        [
+          1024,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          512,
+          52
+        ],
+        [
+          1024,
+          7680
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 3,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 7681,
+      "seed": 1,
+      "system_hash": "b45af6dd5cfe167c2d696785602eb8d26d10ad4445f1f03821a9c821ad67bde5"
+    },
+    {
+      "degree_3_top": [
+        [
+          512,
+          [
+            0,
+            2
+          ],
+          7250
+        ],
+        [
+          1024,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          512,
+          7250
+        ],
+        [
+          1024,
+          12288
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 3,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 12289,
+      "seed": 0,
+      "system_hash": "bb3b315e8d67cded6167450e400f6f45d1fdfad1aee861e51b432e0173f00110"
+    },
+    {
+      "degree_3_top": [
+        [
+          512,
+          [
+            0,
+            2
+          ],
+          9457
+        ],
+        [
+          1024,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          512,
+          9457
+        ],
+        [
+          1024,
+          12288
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 3,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 12289,
+      "seed": 1,
+      "system_hash": "135b934d68dd442e6e9ef9c394124308bf7bbce9801e0129aa7fa8d7853cc651"
+    },
+    {
+      "degree_3_top": [
+        [
+          512,
+          [
+            0,
+            2
+          ],
+          27996
+        ],
+        [
+          1024,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          512,
+          27996
+        ],
+        [
+          1024,
+          40960
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 3,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 40961,
+      "seed": 0,
+      "system_hash": "027e1a05ae52a4a71bdd1c4f5b1a18c8def8d8af156a0a268f510296dcba841d"
+    },
+    {
+      "degree_3_top": [
+        [
+          512,
+          [
+            0,
+            2
+          ],
+          26910
+        ],
+        [
+          1024,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          512,
+          26910
+        ],
+        [
+          1024,
+          40960
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 3,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 40961,
+      "seed": 1,
+      "system_hash": "7f651fc25832923c5054c12d051f1e0bf51196d5651db7b1ddb0158c0865931d"
+    },
+    {
+      "degree_3_top": [
+        [
+          4096,
+          [
+            0,
+            2
+          ],
+          45268
+        ],
+        [
+          8192,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          4096,
+          45268
+        ],
+        [
+          8192,
+          114688
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 4,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 114689,
+      "seed": 0,
+      "system_hash": "15aee9a0a3019370b2db67762a1bdc9e7b8c7a9142b251f6d592581165e89e72"
+    },
+    {
+      "degree_3_top": [
+        [
+          4096,
+          [
+            0,
+            2
+          ],
+          156028
+        ],
+        [
+          8192,
+          [
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          4096,
+          156028
+        ],
+        [
+          8192,
+          163840
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 4,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 4,
+      "p": 163841,
+      "seed": 0,
+      "system_hash": "2d1468ff12d066aa702b67fb2b8d212804a69a89d5f7c4fefcb778cd26cc0f81"
+    },
+    {
+      "degree_3_top": [
+        [
+          256,
+          [
+            0,
+            0,
+            2
+          ],
+          3454
+        ],
+        [
+          512,
+          [
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          256,
+          3454
+        ],
+        [
+          512,
+          7680
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 5,
+      "p": 7681,
+      "seed": 0,
+      "system_hash": "6250189016155a6831609ae1831d26c244e69db60d0b2a6e31b0fa4226195be0"
+    },
+    {
+      "degree_3_top": [
+        [
+          256,
+          [
+            0,
+            0,
+            2
+          ],
+          7139
+        ],
+        [
+          512,
+          [
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          256,
+          7139
+        ],
+        [
+          512,
+          7680
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 5,
+      "p": 7681,
+      "seed": 1,
+      "system_hash": "915595ede6a4f82ca866a638020f2eecbc827d0a13b828c7abf5b3eba7e304ef"
+    },
+    {
+      "degree_3_top": [
+        [
+          256,
+          [
+            0,
+            0,
+            2
+          ],
+          828
+        ],
+        [
+          512,
+          [
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          256,
+          828
+        ],
+        [
+          512,
+          12288
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 5,
+      "p": 12289,
+      "seed": 0,
+      "system_hash": "744049b24400a30d0acd8f5914eed3b5336ea1cf463c930961e6e92947fca513"
+    },
+    {
+      "degree_3_top": [
+        [
+          256,
+          [
+            0,
+            0,
+            2
+          ],
+          4311
+        ],
+        [
+          512,
+          [
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          256,
+          4311
+        ],
+        [
+          512,
+          12288
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 5,
+      "p": 12289,
+      "seed": 1,
+      "system_hash": "de14e34a41c576ef53a1c47a6912320f05f5436e4d83bbd9177530e7b3f27b4a"
+    },
+    {
+      "degree_3_top": [
+        [
+          256,
+          [
+            0,
+            0,
+            2
+          ],
+          36650
+        ],
+        [
+          512,
+          [
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          256,
+          36650
+        ],
+        [
+          512,
+          40960
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 5,
+      "p": 40961,
+      "seed": 0,
+      "system_hash": "900dd70e8559a0c322d3ef12b9f2dd835411785085dc2ea483efae536c5b64c1"
+    },
+    {
+      "degree_3_top": [
+        [
+          256,
+          [
+            0,
+            0,
+            2
+          ],
+          23236
+        ],
+        [
+          512,
+          [
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          256,
+          23236
+        ],
+        [
+          512,
+          40960
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 6,
+      "lfd_upper_bound": 6,
+      "m": 5,
+      "p": 40961,
+      "seed": 1,
+      "system_hash": "834c0e0783a32ac2454d6cdbc3e38333c60cbf5916484df3abaa1423ccb8f040"
+    },
+    {
+      "degree_3_top": [
+        [
+          1024,
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          43168
+        ],
+        [
+          2048,
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          1024,
+          43168
+        ],
+        [
+          2048,
+          114688
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 6,
+      "p": 114689,
+      "seed": 0,
+      "system_hash": "14f89aaffc4b5f6530daa6d8ee9cd3fdecf3aa2497de7b7420adf18306fc389d"
+    },
+    {
+      "degree_3_top": [
+        [
+          1024,
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          59882
+        ],
+        [
+          2048,
+          [
+            0,
+            0,
+            0,
+            2
+          ],
+          1
+        ]
+      ],
+      "degree_4_syzygy_coefficient": [
+        [
+          1024,
+          59882
+        ],
+        [
+          2048,
+          163840
+        ]
+      ],
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "k": 2,
+      "lfd_lower_bound": 7,
+      "lfd_upper_bound": 7,
+      "m": 6,
+      "p": 163841,
+      "seed": 0,
+      "system_hash": "c1fa295770af0e3f2766a57e613bb8dc13d2b4fe60779f3ecd9da47781fac283"
+    }
+  ]
+}

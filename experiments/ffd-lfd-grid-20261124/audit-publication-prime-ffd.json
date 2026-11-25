@@ -1,0 +1,50 @@
+{
+  "audit_source_sha256": "1b3921deb0269aea123ff1a19edd4c330add439f3b2dc967708dba746550c067",
+  "cells": [
+    {
+      "D_of_frozen_input": 6,
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "field": "GF(65537)",
+      "identity_sha256": "e85b62464aecdd28ce5832651dece7dfd43c977869e031305418775c5f389735",
+      "input_sha256": "a878bcd04861493e4798275f0d69454c1870c4c0d813135b1e9f943675f006bb",
+      "m": 2,
+      "n": 14,
+      "name": "depth14",
+      "theorem_condition_residue": 929
+    },
+    {
+      "D_of_frozen_input": 6,
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "field": "GF(163841)",
+      "identity_sha256": "98c28b495f37d5756f858b324fcb7480d0848dbb9f0f670d1e35be75fda5199b",
+      "input_sha256": "a11b35b4252ad5ac43af547beec8cb825d91847f7e81ed23dbf95a02d4b6d3fd",
+      "m": 2,
+      "n": 14,
+      "name": "depth14",
+      "theorem_condition_residue": 97086
+    },
+    {
+      "D_of_frozen_input": 8,
+      "ffd_lower_bound": 4,
+      "ffd_upper_bound": 4,
+      "field": "GF(7340033)",
+      "identity_sha256": "f4e397afba265d309a9fc82ae1fe17911d0683af47b8999c51a9818f1869cbc8",
+      "input_sha256": "3afc6e0356fb1cde453038a38effe81214feac3739f47a81ef11e7a3ed047ce7",
+      "m": 2,
+      "n": 18,
+      "name": "depth18",
+      "theorem_condition_residue": 28
+    }
+  ],
+  "scope": "three frozen publication prime m=2 systems",
+  "status": "passed",
+  "theorem": "ICFallDegrees.PrimeFieldConclusions.ordinary_ffd",
+  "theorem_condition": "FFD=3 iff 3*t^2+a=0 mod p; otherwise FFD=4",
+  "theorem_source_sha256": {
+    "formal/ICFallDegrees/GeneralQuadraticClassification.lean": "2694ecda2209e35625adf4c47b828e9beb4dda8cf91cf6fcf112fe5eff9aae68",
+    "formal/ICFallDegrees/PrimeFieldConclusions.lean": "8145b9223c107042102b14a7a06a2b07eecf75e9333316ad1595c50343003380",
+    "formal/ICFallDegrees/PrimeM2General.lean": "941820f25a42c7179360cafceb205246b6f0ed039a2508ad34366a1bb51297f1"
+  }
+}
