@@ -81,6 +81,14 @@ route through a point of order two (identities re-checked independently).
 The ECDLP section, limitations, future directions, conclusion and the Lean
 table were updated to match.
 
+## Companion literature note
+
+[Semaev splitting and Gröbner-basis cost](../docs/proofs/semaev-splitting-cost.md)
+formalizes a published binary-field benchmark and proves a resultant
+correspondence on a restricted locus. It is a written note, not a
+kernel-checked result or an independently reproduced benchmark, and makes
+no new claim about this manuscript's presentations or asymptotic costs.
+
 ## Scope and evidence
 
 The manuscript gives bounds on specified polynomial presentations, exact
