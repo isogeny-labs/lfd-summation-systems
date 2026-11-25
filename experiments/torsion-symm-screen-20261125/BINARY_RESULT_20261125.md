@@ -103,9 +103,10 @@ on sampled points of every distinct curve. Only 24 of the 488 frozen
 nonzero-`x` base sets are closed under that map. The scan excludes `x=0`,
 which maps to the identity; closure of the *whole* existing factor base is a
 separate condition. Most frozen bases therefore cannot be used unchanged as
-torsion-equivariant bases. This compatibility result does not identify an
-ECC2K-130 factor-base construction or establish a solver-degree benefit on
-that target family.
+torsion-equivariant bases. This particular scan did not inspect the fixed
+ECC2K-130 base; a [separate exact recipe screen](ECC2K130_T2_RESULT_20261125.md)
+now does so. Neither screen establishes a solver-degree benefit on that
+target family.
 
 ## Raw evidence and replay
 
@@ -134,6 +135,15 @@ binary Edwards design. The remaining scientifically distinct question is
 whether a different equal-size factor-base construction can improve useful
 relation rank **and** reduce the Boolean solver's exact degree on the
 repository's frozen systems, after charging setup and failures.
+
+The [fixed ECC2K-130 recipe screen](ECC2K130_T2_RESULT_20261125.md)
+found zero reciprocal weight-at-most-two coordinates among all 8,646
+weight-at-most-two type-II normal-basis candidates. It also identifies the
+pre-existing native `koblitz-symmetrised` implementation and its archived
+complete-cost comparison, which do not pass the joint controlled-yield and
+exact-degree gate. These findings delimit the direct transplant to the
+configured ECC2K-130 base without claiming a full-size solve or a general
+torsion no-go theorem.
 
 ## Frozen Boolean follow-up
 
