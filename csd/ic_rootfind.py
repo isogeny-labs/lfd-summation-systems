@@ -86,6 +86,10 @@ def _lib():
     lib.rf_fb.restype = L
     lib.rf_lrf.argtypes = [p, i, p, p, p, L, L, L, p, L, p]
     lib.rf_lrf.restype = L
+    lib.rf_image_table.argtypes = [p, p, L]
+    lib.rf_image_table.restype = L
+    lib.rf_lrf_image.argtypes = [p, i, p, p, p, L, L, L, p, L, p, p]
+    lib.rf_lrf_image.restype = L
     lib.rf_brute.argtypes = [p, i, p, p, p, L, L, L, p, L]
     lib.rf_brute.restype = L
     lib.rf_mitm4.argtypes = [p, p, p, p, L, p, L, p]
@@ -223,6 +227,37 @@ class Solver:
             st = Stats()
             cnt = lib.rf_lrf(self._ctx, m, Rc, self.fx.ctypes.data, self.fy.ctypes.data, self.nfb,
                              rng[0], rng[1], out.ctypes.data, cap, ctypes.byref(st))
+            if cnt < 0:
+                raise ValueError("m is too large for the kernel")
+            return self._rows(out, cnt, cap, m), st.as_dict(), int(cnt)
+
+        ranges = self._ranges(threads if m >= 3 else 1)
+        if len(ranges) == 1:
+            return part(ranges[0])
+        with ThreadPoolExecutor(threads) as ex:
+            parts = list(ex.map(part, ranges))
+        stats = {f: (max if f == "max_kernel_dim" else sum)(p[1][f] for p in parts) for f in parts[0][1]}
+        return sorted(set().union(*(p[0] for p in parts))), stats, sum(p[2] for p in parts)
+
+    def lrf_image(self, m: int, R, cap: int = 1 << 20, threads: int = 1):
+        """Exact conditional-image prefilter; table setup is lazy and must be timed."""
+        if self.k > 20:
+            raise ValueError("conditional-image table requires k <= 20")
+        if not hasattr(self, "_image_table"):
+            self._image_table = np.zeros((1 << self.k) * self.k, dtype=np.uint64)
+            nbytes = _lib().rf_image_table(self._ctx, self._image_table.ctypes.data,
+                                           self._image_table.size)
+            if nbytes < 0:
+                raise MemoryError("conditional-image table setup failed")
+            self.image_table_bytes = int(nbytes)
+        lib, Rc = _lib(), (u64 * 2)(*R)
+
+        def part(rng):
+            out = np.zeros(cap * 2 * m, dtype=np.uint64)
+            st = Stats()
+            cnt = lib.rf_lrf_image(self._ctx, m, Rc, self.fx.ctypes.data, self.fy.ctypes.data,
+                                   self.nfb, rng[0], rng[1], out.ctypes.data, cap,
+                                   ctypes.byref(st), self._image_table.ctypes.data)
             if cnt < 0:
                 raise ValueError("m is too large for the kernel")
             return self._rows(out, cnt, cap, m), st.as_dict(), int(cnt)

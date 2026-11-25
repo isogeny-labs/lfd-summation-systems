@@ -48,10 +48,15 @@ untimed setup diagnostic and is excluded from comparison receipts.
 2. Native C direct point enumeration on the same base and targets. This is a
    correctness and competing-time control; if a reusable direct pair-sum
    table is built, charge its setup and include it as an additional control.
-3. A compact remainder-constraint solver: construct L_V and its recurrence
-   circuit, solve the exact symmetric image equations from PR #63 (including
-   e1=0), recover signed points, and group-validate every pair. Charge all
-   circuit/solver setup, failed targets, retries, and recovery.
+3. Conditional-image remainder solver: for every e1 in V, precompute a
+   descending-pivot basis of W_e1={x²+e1*x:x in V}. This is the exact
+   subspace-remainder root-membership condition from PR #63, including
+   W_0=V² for the diagonal. Run the same LRF linear system and candidate
+   enumeration, but reject e2 outside W_e1 before batch inversion and root
+   recovery. Charge the entire image-table setup, every candidate check,
+   failed target, root/sign recovery, and group validation. This arm tests
+   whether exact membership can lower candidate-processing cost; it does
+   not skip the 2^delta enumeration.
 
 Each arm must produce the identical canonical signed point-pair set for
 every target. Failed/empty targets count. Record setup and query wall time,
