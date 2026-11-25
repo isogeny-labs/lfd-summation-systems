@@ -12,7 +12,13 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
+#if defined(__aarch64__)
+#include <arm_neon.h>
+#elif defined(__x86_64__)
 #include <immintrin.h>
+#else
+#error "The root-finding kernel requires ARM PMULL or x86 PCLMULQDQ"
+#endif
 
 typedef uint64_t u64;
 typedef struct { u64 t[8][256]; } lmap;
@@ -52,15 +58,31 @@ static void lm_build(lmap *m, const u64 *images, int n)
     }
 }
 
+#if defined(__aarch64__)
+__attribute__((target("aes,neon")))
+#endif
+static inline void carryless_mul64(u64 x, u64 y, u64 *lo, u64 *hi)
+{
+#if defined(__aarch64__)
+    uint64x2_t p = vreinterpretq_u64_p128(vmull_p64((poly64_t)x, (poly64_t)y));
+    *lo = vgetq_lane_u64(p, 0);
+    *hi = vgetq_lane_u64(p, 1);
+#else
+    __m128i p = _mm_clmulepi64_si128(_mm_cvtsi64_si128((long long)x), _mm_cvtsi64_si128((long long)y), 0);
+    *lo = (u64)_mm_cvtsi128_si64(p);
+    *hi = (u64)_mm_extract_epi64(p, 1);
+#endif
+}
+
 static inline u64 fmul(const rf_ctx *c, u64 x, u64 y)
 {
-    __m128i p = _mm_clmulepi64_si128(_mm_cvtsi64_si128((long long)x), _mm_cvtsi64_si128((long long)y), 0);
-    u64 lo = (u64)_mm_cvtsi128_si64(p), hi = (u64)_mm_extract_epi64(p, 1);
+    u64 lo, hi;
+    carryless_mul64(x, y, &lo, &hi);
     u64 h = (hi << (64 - c->n)) | (lo >> c->n);
     lo &= c->mask;
     while (h) {
-        __m128i q = _mm_clmulepi64_si128(_mm_cvtsi64_si128((long long)h), _mm_cvtsi64_si128((long long)c->red), 0);
-        u64 ql = (u64)_mm_cvtsi128_si64(q), qh = (u64)_mm_extract_epi64(q, 1);
+        u64 ql, qh;
+        carryless_mul64(h, c->red, &ql, &qh);
         lo ^= ql & c->mask;
         h = (qh << (64 - c->n)) | (ql >> c->n);
     }

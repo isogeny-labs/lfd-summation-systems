@@ -32,12 +32,14 @@ cofactor-project the factor-base points, identify P and -P with opposite
 signs, omit columns for [h]P=O, and form rows over F_q with known right-hand
 side -h(u+113v). Report the resulting matrix rank, including zero-rank cases.
 
-Execution environment gate: the repository C kernel uses x86 intrinsics and
-cannot load into the local ARM Python process. Run every timed arm on the
-same native x86_64 Linux host or pinned x86_64 container; record CPU model,
-OS, compiler, Python, solver versions, and container digest where applicable
-before the first timing. Local Rosetta compilation is an untimed diagnostic,
-not a comparable benchmark receipt.
+Execution environment gate (amended before measurement): the C kernel's
+carryless-multiply helper now has an ARM PMULL implementation with the same
+field operation as its x86 PCLMULQDQ path. Run every timed arm natively on
+the same ARM host, with one Python process and the installed native solver;
+record CPU model, OS, compiler, Python and solver versions before the first
+timing. The independent generator uses Python field arithmetic, and the C
+factor-base table must match it exactly. The x86 Rosetta compilation was an
+untimed setup diagnostic and is excluded from comparison receipts.
 
 ## Arms and correctness
 
