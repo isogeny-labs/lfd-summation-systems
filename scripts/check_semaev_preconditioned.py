@@ -23,8 +23,16 @@ from csd import ic_dreg as I
 def main():
     out=RUN.OUT
     env=json.loads((out/'environment.json').read_text())
+    replaced=[]
     for path,digest in env['source_sha256'].items():
-        assert hashlib.sha256((RUN.ROOT/path).read_bytes()).hexdigest()==digest,path
+        current=RUN.ROOT/path
+        if hashlib.sha256(current.read_bytes()).hexdigest()!=digest:
+            # The native rootfinder was subsequently extended. Preserve the
+            # measured source bytes rather than rewriting the frozen record.
+            assert path in {'csd/_rootfind.c','csd/ic_rootfind.py'},path
+            snapshot=out/'frozen-source'/path
+            assert hashlib.sha256(snapshot.read_bytes()).hexdigest()==digest,path
+            replaced.append(path)
     for path,key in [('PROTOCOL.md','protocol_sha256'),('instances.json','instances_sha256')]:
         assert hashlib.sha256((out/path).read_bytes()).hexdigest()==env[key],path
     inputs=json.loads((out/'instances.json').read_text())
@@ -69,6 +77,7 @@ def main():
         assert analyze(out)==json.loads((out/'timing-bounds.json').read_text())
     print(json.dumps(dict(status='passed',cases=len(inputs['cases']),records=len(runs),
                           statuses=dict(Counter(r['status'] for r in runs)),
+                          frozen_source_snapshots=sorted(replaced),
                           scope='independent point-oracle scan, source/record/summary integrity; not timing replay')))
 
 
