@@ -285,3 +285,29 @@ cover of genus 131 exists; 131-torsion needs a degree-130 place in the conductor
 `>= 8451`. The `E[131]`-irreducibility note above was *suggestive toward* openness; the ray class group
 computation is the actual decision, and it closes the route. (The per-character `c_1` attempt remains
 recorded as invalid.)
+
+## Cover-of-P^1 route: strong small-ell evidence it is closed (replacing the retracted sqrt(-7) argument)
+
+The retracted `sqrt(-7)` argument tried to exclude 4-branch-point cyclic covers of `P^1` by an
+eigenvalue-field claim that was false (the eigenspaces are 2-dimensional). The correct, *computed*
+replacement (`experiments/ecc2k130-weil-factor/cover_trace_test.py`):
+
+By Torelli, if `A` (natural model) were isomorphic to a Jacobian it would be the Jacobian of a
+4-branch-point cyclic degree-`ell` cover of `P^1`. Over `F_q = F_{2^{ell-1}}`, `A_ell`'s
+`chi^m`-eigenspace Frobenius trace is `s_{ell-1} * zeta^{-m}` with `s_{ell-1} = alpha^{ell-1} +
+beta^{ell-1}` E's trace over `F_q` -- the **same integer** for every `m`, rotated by `zeta^{-m}`
+(because `A_ell = Res(E)` decomposes as `(+)_m (E (x) chi^m)`, a "coherent" family of twists of `E`).
+A genuine cyclic cover has `chi^m`-trace `-S_m`, `S_m = sum_x chi^m(f(x))`, a Jacobi-sum-type character
+sum that varies with `m`. In the `dlog`-histogram `h[j] = #{x : dlog f(x) = j mod ell}`, `A`'s structure
+forces `h` to be **flat + a single spike of height `|s_{ell-1}|`**, while a cover's is near-flat.
+
+Computed (`ell = 5, 11, 13`, `2` a primitive root; branch points `0,1,g` fixed by PGL_2, 4th point and
+exponents enumerated): **no cover has a flat+spike histogram.** The required spike is `1 / 57 / 47`; the
+largest histogram spread any cover achieves is `<= 4`. So cover traces and `A`'s are incompatible by a
+wide margin at three values of `ell`.
+
+**This is strong evidence (not proof) that `A` is not a 4-branch-point cyclic-cover-of-`P^1` Jacobian**,
+hence -- with Torelli -- that `A` (natural model) is not isomorphic to a Jacobian. It is the computed,
+validated version of the retracted claim. Caveats: a NECESSARY (trace) condition; small `ell`
+extrapolated to `131`; configurations with `< 3` `F_q`-rational branch points and the isogeny
+(non-natural-model) case are not covered.
