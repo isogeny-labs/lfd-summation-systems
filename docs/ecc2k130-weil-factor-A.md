@@ -306,13 +306,35 @@ No cover with four `F_q`-rational branch points matches `A_ell` at `ell = 5, 11,
 the coherent "integer times root of unity" trace structure, but with other integers (e.g. `-64`, `-128`
 equal traces of supersingular curves over `F_2`), never `s`.
 
+**All branch configurations (`cover_trace_nonrational.py`).** Conjugate branch points must carry equal
+exponents, so a 4-point branch locus over `F_q` is: 4 rational; 2 rational + a conjugate pair; two
+conjugate pairs; 1 rational + a cubic orbit (a single degree-4 orbit would need `4a = 0 mod ell`, impossible).
+Each family was enumerated exhaustively up to PGL_2(F_q) (sharply 3-transitive on rational points,
+transitive on conjugate pairs) and exponent scaling, with the point count `#C = q+1+sum_m(S_m+eps)`
+validated against direct counting on random covers of every family, the degenerate `f = q1^ell` case
+excluded, and every coherent hit checked against the Weil bound `2 sqrt(q)`:
+
+| configuration | ell=5 | ell=11 | ell=13 | matches |
+|---|---|---|---|---|
+| 4 rational | 169 | 92,911 | 544,369 | 0 |
+| 2 rational + pair | 24 | 4,608 | 22,528 | 0 |
+| two conjugate pairs | 119 | 523,775 | 8,386,559 | 0 |
+| rational + cubic orbit | 85 | 349,525 | 5,592,405 | 0 |
+
+`ell = 19` (`F_2^18`), sampled: 20,000 random covers with four rational branch points, max spread 972
+(Weil bound 1024), no coherent-trace cover, no match (`cover_trace_sample19.py`; a random sample,
+not exhaustive).
+
 **Correction.** The first version of this section (PR #70 draft) said covers' histograms have spread
 `<= 4` and are "incompatible by a wide margin". That was wrong: 4 was the *minimum* spread; the maximum is
 64 / 128, which contains the needed 57 / 47. The detector also looked only for a spike up and omitted the
-point at infinity. The table above is the corrected result. The conclusion (no match) stands, but as an
-exhaustive check over this family, not as a margin argument. `ell = 5` is also confirmed independently by
-brute-force point counting over `F_16^k`.
+point at infinity. The tables above are the corrected result. The conclusion (no match) stands, as an
+exhaustive check over every branch configuration at `ell = 5, 11, 13`, not as a margin argument.
+`ell = 5` is also confirmed independently by brute-force point counting over `F_16^k`. The trace is a
+necessary condition, so no determinant check is needed: nothing passes the trace test.
 
-Scope: a necessary condition (trace), checked exhaustively for covers with four rational branch points at
-three small `ell`; configurations with fewer than 3 rational branch points, larger `ell`, and the isogeny
-(non-natural-model) case are not yet covered.
+Scope: so at `ell = 5, 11, 13` no 4-branch-point cyclic cover of `P^1` over `F_{2^{ell-1}}` has a Jacobian
+with `A_ell`'s eigenspace traces -- by Torelli, `A_ell` (natural model, with its order-`ell` automorphism)
+is not isomorphic to a Jacobian at these `ell`. Not covered: `ell = 131` itself (an extrapolation from
+small `ell`), and the isogeny case (a model `A'` in the isogeny class without the order-`ell`
+automorphism).
