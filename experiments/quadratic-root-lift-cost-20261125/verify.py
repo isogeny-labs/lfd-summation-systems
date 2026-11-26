@@ -52,6 +52,13 @@ def main():
             assert E.on_curve(a) and E.on_curve(b) and E.add(a,b) == target
             pairs.append((a,b))
         assert pairs == sorted(set(pairs))
+        if row['arm'] == 'sat':
+            expected_dim = {(23,11):9, (29,13):9, (29,14):12}[(n,k)]
+            assert row['stats']['kernel_dim'] == expected_dim
+            assert row['stats']['linear_status'] == 'solvable'
+            assert row['stats']['input_degree_bound'] == 2
+            assert row['stats']['max_solver_degree'] is None
+            assert row['stats']['models'] == sum(1 if a == b else 2 for a,b in pairs)
         if 'witness' in target_row:
             assert tuple(sorted(map(tuple,target_row['witness']))) in pairs
         key = (n,k,row['index'])
