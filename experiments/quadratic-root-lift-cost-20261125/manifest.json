@@ -1,0 +1,259 @@
+{
+  "cells": [
+    {
+      "b": 894692,
+      "factor_base_points": 2087,
+      "factor_base_sha256": "e38a86bf4431638ef20ee65036f217721aa9322ba657150a69f174c08b4c24b2",
+      "k": 11,
+      "modulus": 8388641,
+      "n": 23,
+      "targets": [
+        {
+          "kind": "random",
+          "parent_index": 0,
+          "target": [
+            3073458,
+            1159937
+          ],
+          "u": 149821,
+          "v": 71129
+        },
+        {
+          "kind": "random",
+          "parent_index": 1,
+          "target": [
+            1077632,
+            4461296
+          ],
+          "u": 187225,
+          "v": 56815
+        },
+        {
+          "kind": "planted",
+          "parent_index": 64,
+          "target": [
+            3651964,
+            7262016
+          ],
+          "witness": [
+            [
+              1529,
+              936643
+            ],
+            [
+              1613,
+              4638739
+            ]
+          ]
+        },
+        {
+          "kind": "planted",
+          "parent_index": 65,
+          "target": [
+            6546739,
+            1484654
+          ],
+          "witness": [
+            [
+              242,
+              3773440
+            ],
+            [
+              711,
+              3363790
+            ]
+          ]
+        },
+        {
+          "kind": "diagonal",
+          "parent_index": null,
+          "target": [
+            2695620,
+            5241617
+          ],
+          "witness": [
+            [
+              3,
+              7127776
+            ],
+            [
+              3,
+              7127776
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "b": 326057084,
+      "factor_base_points": 8193,
+      "factor_base_sha256": "931f5eb29fa453552035410139b5b8c72c2aa88162e93a925458808b2499536d",
+      "k": 13,
+      "modulus": 536870917,
+      "n": 29,
+      "targets": [
+        {
+          "kind": "random",
+          "parent_index": 0,
+          "target": [
+            92822196,
+            461596557
+          ],
+          "u": 1406911,
+          "v": 5525487
+        },
+        {
+          "kind": "random",
+          "parent_index": 1,
+          "target": [
+            381178,
+            206427553
+          ],
+          "u": 5927595,
+          "v": 127399
+        },
+        {
+          "kind": "planted",
+          "parent_index": 64,
+          "target": [
+            215842775,
+            529247454
+          ],
+          "witness": [
+            [
+              1670,
+              305974489
+            ],
+            [
+              4534,
+              451407154
+            ]
+          ]
+        },
+        {
+          "kind": "planted",
+          "parent_index": 65,
+          "target": [
+            160147299,
+            478587922
+          ],
+          "witness": [
+            [
+              975,
+              282614084
+            ],
+            [
+              4295,
+              21853851
+            ]
+          ]
+        },
+        {
+          "kind": "diagonal",
+          "parent_index": null,
+          "target": [
+            396744768,
+            183174083
+          ],
+          "witness": [
+            [
+              7,
+              457986088
+            ],
+            [
+              7,
+              457986088
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "b": 326057084,
+      "factor_base_points": 16337,
+      "factor_base_sha256": "9efcb6e8eb8c63300a5e9babef70fa4502b1ba299638ea1bb4a176d83106c8a3",
+      "k": 14,
+      "modulus": 536870917,
+      "n": 29,
+      "targets": [
+        {
+          "kind": "random",
+          "parent_index": 0,
+          "target": [
+            76377020,
+            312523090
+          ],
+          "u": 5309263,
+          "v": 6567649
+        },
+        {
+          "kind": "random",
+          "parent_index": 1,
+          "target": [
+            151556811,
+            349783649
+          ],
+          "u": 5530567,
+          "v": 4946993
+        },
+        {
+          "kind": "planted",
+          "parent_index": 64,
+          "target": [
+            379708768,
+            33403939
+          ],
+          "witness": [
+            [
+              7863,
+              440103156
+            ],
+            [
+              14307,
+              521462193
+            ]
+          ]
+        },
+        {
+          "kind": "planted",
+          "parent_index": 65,
+          "target": [
+            249830949,
+            75341843
+          ],
+          "witness": [
+            [
+              12042,
+              329977675
+            ],
+            [
+              12612,
+              152415193
+            ]
+          ]
+        },
+        {
+          "kind": "diagonal",
+          "parent_index": null,
+          "target": [
+            396744768,
+            183174083
+          ],
+          "witness": [
+            [
+              7,
+              457986088
+            ],
+            [
+              7,
+              457986088
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "generator_sha256": "b6d97c85fac3a1183ace4bafe90dd0535edc07e4aa8ef5b368e4e6b4e74a2285",
+  "parent_sha256": "d30bf96488e1a382ca85f575ce9134453485a4fbf636bb6c49af33aa91c7f68a",
+  "protocol_sha256": "7c2cf1a62b5653d52f280e3bef550a34a53982797d9c2eae1d2cb3789bbe5b8f"
+}
