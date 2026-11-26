@@ -16,8 +16,8 @@ Strengthen, and first re-verify, the evidence that the ECC2K-130 Weil factor A i
 
 ## Active items (top = next)
 - [ ] Re-verify and strengthen the cover-trace evidence for A (Claude, started 2026-11-26, branch claude/index-calculus-root-finding-e95kd6, PR #70)
-  - [ ] 1. Fix the test: report the MAX (not min) histogram spread, detect spike or dip, include the point(s) at infinity
-  - [ ] 2. Re-run ell=5,11,13; correct PR #70's body and the doc if the claim changes
+  - [x] 1. Fix the test: report the MAX (not min) histogram spread, detect spike or dip, include the point(s) at infinity
+  - [x] 2. Re-run ell=5,11,13 (0 matches, corrected basis); correct PR #70's body and the doc if the claim changes
   - [ ] 3. Full char-poly (trace AND determinant) match, not only the trace
   - [ ] 4. Cover configurations with fewer than 3 F_q-rational branch points
   - [ ] 5. Larger ell by sampling (ell=19, 29) with the corrected detector

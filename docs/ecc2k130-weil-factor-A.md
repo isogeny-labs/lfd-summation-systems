@@ -286,28 +286,33 @@ cover of genus 131 exists; 131-torsion needs a degree-130 place in the conductor
 computation is the actual decision, and it closes the route. (The per-character `c_1` attempt remains
 recorded as invalid.)
 
-## Cover-of-P^1 route: strong small-ell evidence it is closed (replacing the retracted sqrt(-7) argument)
+## Cover-of-P^1 route: small-ell test (corrected 2026-11-26)
 
-The retracted `sqrt(-7)` argument tried to exclude 4-branch-point cyclic covers of `P^1` by an
-eigenvalue-field claim that was false (the eigenspaces are 2-dimensional). The correct, *computed*
-replacement (`experiments/ecc2k130-weil-factor/cover_trace_test.py`):
+By Torelli, if `A` (natural model) were isomorphic to a Jacobian it would be the Jacobian of a 4-branch-point
+cyclic degree-`ell` cover of `P^1`. Over `F_q = F_{2^{ell-1}}`, `A_ell`'s eigenspace traces are `s*zeta^-j`
+with `s` = E's trace over `F_q`. For a cover `y^ell = f(x)`, `#C(F_q) = q+1+sum_m (S_m + eps)` with
+`S_m = sum_{f(x)!=0} chi^m(f(x))` and `eps = 1` for the unramified point(s) at infinity, so the trace is
+`-(S_m+eps)`; `S_m` is the Galois conjugate of `S_1`, so a match needs `-(S_1+eps) = s*zeta^k`, i.e. the
+`dlog`-histogram `h' = h + eps*e_0` constant except one entry offset by exactly `-s`
+(`experiments/ecc2k130-weil-factor/cover_trace_test.py`).
 
-By Torelli, if `A` (natural model) were isomorphic to a Jacobian it would be the Jacobian of a
-4-branch-point cyclic degree-`ell` cover of `P^1`. Over `F_q = F_{2^{ell-1}}`, `A_ell`'s
-`chi^m`-eigenspace Frobenius trace is `s_{ell-1} * zeta^{-m}` with `s_{ell-1} = alpha^{ell-1} +
-beta^{ell-1}` E's trace over `F_q` -- the **same integer** for every `m`, rotated by `zeta^{-m}`
-(because `A_ell = Res(E)` decomposes as `(+)_m (E (x) chi^m)`, a "coherent" family of twists of `E`).
-A genuine cyclic cover has `chi^m`-trace `-S_m`, `S_m = sum_x chi^m(f(x))`, a Jacobi-sum-type character
-sum that varies with `m`. In the `dlog`-histogram `h[j] = #{x : dlog f(x) = j mod ell}`, `A`'s structure
-forces `h` to be **flat + a single spike of height `|s_{ell-1}|`**, while a cover's is near-flat.
+| ell | q | A needs | covers (4 rational branch pts) | spread min/max | coherent-trace covers: trace integers | match |
+|---|---|---|---|---|---|---|
+| 5 | 16 | 1 | 169 | 2/5 | -3, 2 | 0 |
+| 11 | 1024 | 57 | 92,911 | 4/64 | -64, -53, -20, 13, 24, 35, 46 | 0 |
+| 13 | 4096 | -47 | 544,369 | 4/128 | -128, -102, -76, -37, -24, -11, 80 | 0 |
 
-Computed (`ell = 5, 11, 13`, `2` a primitive root; branch points `0,1,g` fixed by PGL_2, 4th point and
-exponents enumerated): **no cover has a flat+spike histogram.** The required spike is `1 / 57 / 47`; the
-largest histogram spread any cover achieves is `<= 4`. So cover traces and `A`'s are incompatible by a
-wide margin at three values of `ell`.
+No cover with four `F_q`-rational branch points matches `A_ell` at `ell = 5, 11, 13`. Some covers do have
+the coherent "integer times root of unity" trace structure, but with other integers (e.g. `-64`, `-128`
+equal traces of supersingular curves over `F_2`), never `s`.
 
-**This is strong evidence (not proof) that `A` is not a 4-branch-point cyclic-cover-of-`P^1` Jacobian**,
-hence -- with Torelli -- that `A` (natural model) is not isomorphic to a Jacobian. It is the computed,
-validated version of the retracted claim. Caveats: a NECESSARY (trace) condition; small `ell`
-extrapolated to `131`; configurations with `< 3` `F_q`-rational branch points and the isogeny
-(non-natural-model) case are not covered.
+**Correction.** The first version of this section (PR #70 draft) said covers' histograms have spread
+`<= 4` and are "incompatible by a wide margin". That was wrong: 4 was the *minimum* spread; the maximum is
+64 / 128, which contains the needed 57 / 47. The detector also looked only for a spike up and omitted the
+point at infinity. The table above is the corrected result. The conclusion (no match) stands, but as an
+exhaustive check over this family, not as a margin argument. `ell = 5` is also confirmed independently by
+brute-force point counting over `F_16^k`.
+
+Scope: a necessary condition (trace), checked exhaustively for covers with four rational branch points at
+three small `ell`; configurations with fewer than 3 rational branch points, larger `ell`, and the isogeny
+(non-natural-model) case are not yet covered.
