@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Decisive test for the found_per_cand lever.
+"""Measured ANF structure of the projected root-membership indicator.
 
 At high delta the 2-summand linear system has a delta-dim affine solution space (2^delta
-candidates); only a few give a quadratic with BOTH roots in V. If that 'good' set is an
-algebraically structured subset of the kernel (low F_2 ANF-degree / affine), it can be enumerated
-output-sensitively and we could operate at large k (relation density O(1)) without the 2^delta
-candidate blow-up. If it is high-degree/random, the lever is dead.
+candidates); only a few give a quadratic with BOTH roots in V. The
+indicator's ANF degree and support density are diagnostics, not a lower
+bound on the cost of solving equations with auxiliary root coordinates.
+Even a unique solution to linear equations has a full-degree indicator.
 
 For many solvable targets we build the Boolean indicator g over the delta kernel coordinates and
 measure: ANF degree of g, whether g^{-1}(1) is affine, and the density. Baseline control: a random
