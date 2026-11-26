@@ -12,16 +12,10 @@ PR, not in this file.
 
 ## Current goal
 
-Strengthen, and first re-verify, the evidence that the ECC2K-130 Weil factor A is not the Jacobian of a 4-branch-point cyclic cover of P^1 (PR #70). Pinned by the owner 2026-11-26 via /goal.
+Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-- [x] Re-verify and strengthen the cover-trace evidence for A (Claude, started 2026-11-26, branch claude/index-calculus-root-finding-e95kd6, PR #70)
-  - [x] 1. Fix the test: report the MAX (not min) histogram spread, detect spike or dip, include the point(s) at infinity
-  - [x] 2. Re-run ell=5,11,13 (0 matches, corrected basis); correct PR #70's body and the doc if the claim changes
-  - [x] 3. Full char-poly (trace AND determinant) match, not only the trace
-  - [x] 4. Cover configurations with fewer than 3 F_q-rational branch points
-  - [x] 5. Larger ell by sampling (ell=19, 29) with the corrected detector
-- [x] ECC2K-130 cover-of-P^1 route: small-ell (5,11,13) cover-trace test shows A_ell's coherent single-spike trace structure is not reproduced by any 4-branch-point cyclic cover (wide margin) -- computed replacement for the retracted sqrt(-7) argument; strong evidence A is not such a Jacobian (Claude, started 2026-11-26, branch claude/index-calculus-root-finding-e95kd6, PR #70)
+- [x] Measure quadratic root-lift solver cost on frozen LRF cells (Codex, started 2026-11-25, branch research/quad-root-cost-20261125, PR #69)
 - [ ] Test exact subspace-remainder solving against native LRF on matched binary relation systems (Codex, started 2026-11-25, branch research/remainder-cost-20261125, PR #64)
 - [x] Screen next summation-polynomial relation finder for a sound construction and matched full-cost advantage (Codex, started 2026-11-25, branch research/next-summation-20261125, PR #63)
 - [x] Find the matched torsion-symmetrized relation-finding crossover or rule it out in the frozen tested range (Codex, started 2026-11-25, branch research/torsion-crossover-20261125, PR #61)

@@ -3,7 +3,7 @@
 \usepackage{graphicx,amsmath,amssymb,booktabs}
 \title{Relation yield per linear system for linearized root finding\\(binary-curve index calculus)}
 \author{Isogeny Labs}
-\date{21 November 2026}
+\date{25 November 2026\\Interpretation corrected; measurements unchanged}
 \begin{document}
 \maketitle
 
@@ -29,44 +29,40 @@ and the system is square at $\delta=0$.
 
 \section*{Findings}
 \begin{enumerate}
-\item \textbf{The optimal operating point is a square system} ($\delta\in\{0,1\}$, $m=3$), not high $\delta$
-(Panel A). High $\delta$ maximises yield \emph{per system} but the candidate processing and the $2^k$
-factor-base size dominate the cost. \textbf{$m=4$ is strictly worse than $m=3$} at every matched $(n,k)$.
-A clean negative result for the summand-count half of lever (a).
-\item \textbf{The yield loss is intrinsic} (Panel B). $\text{found\_per\_cand}$ --- the chance a
-candidate quadratic's two roots land in $V$ --- collapses with $n$ at fixed $\delta$, and it is the
-\emph{same} for every LRF-feasible basis (monomial, $w^2$-powers, shifted): fixing the symmetric
-functions $e_1\in V$, $e_2\in\mathrm{span}(V\!\cdot\!V)$ does not force the roots into $V$. Random bases
-have $\dim V_2=n$ (LRF-infeasible). So cost/relation grows $\approx 2^{n/3}$ (measured fit $2^{0.333\,n}$, matching the analytic systems/relation $=2^{n-2k}$ at $\delta=0$) and \textbf{no factor-base
-or summand choice changes that exponent}; only a different decomposition relation could.
-\item \textbf{Frobenius is a no-go at prime $n$} (Panel C), with a precise mechanism. The $n$
-squaring-conjugates $V^{(i)}$ of a monomial $V$ share $\dim V_2$ and tile a Frobenius-closed factor base
-in size-$n$ orbits, so an \emph{ideal} column reduction $|F|/|{\rm orbits}|\to n$ exists. But LRF search
-over one subspace $V^{(0)}$ produces only points with abscissa in $V$, which lie in \emph{distinct}
-orbits; the realizable reduction is $1.40,1.32,1.14,1.15,1.09$ for $n=11,\dots,23$ --- \textbf{decaying to
-$1$}. A Frobenius-structured $V$ (sliding window $\langle w,w^2,\dots,w^{2^{k-1}}\rangle$) does give real
-orbit sharing ($\varphi(V)\cap V$ has dimension $k-1$; $\sim$half of $V$ squares back into $V$) but then
-$\dim V_2$ saturates at $n$, making LRF infeasible for every $k\gtrsim\sqrt{2n}$, far below the
-yield-necessary $k\approx n/3$. The LRF efficiency condition ($\dim\mathrm{span}(V\!\cdot\!V)<n$) and
-Frobenius structure are in irreducible tension.
+\item \textbf{A square system has the lowest measured cost per relation} ($\delta\in\{0,1\}$,
+$m=3$) on this panel (Panel A). High $\delta$ raises yield \emph{per system}, but candidate processing
+and factor-base size dominate the measured cost. In the matched cells tested, $m=4$ costs more
+than $m=3$.
+\item \textbf{Root membership limits measured yield} (Panel B). The chance that both roots of a
+candidate quadratic land in $V$ falls across the tested $n$ values at fixed $\delta$. The tested
+monomial, $w^2$-power, and shifted bases occupy a similar band. Fixing only $e_1\in V$ and
+$e_2\in\mathrm{span}(V\!\cdot\!V)$ does not force the roots into $V$. The measured cost-per-relation
+fit is approximately $2^{n/3}$ on this range; it is not a universal lower bound.
+\item \textbf{The tested Frobenius construction gives little column reduction} (Panel C).
+The $n$ squaring-conjugates $V^{(i)}$ of a monomial $V$ have equal $\dim V_2$, but a search over
+one subspace touches almost distinct Frobenius orbits in the tested cells. Measured realizable
+column-reduction factors are $1.40,1.32,1.14,1.15,1.09$ for $n=11,\dots,23$.
+The tested sliding-window bases share orbits but their product spaces saturate the field at
+the sampled dimensions, making this LRF construction infeasible there. Other Frobenius-stable
+sets are outside the measurement.
 \end{enumerate}
 
 \section*{Consequence for ECC2K-130 ($n=131$) and gap to rho}
-For $m=3$, any non-negligible yield forces $k\approx 44$, which is exactly $\delta=0$ --- the measured
-optimal operating point. The current method is therefore \emph{already} at that optimum; neither pinned
-lever improves the $n=131$ relation stage. The matched Pollard-rho reference is about $2^{61}$ group
-operations; the baseline cost model is the honest distance-remaining denominator.
+For $m=3$, the simple yield model places a monomial base near $k\approx44$ at $n=131$, close to
+$\delta=0$. This is a projection from smaller fields, not a measured $n=131$ optimum. The matched
+Pollard-rho reference is about $2^{61}$ group operations; a full setup-charged relation-collection
+comparison remains required.
 
-\paragraph{The found\_per\_cand lever is also measured dead.} The last candidate was a decomposition
-relation that constrains the roots themselves. We tested whether the ``good'' candidates (roots in $V$)
-form a structured subset of the $\delta$-dimensional kernel coset that could be enumerated
-output-sensitively. Building the Boolean good-indicator over the kernel coordinates
-(\texttt{goodset\_structure.py}) gives ANF degree $\approx\delta$ (maximal, random-like) and density
-$\approx 2^{-\delta}$ at $\delta=6,9,12$: on average \emph{one} good candidate per system, an unstructured
-singleton. It cannot be found faster than scanning the kernel or solving the original nonlinear
-roots-in-$V$ equation. So raising $\delta$ buys $\sim 1$ relation per solvable system at a $2^{\delta}$
-candidate cost, and small $\delta$ is optimal --- the baseline operating point. Every lever examined ---
-factor base, summand count, Frobenius orbits, and candidate structure --- leaves the $\sim 2^{n/3}$
-cost/relation exponent unchanged. An improvement must come from a genuinely different relation, not from
-tuning LRF.
+\paragraph{Projected ANF degree is not a search lower bound.}
+The Boolean success indicator over the kernel coordinates has ANF degree near $\delta$ and density
+near $2^{-\delta}$ on the tested systems. This describes the projected
+function, not the cost of solving an auxiliary-variable system. For example, the indicator of the
+unique point $g=0$ is
+\[
+\prod_{i=1}^{\delta}(1+g_i),
+\]
+of degree $\delta$, while $g_i=0$ are linear
+defining equations. An exact quadratic root-coordinate lift is documented in the
+accompanying screen. Its input degree does not
+establish a low solving degree or a cost win; those remain open measurements.
 \end{document}
