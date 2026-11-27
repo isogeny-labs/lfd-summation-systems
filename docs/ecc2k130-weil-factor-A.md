@@ -338,3 +338,48 @@ with `A_ell`'s eigenspace traces -- by Torelli, `A_ell` (natural model, with its
 is not isomorphic to a Jacobian at these `ell`. Not covered: `ell = 131` itself (an extrapolation from
 small `ell`), and the isogeny case (a model `A'` in the isogeny class without the order-`ell`
 automorphism).
+
+## Isogeny residue: zeta_131 is NOT in Z[pi, pi-bar] (2026-11-27)
+
+The cover-trace evidence above applies to models of A that carry the order-131 automorphism zeta.
+By Deligne's equivalence for ordinary abelian varieties, every order R with Z[pi, pi-bar] <= R <= O_K
+is End(A') for some A' isogenous to A. So the question is whether zeta lies in Z[pi, pi-bar].
+
+Set pi = alpha*zeta and pi-bar = beta*zeta^-1, with pi*pi-bar = 2. Then Z[pi, pi-bar] is the Z-span of
+pi^0..pi^259 and pi-bar^1..pi-bar^259, written in the basis of O_K = Z[zeta_131] (x) Z[(1+sqrt-7)/2].
+
+| ell | U_ell (Lucas, x^2+x+2) | [O_K : Z[pi,pi-bar]] | zeta in Z[pi,pi-bar]? |
+|---|---|---|---|
+| 5 | -1 | 1 | yes |
+| 11 | 23 | 23^9 | **no** |
+| 13 | -1 | 1 | yes |
+| 19 | -457 | 457^17 | **no** |
+| 131 | 263 * 146505763881528721 | (263 * 146505763881528721)^129 | **no** |
+
+Two independent methods give these answers:
+- `zeta_in_order.gp`: exact Hermite normal form over Z, with the index and an exact membership solve.
+  The denominator of zeta's coordinates is |U_ell|.
+- `zeta_in_order_modp.py`: pure Python, no PARI. Mod p = 263, the 519 generators span only 131 of 260
+  dimensions, and adding zeta raises the rank to 132. So zeta is not in Z[pi, pi-bar] + 263 O_K, and hence
+  not in Z[pi, pi-bar]. The same test reports the rank drop at ell = 11 (p = 23) and ell = 19 (p = 457).
+  The controls (ell = 5 and 13, and p = 3 at ell = 131) give full rank, with no false positive.
+
+**Structure (computed at four ell; not proved here).** At these four ell, Z[pi, pi-bar] fails to be
+maximal exactly at the primes dividing the Lucas number U_ell = (alpha^ell - beta^ell)/(alpha - beta),
+and the index is |U_ell|^(ell-2). The mechanism: modulo a prime p dividing U_ell, alpha/beta is an
+ell-th root of unity, so pi-bar collapses onto pi's span and the rank halves (131 of 260). So zeta lies
+in the minimal order iff U_ell = +-1. Among primes ell <= 37, that happens only for ell = 2, 3, 5, 13.
+
+**Consequence: the isogeny residue is a real gap.** Some varieties A' isogenous to A have
+End(A') = Z[pi, pi-bar]. Such an A' contains no nontrivial power of zeta, so it has no order-131
+automorphism. The Torelli reduction (a Jacobian in the isogeny class must be a cyclic degree-131 cover of
+P^1) does not apply to these models, and neither does the cover-trace evidence.
+
+The gap is localized:
+- The models differ from the natural one only at p = 263 and p = 146505763881528721. They are reached
+  from A by isogenies whose degree is a power of these primes.
+- That degree is coprime to N = #A(F_2), so the ECDLP would transfer to any of them for free.
+- Whether one of them is principally polarized and a Jacobian stays open. No construction is known.
+
+This is a reversal of the hoped-for closure, and the record should say so: the cover-of-P^1 evidence
+covers the natural model only, not the isogeny class.
