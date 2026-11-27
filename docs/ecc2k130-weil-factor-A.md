@@ -397,3 +397,33 @@ How the proof works:
 Every prime dividing U_ell is congruent to +-1 mod ell: 263 = 2*131 + 1, and 146505763881528721 = -1 mod 131.
 The formula was checked by exact HNF and SNF for every prime ell <= 113, by an independent pure-Python HNF for ell <= 61,
 and here independently by SNF at ell = 11, 17, 19, 23, 29. No Lean proof yet; the container has no Lean toolchain.
+
+## Principal polarizations: every ppav in the class lacks zeta_131 (lead 1, 2026-11-27)
+
+`experiments/ecc2k130-weil-factor/lead1_polarization/REPORT.md` derives a parity rule from Deligne modules, Howe's
+polarization criterion and Hilbert reciprocity over K+. Let eps = (-7/ell), and let n(T) count the
+self-glued inert places v0 (above primes dividing U_ell that are -1 mod ell and inert in Q(sqrt-7)) where
+End(T) is non-maximal. A Deligne module T carries a principal polarization only if eps * (-1)^n(T) = +1,
+and every conjugation-stable order with that parity occurs.
+
+**At ell = 131.** eps = -1, 263 is of split type, and p2 = 146505763881528721 is of inert type. So:
+- **A_131 itself (End = O_K) is NOT principally polarizable.** This is consistent with the natural
+  restricted-product polarization, whose degree is 131^2 (docs/ecc2k130-explicit-ppav.md).
+- **Every ppav in the isogeny class has End non-maximal at v0 above p2,** so zeta_131 is not in End.
+- **Such ppavs exist:** the explicit module of PR #57, re-audited independently, has det 1, positive type,
+  and is non-maximal exactly at v0.
+
+**Consequence for the record.** No Jacobian isogenous to A_131 can have an F_2-rational automorphism of
+order 131. So the Torelli -> cyclic-cover-of-P^1 reduction, and the cover-trace evidence above (PR #70),
+apply to NO Jacobian in this class. That evidence remains correct as a statement about cyclic covers,
+but it does not bear on the window question. The window question is exactly: is one of the ppavs
+(End non-maximal at v0, no order-131 automorphism) a Jacobian? This is the "no useful automorphism"
+case, with no known decision procedure at dimension 130.
+
+**Controls.** The rule matches every computed case:
+- ell = 3, 5, 13, 19: no ppav at all. At ell = 3 this is also confirmed unconditionally by enumerating
+  all 768 genus-2 curves over F_2.
+- ell = 11: O_K is principally polarizable.
+- ell = 17, the same type as 131: a ppav exists iff End is non-maximal at v0 (45/45 vs 0/45 classes).
+
+The small-ell enumerations assume GRH. The ell = 131 statement does not.
