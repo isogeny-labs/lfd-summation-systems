@@ -427,3 +427,24 @@ case, with no known decision procedure at dimension 130.
 - ell = 17, the same type as 131: a ppav exists iff End is non-maximal at v0 (45/45 vs 0/45 classes).
 
 The small-ell enumerations assume GRH. The ell = 131 statement does not.
+
+## Explicit models without zeta_131, and where the Jacobian candidates live (lead 3, 2026-11-27)
+
+`experiments/ecc2k130-weil-factor/lead3_deligne/REPORT.md` constructs A' explicitly as a Deligne module, checked by two
+independent methods (PARI and pure Python).
+
+- **Minimal degree.** The smallest isogeny A -> A' with zeta not in End(A') has degree 263, and this is proved
+  minimal. The smallest degree among those of p2-power order is p2.
+- **End and Aut.** End(A') is a Gorenstein order of index p in O_K, and Aut(A') = {+-1}.
+- **Kernel.** The isogeny kernel is cyclic, and Frobenius acts on it by lambda with lambda^2 = 2.
+
+**Combined with lead 1.** 263 is of split type, so no index-263 model is principally polarizable. Every
+possible Jacobian in the class (a ppav, End non-maximal at v0 above p2) is reached from A only through
+isogenies of p2-power degree. On the minimal such isogeny, Frobenius acts on the kernel with order
+(p2-1)/12, about 1.2e16. So the kernel points are defined only over F_{2^(1.2e16)}.
+
+**Practical note (an observation, not a theorem about every route).** Even if such a model were a
+Jacobian, carrying the ECDLP across that isogeny would need an isogeny evaluation in dimension 130 with
+kernel points over a field of degree about 1.2e16. No known method does this. The window question is
+therefore open in principle (is one of these ppavs a Jacobian?), but any affirmative answer would also
+need a way to cross this isogeny before it gave an attack.
