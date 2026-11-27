@@ -364,7 +364,7 @@ Two independent methods give these answers:
   not in Z[pi, pi-bar]. The same test reports the rank drop at ell = 11 (p = 23) and ell = 19 (p = 457).
   The controls (ell = 5 and 13, and p = 3 at ell = 131) give full rank, with no false positive.
 
-**Structure (computed at four ell; not proved here).** At these four ell, Z[pi, pi-bar] fails to be
+**Structure (now PROVED, see `lead2_index/PROOF.md`; originally computed at four ell).** At these four ell, Z[pi, pi-bar] fails to be
 maximal exactly at the primes dividing the Lucas number U_ell = (alpha^ell - beta^ell)/(alpha - beta),
 and the index is |U_ell|^(ell-2). The mechanism: modulo a prime p dividing U_ell, alpha/beta is an
 ell-th root of unity, so pi-bar collapses onto pi's span and the rank halves (131 of 260). So zeta lies
@@ -383,3 +383,17 @@ The gap is localized:
 
 This is a reversal of the hoped-for closure, and the record should say so: the cover-of-P^1 evidence
 covers the natural model only, not the isogeny class.
+
+**Index formula: proof (lead 2, 2026-11-27).** `experiments/ecc2k130-weil-factor/lead2_index/PROOF.md` proves, for every
+odd prime ell, that [O_F (x) Z[zeta_ell] : Z[pi, pi-bar]] = |U_ell|^(ell-2), that the quotient is (Z/|U_ell|)^(ell-2),
+that |U_ell| O_K is contained in Z[pi, pi-bar], and that zeta lies in the order iff U_ell = +-1. For ell != 7 the ring
+O_F (x) Z[zeta_ell] is O_K.
+
+How the proof works:
+- Lift to O_F[T]/(T^ell - 1). There Z[alpha T, beta T^-1] is graded, and each graded piece has index |U_ell| by the
+  pairing D(alpha^i, beta^j) = U_{i+j}.
+- Divide by the norm line O_F * N, which meets the ring in f O_F * N (index f^2). This gives f^ell / f^2.
+
+Every prime dividing U_ell is congruent to +-1 mod ell: 263 = 2*131 + 1, and 146505763881528721 = -1 mod 131.
+The formula was checked by exact HNF and SNF for every prime ell <= 113, by an independent pure-Python HNF for ell <= 61,
+and here independently by SNF at ell = 11, 17, 19, 23, 29. No Lean proof yet; the container has no Lean toolchain.
