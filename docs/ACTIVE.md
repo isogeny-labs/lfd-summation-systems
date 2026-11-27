@@ -15,6 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
+- [ ] ECC2K-130 isogeny residue: decide whether zeta_131 lies in Z[pi, pi-bar] (HNF over Z); if yes, every isogenous model carries the order-131 automorphism and the cover-trace evidence covers the whole isogeny class (Claude, started 2026-11-27, branch claude/index-calculus-root-finding-e95kd6)
 - [ ] Prove the linearization-excess ceiling on frozen prime-degree LRF factor bases (Codex, started 2026-11-25, branch research/excess-ceiling-20261125, PR #71)
 - [x] Measure quadratic root-lift solver cost on frozen LRF cells (Codex, started 2026-11-25, branch research/quad-root-cost-20261125, PR #69)
 - [ ] Test exact subspace-remainder solving against native LRF on matched binary relation systems (Codex, started 2026-11-25, branch research/remainder-cost-20261125, PR #64)
