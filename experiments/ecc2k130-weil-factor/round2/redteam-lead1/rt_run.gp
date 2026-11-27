@@ -36,8 +36,8 @@ rt_run(ell) = {
   my(hn = rt_hilbert(rn));
   printf("  natural polarization on O_K: det=%s (ell^2=%d) integral=%d alternating=%d ; r_nat signs: #pos=%d #neg=%d (totally definite) ; Hilbert product=%d, places with -1: %s\n",
     matdet(Gn), ell^2, denominator(Gn) == 1, Gn + Gn~ == 0, #select(t -> t > 0, sn), #select(t -> t < 0, sn), hn[1], hn[3]);
-  \\ sanity control of rt_hilbert: product formula on random elements of K+
-  my(okprod = 1); for (k = 1, 3, my(x = Mod(random(10^4) - 5000 + sum(i = 1, poldegree(NFKP.pol) - 1, (random(7) - 3)*'y^i), NFKP.pol)); if (x != 0, okprod = okprod && (rt_hilbert(x)[1] == 1)));
+  \\ sanity control of rt_hilbert: product formula on random elements of K+ (small coefficients so the norm is easy to factor)
+  my(okprod = 1); for (k = 1, 3, my(x = Mod(random(41) - 20 + (random(5) - 2)*'y + (random(3) - 1)*'y^2, NFKP.pol)); if (x != 0, okprod = okprod && (rt_hilbert(x)[1] == 1)));
   printf("  control: Hilbert product formula holds on 3 random elements of K+: %d\n", okprod);
   my(res = List());
   listput(res, rt_case("End = O_K", idealhnf(NFK, 1), 0, EPS == 1));

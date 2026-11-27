@@ -1,0 +1,10 @@
+[init] ell=17  deg K=32  deg K+=16  h(K+)=1 (cyc [])  h(K)=45 (cyc [15, 3])  w(K)=34  #fu(K+)=15  eps=(-7/ell)=-1  [1487 ms]
+  p=271: v0=[16], 7 glued pairs
+  (a) method B over all 256 orders: agree with rule 256/256 ; table rows n(v0)=0/1, cols ppav no/yes: [128, 0; 0, 128] [40 s]
+  (b) order with v0:1 and 2 glued pairs: method A W=45 of 45 classes (rule predicts ppav: 1)
+      (c) explicit lattice after 268 twist tries
+    [v0:1 pairs:2] det Gram=1 integral=1 alternating=1 lam antisym=1 pi,pibar-stable=1,1 r>>0=1 zeta in End=0
+      Hilbert symbols: product=1, places with -1: [[17, 1, 1, "inert", -15], [271, 2, 1, "inert", -1], [271, 5, 1, "inert", -1], [271, 6, 1, "inert", -1], [271, 10, 1, "inert", -1], [271, 14, 1, "inert", -1]]
+  (b) order with v0:0 and 2 glued pairs: method A W=0 of 45 classes (rule predicts ppav: 0)
+  (b) order with v0:1 and 3 glued pairs: method A W=45 of 45 classes (rule predicts ppav: 1)
+exit: 0
