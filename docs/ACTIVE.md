@@ -15,6 +15,9 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
+- [ ] ECC2K-130 isogeny gap, lead 1: does any A' isogenous to A with zeta_131 not in End(A') carry a principal polarization? (Deligne modules / Howe; full decision at ell=11,19 as controls) (Claude, started 2026-11-27, branch claude/index-calculus-root-finding-e95kd6, PR #72)
+- [ ] ECC2K-130 isogeny gap, lead 2: prove [O_K : Z[pi,pi-bar]] = |U_ell|^(ell-2) and zeta in Z[pi,pi-bar] iff U_ell = +-1; verify at all primes ell <= 60 (Claude, started 2026-11-27, branch claude/index-calculus-root-finding-e95kd6, PR #72)
+- [ ] ECC2K-130 isogeny gap, lead 3: construct the Deligne module of a model A' without zeta_131 explicitly (minimal-degree isogeny A -> A', its kernel, Aut(A')) (Claude, started 2026-11-27, branch claude/index-calculus-root-finding-e95kd6, PR #72)
 - [x] ECC2K-130 isogeny residue: decide whether zeta_131 lies in Z[pi, pi-bar] (HNF over Z); if yes, every isogenous model carries the order-131 automorphism and the cover-trace evidence covers the whole isogeny class (Claude, started 2026-11-27, branch claude/index-calculus-root-finding-e95kd6, PR #72; result: NO -- index (263*146505763881528721)^129 = |U_131|^129, gap is real)
 - [ ] Prove the linearization-excess ceiling on frozen prime-degree LRF factor bases (Codex, started 2026-11-25, branch research/excess-ceiling-20261125, PR #71)
 - [x] Measure quadratic root-lift solver cost on frozen LRF cells (Codex, started 2026-11-25, branch research/quad-root-cost-20261125, PR #69)
