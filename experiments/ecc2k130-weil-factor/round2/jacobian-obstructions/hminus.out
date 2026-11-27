@@ -1,0 +1,20 @@
+== control (a): w*prod for Q(zeta_p) (Q=1 for cyclotomic); known h^-: 23:3 29:8 31:9 37:37 41:121 43:211 47:695 59:41241 ==
+p=23  3.0000000  (imag 1.2 e-403)
+p=29  8.0000000  (imag 6.6 e-404)
+p=31  9.0000000  (imag 7.1 e-404)
+p=37  37.000000  (imag 3.9 e-402)
+p=41  121.00000  (imag 1.2 e-401)
+p=43  211.00000  (imag 3.1 e-401)
+p=47  695.00000  (imag 8.9 e-401)
+p=59  41241.000  (imag 4.0 e-399)
+== control (b): K_ell: analytic w*prod vs bnfinit(K).no / bnfinit(K+).no ==
+ell=3  analytic w*prod=0.5000000000 (imag 5.9 e-406)   h_K=1  h_K+=1  h_K/h_K+=1  deg K+=2 totally real=1
+ell=5  analytic w*prod=0.5000000000 (imag 1.2 e-405)   h_K=1  h_K+=1  h_K/h_K+=1  deg K+=4 totally real=0
+ell=11  analytic w*prod=2.500000000 (imag 7.5 e-404)   h_K=5  h_K+=1  h_K/h_K+=5  deg K+=10 totally real=1
+ell=13  analytic w*prod=3.500000000 (imag 8.5 e-405)   h_K=7  h_K+=7  h_K/h_K+=1  deg K+=12 totally real=0
+ell=17  analytic w*prod=22.50000000 (imag 1.1 e-402)   h_K=45  h_K+=45  h_K/h_K+=1  deg K+=16 totally real=0
+ell=19  analytic w*prod=74.00000000 (imag 3.9 e-402)   h_K=148  h_K+=1  h_K/h_K+=148  deg K+=18 totally real=1
+ell=131 analytic w*prod = 5.64123536 e62  imag 1.3 e-340  log2 = 208.4556
+ell=131 frac(w*prod) = 5.000 e-1   frac(2*w*prod) = 6.179 e-339
+ell=131 w*prod rounded = 564123535752808947791471770371678420190281741097342767741299287
+control: h^-(Q(zeta_131)) analytic = 28496379729272136525 (frac 8.1 e-383)

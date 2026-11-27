@@ -1,0 +1,77 @@
+{
+ "power_sum_crosscheck_k_le": 600,
+ "P_A_in_Z[x^k]_for_k|130": {
+  "2": false,
+  "5": false,
+  "10": false,
+  "13": false,
+  "26": false,
+  "65": false,
+  "130": false
+ },
+ "coeff_x^259": -1,
+ "detector_control_flags_Q(x^2)": true,
+ "classes": {
+  "A": {
+   "N_1..8": [
+    2,
+    2,
+    14,
+    18,
+    22,
+    74,
+    142,
+    226
+   ],
+   "a_1..8": [
+    2,
+    0,
+    4,
+    4,
+    4,
+    10,
+    20,
+    26
+   ],
+   "min_N": 2,
+   "min_a": 0,
+   "all_a_nonneg_integer_d<=400": true,
+   "gonality_lower_bound_from_counts": 2,
+   "hyperelliptic_fiber_patterns_over_P1(F2)": [],
+   "hyperelliptic_possible_by_degree_1_2_fibers": false
+  },
+  "twist_-pi": {
+   "N_1..8": [
+    4,
+    2,
+    4,
+    18,
+    44,
+    74,
+    116,
+    226
+   ],
+   "a_1..8": [
+    4,
+    -1,
+    0,
+    4,
+    8,
+    12,
+    16,
+    26
+   ],
+   "min_N": 2,
+   "min_a": -1,
+   "all_a_nonneg_integer_d<=400": false,
+   "gonality_lower_bound_from_counts": 2,
+   "hyperelliptic_fiber_patterns_over_P1(F2)": [],
+   "hyperelliptic_possible_by_degree_1_2_fibers": false
+  }
+ },
+ "hyperelliptic_test_control_genus2_models": {
+  "models": 1920,
+  "with_a2=0": 320,
+  "rejected_by_test(should be 0)": 0
+ }
+}

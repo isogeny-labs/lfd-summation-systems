@@ -1,0 +1,22 @@
+[0;31m  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).[0m
+GP check: [0,0]~ == 0 evaluates to 1
+ell=11 deg=20 bnfinit 136 ms, h=5 cyc=[5], #fu=9, w=22
+ell=11 End=O_K: ORIGINAL classes=5 princ=5 antisym=4 ppav=4 | FIXED antisym=5 ppav=5 (zero-vector solutions wrongly discarded by original: antisym step 1, sign step 0)
+   class 1: det Gram on S = 1, integral 1
+   class 2: det Gram on S = 1, integral 1
+   class 3: det Gram on S = 1, integral 1
+   class 4: det Gram on S = 1, integral 1
+   class 5: det Gram on S = 1, integral 1
+[0;31m  *** polredbest: Warning: increasing stack size to 16000000.[0m
+[0;31m  *** bnfinit: Warning: increasing stack size to 32000000.[0m
+[0;31m  *** bnfinit: Warning: increasing stack size to 64000000.[0m
+ell=17 deg=32 bnfinit 1555 ms, h=45 cyc=[15, 3], #fu=15, w=34
+ell=17 R: v0 only: ORIGINAL classes=45 princ=45 antisym=45 ppav=45 | FIXED antisym=45 ppav=45 (zero-vector solutions wrongly discarded by original: antisym step 0, sign step 0)
+ell=17 R: one glued pair: ORIGINAL classes=45 princ=45 antisym=43 ppav=0 | FIXED antisym=45 ppav=0 (zero-vector solutions wrongly discarded by original: antisym step 2, sign step 0)
+ell=17 R: v0 + one pair: ORIGINAL classes=45 princ=45 antisym=43 ppav=43 | FIXED antisym=45 ppav=45 (zero-vector solutions wrongly discarded by original: antisym step 2, sign step 0)
+ell=17 R: two pairs: ORIGINAL classes=45 princ=45 antisym=42 ppav=0 | FIXED antisym=45 ppav=0 (zero-vector solutions wrongly discarded by original: antisym step 3, sign step 0)
+ell=17 R = O_K: ORIGINAL classes=45 princ=45 antisym=44 ppav=0 | FIXED antisym=45 ppav=0 (zero-vector solutions wrongly discarded by original: antisym step 1, sign step 0)
+
+real	0m23.562s
+user	0m23.362s
+sys	0m0.120s

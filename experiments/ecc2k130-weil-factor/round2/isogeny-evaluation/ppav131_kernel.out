@@ -1,0 +1,7 @@
+pi on I/O_K:  mod 263: c=110  pibar: 110  alpha-stable: True  zeta-stable: True
+              mod p2 : c=14975904886999252  pibar: 14975904886999252  alpha-stable: False  zeta-stable: False
+JSON F_and_V_on_cyclic_quotient = 20232771320537962750 ; mod 263 = 110, mod p2 = 14975904886999252 ; agrees with recomputed: True
+c mod p2 == lambda (residues.gp / residues_check.py): True ; c^2 == 2 mod p2: True ; c^2 mod 263 == 2: True
+ord_263(c) = 262 ; ord_p2(c) = 12208813656794060 = (p2-1)/12 ; kernel points of O_K -> I rational over F_{2^m} iff 1599354589040021860 | m
+negative control: the 263-part alone needs only F_{2^262}
+[Z[alpha] I : I] = p2 (alpha*v not proportional to v mod p2; proportional mod 263: True)
