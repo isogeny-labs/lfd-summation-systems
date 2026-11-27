@@ -1,0 +1,8 @@
+(1) OMEGA == [Tr(lam e_i conj e_j)] on all 67600 entries: 1   (denominator of lam coords: 917) [62125 ms]
+(2) conj(lam) == -lam: 1
+(3) Phi_+ (sqrt-7 -> +i sqrt7): #Im>0 = 130, #Im<0 = 0, #~0 = 0 ; Phi_-: #Im>0 = 0, #Im<0 = 130
+    mixed-s CM types are not the canonical-lift type (v_2(phi(pi)) depends only on phi|Q(sqrt-7))
+(4) Gram of b on I == PRINC (up to transpose convention): 1 ; exact det(PRINC) = 1 ; integral 1
+    I stable under pi: 1, under pibar=2/pi: 1, under zeta: 0
+(5) zeta*v proportional to v mod 263: 1 ; mod p2=146505763881528721: 0  (so End(I) is non-maximal exactly at p2)
+    pi*v ~ v and pibar*v ~ v mod p2: 1 1 (line is the self-glued residue point: pi == pibar in F_p)

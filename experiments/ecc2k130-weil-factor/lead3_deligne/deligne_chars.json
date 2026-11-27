@@ -1,0 +1,205 @@
+[
+ {
+  "ell": 11,
+  "p": 23,
+  "split_in_Q_sqrt_m7": true,
+  "p_mod_ell": 1,
+  "c=a1/a2 has order ell": true,
+  "#B-characters": 20,
+  "#S-characters": 11,
+  "#merged pairs (S-char with 2 B-chars)": 9,
+  "max fibre": 2,
+  "#merged pairs whose S-character is F_p-rational": 9,
+  "#merged pairs F_p-rational with the two B-chars Frobenius-conjugate (inert type)": 0,
+  "#merged pairs stable under complex conjugation": 1,
+  "chosen pair: chi1(pi) = chi2(pi) = lambda": [
+   18,
+   0
+  ],
+  "lambda^2 == 2": true,
+  "lambda in F_p": true,
+  "chosen pair is the F_p-rational one": true,
+  "ord(lambda) in F_p^* (field of definition of kernel points: F_2^ord)": 11,
+  "histogram ord(chi(pi)) over F_p-rational merged pairs": {
+   "1": 1,
+   "11": 8
+  },
+  "functional": "f = chi1 - mu*chi2, mu=2",
+  "T: all basis vectors satisfy f=0": true,
+  "T: index [O_K:T]": 23,
+  "T: pi*T in T (integer check on every basis vector)": true,
+  "T: pibar*T in T": true,
+  "T: #basis vectors t with zeta*t notin T": 19,
+  "k in 1..2ell with zeta^k in claimed End(T)": [
+   11,
+   22
+  ],
+  "-1 in End(T)": true,
+  "sampled x: (in E and xT<=T) count, (notin E and xT notin T) count": [
+   10,
+   10
+  ],
+  "pi, pibar, 2, p*zeta in claimed End(T)": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "T': pi*v == lambda*v mod p (kernel point is a pi-eigenvector, lambda=chi1(pi))": true,
+  "T': pibar*v == (2/lambda)*v mod p": true,
+  "T': zeta*v in F_p*v + pO_K (would mean O_K-stable)": false,
+  "T': v nonzero mod p": true
+ },
+ {
+  "ell": 19,
+  "p": 457,
+  "split_in_Q_sqrt_m7": true,
+  "p_mod_ell": 1,
+  "c=a1/a2 has order ell": true,
+  "#B-characters": 36,
+  "#S-characters": 19,
+  "#merged pairs (S-char with 2 B-chars)": 17,
+  "max fibre": 2,
+  "#merged pairs whose S-character is F_p-rational": 17,
+  "#merged pairs F_p-rational with the two B-chars Frobenius-conjugate (inert type)": 0,
+  "#merged pairs stable under complex conjugation": 1,
+  "chosen pair: chi1(pi) = chi2(pi) = lambda": [
+   377,
+   0
+  ],
+  "lambda^2 == 2": true,
+  "lambda in F_p": true,
+  "chosen pair is the F_p-rational one": true,
+  "ord(lambda) in F_p^* (field of definition of kernel points: F_2^ord)": 152,
+  "histogram ord(chi(pi)) over F_p-rational merged pairs": {
+   "8": 1,
+   "152": 16
+  },
+  "functional": "f = chi1 - mu*chi2, mu=139",
+  "T: all basis vectors satisfy f=0": true,
+  "T: index [O_K:T]": 457,
+  "T: pi*T in T (integer check on every basis vector)": true,
+  "T: pibar*T in T": true,
+  "T: #basis vectors t with zeta*t notin T": 35,
+  "k in 1..2ell with zeta^k in claimed End(T)": [
+   19,
+   38
+  ],
+  "-1 in End(T)": true,
+  "sampled x: (in E and xT<=T) count, (notin E and xT notin T) count": [
+   10,
+   10
+  ],
+  "pi, pibar, 2, p*zeta in claimed End(T)": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "T': pi*v == lambda*v mod p (kernel point is a pi-eigenvector, lambda=chi1(pi))": true,
+  "T': pibar*v == (2/lambda)*v mod p": true,
+  "T': zeta*v in F_p*v + pO_K (would mean O_K-stable)": false,
+  "T': v nonzero mod p": true
+ },
+ {
+  "ell": 131,
+  "p": 263,
+  "split_in_Q_sqrt_m7": true,
+  "p_mod_ell": 1,
+  "c=a1/a2 has order ell": true,
+  "#B-characters": 260,
+  "#S-characters": 131,
+  "#merged pairs (S-char with 2 B-chars)": 129,
+  "max fibre": 2,
+  "#merged pairs whose S-character is F_p-rational": 129,
+  "#merged pairs F_p-rational with the two B-chars Frobenius-conjugate (inert type)": 0,
+  "#merged pairs stable under complex conjugation": 1,
+  "chosen pair: chi1(pi) = chi2(pi) = lambda": [
+   110,
+   0
+  ],
+  "lambda^2 == 2": true,
+  "lambda in F_p": true,
+  "chosen pair is the F_p-rational one": true,
+  "ord(lambda) in F_p^* (field of definition of kernel points: F_2^ord)": 262,
+  "histogram ord(chi(pi)) over F_p-rational merged pairs": {
+   "2": 1,
+   "262": 128
+  },
+  "functional": "f = chi1 - mu*chi2, mu=42",
+  "T: all basis vectors satisfy f=0": true,
+  "T: index [O_K:T]": 263,
+  "T: pi*T in T (integer check on every basis vector)": true,
+  "T: pibar*T in T": true,
+  "T: #basis vectors t with zeta*t notin T": 259,
+  "k in 1..2ell with zeta^k in claimed End(T)": [
+   131,
+   262
+  ],
+  "-1 in End(T)": true,
+  "sampled x: (in E and xT<=T) count, (notin E and xT notin T) count": [
+   3,
+   3
+  ],
+  "pi, pibar, 2, p*zeta in claimed End(T)": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "T': pi*v == lambda*v mod p (kernel point is a pi-eigenvector, lambda=chi1(pi))": true,
+  "T': pibar*v == (2/lambda)*v mod p": true,
+  "T': zeta*v in F_p*v + pO_K (would mean O_K-stable)": false,
+  "T': v nonzero mod p": true
+ },
+ {
+  "ell": 131,
+  "p": 146505763881528721,
+  "split_in_Q_sqrt_m7": false,
+  "p_mod_ell": 130,
+  "c=a1/a2 has order ell": true,
+  "#B-characters": 260,
+  "#S-characters": 131,
+  "#merged pairs (S-char with 2 B-chars)": 129,
+  "max fibre": 2,
+  "#merged pairs whose S-character is F_p-rational": 1,
+  "#merged pairs F_p-rational with the two B-chars Frobenius-conjugate (inert type)": 1,
+  "#merged pairs stable under complex conjugation": 1,
+  "chosen pair: chi1(pi) = chi2(pi) = lambda": [
+   14975904886999252,
+   0
+  ],
+  "lambda^2 == 2": true,
+  "lambda in F_p": true,
+  "chosen pair is the F_p-rational one": true,
+  "ord(lambda) in F_p^* (field of definition of kernel points: F_2^ord)": 12208813656794060,
+  "histogram ord(chi(pi)) over F_p-rational merged pairs": {
+   "12208813656794060": 1
+  },
+  "functional": "f = Tr_{F_p^2/F_p}(theta*chi1), theta=(55538195312847542, 31105602728046190)",
+  "T: all basis vectors satisfy f=0": true,
+  "T: index [O_K:T]": 146505763881528721,
+  "T: pi*T in T (integer check on every basis vector)": true,
+  "T: pibar*T in T": true,
+  "T: #basis vectors t with zeta*t notin T": 259,
+  "k in 1..2ell with zeta^k in claimed End(T)": [
+   131,
+   262
+  ],
+  "-1 in End(T)": true,
+  "sampled x: (in E and xT<=T) count, (notin E and xT notin T) count": [
+   3,
+   3
+  ],
+  "pi, pibar, 2, p*zeta in claimed End(T)": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "T': pi*v == lambda*v mod p (kernel point is a pi-eigenvector, lambda=chi1(pi))": true,
+  "T': pibar*v == (2/lambda)*v mod p": true,
+  "T': zeta*v in F_p*v + pO_K (would mean O_K-stable)": false,
+  "T': v nonzero mod p": true
+ }
+]
