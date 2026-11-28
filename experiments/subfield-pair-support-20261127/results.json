@@ -1,0 +1,226 @@
+{
+  "curve": {
+    "a1": 1,
+    "a2": 2048,
+    "a6": 2
+  },
+  "field_modulus": "x^16 + x^5 + x^3 + x^2 + 1",
+  "generator": [
+    40963,
+    65307
+  ],
+  "order": 65986,
+  "prime_subgroup_order": 32993,
+  "product_space_dimensions": {
+    "monomial_control": 15,
+    "subfield": 8
+  },
+  "runs": {
+    "17123": {
+      "cold_bsgs": {
+        "baby_steps": 182,
+        "giant_steps": 94,
+        "recovered_scalar": 17123,
+        "seconds": 0.0018494580003789451
+      },
+      "cold_rho": {
+        "floyd_iterations": 376,
+        "recovered_scalar": 17123,
+        "restart": 0,
+        "seconds": 0.015727209000033326,
+        "walk_steps": 1128
+      },
+      "monomial_control": {
+        "base_logs": 128,
+        "base_seconds": 0.07043462499996167,
+        "cold_total_seconds": 1.1000534579998202,
+        "full_rank_queries": 353,
+        "full_rank_rows": 349,
+        "linear_solve_seconds": 0.0097271249996993,
+        "pair_multiplicities": {
+          "1": 12304,
+          "2": 6154,
+          "3": 1928,
+          "4": 498,
+          "5": 64,
+          "6": 10,
+          "128": 1
+        },
+        "queries_examined": 1024,
+        "queries_with_relation": 650,
+        "query_seconds_at_full_rank": 0.01553650000005291,
+        "rank": 129,
+        "recovered_scalar": 17123,
+        "signed_points": 256,
+        "support": 20959,
+        "table_seconds": 1.0043552080001064,
+        "unordered_pair_additions": 32896
+      },
+      "subfield": {
+        "base_logs": 128,
+        "base_seconds": 0.15258120799990138,
+        "cold_total_seconds": 1.1708400829998027,
+        "full_rank_queries": 203,
+        "full_rank_rows": 220,
+        "linear_solve_seconds": 0.006974667000122281,
+        "pair_multiplicities": {
+          "1": 16440,
+          "2": 8164,
+          "128": 1
+        },
+        "queries_examined": 1024,
+        "queries_with_relation": 750,
+        "query_seconds_at_full_rank": 0.009504582999852573,
+        "rank": 129,
+        "recovered_scalar": 17123,
+        "signed_points": 256,
+        "support": 24605,
+        "table_seconds": 1.0017796249999265,
+        "unordered_pair_additions": 32896
+      },
+      "target": [
+        41753,
+        724
+      ]
+    },
+    "29113": {
+      "cold_bsgs": {
+        "baby_steps": 182,
+        "giant_steps": 159,
+        "recovered_scalar": 29113,
+        "seconds": 0.002189000000271335
+      },
+      "cold_rho": {
+        "floyd_iterations": 39,
+        "recovered_scalar": 29113,
+        "restart": 0,
+        "seconds": 0.0016497920000801969,
+        "walk_steps": 117
+      },
+      "monomial_control": {
+        "base_logs": 128,
+        "base_seconds": 0.07043462499996167,
+        "cold_total_seconds": 1.1117793329999586,
+        "full_rank_queries": 626,
+        "full_rank_rows": 609,
+        "linear_solve_seconds": 0.015371999999842956,
+        "pair_multiplicities": {
+          "1": 12304,
+          "2": 6154,
+          "3": 1928,
+          "4": 498,
+          "5": 64,
+          "6": 10,
+          "128": 1
+        },
+        "queries_examined": 1024,
+        "queries_with_relation": 670,
+        "query_seconds_at_full_rank": 0.0278060830000868,
+        "rank": 129,
+        "recovered_scalar": 29113,
+        "signed_points": 256,
+        "support": 20959,
+        "table_seconds": 0.9981666250000671,
+        "unordered_pair_additions": 32896
+      },
+      "subfield": {
+        "base_logs": 128,
+        "base_seconds": 0.15258120799990138,
+        "cold_total_seconds": 1.1699104579993218,
+        "full_rank_queries": 257,
+        "full_rank_rows": 245,
+        "linear_solve_seconds": 0.007362041999840585,
+        "pair_multiplicities": {
+          "1": 16440,
+          "2": 8164,
+          "128": 1
+        },
+        "queries_examined": 1024,
+        "queries_with_relation": 751,
+        "query_seconds_at_full_rank": 0.011293707999811886,
+        "rank": 129,
+        "recovered_scalar": 29113,
+        "signed_points": 256,
+        "support": 24605,
+        "table_seconds": 0.998673499999768,
+        "unordered_pair_additions": 32896
+      },
+      "target": [
+        62638,
+        3563
+      ]
+    },
+    "3425": {
+      "cold_bsgs": {
+        "baby_steps": 182,
+        "giant_steps": 18,
+        "recovered_scalar": 3425,
+        "seconds": 0.0021297089997460716
+      },
+      "cold_rho": {
+        "floyd_iterations": 21,
+        "recovered_scalar": 3425,
+        "restart": 0,
+        "seconds": 0.0010532090000197059,
+        "walk_steps": 63
+      },
+      "monomial_control": {
+        "base_logs": 128,
+        "base_seconds": 0.07043462499996167,
+        "cold_total_seconds": 1.1630992499999593,
+        "full_rank_queries": 298,
+        "full_rank_rows": 301,
+        "linear_solve_seconds": 0.009046542000305635,
+        "pair_multiplicities": {
+          "1": 12304,
+          "2": 6154,
+          "3": 1928,
+          "4": 498,
+          "5": 64,
+          "6": 10,
+          "128": 1
+        },
+        "queries_examined": 1024,
+        "queries_with_relation": 651,
+        "query_seconds_at_full_rank": 0.013313041999936104,
+        "rank": 129,
+        "recovered_scalar": 3425,
+        "signed_points": 256,
+        "support": 20959,
+        "table_seconds": 1.0703050409997559,
+        "unordered_pair_additions": 32896
+      },
+      "subfield": {
+        "base_logs": 128,
+        "base_seconds": 0.15258120799990138,
+        "cold_total_seconds": 1.5609372500002792,
+        "full_rank_queries": 321,
+        "full_rank_rows": 316,
+        "linear_solve_seconds": 0.04423295800006599,
+        "pair_multiplicities": {
+          "1": 16440,
+          "2": 8164,
+          "128": 1
+        },
+        "queries_examined": 1024,
+        "queries_with_relation": 761,
+        "query_seconds_at_full_rank": 0.0184330840002076,
+        "rank": 129,
+        "recovered_scalar": 3425,
+        "signed_points": 256,
+        "support": 24605,
+        "table_seconds": 1.3456900000001042,
+        "unordered_pair_additions": 32896
+      },
+      "target": [
+        18763,
+        27551
+      ]
+    }
+  },
+  "target_scalars_for_verification": [
+    3425,
+    17123,
+    29113
+  ]
+}
