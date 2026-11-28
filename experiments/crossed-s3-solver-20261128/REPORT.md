@@ -9,6 +9,18 @@ has the same ordered factor-base-abscissa relation set as direct four-point
 addition on all nine queries. The exact Boolean eliminant was generated from
 that independent group-addition predicate. The n=3 curves had no selected
 zero-relation target; the manifest records all selected queries.
+
+**Post-measurement interpretation correction (28 November 2026).** The
+frozen protocol called the direct Boolean eliminant a small-field baseline.
+In `generate.py`, that arm's truth table is filled from `expected`, the
+complete target-specific relation set found by exhaustive point addition.
+Consequently its polynomial input already contains the query's answer. It is
+an exact algebraic **oracle control**, not a usable cold relation-finding
+method or a fair speed comparator. The separate direct-enumeration timing
+proposed in the protocol was not performed. This correction changes no input,
+raw solver record, or tree-versus-crossed comparison: those two polynomial
+systems use the target and factor base, but do not use `expected` to form
+their equations.
 An [independent Sage point replay](sage-replay.json), with source committed
 before its result, matched the full ordered tuple set on all nine queries,
 including the n=5 cells. It used Sage finite fields and elliptic-curve point
@@ -39,7 +51,8 @@ Solver: msolve 0.11.0, one thread, seed 12345, grevlex, `-g 2 -c 0 -v 2`.
 The table gives median process wall time over three runs, maximum logged F4
 degree, and crossed/single ratios of cumulative F4 matrix cells. All arms
 used identical targets and factor bases. `D` is the direct Boolean eliminant,
-whose construction used exhaustive point addition.
+whose construction used the already enumerated target-specific answer. Its
+column is an oracle-control diagnostic only.
 
 | n, a, target x | Relations | Tree s | Crossed s | D s | F4 degree tree / crossed | Crossed/tree matrix cells |
 |---|---:|---:|---:|---:|---:|---:|
@@ -61,8 +74,8 @@ cells by **10.36×** and wall time by about **4.2×**. The n=5 positive cell
 was especially costly: crossed/single median wall ratio **29.48×**.
 
 This is a concrete negative for the crossed presentation's GB stage on this
-frozen range. The direct eliminant was fastest at the GB stage in 9/9, but
-its exhaustive construction cost has not been charged to a cold query.
+frozen range. The direct eliminant's fast GB stage cannot be promoted into a
+solver result: constructing its input required the complete answer first.
 Maximum logged F4 degree is an observed solver metric, not a proof of degree
 of regularity. The GB-only command did not extract point relations. Input
 construction, exceptional-branch recovery, solution extraction, verification,
