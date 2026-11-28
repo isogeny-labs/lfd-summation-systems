@@ -1,0 +1,121 @@
+{
+  "cells": [
+    {
+      "a": 1,
+      "b": 1,
+      "checked": 48,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 5,
+      "mismatches": [],
+      "naive_affine_only_missed": 18,
+      "p": 7,
+      "true_relations": 48,
+      "true_relations_with_cancelling_pair": 42,
+      "x_count": 2
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "checked": 1280,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 8,
+      "mismatches": [],
+      "naive_affine_only_missed": 235,
+      "p": 7,
+      "true_relations": 583,
+      "true_relations_with_cancelling_pair": 373,
+      "x_count": 4
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "checked": 19208,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 14,
+      "mismatches": [],
+      "naive_affine_only_missed": 1711,
+      "p": 11,
+      "true_relations": 8089,
+      "true_relations_with_cancelling_pair": 3511,
+      "x_count": 7
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "checked": 9072,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 12,
+      "mismatches": [],
+      "naive_affine_only_missed": 975,
+      "p": 11,
+      "true_relations": 3911,
+      "true_relations_with_cancelling_pair": 1873,
+      "x_count": 6
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "checked": 65610,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 18,
+      "mismatches": [],
+      "naive_affine_only_missed": 4323,
+      "p": 13,
+      "true_relations": 25905,
+      "true_relations_with_cancelling_pair": 9003,
+      "x_count": 9
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "checked": 175692,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 20,
+      "mismatches": [],
+      "naive_affine_only_missed": 5997,
+      "p": 13,
+      "true_relations": 37041,
+      "true_relations_with_cancelling_pair": 11175,
+      "x_count": 11
+    }
+  ],
+  "protocol_sha256": "7488538bd967d44b6dcb39c3ae5fa2c1beb35bc2ed80016eb02d3030045703a6",
+  "schema": "crossed-s3-witness/v1",
+  "source_sha256": "77ba7f4acf031ade16121df57c0be2ba5af5f8cd456a97cdc954c05e40966067"
+}
