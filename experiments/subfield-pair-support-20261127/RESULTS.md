@@ -6,9 +6,9 @@ Does a subfield-coordinate factor base improve two-summand relation support
 and complete single-target cost, compared with an equal-size coordinate
 subspace on the **same** non-descending binary curve and target subgroup?
 This screen uses exact point addition to verify the relations behind the
-binary third summation polynomial. It does not use a polynomial-system
-solver, so its pair-table timings are a favorable oracle for relation
-finding, not a measured S3/LRF solver time.
+binary third summation polynomial. It benchmarks both an exhaustive pair
+table and a direct subfield-quadratic S3 oracle. The latter is a specialized
+two-summand construction; it does not measure a general S3/LRF solver.
 
 ## Fixture and validity
 
@@ -36,6 +36,37 @@ It projects the equality into the prime-order subgroup by doubling and
 solves the resulting linear system for all base logs and the target log.
 The recovered scalar is checked independently by scalar multiplication.
 
+## Frobenius-eliminated S3 oracle
+
+Here `q=256` and `K/F_q` is quadratic. For a nonzero query point `Q`, put
+`t=x(Q)`, and for candidate abscissas `x1,x2 in F_q`, put
+`s=x1+x2` and `p=x1*x2`. The binary S3 equation becomes
+
+    p^2 + t^2*s^2 + t*p + b6 = 0.
+
+The exact base enumeration proves every point with `x in F_q` lies outside
+the odd-order subgroup, apart from the excluded order-two point. Hence
+every nonzero subgroup query has `t not in F_q`. Write
+`A=t+t^q`, `B=b6+b6^q`, `N=t*t^q`, and `C=B/A`. Taking the
+`q`-Frobenius difference of S3 yields `p=A*s^2+C`. Substituting
+`u=s^2` back into S3 gives the **quadratic over F_q**
+
+    A^2*u^2 + N*u + D = 0,    D=C^2+t*C+b6 in F_q.
+
+For each of its at most two roots, `s` is uniquely determined because
+squaring is bijective in `F_q`; `p=A*u+C`. The two abscissas are the roots
+of the second quadratic `X^2+s*X+p`. Each unordered abscissa pair gives
+at most one signed representation of a fixed nonzero `Q`, because the
+base excludes order-two summands. Thus this oracle returns at most two
+signed relations per query. It precomputes the Artin-Schreier map
+`v -> v^2+v` on `F_q` to solve the two quadratics, and verifies every
+returned point relation. A separate exhaustive pair-table audit confirms
+exact set equality on all 1,024 queries for each target.
+
+This lowers the **univariate degree of this two-summand relation query**
+to two. It is not a bound on the solving degree of other arities or a
+generic binary S3 presentation.
+
 ## Results
 
 Exact enumeration over all 32,993 subgroup elements gives:
@@ -51,24 +82,27 @@ base size and pair count. This is a measured component benefit, not a
 lower total solve cost.
 
 The following are cold single-target seconds from the frozen
-SageMath 10.10.rc0 replay on this host. Each relation run charges base
+SageMath 10.10.rc0 replay on this host. Pair-table runs charge base
 construction, all 32,896 pair additions, queries through first full
-rank, and linear elimination. The scalar is planted for verification;
+rank, and linear elimination. Direct-oracle runs charge base
+construction, its Artin-Schreier lookup, queries, and elimination; the
+pair table used only to audit completeness is excluded. The scalar is
+planted for verification;
 the algorithms receive only its public target point. Query counts are
 the first full-rank prefix of a deterministic 1,024-query stream.
 
-| Target scalar | Subfield queries / seconds | Control queries / seconds | Cold BSGS seconds | Cold rho seconds |
-|---:|---:|---:|---:|---:|
-| 3425 | 321 / 1.561 | 298 / 1.163 | 0.00213 | 0.00105 |
-| 17123 | 203 / 1.171 | 353 / 1.100 | 0.00185 | 0.01573 |
-| 29113 | 257 / 1.170 | 626 / 1.112 | 0.00219 | 0.00165 |
+| Target scalar | Direct subfield queries / seconds | Subfield pair-table seconds | Control pair-table queries / seconds | Cold BSGS seconds | Cold rho seconds |
+|---:|---:|---:|---:|---:|---:|
+| 3425 | 321 / 1.041 | 1.570 | 298 / 1.270 | 0.00139 | 0.00098 |
+| 17123 | 203 / 0.628 | 1.529 | 353 / 1.138 | 0.00184 | 0.02325 |
+| 29113 | 257 / 0.718 | 1.270 | 626 / 1.155 | 0.00219 | 0.00168 |
 
 The subfield base raises the chance that one query yields a relation,
 but this does not translate to a consistent first-full-rank advantage.
-The pair table alone costs roughly one second here, while cold BSGS
-uses 182 baby steps and finishes in roughly two milliseconds. Even this
-favorable exact-group relation oracle is far behind the matched generic
-methods on these three targets. The result is a bounded negative cost
+The direct quadratic oracle saves the pair-table work, but its cold
+method still takes 0.63–1.04 seconds. Cold BSGS uses 182 baby steps and
+finishes in roughly two milliseconds. Even this specialized oracle is far
+behind the matched generic methods on these three targets. The result is a bounded negative cost
 screen for this fixture; it is not a universal complexity bound.
 
 `cold_total_seconds` is optimistic: it uses the known first-full-rank
@@ -89,4 +123,4 @@ python3 experiments/subfield-pair-support-20261127/verify.py \
 The verifier compares every discrete field, support, query, rank, and
 recovered-scalar record with `results.json`; wall-time fields are omitted
 from equality because they vary by host and load. The committed result
-SHA-256 is `db52aec9b1236292aff9559c59063568715fb74af5d8604a2a6d9e251a359998`.
+SHA-256 is `84ec881a8d4480c4514092b11f1d30b17f1a36854b4de1bafbf688cdf330e6a4`.

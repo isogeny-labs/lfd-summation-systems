@@ -99,6 +99,52 @@ def s3(x, y, t):
     return (x*y + x*t + y*t)**2 + x*y*t + b6
 
 
+def quadratic_oracle(Q, base, index_by_x, signed_labels, as_roots):
+    """Complete signed S3 relations via a quadratic over the subfield."""
+    assert not Q.is_zero()
+    t = Q[0]
+    tq = t**256
+    assert t != tq
+    A = F(t + tq)
+    B = F(b6 + b6**256)
+    N = F(t*tq)
+    C = B/A
+    D = F(C*C + t*C + b6)
+    alpha = N/(A*A)
+    beta = D/(A*A)
+    out = {}
+    for v in as_roots.get(beta/(alpha*alpha), ()):
+        u = alpha*v
+        s = u.sqrt()
+        p = A*u + C
+        if s == 0:
+            x = K(p.sqrt())
+            xs = [x, x]
+        else:
+            xs = sorted((K(s*v) for v in as_roots.get(p/(s*s), ())), key=bits)
+        if len(xs) != 2:
+            continue
+        x1, x2 = xs
+        if x1 not in index_by_x or x2 not in index_by_x:
+            continue
+        i = index_by_x[x1]
+        for P in (base[i], -base[i]):
+            R = Q - P
+            if R not in signed_labels or R[0] != x2:
+                continue
+            pi, si = signed_labels[P]
+            qi, ti = signed_labels[R]
+            if (pi if si == 1 else len(base)+pi) <= (qi if ti == 1 else len(base)+qi):
+                row = (pi, si, qi, ti, P[0], R[0])
+            else:
+                row = (qi, ti, pi, si, R[0], P[0])
+            assert P + R == Q and s3(row[4], row[5], t) == 0
+            key = (row[0], row[1], row[2], row[3])
+            out[key] = row
+    assert len(out) <= 2
+    return list(out.values())
+
+
 def relation_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
     t0 = perf_counter()
     table = pair_table(base)
@@ -155,6 +201,76 @@ def relation_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
         "query_seconds_at_full_rank": query_seconds,
         "linear_solve_seconds": la_seconds,
         "cold_total_seconds": base_seconds + table_seconds + query_seconds + la_seconds,
+    }
+
+
+def quadratic_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
+    """Direct subfield-quadratic oracle, with a separate table audit."""
+    t0 = perf_counter()
+    index_by_x = {P[0]: i for i, P in enumerate(base)}
+    signed_labels = {P: (i, 1) for i, P in enumerate(base)}
+    signed_labels.update({-P: (i, -1) for i, P in enumerate(base)})
+    as_roots = {}
+    for v in F:
+        as_roots.setdefault(v*v+v, (v, v+F.one()))
+    assert len(as_roots) == 128
+    oracle_setup_seconds = perf_counter() - t0
+    T = target_scalar * G
+    rng = Random(seed)
+    rows, rhs, row_end, query_cumulative = [], [], [], []
+    query_records = []
+    found_queries = 0
+    query_start = perf_counter()
+    for q in range(max_queries):
+        a, b = rng.randrange(prime), rng.randrange(1, prime)
+        Q = a*G + b*T
+        assert not Q.is_zero()
+        hits = quadratic_oracle(Q, base, index_by_x, signed_labels, as_roots)
+        query_records.append((Q, hits))
+        found_queries += bool(hits)
+        for i, si, j, sj, x, y in hits:
+            row = [0] * (len(base)+1)
+            row[i] += si
+            row[j] += sj
+            row[-1] = -2*b
+            rows.append(row)
+            rhs.append(2*a)
+        row_end.append(len(rows))
+        query_cumulative.append(perf_counter() - query_start)
+    Fr = GF(prime)
+    assert matrix(Fr, rows).rank() == len(base)+1
+    lo, hi = 1, len(row_end)
+    while lo < hi:
+        mid = (lo+hi)//2
+        if matrix(Fr, rows[:row_end[mid-1]]).rank() == len(base)+1:
+            hi = mid
+        else:
+            lo = mid+1
+    needed = lo
+    t1 = perf_counter()
+    M = matrix(Fr, rows[:row_end[needed-1]])
+    answer = M.solve_right(vector(Fr, rhs[:row_end[needed-1]]))
+    assert int(answer[-1]) == target_scalar
+    assert M*answer == vector(Fr, rhs[:row_end[needed-1]])
+    la_seconds = perf_counter()-t1
+
+    # This exhaustive pair table is validation only; its time is excluded.
+    reference = pair_table(base)
+    for Q, hits in query_records:
+        direct = {(i, si, j, sj) for i, si, j, sj, x, y in hits}
+        exact = {(i, si, j, sj) for i, si, j, sj, x, y in reference.get(Q, ())}
+        assert direct == exact
+    query_seconds = query_cumulative[needed-1]
+    return {
+        "oracle": "subfield_quadratic_S3", "degree_over_subfield": 2,
+        "oracle_setup_seconds": oracle_setup_seconds,
+        "queries_examined": max_queries, "queries_with_relation": found_queries,
+        "full_rank_queries": needed, "full_rank_rows": row_end[needed-1],
+        "recovered_scalar": int(answer[-1]),
+        "query_seconds_at_full_rank": query_seconds,
+        "linear_solve_seconds": la_seconds,
+        "cold_total_seconds": base_seconds + oracle_setup_seconds + query_seconds + la_seconds,
+        "pair_table_audit": "all_query_sets_equal",
     }
 
 
@@ -234,6 +350,7 @@ def main():
             "cold_bsgs": cold_bsgs(G, T),
             "cold_rho": cold_rho(G, T, 20261127+i),
             "subfield": relation_run(sub, G, target_scalar, 20261127+i, sub_seconds),
+            "subfield_quadratic": quadratic_run(sub, G, target_scalar, 20261127+i, sub_seconds),
             "monomial_control": relation_run(mono, G, target_scalar, 20261127+i, mono_seconds),
         }
     result = {
