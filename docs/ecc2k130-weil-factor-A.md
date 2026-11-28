@@ -504,8 +504,15 @@ New results:
   The [quotient gate](../experiments/ecc2k130-agl2-gate-20261127/SCREEN.md) then
   excludes that layer by a genus-three Jacobian order bound; see also the
   [ramification proof](../experiments/ecc2k130-affine-ramification-20261127/SCREEN.md).
+- **Geometric dihedral degree-131 cover excluded for the required Weil class (PR #82).**
+  If arithmetic Frobenius has a multiplier outside `{+1,-1}`, each of the four
+  rational base points has exactly one rational preimage, regardless of whether
+  its inertia is trivial, order two, or order 131. This forces `#C(F_2)=4`,
+  whereas `Jac(C) ~ E x A` requires `#C(F_2)=3`. If the multiplier is in
+  `{+1,-1}`, the constant dihedral gates above apply. See the
+  [rational-fiber proof](../experiments/ecc2k130-dihedral-fiber-count-20261127/SCREEN.md).
 - **Still open:**
-  - degree-131 maps with larger affine arithmetic monodromy or a complement of order greater than two
+  - degree-131 maps with a geometric affine complement of order greater than two
     (a degree-ten configuration remains conditional on `131 | h(E')` for a genus-11 `E'`);
   - A_131 / S_131 monodromy and the other divisors n.
 - **Lead 1 does not exclude this route.** The Prym is not principally polarized; it has type (1^128, n, n).
