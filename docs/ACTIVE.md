@@ -15,7 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-- [ ] Compare crossed S3 solver cost on matched binary four-summand relations (Codex, started 2026-11-28, branch research/crossed-s3-solver-20261128, PR #89 merged before completion; continuation PR #90)
+- [ ] Compare crossed S3 solver cost on matched binary four-summand relations (Codex, started 2026-11-28, branch research/crossed-s3-solver-20261128, PR #89 and #90 merged before completion; continuation PR #91)
 - [x] Check binary-field O-aware crossed S3 witnesses against direct four-point addition (Codex, started 2026-11-28, branch research/binary-crossed-s3-20261128, PR #88)
 - [x] Check an O-aware crossed S3 summation network against direct four-point relations and record its solver-cost test (Codex, started 2026-11-28, branch research/crossed-s3-witness-20261128, PR #87)
 - [x] Repair the merged active index and calibrate the quadratic LRF status (Codex, started 2026-11-27, branch codex/repair-active-lrf-20261127, PR #86)
@@ -82,10 +82,11 @@ Obtain a measured improvement in relation yield per linear system for the linear
 
 ## Blocked / questions for the owner
 
-- PR #90 (crossed S3 solver cost): the frozen GB-stage replay is ready, but
-  local msolve campaigns are running continuously and the approved remote
-  compute box timed out on SSH. Keep the draft open and run the panel on an
-  isolated host; the two CPU-contended preflight rows are preserved as censored.
+- PR #91 (crossed S3 solver cost): the frozen GB-only replay completed 81/81
+  runs and crossed trees lost 9/9 matched queries; maximum F4 degree was lower
+  in 2/9 but matrix work and time rose. The original full-solve path hit an
+  msolve parametrization loop. Input construction, point extraction and cold
+  full-query cost still need a separate method before any total-cost claim.
 
 - PR #46: before submitting to ePrint, decide whether to port the sharper growth constants proved in Lean in ml-cryptanalysis PR #356 (LFD >= floor((k+1)/14)+1 from k = 27) into this paper, or leave them for a revision.
 
