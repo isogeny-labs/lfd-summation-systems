@@ -52,7 +52,7 @@ def root_match(p, a, b, u, v, target):
 
 
 def main():
-    out = ROOT / "result.json"
+    out = ROOT / "result-v2.json"
     if out.exists():
         raise FileExistsError(out)
     records = []
@@ -122,11 +122,12 @@ def main():
                         "mismatches": failures})
         print(f"p={p} a={a} b={b}: {checked} tuple-target cells, "
               f"{len(failures)} O-aware mismatches, {naive_missed} affine-only misses")
-    assert all(not row["mismatches"] for row in records)
     result = {"schema": "crossed-s3-witness/v1", "cells": records,
               "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-              "protocol_sha256": hashlib.sha256((ROOT / "PROTOCOL.md").read_bytes()).hexdigest()}
+              "protocol_sha256": hashlib.sha256((ROOT / "PROTOCOL.md").read_bytes()).hexdigest(),
+              "amendment_sha256": hashlib.sha256((ROOT / "AMENDMENT.md").read_bytes()).hexdigest()}
     out.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    assert all(not row["mismatches"] for row in records)
 
 
 if __name__ == "__main__":
