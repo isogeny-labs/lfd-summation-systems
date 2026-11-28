@@ -1,0 +1,81 @@
+Initial seed for pseudo-random number generator is 12345
+
+--------------- INPUT DATA ---------------
+#variables                      24
+#equations                      70
+#invalid equations               0
+field characteristic             2
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  3     127     141     354 x 273         0.64%       19 new     108 zero         0.00 | 0.00         
+  2      19     162      80 x 75          2.88%        0 new      19 zero         0.00 | 0.00         
+  3     129     143     321 x 196         0.67%        0 new     129 zero         0.00 | 0.00         
+  4      14      14     433 x 496         0.66%       14 new       0 zero         0.00 | 0.00         
+  3      22     101     178 x 257         2.05%       14 new       8 zero         0.00 | 0.00         
+  3       7     209     139 x 219         3.38%        5 new       2 zero         0.00 | 0.00         
+  4     221     254    1083 x 1144        0.86%      114 new     107 zero         0.01 | 0.01         
+  2      58     269     170 x 118         2.12%        2 new      56 zero         0.00 | 0.00         
+  2       3     192      10 x 11         19.09%        2 new       1 zero         0.00 | 0.00         
+  2       3     185       9 x 9          20.99%        2 new       1 zero         0.00 | 0.00         
+  2       2     157       6 x 5          40.00%        0 new       2 zero         0.00 | 0.00         
+  3     109     155     464 x 356         1.58%        0 new     109 zero         0.00 | 0.00         
+  4      46      46     478 x 433         1.35%        0 new      46 zero         0.00 | 0.00         
+------------------------------------------------------------------------------------------------------
+reduce final basis       24 x 25          7.33%       24 new       0 zero         0.00 | 0.00         
+------------------------------------------------------------------------------------------------------
+
+---------------- TIMINGS ----------------
+overall(elapsed)        0.01 sec
+overall(cpu)            0.01 sec
+select                  0.00 sec   6.6%
+symbolic prep.          0.00 sec  10.4%
+update                  0.01 sec  66.7%
+convert                 0.00 sec   4.7%
+linear algebra          0.00 sec   8.8%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                    24
+#terms in basis                  36
+#pairs reduced                  760
+#GM criterion                 28401
+#redundant elements             218
+#rows reduced                  1544
+#zero reductions                588
+max. matrix data               1083 x 1144 (0.857%)
+max. symbolic hash table size  2^11
+max. basis hash table size     2^16
+-----------------------------------------
+
+
+
+------------------------------------------------------------------------------------
+msolve overall time           0.01 sec (elapsed) /  0.01 sec (cpu)
+------------------------------------------------------------------------------------

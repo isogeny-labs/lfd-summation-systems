@@ -1,0 +1,695 @@
+{
+  "solver": "msolve 0.11.0 -g 2 -c 0 -v 2 -t 1",
+  "scope": "GB stage only; no parametrization or extraction",
+  "completed_runs": 81,
+  "cases": [
+    {
+      "n": 3,
+      "a": 0,
+      "b": 1,
+      "target": 0,
+      "relations": 7,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 4,
+          "f4_rounds": 11,
+          "cumulative_matrix_cells": 167908,
+          "largest_matrix_cells": 61244,
+          "basis_elements": 19,
+          "rows_reduced": 799,
+          "zero_reductions": 322,
+          "median_wall_s": 0.008082375003141351,
+          "median_child_cpu_s": 0.006540999999999995,
+          "walls_s": [
+            0.00866962500003865,
+            0.007770208001602441,
+            0.008082375003141351
+          ],
+          "child_cpus_s": [
+            0.006966999999999999,
+            0.006510999999999994,
+            0.006540999999999995
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 4,
+          "f4_rounds": 12,
+          "cumulative_matrix_cells": 827971,
+          "largest_matrix_cells": 305200,
+          "basis_elements": 30,
+          "rows_reduced": 1670,
+          "zero_reductions": 672,
+          "median_wall_s": 0.012830625000788132,
+          "median_child_cpu_s": 0.011373,
+          "walls_s": [
+            0.013127707999956328,
+            0.012830625000788132,
+            0.012810874999559019
+          ],
+          "child_cpus_s": [
+            0.011561,
+            0.011373,
+            0.011345999999999998
+          ]
+        },
+        "direct": {
+          "max_f4_degree": 8,
+          "f4_rounds": 7,
+          "cumulative_matrix_cells": 32056,
+          "largest_matrix_cells": 29382,
+          "basis_elements": 9,
+          "rows_reduced": 49,
+          "zero_reductions": 14,
+          "median_wall_s": 0.0068294579978100955,
+          "median_child_cpu_s": 0.005291999999999998,
+          "walls_s": [
+            0.0070975420021568425,
+            0.0068294579978100955,
+            0.006629166000493569
+          ],
+          "child_cpus_s": [
+            0.005566999999999996,
+            0.005291999999999998,
+            0.005218000000000011
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 1.5874820205448639,
+      "crossed_over_tree_matrix_cells": 4.931099173356838,
+      "crossed_minus_tree_f4_degree": 0,
+      "direct_over_tree_wall": 0.8449815796910823
+    },
+    {
+      "n": 3,
+      "a": 1,
+      "b": 1,
+      "target": 0,
+      "relations": 16,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 4,
+          "f4_rounds": 13,
+          "cumulative_matrix_cells": 1422634,
+          "largest_matrix_cells": 566784,
+          "basis_elements": 47,
+          "rows_reduced": 2081,
+          "zero_reductions": 877,
+          "median_wall_s": 0.011327500000334112,
+          "median_child_cpu_s": 0.009702999999999996,
+          "walls_s": [
+            0.011327500000334112,
+            0.011426666998886503,
+            0.011092959000961855
+          ],
+          "child_cpus_s": [
+            0.009866,
+            0.009702999999999996,
+            0.009568000000000021
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 4,
+          "f4_rounds": 13,
+          "cumulative_matrix_cells": 14400850,
+          "largest_matrix_cells": 4538716,
+          "basis_elements": 75,
+          "rows_reduced": 5207,
+          "zero_reductions": 2216,
+          "median_wall_s": 0.036361332997330464,
+          "median_child_cpu_s": 0.03482199999999997,
+          "walls_s": [
+            0.03645979199791327,
+            0.035908999998355284,
+            0.036361332997330464
+          ],
+          "child_cpus_s": [
+            0.034901,
+            0.03452400000000001,
+            0.03482199999999997
+          ]
+        },
+        "direct": {
+          "max_f4_degree": 7,
+          "f4_rounds": 9,
+          "cumulative_matrix_cells": 95315,
+          "largest_matrix_cells": 32810,
+          "basis_elements": 22,
+          "rows_reduced": 334,
+          "zero_reductions": 123,
+          "median_wall_s": 0.007589457996800775,
+          "median_child_cpu_s": 0.005622999999999996,
+          "walls_s": [
+            0.007589457996800775,
+            0.007694417003222043,
+            0.007318250001844717
+          ],
+          "child_cpus_s": [
+            0.005599000000000007,
+            0.006032000000000003,
+            0.005622999999999996
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 3.2100051199521484,
+      "crossed_over_tree_matrix_cells": 10.122666827869994,
+      "crossed_minus_tree_f4_degree": 0,
+      "direct_over_tree_wall": 0.670002912961988
+    },
+    {
+      "n": 4,
+      "a": 0,
+      "b": 1,
+      "target": 0,
+      "relations": 107,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 6,
+          "f4_rounds": 21,
+          "cumulative_matrix_cells": 12382466,
+          "largest_matrix_cells": 5180034,
+          "basis_elements": 44,
+          "rows_reduced": 2122,
+          "zero_reductions": 878,
+          "median_wall_s": 0.01857825000115554,
+          "median_child_cpu_s": 0.01698099999999997,
+          "walls_s": [
+            0.018657207998330705,
+            0.018461374998878455,
+            0.01857825000115554
+          ],
+          "child_cpus_s": [
+            0.01703000000000003,
+            0.016915000000000027,
+            0.01698099999999997
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 5,
+          "f4_rounds": 22,
+          "cumulative_matrix_cells": 128308283,
+          "largest_matrix_cells": 60329646,
+          "basis_elements": 93,
+          "rows_reduced": 6139,
+          "zero_reductions": 2606,
+          "median_wall_s": 0.07795925000027637,
+          "median_child_cpu_s": 0.07608700000000003,
+          "walls_s": [
+            0.07777162499769474,
+            0.07874791699941852,
+            0.07795925000027637
+          ],
+          "child_cpus_s": [
+            0.07589999999999998,
+            0.076194,
+            0.07608700000000003
+          ]
+        },
+        "direct": {
+          "max_f4_degree": 12,
+          "f4_rounds": 13,
+          "cumulative_matrix_cells": 20841648,
+          "largest_matrix_cells": 19211630,
+          "basis_elements": 23,
+          "rows_reduced": 215,
+          "zero_reductions": 76,
+          "median_wall_s": 0.013129292001394788,
+          "median_child_cpu_s": 0.011440999999999993,
+          "walls_s": [
+            0.013076250001176959,
+            0.013146708999556722,
+            0.013129292001394788
+          ],
+          "child_cpus_s": [
+            0.01130200000000002,
+            0.011440999999999993,
+            0.011442000000000035
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 4.196264448773562,
+      "crossed_over_tree_matrix_cells": 10.362094513322306,
+      "crossed_minus_tree_f4_degree": -1,
+      "direct_over_tree_wall": 0.7067022997633343
+    },
+    {
+      "n": 4,
+      "a": 0,
+      "b": 1,
+      "target": 8,
+      "relations": 0,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 4,
+          "f4_rounds": 11,
+          "cumulative_matrix_cells": 1646198,
+          "largest_matrix_cells": 1264920,
+          "basis_elements": 1,
+          "rows_reduced": 1073,
+          "zero_reductions": 389,
+          "median_wall_s": 0.013185457999497885,
+          "median_child_cpu_s": 0.011762000000000064,
+          "walls_s": [
+            0.013593040999694495,
+            0.013185457999497885,
+            0.012893250001070555
+          ],
+          "child_cpus_s": [
+            0.011762000000000064,
+            0.011808000000000096,
+            0.011402999999999983
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 4,
+          "f4_rounds": 11,
+          "cumulative_matrix_cells": 7866943,
+          "largest_matrix_cells": 6113614,
+          "basis_elements": 1,
+          "rows_reduced": 2281,
+          "zero_reductions": 827,
+          "median_wall_s": 0.0361822500017297,
+          "median_child_cpu_s": 0.03456699999999997,
+          "walls_s": [
+            0.035979625001345994,
+            0.037129416999960085,
+            0.0361822500017297
+          ],
+          "child_cpus_s": [
+            0.03465200000000007,
+            0.03456699999999997,
+            0.03427200000000004
+          ]
+        },
+        "direct": {
+          "max_f4_degree": null,
+          "f4_rounds": 0,
+          "cumulative_matrix_cells": 0,
+          "largest_matrix_cells": 0,
+          "basis_elements": 1,
+          "rows_reduced": 1,
+          "zero_reductions": 0,
+          "median_wall_s": 0.006935207999049453,
+          "median_child_cpu_s": 0.005337999999999982,
+          "walls_s": [
+            0.0070172089981497265,
+            0.006935207999049453,
+            0.0068541250002454035
+          ],
+          "child_cpus_s": [
+            0.005454999999999918,
+            0.005313999999999999,
+            0.005337999999999982
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 2.7441026320896516,
+      "crossed_over_tree_matrix_cells": 4.778855884893555,
+      "crossed_minus_tree_f4_degree": 0,
+      "direct_over_tree_wall": 0.5259739934186247
+    },
+    {
+      "n": 4,
+      "a": 1,
+      "b": 1,
+      "target": 0,
+      "relations": 107,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 6,
+          "f4_rounds": 21,
+          "cumulative_matrix_cells": 12382466,
+          "largest_matrix_cells": 5180034,
+          "basis_elements": 44,
+          "rows_reduced": 2122,
+          "zero_reductions": 878,
+          "median_wall_s": 0.018600166997202905,
+          "median_child_cpu_s": 0.01685200000000002,
+          "walls_s": [
+            0.01861766600268311,
+            0.018600166997202905,
+            0.01823129200056428
+          ],
+          "child_cpus_s": [
+            0.01685200000000002,
+            0.01692000000000006,
+            0.01668799999999994
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 5,
+          "f4_rounds": 22,
+          "cumulative_matrix_cells": 128308283,
+          "largest_matrix_cells": 60329646,
+          "basis_elements": 93,
+          "rows_reduced": 6139,
+          "zero_reductions": 2606,
+          "median_wall_s": 0.07797604099687305,
+          "median_child_cpu_s": 0.07621399999999993,
+          "walls_s": [
+            0.07674504200258525,
+            0.07797604099687305,
+            0.07826333300181432
+          ],
+          "child_cpus_s": [
+            0.07498800000000008,
+            0.07621399999999993,
+            0.0763229999999999
+          ]
+        },
+        "direct": {
+          "max_f4_degree": 12,
+          "f4_rounds": 13,
+          "cumulative_matrix_cells": 20841648,
+          "largest_matrix_cells": 19211630,
+          "basis_elements": 23,
+          "rows_reduced": 215,
+          "zero_reductions": 76,
+          "median_wall_s": 0.012894833002064843,
+          "median_child_cpu_s": 0.011235000000000023,
+          "walls_s": [
+            0.012880666999990353,
+            0.012894833002064843,
+            0.013170874997740611
+          ],
+          "child_cpus_s": [
+            0.011235000000000023,
+            0.011168000000000039,
+            0.011412000000000005
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 4.192222629431182,
+      "crossed_over_tree_matrix_cells": 10.362094513322306,
+      "crossed_minus_tree_f4_degree": -1,
+      "direct_over_tree_wall": 0.6932643671427234
+    },
+    {
+      "n": 4,
+      "a": 1,
+      "b": 1,
+      "target": 8,
+      "relations": 0,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 4,
+          "f4_rounds": 11,
+          "cumulative_matrix_cells": 1646198,
+          "largest_matrix_cells": 1264920,
+          "basis_elements": 1,
+          "rows_reduced": 1073,
+          "zero_reductions": 389,
+          "median_wall_s": 0.01325666699995054,
+          "median_child_cpu_s": 0.011612999999999873,
+          "walls_s": [
+            0.013049291999777779,
+            0.01338183299958473,
+            0.01325666699995054
+          ],
+          "child_cpus_s": [
+            0.011531000000000124,
+            0.011612999999999873,
+            0.01167899999999994
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 4,
+          "f4_rounds": 11,
+          "cumulative_matrix_cells": 7866943,
+          "largest_matrix_cells": 6113614,
+          "basis_elements": 1,
+          "rows_reduced": 2281,
+          "zero_reductions": 827,
+          "median_wall_s": 0.03621341600228334,
+          "median_child_cpu_s": 0.03442099999999998,
+          "walls_s": [
+            0.03624020799907157,
+            0.03621341600228334,
+            0.036173917000269284
+          ],
+          "child_cpus_s": [
+            0.03449899999999989,
+            0.03437799999999999,
+            0.03442099999999998
+          ]
+        },
+        "direct": {
+          "max_f4_degree": null,
+          "f4_rounds": 0,
+          "cumulative_matrix_cells": 0,
+          "largest_matrix_cells": 0,
+          "basis_elements": 1,
+          "rows_reduced": 1,
+          "zero_reductions": 0,
+          "median_wall_s": 0.008105459000944393,
+          "median_child_cpu_s": 0.005389999999999923,
+          "walls_s": [
+            0.008105459000944393,
+            0.008268458001111867,
+            0.006601542001590133
+          ],
+          "child_cpus_s": [
+            0.005389999999999923,
+            0.005624000000000018,
+            0.005264999999999964
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 2.7317134844239845,
+      "crossed_over_tree_matrix_cells": 4.778855884893555,
+      "crossed_minus_tree_f4_degree": 0,
+      "direct_over_tree_wall": 0.6114251041362534
+    },
+    {
+      "n": 5,
+      "a": 0,
+      "b": 1,
+      "target": 0,
+      "relations": 263,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 5,
+          "f4_rounds": 26,
+          "cumulative_matrix_cells": 1049302221,
+          "largest_matrix_cells": 374511053,
+          "basis_elements": 453,
+          "rows_reduced": 23561,
+          "zero_reductions": 10460,
+          "median_wall_s": 0.5277007919976313,
+          "median_child_cpu_s": 0.5251809999999999,
+          "walls_s": [
+            0.5277007919976313,
+            0.53521775000263,
+            0.5231754999986151
+          ],
+          "child_cpus_s": [
+            0.5251809999999999,
+            0.5324340000000014,
+            0.5210260000000052
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 5,
+          "f4_rounds": 30,
+          "cumulative_matrix_cells": 8768529720,
+          "largest_matrix_cells": 3015403430,
+          "basis_elements": 1045,
+          "rows_reduced": 101241,
+          "zero_reductions": 45365,
+          "median_wall_s": 15.55401108300066,
+          "median_child_cpu_s": 15.116263999999997,
+          "walls_s": [
+            15.76990591700087,
+            15.55401108300066,
+            15.076664000000164
+          ],
+          "child_cpus_s": [
+            15.455508999999997,
+            15.116263999999997,
+            14.894905999999992
+          ]
+        },
+        "direct": {
+          "max_f4_degree": 12,
+          "f4_rounds": 27,
+          "cumulative_matrix_cells": 280692759,
+          "largest_matrix_cells": 71307873,
+          "basis_elements": 216,
+          "rows_reduced": 6606,
+          "zero_reductions": 2636,
+          "median_wall_s": 0.11641550000058487,
+          "median_child_cpu_s": 0.11455800000000232,
+          "walls_s": [
+            0.11641550000058487,
+            0.11921812500077067,
+            0.11616441600199323
+          ],
+          "child_cpus_s": [
+            0.11455800000000232,
+            0.11720300000000278,
+            0.1143789999999954
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 29.475057303060627,
+      "crossed_over_tree_matrix_cells": 8.356534032343385,
+      "crossed_minus_tree_f4_degree": 0,
+      "direct_over_tree_wall": 0.22060891657920315
+    },
+    {
+      "n": 5,
+      "a": 1,
+      "b": 1,
+      "target": 0,
+      "relations": 0,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 4,
+          "f4_rounds": 8,
+          "cumulative_matrix_cells": 1573182,
+          "largest_matrix_cells": 985929,
+          "basis_elements": 1,
+          "rows_reduced": 1611,
+          "zero_reductions": 635,
+          "median_wall_s": 0.014291292001871625,
+          "median_child_cpu_s": 0.01280699999999757,
+          "walls_s": [
+            0.015581333998852642,
+            0.014291292001871625,
+            0.014063791000808123
+          ],
+          "child_cpus_s": [
+            0.013628000000009077,
+            0.01280699999999757,
+            0.012628000000000639
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 4,
+          "f4_rounds": 8,
+          "cumulative_matrix_cells": 6753270,
+          "largest_matrix_cells": 4313190,
+          "basis_elements": 1,
+          "rows_reduced": 3291,
+          "zero_reductions": 1292,
+          "median_wall_s": 0.04462766699725762,
+          "median_child_cpu_s": 0.04294800000000398,
+          "walls_s": [
+            0.04482250000000931,
+            0.04462766699725762,
+            0.04361054100081674
+          ],
+          "child_cpus_s": [
+            0.04307699999999959,
+            0.04294800000000398,
+            0.04209600000000213
+          ]
+        },
+        "direct": {
+          "max_f4_degree": null,
+          "f4_rounds": 0,
+          "cumulative_matrix_cells": 0,
+          "largest_matrix_cells": 0,
+          "basis_elements": 1,
+          "rows_reduced": 1,
+          "zero_reductions": 0,
+          "median_wall_s": 0.006701791997329565,
+          "median_child_cpu_s": 0.005273000000003747,
+          "walls_s": [
+            0.007031583001662511,
+            0.006701541002257727,
+            0.006701791997329565
+          ],
+          "child_cpus_s": [
+            0.005483999999996825,
+            0.005273000000003747,
+            0.005199999999998983
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 3.1227174555955517,
+      "crossed_over_tree_matrix_cells": 4.29274553103201,
+      "crossed_minus_tree_f4_degree": 0,
+      "direct_over_tree_wall": 0.4689423459020976
+    },
+    {
+      "n": 5,
+      "a": 1,
+      "b": 1,
+      "target": 8,
+      "relations": 1,
+      "arms": {
+        "tree": {
+          "max_f4_degree": 4,
+          "f4_rounds": 13,
+          "cumulative_matrix_cells": 2087904,
+          "largest_matrix_cells": 1238952,
+          "basis_elements": 24,
+          "rows_reduced": 1544,
+          "zero_reductions": 588,
+          "median_wall_s": 0.015977457998815225,
+          "median_child_cpu_s": 0.014091999999994664,
+          "walls_s": [
+            0.016037750003306428,
+            0.015073334001499461,
+            0.015977457998815225
+          ],
+          "child_cpus_s": [
+            0.014250999999999459,
+            0.013681999999996641,
+            0.014091999999994664
+          ]
+        },
+        "crossed": {
+          "max_f4_degree": 4,
+          "f4_rounds": 13,
+          "cumulative_matrix_cells": 10606454,
+          "largest_matrix_cells": 5485687,
+          "basis_elements": 36,
+          "rows_reduced": 3180,
+          "zero_reductions": 1217,
+          "median_wall_s": 0.04741466700215824,
+          "median_child_cpu_s": 0.045652999999996724,
+          "walls_s": [
+            0.048749290999694495,
+            0.04715025000041351,
+            0.04741466700215824
+          ],
+          "child_cpus_s": [
+            0.04694899999999935,
+            0.045652999999996724,
+            0.04524899999999854
+          ]
+        },
+        "direct": {
+          "max_f4_degree": 12,
+          "f4_rounds": 6,
+          "cumulative_matrix_cells": 6821,
+          "largest_matrix_cells": 2550,
+          "basis_elements": 12,
+          "rows_reduced": 72,
+          "zero_reductions": 17,
+          "median_wall_s": 0.006953124997380655,
+          "median_child_cpu_s": 0.005354999999999999,
+          "walls_s": [
+            0.007066999998642132,
+            0.006953124997380655,
+            0.006893417001265334
+          ],
+          "child_cpus_s": [
+            0.005483000000002014,
+            0.005354999999999999,
+            0.005337999999999732
+          ]
+        }
+      },
+      "crossed_over_tree_wall": 2.967597662010701,
+      "crossed_over_tree_matrix_cells": 5.079952909712324,
+      "crossed_minus_tree_f4_degree": 0,
+      "direct_over_tree_wall": 0.4351834314254652
+    }
+  ],
+  "crossed_faster_cases": 0,
+  "crossed_lower_f4_degree_cases": 2,
+  "median_crossed_over_tree_wall": 3.1227174555955517,
+  "median_crossed_over_tree_matrix_cells": 5.079952909712324
+}

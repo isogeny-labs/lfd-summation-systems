@@ -1,0 +1,81 @@
+Initial seed for pseudo-random number generator is 12345
+
+--------------- INPUT DATA ---------------
+#variables                      32
+#equations                     106
+#invalid equations               0
+field characteristic             2
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  2       8     186      36 x 36          5.56%        0 new       8 zero         0.00 | 0.00         
+  3     154     178     390 x 272         0.54%       18 new     136 zero         0.00 | 0.00         
+  3     168     239     414 x 258         0.51%        0 new     168 zero         0.00 | 0.00         
+  4      71      71     708 x 841         0.40%       24 new      47 zero         0.00 | 0.00         
+  2       6     208      22 x 23          9.88%        0 new       6 zero         0.00 | 0.00         
+  3      30     202     232 x 297         1.27%       18 new      12 zero         0.00 | 0.00         
+  3      14     332     134 x 197         2.46%       10 new       4 zero         0.00 | 0.00         
+  4     324     428    2158 x 2833        0.21%      158 new     166 zero         0.01 | 0.01         
+  2      46    1496     108 x 62          1.88%        0 new      46 zero         0.00 | 0.00         
+  3     231    1450     681 x 659         0.74%       16 new     217 zero         0.00 | 0.00         
+  3      86    1162     515 x 762         0.97%       69 new      17 zero         0.01 | 0.01         
+------------------------------------------------------------------------------------------------------
+reduce final basis        1 x 1         100.00%        1 new       0 zero         0.00 | 0.00         
+------------------------------------------------------------------------------------------------------
+
+---------------- TIMINGS ----------------
+overall(elapsed)        0.03 sec
+overall(cpu)            0.03 sec
+select                  0.00 sec   4.4%
+symbolic prep.          0.00 sec   9.0%
+update                  0.02 sec  77.4%
+convert                 0.00 sec   3.1%
+linear algebra          0.00 sec   5.1%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                     1
+#terms in basis                   1
+#pairs reduced                 1138
+#GM criterion                 86207
+#redundant elements             418
+#rows reduced                  2281
+#zero reductions                827
+max. matrix data               2158 x 2833 (0.210%)
+max. symbolic hash table size  2^12
+max. basis hash table size     2^16
+-----------------------------------------
+
+Grobner basis has a single element
+No solution
+
+
+------------------------------------------------------------------------------------
+msolve overall time           0.03 sec (elapsed) /  0.03 sec (cpu)
+------------------------------------------------------------------------------------
