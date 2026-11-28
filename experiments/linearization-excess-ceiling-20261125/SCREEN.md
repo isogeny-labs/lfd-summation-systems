@@ -86,6 +86,27 @@ For a curve with no subfield descent, including through a `K`-isomorphic
 model, this projector shortcut is unavailable; target support must still
 be measured rather than inferred from a coefficient choice.
 
+The following exact small-field replay checks the minus eigenset and the
+order factorization. It finds an `F_16`-abscissa point on `E/F_256`
+which is not `F_16`-rational:
+
+```bash
+sage -python - <<'PY'
+from sage.all import GF, EllipticCurve
+K = GF(2**8, 'a')
+F = K.subfield(4, 'b')
+E0 = EllipticCurve(F, [1, 0, 0, 0, 1])
+E = E0.change_ring(K)
+t = 17 - E0.cardinality()
+assert E0.cardinality() == 16
+assert E.cardinality() == 288 == (17-t)*(17+t)
+P = next(P for P in E.points() if not P.is_zero()
+         and P[0]**16 == P[0] and P[1]**16 != P[1])
+assert E([P[0]**16, P[1]**16, 1]) == -P
+print('subfield-x minus eigenset verified')
+PY
+```
+
 Second, at `n=2k` a base with `B` signed points has `B` on the order of
 `sqrt(N)` for `N=#E(K)`. On a non-descending curve, if the uniform-sum
 heuristic passes an exact target-count check, a two-summand
