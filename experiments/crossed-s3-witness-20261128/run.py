@@ -52,7 +52,7 @@ def root_match(p, a, b, u, v, target):
 
 
 def main():
-    out = ROOT / "result-v2.json"
+    out = ROOT / "result-v3.json"
     if out.exists():
         raise FileExistsError(out)
     records = []
@@ -65,6 +65,7 @@ def main():
         lifts = {x: [pt for pt in points if pt[0] == x] for x in xs}
         pair_points = {}
         pair_labels = {}
+        pair_mismatches = []
         for x, y in itertools.product(xs, repeat=2):
             sums = {add(p, a, left, right)
                     for left, right in itertools.product(lifts[x], lifts[y])}
@@ -73,7 +74,12 @@ def main():
             polynomial_labels = {z for z in range(p) if s3(p, a, b, x, y, z) == 0}
             if x == y:
                 polynomial_labels.add(None)
-            assert direct_labels == polynomial_labels, (p, a, b, x, y)
+            if direct_labels != polynomial_labels:
+                pair_mismatches.append({"x": x, "y": y,
+                                        "direct": sorted(direct_labels,
+                                                         key=lambda z: -1 if z is None else z),
+                                        "polynomial": sorted(polynomial_labels,
+                                                             key=lambda z: -1 if z is None else z)})
             pair_labels[x, y] = polynomial_labels
         target_labels = [None] + xs
         checked = true_relations = cancelling = naive_missed = 0
@@ -119,15 +125,19 @@ def main():
                         "true_relations_with_cancelling_pair": cancelling,
                         "naive_affine_only_missed": naive_missed,
                         "first_naive_miss": first_naive_miss,
+                        "pair_mismatches": pair_mismatches,
                         "mismatches": failures})
         print(f"p={p} a={a} b={b}: {checked} tuple-target cells, "
+              f"{len(pair_mismatches)} pair-root mismatches, "
               f"{len(failures)} O-aware mismatches, {naive_missed} affine-only misses")
     result = {"schema": "crossed-s3-witness/v1", "cells": records,
               "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               "protocol_sha256": hashlib.sha256((ROOT / "PROTOCOL.md").read_bytes()).hexdigest(),
-              "amendment_sha256": hashlib.sha256((ROOT / "AMENDMENT.md").read_bytes()).hexdigest()}
+              "amendment_sha256": hashlib.sha256((ROOT / "AMENDMENT.md").read_bytes()).hexdigest(),
+              "amendment_a2_sha256": hashlib.sha256((ROOT / "AMENDMENT-A2.md").read_bytes()).hexdigest()}
     out.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    assert all(not row["mismatches"] for row in records)
+    assert all(not row["pair_mismatches"] and not row["mismatches"]
+               for row in records)
 
 
 if __name__ == "__main__":
