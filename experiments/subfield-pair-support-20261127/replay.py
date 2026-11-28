@@ -145,6 +145,37 @@ def quadratic_oracle(Q, base, index_by_x, signed_labels, as_roots):
     return list(out.values())
 
 
+def target_prefix(rows, rhs, row_end, query_cumulative, base_size, target_scalar):
+    """First prefix fixing the target log, even if base logs remain free."""
+    Fr = GF(prime)
+
+    def determined(q):
+        A = matrix(Fr, rows[:row_end[q-1]])
+        return A.rank() > A.matrix_from_columns(range(base_size)).rank()
+
+    assert determined(len(row_end))
+    lo, hi = 1, len(row_end)
+    while lo < hi:
+        mid = (lo+hi)//2
+        if determined(mid):
+            hi = mid
+        else:
+            lo = mid+1
+    t0 = perf_counter()
+    A = matrix(Fr, rows[:row_end[lo-1]])
+    answer = A.solve_right(vector(Fr, rhs[:row_end[lo-1]]))
+    assert int(answer[-1]) == target_scalar
+    assert A*answer == vector(Fr, rhs[:row_end[lo-1]])
+    solve_seconds = perf_counter()-t0
+    return {
+        "target_determined_queries": lo,
+        "target_determined_rows": row_end[lo-1],
+        "target_query_seconds": query_cumulative[lo-1],
+        "target_linear_solve_seconds": solve_seconds,
+        "target_recovered_scalar": int(answer[-1]),
+    }
+
+
 def relation_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
     t0 = perf_counter()
     table = pair_table(base)
@@ -190,6 +221,8 @@ def relation_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
     assert M * answer == vector(Fr, rhs[:row_end[needed-1]])
     la_seconds = perf_counter() - t1
     query_seconds = query_cumulative[needed-1]
+    target = target_prefix(rows, rhs, row_end, query_cumulative,
+                           len(base), target_scalar)
     return {
         "base_logs": len(base), "signed_points": 2*len(base),
         "unordered_pair_additions": len(base)*(2*len(base)+1),
@@ -201,6 +234,9 @@ def relation_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
         "query_seconds_at_full_rank": query_seconds,
         "linear_solve_seconds": la_seconds,
         "cold_total_seconds": base_seconds + table_seconds + query_seconds + la_seconds,
+        "cold_target_seconds": base_seconds + table_seconds +
+                               target["target_query_seconds"] + target["target_linear_solve_seconds"],
+        **target,
     }
 
 
@@ -261,6 +297,8 @@ def quadratic_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
         exact = {(i, si, j, sj) for i, si, j, sj, x, y in reference.get(Q, ())}
         assert direct == exact
     query_seconds = query_cumulative[needed-1]
+    target = target_prefix(rows, rhs, row_end, query_cumulative,
+                           len(base), target_scalar)
     return {
         "oracle": "subfield_quadratic_S3", "degree_over_subfield": 2,
         "oracle_setup_seconds": oracle_setup_seconds,
@@ -270,6 +308,9 @@ def quadratic_run(base, G, target_scalar, seed, base_seconds, max_queries=1024):
         "query_seconds_at_full_rank": query_seconds,
         "linear_solve_seconds": la_seconds,
         "cold_total_seconds": base_seconds + oracle_setup_seconds + query_seconds + la_seconds,
+        "cold_target_seconds": base_seconds + oracle_setup_seconds +
+                               target["target_query_seconds"] + target["target_linear_solve_seconds"],
+        **target,
         "pair_table_audit": "all_query_sets_equal",
     }
 

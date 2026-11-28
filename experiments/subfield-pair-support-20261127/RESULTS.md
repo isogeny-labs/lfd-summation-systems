@@ -84,35 +84,45 @@ base therefore has **17.4% greater distinct-query coverage** at fixed
 base size and pair count. This is a measured component benefit, not a
 lower total solve cost.
 
-The following are cold single-target seconds from the frozen
+For a single target, collecting every base logarithm is unnecessary.
+Write the relation matrix as `[M_B | c]`, with `c` the target column.
+The target log is unique exactly when
+`rank([M_B | c]) > rank(M_B)` for the consistent system. The replay
+finds the first such prefix and solves that underdetermined system;
+it also retains the later first-full-rank prefix as a separate record.
+
+The following are cold **single-target** seconds from the frozen
 SageMath 10.10.rc0 replay on this host. Pair-table runs charge base
-construction, all 32,896 pair additions, queries through first full
-rank, and linear elimination. Direct-oracle runs charge base
+construction, all 32,896 pair additions, queries through target
+determination, and elimination. Direct-oracle runs charge base
 construction, its Artin-Schreier lookup, queries, and elimination; the
 pair table used only to audit completeness is excluded. The scalar is
-planted for verification;
-the algorithms receive only its public target point. Query counts are
-the first full-rank prefix of a deterministic 1,024-query stream.
+planted for verification; the algorithms receive only its public target
+point. Query counts are prefixes of the same deterministic 1,024-query
+stream for each candidate and control.
 
-| Target scalar | Direct subfield queries / seconds | Subfield pair-table seconds | Control pair-table queries / seconds | Cold BSGS seconds | Cold rho seconds |
+| Target scalar | Direct subfield queries / seconds | Subfield pair-table queries / seconds | Control pair-table queries / seconds | Cold BSGS seconds | Cold rho seconds |
 |---:|---:|---:|---:|---:|---:|
-| 3425 | 321 / 1.041 | 1.570 | 298 / 1.270 | 0.00139 | 0.00098 |
-| 17123 | 203 / 0.628 | 1.529 | 353 / 1.138 | 0.00184 | 0.02325 |
-| 29113 | 257 / 0.718 | 1.270 | 626 / 1.155 | 0.00219 | 0.00168 |
+| 3425 | 43 / 0.396 | 43 / 1.501 | 80 / 1.154 | 0.00136 | 0.00103 |
+| 17123 | 82 / 0.487 | 82 / 1.551 | 56 / 1.424 | 0.00186 | 0.01637 |
+| 29113 | 78 / 0.457 | 78 / 1.307 | 62 / 1.150 | 0.00232 | 0.00170 |
 
 The subfield base raises the chance that one query yields a relation,
-but this does not translate to a consistent first-full-rank advantage.
-The direct quadratic oracle saves the pair-table work, but its cold
-method still takes 0.63–1.04 seconds. Cold BSGS uses 182 baby steps and
-finishes in roughly two milliseconds. Even this specialized oracle is far
-behind the matched generic methods on these three targets. The result is
-a bounded negative cost screen for this fixture, not a universal
-complexity bound. The specialization requires a proper degree-eight
-subfield of the degree-16 field, so it does not transfer directly to
-prime extension degree 131.
+but it does not consistently reduce the number of queries that
+determine the target. The direct quadratic oracle saves the pair-table
+work, but its cold method still takes 0.40–0.49 seconds. Cold BSGS uses
+182 baby steps and finishes in roughly two milliseconds. Even this
+specialized oracle remains behind the matched generic methods on these
+three targets. The result is a bounded negative cost screen for this
+fixture, not a universal complexity bound. The specialization requires
+a proper degree-eight subfield of the degree-16 field, so it does not
+transfer directly to prime extension degree 131.
 
-`cold_total_seconds` is optimistic: it uses the known first-full-rank
-prefix and excludes the cost of detecting rank during live collection.
+`cold_target_seconds` is optimistic: it uses the known first prefix
+that determines the target and excludes the cost of detecting that rank
+condition during live collection. The old full-base-log cost remains in
+`cold_total_seconds`; using it as the single-target cost would overcharge
+this method.
 Rho timing varies with the deterministic walk seed. All three targets,
 query-hit counts, row counts and rank gates remain in `results.json`;
 `replay.py` regenerates the individual queries and relation rows.
@@ -129,4 +139,4 @@ python3 experiments/subfield-pair-support-20261127/verify.py \
 The verifier compares every discrete field, support, query, rank, and
 recovered-scalar record with `results.json`; wall-time fields are omitted
 from equality because they vary by host and load. The committed result
-SHA-256 is `84ec881a8d4480c4514092b11f1d30b17f1a36854b4de1bafbf688cdf330e6a4`.
+SHA-256 is `4f55a14e595b7765c79cd7caaf3bb34edc03db1027b6264d8daa3aa725575ff2`.
