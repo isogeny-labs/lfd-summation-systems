@@ -154,6 +154,28 @@ lifts are replayable from `lazy_walk.py`; the counts and target checks
 are frozen in `lazy_results.json`. This screen does not establish a
 scaling law or a win on a larger field.
 
+## Online target determination
+
+`online_walk.py` removes the optimistic rank-stopping assumption. Each
+relation has at most two base-log variables and one target-log variable.
+It incrementally eliminates base columns; when a relation reduces to a
+nonzero target coefficient, it computes the target log and verifies it
+by scalar multiplication. The walk stops immediately, even partway
+through the relations returned by one query. Its clock includes the
+eight point-increment setup, lazy lifts, unsuccessful queries, relation
+checks, and the online elimination.
+
+| Target scalar | Queries | Relation rows | Failed queries | Abscissas lifted | Cold online seconds | Cold BSGS seconds |
+|---:|---:|---:|---:|---:|---:|---:|
+| 3425 | 85 | 90 | 18 | 97 | 0.212 | 0.00157 |
+| 17123 | 58 | 59 | 13 | 78 | 0.135 | 0.00182 |
+| 29113 | 75 | 73 | 22 | 89 | 0.172 | 0.00221 |
+
+The stopping query matches the offline rank replay for every target.
+The online overhead is small at this scale, and the method remains
+roughly 74–135 times slower than cold BSGS in this measured panel.
+The exact outcomes are frozen in `online_results.json`.
+
 ## Replay
 
 ```bash
@@ -165,6 +187,10 @@ sage -python experiments/subfield-pair-support-20261127/lazy_walk.py \
   > /tmp/subfield-lazy-walk-replay.json
 python3 experiments/subfield-pair-support-20261127/verify.py \
   /tmp/subfield-lazy-walk-replay.json lazy_results.json
+sage -python experiments/subfield-pair-support-20261127/online_walk.py \
+  > /tmp/subfield-online-walk-replay.json
+python3 experiments/subfield-pair-support-20261127/verify.py \
+  /tmp/subfield-online-walk-replay.json online_results.json
 ```
 
 The verifier compares every discrete field, support, query, rank, and
@@ -173,3 +199,5 @@ from equality because they vary by host and load. The committed result
 SHA-256 is `4f55a14e595b7765c79cd7caaf3bb34edc03db1027b6264d8daa3aa725575ff2`.
 The committed lazy-walk result SHA-256 is
 `a7c7b9a4cf11bff54bfc408770b56f63d2dd5d6ca23207f2783084f34a3bd956`.
+The committed online-walk result SHA-256 is
+`8783f89b4f20d2fff7a5cf81a658b9ba15857295fe1f877f43a1a6a3bb63eb50`.
