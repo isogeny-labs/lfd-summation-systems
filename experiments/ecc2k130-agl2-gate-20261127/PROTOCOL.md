@@ -4,11 +4,13 @@
 
 The existing [cover-of-E review](../ecc2k130-weil-factor/round2/cover-of-E-review/REPORT.md)
 leaves non-Galois degree-131 maps in affine monodromy open. Test only the
-subcase in which the geometric Galois closure has group
-`C_131 semidirect C_2`, the quotient `E' -> E` has degree two over `F_2`,
+subcase in which the geometric Galois closure has the **nontrivial** affine
+group `C_131 semidirect C_2` (the involution acts as `x -> -x`), the
+quotient `E' -> E` has degree two over `F_2`,
 and the normal `C_131`-cover `D -> E'` is geometrically connected,
 unramified, and defined with constant deck group over `F_2`. The target
-curve `C -> E` has genus 131. These are hypotheses, not conclusions about
+curve `C=D/C_2 -> E` has genus 131, and `E'=D/C_131`. These are
+hypotheses, not conclusions about
 every affine cover.
 
 ## Predeclared gate

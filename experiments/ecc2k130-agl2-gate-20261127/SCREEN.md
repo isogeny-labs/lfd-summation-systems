@@ -4,8 +4,9 @@
 
 Under the [frozen hypotheses](PROTOCOL.md), there is no genus-131 curve
 `C/F_2` with a degree-131 map to
-`E: y²+xy=x³+1` whose geometric Galois closure `D/E` has group
-`C_131 semidirect C_2` and whose normal `C_131`-cover `D/E'` is
+`E: y²+xy=x³+1` whose geometric Galois closure `D/E` has the
+nontrivial affine group `C_131 semidirect C_2` and whose normal
+`C_131`-cover `D/E'` is
 geometrically connected, unramified, and constant over `F_2`.
 This excludes one subcase of the non-Galois cover residue in the
 [cover-of-E review](../ecc2k130-weil-factor/round2/cover-of-E-review/REPORT.md).
@@ -31,8 +32,9 @@ map gives `2g(E')-2=4`, hence `g(E')=3`.
 
 The four `F_2`-points of `E` are the point at infinity,
 `(0,1)`, `(1,0)`, and `(1,1)`. The map `E' -> E` induces a nonzero
-norm homomorphism `J(E') -> E`. Equivalently, the Frobenius polynomial of
-`E` is a factor of that of `J(E')`, so an `F_2`-isogeny decomposition
+norm homomorphism `J(E') -> E`. On every odd-adic Tate module,
+`f_* f^*=[2]` is invertible, so the Frobenius polynomial of
+`E` is a factor of that of `J(E')`. An `F_2`-isogeny decomposition
 `J(E') ~ E x B` exists with `dim B=2`. In particular,
 
     4 = #E(F_2) divides #J(E')(F_2).
