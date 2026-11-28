@@ -15,10 +15,9 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-<<<<<<< HEAD
+- [x] Repair the merged active index and calibrate the quadratic LRF status (Codex, started 2026-11-27, branch codex/repair-active-lrf-20261127, PR #86)
+- [x] Reconcile the LRF good-set inference and screen a quadratic root lift on frozen high-delta systems (Codex, started 2026-11-27, branch research/lrf-quadratic-lift-gate-20261127, PR #85)
 - [x] Test all geometric affine complements in the ECC2K-130 degree-131 cover route (Codex, started 2026-11-27, branch research/ecc2k130-affine-full-gate-20261127, PR #84)
-=======
->>>>>>> origin/main
 - [x] Test the rational-fiber count for geometric dihedral covers of ECC2K-130 (Codex, started 2026-11-27, branch research/ecc2k130-dihedral-fiber-count-20261127, PR #82 and PR #83)
 - [x] Test tame ramification in the degree-131 dihedral cover route for ECC2K-130 (Codex, started 2026-11-27, branch research/ecc2k130-affine-ramification-20261127, PR #81)
 - [x] Test the genus-three quotient gate for degree-131 affine covers of ECC2K-130 (Codex, started 2026-11-27, branch research/ecc2k130-agl2-gate-20261127, PR #79 and PR #80)
@@ -87,12 +86,12 @@ Obtain a measured improvement in relation yield per linear system for the linear
 - PR #44 (relation yield for LRF): measured result is a cost model + optimal operating point
   (square system, m=3) + two mechanistic NO-GOs (m=4 worse; Frobenius unusable at prime n due to
   the dim-V2 vs Frobenius-structure tension). Neither pinned lever improves the n=131 relation
-  stage. The found_per_cand lever is now also measured dead: the good candidate (roots in V) is an
-  unstructured singleton in the kernel coset (ANF degree ~ delta, density ~ 2^-delta at delta=6,9,12),
-  so it cannot be found output-sensitively. Every lever (factor base, summand count, Frobenius,
-  candidate structure) leaves the ~2^(n/3) cost/relation exponent unchanged; an improvement needs a
-  genuinely different relation, not LRF tuning. Also corrected the exponent in the record from a wrong
-  2^(0.7 n) to the measured/analytic 2^(n/3).
+  stage. The good-candidate indicator has near-maximal projected ANF degree and low density on the
+  measured high-delta cells, but this does not prove that kernel scanning is necessary. The exact
+  quadratic root-coordinate lift in PR #85 preserves the relation set; its Sage/Singular solver lost
+  to native LRF on the frozen n=23 residual-query pilot, with two positive cases censored at 30 seconds.
+  Input degree, solver degree, relation yield, and complete ECDLP cost remain separate. The
+  measured/analytic baseline cost-per-relation exponent is about 2^(n/3), not 2^(0.7 n).
 - ECC2K-130 window question (PR #51, merged): exact invariants of the Weil factor A are done and
   verified (A simple+ordinary, #A(F2)=the ECDLP prime, CM field Q(zeta_131,sqrt-7) deg 260; see
   docs/ecc2k130-weil-factor-A.md). The easy splits are ruled out. Whether A is a Jacobian is UNRESOLVED;
