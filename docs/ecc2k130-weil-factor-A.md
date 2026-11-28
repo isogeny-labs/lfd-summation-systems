@@ -497,9 +497,16 @@ New results:
 - **Every geometrically Galois cover is closed** (any group, any twisted form, genus 131 with Jac(C) ~ E x A'). A
   gluing-degree constraint (Kani) forces deg(C -> E) to divide 131 * 263 * p2. Together with Riemann-Hurwitz, this
   leaves only 131, which the trace lemma and class field theory close.
+- **Constant dihedral degree-131 cover excluded (PR #80 and PR #81, conditional scope).**
+  If the full arithmetic and geometric Galois group of the closure is `C_131 semidirect C_2`,
+  tame order-131 inertia would require a branch place of degree at least 65 and contribute
+  at least 8450 to a different of degree 260. Thus the normal `C_131` layer is unramified.
+  The [quotient gate](../experiments/ecc2k130-agl2-gate-20261127/SCREEN.md) then
+  excludes that layer by a genus-three Jacobian order bound; see also the
+  [ramification proof](../experiments/ecc2k130-affine-ramification-20261127/SCREEN.md).
 - **Still open:**
-  - degree-131 maps with AGL-type monodromy (an explicit consistent configuration exists, pending 131 | h(E') for a
-    genus-11 E');
+  - degree-131 maps with larger affine arithmetic monodromy or a complement of order greater than two
+    (a degree-ten configuration remains conditional on `131 | h(E')` for a genus-11 `E'`);
   - A_131 / S_131 monodromy and the other divisors n.
 - **Lead 1 does not exclude this route.** The Prym is not principally polarized; it has type (1^128, n, n).
 
