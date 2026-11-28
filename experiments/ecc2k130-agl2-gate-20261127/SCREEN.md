@@ -54,7 +54,8 @@ The required lower and upper bounds contradict each other.
 
 ## Checks and interpretation
 
-Direct enumeration in SageMath 10.10.rc0 returned precisely the four
+`sage -python experiments/ecc2k130-agl2-gate-20261127/control.py` replays
+the finite controls. Direct enumeration in SageMath 10.10.rc0 returned precisely the four
 listed points on `E(F_2)`. A separate integer check counted one fixed
 sheet and 65 transpositions for `x -> -x` on `F_131`, and verified the
 strict radical inequality. These checks confirm the small arithmetic
@@ -75,6 +76,23 @@ assert 70**2 * 2 < 99**2
 print('four base points; affine involution and strict bound checked')
 PY
 ```
+
+As a positive control for the genus and divisibility calculations, take
+the Artin–Schreier double cover `E': w²+w=y` over `E`. The function `y`
+has a single pole of order three at infinity, so the cover has different
+degree four and genus three. Directly counting the two possible `w` values
+over each finite base point gives
+`#E'(F_2)=3`, `#E'(F_4)=11`, and `#E'(F_8)=3`. Newton identities then give
+the zeta numerator
+
+    1 + 3T² - 2T³ + 6T⁴ + 8T⁶,
+
+and `#J(E')(F_2)=16`, divisible by four as required. This control shows
+that the genus-three quotient class is nonempty; the proof excludes the
+additional unramified `C_131` layer. The three point counts are
+computed by enumerating `E(F_(2^m))` for `m=1,2,3`, adding one point above
+infinity and, at each finite point `P`, counting solutions of
+`w²+w=y(P)` in `F_(2^m)`.
 
 The initially planned enumeration of genus-three Artin–Schreier models is
 unnecessary for this subcase: every possible `E'` already violates the
