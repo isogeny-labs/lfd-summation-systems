@@ -1,0 +1,78 @@
+Initial seed for pseudo-random number generator is 12345
+
+--------------- INPUT DATA ---------------
+#variables                      24
+#equations                      70
+#invalid equations               0
+field characteristic             2
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         1
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  3     126     141     353 x 267         0.64%       18 new     108 zero         0.00 | 0.00         
+  2      16     161      58 x 48          3.88%        0 new      16 zero         0.00 | 0.00         
+  3     130     145     300 x 170         0.69%        0 new     130 zero         0.00 | 0.00         
+  4      15      15     401 x 448         0.69%       15 new       0 zero         0.00 | 0.00         
+  3      30     110     188 x 261         1.39%       20 new      10 zero         0.00 | 0.00         
+  3      85     185     278 x 261         3.25%       25 new      60 zero         0.00 | 0.00         
+  3     101     282     401 x 344         2.71%       11 new      90 zero         0.00 | 0.00         
+  4     302     331    1059 x 931         0.97%       81 new     221 zero         0.00 | 0.00         
+------------------------------------------------------------------------------------------------------
+reduce final basis        1 x 1         100.00%        1 new       0 zero         0.00 | 0.00         
+------------------------------------------------------------------------------------------------------
+
+---------------- TIMINGS ----------------
+overall(elapsed)        0.01 sec
+overall(cpu)            0.01 sec
+select                  0.00 sec   6.6%
+symbolic prep.          0.00 sec   9.1%
+update                  0.01 sec  69.5%
+convert                 0.00 sec   4.0%
+linear algebra          0.00 sec   8.6%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                     1
+#terms in basis                   1
+#pairs reduced                  805
+#GM criterion                 27705
+#redundant elements             239
+#rows reduced                  1611
+#zero reductions                635
+max. matrix data               1059 x 931 (0.967%)
+max. symbolic hash table size  2^11
+max. basis hash table size     2^16
+-----------------------------------------
+
+Grobner basis has a single element
+No solution
+
+
+------------------------------------------------------------------------------------
+msolve overall time           0.01 sec (elapsed) /  0.01 sec (cpu)
+------------------------------------------------------------------------------------
