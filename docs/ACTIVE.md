@@ -15,7 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-- [ ] Bound random APS towers and check labeled isogeny example (Codex, started 2026-11-28, branch codex/aps-pkm-labeled-tower-bound-20261128, PR #94)
+- [x] Bound random APS towers and check labeled isogeny example (Codex, started 2026-11-28, branch codex/aps-pkm-labeled-tower-bound-20261128, PR #94)
 - [ ] Screen O-aware S5 norm relation circuit for soundness and cost (Codex, started 2026-11-28, branch research/norm-s5-screen-20261128)
 - [x] Correct direct eliminant's target-specific control status in the crossed S3 report (Codex, started 2026-11-28, branch codex/direct-eliminant-control-20261128, PR #92)
 - [ ] Compare crossed S3 solver cost on matched binary four-summand relations (Codex, started 2026-11-28, branch research/crossed-s3-solver-20261128, PR #89 and #90 merged before completion; continuation PR #91)
