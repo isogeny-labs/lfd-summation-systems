@@ -13,6 +13,10 @@ An [independent Sage point replay](sage-replay.json), with source committed
 before its result, matched the full ordered tuple set on all nine queries,
 including the n=5 cells. It used Sage finite fields and elliptic-curve point
 addition rather than the generator's point arithmetic.
+The generated msolve syntax was also evaluated directly on 1,503 positive
+tree/crossed/direct witness assignments. All 29,184 Boolean leaf assignments
+for the direct eliminants matched the expected relation predicate; see
+[`input-verification.json`](input-verification.json).
 
 The solver measurement is incomplete. [A1](AMENDMENT-A1.md) records an
 unsupported macOS address-space cap before any msolve run. [A2](AMENDMENT-A2.md)
