@@ -9,6 +9,10 @@ has the same ordered factor-base-abscissa relation set as direct four-point
 addition on all nine queries. The exact Boolean eliminant was generated from
 that independent group-addition predicate. The n=3 curves had no selected
 zero-relation target; the manifest records all selected queries.
+An [independent Sage point replay](sage-replay.json), with source committed
+before its result, matched the full ordered tuple set on all nine queries,
+including the n=5 cells. It used Sage finite fields and elliptic-curve point
+addition rather than the generator's point arithmetic.
 
 The solver measurement is incomplete. [A1](AMENDMENT-A1.md) records an
 unsupported macOS address-space cap before any msolve run. [A2](AMENDMENT-A2.md)
