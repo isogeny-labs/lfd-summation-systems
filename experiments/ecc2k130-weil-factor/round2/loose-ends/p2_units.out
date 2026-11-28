@@ -1,0 +1,11 @@
+a in F_p? 0 (expect 0: (-7/p2) = -1)
+w^131 = 1: 1, w != 1: 1, w^2 = b/a: 1
+pi mod P = a*w in F_p: 1 ; (a w)^2 = 2: 1 ; pibar = b/w in F_p: 1
+Frobenius at P = complex conjugation: w^p = w^-1: 1, a^p = b: 1
+zeta: order 131 (expect 131); -zeta: order 131
+real cyclotomic units xi_k, k=2..65, with nontrivial image: 0 (expect 0)
+non-real units (1-zeta^k)/(1-zeta) with nontrivial image: 64 of 64 (expect 64)
+G^2 = -131: 1
+s917^2 = 917: 1
+fundamental unit of Q(sqrt917): norm 1, image order 1 (expect 1)
+(p2+1)/262 = 559182304891331 = [11, 1; 1777, 1; 28607065273, 1]

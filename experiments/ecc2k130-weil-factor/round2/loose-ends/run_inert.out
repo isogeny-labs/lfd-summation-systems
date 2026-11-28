@@ -1,0 +1,19 @@
+ell=11 p=23  deg=20  h_K=5 (GRH)  cyc=[5]  w=22  #fu=9  reg=7.07570 e5  time=0s
+   Hasse unit index Q = 2
+   pair (1,7) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (2,17) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (3,5) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (4,8) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (6,16) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (9,20) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (10,19) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (11,13) conj-stable=1  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   pair (12,18) conj-stable=0  #im(O_K^*)=22  #im(mu_K)=11  -> #Pic(O)=h_K*(p-1)/#im=5  ker(Pic O->Pic O_K)=1
+   #index-p orders containing R = 9 ; total iso classes over all of them = 45 ; with End=O_K: 5
+   predicted for the conj-stable pair (#im = ell*Q, since chi1(u)/chi2(u) = chi1(u/ubar) and {u/ubar} = mu_K^2 or mu_K): #Pic = h_K*(p-1)/(ell*Q) = 5
+   U_ell=23 ; time 0s
+ell=17 p=271 (inert type)  deg=32 h_K=45 (GRH) cyc=[15, 3] w=34 Q=2
+   P#2: lambda=pi mod P in F_p: 1 (lambda^2=2: 1), pibar in F_p: 1, conj(P)=P: 1
+   orders of unit images in F_{p^2}^*/F_p^* (mu_K gen first): [17, 17, 17, 17, 17, 17, 17, 17, 34, 34, 34, 34, 34, 17, 34, 34]
+   #im(O_K^*) = 34 (predicted ell*Q = 34) -> #Pic(O_P) = h_K*(p+1)/#im = 360 ; ker = 8
+   primes P of degree 2 with pi mod P in F_p: 1 (expect 1); time 1s

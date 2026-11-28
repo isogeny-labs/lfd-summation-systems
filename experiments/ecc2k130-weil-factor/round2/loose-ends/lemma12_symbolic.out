@@ -1,0 +1,6 @@
+Lemma 1: x*ybar - xbar*y == -(ad-bc)(alpha-beta) identically: 1
+Lemma 1: D(1,alpha) = -1: 1 ; D alternating: 1
+Lemma 2: D(alpha^i, beta^j) = U_{i+j} for 0<=i,j<=30 (generic s,q): 1
+Lemma 2: D(1, alpha^n) = -U_n for n<=60: 1
+negative control D(alpha^2,beta^3) = U_4 (wrong)? 0 (expect 0)
+index = |det| on 200 random lattices: 1

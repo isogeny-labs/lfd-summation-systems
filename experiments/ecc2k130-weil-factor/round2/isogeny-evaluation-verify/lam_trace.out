@@ -1,0 +1,12 @@
+ell=11 U=23 factors={23: 1} t_ell=-67
+  p=23  #sign-consistent sqrt2=1 lam=18 expected=18 match=True ord(lam)=11 (p-1)/ord=2 ord(-lam)=22 ord(2)=11
+ell=17 U=271 factors={271: 1} t_ell=101
+  p=271  #sign-consistent sqrt2=1 lam=96 expected=96 match=True ord(lam)=270 (p-1)/ord=1 ord(-lam)=135 ord(2)=135
+ell=19 U=457 factors={457: 1} t_ell=797
+  p=457  #sign-consistent sqrt2=1 lam=377 expected=377 match=True ord(lam)=152 (p-1)/ord=3 ord(-lam)=152 ord(2)=76
+ell=131 U=38531015900842053623 factors={263: 1, 146505763881528721: 1} t_ell=-22283658519494248867
+  p=263  #sign-consistent sqrt2=1 lam=110 expected=110 match=True ord(lam)=262 (p-1)/ord=1 ord(-lam)=131 ord(2)=131
+  p=146505763881528721  #sign-consistent sqrt2=1 lam=14975904886999252 expected=14975904886999252 match=True ord(lam)=12208813656794060 (p-1)/ord=12 ord(-lam)=12208813656794060 ord(2)=6104406828397030
+p2-1 factorisation: {2: 4, 3: 1, 5: 1, 17: 1, 31: 1, 4001: 1, 289510489: 1}  (p2-1)/12 = 12208813656794060
+p2 mod 131 = 130  kronecker(-7,p2) via Euler: False
+negative control: random primes with sqrt2 where t_131==2*lam^131 holds: 0 of 200

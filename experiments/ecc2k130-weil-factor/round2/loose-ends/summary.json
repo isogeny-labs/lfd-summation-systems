@@ -1,0 +1,16 @@
+{
+ "lean_attempt": {
+  "raw.githubusercontent.com elan-init.sh": "HTTP 200 (downloaded)",
+  "github.com/leanprover/elan releases/latest download": "HTTP 302 redirect (reachable)",
+  "release.lean-lang.org": "HTTP 200",
+  "github.com/leanprover/lean4/releases page": "HTTP 403 via curl -o /dev/null",
+  "run elan-init.sh -y --default-toolchain none": "DENIED by the Claude Code auto-mode permission classifier (reason given: Undermining Oversight); not retried or worked around",
+  "lean/lake/elan on PATH": "none"
+ },
+ "K131": {
+  "h_minus": 1128247071505617895582943540743356840380563482194685535482598575,
+  "Q": 2,
+  "(p2+1)/262": 559182304891331,
+  "iso_classes_End_O_p2_over_h_plus": 630895797931405754287875696702628799812480720685135263434704476102856870453325
+ }
+}

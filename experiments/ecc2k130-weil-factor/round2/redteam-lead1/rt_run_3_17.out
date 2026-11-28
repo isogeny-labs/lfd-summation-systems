@@ -95,3 +95,11 @@
     Hilbert symbols (r,-7)_v of this ppav: product=1, #real places with r<0=0, places with symbol -1: [[17, 1, 1, "inert", -15], [271, 5, 1, "inert", -1]]
   R: one glued pair above 271        n(v0)=0 pred=no  | A: classes=45 princ=45 antisym=45 W=0 | B: [Cl+:N Cl]=2 inN=0 Artin=-1 |kerN|=45 | consistent=1 agree-with-rule=1 [2363 ms]
   R: v0 + one pair above 271         n(v0)=1 pred=yes | A: classes=45 princ=45 antisym=45 W=45 | B: [Cl+:N Cl]=2 inN=1 Artin=+1 |kerN|=45 | consistent=1 agree-with-rule=1 [2971 ms]
+    explicit T found after 276 local-generator tries
+    [R: v0 + one pair above 271] det Gram=1 integral=1 alternating=1 lam antisym=1 pi,pibar-stable=1,1 r>>0=1 zeta in End=0
+    neg. control (same lambda on S): det=1/396109944105121 integral=0
+    Hilbert symbols (r,-7)_v of this ppav: product=1, #real places with r<0=0, places with symbol -1: [[17, 1, 1, "inert", -15], [271, 5, 1, "inert", -1], [271, 6, 1, "inert", -1], [271, 14, 1, "inert", -1]]
+  R: two pairs above 271             n(v0)=0 pred=no  | A: classes=45 princ=45 antisym=45 W=0 | B: [Cl+:N Cl]=2 inN=0 Artin=-1 |kerN|=45 | consistent=1 agree-with-rule=1 [2685 ms]
+  SUMMARY ell=17: 5 cases, all methods consistent: 1, rule eps*(-1)^n=+1 <=> ppav agrees in all: 1 [325 s]
+
+exit: 0
