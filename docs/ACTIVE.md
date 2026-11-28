@@ -15,7 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-- [ ] Freeze online quadratic S3 scaling panel at degrees 16, 20, and 24 (Codex, started 2026-11-27, branch research/subfield-s3-scaling-20261127)
+- [x] Freeze online quadratic S3 scaling panel at degrees 16, 20, and 24 (Codex, started 2026-11-27, branch research/subfield-s3-scaling-20261127, PR #77)
 - [x] State the composite-degree subfield escape and its complete-cost gate (Codex, started 2026-11-27, branch research/excess-composite-gate-20261127, PR #75)
 - [ ] ECC2K-130 open leads, parallel workflow round: Jacobian obstructions + heuristic count in the ppav locus; isogeny-evaluation barrier (kernel-field lower bound); red-team of lead 1 Theorem A; ell=29/37 prediction; cover-of-E review; extension-field automorphisms and A-as-factor routes; loose ends (p2 primality certificate, Lean, Pic(O)) (Claude, started 2026-11-27, branch claude/index-calculus-root-finding-e95kd6, PR #72)
 - [x] ECC2K-130 isogeny gap, lead 1 (RESULT: no ppav in the class contains zeta; A itself is not principally polarizable; ppavs exist, all non-maximal at v0 | p2): does any A' isogenous to A with zeta_131 not in End(A') carry a principal polarization? (Deligne modules / Howe; full decision at ell=11,19 as controls) (Claude, started 2026-11-27, branch claude/index-calculus-root-finding-e95kd6, PR #72)
