@@ -2,7 +2,7 @@
 \\ Own code: K+ = Q(c,s) via rnfequation (no polredbest); K as tower Q(alpha)(zeta) with manual traces.
 \\ GRH (bnfinit) is used ONLY to find generators / a suitable split prime; all checks are exact.
 default(parisizemax, 4000000000);
-AV = varlower("AV");
+ZV = varhigher("ZV"); AV = varlower("AV");
 ff(t) = { if (type(t) == "t_FFELT", t = t.pol); t = lift(t); if (type(t)=="t_POL", t = polcoeff(t,0)); t; }
 setup(ell) = {
   ELL = ell;
@@ -11,7 +11,7 @@ setup(ell) = {
   P = eq[1]; Cc = eq[2]; KK = eq[3]; Ss = Mod('x, P) - KK*Cc;
   NF = nfinit(P); BNF = bnfinit(NF, 1); NN = poldegree(P);
   Q = idealprimedec(NF, ell)[1];
-  PHI = polcyclo(ell, 'z); AL = Mod(AV, AV^2 + AV + 2); ZE = Mod('z, PHI);
+  PHI = polcyclo(ell, ZV); AL = Mod(AV, AV^2 + AV + 2); ZE = Mod(ZV, PHI);
   N = 2*(ell-1);
   BAS = vector(N, i, my(j = (i-1) % (ell-1), e = (i-1) \ (ell-1)); ZE^j * AL^e);
   CBAS = vector(N, i, my(j = (i-1) % (ell-1), e = (i-1) \ (ell-1)); ZE^(-j) * (-1-AL)^e);
@@ -20,11 +20,11 @@ setup(ell) = {
 \\ K+ element (polmod mod P in x) -> tower, using x = s + KK c
 toT(r) = { my(cT = ZE + 1/ZE, sT = (2*AL+1)*(ZE - 1/ZE)); subst(lift(r), 'x, sT + KK*cT); }
 trT(y) = { my(f = lift(y), t = 0);
-  for (j = 0, ELL-2, my(cj = polcoeff(f, j, 'z)); if (cj == 0, next);
+  for (j = 0, ELL-2, my(cj = polcoeff(f, j, ZV)); if (cj == 0, next);
      my(cl = lift(cj), u = polcoeff(cl, 0, AV), v = polcoeff(cl, 1, AV));
      t += (2*u - v) * if (j == 0, ELL-1, -1));
   t; }
-coordsT(y) = { my(f = lift(y)); vectorv(N, i, my(j = (i-1) % (ELL-1), e = (i-1) \ (ELL-1)); polcoeff(lift(polcoeff(f, j, 'z)), e, AV)); }
+coordsT(y) = { my(f = lift(y)); vectorv(N, i, my(j = (i-1) % (ELL-1), e = (i-1) \ (ELL-1)); polcoeff(lift(polcoeff(f, j, ZV)), e, AV)); }
 \\ definite generator of ideal I: use bnfisprincipal + unit sign correction (GRH only for finding)
 defgen(I) = {
   my(t = bnfisprincipal(BNF, I)); if (t[1] != 0*t[1], error("not principal"));
@@ -41,7 +41,7 @@ checkall(r, M, extra, label) = {
   my(k = (ELL-3)/2);
   \\ (i) ideal criterion in K+
   my(target = idealinv(NF, idealmul(NF, idealmul(NF, 7*(Cc^2-4)^k, Q), extra)));
-  my(idok = idealhnf(NF, r) == target);
+  my(idok = idealhnf(NF, idealdiv(NF, r, target)) == matid(NN)); if (!idok, print("   r: ", idealfactor(NF, r)[,2]~, " target: ", idealfactor(NF, target)[,2]~));
   my(sg = nfeltsign(NF, nfalgtobasis(NF, r)));
   \\ (ii) Gram in own tower arithmetic
   my(lam = (2*AL+1) * toT(r));
