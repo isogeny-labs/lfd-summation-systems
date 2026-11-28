@@ -15,7 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
-- [ ] Compare crossed S3 solver cost on matched binary four-summand relations (Codex, started 2026-11-28, branch research/crossed-s3-solver-20261128, PR #89)
+- [ ] Compare crossed S3 solver cost on matched binary four-summand relations (Codex, started 2026-11-28, branch research/crossed-s3-solver-20261128, PR #89 merged before completion; continuation PR #90)
 - [x] Check binary-field O-aware crossed S3 witnesses against direct four-point addition (Codex, started 2026-11-28, branch research/binary-crossed-s3-20261128, PR #88)
 - [x] Check an O-aware crossed S3 summation network against direct four-point relations and record its solver-cost test (Codex, started 2026-11-28, branch research/crossed-s3-witness-20261128, PR #87)
 - [x] Repair the merged active index and calibrate the quadratic LRF status (Codex, started 2026-11-27, branch codex/repair-active-lrf-20261127, PR #86)
