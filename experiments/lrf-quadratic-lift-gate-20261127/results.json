@@ -16,7 +16,7 @@
             ],
             "attempt": 7,
             "native": {
-              "cpu": 5.2999999999997494e-05,
+              "cpu": 7.499999999999174e-05,
               "stats": {
                 "degenerate": 0,
                 "found": 0,
@@ -26,27 +26,32 @@
                 "quad_split": 32,
                 "targets": 1
               },
-              "wall": 5.1833998440997675e-05
+              "wall": 7.516600089729764e-05
             },
             "pairs": [],
             "rows": [],
             "solver": {
               "basis_count": 1,
-              "construction_cpu": 0.026778999999999886,
-              "construction_wall": 0.07718329100134724,
+              "complete_query_cpu": 0.07184800000000005,
+              "complete_query_wall": 0.10261691699997755,
+              "complete_worker_wall": 2.7091824999988603,
+              "construction_cpu": 0.019576999999999956,
+              "construction_wall": 0.032573750000665314,
               "equation_count": 39,
-              "extraction_cpu": 7.899999999994023e-05,
-              "extraction_wall": 7.97079992480576e-05,
-              "groebner_cpu": 0.04888899999999996,
-              "groebner_wall": 0.057652041999972425,
+              "extraction_cpu": 0.00020599999999992846,
+              "extraction_wall": 0.0005362920001061866,
+              "groebner_cpu": 0.05203599999999997,
+              "groebner_wall": 0.06947579199913889,
               "input_degree_max": 2,
               "max_intermediate_solver_degree": null,
               "pairs": [],
-              "peak_rss_bytes": 239058944,
-              "query_cpu": 0.07576399999999994,
-              "query_wall": 0.13493504100006248,
+              "peak_rss_bytes": 237305856,
+              "query_cpu": 0.07184100000000004,
+              "query_wall": 0.10261016699951142,
+              "recovery_cpu": 7.000000000007001e-06,
+              "recovery_wall": 6.750000466126949e-06,
               "status": "exact_match",
-              "worker_total_wall": 1.956513040999198
+              "worker_total_wall": 2.709175749998394
             }
           },
           {
@@ -56,7 +61,7 @@
             ],
             "attempt": 8,
             "native": {
-              "cpu": 0.0018509999999999915,
+              "cpu": 0.0019549999999999984,
               "stats": {
                 "degenerate": 0,
                 "found": 0,
@@ -66,27 +71,32 @@
                 "quad_split": 30,
                 "targets": 1
               },
-              "wall": 0.0018505000007280614
+              "wall": 0.0019550420001905877
             },
             "pairs": [],
             "rows": [],
             "solver": {
               "basis_count": 1,
-              "construction_cpu": 0.01726099999999997,
-              "construction_wall": 0.017284124998695916,
+              "complete_query_cpu": 0.05427399999999995,
+              "complete_query_wall": 0.07569141699968895,
+              "complete_worker_wall": 2.2007935830006318,
+              "construction_cpu": 0.01885099999999995,
+              "construction_wall": 0.03236908399958338,
               "equation_count": 39,
-              "extraction_cpu": 8.499999999989072e-05,
-              "extraction_wall": 8.458400043309666e-05,
-              "groebner_cpu": 0.03519899999999998,
-              "groebner_wall": 0.035279957999591716,
+              "extraction_cpu": 7.80000000000225e-05,
+              "extraction_wall": 7.775000085530337e-05,
+              "groebner_cpu": 0.03531700000000004,
+              "groebner_wall": 0.043215499999860185,
               "input_degree_max": 2,
               "max_intermediate_solver_degree": null,
               "pairs": [],
-              "peak_rss_bytes": 236486656,
-              "query_cpu": 0.052562,
-              "query_wall": 0.05266916700020374,
+              "peak_rss_bytes": 236568576,
+              "query_cpu": 0.05426299999999995,
+              "query_wall": 0.0756815419990744,
+              "recovery_cpu": 1.0999999999997123e-05,
+              "recovery_wall": 9.875000614556484e-06,
               "status": "exact_match",
-              "worker_total_wall": 1.9097156670013646
+              "worker_total_wall": 2.200783708000017
             }
           }
         ],
@@ -98,7 +108,7 @@
             ],
             "attempt": 19,
             "native": {
-              "cpu": 0.002826999999999996,
+              "cpu": 0.0034519999999999967,
               "stats": {
                 "degenerate": 0,
                 "found": 1,
@@ -108,7 +118,7 @@
                 "quad_split": 33,
                 "targets": 1
               },
-              "wall": 0.0028278339996177237
+              "wall": 0.0034517500007495983
             },
             "pairs": [
               [
@@ -134,13 +144,16 @@
             ],
             "solver": {
               "basis_count": 16,
-              "construction_cpu": 0.01668599999999998,
-              "construction_wall": 0.016694125000867643,
+              "complete_query_cpu": 1.834771,
+              "complete_query_wall": 2.087008208001862,
+              "complete_worker_wall": 5.110793750001903,
+              "construction_cpu": 0.02041599999999999,
+              "construction_wall": 0.03280083299978287,
               "equation_count": 39,
-              "extraction_cpu": 1.7074890000000003,
-              "extraction_wall": 1.850265583001601,
-              "groebner_cpu": 0.04081299999999999,
-              "groebner_wall": 0.040855332999854,
+              "extraction_cpu": 1.7682470000000001,
+              "extraction_wall": 1.993554958000459,
+              "groebner_cpu": 0.045970999999999984,
+              "groebner_wall": 0.060511833000418846,
               "input_degree_max": 2,
               "max_intermediate_solver_degree": null,
               "pairs": [
@@ -153,11 +166,13 @@
                   867
                 ]
               ],
-              "peak_rss_bytes": 248545280,
-              "query_cpu": 1.765009,
-              "query_wall": 1.9078389580008661,
+              "peak_rss_bytes": 247824384,
+              "query_cpu": 1.8346529999999999,
+              "query_wall": 2.0868902910006,
+              "recovery_cpu": 0.00011800000000000699,
+              "recovery_wall": 0.00011791700126195792,
               "status": "exact_match",
-              "worker_total_wall": 3.516161874998943
+              "worker_total_wall": 5.110675833000641
             }
           },
           {
@@ -167,7 +182,7 @@
             ],
             "attempt": 80,
             "native": {
-              "cpu": 0.0021690000000000043,
+              "cpu": 0.002463999999999994,
               "stats": {
                 "degenerate": 0,
                 "found": 1,
@@ -177,7 +192,7 @@
                 "quad_split": 29,
                 "targets": 1
               },
-              "wall": 0.0021708329986722674
+              "wall": 0.002466874999299762
             },
             "pairs": [
               [
@@ -203,13 +218,16 @@
             ],
             "solver": {
               "basis_count": 16,
-              "construction_cpu": 0.01735500000000001,
-              "construction_wall": 0.01979275000121561,
+              "complete_query_cpu": 1.0141420000000003,
+              "complete_query_wall": 1.2067340840003453,
+              "complete_worker_wall": 3.9511858339992614,
+              "construction_cpu": 0.018784000000000134,
+              "construction_wall": 0.03197112499947252,
               "equation_count": 39,
-              "extraction_cpu": 0.9514610000000001,
-              "extraction_wall": 1.0804290420001053,
-              "groebner_cpu": 0.04242199999999996,
-              "groebner_wall": 0.04796512499888195,
+              "extraction_cpu": 0.9488430000000001,
+              "extraction_wall": 1.1140450830007467,
+              "groebner_cpu": 0.046276000000000206,
+              "groebner_wall": 0.06047316700096417,
               "input_degree_max": 2,
               "max_intermediate_solver_degree": null,
               "pairs": [
@@ -222,18 +240,20 @@
                   696
                 ]
               ],
-              "peak_rss_bytes": 247365632,
-              "query_cpu": 1.011255,
-              "query_wall": 1.1482077920009033,
+              "peak_rss_bytes": 248627200,
+              "query_cpu": 1.0139210000000003,
+              "query_wall": 1.2065128340000228,
+              "recovery_cpu": 0.00022099999999999898,
+              "recovery_wall": 0.00022125000032247044,
               "status": "exact_match",
-              "worker_total_wall": 3.1407997499991325
+              "worker_total_wall": 3.950964583998939
             }
           }
         ]
       },
       "setup": {
-        "cpu": 0.0021750000000000103,
-        "wall": 0.006770957999833627
+        "cpu": 0.0026169999999999943,
+        "wall": 0.0070194170002650935
       }
     },
     {
@@ -252,7 +272,7 @@
             ],
             "attempt": 2,
             "native": {
-              "cpu": 0.002252000000000004,
+              "cpu": 0.0022989999999999955,
               "stats": {
                 "degenerate": 0,
                 "found": 0,
@@ -262,27 +282,32 @@
                 "quad_split": 257,
                 "targets": 1
               },
-              "wall": 0.002254916998936096
+              "wall": 0.0022992920003162
             },
             "pairs": [],
             "rows": [],
             "solver": {
               "basis_count": 1,
-              "construction_cpu": 0.017344999999999944,
-              "construction_wall": 0.030296167000415153,
+              "complete_query_cpu": 0.38016099999999997,
+              "complete_query_wall": 0.41007400000125926,
+              "complete_worker_wall": 2.9844205000008515,
+              "construction_cpu": 0.018230999999999886,
+              "construction_wall": 0.031989916000384255,
               "equation_count": 43,
-              "extraction_cpu": 9.40000000000385e-05,
-              "extraction_wall": 9.375000081490725e-05,
-              "groebner_cpu": 0.3680079999999999,
-              "groebner_wall": 0.38755945899902144,
+              "extraction_cpu": 9.700000000001374e-05,
+              "extraction_wall": 9.783400128071662e-05,
+              "groebner_cpu": 0.36180500000000015,
+              "groebner_wall": 0.3779586250002467,
               "input_degree_max": 2,
               "max_intermediate_solver_degree": null,
               "pairs": [],
-              "peak_rss_bytes": 239337472,
-              "query_cpu": 0.38546400000000003,
-              "query_wall": 0.41796875,
+              "peak_rss_bytes": 239861760,
+              "query_cpu": 0.38015299999999996,
+              "query_wall": 0.41006641600142757,
+              "recovery_cpu": 8.000000000008e-06,
+              "recovery_wall": 7.58399983169511e-06,
               "status": "exact_match",
-              "worker_total_wall": 2.540693667000596
+              "worker_total_wall": 2.9844129160010198
             }
           },
           {
@@ -292,7 +317,7 @@
             ],
             "attempt": 3,
             "native": {
-              "cpu": 0.0020830000000000015,
+              "cpu": 0.0023920000000000052,
               "stats": {
                 "degenerate": 0,
                 "found": 0,
@@ -302,27 +327,32 @@
                 "quad_split": 261,
                 "targets": 1
               },
-              "wall": 0.002089624998916406
+              "wall": 0.0023913750010251533
             },
             "pairs": [],
             "rows": [],
             "solver": {
               "basis_count": 1,
-              "construction_cpu": 0.01718799999999998,
-              "construction_wall": 0.017214416000570054,
+              "complete_query_cpu": 0.42154,
+              "complete_query_wall": 0.45600875000127417,
+              "complete_worker_wall": 2.856411250000747,
+              "construction_cpu": 0.01878000000000002,
+              "construction_wall": 0.03458716699969955,
               "equation_count": 43,
-              "extraction_cpu": 8.099999999999774e-05,
-              "extraction_wall": 8.033300036913715e-05,
-              "groebner_cpu": 0.3879840000000001,
-              "groebner_wall": 0.38840333400003146,
+              "extraction_cpu": 0.00017799999999978944,
+              "extraction_wall": 0.000197666999156354,
+              "groebner_cpu": 0.4025509999999999,
+              "groebner_wall": 0.42118741600097565,
               "input_degree_max": 2,
               "max_intermediate_solver_degree": null,
               "pairs": [],
-              "peak_rss_bytes": 240009216,
-              "query_cpu": 0.40527099999999994,
-              "query_wall": 0.40571929100042325,
+              "peak_rss_bytes": 241205248,
+              "query_cpu": 0.42152900000000004,
+              "query_wall": 0.45599712500006717,
+              "recovery_cpu": 1.1000000000011001e-05,
+              "recovery_wall": 1.1625001206994057e-05,
               "status": "exact_match",
-              "worker_total_wall": 2.023948250000103
+              "worker_total_wall": 2.85639962499954
             }
           }
         ],
@@ -334,7 +364,7 @@
             ],
             "attempt": 29,
             "native": {
-              "cpu": 0.0021869999999999945,
+              "cpu": 0.0024680000000000257,
               "stats": {
                 "degenerate": 0,
                 "found": 1,
@@ -344,7 +374,7 @@
                 "quad_split": 267,
                 "targets": 1
               },
-              "wall": 0.002194417000282556
+              "wall": 0.002468083001076593
             },
             "pairs": [
               [
@@ -371,7 +401,7 @@
             "solver": {
               "peak_rss_bytes": null,
               "status": "timeout_30s",
-              "worker_total_wall": 30.0099369999989
+              "worker_total_wall": 30.009330291999504
             }
           },
           {
@@ -381,7 +411,7 @@
             ],
             "attempt": 34,
             "native": {
-              "cpu": 0.00021399999999999197,
+              "cpu": 0.0023270000000000235,
               "stats": {
                 "degenerate": 0,
                 "found": 2,
@@ -391,7 +421,7 @@
                 "quad_split": 270,
                 "targets": 1
               },
-              "wall": 0.00021504199867194984
+              "wall": 0.002327583000806044
             },
             "pairs": [
               [
@@ -436,14 +466,14 @@
             "solver": {
               "peak_rss_bytes": null,
               "status": "timeout_30s",
-              "worker_total_wall": 30.012428957999873
+              "worker_total_wall": 30.009718458999487
             }
           }
         ]
       },
       "setup": {
-        "cpu": 0.0014089999999999936,
-        "wall": 0.0014124170011200476
+        "cpu": 0.0014060000000000183,
+        "wall": 0.0014066250005271286
       }
     }
   ],

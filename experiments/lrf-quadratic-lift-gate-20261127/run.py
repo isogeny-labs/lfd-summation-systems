@@ -121,6 +121,27 @@ def worker_payload(S, data):
     }
 
 
+def recover_pairs(S, T, data, pairs):
+    """Charge point recovery and independent group checks for solver output."""
+    F, E = S.F, S.E
+    rows = set()
+    for gmask, zmask in pairs:
+        assert 0 <= gmask < 1 << data["kernel_dim"]
+        assert 0 <= zmask < 1 << S.k
+        e1, e2, lam = data["evaluation"](gmask)
+        x = zmask
+        assert F.sq(x) ^ F.mul(e1, x) ^ e2 == 0
+        x2 = x ^ e1
+        assert rf._apply(S.chk, x) == rf._apply(S.chk, x2) == 0
+        mu = F.mul(lam, data["xT"]) ^ data["ym"]
+        P1 = (x, F.mul(lam, x) ^ mu)
+        P2 = (x2, F.mul(lam, x2) ^ mu)
+        assert E.on_curve(P1) and E.on_curve(P2)
+        assert E.add(P1, P2) == T
+        rows.add(tuple(sorted((P1, P2))))
+    return sorted(rows)
+
+
 def run_cell(n, k, delta):
     F = I.GF2n(n, (1 << n) | (1 << 5) | 1)
     rng = random.Random(SEED)
@@ -173,6 +194,15 @@ def run_cell(n, k, delta):
                 solver = json.loads(call.stdout)
                 assert solver["pairs"] == pairs
                 assert solver["input_degree_max"] <= 2
+                recovery_start = time.perf_counter()
+                recovery_cpu_start = time.process_time()
+                recovered = recover_pairs(S, T, data, solver["pairs"])
+                solver["recovery_wall"] = time.perf_counter() - recovery_start
+                solver["recovery_cpu"] = time.process_time() - recovery_cpu_start
+                assert recovered == rows
+                solver["complete_query_wall"] = solver["query_wall"] + solver["recovery_wall"]
+                solver["complete_query_cpu"] = solver["query_cpu"] + solver["recovery_cpu"]
+                solver["complete_worker_wall"] = worker_total + solver["recovery_wall"]
                 solver["status"] = "exact_match"
                 solver["worker_total_wall"] = worker_total
         except subprocess.TimeoutExpired:

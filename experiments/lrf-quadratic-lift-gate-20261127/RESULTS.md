@@ -35,28 +35,30 @@ Each row is one deterministic execution, with wall and CPU retained in
 `results.json`; no uncertainty interval is inferred. The native column
 times the C `Solver.lrf(2,T)` query including relation recovery. The
 Sage query column starts after interpreter import and includes equation
-construction, Gröbner basis, variety extraction, and answer packaging.
+construction, Gröbner basis, variety extraction, point recovery, and
+group-law verification.
 The worker-total column also charges per-query Sage process startup;
 it is a conservative cold cost. Shared native `Solver` setup was
-0.00677 s at `k=10` and 0.00141 s at `k=11`, recorded separately.
+0.00702 s at `k=10` and 0.00141 s at `k=11`, recorded separately.
 Completed workers recorded macOS peak RSS through `ru_maxrss`, shown
 in MiB. The 30-second cap applied to the whole worker, so internal
 solver time and peak RSS are unknown for timeout cases; see the
 [timing amendment](AMENDMENT.md).
 
-| `k,delta` | Outcome | Attempt | Boolean solutions | Native C wall | Sage query wall | Worker total wall | Peak RSS MiB | Sage status |
+| `k,delta` | Outcome | Attempt | Boolean solutions | Native C wall | Complete Sage query wall | Worker plus recovery wall | Peak RSS MiB | Sage status |
 |---|---|---:|---:|---:|---:|---:|---:|---|
-| `10,6` | empty | 7 | 0 | 0.000052 | 0.1349 | 1.957 | 228.0 | exact match |
-| `10,6` | empty | 8 | 0 | 0.001851 | 0.0527 | 1.910 | 225.5 | exact match |
-| `10,6` | positive | 19 | 2 | 0.002828 | 1.908 | 3.516 | 237.0 | exact match |
-| `10,6` | positive | 80 | 2 | 0.002171 | 1.148 | 3.141 | 235.9 | exact match |
-| `11,9` | empty | 2 | 0 | 0.002255 | 0.4180 | 2.541 | 228.2 | exact match |
-| `11,9` | empty | 3 | 0 | 0.002090 | 0.4057 | 2.024 | 228.9 | exact match |
-| `11,9` | positive | 29 | 2 | 0.002194 | unknown | 30.010 | unknown | censored at 30 s |
-| `11,9` | positive | 34 | 4 | 0.000215 | unknown | 30.012 | unknown | censored at 30 s |
+| `10,6` | empty | 7 | 0 | 0.000075 | 0.1026 | 2.709 | 226.3 | exact match |
+| `10,6` | empty | 8 | 0 | 0.001955 | 0.0757 | 2.201 | 225.6 | exact match |
+| `10,6` | positive | 19 | 2 | 0.003452 | 2.087 | 5.111 | 236.3 | exact match |
+| `10,6` | positive | 80 | 2 | 0.002467 | 1.207 | 3.951 | 237.1 | exact match |
+| `11,9` | empty | 2 | 0 | 0.002299 | 0.4101 | 2.984 | 228.8 | exact match |
+| `11,9` | empty | 3 | 0 | 0.002391 | 0.4560 | 2.856 | 230.0 | exact match |
+| `11,9` | positive | 29 | 2 | 0.002468 | unknown | 30.009 | unknown | censored at 30 s |
+| `11,9` | positive | 34 | 4 | 0.002328 | unknown | 30.010 | unknown | censored at 30 s |
 
 For `k=10` positives, Gröbner basis construction itself took about
-0.041–0.048 s; extracting the solutions took 1.08–1.85 s. The two
+0.061 s; extracting the solutions took 1.11–1.99 s. Timed point
+recovery and group verification took less than 0.0003 s. The two
 `k=11` positive timeout records do not locate the slowdown within the
 worker. The 30-second worker cap makes total worker time a lower
 bound, not a completed solve. `results.json` retains all CPU, setup,
