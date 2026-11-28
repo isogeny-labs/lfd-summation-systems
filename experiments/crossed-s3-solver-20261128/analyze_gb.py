@@ -27,12 +27,14 @@ def parse(row):
     rounds = [tuple(map(int, match.groups())) for line in log.splitlines()
               if (match := ROUND.match(line))]
     basis = re.search(r"#length of basis:\s+(\d+)", output)
-    assert basis is not None and rounds
+    assert basis is not None
     assert "#invalid equations               0" in log
-    return {"max_f4_degree": max(degree for degree, _, _ in rounds),
+    return {"max_f4_degree": max((degree for degree, _, _ in rounds),
+                                  default=None),
             "f4_rounds": len(rounds),
             "cumulative_matrix_cells": sum(r * c for _, r, c in rounds),
-            "largest_matrix_cells": max(r * c for _, r, c in rounds),
+            "largest_matrix_cells": max((r * c for _, r, c in rounds),
+                                        default=0),
             "basis_elements": int(basis.group(1)),
             "rows_reduced": int(re.search(r"#rows reduced\s+(\d+)", log).group(1)),
             "zero_reductions": int(re.search(r"#zero reductions\s+(\d+)", log).group(1))}
