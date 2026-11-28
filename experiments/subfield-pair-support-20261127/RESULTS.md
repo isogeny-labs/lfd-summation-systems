@@ -127,6 +127,33 @@ Rho timing varies with the deterministic walk seed. All three targets,
 query-hit counts, row counts and rank gates remain in `results.json`;
 `replay.py` regenerates the individual queries and relation rows.
 
+## Lazy single-target walk
+
+`lazy_walk.py` tests the cheaper cold path on the same curve, generator and
+three targets. It prepares eight deterministic point increments
+`da*G+db*T` and generates each query with one group addition. The S3
+quadratic roots are tested against the curve, and an abscissa is lifted
+only when a returned relation uses it. Every admitted signed equality
+and its S3 identity are checked. The target stops at the first prefix
+where its column is independent of the base columns; the replay also
+verifies the recovered scalar by multiplication.
+
+| Target scalar | Queries to target | Relation rows | Distinct base abscissas used | Optimistic cold seconds | Cold BSGS seconds | Cold rho seconds |
+|---:|---:|---:|---:|---:|---:|---:|
+| 3425 | 85 | 91 | 97 | 0.210 | 0.00136 | 0.00110 |
+| 17123 | 58 | 60 | 78 | 0.136 | 0.00197 | 0.01638 |
+| 29113 | 75 | 74 | 89 | 0.172 | 0.00227 | 0.00172 |
+
+These are measured on one host in SageMath 10.10.rc0. The candidate
+charges its increment setup, lazy lifts, walk queries and solving. It
+still trails cold BSGS by roughly 69–154 times across these targets.
+The timing remains optimistic because it identifies the first target
+determination offline and omits the cost of checking that condition
+during collection. The 1,024-query stream, failed queries and point
+lifts are replayable from `lazy_walk.py`; the counts and target checks
+are frozen in `lazy_results.json`. This screen does not establish a
+scaling law or a win on a larger field.
+
 ## Replay
 
 ```bash
@@ -134,9 +161,15 @@ sage -python experiments/subfield-pair-support-20261127/replay.py \
   > /tmp/subfield-pair-support-replay.json
 python3 experiments/subfield-pair-support-20261127/verify.py \
   /tmp/subfield-pair-support-replay.json
+sage -python experiments/subfield-pair-support-20261127/lazy_walk.py \
+  > /tmp/subfield-lazy-walk-replay.json
+python3 experiments/subfield-pair-support-20261127/verify.py \
+  /tmp/subfield-lazy-walk-replay.json lazy_results.json
 ```
 
 The verifier compares every discrete field, support, query, rank, and
 recovered-scalar record with `results.json`; wall-time fields are omitted
 from equality because they vary by host and load. The committed result
 SHA-256 is `4f55a14e595b7765c79cd7caaf3bb34edc03db1027b6264d8daa3aa725575ff2`.
+The committed lazy-walk result SHA-256 is
+`a7c7b9a4cf11bff54bfc408770b56f63d2dd5d6ca23207f2783084f34a3bd956`.

@@ -16,9 +16,10 @@ def strip_times(obj):
 
 
 def main():
-    if len(sys.argv) != 2:
-        raise SystemExit("usage: verify.py REPLAY_JSON")
-    frozen = json.loads((Path(__file__).parent / "results.json").read_text())
+    if len(sys.argv) not in (2, 3):
+        raise SystemExit("usage: verify.py REPLAY_JSON [FROZEN_JSON]")
+    frozen_name = sys.argv[2] if len(sys.argv) == 3 else "results.json"
+    frozen = json.loads((Path(__file__).parent / frozen_name).read_text())
     fresh = json.loads(Path(sys.argv[1]).read_text())
     assert strip_times(frozen) == strip_times(fresh)
     print("exact subfield pair-support replay verified")
