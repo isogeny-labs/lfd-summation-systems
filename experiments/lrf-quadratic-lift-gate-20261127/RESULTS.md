@@ -6,7 +6,7 @@ The lifted Boolean equations represent the **same two-point relations**
 as native LRF on the eight selected residual queries. They have input
 degree two, but SageMath/Singular did not make a complete query cheaper
 on this frozen panel. At `k=11`, both positive cases hit the 30-second
-solver cap. This is a backend and workload result, not a lower bound on
+worker cap. This is a backend and workload result, not a lower bound on
 all auxiliary-variable solvers, nor a measurement of complete ECDLP
 cost. The maximal intermediate solver degree was not exposed by the
 backend and is **unmeasured**.
@@ -38,25 +38,29 @@ Sage query column starts after interpreter import and includes equation
 construction, Gröbner basis, variety extraction, and answer packaging.
 The worker-total column also charges per-query Sage process startup;
 it is a conservative cold cost. Shared native `Solver` setup was
-0.0115 s at `k=10` and 0.00143 s at `k=11`, recorded separately.
+0.00677 s at `k=10` and 0.00141 s at `k=11`, recorded separately.
+Completed workers recorded macOS peak RSS through `ru_maxrss`, shown
+in MiB. The 30-second cap applied to the whole worker, so internal
+solver time and peak RSS are unknown for timeout cases; see the
+[timing amendment](AMENDMENT.md).
 
-| `k,delta` | Outcome | Attempt | Boolean solutions | Native C wall | Sage query wall | Worker total wall | Sage status |
-|---|---|---:|---:|---:|---:|---:|---|
-| `10,6` | empty | 7 | 0 | 0.000056 | 0.0902 | 2.408 | exact match |
-| `10,6` | empty | 8 | 0 | 0.002176 | 0.0595 | 1.848 | exact match |
-| `10,6` | positive | 19 | 2 | 0.004412 | 1.936 | 3.779 | exact match |
-| `10,6` | positive | 80 | 2 | 0.002571 | 1.114 | 2.879 | exact match |
-| `11,9` | empty | 2 | 0 | 0.002649 | 0.3785 | 2.097 | exact match |
-| `11,9` | empty | 3 | 0 | 0.002509 | 0.4201 | 2.180 | exact match |
-| `11,9` | positive | 29 | 2 | 0.002756 | >30 | >30 | censored at 30 s |
-| `11,9` | positive | 34 | 4 | 0.002966 | >30 | >30 | censored at 30 s |
+| `k,delta` | Outcome | Attempt | Boolean solutions | Native C wall | Sage query wall | Worker total wall | Peak RSS MiB | Sage status |
+|---|---|---:|---:|---:|---:|---:|---:|---|
+| `10,6` | empty | 7 | 0 | 0.000052 | 0.1349 | 1.957 | 228.0 | exact match |
+| `10,6` | empty | 8 | 0 | 0.001851 | 0.0527 | 1.910 | 225.5 | exact match |
+| `10,6` | positive | 19 | 2 | 0.002828 | 1.908 | 3.516 | 237.0 | exact match |
+| `10,6` | positive | 80 | 2 | 0.002171 | 1.148 | 3.141 | 235.9 | exact match |
+| `11,9` | empty | 2 | 0 | 0.002255 | 0.4180 | 2.541 | 228.2 | exact match |
+| `11,9` | empty | 3 | 0 | 0.002090 | 0.4057 | 2.024 | 228.9 | exact match |
+| `11,9` | positive | 29 | 2 | 0.002194 | unknown | 30.010 | unknown | censored at 30 s |
+| `11,9` | positive | 34 | 4 | 0.000215 | unknown | 30.012 | unknown | censored at 30 s |
 
 For `k=10` positives, Gröbner basis construction itself took about
-0.047 s; extracting the solutions took 1.05–1.87 s. The two `k=11`
-positive timeout records do not locate the slowdown within the worker.
-The solver's 30-second cap makes their time a lower bound, not a
-completed solve. `results.json` retains all CPU, setup, native stats,
-solution rows, and status fields.
+0.041–0.048 s; extracting the solutions took 1.08–1.85 s. The two
+`k=11` positive timeout records do not locate the slowdown within the
+worker. The 30-second worker cap makes total worker time a lower
+bound, not a completed solve. `results.json` retains all CPU, setup,
+native stats, solution rows, memory receipts, and status fields.
 
 ## Scientific interpretation and next gate
 

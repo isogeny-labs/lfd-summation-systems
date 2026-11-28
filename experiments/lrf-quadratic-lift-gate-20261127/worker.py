@@ -1,6 +1,7 @@
 """One Sage/Singular Boolean Groebner query; stdin and stdout are JSON."""
 
 import json
+import resource
 import sys
 import time
 
@@ -65,6 +66,7 @@ def main():
         "extraction_cpu": extraction_cpu,
         "query_wall": time.perf_counter() - start_wall,
         "query_cpu": time.process_time() - start_cpu,
+        "peak_rss_bytes": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
     }, sys.stdout, sort_keys=True)
 
 

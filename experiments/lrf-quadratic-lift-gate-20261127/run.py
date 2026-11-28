@@ -176,7 +176,8 @@ def run_cell(n, k, delta):
                 solver["status"] = "exact_match"
                 solver["worker_total_wall"] = worker_total
         except subprocess.TimeoutExpired:
-            solver = dict(status="timeout_30s", worker_total_wall=time.perf_counter()-worker_start)
+            solver = dict(status="timeout_30s", worker_total_wall=time.perf_counter()-worker_start,
+                          peak_rss_bytes=None)
         chosen[category].append({
             "attempt": attempts, "T": list(T), "pairs": pairs, "rows": rows,
             "native": dict(wall=native_wall, cpu=native_cpu, stats=stats),
