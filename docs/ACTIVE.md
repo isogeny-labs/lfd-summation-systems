@@ -15,6 +15,7 @@ PR, not in this file.
 Obtain a measured improvement in relation yield per linear system for the linearized root-finding (LRF) decomposition on binary curves: (a) factor bases or summand counts that give more relations per linear system; (b) use the Koblitz/Frobenius structure at prime n (for example ECC2K-130, n = 131) through a cover or a descent. Pinned by the owner 2026-11-21.
 
 ## Active items (top = next)
+- [ ] Reconcile the LRF good-set inference and screen a quadratic root lift on frozen high-delta systems (Codex, started 2026-11-27, branch research/lrf-quadratic-lift-gate-20261127)
 - [ ] Test the rational-fiber count for geometric dihedral covers of ECC2K-130 (Codex, started 2026-11-27, branch research/ecc2k130-dihedral-fiber-count-20261127, PR #82)
 - [x] Test tame ramification in the degree-131 dihedral cover route for ECC2K-130 (Codex, started 2026-11-27, branch research/ecc2k130-affine-ramification-20261127, PR #81)
 - [x] Test the genus-three quotient gate for degree-131 affine covers of ECC2K-130 (Codex, started 2026-11-27, branch research/ecc2k130-agl2-gate-20261127, PR #79 and PR #80)
