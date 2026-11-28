@@ -25,8 +25,11 @@ stopped. The remaining 79 scheduled rows have no measurement. The existing
 records cannot rank solver cost or show a reduction in solving degree.
 The direct enumeration and output-extraction costs have not yet been timed.
 
-For a valid next measurement, isolate the host, diagnose msolve's repeated
-headers on the n=3 O-aware input, freeze any solver-mode or output-cap change,
-then run the complete three-arm panel and independently verify extracted
-full-point relations. Only after that can a larger-field and full relation
-collection comparison be considered.
+The repeated headers came from msolve's default genericity retries during
+rational parametrization. [A3](AMENDMENT-A3.md) freezes a separate
+`-g 2 -c 0` GB-stage replay, which completed a read-only n=3 diagnostic
+without the loop. Its timings remain unrun because other msolve workloads
+are active on the local host; the approved remote box timed out on SSH.
+The next measurement needs an isolated host, followed by a separate solution
+extraction and complete relation-query comparison. Only then can a
+larger-field and full relation-collection comparison be considered.
