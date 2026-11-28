@@ -43,6 +43,16 @@ addition is implemented separately. Both pair-root and tree mismatch lists
 are written to the raw file before the final assertion, so a failing cell
 remains inspectable.
 
+An [independent Sage replay](SAGE-REPLAY-PLAN.md) was frozen and committed at
+`4b41db2` after the first result. Its [source](sage_replay.py) uses Sage's
+finite fields and elliptic-curve point addition and does not import `run.py`.
+The [replay record](sage-replay.json), committed at `4db4d1f`, matched all
+eight group orders, x counts, pair counts, direct-relation counts,
+affine-only miss counts, and zero pair/tree mismatches across the full
+171,742-cell grid. Its source, plan and original-result digests verify.
+This is an independent arithmetic implementation on the same selected cells,
+not a second curve sample.
+
 The odd-characteristic [companion screen](../crossed-s3-witness-20261128/REPORT.md)
 checks the same relation predicate with a different curve law. Together they
 support the O-aware witness construction on these finite cells. A general
@@ -72,3 +82,9 @@ python3 experiments/binary-crossed-s3-witness-20261128/run.py
 
 The script refuses to overwrite the first result and writes source and
 protocol SHA-256 digests into the raw record.
+
+For the independent replay in a clean copy without `sage-replay.json`:
+
+```sh
+sage -python experiments/binary-crossed-s3-witness-20261128/sage_replay.py
+```
