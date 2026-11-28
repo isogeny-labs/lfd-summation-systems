@@ -1,0 +1,183 @@
+{
+  "cells": [
+    {
+      "a": 0,
+      "associativity_checks": 64,
+      "b": 1,
+      "checked": 48,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 4,
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 17,
+      "pair_checks": 4,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 23,
+      "x_count": 2
+    },
+    {
+      "a": 1,
+      "associativity_checks": 2744,
+      "b": 1,
+      "checked": 19208,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 14,
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 1711,
+      "pair_checks": 49,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 8089,
+      "x_count": 7
+    },
+    {
+      "a": 0,
+      "associativity_checks": 512,
+      "b": 2,
+      "checked": 1280,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 8,
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 235,
+      "pair_checks": 16,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 583,
+      "x_count": 4
+    },
+    {
+      "a": 1,
+      "associativity_checks": 1000,
+      "b": 2,
+      "checked": 3750,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 10,
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 485,
+      "pair_checks": 25,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 1681,
+      "x_count": 5
+    },
+    {
+      "a": 0,
+      "associativity_checks": 4096,
+      "b": 1,
+      "checked": 36864,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 16,
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    },
+    {
+      "a": 1,
+      "associativity_checks": 4096,
+      "b": 1,
+      "checked": 36864,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 16,
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    },
+    {
+      "a": 0,
+      "associativity_checks": 4096,
+      "b": 2,
+      "checked": 36864,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 16,
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    },
+    {
+      "a": 1,
+      "associativity_checks": 4096,
+      "b": 2,
+      "checked": 36864,
+      "first_naive_miss": [
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "group_order": 16,
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    }
+  ],
+  "protocol_sha256": "fdd93fb20df484f5370f4fe30c81153d1e2182d2744b8d56a822dbb19078c95a",
+  "schema": "binary-crossed-s3-witness/v1",
+  "source_sha256": "4f87761eb4196d011def8e0ce2ebdde8a21e2ae95882794a36c26672f42b6348"
+}

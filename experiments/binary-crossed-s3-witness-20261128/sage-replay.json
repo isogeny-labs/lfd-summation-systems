@@ -1,0 +1,184 @@
+{
+  "cells": [
+    {
+      "a": 0,
+      "b": 1,
+      "checked": 48,
+      "group_order": 4,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 17,
+      "pair_checks": 4,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 23,
+      "x_count": 2
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "checked": 19208,
+      "group_order": 14,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 1711,
+      "pair_checks": 49,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 8089,
+      "x_count": 7
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "checked": 1280,
+      "group_order": 8,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 235,
+      "pair_checks": 16,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 583,
+      "x_count": 4
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "checked": 3750,
+      "group_order": 10,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 11,
+      "n": 3,
+      "naive_affine_only_missed": 485,
+      "pair_checks": 25,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 1681,
+      "x_count": 5
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "checked": 36864,
+      "group_order": 16,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "checked": 36864,
+      "group_order": 16,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "checked": 36864,
+      "group_order": 16,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "checked": 36864,
+      "group_order": 16,
+      "matches_original": {
+        "checked": true,
+        "group_order": true,
+        "naive_affine_only_missed": true,
+        "pair_checks": true,
+        "true_relations": true,
+        "x_count": true
+      },
+      "modulus": 19,
+      "n": 4,
+      "naive_affine_only_missed": 2927,
+      "pair_checks": 64,
+      "pair_mismatches": [],
+      "tree_mismatches": [],
+      "true_relations": 14951,
+      "x_count": 8
+    }
+  ],
+  "original_sha256": "8e977eecfd70f5ed9c233fd629bd6f98166cfefe24324b555ab94eb8d23d3214",
+  "plan_sha256": "3ea10081feca822f127040c93a0c541ad73a1038f401928a346b4a319136bef4",
+  "schema": "binary-crossed-s3-sage-replay/v1",
+  "source_sha256": "f0d0f8701e090d22a5eb5a746ed4e01b2f2b74a78db9fd59ee64a04c43fe4a3d"
+}
