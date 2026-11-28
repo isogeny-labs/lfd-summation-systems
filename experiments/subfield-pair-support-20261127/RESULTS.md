@@ -66,6 +66,9 @@ exact set equality on all 1,024 queries for each target.
 This lowers the **univariate degree of this two-summand relation query**
 to two. It is not a bound on the solving degree of other arities or a
 generic binary S3 presentation.
+Subfield-coordinate factor bases are established index-calculus objects
+([Diem, Sections 1–2](https://msp.org/ant/2013/7-6/ant-v7-n6-p01-s.pdf));
+this record makes no novelty claim for the construction or elimination.
 
 ## Results
 
@@ -102,8 +105,11 @@ but this does not translate to a consistent first-full-rank advantage.
 The direct quadratic oracle saves the pair-table work, but its cold
 method still takes 0.63–1.04 seconds. Cold BSGS uses 182 baby steps and
 finishes in roughly two milliseconds. Even this specialized oracle is far
-behind the matched generic methods on these three targets. The result is a bounded negative cost
-screen for this fixture; it is not a universal complexity bound.
+behind the matched generic methods on these three targets. The result is
+a bounded negative cost screen for this fixture, not a universal
+complexity bound. The specialization requires a proper degree-eight
+subfield of the degree-16 field, so it does not transfer directly to
+prime extension degree 131.
 
 `cold_total_seconds` is optimistic: it uses the known first-full-rank
 prefix and excludes the cost of detecting rank during live collection.
