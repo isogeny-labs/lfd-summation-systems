@@ -443,8 +443,62 @@ possible Jacobian in the class (a ppav, End non-maximal at v0 above p2) is reach
 isogenies of p2-power degree. On the minimal such isogeny, Frobenius acts on the kernel with order
 (p2-1)/12, about 1.2e16. So the kernel points are defined only over F_{2^(1.2e16)}.
 
-**Practical note (an observation, not a theorem about every route).** Even if such a model were a
+**Practical note: SUPERSEDED (2026-11-28, see 'Round 2' below). The kernel-field fact holds, but it is not an evaluation barrier.** Even if such a model were a
 Jacobian, carrying the ECDLP across that isogeny would need an isogeny evaluation in dimension 130 with
 kernel points over a field of degree about 1.2e16. No known method does this. The window question is
 therefore open in principle (is one of these ppavs a Jacobian?), but any affirmative answer would also
 need a way to cross this isogeny before it gave an attack.
+
+## Round 2: all open leads in parallel (2026-11-27/28)
+
+These are agent reports in `experiments/ecc2k130-weil-factor/round2/*/REPORT.md`. The independent skeptic pass failed on a usage
+limit and is being re-run. Until it finishes, everything below is an agent result reviewed only by the parent session.
+
+**Red-team of lead 1 (`redteam-lead1`).**
+- **Upheld at ell=131.** Theorems A and B were re-derived and recomputed, unconditionally. No ppav in the class has
+  zeta_131 in End, and A itself has no principal polarization. The independent cross-check: lambda_nat has valuation
+  -128 (even) at the place above 131, while the PR #57 ppav has odd valuations exactly at that place and at v0.
+- **Bug found.** A false-negative bug in `decide_ppav.gp` changed the small-ell counts but no verdict; corrected in
+  `lead1_polarization/REPORT.md`.
+- **Hypothesis.** The general rule needs v_p(U_ell) = 1.
+
+**ell = 29 and 37 (`prediction-29-37`).** The parity rule is confirmed by unconditional det-1 certificates: ppavs with
+End = O_K exist, and at ell=37 so does one on the order non-maximal at both self-glued places. Orders non-maximal at
+exactly one v0 are excluded. The finer point: the specific module O_K (A_ell itself) is not principally polarizable at
+29 or 37, for a narrow-class reason (the ramified prime above ell has no totally definite generator).
+
+**Jacobian obstructions and expected count (`jacobian-obstructions`).** No known obstruction that varies within the
+isogeny class rules out a Jacobian. Newly settled for the whole class:
+- **Serre's twist obstruction is vacuous.** P_A(-x) would need #C(F_4) < #C(F_2).
+- **No hyperelliptic curve.** a_1 = 2 and a_2 = 0 are incompatible.
+- **Every ppav is geometrically indecomposable.**
+- **A rational symmetric theta divisor always exists.** P_A = x^130 Phi_131 mod 2.
+
+A curve with Jacobian in the class would be non-hyperelliptic, with Aut_{F_2}(C) = 1. The random-model heuristic gives
+log2 E[#Jacobians] about -3697 (arithmetic band [-3700, -3567]). It rests on Lang-Weil leading terms that are not
+justified at q=2, g=130, so read it as "no reason to expect one", not as a bound. The computed inputs include
+h^-(K_131), about 2^209.46, from the analytic formula, cross-checked against the cyclotomic tables and bnfinit at
+small ell.
+
+**Isogeny evaluation (`isogeny-evaluation`). This corrects the previous section.**
+- **(a) The kernel-field fact is a theorem, conditional on lead 1.** Every F_2-isogeny between A and a principally
+  polarizable variety has kernel points defined only over F_{2^m} with (p2-1)/12 | m.
+- **(b) It is NOT an evaluation barrier.** If some ppav were Jac(C) over F_2, there would be a nonconstant map
+  f: C -> E over F_{2^131}. Then Phi = Tr o f^* is an F_2-isogeny A -> Jac(C) that can be evaluated in
+  poly(deg f, g) group operations, with no kernel points.
+- **The least deg f** is the minimum of an explicit Hermitian lattice. Blichfeldt gives <= 58 for the PR #57 module.
+- **So the real barrier is the existence of C,** not kernel fields. The earlier "practical barrier" note is withdrawn.
+
+**Cover of E (`cover-of-E-review`). This upgrades the old candidate status.** The old class-field-theory argument
+(`rayclass_cover_E.py`) had a gap. It ignored twisted deck groups, and mu_131 Kummer covers of genus 131 do exist.
+New results:
+- **Twisted forms excluded by a trace lemma.** Frobenius permutes the eigenspaces with no fixed point, so the Prym
+  trace is 0, but tr(pi|A) = 1.
+- **Every geometrically Galois cover is closed** (any group, any twisted form, genus 131 with Jac(C) ~ E x A'). A
+  gluing-degree constraint (Kani) forces deg(C -> E) to divide 131 * 263 * p2. Together with Riemann-Hurwitz, this
+  leaves only 131, which the trace lemma and class field theory close.
+- **Still open:**
+  - degree-131 maps with AGL-type monodromy (an explicit consistent configuration exists, pending 131 | h(E') for a
+    genus-11 E');
+  - A_131 / S_131 monodromy and the other divisors n.
+- **Lead 1 does not exclude this route.** The Prym is not principally polarized; it has type (1^128, n, n).

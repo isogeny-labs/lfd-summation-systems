@@ -60,8 +60,8 @@ at the primes above U_ell.
 |---|---|---|---|---|
 | 3 | -1 | none | no ppav | none; unconditional: none of the 768 genus-2 curves over F_2 has the Weil polynomial |
 | 5, 13 | -1 | none | no ppav | none |
-| 11 | +1 | 23 (split) | O_K ppav | 4 of 5 classes |
-| 17 | -1 | 271 (inert) | ppav iff non-maximal at v0 | non-maximal at v0: 45/45 and 43/45; v0 maximal: 0 |
+| 11 | +1 | 23 (split) | O_K ppav | 5 of 5 classes (corrected; was recorded 4 of 5, see below) |
+| 17 | -1 | 271 (inert) | ppav iff non-maximal at v0 | non-maximal at v0: 45/45 and 45/45 (corrected from 43/45); v0 maximal: 0 |
 | 19 | -1 | 457 (split) | no ppav | 0 of 148 (O_K), 0 of 148 (glued) |
 | 131 | -1 | 263 (split), p2 (inert) | ppav iff non-maximal at v0 | explicit module (PR #57) re-audited, see below |
 
@@ -94,3 +94,22 @@ large to compute here.
 - `decide_ppav.gp`, `run_small.*`, `run_17_19.*`, `run_17_orders.*`
 - `genus2_F2_control.*`
 - `dump_prior_ppav131.py`, `audit_prior_ppav131.*`
+
+## CORRECTIONS (2026-11-28, from round-2 red-team and the ell=29/37 lead)
+- **Bug in `decide_ppav.gp`.** Lines 68 and 76 (`if (sol == 0, next)`, `if (x == 0, next)`) discard a valid all-zero
+  solution, because in GP `[0,..,0]~ == 0` is true. This undercounts.
+- **Corrected counts.** Two independent agents found the bug. With it fixed:
+  - ell=11: O_K 5/5 (was 4/5).
+  - ell=17: 45/45 (was 43/45).
+  - ell=19: the antisymmetric counts are 148/148.
+  No existence verdict changes.
+- **Hypothesis of the general rule.** As stated, the rule assumes v_p(U_ell) = 1 for the inert-type primes. If p^2 divides
+  U_ell, n(T) must count self-glued places with odd local conductor exponent. The hypothesis holds at ell=131
+  (U_131 is squarefree).
+- **Upheld at ell=131.** The independent red-team re-derivation (`../round2/redteam-lead1/REPORT.md`) upholds Theorems A
+  and B. Its process note: this file is a sketch, not a full written proof. There is no Lean proof.
+- **What "A_ell itself" means at ell=29, 37** (`../round2/prediction-29-37/REPORT.md`):
+  - Principally polarized varieties with End = O_K exist there, as the rule predicts.
+  - The specific module T = O_K (the natural A_ell) has none, for a narrow-class reason: the ramified prime above ell in
+    K+ has no totally definite generator.
+  - So "End = O_K admits a ppav" and "A_ell itself admits one" are different statements.
