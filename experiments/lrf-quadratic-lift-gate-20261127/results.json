@@ -1,0 +1,450 @@
+{
+  "cells": [
+    {
+      "attempts": 80,
+      "b": 1127129,
+      "censored": [],
+      "delta": 6,
+      "k": 10,
+      "n": 23,
+      "selected": {
+        "empty": [
+          {
+            "T": [
+              6282170,
+              2227312
+            ],
+            "attempt": 7,
+            "native": {
+              "cpu": 5.6000000000000494e-05,
+              "stats": {
+                "degenerate": 0,
+                "found": 0,
+                "lin_candidates": 64,
+                "lin_solvable": 1,
+                "max_kernel_dim": 6,
+                "quad_split": 32,
+                "targets": 1
+              },
+              "wall": 5.5875001635286026e-05
+            },
+            "pairs": [],
+            "rows": [],
+            "solver": {
+              "basis_count": 1,
+              "construction_cpu": 0.01985999999999999,
+              "construction_wall": 0.02943687500010128,
+              "equation_count": 39,
+              "extraction_cpu": 0.00011999999999989797,
+              "extraction_wall": 0.00011991700012004003,
+              "groebner_cpu": 0.04975900000000011,
+              "groebner_wall": 0.06064041699937661,
+              "input_degree_max": 2,
+              "max_intermediate_solver_degree": null,
+              "pairs": [],
+              "query_cpu": 0.06976000000000004,
+              "query_wall": 0.09021991700137733,
+              "status": "exact_match",
+              "worker_total_wall": 2.4084294580006826
+            }
+          },
+          {
+            "T": [
+              7443620,
+              7395898
+            ],
+            "attempt": 8,
+            "native": {
+              "cpu": 0.0021760000000000113,
+              "stats": {
+                "degenerate": 0,
+                "found": 0,
+                "lin_candidates": 64,
+                "lin_solvable": 1,
+                "max_kernel_dim": 6,
+                "quad_split": 30,
+                "targets": 1
+              },
+              "wall": 0.0021759169994766125
+            },
+            "pairs": [],
+            "rows": [],
+            "solver": {
+              "basis_count": 1,
+              "construction_cpu": 0.018096000000000112,
+              "construction_wall": 0.01881754100031685,
+              "equation_count": 39,
+              "extraction_cpu": 0.00010599999999993948,
+              "extraction_wall": 0.0001059159985743463,
+              "groebner_cpu": 0.037006000000000094,
+              "groebner_wall": 0.04051445799996145,
+              "input_degree_max": 2,
+              "max_intermediate_solver_degree": null,
+              "pairs": [],
+              "query_cpu": 0.05522899999999997,
+              "query_wall": 0.05946079100067436,
+              "status": "exact_match",
+              "worker_total_wall": 1.8480684579990339
+            }
+          }
+        ],
+        "positive": [
+          {
+            "T": [
+              7792305,
+              850946
+            ],
+            "attempt": 19,
+            "native": {
+              "cpu": 0.004406999999999994,
+              "stats": {
+                "degenerate": 0,
+                "found": 1,
+                "lin_candidates": 64,
+                "lin_solvable": 1,
+                "max_kernel_dim": 6,
+                "quad_split": 33,
+                "targets": 1
+              },
+              "wall": 0.004411500000060187
+            },
+            "pairs": [
+              [
+                28,
+                570
+              ],
+              [
+                28,
+                867
+              ]
+            ],
+            "rows": [
+              [
+                [
+                  570,
+                  4423841
+                ],
+                [
+                  867,
+                  3874497
+                ]
+              ]
+            ],
+            "solver": {
+              "basis_count": 16,
+              "construction_cpu": 0.01965400000000006,
+              "construction_wall": 0.02014979200066591,
+              "equation_count": 39,
+              "extraction_cpu": 1.723865,
+              "extraction_wall": 1.8694738750000397,
+              "groebner_cpu": 0.04535099999999992,
+              "groebner_wall": 0.04637304199968639,
+              "input_degree_max": 2,
+              "max_intermediate_solver_degree": null,
+              "pairs": [
+                [
+                  28,
+                  570
+                ],
+                [
+                  28,
+                  867
+                ]
+              ],
+              "query_cpu": 1.7888910000000002,
+              "query_wall": 1.936021500001516,
+              "status": "exact_match",
+              "worker_total_wall": 3.778989415999604
+            }
+          },
+          {
+            "T": [
+              902239,
+              5217576
+            ],
+            "attempt": 80,
+            "native": {
+              "cpu": 0.002569999999999989,
+              "stats": {
+                "degenerate": 0,
+                "found": 1,
+                "lin_candidates": 64,
+                "lin_solvable": 1,
+                "max_kernel_dim": 6,
+                "quad_split": 29,
+                "targets": 1
+              },
+              "wall": 0.0025708749999466818
+            },
+            "pairs": [
+              [
+                59,
+                367
+              ],
+              [
+                59,
+                696
+              ]
+            ],
+            "rows": [
+              [
+                [
+                  367,
+                  5865292
+                ],
+                [
+                  696,
+                  7398861
+                ]
+              ]
+            ],
+            "solver": {
+              "basis_count": 16,
+              "construction_cpu": 0.018396999999999997,
+              "construction_wall": 0.018591083000501385,
+              "equation_count": 39,
+              "extraction_cpu": 0.9421020000000002,
+              "extraction_wall": 1.0486444999987725,
+              "groebner_cpu": 0.04548799999999997,
+              "groebner_wall": 0.047071875000256114,
+              "input_degree_max": 2,
+              "max_intermediate_solver_degree": null,
+              "pairs": [
+                [
+                  59,
+                  367
+                ],
+                [
+                  59,
+                  696
+                ]
+              ],
+              "query_cpu": 1.0060069999999999,
+              "query_wall": 1.1143317499991099,
+              "status": "exact_match",
+              "worker_total_wall": 2.8793836670010933
+            }
+          }
+        ]
+      },
+      "setup": {
+        "cpu": 0.002578000000000011,
+        "wall": 0.011517708000610583
+      }
+    },
+    {
+      "attempts": 34,
+      "b": 1127129,
+      "censored": [],
+      "delta": 9,
+      "k": 11,
+      "n": 23,
+      "selected": {
+        "empty": [
+          {
+            "T": [
+              49808,
+              146593
+            ],
+            "attempt": 2,
+            "native": {
+              "cpu": 0.0026490000000000125,
+              "stats": {
+                "degenerate": 0,
+                "found": 0,
+                "lin_candidates": 512,
+                "lin_solvable": 1,
+                "max_kernel_dim": 9,
+                "quad_split": 257,
+                "targets": 1
+              },
+              "wall": 0.002649375001055887
+            },
+            "pairs": [],
+            "rows": [],
+            "solver": {
+              "basis_count": 1,
+              "construction_cpu": 0.016158999999999812,
+              "construction_wall": 0.016159958999196533,
+              "equation_count": 43,
+              "extraction_cpu": 0.00011899999999998023,
+              "extraction_wall": 0.00011900000026798807,
+              "groebner_cpu": 0.36187100000000005,
+              "groebner_wall": 0.36223729199991794,
+              "input_degree_max": 2,
+              "max_intermediate_solver_degree": null,
+              "pairs": [],
+              "query_cpu": 0.37817199999999995,
+              "query_wall": 0.37854200000037963,
+              "status": "exact_match",
+              "worker_total_wall": 2.0973842500006867
+            }
+          },
+          {
+            "T": [
+              332487,
+              6925645
+            ],
+            "attempt": 3,
+            "native": {
+              "cpu": 0.0025060000000000082,
+              "stats": {
+                "degenerate": 0,
+                "found": 0,
+                "lin_candidates": 512,
+                "lin_solvable": 1,
+                "max_kernel_dim": 9,
+                "quad_split": 261,
+                "targets": 1
+              },
+              "wall": 0.0025089580012718216
+            },
+            "pairs": [],
+            "rows": [],
+            "solver": {
+              "basis_count": 1,
+              "construction_cpu": 0.018013999999999974,
+              "construction_wall": 0.01823016600064875,
+              "equation_count": 43,
+              "extraction_cpu": 9.799999999993148e-05,
+              "extraction_wall": 9.862500155577436e-05,
+              "groebner_cpu": 0.40092399999999984,
+              "groebner_wall": 0.40178362500046205,
+              "input_degree_max": 2,
+              "max_intermediate_solver_degree": null,
+              "pairs": [],
+              "query_cpu": 0.419057,
+              "query_wall": 0.42013441599920043,
+              "status": "exact_match",
+              "worker_total_wall": 2.18047229199874
+            }
+          }
+        ],
+        "positive": [
+          {
+            "T": [
+              4143833,
+              70911
+            ],
+            "attempt": 29,
+            "native": {
+              "cpu": 0.0027550000000000074,
+              "stats": {
+                "degenerate": 0,
+                "found": 1,
+                "lin_candidates": 512,
+                "lin_solvable": 1,
+                "max_kernel_dim": 9,
+                "quad_split": 267,
+                "targets": 1
+              },
+              "wall": 0.0027557080011320068
+            },
+            "pairs": [
+              [
+                413,
+                621
+              ],
+              [
+                413,
+                1878
+              ]
+            ],
+            "rows": [
+              [
+                [
+                  621,
+                  6727917
+                ],
+                [
+                  1878,
+                  2682126
+                ]
+              ]
+            ],
+            "solver": {
+              "status": "timeout_30s",
+              "worker_total_wall": 30.01179412500096
+            }
+          },
+          {
+            "T": [
+              3231746,
+              963696
+            ],
+            "attempt": 34,
+            "native": {
+              "cpu": 0.0029659999999999687,
+              "stats": {
+                "degenerate": 0,
+                "found": 2,
+                "lin_candidates": 512,
+                "lin_solvable": 1,
+                "max_kernel_dim": 9,
+                "quad_split": 270,
+                "targets": 1
+              },
+              "wall": 0.002965540999866789
+            },
+            "pairs": [
+              [
+                436,
+                1481
+              ],
+              [
+                436,
+                1697
+              ],
+              [
+                501,
+                227
+              ],
+              [
+                501,
+                777
+              ]
+            ],
+            "rows": [
+              [
+                [
+                  227,
+                  4691803
+                ],
+                [
+                  777,
+                  8035274
+                ]
+              ],
+              [
+                [
+                  1481,
+                  5326892
+                ],
+                [
+                  1697,
+                  2621743
+                ]
+              ]
+            ],
+            "solver": {
+              "status": "timeout_30s",
+              "worker_total_wall": 30.01208512500125
+            }
+          }
+        ]
+      },
+      "setup": {
+        "cpu": 0.0014299999999999868,
+        "wall": 0.0014304579999588896
+      }
+    }
+  ],
+  "protocol": "PROTOCOL.md",
+  "sage_version": "10.10.rc0",
+  "seed": 1,
+  "source_hashes": {
+    "csd/ic_dreg.py": "0e5a650d3717ac029e3cbbc10c8e7f1525c11f46461d651187ce40d89c25afe1",
+    "csd/ic_rootfind.py": "727a14d638964fa19c487294a8d281c2cf87d3ef47fecefa6cefe7469fd58cc5",
+    "experiments/ic-rootfind-yield/goodset_structure.py": "dc906ad70c54e63b6f324307ffd1cbfb46ad4c4658566a38686329f6eb2cf762"
+  }
+}
