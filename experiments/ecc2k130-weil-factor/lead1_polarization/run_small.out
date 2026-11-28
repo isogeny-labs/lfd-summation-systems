@@ -1,0 +1,51 @@
+[0;31m  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).[0m
+ell=3 deg=4 bnfinit 6 ms, h=1 cyc=[], #fu=1, w=6
+  different check: N(diff)=|disc| 1 ; diff = (sqrt-7 (z-1/z)^(ell-2)) 1 ; generator real (conj=self) 1
+  End = O_K, Phi_+: classes=1, principal J*(S Sbar)^-1: 1, with antisymmetric generator: 1, Phi-positive (=> ppav): 0
+  End = O_K, Phi_-: classes=1, principal J*(S Sbar)^-1: 1, with antisymmetric generator: 1, Phi-positive (=> ppav): 0
+  primes of K above ell: 1, each conj-stable: [1], f=[2]
+  U_ell = -1, primes []
+  [time 8 ms]
+
+ell=5 deg=8 bnfinit 24 ms, h=1 cyc=[], #fu=3, w=10
+  different check: N(diff)=|disc| 1 ; diff = (sqrt-7 (z-1/z)^(ell-2)) 1 ; generator real (conj=self) 1
+  End = O_K, Phi_+: classes=1, principal J*(S Sbar)^-1: 1, with antisymmetric generator: 1, Phi-positive (=> ppav): 0
+  End = O_K, Phi_-: classes=1, principal J*(S Sbar)^-1: 1, with antisymmetric generator: 1, Phi-positive (=> ppav): 0
+  primes of K above ell: 1, each conj-stable: [1], f=[2]
+  U_ell = -1, primes []
+  [time 29 ms]
+
+ell=11 deg=20 bnfinit 180 ms, h=5 cyc=[5], #fu=9, w=22
+  different check: N(diff)=|disc| 1 ; diff = (sqrt-7 (z-1/z)^(ell-2)) 1 ; generator real (conj=self) 1
+  End = O_K, Phi_+: classes=5, principal J*(S Sbar)^-1: 5, with antisymmetric generator: 4, Phi-positive (=> ppav): 4
+  End = O_K, Phi_-: classes=5, principal J*(S Sbar)^-1: 5, with antisymmetric generator: 4, Phi-positive (=> ppav): 4
+  [O_K ppav] det Gram=1 integral=1 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=1
+  [O_K ppav] det Gram=1 integral=1 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=1
+  primes of K above ell: 2, each conj-stable: [0, 0], f=[1, 1]
+  U_ell = 23, primes [23]
+  p=23: 20 primes of K, residue degrees [1], #conj-stable 0
+    glued pair (1,7), self-conjugate pair: 0
+    glued pair (2,17), self-conjugate pair: 0
+    glued pair (3,5), self-conjugate pair: 0
+    glued pair (4,8), self-conjugate pair: 0
+    glued pair (6,16), self-conjugate pair: 0
+    glued pair (9,20), self-conjugate pair: 0
+    glued pair (10,19), self-conjugate pair: 0
+    glued pair (11,13), self-conjugate pair: 1
+    glued pair (12,18), self-conjugate pair: 0
+  End = R (conductor: split self-conj pair at 23), Phi_+: classes=5, principal J*(S Sbar)^-1: 5, with antisymmetric generator: 5, Phi-positive (=> ppav): 5
+  End = R (conductor: split self-conj pair at 23), Phi_-: classes=5, principal J*(S Sbar)^-1: 5, with antisymmetric generator: 5, Phi-positive (=> ppav): 5
+  [R ppav  T = Z t + Q S] det Gram=1 integral=1 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=0
+  [R ppav  T = Z t + Q S] det Gram=1 integral=1 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=0
+  [neg. control: same lambda on S=O_K T] det Gram=1/529 integral=0 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=1
+  [time 848 ms]
+
+[0;31m  *** bnfinit: Warning: increasing stack size to 16000000.[0m
+ell=13 deg=24 bnfinit 316 ms, h=7 cyc=[7], #fu=11, w=26
+  different check: N(diff)=|disc| 1 ; diff = (sqrt-7 (z-1/z)^(ell-2)) 1 ; generator real (conj=self) 1
+  End = O_K, Phi_+: classes=7, principal J*(S Sbar)^-1: 7, with antisymmetric generator: 7, Phi-positive (=> ppav): 0
+  End = O_K, Phi_-: classes=7, principal J*(S Sbar)^-1: 7, with antisymmetric generator: 7, Phi-positive (=> ppav): 0
+  primes of K above ell: 1, each conj-stable: [1], f=[2]
+  U_ell = -1, primes []
+  [time 527 ms]
+

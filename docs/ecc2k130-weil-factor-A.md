@@ -338,3 +338,113 @@ with `A_ell`'s eigenspace traces -- by Torelli, `A_ell` (natural model, with its
 is not isomorphic to a Jacobian at these `ell`. Not covered: `ell = 131` itself (an extrapolation from
 small `ell`), and the isogeny case (a model `A'` in the isogeny class without the order-`ell`
 automorphism).
+
+## Isogeny residue: zeta_131 is NOT in Z[pi, pi-bar] (2026-11-27)
+
+The cover-trace evidence above applies to models of A that carry the order-131 automorphism zeta.
+By Deligne's equivalence for ordinary abelian varieties, every order R with Z[pi, pi-bar] <= R <= O_K
+is End(A') for some A' isogenous to A. So the question is whether zeta lies in Z[pi, pi-bar].
+
+Set pi = alpha*zeta and pi-bar = beta*zeta^-1, with pi*pi-bar = 2. Then Z[pi, pi-bar] is the Z-span of
+pi^0..pi^259 and pi-bar^1..pi-bar^259, written in the basis of O_K = Z[zeta_131] (x) Z[(1+sqrt-7)/2].
+
+| ell | U_ell (Lucas, x^2+x+2) | [O_K : Z[pi,pi-bar]] | zeta in Z[pi,pi-bar]? |
+|---|---|---|---|
+| 5 | -1 | 1 | yes |
+| 11 | 23 | 23^9 | **no** |
+| 13 | -1 | 1 | yes |
+| 19 | -457 | 457^17 | **no** |
+| 131 | 263 * 146505763881528721 | (263 * 146505763881528721)^129 | **no** |
+
+Two independent methods give these answers:
+- `zeta_in_order.gp`: exact Hermite normal form over Z, with the index and an exact membership solve.
+  The denominator of zeta's coordinates is |U_ell|.
+- `zeta_in_order_modp.py`: pure Python, no PARI. Mod p = 263, the 519 generators span only 131 of 260
+  dimensions, and adding zeta raises the rank to 132. So zeta is not in Z[pi, pi-bar] + 263 O_K, and hence
+  not in Z[pi, pi-bar]. The same test reports the rank drop at ell = 11 (p = 23) and ell = 19 (p = 457).
+  The controls (ell = 5 and 13, and p = 3 at ell = 131) give full rank, with no false positive.
+
+**Structure (now PROVED, see `lead2_index/PROOF.md`; originally computed at four ell).** At these four ell, Z[pi, pi-bar] fails to be
+maximal exactly at the primes dividing the Lucas number U_ell = (alpha^ell - beta^ell)/(alpha - beta),
+and the index is |U_ell|^(ell-2). The mechanism: modulo a prime p dividing U_ell, alpha/beta is an
+ell-th root of unity, so pi-bar collapses onto pi's span and the rank halves (131 of 260). So zeta lies
+in the minimal order iff U_ell = +-1. Among primes ell <= 37, that happens only for ell = 2, 3, 5, 13.
+
+**Consequence: the isogeny residue is a real gap.** Some varieties A' isogenous to A have
+End(A') = Z[pi, pi-bar]. Such an A' contains no nontrivial power of zeta, so it has no order-131
+automorphism. The Torelli reduction (a Jacobian in the isogeny class must be a cyclic degree-131 cover of
+P^1) does not apply to these models, and neither does the cover-trace evidence.
+
+The gap is localized:
+- The models differ from the natural one only at p = 263 and p = 146505763881528721. They are reached
+  from A by isogenies whose degree is a power of these primes.
+- That degree is coprime to N = #A(F_2), so the ECDLP would transfer to any of them for free.
+- Whether one of them is principally polarized and a Jacobian stays open. No construction is known.
+
+This is a reversal of the hoped-for closure, and the record should say so: the cover-of-P^1 evidence
+covers the natural model only, not the isogeny class.
+
+**Index formula: proof (lead 2, 2026-11-27).** `experiments/ecc2k130-weil-factor/lead2_index/PROOF.md` proves, for every
+odd prime ell, that [O_F (x) Z[zeta_ell] : Z[pi, pi-bar]] = |U_ell|^(ell-2), that the quotient is (Z/|U_ell|)^(ell-2),
+that |U_ell| O_K is contained in Z[pi, pi-bar], and that zeta lies in the order iff U_ell = +-1. For ell != 7 the ring
+O_F (x) Z[zeta_ell] is O_K.
+
+How the proof works:
+- Lift to O_F[T]/(T^ell - 1). There Z[alpha T, beta T^-1] is graded, and each graded piece has index |U_ell| by the
+  pairing D(alpha^i, beta^j) = U_{i+j}.
+- Divide by the norm line O_F * N, which meets the ring in f O_F * N (index f^2). This gives f^ell / f^2.
+
+Every prime dividing U_ell is congruent to +-1 mod ell: 263 = 2*131 + 1, and 146505763881528721 = -1 mod 131.
+The formula was checked by exact HNF and SNF for every prime ell <= 113, by an independent pure-Python HNF for ell <= 61,
+and here independently by SNF at ell = 11, 17, 19, 23, 29. No Lean proof yet; the container has no Lean toolchain.
+
+## Principal polarizations: every ppav in the class lacks zeta_131 (lead 1, 2026-11-27)
+
+`experiments/ecc2k130-weil-factor/lead1_polarization/REPORT.md` derives a parity rule from Deligne modules, Howe's
+polarization criterion and Hilbert reciprocity over K+. Let eps = (-7/ell), and let n(T) count the
+self-glued inert places v0 (above primes dividing U_ell that are -1 mod ell and inert in Q(sqrt-7)) where
+End(T) is non-maximal. A Deligne module T carries a principal polarization only if eps * (-1)^n(T) = +1,
+and every conjugation-stable order with that parity occurs.
+
+**At ell = 131.** eps = -1, 263 is of split type, and p2 = 146505763881528721 is of inert type. So:
+- **A_131 itself (End = O_K) is NOT principally polarizable.** This is consistent with the natural
+  restricted-product polarization, whose degree is 131^2 (docs/ecc2k130-explicit-ppav.md).
+- **Every ppav in the isogeny class has End non-maximal at v0 above p2,** so zeta_131 is not in End.
+- **Such ppavs exist:** the explicit module of PR #57, re-audited independently, has det 1, positive type,
+  and is non-maximal exactly at v0.
+
+**Consequence for the record.** No Jacobian isogenous to A_131 can have an F_2-rational automorphism of
+order 131. So the Torelli -> cyclic-cover-of-P^1 reduction, and the cover-trace evidence above (PR #70),
+apply to NO Jacobian in this class. That evidence remains correct as a statement about cyclic covers,
+but it does not bear on the window question. The window question is exactly: is one of the ppavs
+(End non-maximal at v0, no order-131 automorphism) a Jacobian? This is the "no useful automorphism"
+case, with no known decision procedure at dimension 130.
+
+**Controls.** The rule matches every computed case:
+- ell = 3, 5, 13, 19: no ppav at all. At ell = 3 this is also confirmed unconditionally by enumerating
+  all 768 genus-2 curves over F_2.
+- ell = 11: O_K is principally polarizable.
+- ell = 17, the same type as 131: a ppav exists iff End is non-maximal at v0 (45/45 vs 0/45 classes).
+
+The small-ell enumerations assume GRH. The ell = 131 statement does not.
+
+## Explicit models without zeta_131, and where the Jacobian candidates live (lead 3, 2026-11-27)
+
+`experiments/ecc2k130-weil-factor/lead3_deligne/REPORT.md` constructs A' explicitly as a Deligne module, checked by two
+independent methods (PARI and pure Python).
+
+- **Minimal degree.** The smallest isogeny A -> A' with zeta not in End(A') has degree 263, and this is proved
+  minimal. The smallest degree among those of p2-power order is p2.
+- **End and Aut.** End(A') is a Gorenstein order of index p in O_K, and Aut(A') = {+-1}.
+- **Kernel.** The isogeny kernel is cyclic, and Frobenius acts on it by lambda with lambda^2 = 2.
+
+**Combined with lead 1.** 263 is of split type, so no index-263 model is principally polarizable. Every
+possible Jacobian in the class (a ppav, End non-maximal at v0 above p2) is reached from A only through
+isogenies of p2-power degree. On the minimal such isogeny, Frobenius acts on the kernel with order
+(p2-1)/12, about 1.2e16. So the kernel points are defined only over F_{2^(1.2e16)}.
+
+**Practical note (an observation, not a theorem about every route).** Even if such a model were a
+Jacobian, carrying the ECDLP across that isogeny would need an isogeny evaluation in dimension 130 with
+kernel points over a field of degree about 1.2e16. No known method does this. The window question is
+therefore open in principle (is one of these ppavs a Jacobian?), but any affirmative answer would also
+need a way to cross this isogeny before it gave an attack.

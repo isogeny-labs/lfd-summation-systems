@@ -1,0 +1,293 @@
+[
+ {
+  "ell": 3,
+  "U": -1,
+  "factorization": {},
+  "product_check": true,
+  "legendre_m7_ell": -1,
+  "ell_place_inert_in_K_over_Kplus": true,
+  "places_over_2_inert": false,
+  "places_over_7_inert": false,
+  "U_primes": [],
+  "compensating_inert_type_primes": 0,
+  "prediction_ppav_with_End_OK": false,
+  "prediction_some_ppav_in_class": false,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 5,
+  "U": -1,
+  "factorization": {},
+  "product_check": true,
+  "legendre_m7_ell": -1,
+  "ell_place_inert_in_K_over_Kplus": true,
+  "places_over_2_inert": false,
+  "places_over_7_inert": true,
+  "U_primes": [],
+  "compensating_inert_type_primes": 0,
+  "prediction_ppav_with_End_OK": false,
+  "prediction_some_ppav_in_class": false,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 11,
+  "U": 23,
+  "factorization": {
+   "23": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": 1,
+  "ell_place_inert_in_K_over_Kplus": false,
+  "places_over_2_inert": false,
+  "places_over_7_inert": true,
+  "U_primes": [
+   {
+    "p": 23,
+    "v_p_U": 1,
+    "p_mod_ell": 1,
+    "legendre_m7_p": 1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": false,
+    "type": "split-type",
+    "D_order": 1
+   }
+  ],
+  "compensating_inert_type_primes": 0,
+  "prediction_ppav_with_End_OK": true,
+  "prediction_some_ppav_in_class": true,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 13,
+  "U": -1,
+  "factorization": {},
+  "product_check": true,
+  "legendre_m7_ell": -1,
+  "ell_place_inert_in_K_over_Kplus": true,
+  "places_over_2_inert": false,
+  "places_over_7_inert": true,
+  "U_primes": [],
+  "compensating_inert_type_primes": 0,
+  "prediction_ppav_with_End_OK": false,
+  "prediction_some_ppav_in_class": false,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 17,
+  "U": 271,
+  "factorization": {
+   "271": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": -1,
+  "ell_place_inert_in_K_over_Kplus": true,
+  "places_over_2_inert": false,
+  "places_over_7_inert": true,
+  "U_primes": [
+   {
+    "p": 271,
+    "v_p_U": 1,
+    "p_mod_ell": 16,
+    "legendre_m7_p": -1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": true,
+    "type": "inert-type",
+    "D_order": 2
+   }
+  ],
+  "compensating_inert_type_primes": 1,
+  "prediction_ppav_with_End_OK": false,
+  "prediction_some_ppav_in_class": true,
+  "prediction_every_ppav_has_zeta_notin_End": true
+ },
+ {
+  "ell": 19,
+  "U": -457,
+  "factorization": {
+   "457": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": -1,
+  "ell_place_inert_in_K_over_Kplus": true,
+  "places_over_2_inert": false,
+  "places_over_7_inert": false,
+  "U_primes": [
+   {
+    "p": 457,
+    "v_p_U": 1,
+    "p_mod_ell": 1,
+    "legendre_m7_p": 1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": false,
+    "type": "split-type",
+    "D_order": 1
+   }
+  ],
+  "compensating_inert_type_primes": 0,
+  "prediction_ppav_with_End_OK": false,
+  "prediction_some_ppav_in_class": false,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 23,
+  "U": 967,
+  "factorization": {
+   "967": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": 1,
+  "ell_place_inert_in_K_over_Kplus": false,
+  "places_over_2_inert": false,
+  "places_over_7_inert": true,
+  "U_primes": [
+   {
+    "p": 967,
+    "v_p_U": 1,
+    "p_mod_ell": 1,
+    "legendre_m7_p": 1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": false,
+    "type": "split-type",
+    "D_order": 1
+   }
+  ],
+  "compensating_inert_type_primes": 0,
+  "prediction_ppav_with_End_OK": true,
+  "prediction_some_ppav_in_class": true,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 29,
+  "U": -8641,
+  "factorization": {
+   "8641": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": 1,
+  "ell_place_inert_in_K_over_Kplus": false,
+  "places_over_2_inert": false,
+  "places_over_7_inert": false,
+  "U_primes": [
+   {
+    "p": 8641,
+    "v_p_U": 1,
+    "p_mod_ell": 28,
+    "legendre_m7_p": -1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": true,
+    "type": "inert-type",
+    "D_order": 2
+   }
+  ],
+  "compensating_inert_type_primes": 1,
+  "prediction_ppav_with_End_OK": true,
+  "prediction_some_ppav_in_class": true,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 31,
+  "U": -7193,
+  "factorization": {
+   "7193": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": -1,
+  "ell_place_inert_in_K_over_Kplus": true,
+  "places_over_2_inert": false,
+  "places_over_7_inert": false,
+  "U_primes": [
+   {
+    "p": 7193,
+    "v_p_U": 1,
+    "p_mod_ell": 1,
+    "legendre_m7_p": 1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": false,
+    "type": "split-type",
+    "D_order": 1
+   }
+  ],
+  "compensating_inert_type_primes": 0,
+  "prediction_ppav_with_End_OK": false,
+  "prediction_some_ppav_in_class": false,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 37,
+  "U": 194399,
+  "factorization": {
+   "73": 1,
+   "2663": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": 1,
+  "ell_place_inert_in_K_over_Kplus": false,
+  "places_over_2_inert": false,
+  "places_over_7_inert": false,
+  "U_primes": [
+   {
+    "p": 73,
+    "v_p_U": 1,
+    "p_mod_ell": 36,
+    "legendre_m7_p": -1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": true,
+    "type": "inert-type",
+    "D_order": 2
+   },
+   {
+    "p": 2663,
+    "v_p_U": 1,
+    "p_mod_ell": 36,
+    "legendre_m7_p": -1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": true,
+    "type": "inert-type",
+    "D_order": 2
+   }
+  ],
+  "compensating_inert_type_primes": 2,
+  "prediction_ppav_with_End_OK": true,
+  "prediction_some_ppav_in_class": true,
+  "prediction_every_ppav_has_zeta_notin_End": false
+ },
+ {
+  "ell": 131,
+  "U": 38531015900842053623,
+  "factorization": {
+   "263": 1,
+   "146505763881528721": 1
+  },
+  "product_check": true,
+  "legendre_m7_ell": -1,
+  "ell_place_inert_in_K_over_Kplus": true,
+  "places_over_2_inert": false,
+  "places_over_7_inert": false,
+  "U_primes": [
+   {
+    "p": 263,
+    "v_p_U": 1,
+    "p_mod_ell": 1,
+    "legendre_m7_p": 1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": false,
+    "type": "split-type",
+    "D_order": 1
+   },
+   {
+    "p": 146505763881528721,
+    "v_p_U": 1,
+    "p_mod_ell": 130,
+    "legendre_m7_p": -1,
+    "prime_probable": true,
+    "K_plus_places_inert_in_K": true,
+    "type": "inert-type",
+    "D_order": 2
+   }
+  ],
+  "compensating_inert_type_primes": 1,
+  "prediction_ppav_with_End_OK": false,
+  "prediction_some_ppav_in_class": true,
+  "prediction_every_ppav_has_zeta_notin_End": true
+ }
+]

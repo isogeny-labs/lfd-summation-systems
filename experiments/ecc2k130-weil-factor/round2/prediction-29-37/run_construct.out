@@ -1,0 +1,35 @@
+ell=11: deg K=20, deg K+=10
+ eps=1, U=23, primes [23]
+ (1) T = O_K (A_ell itself): q narrow class [0] -> narrowly principal: construct
+  [ell=11 T=O_K] index[O_K:T]=1 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=1  r totally positive (nfeltsign)=1  Im phi(lam)>0 on all 10 phi (numeric, min 3.617 e-4)=1
+ [ell=11 done in 65 ms]
+
+ell=29: deg K=56, deg K+=28
+ eps=1, U=-8641, primes [8641]
+ (1) T = O_K (A_ell itself): q narrow class [1, 1, 0, 1, 1] -> NOT narrowly principal
+     q = (g1) with g1 of #negative signs 16; unit correction possible (GRH units)? to + : 0, to - : 0
+  [ell=29 NEG CONTROL T=O_K with lambda from non-definite generator] index[O_K:T]=1 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=1  r totally positive (nfeltsign)=0  Im phi(lam)>0 on all 28 phi (numeric, min -1.847 e17)=0
+ (2) End = O_K, T = P | v, v split place above p=7193 with [q v]=0 in Cl+
+  [ell=29 T=P (p=7193)] index[O_K:T]=7193 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=1  r totally positive (nfeltsign)=1  Im phi(lam)>0 on all 28 phi (numeric, min 1.973 e-10)=1
+ (3) R non-max at v0 above 8641 only (n=1): [q v0] in Cl+ = [0, 1, 0, 1, 1]; narrowly principal: 0
+     unit correction to definite possible (GRH units)? +:0 -:0
+  [ell=29 NEG R(v0 8641) with non-definite lambda] index[O_K:T]=8641 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=0  r totally positive (nfeltsign)=0  Im phi(lam)>0 on all 28 phi (numeric, min -1.627 e16)=0
+ [ell=29 done in 17015 ms]
+
+ell=37: deg K=72, deg K+=36
+ eps=1, U=194399, primes [73, 2663]
+ (1) T = O_K (A_ell itself): q narrow class [1, 1] -> NOT narrowly principal
+     q = (g1) with g1 of #negative signs 20; unit correction possible (GRH units)? to + : 0, to - : 0
+  [ell=37 NEG CONTROL T=O_K with lambda from non-definite generator] index[O_K:T]=1 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=1  r totally positive (nfeltsign)=0  Im phi(lam)>0 on all 36 phi (numeric, min -1.523 e26)=0
+ (2) End = O_K, T = P | v, v split place above p=149 with [q v]=0 in Cl+
+  [ell=37 T=P (p=149)] index[O_K:T]=149 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=1  r totally positive (nfeltsign)=1  Im phi(lam)>0 on all 36 phi (numeric, min 2.857 e-13)=1
+ (3) R non-max at v0 above 73 only (n=1): [q v0] in Cl+ = [1, 0]; narrowly principal: 0
+     unit correction to definite possible (GRH units)? +:0 -:0
+  [ell=37 NEG R(v0 73) with non-definite lambda] index[O_K:T]=73 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=0  r totally positive (nfeltsign)=0  Im phi(lam)>0 on all 36 phi (numeric, min -5.672 e26)=0
+ (3) R non-max at v0 above 2663 only (n=1): [q v0] in Cl+ = [0, 1]; narrowly principal: 0
+     unit correction to definite possible (GRH units)? +:0 -:0
+  [ell=37 NEG R(v0 2663) with non-definite lambda] index[O_K:T]=2663 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=0  r totally positive (nfeltsign)=0  Im phi(lam)>0 on all 36 phi (numeric, min -5.075 e15)=0
+ (4) R non-max at both v0 (n=2): [q v0 v0'] in Cl+ = [0, 0]; narrowly principal: 1
+  [ell=37 R(v0,v0')] index[O_K:T]=194399 det=1 integral=1 alternating=1 conj(lam)=-lam 1  pi,pibar-stable=1,1 zeta-stable=0  r totally positive (nfeltsign)=1  Im phi(lam)>0 on all 36 phi (numeric, min 6.698 e-14)=1
+ [ell=37 done in 78337 ms]
+

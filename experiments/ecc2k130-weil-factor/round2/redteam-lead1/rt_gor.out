@@ -1,0 +1,17 @@
+[init] ell=11  deg K=20  deg K+=10  h(K+)=1 (cyc [])  h(K)=- (cyc -)  w(K)=-  #fu(K+)=9  eps=(-7/ell)=1  [85 ms]
+  self-conj split pair at 23     ring=1  Gorenstein (R^v (R:R^v) = R)=1  O_K-hull of R^v == (D c)^-1: 1  End(R^v) == R: 1  [O_K:R] = Mat([23, 1]) (expected Mat([23, 1]): 1)
+  split pair + conj at 23        ring=1  Gorenstein (R^v (R:R^v) = R)=1  O_K-hull of R^v == (D c)^-1: 1  End(R^v) == R: 1  [O_K:R] = Mat([23, 2]) (expected Mat([23, 2]): 1)
+  Z[pi,pibar] itself: [O_K:Z[pi,pibar]] = Mat([23, 9]) (|U|^(ell-2) = Mat([23, 9])), Gorenstein: 1
+  ell=11: all lattice checks pass: 1
+
+[init] ell=17  deg K=32  deg K+=16  h(K+)=1 (cyc [])  h(K)=- (cyc -)  w(K)=-  #fu(K+)=15  eps=(-7/ell)=-1  [450 ms]
+  v0 above 271                   ring=1  Gorenstein (R^v (R:R^v) = R)=1  O_K-hull of R^v == (D c)^-1: 1  End(R^v) == R: 1  [O_K:R] = Mat([271, 1]) (expected Mat([271, 1]): 1)
+  one glued pair above 271       ring=1  Gorenstein (R^v (R:R^v) = R)=1  O_K-hull of R^v == (D c)^-1: 1  End(R^v) == R: 1  [O_K:R] = Mat([271, 2]) (expected Mat([271, 2]): 1)
+  v0 + two pairs above 271       ring=1  Gorenstein (R^v (R:R^v) = R)=1  O_K-hull of R^v == (D c)^-1: 1  End(R^v) == R: 1  [O_K:R] = Mat([271, 5]) (expected Mat([271, 5]): 1)
+  Z[pi,pibar] itself: [O_K:Z[pi,pibar]] = Mat([271, 15]) (|U|^(ell-2) = Mat([271, 15])), Gorenstein: 1
+  ell=17: all lattice checks pass: 1
+
+
+real	0m9.103s
+user	0m8.312s
+sys	0m0.863s

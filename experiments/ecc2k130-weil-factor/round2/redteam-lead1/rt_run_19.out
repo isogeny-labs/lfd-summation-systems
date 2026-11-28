@@ -1,0 +1,20 @@
+[init] ell=19  deg K=36  deg K+=18  h(K+)=1 (cyc [])  h(K)=148 (cyc [74, 2])  w(K)=38  #fu(K+)=17  eps=(-7/ell)=-1  [6286 ms]
+  K/K+ relative discriminant ideal trivial (unramified at all finite places): 1
+  places of K+ above ell: 1, e = [18], f = [1] ; v_ell(D_K+) = [17] (ell-2 = 17, odd)
+  place above ell is INERT in K/K+ (eps = -1)
+  places of K+ above 7: 3, e = [2], v(D_K+) = [1], inert in K: [0]
+  places of K+ above 2: 1, all split in K: 1
+  CM type via prime 1 above 2: rows v(s(pi))>0 no/yes, cols s(sqrt-7)=-/+ : [0, 18; 18, 0]  induced from Q(sqrt-7): 1
+  CM type via prime 2 above 2: rows v(s(pi))>0 no/yes, cols s(sqrt-7)=-/+ : [18, 0; 0, 18]  induced from Q(sqrt-7): 1
+  CM type induced from Q(sqrt-7) for all 2 primes above 2: 1
+  U_ell = -457 = Mat([457, 1]) ; all prime factors proven prime: 1 ; squarefree: 1
+  natural polarization on O_K: det=361 (ell^2=361) integral=1 alternating=1 ; r_nat signs: #pos=0 #neg=18 (totally definite) ; Hilbert product=1, places with -1: []
+  control: Hilbert product formula holds on 3 random elements of K+: 1
+  End = O_K                          n(v0)=0 pred=no  | A: classes=148 princ=148 antisym=148 W=0 | B: [Cl+:N Cl]=2 inN=0 Artin=-1 |kerN|=37 | consistent=1 agree-with-rule=1 [35305 ms]
+  p=457 (split type): 36 primes of K, f=[1], v0=[], glued pairs=17
+    self-conjugate glued pairs: 1 ; others: 16
+  R: self-conj split pair at 457     n(v0)=0 pred=no  | A: classes=148 princ=148 antisym=148 W=0 | B: [Cl+:N Cl]=2 inN=0 Artin=-1 |kerN|=37 | consistent=1 agree-with-rule=1 [37341 ms]
+  R: split pair + conj pair at 457   n(v0)=0 pred=no  | A: classes=148 princ=148 antisym=148 W=0 | B: [Cl+:N Cl]=2 inN=0 Artin=-1 |kerN|=37 | consistent=1 agree-with-rule=1 [39038 ms]
+  SUMMARY ell=19: 3 cases, all methods consistent: 1, rule eps*(-1)^n=+1 <=> ppav agrees in all: 1 [121 s]
+
+exit: 0

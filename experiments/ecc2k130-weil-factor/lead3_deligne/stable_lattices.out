@@ -1,0 +1,45 @@
+[0;31m  ***   Warning: new maximum stack size = 4000002048 (3814.699 Mbytes).[0m
+ell=5 p=11  dim S=8 (codim 0)  #idx-p R-stable SUB-lattices=8  O_K-stable=8  NOT O_K-stable=0 | SUPER: total=8 OK-stable=8 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: Mat([[1, 1], 8])
+   (0.0s)
+ell=5 p=31  dim S=8 (codim 0)  #idx-p R-stable SUB-lattices=0  O_K-stable=0  NOT O_K-stable=0 | SUPER: total=0 OK-stable=0 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: [;]
+   (0.0s)
+ell=13 p=53  dim S=24 (codim 0)  #idx-p R-stable SUB-lattices=24  O_K-stable=24  NOT O_K-stable=0 | SUPER: total=24 OK-stable=24 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: Mat([[1, 1], 24])
+   (0.0s)
+ell=13 p=79  dim S=24 (codim 0)  #idx-p R-stable SUB-lattices=24  O_K-stable=24  NOT O_K-stable=0 | SUPER: total=24 OK-stable=24 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: Mat([[1, 1], 24])
+   (0.0s)
+ell=11 p=29  dim S=20 (codim 0)  #idx-p R-stable SUB-lattices=0  O_K-stable=0  NOT O_K-stable=0 | SUPER: total=0 OK-stable=0 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: [;]
+   (0.0s)
+ell=11 p=67  dim S=20 (codim 0)  #idx-p R-stable SUB-lattices=20  O_K-stable=20  NOT O_K-stable=0 | SUPER: total=20 OK-stable=20 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: Mat([[1, 1], 20])
+   (0.0s)
+ell=11 p=23  dim S=11 (codim 9)  #idx-p R-stable SUB-lattices=218  O_K-stable=20  NOT O_K-stable=198 | SUPER: total=218 OK-stable=20 NOT=198
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: [[1, 1], 2; [2, 2], 9]
+   sample sub-lattice (eigenvalue pi->1): dim End(T)/pO_K = 19  => [O_K:End(T)] = p^1 ; zeta^k in End(T) for k in Vecsmall([])
+   (0.0s)
+ell=19 p=191  dim S=36 (codim 0)  #idx-p R-stable SUB-lattices=36  O_K-stable=36  NOT O_K-stable=0 | SUPER: total=36 OK-stable=36 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: Mat([[1, 1], 36])
+   (0.0s)
+ell=19 p=457  dim S=19 (codim 17)  #idx-p R-stable SUB-lattices=7788  O_K-stable=36  NOT O_K-stable=7752 | SUPER: total=7788 OK-stable=36 NOT=7752
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: [[1, 1], 2; [2, 2], 17]
+   sample sub-lattice (eigenvalue pi->20): dim End(T)/pO_K = 35  => [O_K:End(T)] = p^1 ; zeta^k in End(T) for k in Vecsmall([])
+   (0.0s)
+[0;31m  *** _ZM_mul_worker: Warning: increasing stack size to 16000000.[0m
+[0;31m  *** _ZM_inv_worker: Warning: increasing stack size to 32000000.[0m
+[0;31m  *** matrank: Warning: increasing stack size to 64000000.[0m
+ell=131 p=787  dim S=260 (codim 0)  #idx-p R-stable SUB-lattices=0  O_K-stable=0  NOT O_K-stable=0 | SUPER: total=0 OK-stable=0 NOT=0
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: [;]
+   (0.9s)
+[0;31m  *** matker: Warning: increasing stack size to 128000000.[0m
+ell=131 p=263  dim S=131 (codim 129)  #idx-p R-stable SUB-lattices=34058  O_K-stable=260  NOT O_K-stable=33798 | SUPER: total=34058 OK-stable=260 NOT=33798
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: [[1, 1], 2; [2, 2], 129]
+   sample sub-lattice (eigenvalue pi->5): dim End(T)/pO_K = 259  => [O_K:End(T)] = p^1 ; zeta^k in End(T) for k in Vecsmall([])
+   (58.5s)
+ell=131 p=146505763881528721  dim S=131 (codim 129)  #idx-p R-stable SUB-lattices=146505763881528722  O_K-stable=0  NOT O_K-stable=146505763881528722 | SUPER: total=146505763881528722 OK-stable=0 NOT=146505763881528722
+   eigenvalue-type histogram [dim W_l, #O_K-stable lines] -> count: Mat([[2, 0], 1])
+   sample sub-lattice (eigenvalue pi->14975904886999252): dim End(T)/pO_K = 259  => [O_K:End(T)] = p^1 ; zeta^k in End(T) for k in Vecsmall([])
+   (53.3s)

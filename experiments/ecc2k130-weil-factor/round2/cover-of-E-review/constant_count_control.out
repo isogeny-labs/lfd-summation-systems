@@ -1,0 +1,12 @@
+ell=  3 Q=2^2  constant=True   #C(F_Q)=    8  #E(F_Q)=    8  #C=2 mod ell: True   trace_on_Prym(F_Q) = 0
+ell=  5 Q=2^4  constant=True   #C(F_Q)=   32  #E(F_Q)=   16  #C=2 mod ell: True   trace_on_Prym(F_Q) = -16
+ell=  7 Q=2^3  constant=True   #C(F_Q)=   16  #E(F_Q)=    4  #C=2 mod ell: True   trace_on_Prym(F_Q) = -12
+ell=  3 Q=2^4  constant=True   #C(F_Q)=   32  #E(F_Q)=   16  #C=2 mod ell: True   trace_on_Prym(F_Q) = -16
+ell= 13 Q=2^12 constant=True   #C(F_Q)= 5488  #E(F_Q)= 4144  #C=2 mod ell: True   trace_on_Prym(F_Q) = -1344
+ell=  7 Q=2^6  constant=True   #C(F_Q)=  128  #E(F_Q)=   56  #C=2 mod ell: True   trace_on_Prym(F_Q) = -72
+ell=  5 Q=2^1  constant=False  #C(F_Q)=    4  #E(F_Q)=    4  #C=#E: True   trace_on_Prym(F_Q) = 0
+ell=  5 Q=2^2  constant=False  #C(F_Q)=    8  #E(F_Q)=    8  #C=#E: True   trace_on_Prym(F_Q) = 0
+ell=  7 Q=2^2  constant=False  #C(F_Q)=    8  #E(F_Q)=    8  #C=#E: True   trace_on_Prym(F_Q) = 0
+ell= 11 Q=2^5  constant=False  #C(F_Q)=   44  #E(F_Q)=   44  #C=#E: True   trace_on_Prym(F_Q) = 0
+ell=131 Q=2^13 constant=False  #C(F_Q)= 8012  #E(F_Q)= 8012  #C=#E: True   trace_on_Prym(F_Q) = 0
+ALL CONSTANT/TWISTED COUNT CONTROLS PASSED

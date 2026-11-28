@@ -1,0 +1,21 @@
+ell=11 deg=20 bnfinit 135 ms, h=5 cyc=[5], #fu=9, w=22
+ell=11 p=23 lam=18 lam^2-2 mod p=0 ord(lam)=11
+  conductor ideal at the pi==pibar place(s): 2 prime(s), indices [11, 13]
+  ppav classes with End = O_K: 4
+  [ppav target (O_K)] det Gram=1 integral=1 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=1
+  [ppav target (O_K)] det Gram=1 integral=1 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=1
+  [ppav target (O_K)] det Gram=1 integral=1 alternating=1 lam antisym=1 F,V-stable=1,1 Phi-positive=1 zeta in End=1
+  target=ppav(O_K) source=1: isogenies tested=49  m0-socle>0: 3  ord(lam)|m_G: 39  (ord|m_G but socle=0: 36)
+  target=ppav(O_K) source=2: isogenies tested=53  m0-socle>0: 4  ord(lam)|m_G: 42  (ord|m_G but socle=0: 38)
+  target=ppav(O_K) source=1: isogenies tested=60  m0-socle>0: 4  ord(lam)|m_G: 60  (ord|m_G but socle=0: 56)
+  target=ppav(O_K) source=2: isogenies tested=51  m0-socle>0: 3  ord(lam)|m_G: 42  (ord|m_G but socle=0: 39)
+  target=ppav(O_K) source=1: isogenies tested=60  m0-socle>0: 3  ord(lam)|m_G: 58  (ord|m_G but socle=0: 55)
+  target=ppav(O_K) source=2: isogenies tested=60  m0-socle>0: 3  ord(lam)|m_G: 60  (ord|m_G but socle=0: 57)
+  target=control O_K source=1: isogenies tested=50  m0-socle>0: 1  ord(lam)|m_G: 39  (ord|m_G but socle=0: 38)
+  target=control O_K source=2: isogenies tested=53  m0-socle>0: 2  ord(lam)|m_G: 44  (ord|m_G but socle=0: 42)
+  target=control O_K-ideal gen1 source=1: isogenies tested=51  m0-socle>0: 2  ord(lam)|m_G: 42  (ord|m_G but socle=0: 40)
+  target=control O_K-ideal gen1 source=2: isogenies tested=50  m0-socle>0: 3  ord(lam)|m_G: 39  (ord|m_G but socle=0: 36)
+  [ppav(O_K)] I=[Z[alpha]T:T]=matrix(0,2)  signature=[0, 20]  det(G)=Mat([7, 10]) (7^10 * I^2 = Mat([7, 10]))  Q(c) integral on basis: 1  d_min=3  #min vectors=220
+  [ppav(O_K)] I=[Z[alpha]T:T]=matrix(0,2)  signature=[0, 20]  det(G)=Mat([7, 10]) (7^10 * I^2 = Mat([7, 10]))  Q(c) integral on basis: 1  d_min=4  #min vectors=6160
+  [ppav(O_K)] I=[Z[alpha]T:T]=matrix(0,2)  signature=[0, 20]  det(G)=Mat([7, 10]) (7^10 * I^2 = Mat([7, 10]))  Q(c) integral on basis: 1  d_min=4  #min vectors=6160
+[time 25174 ms]

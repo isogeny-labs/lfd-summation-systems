@@ -1,0 +1,23 @@
+ell=11 U=23 factor=Mat([23, 1]) ; all factors proven prime (isprime): 1 ; (-7/ell)=1
+  p=23: p mod ell=1, (-7/p)=1 ; #elementary divisors divisible by p = 9 ; sum min(v,2) = 9  => v_p(index) = 9 (expected v_p(U)*(ell-2) = 9) [0 ms]
+  ell=11 p=23: residue points of Z[pi,pibar] at embeddings: 11 (expected ell=11); classes of size 2: 9, size 1: 2
+    self-glued conj-orbits: 1 ; at it pi == pibar mod p and pi mod p in F_p: 1 ; zeta mod p in F_p there: 1
+ell=17 U=271 factor=Mat([271, 1]) ; all factors proven prime (isprime): 1 ; (-7/ell)=-1
+  p=271: p mod ell=16, (-7/p)=-1 ; #elementary divisors divisible by p = 15 ; sum min(v,2) = 15  => v_p(index) = 15 (expected v_p(U)*(ell-2) = 15) [0 ms]
+  ell=17 p=271: residue points of Z[pi,pibar] at embeddings: 17 (expected ell=17); classes of size 2: 15, size 1: 2
+    self-glued conj-orbits: 1 ; at it pi == pibar mod p and pi mod p in F_p: 1 ; zeta mod p in F_p there: 0
+ell=19 U=-457 factor=Mat([457, 1]) ; all factors proven prime (isprime): 1 ; (-7/ell)=-1
+  p=457: p mod ell=1, (-7/p)=1 ; #elementary divisors divisible by p = 17 ; sum min(v,2) = 17  => v_p(index) = 17 (expected v_p(U)*(ell-2) = 17) [0 ms]
+  ell=19 p=457: residue points of Z[pi,pibar] at embeddings: 19 (expected ell=19); classes of size 2: 17, size 1: 2
+    self-glued conj-orbits: 1 ; at it pi == pibar mod p and pi mod p in F_p: 1 ; zeta mod p in F_p there: 1
+ell=29 U=-8641 factor=Mat([8641, 1]) ; all factors proven prime (isprime): 1 ; (-7/ell)=1
+  p=8641: p mod ell=28, (-7/p)=-1 ; #elementary divisors divisible by p = 27 ; sum min(v,2) = 27  => v_p(index) = 27 (expected v_p(U)*(ell-2) = 27) [4 ms]
+  ell=29 p=8641: residue points of Z[pi,pibar] at embeddings: 29 (expected ell=29); classes of size 2: 27, size 1: 2
+    self-glued conj-orbits: 1 ; at it pi == pibar mod p and pi mod p in F_p: 1 ; zeta mod p in F_p there: 0
+ell=131 U=38531015900842053623 factor=[263, 1; 146505763881528721, 1] ; all factors proven prime (isprime): 1 ; (-7/ell)=-1
+  p=263: p mod ell=1, (-7/p)=1 ; #elementary divisors divisible by p = 129 ; sum min(v,2) = 129  => v_p(index) = 129 (expected v_p(U)*(ell-2) = 129) [81 ms]
+  ell=131 p=263: residue points of Z[pi,pibar] at embeddings: 131 (expected ell=131); classes of size 2: 129, size 1: 2
+    self-glued conj-orbits: 1 ; at it pi == pibar mod p and pi mod p in F_p: 1 ; zeta mod p in F_p there: 1
+  p=146505763881528721: p mod ell=130, (-7/p)=-1 ; #elementary divisors divisible by p = 129 ; sum min(v,2) = 129  => v_p(index) = 129 (expected v_p(U)*(ell-2) = 129) [104 ms]
+  ell=131 p=146505763881528721: residue points of Z[pi,pibar] at embeddings: 131 (expected ell=131); classes of size 2: 129, size 1: 2
+    self-glued conj-orbits: 1 ; at it pi == pibar mod p and pi mod p in F_p: 1 ; zeta mod p in F_p there: 0

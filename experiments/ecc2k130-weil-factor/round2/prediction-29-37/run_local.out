@@ -1,0 +1,27 @@
+ell=11: deg K=20, deg K+=10
+  [ell=11 r for T=O_K (any generator of q)] #negative real embeddings=6 ; finite places with symbol -1 (p, f, v(r)) = [] ; product finite=1 * infinite=1 = 1
+  narrow Cl+ = [2] ; 1 quadratic generators of the 2-elementary narrow class field
+   L_1: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 2 -> q splits
+  => unconditional: q not narrowly principal: 0
+
+ell=29: deg K=56, deg K+=28
+  [ell=29 r for T=O_K (any generator of q)] #negative real embeddings=16 ; finite places with symbol -1 (p, f, v(r)) = [] ; product finite=1 * infinite=1 = 1
+  [ell=29 r for R(v0 8641), n=1] #negative real embeddings=11 ; finite places with symbol -1 (p, f, v(r)) = [[8641, 1, -1]] ; product finite=-1 * infinite=-1 = 1
+  narrow Cl+ = [2, 2, 2, 2, 2] ; 5 quadratic generators of the 2-elementary narrow class field
+   L_1: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 2 -> q splits
+   L_2: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 1 -> q does NOT split
+   L_3: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 1 -> q does NOT split
+   L_4: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 1 -> q does NOT split
+   L_5: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 1 -> q does NOT split
+  => unconditional: q not narrowly principal: 1
+
+ell=37: deg K=72, deg K+=36
+  [ell=37 r for T=O_K (any generator of q)] #negative real embeddings=20 ; finite places with symbol -1 (p, f, v(r)) = [] ; product finite=1 * infinite=1 = 1
+  [ell=37 r for R(v0 73), n=1] #negative real embeddings=13 ; finite places with symbol -1 (p, f, v(r)) = [[73, 1, -1]] ; product finite=-1 * infinite=-1 = 1
+  [ell=37 r for R(v0 2663), n=1] #negative real embeddings=23 ; finite places with symbol -1 (p, f, v(r)) = [[2663, 1, -1]] ; product finite=-1 * infinite=-1 = 1
+  [ell=37 r for R(v0,v0'), n=2 (the constructed one)] #negative real embeddings=0 ; finite places with symbol -1 (p, f, v(r)) = [[73, 1, -1], [2663, 1, -1]] ; product finite=1 * infinite=1 = 1
+  narrow Cl+ = [2, 2] ; 2 quadratic generators of the 2-elementary narrow class field
+   L_1: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 1 -> q does NOT split
+   L_2: rel disc norm 1 (unramified at finite places: 1); #primes of L over q = 1 -> q does NOT split
+  => unconditional: q not narrowly principal: 1
+

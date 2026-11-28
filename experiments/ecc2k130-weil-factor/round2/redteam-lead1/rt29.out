@@ -1,0 +1,23 @@
+[init] ell=29  deg K=56  deg K+=28  h(K+)=1 (cyc [])  h(K)=- (cyc -)  w(K)=-  #fu(K+)=27  eps=(-7/ell)=1  [22851 ms]
+  [22851 ms] structure:
+  K/K+ relative discriminant ideal trivial (unramified at all finite places): 1
+  places of K+ above ell: 1, e = [28], f = [1] ; v_ell(D_K+) = [27] (ell-2 = 27, odd)
+  place above ell is SPLIT in K/K+ (eps = 1)
+  places of K+ above 7: 2, e = [2], v(D_K+) = [1], inert in K: [0]
+  places of K+ above 2: 1, all split in K: 1
+  CM type via prime 1 above 2: rows v(s(pi))>0 no/yes, cols s(sqrt-7)=-/+ : [0, 28; 28, 0]  induced from Q(sqrt-7): 1
+  CM type via prime 2 above 2: rows v(s(pi))>0 no/yes, cols s(sqrt-7)=-/+ : [28, 0; 0, 28]  induced from Q(sqrt-7): 1
+  CM type induced from Q(sqrt-7) for all 2 primes above 2: 1
+  narrow class group Cl+(K+) = [2, 2, 2, 2, 2] (order 32); class group Cl(K+) = []
+  H_gen from norms of primes of K above q <= 233: 174 generators, [Cl+ : H_gen] = 2
+  U_29 = -8641 ; p = 8641 prime 1 ; p mod 29 = 28 ; (-7/p) = -1
+  primes of K above p: 28 (f=[2]), self-glued v0 = [17], glued pairs = 13
+  End = O_K                  predicted ppav: 1 | [b+] in N Cl(K): 1 | Artin parity: +1 | agree: 1
+    generator totally positive: 1
+    [ell=29 End=O_K explicit ppav] det Gram=1 integral=1 alternating=1 lam antisym=1 pi,pibar-stable=1,1 r>>0=1 zeta in End=1
+    Hilbert symbols of r: product=1, places with -1: []
+  End = R(v0)                predicted ppav: 0 | [b+] in N Cl(K): 0 | Artin parity: -1 | agree: 1
+  End = R(one glued pair)    predicted ppav: 1 | [b+] in N Cl(K): 1 | Artin parity: +1 | agree: 1
+  End = R(v0 + one pair)     predicted ppav: 0 | [b+] in N Cl(K): 0 | Artin parity: -1 | agree: 1
+  total time 51 s
+exit: 0

@@ -1,0 +1,43 @@
+ell=3  U=-1  log2|disc h|=4.392  log2 N(t^2-8)=0.000
+   [O_K+:Z[t]]^2 integral 1 square 1 ; [O_K:Z[pi,pibar]]^2 integral 1 square 1
+   [O_K:R0] == |U|^(ell-2) : 1
+   [O_K+:R0+] factored = 1
+   log2[O_K:R0]=0.000  log2[O_K+:R0+]=0.000  log2 minus-index=0.000
+   log2 sqrt(|disc h|*N(t^2-8)) = 2.196 ; (g(g+1)/4) = 1.50
+ell=5  U=-1  log2|disc h|=12.580  log2 N(t^2-8)=0.000
+   [O_K+:Z[t]]^2 integral 1 square 1 ; [O_K:Z[pi,pibar]]^2 integral 1 square 1
+   [O_K:R0] == |U|^(ell-2) : 1
+   [O_K+:R0+] factored = 1
+   log2[O_K:R0]=0.000  log2[O_K+:R0+]=0.000  log2 minus-index=0.000
+   log2 sqrt(|disc h|*N(t^2-8)) = 6.290 ; (g(g+1)/4) = 5.00
+ell=11  U=23  log2|disc h|=81.360  log2 N(t^2-8)=9.047
+   [O_K+:Z[t]]^2 integral 1 square 1 ; [O_K:Z[pi,pibar]]^2 integral 1 square 1
+   [O_K:R0] == |U|^(ell-2) : 1
+   [O_K+:R0+] factored = Mat([23, 4])
+   log2[O_K:R0]=40.712  log2[O_K+:R0+]=18.094  log2 minus-index=22.618
+   log2 sqrt(|disc h|*N(t^2-8)) = 45.204 ; (g(g+1)/4) = 27.50
+ell=13  U=-1  log2|disc h|=57.549  log2 N(t^2-8)=0.000
+   [O_K+:Z[t]]^2 integral 1 square 1 ; [O_K:Z[pi,pibar]]^2 integral 1 square 1
+   [O_K:R0] == |U|^(ell-2) : 1
+   [O_K+:R0+] factored = 1
+   log2[O_K:R0]=0.000  log2[O_K+:R0+]=0.000  log2 minus-index=0.000
+   log2 sqrt(|disc h|*N(t^2-8)) = 28.774 ; (g(g+1)/4) = 39.00
+ell=17  U=271  log2|disc h|=196.921  log2 N(t^2-8)=16.164
+   [O_K+:Z[t]]^2 integral 1 square 1 ; [O_K:Z[pi,pibar]]^2 integral 1 square 1
+   [O_K:R0] == |U|^(ell-2) : 1
+   [O_K+:R0+] factored = Mat([271, 7])
+   log2[O_K:R0]=121.232  log2[O_K+:R0+]=56.575  log2 minus-index=64.657
+   log2 sqrt(|disc h|*N(t^2-8)) = 106.543 ; (g(g+1)/4) = 68.00
+ell=19  U=-457  log2|disc h|=238.858  log2 N(t^2-8)=17.672
+   [O_K+:Z[t]]^2 integral 1 square 1 ; [O_K:Z[pi,pibar]]^2 integral 1 square 1
+   [O_K:R0] == |U|^(ell-2) : 1
+   [O_K+:R0+] factored = Mat([457, 8])
+   log2[O_K:R0]=150.213  log2[O_K+:R0+]=70.688  log2 minus-index=79.524
+   log2 sqrt(|disc h|*N(t^2-8)) = 128.265 ; (g(g+1)/4) = 85.50
+ell=131  U=38531015900842053623  log2|disc h|=9417.809  log2 N(t^2-8)=130.125
+   [O_K+:Z[t]]^2 integral 1 square 1 ; [O_K:Z[pi,pibar]]^2 integral 1 square 1
+   [O_K:R0] == |U|^(ell-2) : 0
+   [O_K+:R0+] factored = [263, 64; 146505763881528721, 64]
+   log2[O_K:R0]=8393.082  log2[O_K+:R0+]=4164.010  log2 minus-index=4229.073
+   log2 sqrt(|disc h|*N(t^2-8)) = 4773.967 ; (g(g+1)/4) = 4257.50
+P_A(131) from resultant == P_A.json : 1
