@@ -1,0 +1,27 @@
+ell=11 deg K+=10  disc K+ = [7, 5; 11, 9]
+  rnfdisc(K+(sqrt-7)) finite part norm = 1
+  #units 5; (O/4)^* cyc len 10 (even 10); kernel dim (unramified at 2 subgroup) 0
+  no cyclotomic-unit witness found
+ell=29 deg K+=28  disc K+ = [7, 14; 29, 27]
+  rnfdisc(K+(sqrt-7)) finite part norm = 1
+  #units 14; (O/4)^* cyc len 28 (even 28); kernel dim (unramified at 2 subgroup) 3
+  no cyclotomic-unit witness found
+ell=37 deg K+=36  disc K+ = [7, 18; 37, 35]
+  rnfdisc(K+(sqrt-7)) finite part norm = 1
+  #units 18; (O/4)^* cyc len 36 (even 36); kernel dim (unramified at 2 subgroup) 0
+  no cyclotomic-unit witness found
+--- with additional units found by bnfinit (GRH used only to FIND them; each verified to be a unit) ---
+ell=11 deg K+=10  disc K+ = [7, 5; 11, 9]
+  rnfdisc(K+(sqrt-7)) finite part norm = 1
+  #units 14; (O/4)^* cyc len 10 (even 10); kernel dim (unramified at 2 subgroup) 5
+  no cyclotomic-unit witness found
+ell=29 deg K+=28  disc K+ = [7, 14; 29, 27]
+  rnfdisc(K+(sqrt-7)) finite part norm = 1
+  #units 41; (O/4)^* cyc len 28 (even 28); kernel dim (unramified at 2 subgroup) 18
+  witness exps [1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1]
+  rnfdisc finite norm = 1 ; u mod q = 27, Legendre = -1 ; #primes above q in L = 1 ; #neg embeddings of u = 14
+ell=37 deg K+=36  disc K+ = [7, 18; 37, 35]
+  rnfdisc(K+(sqrt-7)) finite part norm = 1
+  #units 53; (O/4)^* cyc len 36 (even 36); kernel dim (unramified at 2 subgroup) 19
+  witness exps [1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1]
+  rnfdisc finite norm = 1 ; u mod q = 35, Legendre = -1 ; #primes above q in L = 1 ; #neg embeddings of u = 18

@@ -1,0 +1,11 @@
+p=146505763881528721; l=131;
+g=ffgen(ffinit(p,2,'t),'t);
+r=polrootsmod(Pol([1,1,2],'y),[ffinit(p,2,'t),p]); 
+r=apply(e->subst(lift(lift(e)),'t,g),r); a=r[1]; b=r[2];
+print("a+b=",a+b," ab=",a*b, " a in F_p? ",a^p==a);
+z0=random(g)^((p^2-1)/l); while(z0==1, z0=random(g)^((p^2-1)/l)); Z=vector(l-1,k,z0^k);
+pis=vector(l-1,k,a*Z[k]);
+print("places with pi in F_p: ",#select(v->v^p==v,pis));
+c=b/a; print("c^131==1: ",c^l==1," c!=1: ",c!=1);
+np=0; for(i=1,l-1,for(j=i+1,l-1, if(pis[i]==pis[j]^p || pis[i]==pis[j], np++))); print("glued pairs: ",np);
+print("pibar == pi^p at all places: ", #select(k->(b/Z[k])==(a*Z[k])^p,[1..l-1]));

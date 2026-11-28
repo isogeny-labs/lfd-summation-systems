@@ -1,0 +1,20 @@
+Q(zeta_23): h^- = 3  (known 3)  match=1  roundoff=8.69 e-614
+Q(zeta_31): h^- = 9  (known 9)  match=1  roundoff=1.40 e-613
+Q(zeta_37): h^- = 37  (known 37)  match=1  roundoff=3.90 e-612
+Q(zeta_41): h^- = 121  (known 121)  match=1  roundoff=1.13 e-611
+Q(zeta_43): h^- = 211  (known 211)  match=1  roundoff=2.17 e-611
+Q(zeta_47): h^- = 695  (known 695)  match=1  roundoff=3.99 e-610
+Q(zeta_59): h^- = 41241  (known 41241)  match=1  roundoff=3.33 e-608
+Q(zeta_67): h^- = 853513  (known 853513)  match=1  roundoff=4.45 e-607
+Q(zeta_71): h^- = 3882809  (known 3882809)  match=1  roundoff=1.43 e-606
+Q(sqrt-7): h = 1 (expect 1)
+K_11 = Q(zeta_11, sqrt-7): 2*h^-/Q = 5  roundoff=1.44 e-614  (#odd chars 10)  [half-integer h^-/Q forces Q=2]
+K_17 = Q(zeta_17, sqrt-7): 2*h^-/Q = 45  roundoff=6.16 e-613  (#odd chars 16)  [half-integer h^-/Q forces Q=2]
+K_19 = Q(zeta_19, sqrt-7): 2*h^-/Q = 148  roundoff=3.95 e-612  (#odd chars 18)  [half-integer h^-/Q forces Q=2]
+Q(zeta_131): h^- = 28496379729272136525 (20 digits) roundoff=8.10 e-593
+  factor: [3, 3; 5, 2; 53, 1; 131, 1; 1301, 1; 4673706701, 1]
+K_131: 2*h^-/Q = 1128247071505617895582943540743356840380563482194685535482598575  odd? 1  roundoff=3.03 e-549  #odd chars=130
+K_131: Q = 2, h^-(K_131) = 1128247071505617895582943540743356840380563482194685535482598575 (64 digits)
+  factor (trial to 1e7): [3, 6; 5, 2; 11, 1; 41, 1; 53, 1; 131, 1; 1301, 1; 63311, 1; 912211, 1; 3116699, 1; 84424079559214997458207566663761, 1]
+  isprime(cofactor)? [84424079559214997458207566663761, 0]
+h^-(Q(zeta_131)) divides h^-(K_131)? 1

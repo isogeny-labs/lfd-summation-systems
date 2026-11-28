@@ -1,0 +1,6 @@
+p2 < 2^64: 1
+primecert(p2) = 146505763881528721  valid: 1
+primecert(p2,1) [Pratt flag] = 146505763881528721  valid: 1
+primecert(263) = 263 valid: 1
+negative: primecertisvalid(p2+2) = 0 ; primecertisvalid(561) = 0
+control 2^80-range prime: ECPP cert length 1 valid: 1
