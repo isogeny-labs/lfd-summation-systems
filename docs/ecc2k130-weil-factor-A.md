@@ -504,9 +504,16 @@ New results:
   The [quotient gate](../experiments/ecc2k130-agl2-gate-20261127/SCREEN.md) then
   excludes that layer by a genus-three Jacobian order bound; see also the
   [ramification proof](../experiments/ecc2k130-affine-ramification-20261127/SCREEN.md).
+- **All affine degree-131 complements excluded for the required Weil class (PR #84).**
+  Outside the geometric complement, arithmetic Frobenius gives one rational preimage over
+  each of the four rational base points, contradicting the required `#C(F_2)=3`.
+  With constant arithmetic monodromy, any order-5 or order-13 complement inertia needs a
+  branch place of degree at least 4 or 12, contributing at least 416 or 1440 to a
+  different of degree 260. Its absence forces an impossible unramified constant odd-order
+  quotient of `E`, leaving only the excluded order-two case. The
+  [full proof](../experiments/ecc2k130-affine-full-gate-20261127/SCREEN.md)
+  also corrects the prior degree-ten rational-branch configuration.
 - **Still open:**
-  - degree-131 maps with larger affine arithmetic monodromy or a complement of order greater than two
-    (a degree-ten configuration remains conditional on `131 | h(E')` for a genus-11 `E'`);
   - A_131 / S_131 monodromy and the other divisors n.
 - **Lead 1 does not exclude this route.** The Prym is not principally polarized; it has type (1^128, n, n).
 
