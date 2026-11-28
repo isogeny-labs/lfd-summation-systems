@@ -1,0 +1,151 @@
+[
+  {
+    "n": 3,
+    "modulus": 11,
+    "k": 2,
+    "a": 0,
+    "b": 1,
+    "target": 0,
+    "curve_order": 4,
+    "base": [
+      0,
+      1
+    ],
+    "relations": 7,
+    "tuple_sha256": "b36a4b81a4bc6bb37415243d35dae78b9f46cfb9275f186d19db79294625dc79"
+  },
+  {
+    "n": 3,
+    "modulus": 11,
+    "k": 2,
+    "a": 1,
+    "b": 1,
+    "target": 0,
+    "curve_order": 14,
+    "base": [
+      0,
+      2,
+      3
+    ],
+    "relations": 16,
+    "tuple_sha256": "b7ac5733da7024290d5eb79389cd113116f1751838316b788ad82bfa52bee4b5"
+  },
+  {
+    "n": 4,
+    "modulus": 19,
+    "k": 3,
+    "a": 0,
+    "b": 1,
+    "target": 0,
+    "curve_order": 16,
+    "base": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "relations": 107,
+    "tuple_sha256": "a0739c61a7ba7e2557a530164cc8ec8fe8d3eb13333ceca5d5badb47835c4ee7"
+  },
+  {
+    "n": 4,
+    "modulus": 19,
+    "k": 3,
+    "a": 0,
+    "b": 1,
+    "target": 8,
+    "curve_order": 16,
+    "base": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "relations": 0,
+    "tuple_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "n": 4,
+    "modulus": 19,
+    "k": 3,
+    "a": 1,
+    "b": 1,
+    "target": 0,
+    "curve_order": 16,
+    "base": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "relations": 107,
+    "tuple_sha256": "a0739c61a7ba7e2557a530164cc8ec8fe8d3eb13333ceca5d5badb47835c4ee7"
+  },
+  {
+    "n": 4,
+    "modulus": 19,
+    "k": 3,
+    "a": 1,
+    "b": 1,
+    "target": 8,
+    "curve_order": 16,
+    "base": [
+      0,
+      1,
+      6,
+      7
+    ],
+    "relations": 0,
+    "tuple_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "n": 5,
+    "modulus": 37,
+    "k": 3,
+    "a": 0,
+    "b": 1,
+    "target": 0,
+    "curve_order": 44,
+    "base": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "relations": 263,
+    "tuple_sha256": "80a92fd324254caa16f0db2fbe5a2c5a7f5d07c0f2833f079177a64641be3a95"
+  },
+  {
+    "n": 5,
+    "modulus": 37,
+    "k": 3,
+    "a": 1,
+    "b": 1,
+    "target": 8,
+    "curve_order": 22,
+    "base": [
+      0,
+      6
+    ],
+    "relations": 1,
+    "tuple_sha256": "72a89d4f0eaea842e2a6430fac3c46dd1df531175e339d4e0d97676f9020614d"
+  },
+  {
+    "n": 5,
+    "modulus": 37,
+    "k": 3,
+    "a": 1,
+    "b": 1,
+    "target": 0,
+    "curve_order": 22,
+    "base": [
+      0,
+      6
+    ],
+    "relations": 0,
+    "tuple_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+]
