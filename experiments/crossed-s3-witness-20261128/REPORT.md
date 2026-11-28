@@ -60,6 +60,11 @@ point lifts and a direct point-level check of the target relation. The exact
 enumeration checks this argument on the frozen finite cells; it is not a
 formal proof over every field.
 
+All six cells have odd characteristic. The binary S3 formula and its identity
+cases differ, so these counts do not validate a binary implementation. A
+binary cost test must first repeat the point-lift and O-aware witness check
+on its exact curve and factor base.
+
 The conjunction cannot increase relation yield at a fixed target and factor
 base. Its only proposed benefit is an algebraic presentation effect: the
 shared leaf variables give a more overdetermined system. With four leaf
@@ -78,7 +83,8 @@ presentation, not evidence of an advantage.
 
 ## Deciding cost test
 
-Freeze one dataset of identical curves, targets, rational factor bases and
+After that binary witness gate, freeze one dataset of identical curves,
+targets, rational factor bases and
 summand order. Compare monolithic S5, one complete balanced S3 tree, and the
 crossed O-aware network. First prove equal extracted point relations and
 retain failed or censored solves. Then count degree reached, Macaulay/F4
