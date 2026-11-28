@@ -502,3 +502,41 @@ New results:
     genus-11 E');
   - A_131 / S_131 monodromy and the other divisors n.
 - **Lead 1 does not exclude this route.** The Prym is not principally polarized; it has type (1^128, n, n).
+
+## Round 2: skeptic pass and the remaining leads (2026-11-28)
+
+An independent skeptic re-ran the decisive computation of each lead with its own code. The core of all five leads is
+upheld. Scope and label corrections:
+- **jacobian-obstructions.** "Aut = {+-1} for every ppav" is conditional on lead 1. Note that lead 1 has since been
+  upheld by the red-team, but only as an agent derivation. The ppav count of 2^4431 is heuristic and conditional on
+  Theorem B.
+- **isogeny-evaluation.**
+  - "Any useful transfer must be an isogeny" holds only for algebraic maps into abelian varieties; other transfers are
+    excluded only heuristically.
+  - The ell = 11 and 17 sampling, and the Hermitian d_min formula, could not be reproduced (a script load failure), so
+    they are unsupported.
+  - The kernel-field lemma (a) stands, modulo lead 1.
+- **redteam-lead1.** The skeptic's from-scratch End = O_K decider and its place structure above p2 (one self-glued v0,
+  64 glued pairs) agree. Not re-checked: the ell = 29 lattice (timed out) and the Theorem B existence direction
+  (rests on the PR #57 certificate).
+- **prediction-29-37.** The narrow-class obstruction for T = O_K was re-proved by an independent route. "Every order
+  non-maximal at exactly one v0 is excluded" is checked only for orders maximal away from v0.
+- **cover-of-E-review.** The trace lemma, the gluing-degree constraint and the Galois exclusion are upheld; the content
+  of P_A(alpha) = 131 * U_131 was recomputed two ways. The AGL arithmetic-equals-geometric monodromy step is
+  unsupported (that case is listed as open anyway).
+
+**Loose ends (`round2/loose-ends`, skeptic-upheld).**
+- p2 and 263 are proved prime by independent pure-Python Lehmer (N-1) and Morrison (N+1) certificates, with controls.
+- Pic of the index-p orders follows a closed formula, h_K (p -+ 1)/(ell Q), which matches ell = 11, 17, 19 (GRH).
+- At ell = 131, the number of isomorphism classes with End = the order at v0 is h_K (p2+1)/262, about
+  6.3e77 * h^+(K+). Here h^-(K_131), about 1.13e63, is unconditional, and h^+ is unknown.
+- **Lean: blocked.** Running the elan installer was denied by the session's permission classifier, and the agent did
+  not work around it. Lemmas 1 and 2 of the index proof were checked symbolically only.
+
+**Extension fields and A as a factor (`round2/extension-and-factor-routes`).**
+- **For 131 not dividing k: proved.** Q(pi^k) = K, so End and Aut do not grow over F_{2^k}, and no order-131
+  automorphism appears for any Jacobian in the class.
+- **At 131 | k: heuristic dead end.** A ~ E^130 there, but transferring into a genus-130 Jacobian over F_{2^131}
+  (order about 2^17030) costs about 2^680 by large-genus index calculus.
+- **A as a factor of a larger Jacobian.** GHS covers of P^1 and all geometrically Galois covers of E are closed.
+  Non-Galois maps to E, and curves with no map to E, remain open.
