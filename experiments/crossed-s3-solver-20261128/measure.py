@@ -10,12 +10,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROWS = json.loads((HERE / "manifest.json").read_text())
-LIMIT = 2 * 1024**3
 ARMS = ("tree", "crossed", "direct")
-
-
-def limit_memory():
-    resource.setrlimit(resource.RLIMIT_AS, (LIMIT, LIMIT))
 
 
 def sha(path):
@@ -48,8 +43,7 @@ def main():
                 ru0 = resource.getrusage(resource.RUSAGE_CHILDREN)
                 start = time.monotonic()
                 try:
-                    proc = subprocess.run(cmd, capture_output=True, timeout=20,
-                                          preexec_fn=limit_memory)
+                    proc = subprocess.run(cmd, capture_output=True, timeout=20)
                     status = "completed" if proc.returncode == 0 else "error"
                     rc = proc.returncode
                     stdout, stderr = proc.stdout, proc.stderr
@@ -64,7 +58,7 @@ def main():
                           "returncode": rc, "wall_s": elapsed,
                           "child_cpu_s": (ru1.ru_utime + ru1.ru_stime -
                                           ru0.ru_utime - ru0.ru_stime),
-                          "child_maxrss_raw": ru1.ru_maxrss,
+                          "cumulative_child_maxrss_raw": ru1.ru_maxrss,
                           "stdout": str(stdout_path.relative_to(HERE)),
                           "stderr": str(stderr_path.relative_to(HERE)),
                           "output": str(output_path.relative_to(HERE))
@@ -76,7 +70,8 @@ def main():
                           "msolve_version": version.stdout.strip() or
                           version.stderr.strip(),
                           "command": cmd, "timeout_s": 20,
-                          "memory_limit_bytes": LIMIT}
+                          "memory_limit_bytes": None,
+                          "memory_limit_amendment": "AMENDMENT-A1.md"}
                 runs.append(record)
                 (HERE / "runs.json").write_text(json.dumps(runs, indent=2) + "\n")
                 print(json.dumps({k: record[k] for k in
